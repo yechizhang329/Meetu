@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "skills": {
+    "write-xiaohongshu": {
+      "source": "adjfks/corner-skills",
+      "sourceType": "github",
+      "computedHash": "511ad0ddf9dae54f4ed4cd2ca13831856ae0aeb75ac3ea40a4cc14df7a77c09a"
+    },
+    "xiaohongshu-cover-generator": {
+      "source": "freestylefly/xiaohongshu-skills",
+      "sourceType": "github",
+      "computedHash": "c6e6c5ecfde6b6d0ec2bda1db69d7ad57aabf899d6dd7bc5a4e22b728ce6ba0a"
+    },
+    "xiaohongshu-images": {
+      "source": "iamzifei/xiaohongshu-images-skill",
+      "sourceType": "github",
+      "computedHash": "75ddf8309543fe4b8037948462ff4116fcf0a0495cd7048fa2a12cebed41b1a4"
+    },
+    "xiaohongshu-note-analyzer": {
+      "source": "softbread/xiaohongshu-doctor",
+      "sourceType": "github",
+      "computedHash": "a7a84eb52d3c6fa15c8dc4cf3f25ab673cdc068be2bdfc6174ea7f53e7f3cab9"
+    }
+  }
+}
