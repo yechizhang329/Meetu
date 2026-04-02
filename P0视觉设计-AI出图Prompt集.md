@@ -38,11 +38,11 @@ Style: trustworthy, secure, campus feel. Modern UI design, clean and minimal. Ch
 ### Banner 3 — 主理人招募
 
 ```
-A wide horizontal banner (750x340px, 2.2:1 ratio) for recruiting event hosts ("局长") on a student social platform.
+A wide horizontal banner (750x340px, 2.2:1 ratio) for recruiting event hosts ("主理人") on a student social platform.
 
-Left side: a golden label tag "🏆 局长招募" at top. Main text: "会玩，就是你的超能力" with "会玩" in gold (#FFD54F) and rest in white. Subtitle: "0成本成为觅遇社局长 · 把热爱变副业". Three benefit pills below: "🆓 0成本开局", "📣 平台帮你找人", "💰 收益自动到账".
+Left side: a golden label tag "🏆 主理人招募" at top. Main text: "会玩，就是你的超能力" with "会玩" in gold (#FFD54F) and rest in white. Subtitle: "0成本成为觅遇社主理人 · 把热爱变副业". Three benefit pills below: "🆓 0成本开局", "📣 平台帮你找人", "💰 收益自动到账".
 
-Right side: a large circular golden badge with a crown emoji on top, text "局长" below in dark purple. Under it, a golden CTA button "申请成为局长 →".
+Right side: a large circular golden badge with a crown emoji on top, text "主理人" below in dark purple. Under it, a golden CTA button "申请成为主理人 →".
 
 Background: rich purple gradient (from #4A148C deep purple to #CE93D8 light purple), with subtle crown and sparkle decorations in the background at low opacity.
 
@@ -238,14 +238,14 @@ Style: warm friendship scene, illustrated characters, joyful atmosphere, Chinese
 
 ---
 
-## 四、主理人招募帖 — 局长身份卡
+## 四、主理人招募帖 — 主理人身份卡
 
 ```
-A vertical identity card image (750x1000px) showcasing the "局长" (Host) status.
+A vertical identity card image (750x1000px) showcasing the "主理人" (Host) status.
 
 Design: a premium membership/identity card layout.
 
-Top section: golden crown icon, title "觅遇社局长" in bold, "MEETU HOST" in smaller English text below.
+Top section: golden crown icon, title "觅遇社主理人" in bold, "MEETU HOST" in smaller English text below.
 
 Center: a placeholder avatar circle with crown overlay, flanked by badges — "⭐ 5星级", "✅ 已认证", "🏆 主理人".
 
