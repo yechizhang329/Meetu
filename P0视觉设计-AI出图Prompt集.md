@@ -1,7 +1,7 @@
 # Meetu P0 视觉设计 — AI 出图 Prompt 集
 
 > 所有 prompt 均针对 750×340px（Banner）/ 600×800px（封面）/ 750×1000px（帖子卡片）等尺寸优化
-> 品牌关键词：Meetu 觅途 / 大学生社交拼团 / 年轻潮流 / 温暖可信 / 橙粉紫渐变
+> 品牌关键词：Meetu 觅遇社 / 大学生社交拼团 / 年轻潮流 / 温暖可信 / 橙粉紫渐变
 
 ---
 
@@ -10,9 +10,9 @@
 ### Banner 1 — 品牌心智
 
 ```
-A wide horizontal banner (750x340px, 2.2:1 ratio) for a university student social app called "Meetu 觅途".
+A wide horizontal banner (750x340px, 2.2:1 ratio) for a university student social app called "Meetu 觅遇社".
 
-Left side: bold Chinese text "别一个人玩了" (Don't play alone) in white, large font, with subtitle "觅途 — 找到你的搭子" below. A frosted glass pill button reading "立即探索 →".
+Left side: bold Chinese text "别一个人玩了" (Don't play alone) in white, large font, with subtitle "觅遇社 — 找到你的搭子" below. A frosted glass pill button reading "立即探索 →".
 
 Right side: a cute round white robot mascot character with orange scarf and small star accessory, waving hand, surrounded by floating activity icons (dice, coffee cup, running figure) in translucent glass cards.
 
@@ -40,7 +40,7 @@ Style: trustworthy, secure, campus feel. Modern UI design, clean and minimal. Ch
 ```
 A wide horizontal banner (750x340px, 2.2:1 ratio) for recruiting event hosts ("局长") on a student social platform.
 
-Left side: a golden label tag "🏆 局长招募" at top. Main text: "会玩，就是你的超能力" with "会玩" in gold (#FFD54F) and rest in white. Subtitle: "0成本成为觅途局长 · 把热爱变副业". Three benefit pills below: "🆓 0成本开局", "📣 平台帮你找人", "💰 收益自动到账".
+Left side: a golden label tag "🏆 局长招募" at top. Main text: "会玩，就是你的超能力" with "会玩" in gold (#FFD54F) and rest in white. Subtitle: "0成本成为觅遇社局长 · 把热爱变副业". Three benefit pills below: "🆓 0成本开局", "📣 平台帮你找人", "💰 收益自动到账".
 
 Right side: a large circular golden badge with a crown emoji on top, text "局长" below in dark purple. Under it, a golden CTA button "申请成为局长 →".
 
@@ -58,7 +58,7 @@ Style: prestigious, empowering, cool. Purple and gold color scheme. Modern Chine
 - 顶部左上角：分类 icon + 分类名称标签
 - 中央：大面积视觉主体（场景插画/图标）
 - 底部：毛玻璃深色信息栏（活动标题 / 一句话亮点 / 成团人数+价格）
-- 右下角：Meetu 觅途 水印
+- 右下角：Meetu 觅遇社 水印
 
 ### 封面 1 — 🎲 桌游·推理
 
@@ -183,13 +183,13 @@ Style: playful, mysterious, surprise-themed, colorful confetti, Gen-Z fun aesthe
 ```
 A vertical card image (750x1000px) for a social app welcome post.
 
-Top: large friendly Chinese text "欢迎来到觅途！" in white bold font. Subtitle: "你的搭子，在这里等你".
+Top: large friendly Chinese text "欢迎来到觅遇社！" in white bold font. Subtitle: "你的搭子，在这里等你".
 
 Center: the Meetu mascot — a cute round white robot with orange scarf and star — waving cheerfully, surrounded by floating icons (dice, coffee, camera, basketball) representing different activities.
 
 Background: warm orange-to-pink gradient (#F5A623 to #FF7EB3) with subtle sparkle decorations.
 
-Bottom: app logo "Meetu 觅途" in white.
+Bottom: app logo "Meetu 觅遇社" in white.
 
 Style: welcoming, warm, cute mascot illustration, Chinese app card design, vibrant colors.
 ```
@@ -245,7 +245,7 @@ A vertical identity card image (750x1000px) showcasing the "局长" (Host) statu
 
 Design: a premium membership/identity card layout.
 
-Top section: golden crown icon, title "觅途局长" in bold, "MEETU HOST" in smaller English text below.
+Top section: golden crown icon, title "觅遇社局长" in bold, "MEETU HOST" in smaller English text below.
 
 Center: a placeholder avatar circle with crown overlay, flanked by badges — "⭐ 5星级", "✅ 已认证", "🏆 主理人".
 
@@ -279,7 +279,7 @@ Middle section on white background:
 Bottom section:
 - Left: Meetu mascot (small, waving)
 - Center: WeChat mini-program QR code placeholder (gray square)
-- Right: text "扫码加入" and "Meetu 觅途" logo
+- Right: text "扫码加入" and "Meetu 觅遇社" logo
 - Orange accent line at very bottom
 
 Background: clean white with subtle warm gradient at edges.
