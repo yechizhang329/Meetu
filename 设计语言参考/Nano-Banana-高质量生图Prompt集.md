@@ -95,6 +95,31 @@ Do not omit quotation marks around 会玩.
 Generate the final banner with Chinese text embedded.
 ```
 
+### 4. 女生专场 Banner
+
+```text
+Create a final Chinese mobile app banner for Meetu, 750x340px, horizontal, production-ready.
+
+Visual style: warm, safe, youthful, trustworthy, pink and soft purple gradient palette, designed for a campus girls-only social feature.
+Composition: left side text block, right side visual scene with a warm all-female campus social gathering, soft trust-building badge elements, gentle glow, and a refined lifestyle feel. The image should feel welcoming and safe, not childish or overly sweet.
+
+Render the following exact simplified Chinese text:
+Main title: 女生专场活动｜姐妹安心拼团
+Subtitle: 全员在校认证的女生局
+Tag 1: 女生专场
+Tag 2: 在校认证
+Tag 3: 安心拼团
+CTA button: 查看专场 →
+
+Typography requirements:
+- Main title bold and clear
+- Subtitle smaller and highly readable
+- Three rounded tags below the subtitle
+- CTA button visible and soft but still clickable
+
+Generate the final banner with all Chinese text embedded directly in the image.
+```
+
 ---
 
 ## 二、中部 Banner
