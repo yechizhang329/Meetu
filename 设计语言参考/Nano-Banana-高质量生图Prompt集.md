@@ -12,6 +12,7 @@
 - 每条 prompt 都要求生成 **final poster / final banner / final card**
 - 直接写清楚版式、字体气质、文字层级、主副标题位置
 - 若出现错字、乱码、漏字，二次生成时只改文字相关描述，不要大改视觉主体
+- 若画面中出现人物，统一使用同一种肤色设定：soft warm light-beige skin tone；同一组图内不要混出多种肤色
 
 ---
 
@@ -116,6 +117,7 @@ Typography requirements:
 - Subtitle smaller and highly readable
 - Three rounded tags below the subtitle
 - CTA button visible and soft but still clickable
+- If multiple girls appear, keep all skin tones visually consistent using the same soft warm light-beige tone
 
 Generate the final banner with all Chinese text embedded directly in the image.
 ```
@@ -181,6 +183,7 @@ Typography requirements:
 - Subtitle smaller but very clear
 - The whole banner should feel safe, warm, and easy to trust
 - All people, icons, and scene elements should be clearly cartoonized or illustrated rather than realistic
+- If multiple girls appear, keep all skin tones visually consistent using the same soft warm light-beige tone
 
 Generate the final banner with all Chinese text embedded directly in the image.
 ```
@@ -261,6 +264,7 @@ Typography requirements:
 - The smartphone screen should feel recognizably like the Meetu home page structure: soft gradient header, rounded cards, playful category tabs
 - Avoid dense realistic screenshot rendering; use a cleaned-up, more delightful UI illustration version of the actual layout
 - Keep the frame, border, title layout, and bottom strip identical to Step 2 and Step 3
+- If any people appear in the interface illustration, keep skin tone consistent using the same soft warm light-beige tone
 
 Generate the final card with all Chinese text embedded directly in the image.
 ```
@@ -296,6 +300,7 @@ Typography requirements:
 - Make the CTA button use Meetu orange with soft rounded corners, like a real tappable mini-program action button
 - The supporting UI should suggest "people are joining the same activity" rather than a generic social-network infographic
 - Keep the frame, border, title layout, and bottom strip identical to Step 1 and Step 3
+- If any avatars or characters appear, keep skin tone consistent using the same soft warm light-beige tone
 
 Generate a final card image with the exact Chinese text already present.
 ```
@@ -330,6 +335,7 @@ Typography requirements:
 - All people and icons should be stylized cartoon illustrations, not photorealistic figures
 - The overall scene should feel more vibrant, emotionally rewarding, and shareable than the earlier generic concept
 - Keep the frame, border, title layout, and bottom strip identical to Step 1 and Step 2
+- Keep all visible people in the scene on the same soft warm light-beige skin tone for cross-image consistency
 
 Generate the final image with the exact Chinese text included.
 ```
