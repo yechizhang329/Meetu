@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>觅遇社主理人招募计划</title>
+  <meta name="description" content="觅遇社主理人招募计划。把会玩变成你的超能力，在校园里发起属于你的活动。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Noto+Sans+SC:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #fbf8ff;
+      --paper: rgba(255, 255, 255, 0.82);
+      --paper-strong: rgba(255, 255, 255, 0.94);
+      --line: rgba(116, 95, 164, 0.14);
+      --ink: #22163c;
+      --ink-soft: #655781;
+      --purple: #8b67df;
+      --purple-deep: #5a31a5;
+      --peach: #ffb38d;
+      --gold: #ffcb52;
+      --mint: #98ecd1;
+      --orange: #f5a623;
+      --shadow: 0 24px 80px rgba(84, 49, 155, 0.14);
+      --radius-xl: 34px;
+      --radius-lg: 24px;
+      --radius-md: 18px;
+      --max-width: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 12% 0%, rgba(172, 138, 248, 0.32), transparent 28%),
+        radial-gradient(circle at 88% 10%, rgba(147, 229, 202, 0.32), transparent 22%),
+        linear-gradient(180deg, #f8f5ff 0%, #fffdfa 45%, #fff7fb 100%);
+      font-family: "Noto Sans SC", sans-serif;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page-shell {
+      position: relative;
+      overflow: hidden;
+      min-height: 100vh;
+    }
+
+    .noise,
+    .mesh-a,
+    .mesh-b,
+    .mesh-c {
+      pointer-events: none;
+      position: fixed;
+      inset: auto;
+      z-index: 0;
+    }
+
+    .mesh-a {
+      width: 34rem;
+      height: 34rem;
+      top: -10rem;
+      right: -6rem;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(179, 148, 255, 0.34) 0%, rgba(179, 148, 255, 0) 72%);
+      filter: blur(8px);
+    }
+
+    .mesh-b {
+      width: 26rem;
+      height: 26rem;
+      left: -9rem;
+      top: 24rem;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255, 194, 170, 0.36) 0%, rgba(255, 194, 170, 0) 72%);
+      filter: blur(8px);
+    }
+
+    .mesh-c {
+      width: 30rem;
+      height: 30rem;
+      right: -10rem;
+      bottom: 12rem;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(152, 236, 209, 0.3) 0%, rgba(152, 236, 209, 0) 72%);
+      filter: blur(12px);
+    }
+
+    .noise {
+      inset: 0;
+      opacity: 0.06;
+      background-image:
+        linear-gradient(rgba(49, 31, 86, 0.12) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(49, 31, 86, 0.12) 1px, transparent 1px);
+      background-size: 38px 38px;
+      mask-image: radial-gradient(circle at center, black 35%, transparent 88%);
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(18px);
+      background: rgba(251, 248, 255, 0.75);
+      border-bottom: 1px solid rgba(116, 95, 164, 0.08);
+    }
+
+    .topbar-inner {
+      width: min(calc(100% - 32px), var(--max-width));
+      margin: 0 auto;
+      padding: 16px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+    }
+
+    .brand-badge {
+      width: 42px;
+      height: 42px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      font-size: 22px;
+      background: linear-gradient(135deg, #b792ff 0%, #88d8f5 55%, #ffe58a 100%);
+      box-shadow: 0 12px 28px rgba(110, 72, 191, 0.18);
+    }
+
+    .brand-copy {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .brand-copy strong {
+      font-size: 15px;
+    }
+
+    .brand-copy span {
+      font-size: 11px;
+      color: var(--ink-soft);
+    }
+
+    .topbar-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .pill,
+    .ghost-pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      padding: 12px 18px;
+      font-size: 14px;
+      font-weight: 700;
+      transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+    }
+
+    .pill:hover,
+    .ghost-pill:hover,
+    .hero-card-link:hover {
+      transform: translateY(-2px);
+    }
+
+    .pill {
+      color: #24163f;
+      background: linear-gradient(135deg, #ffd668 0%, #ffb66d 100%);
+      box-shadow: 0 14px 32px rgba(245, 166, 35, 0.24);
+    }
+
+    .ghost-pill {
+      color: var(--purple-deep);
+      background: rgba(255, 255, 255, 0.8);
+      border: 1px solid rgba(116, 95, 164, 0.12);
+    }
+
+    main {
+      position: relative;
+      z-index: 1;
+    }
+
+    .section {
+      width: min(calc(100% - 32px), var(--max-width));
+      margin: 0 auto;
+    }
+
+    .hero {
+      padding: 34px 0 24px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.06fr 0.94fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .hero-copy,
+    .hero-visual {
+      position: relative;
+      border-radius: 36px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(255, 255, 255, 0.55);
+    }
+
+    .hero-copy {
+      padding: 34px;
+      background:
+        radial-gradient(circle at 80% 20%, rgba(255, 210, 107, 0.28), transparent 26%),
+        radial-gradient(circle at 15% 12%, rgba(175, 145, 255, 0.28), transparent 30%),
+        linear-gradient(145deg, rgba(255,255,255,0.88) 0%, rgba(248,245,255,0.92) 48%, rgba(255,251,246,0.92) 100%);
+    }
+
+    .hero-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: rgba(90, 49, 165, 0.08);
+      color: var(--purple-deep);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .hero h1,
+    .section-title h2,
+    .cta-copy h2 {
+      font-family: "Bricolage Grotesque", "Noto Sans SC", sans-serif;
+      letter-spacing: -0.03em;
+    }
+
+    .hero h1 {
+      margin: 20px 0 14px;
+      font-size: clamp(42px, 5vw, 74px);
+      line-height: 0.96;
+    }
+
+    .hero h1 .accent {
+      color: var(--purple-deep);
+      text-shadow: 0 8px 28px rgba(90, 49, 165, 0.14);
+    }
+
+    .hero-lead {
+      max-width: 34rem;
+      font-size: 17px;
+      line-height: 1.9;
+      color: var(--ink-soft);
+    }
+
+    .hero-actions {
+      margin-top: 28px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .hero-facts {
+      margin-top: 26px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .hero-fact {
+      padding: 16px 16px 14px;
+      border-radius: 22px;
+      background: rgba(255,255,255,0.68);
+      border: 1px solid rgba(116, 95, 164, 0.1);
+    }
+
+    .hero-fact strong {
+      display: block;
+      font-size: 17px;
+      margin-bottom: 4px;
+    }
+
+    .hero-fact span {
+      color: var(--ink-soft);
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .hero-visual {
+      min-height: 560px;
+      padding: 20px;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(189, 167, 252, 0.48), transparent 25%),
+        radial-gradient(circle at 78% 28%, rgba(255, 207, 135, 0.44), transparent 24%),
+        linear-gradient(180deg, #f1ebff 0%, #eef7ff 46%, #fff6ef 100%);
+    }
+
+    .floating-chip,
+    .sticker {
+      position: absolute;
+      z-index: 3;
+      border-radius: 999px;
+      font-weight: 800;
+      letter-spacing: 0.01em;
+      box-shadow: 0 16px 28px rgba(88, 54, 158, 0.12);
+    }
+
+    .floating-chip {
+      padding: 10px 14px;
+      background: rgba(255,255,255,0.92);
+      border: 1px solid rgba(116, 95, 164, 0.1);
+      font-size: 13px;
+    }
+
+    .chip-a { top: 28px; left: 24px; }
+    .chip-b { top: 98px; right: 24px; }
+    .chip-c { bottom: 34px; left: 28px; }
+
+    .hero-phone {
+      position: relative;
+      z-index: 2;
+      width: min(100%, 360px);
+      margin: 38px auto 0;
+      padding: 14px;
+      border-radius: 34px;
+      background: rgba(255, 255, 255, 0.45);
+      border: 1px solid rgba(255, 255, 255, 0.75);
+      box-shadow: 0 22px 56px rgba(89, 58, 151, 0.18);
+      transform: rotate(-4deg);
+    }
+
+    .hero-phone-inner {
+      position: relative;
+      overflow: hidden;
+      border-radius: 26px;
+      background: #fff;
+      box-shadow: inset 0 0 0 1px rgba(122, 92, 187, 0.08);
+    }
+
+    .hero-screen-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 16px 10px;
+      font-size: 12px;
+      color: var(--ink-soft);
+    }
+
+    .hero-screen-top strong {
+      color: var(--ink);
+      font-size: 13px;
+    }
+
+    .hero-screen-image {
+      padding: 0 12px 14px;
+    }
+
+    .hero-screen-image img {
+      border-radius: 18px;
+      box-shadow: 0 18px 34px rgba(80, 56, 144, 0.14);
+    }
+
+    .hero-screen-footer {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      padding: 0 12px 14px;
+    }
+
+    .hero-mini-card {
+      padding: 10px 8px;
+      border-radius: 16px;
+      background: linear-gradient(180deg, #faf7ff 0%, #ffffff 100%);
+      border: 1px solid rgba(116, 95, 164, 0.08);
+      text-align: center;
+      font-size: 11px;
+      color: var(--ink-soft);
+    }
+
+    .hero-mini-card strong {
+      display: block;
+      font-size: 14px;
+      color: var(--purple-deep);
+      margin-bottom: 3px;
+    }
+
+    .sticker {
+      padding: 12px 18px;
+      font-size: 14px;
+      border: 2px solid rgba(34, 22, 60, 0.06);
+    }
+
+    .sticker-gold {
+      right: 28px;
+      bottom: 88px;
+      background: linear-gradient(135deg, #ffe29a 0%, #ffca57 100%);
+      color: #5a2e00;
+      transform: rotate(6deg);
+    }
+
+    .sticker-purple {
+      left: 18px;
+      top: 180px;
+      background: linear-gradient(135deg, #d3c2ff 0%, #f0d8ff 100%);
+      color: var(--purple-deep);
+      transform: rotate(-8deg);
+    }
+
+    .section-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 16px;
+      margin-bottom: 22px;
+    }
+
+    .section-title h2 {
+      margin: 0;
+      font-size: clamp(28px, 4vw, 48px);
+      line-height: 1.02;
+    }
+
+    .section-title p {
+      margin: 0;
+      max-width: 36rem;
+      color: var(--ink-soft);
+      line-height: 1.8;
+      font-size: 15px;
+    }
+
+    .value-section,
+    .identity-section,
+    .timeline-section,
+    .faq-section {
+      padding: 28px 0;
+    }
+
+    .value-grid,
+    .identity-grid,
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .value-card,
+    .identity-card,
+    .faq-card,
+    .story-card,
+    .workflow-card,
+    .cta-panel {
+      position: relative;
+      overflow: hidden;
+      border-radius: 28px;
+      background: var(--paper);
+      border: 1px solid rgba(255,255,255,0.68);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(18px);
+    }
+
+    .value-card {
+      padding: 24px;
+      min-height: 100%;
+    }
+
+    .value-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 18px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--purple-deep);
+      background: rgba(139, 103, 223, 0.1);
+    }
+
+    .value-card h3,
+    .identity-card h3,
+    .workflow-copy h3,
+    .faq-card h3 {
+      margin: 0 0 12px;
+      font-size: 24px;
+      line-height: 1.15;
+      font-family: "Bricolage Grotesque", "Noto Sans SC", sans-serif;
+    }
+
+    .value-card p,
+    .identity-card p,
+    .workflow-copy p,
+    .faq-card p,
+    .story-card p {
+      margin: 0;
+      color: var(--ink-soft);
+      line-height: 1.8;
+    }
+
+    .value-list {
+      margin: 18px 0 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 10px;
+    }
+
+    .value-list li {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      font-size: 14px;
+      line-height: 1.7;
+      color: var(--ink);
+    }
+
+    .bullet {
+      margin-top: 4px;
+      flex: 0 0 auto;
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--purple), var(--peach));
+      box-shadow: 0 0 0 6px rgba(139, 103, 223, 0.08);
+    }
+
+    .story-layout,
+    .workflow-layout {
+      display: grid;
+      grid-template-columns: 1.02fr 0.98fr;
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .story-card,
+    .workflow-card {
+      padding: 28px;
+    }
+
+    .scenario-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .scenario-pills span {
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.82);
+      border: 1px solid rgba(116, 95, 164, 0.1);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--ink-soft);
+    }
+
+    .workflow-card {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 18px;
+      align-items: center;
+      min-height: 100%;
+    }
+
+    .workflow-phone {
+      padding: 14px;
+      border-radius: 28px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.88), rgba(244, 238, 255, 0.95));
+      border: 1px solid rgba(116, 95, 164, 0.08);
+    }
+
+    .workflow-phone img {
+      border-radius: 22px;
+      box-shadow: 0 18px 30px rgba(68, 46, 122, 0.12);
+    }
+
+    .workflow-steps {
+      display: grid;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .workflow-step {
+      display: grid;
+      grid-template-columns: 52px 1fr;
+      gap: 12px;
+      padding: 14px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.72);
+      border: 1px solid rgba(116, 95, 164, 0.08);
+    }
+
+    .workflow-step strong {
+      width: 52px;
+      height: 52px;
+      border-radius: 18px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, rgba(139,103,223,0.18), rgba(245,166,35,0.2));
+      color: var(--purple-deep);
+      font-size: 16px;
+    }
+
+    .workflow-step h4 {
+      margin: 2px 0 6px;
+      font-size: 16px;
+    }
+
+    .workflow-step p {
+      margin: 0;
+      color: var(--ink-soft);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .identity-card {
+      padding: 22px;
+    }
+
+    .identity-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      margin-bottom: 22px;
+    }
+
+    .identity-ribbon {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 14px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, rgba(255, 214, 104, 0.2), rgba(255, 179, 141, 0.22));
+      color: #815300;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .identity-avatar {
+      width: 70px;
+      height: 70px;
+      border-radius: 24px;
+      background: linear-gradient(135deg, #b894ff 0%, #8be1d7 100%);
+      display: grid;
+      place-items: center;
+      font-size: 30px;
+      box-shadow: 0 18px 28px rgba(93, 60, 159, 0.14);
+    }
+
+    .identity-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 12px 0 18px;
+    }
+
+    .identity-tags span {
+      padding: 8px 10px;
+      border-radius: 999px;
+      background: rgba(139, 103, 223, 0.1);
+      color: var(--purple-deep);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .identity-metrics {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .metric {
+      padding: 14px 12px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.7);
+      border: 1px solid rgba(116, 95, 164, 0.08);
+    }
+
+    .metric strong {
+      display: block;
+      font-size: 18px;
+      margin-bottom: 4px;
+    }
+
+    .metric span {
+      font-size: 12px;
+      color: var(--ink-soft);
+    }
+
+    .faq-card {
+      padding: 22px;
+    }
+
+    .faq-card h3 {
+      font-size: 20px;
+    }
+
+    .cta-section {
+      padding: 28px 0 58px;
+    }
+
+    .cta-panel {
+      padding: 26px;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 18px;
+      background:
+        radial-gradient(circle at 80% 20%, rgba(255, 208, 112, 0.24), transparent 28%),
+        linear-gradient(145deg, rgba(255,255,255,0.9), rgba(244,238,255,0.95));
+    }
+
+    .cta-copy h2 {
+      margin: 0 0 12px;
+      font-size: clamp(28px, 4vw, 50px);
+      line-height: 0.98;
+    }
+
+    .cta-copy p {
+      margin: 0;
+      color: var(--ink-soft);
+      line-height: 1.8;
+      max-width: 34rem;
+    }
+
+    .cta-actions {
+      margin-top: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .cta-note {
+      padding: 22px;
+      border-radius: 24px;
+      background: rgba(255,255,255,0.78);
+      border: 1px solid rgba(116, 95, 164, 0.08);
+      align-self: center;
+    }
+
+    .cta-note strong {
+      display: block;
+      font-size: 15px;
+      margin-bottom: 10px;
+    }
+
+    .cta-note ul {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--ink-soft);
+      line-height: 1.9;
+      font-size: 14px;
+    }
+
+    footer {
+      width: min(calc(100% - 32px), var(--max-width));
+      margin: 0 auto;
+      padding: 0 0 34px;
+      color: rgba(34, 22, 60, 0.54);
+      font-size: 12px;
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .story-layout,
+      .workflow-layout,
+      .cta-panel,
+      .workflow-card {
+        grid-template-columns: 1fr;
+      }
+
+      .value-grid,
+      .identity-grid,
+      .faq-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-visual {
+        min-height: auto;
+      }
+
+      .section-title {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .topbar-inner {
+        width: min(calc(100% - 24px), var(--max-width));
+        padding: 12px 0;
+      }
+
+      .topbar-actions .ghost-pill {
+        display: none;
+      }
+
+      .section {
+        width: min(calc(100% - 24px), var(--max-width));
+      }
+
+      .hero {
+        padding-top: 18px;
+      }
+
+      .hero-copy,
+      .hero-visual,
+      .story-card,
+      .workflow-card,
+      .cta-panel,
+      .value-card,
+      .identity-card,
+      .faq-card {
+        border-radius: 26px;
+      }
+
+      .hero-copy,
+      .story-card,
+      .workflow-card,
+      .cta-panel {
+        padding: 22px;
+      }
+
+      .hero-facts,
+      .identity-metrics {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-screen-footer {
+        grid-template-columns: 1fr;
+      }
+
+      .chip-b {
+        top: 74px;
+      }
+
+      .sticker-purple {
+        top: 156px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-shell">
+    <div class="mesh-a"></div>
+    <div class="mesh-b"></div>
+    <div class="mesh-c"></div>
+    <div class="noise"></div>
+
+    <header class="topbar" id="top">
+      <div class="topbar-inner">
+        <div class="brand">
+          <div class="brand-badge">👑</div>
+          <div class="brand-copy">
+            <strong>觅遇社 Host Plan</strong>
+            <span>校园活动主理人招募计划</span>
+          </div>
+        </div>
+        <div class="topbar-actions">
+          <a class="ghost-pill" href="#plan">看申请流程</a>
+          <a class="pill" href="#apply">立即申请</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section hero">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <div class="hero-kicker">Meetu Host Recruitment</div>
+            <h1>把<span class="accent">会玩</span>这件事，<br>变成你的主场。</h1>
+            <p class="hero-lead">
+              你负责发起好玩的局，觅遇社帮你找到合适的人。无论是剧本杀、City Walk、羽毛球搭子局，还是轻松有趣的校园活动，只要你有想法，就能在这里把它变成一场真正发生的局。
+            </p>
+            <div class="hero-actions">
+              <a class="pill" href="#apply">立即成为主理人</a>
+              <a class="ghost-pill" href="#identity">看看主理人身份</a>
+            </div>
+            <div class="hero-facts">
+              <div class="hero-fact">
+                <strong>0门槛开始</strong>
+                <span>不需要经验、不需要资金、不需要营业执照。</span>
+              </div>
+              <div class="hero-fact">
+                <strong>3分钟发起</strong>
+                <span>想法成型以后，很快就能发布你的第一场活动。</span>
+              </div>
+              <div class="hero-fact">
+                <strong>被看见</strong>
+                <span>优秀主理人可获得精选标识和平台推荐。</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="floating-chip chip-a">🎤 主理人不是围观者，是发起者</div>
+            <div class="floating-chip chip-b">⚡ 发活动 / 找人 / 建群 / 收款</div>
+            <div class="floating-chip chip-c">✨ 校园里每一个会组织、会审美、会带气氛的人，都值得有自己的舞台</div>
+            <div class="sticker sticker-purple">会玩，就是你的超能力</div>
+            <div class="sticker sticker-gold">申请成为主理人 →</div>
+
+            <div class="hero-phone">
+              <div class="hero-phone-inner">
+                <div class="hero-screen-top">
+                  <span>Meetu 小程序界面延展</span>
+                  <strong>主理人招募中</strong>
+                </div>
+                <div class="hero-screen-image">
+                  <img src="../assets/home-screen.png" alt="Meetu 首页截图">
+                </div>
+                <div class="hero-screen-footer">
+                  <div class="hero-mini-card">
+                    <strong>发布活动</strong>
+                    设定人数、价格与主题
+                  </div>
+                  <div class="hero-mini-card">
+                    <strong>平台帮找人</strong>
+                    从广场到群聊流转更顺
+                  </div>
+                  <div class="hero-mini-card">
+                    <strong>形成个人名片</strong>
+                    活动记录和评价沉淀下来
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section value-section">
+        <div class="section-title">
+          <h2>为什么是主理人，<br>而不是普通发帖人？</h2>
+          <p>
+            觅遇社的主理人，不只是“发一个活动”。你是在校园里定义一种玩法、一种气氛、一次线下体验。平台负责把这个想法接住，并帮它顺利发生。
+          </p>
+        </div>
+        <div class="value-grid">
+          <article class="value-card">
+            <div class="value-badge">01 · 0门槛</div>
+            <h3>不用等“条件够了”再开始。</h3>
+            <p>如果你本来就是那个会张罗、会策划、会带朋友去玩的人，那你已经具备主理人的核心能力。</p>
+            <ul class="value-list">
+              <li><span class="bullet"></span><span>不需要额外资金和经营资质。</span></li>
+              <li><span class="bullet"></span><span>不需要活动组织经验，也能从第一场开始积累。</span></li>
+              <li><span class="bullet"></span><span>一个好玩的点子，就是最好的起点。</span></li>
+            </ul>
+          </article>
+
+          <article class="value-card">
+            <div class="value-badge">02 · 有回报</div>
+            <h3>让审美、组织力和想法真正产生价值。</h3>
+            <p>主理人可以自己定义活动内容、人数和价格，把原本只在朋友圈里发生的“会玩”能力，变成稳定可复用的校园副业尝试。</p>
+            <ul class="value-list">
+              <li><span class="bullet"></span><span>参与者付费后，收入进入你的账户。</span></li>
+              <li><span class="bullet"></span><span>你的活动会沉淀为作品集，而不是一次性消失。</span></li>
+              <li><span class="bullet"></span><span>热爱和组织力终于可以被认真对待。</span></li>
+            </ul>
+          </article>
+
+          <article class="value-card">
+            <div class="value-badge">03 · 被看见</div>
+            <h3>你不只是“组织过”，而是会留下身份感。</h3>
+            <p>主理人主页会展示你做过的局、参与者评价和主理人标签。优秀的内容会得到平台精选标识和流量推荐。</p>
+            <ul class="value-list">
+              <li><span class="bullet"></span><span>主理人主页沉淀活动记录和评价。</span></li>
+              <li><span class="bullet"></span><span>优秀主理人可获得“觅遇社精选”标识。</span></li>
+              <li><span class="bullet"></span><span>后续还会接入主理人激励计划。</span></li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section timeline-section" id="plan">
+        <div class="story-layout">
+          <article class="story-card">
+            <div class="section-title">
+              <h2>你可以发起什么样的局？</h2>
+              <p>方向不需要很复杂。关键不是“资源多大”，而是你能不能组织一场大家真的愿意去的线下体验。</p>
+            </div>
+            <p>
+              目前最适合主理人起步的方向，是校园内自然发生、社交压力低、组织链路短的娱乐休闲活动。你可以从身边最熟的玩法开始，让第一场局先顺利发生。
+            </p>
+            <div class="scenario-pills">
+              <span>🎲 剧本杀 / 桌游局</span>
+              <span>🚶 City Walk / 校园周边漫游</span>
+              <span>🏸 羽毛球 / 轻运动搭子局</span>
+              <span>🎨 展览 / 观影 / 轻社交活动</span>
+              <span>🎉 破冰派对 / 兴趣主题局</span>
+            </div>
+          </article>
+
+          <article class="workflow-card">
+            <div class="workflow-phone">
+              <img src="../assets/square-screen.png" alt="Meetu 广场截图">
+            </div>
+            <div class="workflow-copy">
+              <h3>成为主理人，不用先学一套复杂流程。</h3>
+              <p>现阶段最重要的是让你第一场局尽快上线。流程足够轻，但身份感和平台承接能力会保留下来。</p>
+              <div class="workflow-steps">
+                <div class="workflow-step">
+                  <strong>01</strong>
+                  <div>
+                    <h4>进入“我的”页面</h4>
+                    <p>从个人中心进入活动发布入口，开始发起你的第一场局。</p>
+                  </div>
+                </div>
+                <div class="workflow-step">
+                  <strong>02</strong>
+                  <div>
+                    <h4>填写活动信息</h4>
+                    <p>设置主题、人数、时间和价格，把你的玩法清楚写出来。</p>
+                  </div>
+                </div>
+                <div class="workflow-step">
+                  <strong>03</strong>
+                  <div>
+                    <h4>提交审核并等待通过</h4>
+                    <p>通常 24 小时内完成审核。通过之后，你就是正式主理人。</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section identity-section" id="identity">
+        <div class="section-title">
+          <h2>主理人身份页，<br>应该是什么感觉？</h2>
+          <p>我们把它做成一个更像“校园创作者名片”的东西，而不是一张生硬权限页。身份感、可信度和未来可成长性，需要同时被看见。</p>
+        </div>
+        <div class="identity-grid">
+          <article class="identity-card">
+            <div class="identity-top">
+              <div>
+                <div class="identity-ribbon">👑 Meetu Host</div>
+                <h3>主理人身份卡</h3>
+              </div>
+              <div class="identity-avatar">🎤</div>
+            </div>
+            <p>主理人不是一条权限状态，而是一张会持续生长的个人名片。你的活动记录、评价和风格，会慢慢沉淀成专属的校园影响力。</p>
+            <div class="identity-tags">
+              <span>已认证</span>
+              <span>觅遇社精选</span>
+              <span>活动发起者</span>
+            </div>
+            <div class="identity-metrics">
+              <div class="metric"><strong>5★</strong><span>主理人评分</span></div>
+              <div class="metric"><strong>12 场</strong><span>已组织活动</span></div>
+              <div class="metric"><strong>96%</strong><span>参与者好评率</span></div>
+            </div>
+          </article>
+
+          <article class="identity-card">
+            <div class="identity-top">
+              <div>
+                <div class="identity-ribbon">✨ Why It Matters</div>
+                <h3>你会被怎样看见</h3>
+              </div>
+              <div class="identity-avatar">🏅</div>
+            </div>
+            <p>相比“只是发帖”，主理人更像一个有主题审美、有组织能力、有稳定风格的人。平台会把这种身份感设计出来，让别人更愿意跟你一起玩。</p>
+            <div class="identity-tags">
+              <span>活动风格清晰</span>
+              <span>评价可沉淀</span>
+              <span>主页可展示</span>
+            </div>
+            <div class="identity-metrics">
+              <div class="metric"><strong>主页</strong><span>展示做过的局</span></div>
+              <div class="metric"><strong>标签</strong><span>强化个人风格</span></div>
+              <div class="metric"><strong>推荐</strong><span>获得平台曝光</span></div>
+            </div>
+          </article>
+
+          <article class="identity-card">
+            <div class="identity-top">
+              <div>
+                <div class="identity-ribbon">🎁 Future Plan</div>
+                <h3>激励计划会保留入口</h3>
+              </div>
+              <div class="identity-avatar">🎉</div>
+            </div>
+            <p>当前网页先不写死未确认的阈值和奖品，但会保留“成长激励”的认知。等细则确定后，可以直接补成正式说明模块，不需要重做整页结构。</p>
+            <div class="identity-tags">
+              <span>纪念品</span>
+              <span>礼物奖励</span>
+              <span>成长阶梯</span>
+            </div>
+            <div class="identity-metrics">
+              <div class="metric"><strong>待确认</strong><span>阈值细则</span></div>
+              <div class="metric"><strong>可扩展</strong><span>模块已预留</span></div>
+              <div class="metric"><strong>低返工</strong><span>后续直接补充</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section faq-section">
+        <div class="section-title">
+          <h2>先把最容易犹豫的点，<br>讲清楚。</h2>
+          <p>这个页面会直接被放进小程序链接里，所以信息必须克制、清楚，而且只说当前产品真的能承接的部分。</p>
+        </div>
+        <div class="faq-grid">
+          <article class="faq-card">
+            <h3>没有组织过活动，也能申请吗？</h3>
+            <p>可以。当前主理人招募强调的是“有想法、愿意发起、能把活动讲清楚”，不是必须有成熟经验。第一场局就是最好的开始。</p>
+          </article>
+          <article class="faq-card">
+            <h3>需要自己准备很多资源吗？</h3>
+            <p>不需要。你负责定义玩法、时间、人数和价格，平台负责帮你承接发布、找人和群聊组织。</p>
+          </article>
+          <article class="faq-card">
+            <h3>为什么这个页面没有写具体奖励金额？</h3>
+            <p>因为主理人激励计划的阈值和奖品细则还没有最终确认。页面暂时只保留“成长激励”认知，避免上线即出现信息失真。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section cta-section" id="apply">
+        <div class="cta-panel">
+          <div class="cta-copy">
+            <h2>你的下一场局，<br>可以从现在开始。</h2>
+            <p>
+              如果你本来就是那个总能把朋友组织起来的人，那你已经很接近主理人了。现在只差一个正式入口，让你的活动被更多人看到，也让你的风格有地方留下来。
+            </p>
+            <div class="cta-actions">
+              <a class="pill" href="#plan">申请路径：我的 → 活动发布</a>
+              <a class="ghost-pill" href="#identity">先看身份页</a>
+            </div>
+          </div>
+          <aside class="cta-note">
+            <strong>当前页面版本包含：</strong>
+            <ul>
+              <li>主理人招募核心价值表达</li>
+              <li>基于现有小程序视觉体系的网页化延展</li>
+              <li>申请流程说明与身份页展示</li>
+              <li>刻意避开未确认的激励阈值细节</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      觅遇社 Meetu · 主理人招募计划页面 Demo
+    </footer>
+  </div>
+</body>
+</html>

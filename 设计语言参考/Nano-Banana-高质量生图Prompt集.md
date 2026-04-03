@@ -12,6 +12,7 @@
 - 每条 prompt 都要求生成 **final poster / final banner / final card**
 - 直接写清楚版式、字体气质、文字层级、主副标题位置
 - 若出现错字、乱码、漏字，二次生成时只改文字相关描述，不要大改视觉主体
+- 若画面中出现人物，统一使用同一种肤色设定：soft warm light-beige skin tone；同一组图内不要混出多种肤色
 
 ---
 
@@ -116,6 +117,7 @@ Typography requirements:
 - Subtitle smaller and highly readable
 - Three rounded tags below the subtitle
 - CTA button visible and soft but still clickable
+- If multiple girls appear, keep all skin tones visually consistent using the same soft warm light-beige tone
 
 Generate the final banner with all Chinese text embedded directly in the image.
 ```
@@ -181,6 +183,7 @@ Typography requirements:
 - Subtitle smaller but very clear
 - The whole banner should feel safe, warm, and easy to trust
 - All people, icons, and scene elements should be clearly cartoonized or illustrated rather than realistic
+- If multiple girls appear, keep all skin tones visually consistent using the same soft warm light-beige tone
 
 Generate the final banner with all Chinese text embedded directly in the image.
 ```
@@ -236,7 +239,17 @@ Generate the final social card with the Chinese text already rendered.
 ```text
 Create a final Chinese tutorial card, 750x1000px, polished and production-ready.
 
-Visual style: clean, modern, mobile-app tutorial visual, purple gradient background, smartphone interface in the center showing an activity feed.
+Shared series frame requirements for Step 1 / Step 2 / Step 3:
+- Use the exact same outer card shell across all three images
+- Same rounded rectangular cream-white card with soft drop shadow
+- Same pastel gradient border system: lavender, cream pink, and soft orange accents
+- Same top header block for the step label and title area
+- Same bottom brand strip or small logo area
+- Same sticker-like sparkles and rounded decorative corner elements
+- Only the center content scene is allowed to change between Step 1, Step 2, and Step 3
+
+Visual style: lively mobile-app tutorial visual based on the Meetu mini-program homepage. Use a soft lavender-to-cream gradient header, rounded white search bar, rounded filter chips, mascot-like category tabs, and a large colorful content banner card. The overall feel should be pastel, energetic, friendly, and highly app-native rather than generic.
+Composition: centered smartphone mockup showing a homepage-like interface with a top search bar, category row, filter row, and large activity cards. Add soft glow, rounded UI shadows, and a slightly bouncy editorial-cartoon feel.
 
 Render the following exact simplified Chinese text:
 Top label: Step 1
@@ -248,7 +261,10 @@ Typography requirements:
 - Main title bold and clear
 - Subtitle smaller and lighter
 - All text should appear at the top portion of the card and remain highly readable
-- The smartphone screen may contain abstract UI blocks but should not introduce unrelated extra words
+- The smartphone screen should feel recognizably like the Meetu home page structure: soft gradient header, rounded cards, playful category tabs
+- Avoid dense realistic screenshot rendering; use a cleaned-up, more delightful UI illustration version of the actual layout
+- Keep the frame, border, title layout, and bottom strip identical to Step 2 and Step 3
+- If any people appear in the interface illustration, keep skin tone consistent using the same soft warm light-beige tone
 
 Generate the final card with all Chinese text embedded directly in the image.
 ```
@@ -258,7 +274,17 @@ Generate the final card with all Chinese text embedded directly in the image.
 ```text
 Create a final Chinese tutorial card, 750x1000px, polished and production-ready.
 
-Visual style: energetic, social, orange gradient background, abstract avatar circles converging toward a group action area, dynamic and friendly.
+Shared series frame requirements for Step 1 / Step 2 / Step 3:
+- Use the exact same outer card shell as Step 1 and Step 3
+- Same rounded rectangular cream-white card with soft drop shadow
+- Same pastel gradient border system: lavender, cream pink, and soft orange accents
+- Same top header block for the step label and title area
+- Same bottom brand strip or small logo area
+- Same sticker-like sparkles and rounded decorative corner elements
+- Only the center content scene is allowed to change between Step 1, Step 2, and Step 3
+
+Visual style: energetic and app-native, based on Meetu's rounded mobile UI language. Use warm orange and pink accents with white rounded cards, a big event card, avatar circles, and a bright CTA area. The card should feel more alive and more product-like than a generic network diagram.
+Composition: centered smartphone or floating UI card showing an event detail card with participant avatars, group-size indicator, and a large rounded CTA button. Add motion arcs, sparkles, mascot-style icon accents, and layered card depth for a more delightful feel.
 
 Render the following exact simplified Chinese text:
 Top label: Step 2
@@ -271,6 +297,10 @@ Typography requirements:
 - Main title bold, warm, youthful
 - Subtitle smaller and readable
 - Add the CTA as a central button element
+- Make the CTA button use Meetu orange with soft rounded corners, like a real tappable mini-program action button
+- The supporting UI should suggest "people are joining the same activity" rather than a generic social-network infographic
+- Keep the frame, border, title layout, and bottom strip identical to Step 1 and Step 3
+- If any avatars or characters appear, keep skin tone consistent using the same soft warm light-beige tone
 
 Generate a final card image with the exact Chinese text already present.
 ```
@@ -280,7 +310,17 @@ Generate a final card image with the exact Chinese text already present.
 ```text
 Create a final Chinese tutorial card, 750x1000px, polished and production-ready.
 
-Visual style: warm friendship atmosphere, pink gradient background, young people offline gathering, board game or casual leisure meet-up scene, happy and relaxed.
+Shared series frame requirements for Step 1 / Step 2 / Step 3:
+- Use the exact same outer card shell as Step 1 and Step 2
+- Same rounded rectangular cream-white card with soft drop shadow
+- Same pastel gradient border system: lavender, cream pink, and soft orange accents
+- Same top header block for the step label and title area
+- Same bottom brand strip or small logo area
+- Same sticker-like sparkles and rounded decorative corner elements
+- Only the center content scene is allowed to change between Step 1, Step 2, and Step 3
+
+Visual style: warm friendship atmosphere with a more cheerful, polished cartoon editorial style. Use soft pink, lavender, cream, and orange highlights, consistent with the Meetu app palette. The card should feel like "online matched, offline had fun" with more emotional payoff and visual liveliness.
+Composition: a cute stylized offline gathering scene with university students in a relaxed leisure activity, plus subtle app-style graphic accents such as star ratings, chat bubbles, or sticker-like hearts to connect it back to the platform experience. Keep the layout bright and likable rather than realistic.
 
 Render the following exact simplified Chinese text:
 Top label: Step 3
@@ -292,6 +332,10 @@ Typography requirements:
 - Friendly rounded Chinese font feeling
 - Final output must look like an official tutorial card
 - Add subtle five-star rating accents without introducing extra words
+- All people and icons should be stylized cartoon illustrations, not photorealistic figures
+- The overall scene should feel more vibrant, emotionally rewarding, and shareable than the earlier generic concept
+- Keep the frame, border, title layout, and bottom strip identical to Step 1 and Step 2
+- Keep all visible people in the scene on the same soft warm light-beige skin tone for cross-image consistency
 
 Generate the final image with the exact Chinese text included.
 ```
