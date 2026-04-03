@@ -32,6 +32,16 @@
 - 在当前阶段，`meetu-mascot-standard-pose.png` 是 mascot 的 single source of truth
 - 后续所有衍生资产必须优先复用这张 PNG，不再重新手绘 / 重构 mascot 造型
 - 若未来需要真正可复用的矢量版，应使用可靠的描摹流程单独产出，不应继续靠主观重画
+- 当前阶段对格式不做教条要求，优先级是：
+  - 一致性
+  - 美观性
+  - 高度可复用性
+- mascot 资产的目标应用场景包括：
+  - Banner
+  - HTML5 / 子页
+  - 海报
+  - Post / 帖子配图
+- 如果不同场景需要变体，应优先通过“PNG master + 变体体系 + Nano Banana prompt / 现有物料叠加”的方式实现
 
 ## 下一步
 
