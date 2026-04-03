@@ -23,7 +23,7 @@
 Create a final Chinese mobile app banner for Meetu, 750x340px, horizontal, polished and production-ready.
 
 Visual style: young, vibrant, trustworthy, Gen-Z campus social platform, warm orange to pink to soft purple gradient, premium mobile-app advertising style, clean but energetic.
-Composition: left side text, right side visual scene. Right side shows a warm illustrated or semi-realistic campus social scene with activity symbols like dice, coffee, city walk camera, and sports icons. Keep the layout balanced and highly readable.
+Composition: left side text, right side visual scene. Right side shows a warm illustrated or semi-realistic campus social scene with activity symbols like dice, camera, movie ticket, and sports icons. Keep the layout balanced and highly readable.
 
 Render the following exact simplified Chinese text:
 Main title: 觅遇社 — 找到你的搭子
@@ -133,7 +133,7 @@ Visual style: vibrant category showcase, youthful, exploratory, colorful but cle
 Composition: left or center-left text block, right side or background shows a multi-scene collage or icon system covering board games, dining, city walk, sports, and social gatherings.
 
 Render the following exact simplified Chinese text:
-Main title: 剧本杀·拼饭·City Walk·运动……
+Main title: 剧本杀·桌游·City Walk·运动……
 Subtitle: 总有一场局适合你
 
 Typography requirements:
@@ -149,7 +149,7 @@ Generate the final banner with all Chinese text embedded directly in the image.
 ```text
 Create a final Chinese mobile app middle banner for Meetu, 750x280px, horizontal, polished and production-ready.
 
-Visual style: multi-scene collage, fun, exploratory, comic-like but still premium, showing several activity scenes such as board games, cafe meetups, city walk, and sports.
+Visual style: multi-scene collage, fun, exploratory, comic-like but still premium, showing several activity scenes such as board games, city walk, exhibitions, and sports.
 Composition: a dynamic scene collage with text integrated into the left or center-left area, while the right side holds playful scene fragments.
 
 Render the following exact simplified Chinese text:
@@ -214,7 +214,7 @@ Generate the final banner with all Chinese text embedded directly in the image.
 Create a final Chinese square-ish social card for a campus social platform, 750x1000px, polished and ready to post.
 
 Visual style: warm, friendly, inviting, orange to pink gradient, cute but refined, campus social energy.
-Center visual: a cheerful mascot-like social symbol or campus social illustration, with floating activity icons such as board games, coffee, city walk, and sports.
+Center visual: a cheerful mascot-like social symbol or campus social illustration, with floating activity icons such as board games, city walk, movies, and sports.
 
 Render the following exact simplified Chinese text:
 Main title: 欢迎来到觅遇社
@@ -279,7 +279,7 @@ Generate a final card image with the exact Chinese text already present.
 ```text
 Create a final Chinese tutorial card, 750x1000px, polished and production-ready.
 
-Visual style: warm friendship atmosphere, pink gradient background, young people offline gathering, board game or cafe meet-up scene, happy and relaxed.
+Visual style: warm friendship atmosphere, pink gradient background, young people offline gathering, board game or casual leisure meet-up scene, happy and relaxed.
 
 Render the following exact simplified Chinese text:
 Top label: Step 3
@@ -474,7 +474,7 @@ Generate the final poster with exact Chinese text already present.
 ```text
 Create a final Chinese event poster, 600x800px portrait orientation, polished and production-ready.
 
-Visual style: [在这里写活动类型和视觉方向，例如 warm cafe social event / board game mystery night / city walk weekend outing].
+Visual style: [在这里写活动类型和视觉方向，例如 board game mystery night / city walk weekend outing / exhibition meetup / badminton activity].
 Main scene: [在这里写场景主体].
 
 Render the following exact simplified Chinese text:
