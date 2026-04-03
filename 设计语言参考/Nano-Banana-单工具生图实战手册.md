@@ -1,8 +1,9 @@
-# 觅遇社 — 全内容实战出图流程（nanobanana）
+# 觅遇社 — Nano Banana 单工具生图实战手册
 
-> 本文档为所有 P0/P1/P2 视觉物料的逐条操作指南
-> 工具链：nanobanana（AI 生成场景图）+ Figma/Canva（排版叠加文字）
+> 本文档是给 Meetu 项目使用的 Nano Banana 单工具生图手册
+> 目标：不使用 FAL，不讨论多模型混合方案，只保留 Nano Banana 生图方法
 > 品牌名称：觅遇社（Meetu）| 主理人（原"局长"）
+> 阅读方式：每一节优先看 `Step 1：nanobanana prompt`；`Step 2` 仅作为后续落版备注，不属于本手册核心范围
 
 ---
 
