@@ -28,10 +28,14 @@ Composition: left side text, right side visual scene. Right side shows a warm il
 Render the following exact simplified Chinese text:
 Main title: 觅遇社 — 找到你的搭子
 Subtitle: 大学生专属拼团社交平台
+CTA button: 立即探索 →
+Brand mark: 觅遇社 Meetu
 
 Typography requirements:
 - Main title large, bold, white, clean premium Chinese font
 - Subtitle smaller, white with slight transparency
+- CTA button should look like a frosted glass rounded button
+- Brand mark should appear at the lower right corner in a smaller size
 - Text must be readable, centered vertically on the left half
 
 Do not use English headline. Do not replace the Chinese text. Do not generate gibberish.
@@ -49,10 +53,16 @@ Composition: left text area, right visual area. Right side features a glowing sh
 Render the following exact simplified Chinese text:
 Main title: 全员在校认证 + 实名验证
 Subtitle: 只和真实的校友一起玩｜放心找搭子
+Tag 1: 学信网认证
+Tag 2: 实名验证
+Tag 3: 女生安心模式
+Brand mark: 觅遇社 Meetu
 
 Typography requirements:
 - Main title bold and large, white
 - Subtitle medium size, white, clean and highly legible
+- Three small rounded certification tags should be rendered below the subtitle
+- Brand mark should appear at the lower right corner
 - Add subtle emphasis to the safety concept, but do not add extra text beyond the exact lines above
 
 Generate the final image with the exact Chinese text already rendered correctly.
@@ -69,11 +79,17 @@ Composition: left side strong Chinese text, right side host badge / medal / crea
 Render the following exact simplified Chinese text:
 Main title: 你来组局，觅遇社找人
 Subtitle: 0成本成为觅遇社主理人｜把“会玩”变成你的超能力
+Tag 1: 0成本开局
+Tag 2: 平台帮你找人
+Tag 3: 收益自动到账
+CTA button: 立即成为主理人 →
 
 Typography requirements:
 - Main title large, bold, premium Chinese display font
 - Subtitle smaller but still very readable
 - Highlight the phrase “主理人” with stronger visual emphasis
+- Add three rounded benefit tags below the subtitle
+- Add a strong CTA button in the lower left or lower center text area
 
 Do not omit quotation marks around 会玩.
 Generate the final banner with Chinese text embedded.
@@ -94,10 +110,12 @@ Center visual: a cheerful mascot-like social symbol or campus social illustratio
 Render the following exact simplified Chinese text:
 Main title: 欢迎来到觅遇社
 Subtitle: 找到你的搭子，从这里开始
+Brand mark: 觅遇社 Meetu
 
 Typography requirements:
 - Main title large, bold, white, centered near the top
 - Subtitle smaller, white, centered below the title
+- Brand mark appears near the bottom in a smaller size
 - Overall image should feel like an official welcome card
 
 Generate the final social card with the Chinese text already rendered.
@@ -120,6 +138,7 @@ Typography requirements:
 - Main title bold and clear
 - Subtitle smaller and lighter
 - All text should appear at the top portion of the card and remain highly readable
+- The smartphone screen may contain abstract UI blocks but should not introduce unrelated extra words
 
 Generate the final card with all Chinese text embedded directly in the image.
 ```
@@ -135,11 +154,13 @@ Render the following exact simplified Chinese text:
 Top label: Step 2
 Main title: 一键拼团
 Subtitle: 找到搭子一起出发
+Center CTA: 立即拼团
 
 Typography requirements:
 - “Step 2” visually prominent
 - Main title bold, warm, youthful
 - Subtitle smaller and readable
+- Add the CTA as a central button element
 
 Generate a final card image with the exact Chinese text already present.
 ```
@@ -160,6 +181,7 @@ Typography requirements:
 - Strong title hierarchy
 - Friendly rounded Chinese font feeling
 - Final output must look like an official tutorial card
+- Add subtle five-star rating accents without introducing extra words
 
 Generate the final image with the exact Chinese text included.
 ```
@@ -175,11 +197,20 @@ Composition: big headline at top, strong central badge / host identity visual, c
 Render the following exact simplified Chinese text:
 Main title: 觅遇社主理人招募令
 Subtitle: 把“会玩”变成你的超能力
+Badge 1: 5星级
+Badge 2: 已认证
+Badge 3: 主理人
+Benefit 1: 0成本发布活动
+Benefit 2: 平台流量扶持
+Benefit 3: 活动收益到账
+Benefit 4: 专属身份标识
 
 Typography requirements:
 - Main title very bold and visually dominant
 - Subtitle smaller but still prominent
 - Highlight 主理人 and 会玩 with emphasis
+- Put the badge labels near the center identity card
+- Put the four benefit lines in the lower section
 
 Generate the final poster with exact Chinese text already rendered.
 ```
@@ -199,10 +230,14 @@ Add trendy speech-bubble shapes, city-social atmosphere, and dramatic contrast.
 Render the following exact simplified Chinese text:
 Main title: 找搭子终于不用蹲评论区了
 Subtitle: 大学生专属拼团社交平台
+Tag 1: #找搭子
+Tag 2: #大学生社交
+Tag 3: #拼团活动
 
 Typography requirements:
 - Main title huge, bold, neon Chinese typography
 - Subtitle smaller but still clear
+- Add the three hashtag tags as small sticker-like labels
 - Final layout should feel like a successful Xiaohongshu viral cover
 
 Generate the final cover with the Chinese text fully included.
@@ -218,11 +253,14 @@ Visual style: orange to pink energetic gradient, celebration particles, price-dr
 Render the following exact simplified Chinese text:
 Main title: 9.9元拼团剧本杀
 Subtitle: 大学生省钱社交指南
+Tag 1: #学生党
+Tag 2: #省钱攻略
 
 Typography requirements:
 - Main title extra large and bold
 - Put “9.9元” as the strongest visual focus
 - Subtitle smaller and clean
+- Add the two tags near the lower portion of the cover
 
 Generate the final cover with exact Chinese text already rendered.
 ```
@@ -238,11 +276,15 @@ Visual scene: anonymous young host figure, medals, badge-like motifs, event-orga
 Render the following exact simplified Chinese text:
 Main title: 大学生主理人真的能赚到钱吗？
 Subtitle: 我在觅遇社组了一场局之后
+Tag 1: #主理人招募
+Tag 2: #副业尝试
+Tag 3: #校园活动
 
 Typography requirements:
 - Main title large, bold, Chinese social-media cover style
 - Subtitle smaller, documentary / sharing tone
 - Maintain high readability and strong click appeal
+- Add the three hashtag tags as smaller supporting elements
 
 Generate the final cover with exact Chinese text already embedded.
 ```
