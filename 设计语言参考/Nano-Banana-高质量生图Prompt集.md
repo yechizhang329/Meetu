@@ -100,8 +100,8 @@ Generate the final banner with Chinese text embedded.
 ```text
 Create a final Chinese mobile app banner for Meetu, 750x340px, horizontal, production-ready.
 
-Visual style: warm, safe, youthful, trustworthy, pink and soft purple gradient palette, designed for a campus girls-only social feature.
-Composition: left side text block, right side visual scene with a warm all-female campus social gathering, soft trust-building badge elements, gentle glow, and a refined lifestyle feel. The image should feel welcoming and safe, not childish or overly sweet.
+Visual style: warm, cute, campus-girl-friendly, trustworthy, using a softer palette of blush pink, cream, peach, soft lavender, and a small amount of mint for freshness. The style should feel like a polished cartoon editorial illustration that university-age girls would like, not luxury beauty advertising.
+Composition: left side text block, right side visual scene with a stylized all-girls campus outing illustrated in a cute 2D or semi-flat cartoon style. Use rounded shapes, sticker-like icons, soft sparkles, heart or ribbon details, and gentle trust-building badge elements. Do not use photoreal people, realistic faces, or stock-photo aesthetics. The image should feel welcoming, friendly, and safe without becoming childish.
 
 Render the following exact simplified Chinese text:
 Main title: 女生专场活动｜姐妹安心拼团
@@ -169,8 +169,8 @@ Generate the final banner with the exact Chinese text already rendered.
 ```text
 Create a final Chinese mobile app middle banner for Meetu, 750x280px, horizontal, polished and production-ready.
 
-Visual style: warm, safe, youthful, pink and soft purple palette, trustworthy but not childish, designed for a girls-only activity feature.
-Composition: a warm all-female campus social outing scene, refined trust-building graphic elements, soft glow, and a clean text block.
+Visual style: warm, cute, reassuring, campus-girl-friendly, with blush pink, light cream, soft lavender, and peach as the main palette. Use a polished cartoon illustration style with rounded edges and soft sticker-like visual language.
+Composition: a stylized all-girls campus social outing scene in cute cartoon form, with rounded icon elements, soft glow, ribbon or star accents, and a clean text block. Avoid photoreal people, realistic photography, or mature fashion-ad aesthetics.
 
 Render the following exact simplified Chinese text:
 Main title: 女生安心拼团
@@ -180,6 +180,7 @@ Typography requirements:
 - Main title bold and reassuring
 - Subtitle smaller but very clear
 - The whole banner should feel safe, warm, and easy to trust
+- All people, icons, and scene elements should be clearly cartoonized or illustrated rather than realistic
 
 Generate the final banner with all Chinese text embedded directly in the image.
 ```
