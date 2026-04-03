@@ -97,9 +97,76 @@ Generate the final banner with Chinese text embedded.
 
 ---
 
-## 二、广场置顶帖配图
+## 二、中部 Banner
 
-### 4. 欢迎图
+### 4. 本周爆款 Banner
+
+```text
+Create a final Chinese mobile app middle banner for Meetu, 750x280px, horizontal, polished and production-ready.
+
+Visual style: hot trending activity recommendation, youthful, energetic, orange brand highlights, strong click-through feel.
+Composition: left side text block, right side stacked activity-cover thumbnails or a featured event card, with a strong heat indicator and participation atmosphere.
+
+Render the following exact simplified Chinese text:
+Main title: 本周最火局 🔥
+Subtitle: 126人已拼团成功｜剧本杀拼团局
+CTA button: 立即参加 →
+
+Typography requirements:
+- Main title bold and eye-catching
+- Subtitle medium size, readable, with the participation number visually emphasized
+- CTA button should feel clickable and urgent
+
+Generate the final banner with all Chinese text embedded directly in the image.
+```
+
+### 5. 场景种草 Banner
+
+```text
+Create a final Chinese mobile app middle banner for Meetu, 750x280px, horizontal, polished and production-ready.
+
+Visual style: multi-scene collage, fun, exploratory, comic-like but still premium, showing several activity scenes such as board games, cafe meetups, city walk, and sports.
+Composition: a dynamic scene collage with text integrated into the left or center-left area, while the right side holds playful scene fragments.
+
+Render the following exact simplified Chinese text:
+Main title: 周末不知道干嘛？👉 滑动看看
+Subtitle: 剧本杀｜拼饭｜City Walk｜运动局
+
+Typography requirements:
+- Main title large and lively
+- Subtitle smaller and easy to scan
+- Overall layout should feel like a recommendation banner that invites browsing
+
+Generate the final banner with the exact Chinese text already rendered.
+```
+
+### 6. 用户故事 Banner
+
+```text
+Create a final Chinese mobile app middle banner for Meetu, 750x280px, horizontal, polished and production-ready.
+
+Visual style: warm, authentic, testimonial-based, soft orange and cream tones, real-user-story feeling, emotionally trustworthy.
+Composition: quote-led layout with a soft user-avatar element or profile-card feel on one side and a warm campus social scene in the background.
+
+Render the following exact simplified Chinese text:
+Quote 1: “我在觅遇社认识了最好的饭搭子”
+Quote 2: “第一次一个人去剧本杀，没想到遇到了一群超合拍的人”
+Signature: —— @饭搭子小林
+
+Typography requirements:
+- Quote 1 is the visual focus
+- Quote 2 is smaller supporting text
+- Signature should be present but lower emphasis
+- The whole banner should feel like a real user recommendation, not a hard ad
+
+Generate the final banner with all Chinese text embedded directly in the image.
+```
+
+---
+
+## 三、广场置顶帖配图
+
+### 7. 欢迎图
 
 ```text
 Create a final Chinese square-ish social card for a campus social platform, 750x1000px, polished and ready to post.
@@ -121,7 +188,7 @@ Typography requirements:
 Generate the final social card with the Chinese text already rendered.
 ```
 
-### 5. 玩法 Step 1 图
+### 8. 玩法 Step 1 图
 
 ```text
 Create a final Chinese tutorial card, 750x1000px, polished and production-ready.
@@ -143,7 +210,7 @@ Typography requirements:
 Generate the final card with all Chinese text embedded directly in the image.
 ```
 
-### 6. 玩法 Step 2 图
+### 9. 玩法 Step 2 图
 
 ```text
 Create a final Chinese tutorial card, 750x1000px, polished and production-ready.
@@ -165,7 +232,7 @@ Typography requirements:
 Generate a final card image with the exact Chinese text already present.
 ```
 
-### 7. 玩法 Step 3 图
+### 10. 玩法 Step 3 图
 
 ```text
 Create a final Chinese tutorial card, 750x1000px, polished and production-ready.
@@ -186,7 +253,7 @@ Typography requirements:
 Generate the final image with the exact Chinese text included.
 ```
 
-### 8. 主理人招募主视觉
+### 11. 主理人招募主视觉
 
 ```text
 Create a final Chinese recruitment poster for Meetu hosts, 750x1000px, polished and production-ready.
@@ -217,9 +284,9 @@ Generate the final poster with exact Chinese text already rendered.
 
 ---
 
-## 三、小红书引流封面
+## 四、小红书引流封面
 
-### 9. 痛点共鸣型
+### 12. 痛点共鸣型
 
 ```text
 Create a final Xiaohongshu cover image, 1080x1440px, bold and highly clickable.
@@ -243,7 +310,7 @@ Typography requirements:
 Generate the final cover with the Chinese text fully included.
 ```
 
-### 10. 价格吸引型
+### 13. 价格吸引型
 
 ```text
 Create a final Xiaohongshu cover image, 1080x1440px, bright, promotional, and highly clickable.
@@ -265,7 +332,7 @@ Typography requirements:
 Generate the final cover with exact Chinese text already rendered.
 ```
 
-### 11. 主理人视角型
+### 14. 主理人视角型
 
 ```text
 Create a final Xiaohongshu cover image, 1080x1440px, polished and highly clickable.
@@ -291,9 +358,9 @@ Generate the final cover with exact Chinese text already embedded.
 
 ---
 
-## 四、上线倒计时海报
+## 五、上线倒计时海报
 
-### 12. D-3 海报
+### 15. D-3 海报
 
 ```text
 Create a final Chinese launch countdown poster, 750x1334px, polished and production-ready.
@@ -314,7 +381,7 @@ Typography requirements:
 Generate the final poster with all Chinese text included.
 ```
 
-### 13. D-2 海报
+### 16. D-2 海报
 
 ```text
 Create a final Chinese launch countdown poster, 750x1334px, polished and production-ready.
@@ -335,7 +402,7 @@ Typography requirements:
 Generate the final poster with the exact Chinese text rendered correctly.
 ```
 
-### 14. D-1 海报
+### 17. D-1 海报
 
 ```text
 Create a final Chinese launch countdown poster, 750x1334px, polished and production-ready.
@@ -358,7 +425,7 @@ Generate the final poster with exact Chinese text already present.
 
 ---
 
-## 五、模板类终图 Prompt 写法
+## 六、模板类终图 Prompt 写法
 
 > 适用于活动封面、活动分享海报等需要替换标题的内容
 
