@@ -1,348 +1,342 @@
-# 觅遇社 Nano Banana 高质量生图 Prompt 集
+# 觅遇社 Nano Banana 终图 Prompt 集
 
-> 本文件只保留可直接用于 Nano Banana 的英文 prompt
-> 不包含 FAL、不包含 Figma 操作步骤、不要求模型生成中文文字
+> 本文件用于直接让 Nano Banana 生成最终图片
+> 目标：把中文文案直接写进 prompt，让模型直接生成带中文文字的成品图
+> 不使用 FAL，不拆到 Figma，不输出底板思路
 
 ---
 
-## 统一规则
+## 使用原则
 
-- Always generate image only, no text, no Chinese characters, no logo, no watermark, no UI screenshot.
-- Reserve clean negative space for future overlay when needed.
-- Prioritize high-quality composition, natural lighting, realistic texture, and Gen-Z campus social atmosphere.
-- Avoid overly corporate, stock-photo, middle-aged, or luxury-commercial aesthetics.
+- 明确要求模型渲染 **exact simplified Chinese text**
+- 每条 prompt 都要求生成 **final poster / final banner / final card**
+- 直接写清楚版式、字体气质、文字层级、主副标题位置
+- 若出现错字、乱码、漏字，二次生成时只改文字相关描述，不要大改视觉主体
 
 ---
 
 ## 一、顶部 Banner
 
-### Banner 1 品牌心智
+### 1. 品牌心智 Banner
 
 ```text
-A wide horizontal banner background image, 750x340px, 2.2:1 ratio.
+Create a final Chinese mobile app banner for Meetu, 750x340px, horizontal, polished and production-ready.
 
-Warm orange to pink to soft purple gradient background with subtle glow and floating translucent activity cards.
-On the right side: frosted glass circles and cards containing simple white silhouettes of a dice, coffee cup, camera, and running figure.
-Soft sparkle particles, circular bokeh, and geometric puzzle-like decorations in the background.
+Visual style: young, vibrant, trustworthy, Gen-Z campus social platform, warm orange to pink to soft purple gradient, premium mobile-app advertising style, clean but energetic.
+Composition: left side text, right side visual scene. Right side shows a warm illustrated or semi-realistic campus social scene with activity symbols like dice, coffee, city walk camera, and sports icons. Keep the layout balanced and highly readable.
 
-Style: vibrant Gen-Z mobile app banner, clean composition, warm and inviting, premium but playful.
-No text, no logo, no mascot, no human face.
-Leave the left 55 percent clean and visually calm for future overlay.
+Render the following exact simplified Chinese text:
+Main title: 觅遇社 — 找到你的搭子
+Subtitle: 大学生专属拼团社交平台
+
+Typography requirements:
+- Main title large, bold, white, clean premium Chinese font
+- Subtitle smaller, white with slight transparency
+- Text must be readable, centered vertically on the left half
+
+Do not use English headline. Do not replace the Chinese text. Do not generate gibberish.
+Generate the final banner with the Chinese text already embedded in the image.
 ```
 
-### Banner 2 安全信任
+### 2. 安全信任 Banner
 
 ```text
-A wide horizontal banner background image, 750x340px, 2.2:1 ratio.
+Create a final Chinese mobile app banner for Meetu, 750x340px, horizontal, polished and production-ready.
 
-Blue gradient background from deep navy to bright sky blue, with a large glowing shield symbol on the right side.
-The shield should feel premium and trustworthy, with subtle golden rim light and three small circular certification-style badges below it.
-Soft radial glow behind the shield, clean light streaks, minimal geometric texture.
+Visual style: youthful safety and trust, blue plus brand orange palette, premium certification feel without looking too corporate.
+Composition: left text area, right visual area. Right side features a glowing shield, certification badges, and soft trust-building light effects. The whole image should still feel like a young campus product.
 
-Style: trustworthy, campus-safe, modern Chinese app banner, highly polished.
-No text, no logo, no Chinese characters, no UI elements.
-Leave the left 55 percent clean for future overlay.
+Render the following exact simplified Chinese text:
+Main title: 全员在校认证 + 实名验证
+Subtitle: 只和真实的校友一起玩｜放心找搭子
+
+Typography requirements:
+- Main title bold and large, white
+- Subtitle medium size, white, clean and highly legible
+- Add subtle emphasis to the safety concept, but do not add extra text beyond the exact lines above
+
+Generate the final image with the exact Chinese text already rendered correctly.
 ```
 
-### Banner 3 主理人招募
+### 3. 主理人招募 Banner
 
 ```text
-A wide horizontal banner background image, 750x340px, 2.2:1 ratio.
+Create a final Chinese mobile app banner for Meetu, 750x340px, horizontal, production-ready.
 
-Deep purple to lavender gradient background with a premium gold badge and crown composition on the right side.
-Add subtle sparkles, medal-like reflections, and a faint crown pattern in the background.
-The scene should feel aspirational, youthful, and energetic rather than luxury-business.
+Visual style: cool, bold, recruiting vibe, orange-yellow gradient mixed with energetic warm tones, Gen-Z host recruitment visual.
+Composition: left side strong Chinese text, right side host badge / medal / creator identity scene, with a sense of action and invitation.
 
-Style: Gen-Z recruitment banner, premium but playful, polished lighting, mobile-first visual design.
-No text, no logo, no readable symbols.
-Leave the left 60 percent clean for future overlay.
-```
+Render the following exact simplified Chinese text:
+Main title: 你来组局，觅遇社找人
+Subtitle: 0成本成为觅遇社主理人｜把“会玩”变成你的超能力
 
----
+Typography requirements:
+- Main title large, bold, premium Chinese display font
+- Subtitle smaller but still very readable
+- Highlight the phrase “主理人” with stronger visual emphasis
 
-## 二、活动封面图
-
-### 1. 桌游·推理
-
-```text
-Professional event cover photo, 600x800px portrait orientation.
-
-Cozy board game night on a wooden table, colorful dice, mystery cards, snack bowls, drinks with condensation, warm string lights reflecting on the table.
-Young university students' hands reaching into the scene, shallow depth of field, 45-degree overhead angle.
-Color palette: warm amber, deep navy, soft orange highlights.
-
-Style: lifestyle photography, premium social-event cover, realistic texture, youthful campus vibe.
-No text, no logo, no watermark.
-Leave top 15 percent and bottom 25 percent darker and cleaner for later overlay.
-```
-
-### 2. 派对·社交
-
-```text
-Professional event cover photo, 600x800px portrait orientation.
-
-Vibrant house party scene with balloons, confetti, glowing fairy lights, disco reflections, cups on a table, and softly blurred silhouettes of young people socializing in the background.
-Neon pink and purple side lighting with lively bokeh.
-
-Style: Gen-Z nightlife photography, energetic, fun, polished but natural.
-No text, no logo, no watermark.
-Leave top and bottom areas clean for later overlay.
-```
-
-### 3. 探店·美食
-
-```text
-Professional event cover photo, 600x800px portrait orientation.
-
-Beautiful cafe table with latte art coffee, pastry, dessert plate, soft natural window light, wooden tabletop, warm indoor greenery in the blurred background.
-Close-up composition with shallow depth of field and inviting food texture.
-
-Style: premium cafe photography, warm lifestyle aesthetic, realistic and appetizing.
-No text, no logo, no watermark.
-Leave top and bottom areas clean for later overlay.
-```
-
-### 4. 运动·户外
-
-```text
-Professional event cover photo, 600x800px portrait orientation.
-
-Dynamic outdoor sports scene on a university campus, running track or basketball court, bright daylight, green trees, blue sky, motion blur on young athletes, colorful sneakers, water bottles on the sideline.
-Fresh, energetic, healthy atmosphere.
-
-Style: active lifestyle photography, natural sunlight, youthful campus sports mood.
-No text, no logo, no watermark.
-Leave top and bottom areas clean for later overlay.
-```
-
-### 5. City Walk
-
-```text
-Professional event cover photo, 600x800px portrait orientation.
-
-Aesthetic urban street scene with cafe awnings, trees, small storefronts, soft golden-hour sunlight, a walking figure seen from behind with no visible face.
-Film-like color grading, long shadows, relaxed weekend exploration mood.
-
-Style: urban lifestyle photography, wanderlust, premium social-media visual.
-No text, no logo, no watermark.
-Leave top and bottom areas clean for later overlay.
-```
-
-### 6. 学习·搭伴
-
-```text
-Professional event cover photo, 600x800px portrait orientation.
-
-Calm study scene with open books, notebook, pens, warm desk lamp, coffee mug, and two study partners implied by hands or shoulders entering frame.
-Soft focused lighting, library or study-room mood, clean desk composition.
-
-Style: cozy academic photography, calm and intelligent, realistic details.
-No text, no logo, no watermark.
-Leave top and bottom areas clean for later overlay.
-```
-
-### 7. 观影·展览
-
-```text
-Professional event cover photo, 600x800px portrait orientation.
-
-Cinematic scene with red velvet cinema seats or a moody exhibition hall, dramatic side lighting, glowing screen or lit artwork in the distance, popcorn and drinks in foreground.
-Deep purple and warm gold accents, strong atmosphere, elegant composition.
-
-Style: cinematic lifestyle photography, artistic and immersive.
-No text, no logo, no watermark.
-Leave top and bottom areas clean for later overlay.
-```
-
-### 8. 盲盒·惊喜
-
-```text
-Professional event cover photo, 600x800px portrait orientation.
-
-A colorful surprise-reveal scene with an opening gift box, confetti burst, streamers, glowing particles, and layered colorful smoke or powder in the background.
-Bright playful energy with strong focal point and clean composition.
-
-Style: premium product-meets-party photography, playful and mysterious.
-No text, no logo, no watermark.
-Leave top and bottom areas clean for later overlay.
+Do not omit quotation marks around 会玩.
+Generate the final banner with Chinese text embedded.
 ```
 
 ---
 
-## 三、欢迎 / 玩法帖卡片
+## 二、广场置顶帖配图
 
-### 卡片 1 欢迎
+### 4. 欢迎图
 
 ```text
-A vertical social card background, 750x1000px portrait orientation.
+Create a final Chinese square-ish social card for a campus social platform, 750x1000px, polished and ready to post.
 
-Warm orange to pink gradient with floating translucent circles containing simple white icons for dice, coffee, camera, basketball, and books.
-Soft sparkles, bokeh lights, and a clean central composition.
+Visual style: warm, friendly, inviting, orange to pink gradient, cute but refined, campus social energy.
+Center visual: a cheerful mascot-like social symbol or campus social illustration, with floating activity icons such as board games, coffee, city walk, and sports.
 
-Style: modern app-illustration background, welcoming, youthful, premium and clean.
-No text, no mascot, no logo.
-Leave top 25 percent and bottom 15 percent clean for future overlay.
+Render the following exact simplified Chinese text:
+Main title: 欢迎来到觅遇社
+Subtitle: 找到你的搭子，从这里开始
+
+Typography requirements:
+- Main title large, bold, white, centered near the top
+- Subtitle smaller, white, centered below the title
+- Overall image should feel like an official welcome card
+
+Generate the final social card with the Chinese text already rendered.
 ```
 
-### 卡片 2 浏览活动
+### 5. 玩法 Step 1 图
 
 ```text
-A vertical tutorial-style social card background, 750x1000px portrait orientation.
+Create a final Chinese tutorial card, 750x1000px, polished and production-ready.
 
-Soft purple gradient background with a large smartphone mockup in the center, slightly tilted, showing only abstract colored content blocks rather than readable UI.
-A hand gesture near the screen suggests browsing and discovery.
+Visual style: clean, modern, mobile-app tutorial visual, purple gradient background, smartphone interface in the center showing an activity feed.
 
-Style: modern tutorial illustration, mobile-first, polished and minimal.
-No text, no readable UI, no logo.
-Leave top 25 percent clean for future overlay.
+Render the following exact simplified Chinese text:
+Top label: Step 1
+Main title: 浏览活动
+Subtitle: 看看身边有什么好玩的
+
+Typography requirements:
+- “Step 1” should be large and eye-catching
+- Main title bold and clear
+- Subtitle smaller and lighter
+- All text should appear at the top portion of the card and remain highly readable
+
+Generate the final card with all Chinese text embedded directly in the image.
 ```
 
-### 卡片 3 一键拼团
+### 6. 玩法 Step 2 图
 
 ```text
-A vertical social connection card background, 750x1000px portrait orientation.
+Create a final Chinese tutorial card, 750x1000px, polished and production-ready.
 
-Warm orange gradient background with colorful abstract avatar circles connected by dotted lines, converging toward a clean central action zone.
-The composition should feel energetic, social, and network-driven.
+Visual style: energetic, social, orange gradient background, abstract avatar circles converging toward a group action area, dynamic and friendly.
 
-Style: modern social graph illustration, cheerful and mobile-app friendly.
-No text, no logo, no readable UI.
-Leave top 25 percent clean for future overlay.
+Render the following exact simplified Chinese text:
+Top label: Step 2
+Main title: 一键拼团
+Subtitle: 找到搭子一起出发
+
+Typography requirements:
+- “Step 2” visually prominent
+- Main title bold, warm, youthful
+- Subtitle smaller and readable
+
+Generate a final card image with the exact Chinese text already present.
 ```
 
-### 卡片 4 线下面基
+### 7. 玩法 Step 3 图
 
 ```text
-A vertical friendship scene illustration, 750x1000px portrait orientation.
+Create a final Chinese tutorial card, 750x1000px, polished and production-ready.
 
-Warm pink gradient background with a stylized group of young people gathered around a table, laughing, playing games, high-fiving, with subtle star and heart motifs.
-Friendly, joyful, soft-edged illustration rather than photorealism.
+Visual style: warm friendship atmosphere, pink gradient background, young people offline gathering, board game or cafe meet-up scene, happy and relaxed.
 
-Style: warm social illustration, cute but refined, youth-oriented.
-No text, no logo.
-Leave top 25 percent clean for future overlay.
+Render the following exact simplified Chinese text:
+Top label: Step 3
+Main title: 线下面基
+Subtitle: 开心玩，认真评
+
+Typography requirements:
+- Strong title hierarchy
+- Friendly rounded Chinese font feeling
+- Final output must look like an official tutorial card
+
+Generate the final image with the exact Chinese text included.
 ```
 
----
-
-## 四、主理人身份卡
+### 8. 主理人招募主视觉
 
 ```text
-A premium identity-card background, 750x1000px portrait orientation.
+Create a final Chinese recruitment poster for Meetu hosts, 750x1000px, polished and production-ready.
 
-Dark purple background with subtle geometric texture, a large gold-edged card shape in the center with slight 3D perspective, crowned by a stylized golden crown.
-Gold badge elements, soft light rays, and premium sparkles around the card.
+Visual style: trendy, bold, premium campus creator recruitment, orange and gold with energetic gradients, medal and badge visual language, strong click appeal.
+Composition: big headline at top, strong central badge / host identity visual, clear CTA feeling.
 
-Style: premium campus host identity visual, aspirational and polished, purple and gold.
-No text, no logo, no readable badges.
-Leave the central card surface clean for later content placement.
-```
+Render the following exact simplified Chinese text:
+Main title: 觅遇社主理人招募令
+Subtitle: 把“会玩”变成你的超能力
 
----
+Typography requirements:
+- Main title very bold and visually dominant
+- Subtitle smaller but still prominent
+- Highlight 主理人 and 会玩 with emphasis
 
-## 五、小红书引流封面
-
-### 1. 痛点共鸣型
-
-```text
-A bold Xiaohongshu cover background, 1080x1440px portrait orientation.
-
-Dark black background with cyber-neon circuit texture, neon pink and cyan light streaks, glowing speech-bubble shapes, and a subtle city skyline silhouette at the bottom.
-High contrast and eye-catching composition.
-
-Style: cyberpunk Chinese social cover, bold and trendy.
-No text, no logo.
-Leave large central area clean for future title overlay.
-```
-
-### 2. 价格吸引型
-
-```text
-A bold promotional social-media cover background, 1080x1440px portrait orientation.
-
-Bright orange-to-pink gradient background with a large translucent price-tag form in the center, confetti, celebratory particles, and small activity icons near the edges.
-Energetic, youthful, and highly clickable.
-
-Style: Chinese social-media promotion aesthetic, polished and vivid.
-No text, no logo.
-Leave center clean for future title overlay.
-```
-
-### 3. 好奇驱动型
-
-```text
-A mystery-driven Xiaohongshu cover background, 1080x1440px portrait orientation.
-
-Deep purple to black background with a semi-open glowing mystery box, pink and cyan light beams, floating question-mark shapes, sparkles, and an intentionally unclear social-event silhouette inside the light.
-Strong suspense and curiosity.
-
-Style: cyber-neon mystery poster, trendy and high contrast.
-No text, no logo, no readable symbols.
-Leave upper and center areas clean for future title overlay.
-```
-
-### 4. 场景种草型
-
-```text
-A lifestyle Xiaohongshu cover background, 1080x1440px portrait orientation.
-
-Warm golden-hour campus social scene with university students walking together near cafes and trees, holding drinks, talking casually, with sunlight flares and soft bokeh.
-Natural but aspirational.
-
-Style: candid lifestyle photography, Xiaohongshu-friendly, warm and premium.
-No text, no logo, no watermark.
-Leave upper 30 percent and lower 20 percent clean for future overlay.
-```
-
-### 5. 主理人视角型
-
-```text
-A premium creator-style Xiaohongshu cover background, 1080x1440px portrait orientation.
-
-Deep purple background with gold glow, an anonymous young host figure seen from a three-quarter back view, a softly lit crowd scene behind, floating crown and medal motifs, and layered card-like shapes suggesting event organization.
-
-Style: premium campus host visual, confident, ambitious, high-end but youthful.
-No text, no logo, no readable UI.
-Leave center-left and upper areas clean for future title overlay.
+Generate the final poster with exact Chinese text already rendered.
 ```
 
 ---
 
-## 六、上线倒计时海报
+## 三、小红书引流封面
 
-### D-3
+### 9. 痛点共鸣型
 
 ```text
-A countdown poster background, 750x1334px portrait orientation.
+Create a final Xiaohongshu cover image, 1080x1440px, bold and highly clickable.
 
-Warm orange gradient background with subtle geometric patterns and a large glowing number 3 in the center.
-Soft particles and early confetti details around the edges, exciting but still restrained.
+Visual style: cyber-neon, dark background, bright pink and yellow title treatment, strong social-media impact, designed for Chinese college students.
+Add trendy speech-bubble shapes, city-social atmosphere, and dramatic contrast.
 
-Style: app launch countdown poster, warm, modern, youthful.
-No text beyond the number 3.
-Leave top and bottom areas clean for future overlay.
+Render the following exact simplified Chinese text:
+Main title: 找搭子终于不用蹲评论区了
+Subtitle: 大学生专属拼团社交平台
+
+Typography requirements:
+- Main title huge, bold, neon Chinese typography
+- Subtitle smaller but still clear
+- Final layout should feel like a successful Xiaohongshu viral cover
+
+Generate the final cover with the Chinese text fully included.
 ```
 
-### D-2
+### 10. 价格吸引型
 
 ```text
-A countdown poster background, 750x1334px portrait orientation.
+Create a final Xiaohongshu cover image, 1080x1440px, bright, promotional, and highly clickable.
 
-Pink to purple gradient background with a luminous glass-like number 2 in the center, brighter glow, sparkles, abstract shards, and more celebratory energy than D-3.
+Visual style: orange to pink energetic gradient, celebration particles, price-driven social promo design, youthful Chinese social-media aesthetic.
 
-Style: trendy launch countdown poster, energetic and visually rich.
-No text beyond the number 2.
-Leave top and bottom areas clean for future overlay.
+Render the following exact simplified Chinese text:
+Main title: 9.9元拼团剧本杀
+Subtitle: 大学生省钱社交指南
+
+Typography requirements:
+- Main title extra large and bold
+- Put “9.9元” as the strongest visual focus
+- Subtitle smaller and clean
+
+Generate the final cover with exact Chinese text already rendered.
 ```
 
-### D-1
+### 11. 主理人视角型
 
 ```text
-A final countdown poster background, 750x1334px portrait orientation.
+Create a final Xiaohongshu cover image, 1080x1440px, polished and highly clickable.
 
-Rich magenta to deep purple gradient background with a dramatic glowing number 1, gold highlights, strong confetti burst, light beams, sparkles, and peak launch-night anticipation.
+Visual style: premium purple and gold, creator perspective, ambitious but youthful, host identity and campus side-income vibe.
+Visual scene: anonymous young host figure, medals, badge-like motifs, event-organizer atmosphere.
 
-Style: bold Gen-Z launch poster, celebratory, polished, high energy.
-No text beyond the number 1.
-Leave top and bottom areas clean for future overlay.
+Render the following exact simplified Chinese text:
+Main title: 大学生主理人真的能赚到钱吗？
+Subtitle: 我在觅遇社组了一场局之后
+
+Typography requirements:
+- Main title large, bold, Chinese social-media cover style
+- Subtitle smaller, documentary / sharing tone
+- Maintain high readability and strong click appeal
+
+Generate the final cover with exact Chinese text already embedded.
+```
+
+---
+
+## 四、上线倒计时海报
+
+### 12. D-3 海报
+
+```text
+Create a final Chinese launch countdown poster, 750x1334px, polished and production-ready.
+
+Visual style: warm orange launch anticipation, large glowing number 3, clean but exciting composition, modern mobile internet poster aesthetic.
+
+Render the following exact simplified Chinese text:
+Main title: 3天后，找搭子这件事将变得无比简单
+Subtitle: 觅遇社｜大学生专属拼团社交平台 即将上线
+Bottom line: 微信搜索“觅遇社”小程序
+
+Typography requirements:
+- Main title large and highly readable
+- Subtitle medium size
+- Bottom line smaller but still clear
+- Number 3 should be visually dominant but not overpower the text
+
+Generate the final poster with all Chinese text included.
+```
+
+### 13. D-2 海报
+
+```text
+Create a final Chinese launch countdown poster, 750x1334px, polished and production-ready.
+
+Visual style: pink to purple countdown atmosphere, stronger anticipation, dynamic particles, youthful but trustworthy.
+
+Render the following exact simplified Chinese text:
+Main title: 还有2天，你的搭子已经在路上了
+Subtitle: 全员在校认证｜诚意金防鸽｜女生安心模式
+Bottom line: 微信搜索“觅遇社”小程序
+
+Typography requirements:
+- Main title bold and prominent
+- Subtitle clear and trustworthy
+- Bottom line concise and readable
+- Number 2 can be part of the visual focus
+
+Generate the final poster with the exact Chinese text rendered correctly.
+```
+
+### 14. D-1 海报
+
+```text
+Create a final Chinese launch countdown poster, 750x1334px, polished and production-ready.
+
+Visual style: final-day launch excitement, magenta to deep purple, celebratory confetti, energetic and action-oriented.
+
+Render the following exact simplified Chinese text:
+Main title: 明天见！你的第一场搭子局等你来
+Subtitle: 首批活动已上架｜准备好了吗？
+Bottom line: 微信搜索“觅遇社”小程序
+
+Typography requirements:
+- Main title strong and emotional
+- Subtitle medium size and clear
+- Bottom line concise
+- Number 1 can appear as a strong visual symbol in the composition
+
+Generate the final poster with exact Chinese text already present.
+```
+
+---
+
+## 五、模板类终图 Prompt 写法
+
+> 适用于活动封面、活动分享海报等需要替换标题的内容
+
+```text
+Create a final Chinese event poster, 600x800px portrait orientation, polished and production-ready.
+
+Visual style: [在这里写活动类型和视觉方向，例如 warm cafe social event / board game mystery night / city walk weekend outing].
+Main scene: [在这里写场景主体].
+
+Render the following exact simplified Chinese text:
+Main title: [活动标题]
+Subtitle: [一句话卖点]
+Info line: [时间]｜[地点]｜[X人成团]
+Price: [¥XX]
+
+Typography requirements:
+- Main title bold and readable
+- Subtitle smaller
+- Info line compact and clear
+- Price visually emphasized
+
+Generate the final poster with all Chinese text embedded directly in the image.
 ```
