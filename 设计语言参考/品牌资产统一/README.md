@@ -12,8 +12,10 @@
   - 正式品牌 Logo 主版本
 - `meetu-app-icon-master.svg`
   - App Icon 主版本
+- `meetu-mascot-standard-pose.png`
+  - 以 `0 Meetu mascot master.png` 为基准复制出的当前 mascot source-of-truth
 - `meetu-mascot-standard-pose.svg`
-  - 觅遇仔标准姿态主版本
+  - 觅遇仔标准姿态展示版（基于当前 mascot source-of-truth 包装）
 - `meetu-splash-screen-master.svg`
   - 开屏页主版本
 - `meetu-ui-design-guide-cover-master.svg`
