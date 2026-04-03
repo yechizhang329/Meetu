@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CMS 子页模板 V2 — 目录</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", sans-serif; background: #f5f5f7; min-height: 100vh; }
+    .container { max-width: 800px; margin: 0 auto; padding: 40px 24px; }
+    h1 { font-size: 28px; font-weight: 800; margin-bottom: 8px; }
+    .subtitle { font-size: 14px; color: #86868b; margin-bottom: 32px; }
+    .grid { display: grid; gap: 16px; }
+    .card {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.12); }
+    .card-header { padding: 24px; color: #fff; }
+    .card-header h2 { font-size: 20px; font-weight: 700; margin-bottom: 4px; }
+    .card-header p { font-size: 13px; opacity: 0.8; }
+    .card-body { padding: 16px 24px; background: #fff; }
+    .card-body p { font-size: 13px; color: #86868b; line-height: 1.6; }
+    .tag { display: inline-block; padding: 4px 10px; border-radius: 8px; font-size: 11px; font-weight: 600; margin-right: 6px; margin-top: 8px; }
+    .a-bg { background: linear-gradient(135deg, #100d23, #26154d); }
+    .b-bg { background: linear-gradient(135deg, #d4a574, #8a6d4b); }
+    .c-bg { background: linear-gradient(135deg, #25bfb7, #1e6a66); }
+    .d-bg { background: linear-gradient(135deg, #3d2858, #2a1f3d); }
+    .tag-a { background: rgba(59,224,255,0.15); color: #3be0ff; }
+    .tag-b { background: rgba(84,56,26,0.1); color: #8a6d4b; }
+    .tag-c { background: rgba(37,191,183,0.1); color: #1e6a66; }
+    .tag-d { background: rgba(200,170,230,0.15); color: #8a6dba; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>CMS 子页模板 V2</h1>
+    <p class="subtitle">4套独立人格模板家族 · 全部 inline style · 可直接粘贴到后台源码模式</p>
+    <div class="grid">
+      <a class="card" href="./campaign-pop.html">
+        <div class="card-header a-bg">
+          <h2>A — Campaign Pop / 招募动员型</h2>
+          <p>示例：主理人招募</p>
+        </div>
+        <div class="card-body">
+          <p>气质=街头潮牌发布会。深色霓虹底、大字冲击、强CTA。面向Q2先锋探索者。</p>
+          <span class="tag tag-a">冲击力</span><span class="tag tag-a">霓虹感</span><span class="tag tag-a">强号召</span>
+        </div>
+      </a>
+      <a class="card" href="./youth-editorial.html">
+        <div class="card-header b-bg">
+          <h2>B — Youth Editorial / 平台介绍型</h2>
+          <p>示例：关于觅遇社</p>
+        </div>
+        <div class="card-body">
+          <p>气质=校园生活方式杂志。暖色调、拼贴留白、内容感。面向Q3焦虑观望者。</p>
+          <span class="tag tag-b">温暖</span><span class="tag tag-b">拼贴</span><span class="tag tag-b">信任感</span>
+        </div>
+      </a>
+      <a class="card" href="./soft-tech.html">
+        <div class="card-header c-bg">
+          <h2>C — Soft Tech System / 流程规则型</h2>
+          <p>示例：诚意金说明</p>
+        </div>
+        <div class="card-body">
+          <p>气质=清爽工具指南。蓝绿色调、信息优先、一屏一答案。面向Q1+Q3。</p>
+          <span class="tag tag-c">可信</span><span class="tag tag-c">清晰</span><span class="tag tag-c">轻盈</span>
+        </div>
+      </a>
+      <a class="card" href="./festival-topic.html">
+        <div class="card-header d-bg">
+          <h2>D — Festival Topic / 活动专题型</h2>
+          <p>示例：女生专场</p>
+        </div>
+        <div class="card-body">
+          <p>气质=音乐节海报。暗紫渐变、活动时间线、氛围感。面向Q1女性用户。</p>
+          <span class="tag tag-d">氛围</span><span class="tag tag-d">安心</span><span class="tag tag-d">场景代入</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</body>
+</html>
