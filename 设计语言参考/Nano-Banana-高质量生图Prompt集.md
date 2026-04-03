@@ -14,6 +14,19 @@
 - 若出现错字、乱码、漏字，二次生成时只改文字相关描述，不要大改视觉主体
 - 若画面中出现人物，统一使用同一种肤色设定：soft warm light-beige skin tone；同一组图内不要混出多种肤色
 
+## Nano Banana 品牌生产标准
+
+- 品牌名称统一使用：`觅遇社` / `Meetu`；禁止出现旧名称 `觅途`
+- 若 prompt 中需要品牌标识，默认使用 `觅遇社 Meetu`
+- 视觉优先对齐觅遇社现有品牌锚点：warm orange 主色、rounded cards、capsule tags、playful youth-campus atmosphere
+- 若出现 mascot、icon、贴纸、标签、对话框、提示框等元素，统一使用圆角、厚描边、偏卡通图形化表达
+- 非特殊说明下，避免 photoreal stock-ad aesthetics；优先 illustrated / cartoonized / graphic-ad style
+- 若涉及小程序相关界面，构图和组件气质要尽量贴近觅遇社当前的小程序 UI 语言，不要生成通用型陌生 App
+- 同一组图内保持统一的边框系统、标题条结构、品牌署名位置和 CTA 风格
+- 若需要生成中文文字成品图，必须强调：text should be correct, readable, and fully embedded into the final image
+- 若生成结果偏离品牌语言，优先回改：品牌名、品牌色、人物风格、边框和标题结构，不优先改主题内容
+- 若当前物料有明确品牌标准，应以品牌标准优先；本文件只是把标准转译进 prompt
+
 ---
 
 ## 一、顶部 Banner
