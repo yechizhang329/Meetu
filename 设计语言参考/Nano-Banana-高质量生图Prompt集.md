@@ -124,28 +124,27 @@ Generate the final banner with all Chinese text embedded directly in the image.
 
 ## 二、中部 Banner
 
-### 4. 本周爆款 Banner
+### 5. 活动品类展示 Banner
 
 ```text
 Create a final Chinese mobile app middle banner for Meetu, 750x280px, horizontal, polished and production-ready.
 
-Visual style: hot trending activity recommendation, youthful, energetic, orange brand highlights, strong click-through feel.
-Composition: left side text block, right side stacked activity-cover thumbnails or a featured event card, with a strong heat indicator and participation atmosphere.
+Visual style: vibrant category showcase, youthful, exploratory, colorful but clean, designed to show the range of activities available on the platform.
+Composition: left or center-left text block, right side or background shows a multi-scene collage or icon system covering board games, dining, city walk, sports, and social gatherings.
 
 Render the following exact simplified Chinese text:
-Main title: 本周最火局 🔥
-Subtitle: 126人已拼团成功｜剧本杀拼团局
-CTA button: 立即参加 →
+Main title: 剧本杀·拼饭·City Walk·运动……
+Subtitle: 总有一场局适合你
 
 Typography requirements:
-- Main title bold and eye-catching
-- Subtitle medium size, readable, with the participation number visually emphasized
-- CTA button should feel clickable and urgent
+- Main title bold and eye-catching, with category rhythm and variety
+- Subtitle medium size, warm and readable
+- The whole banner should feel like “there are many things to do here”, not a single-event ad
 
 Generate the final banner with all Chinese text embedded directly in the image.
 ```
 
-### 5. 场景种草 Banner
+### 6. 场景种草 Banner
 
 ```text
 Create a final Chinese mobile app middle banner for Meetu, 750x280px, horizontal, polished and production-ready.
@@ -154,8 +153,8 @@ Visual style: multi-scene collage, fun, exploratory, comic-like but still premiu
 Composition: a dynamic scene collage with text integrated into the left or center-left area, while the right side holds playful scene fragments.
 
 Render the following exact simplified Chinese text:
-Main title: 周末不知道干嘛？👉 滑动看看
-Subtitle: 剧本杀｜拼饭｜City Walk｜运动局
+Main title: 课后不知道干嘛？
+Subtitle: 滑下去看看今天有什么好玩的
 
 Typography requirements:
 - Main title large and lively
@@ -165,24 +164,42 @@ Typography requirements:
 Generate the final banner with the exact Chinese text already rendered.
 ```
 
-### 6. 用户故事 Banner
+### 7. 女生专场 Banner
 
 ```text
 Create a final Chinese mobile app middle banner for Meetu, 750x280px, horizontal, polished and production-ready.
 
-Visual style: warm, authentic, testimonial-based, soft orange and cream tones, real-user-story feeling, emotionally trustworthy.
-Composition: quote-led layout with a soft user-avatar element or profile-card feel on one side and a warm campus social scene in the background.
+Visual style: warm, safe, youthful, pink and soft purple palette, trustworthy but not childish, designed for a girls-only activity feature.
+Composition: a warm all-female campus social outing scene, refined trust-building graphic elements, soft glow, and a clean text block.
 
 Render the following exact simplified Chinese text:
-Quote 1: “我在觅遇社认识了最好的饭搭子”
-Quote 2: “第一次一个人去剧本杀，没想到遇到了一群超合拍的人”
-Signature: —— @饭搭子小林
+Main title: 女生安心拼团
+Subtitle: 全员在校认证｜姐妹局放心约
 
 Typography requirements:
-- Quote 1 is the visual focus
-- Quote 2 is smaller supporting text
-- Signature should be present but lower emphasis
-- The whole banner should feel like a real user recommendation, not a hard ad
+- Main title bold and reassuring
+- Subtitle smaller but very clear
+- The whole banner should feel safe, warm, and easy to trust
+
+Generate the final banner with all Chinese text embedded directly in the image.
+```
+
+### 8. 新人引导 Banner
+
+```text
+Create a final Chinese mobile app middle banner for Meetu, 750x280px, horizontal, polished and production-ready.
+
+Visual style: onboarding-friendly, clean, clear, slightly instructional but still youthful and inviting.
+Composition: strong text on the left or center-left, with a simple three-step visual flow on the right using icons or mini-cards to represent profile setup, activity browsing, and joining.
+
+Render the following exact simplified Chinese text:
+Main title: 第一次来觅遇社？
+Subtitle: 3步找到你的搭子｜完善资料→浏览活动→报名出发
+
+Typography requirements:
+- Main title bold and friendly
+- Subtitle medium size, highly readable, with the three-step flow clearly preserved
+- The overall banner should feel like a low-friction onboarding entry point
 
 Generate the final banner with all Chinese text embedded directly in the image.
 ```
