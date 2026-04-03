@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Soft Tech System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=IBM+Plex+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "IBM Plex Sans SC", sans-serif;
+      color: #14272d;
+      background:
+        linear-gradient(180deg, #f4fbff 0%, #eef9f6 100%);
+    }
+    .shell { width: min(calc(100% - 24px), 420px); margin: 0 auto; padding: 18px 0 34px; }
+    .topbar { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+    .tag, .link { border-radius: 999px; font-size: 12px; font-weight: 800; }
+    .tag { padding: 8px 12px; background: rgba(35, 128, 124, .10); color: #1e6a66; }
+    .link { padding: 10px 14px; background: #fff; border: 1px solid rgba(35,128,124,.1); text-decoration: none; color: inherit; }
+    .hero, .panel {
+      margin-top: 16px;
+      padding: 18px;
+      border-radius: 24px;
+      background: rgba(255,255,255,.86);
+      border: 1px solid rgba(35,128,124,.10);
+      box-shadow: 0 18px 38px rgba(34, 97, 103, .10);
+    }
+    .hero h1, .panel h2 {
+      margin: 14px 0 10px;
+      font-family: "Manrope", "IBM Plex Sans SC", sans-serif;
+      font-size: 42px;
+      line-height: .92;
+      letter-spacing: -0.04em;
+    }
+    .hero p, .panel p { margin: 0; line-height: 1.8; color: #557277; }
+    .steps { display: grid; gap: 10px; margin-top: 14px; }
+    .step {
+      display: grid;
+      grid-template-columns: 44px 1fr;
+      gap: 12px;
+      padding: 14px;
+      border-radius: 18px;
+      background: linear-gradient(180deg, #ffffff 0%, #f4fbff 100%);
+      border: 1px solid rgba(35,128,124,.08);
+    }
+    .num {
+      width: 44px; height: 44px; border-radius: 14px;
+      display: grid; place-items: center; font-weight: 800;
+      background: linear-gradient(135deg, rgba(37,191,183,.14), rgba(107,215,255,.18));
+      color: #17615e;
+    }
+    .step strong { display: block; margin: 2px 0 4px; }
+    .step span { color: #557277; line-height: 1.7; font-size: 14px; }
+    .inline-screens { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 14px; }
+    .inline-screens img {
+      width: 100%;
+      border-radius: 18px;
+      box-shadow: 0 14px 24px rgba(26, 79, 84, .12);
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <div class="topbar"><span class="tag">Soft Tech System / 流程规则型</span><a class="link" href="./index.html">V2 目录</a></div>
+    <section class="hero">
+      <h1>Get the answer,<br>without getting lost.</h1>
+      <p>这套模板服务的是“我有具体问题，现在就想看懂”。信息要极清楚，但看起来仍然属于年轻产品，而不是后台帮助中心。</p>
+    </section>
+    <section class="panel">
+      <h2>一个屏，回答一个问题。</h2>
+      <div class="steps">
+        <div class="step"><div class="num">01</div><div><strong>入口在哪</strong><span>先告诉用户从哪里开始，而不是先交代一堆背景。</span></div></div>
+        <div class="step"><div class="num">02</div><div><strong>要做什么</strong><span>操作步骤必须短，最好每步只配一句解释。</span></div></div>
+        <div class="step"><div class="num">03</div><div><strong>结果是什么</strong><span>告诉用户完成后会发生什么，减少流程焦虑。</span></div></div>
+      </div>
+    </section>
+    <section class="panel">
+      <h2>Screenshot = Proof.</h2>
+      <p>流程页适合用截图卡来证明平台承接能力，不需要再做太多情绪海报式装饰。</p>
+      <div class="inline-screens">
+        <img src="../assets/home-screen.png" alt="主页截图">
+        <img src="../assets/square-screen.png" alt="广场截图">
+      </div>
+    </section>
+  </main>
+</body>
+</html>
