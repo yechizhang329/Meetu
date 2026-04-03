@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Campaign Pop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=IBM+Plex+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "IBM Plex Sans SC", sans-serif;
+      color: #fff;
+      background:
+        radial-gradient(circle at 20% 10%, rgba(255, 94, 151, 0.4), transparent 20%),
+        radial-gradient(circle at 85% 12%, rgba(42, 221, 255, 0.35), transparent 18%),
+        linear-gradient(180deg, #100d23 0%, #26154d 42%, #16152e 100%);
+    }
+    .shell { width: min(calc(100% - 24px), 420px); margin: 0 auto; padding: 18px 0 34px; }
+    .topbar { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+    .badge, .pill { display: inline-flex; align-items: center; justify-content: center; border-radius: 999px; font-weight: 800; }
+    .badge { padding: 8px 12px; background: rgba(255,255,255,.1); font-size: 12px; }
+    .pill { padding: 10px 14px; background: #fff35a; color: #211900; font-size: 13px; box-shadow: 0 10px 24px rgba(255, 243, 90, .25); }
+    .hero { padding: 18px 0 12px; position: relative; }
+    .hero h1 {
+      margin: 18px 0 12px;
+      font-family: "Archivo Black", sans-serif;
+      font-size: 52px;
+      line-height: .9;
+      letter-spacing: -0.04em;
+      text-transform: uppercase;
+      text-shadow: 0 0 24px rgba(255, 94, 151, .2);
+    }
+    .hero p { margin: 0; color: rgba(255,255,255,.78); line-height: 1.75; font-size: 15px; }
+    .hero-sticker {
+      margin-top: 18px;
+      display: inline-block;
+      transform: rotate(-4deg);
+      padding: 12px 14px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, #3be0ff 0%, #8a7dff 100%);
+      color: #07111b;
+      font-weight: 900;
+      box-shadow: 0 20px 35px rgba(59, 224, 255, .18);
+    }
+    .grid { display: grid; gap: 14px; margin-top: 16px; }
+    .panel {
+      position: relative;
+      overflow: hidden;
+      padding: 18px;
+      border-radius: 26px;
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.12);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 24px 50px rgba(0,0,0,.18);
+    }
+    .panel h2 { margin: 0 0 12px; font-size: 28px; line-height: .96; text-transform: uppercase; font-family: "Archivo Black", sans-serif; }
+    .quote { font-size: 32px; line-height: .96; }
+    .panel p { margin: 0; color: rgba(255,255,255,.76); line-height: 1.8; }
+    .cards { display: grid; gap: 10px; margin-top: 14px; }
+    .card {
+      padding: 14px;
+      border-radius: 18px;
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.1);
+    }
+    .card strong { display: block; margin-bottom: 4px; font-size: 15px; }
+    .tag-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+    .tag-row span {
+      padding: 8px 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.1);
+      font-size: 12px;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <div class="topbar"><span class="badge">Campaign Pop / 招募动员型</span><a class="pill" href="./index.html">V2 目录</a></div>
+    <section class="hero">
+      <h1>Be The<br>Host.</h1>
+      <p>这套模板不是“介绍功能”，而是“把加入这件事包装成一次发声”。适用于主理人招募、首发活动招募、校园主理人计划。</p>
+      <div class="hero-sticker">会玩，就是你的超能力</div>
+    </section>
+    <section class="grid">
+      <div class="panel">
+        <h2 class="quote">不是解释你是谁，<br>是让你想立刻加入。</h2>
+        <div class="tag-row"><span>冲击力</span><span>霓虹感</span><span>强 CTA</span></div>
+      </div>
+      <div class="panel">
+        <h2>3 Reasons</h2>
+        <div class="cards">
+          <div class="card"><strong>先抓情绪</strong><p>第一屏像品牌 campaign，而不是说明页。</p></div>
+          <div class="card"><strong>强节奏分屏</strong><p>一屏一个动作，不给用户“滑文档”的感觉。</p></div>
+          <div class="card"><strong>身份感要炸出来</strong><p>主理人必须看起来像一种酷的身份，而不是一个流程入口。</p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

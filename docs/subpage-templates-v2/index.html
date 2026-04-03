@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Meetu Template Family V2</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bricolage+Grotesque:wght@600;700;800&family=IBM+Plex+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "IBM Plex Sans SC", sans-serif;
+      color: #22163c;
+      background:
+        radial-gradient(circle at 15% 10%, rgba(177, 140, 255, 0.26), transparent 24%),
+        radial-gradient(circle at 88% 16%, rgba(126, 235, 206, 0.2), transparent 20%),
+        linear-gradient(180deg, #f7f3ff 0%, #fff9f2 100%);
+    }
+    .wrap { width: min(calc(100% - 32px), 1100px); margin: 0 auto; padding: 28px 0 48px; }
+    .hero {
+      padding: 28px;
+      border-radius: 30px;
+      background: rgba(255,255,255,0.82);
+      border: 1px solid rgba(95,55,168,0.08);
+      box-shadow: 0 28px 70px rgba(86, 54, 155, 0.14);
+      backdrop-filter: blur(16px);
+    }
+    .hero span {
+      display: inline-block;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(95,55,168,0.08);
+      color: #5f37a8;
+      font-size: 12px;
+      font-weight: 800;
+    }
+    .hero h1 {
+      margin: 16px 0 10px;
+      font-size: clamp(42px, 8vw, 88px);
+      line-height: .92;
+      letter-spacing: -0.05em;
+      font-family: "Bricolage Grotesque", "IBM Plex Sans SC", sans-serif;
+    }
+    .hero p {
+      margin: 0;
+      font-size: 16px;
+      line-height: 1.8;
+      color: #665a82;
+      max-width: 52rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 18px;
+    }
+    .card {
+      display: block;
+      padding: 22px;
+      border-radius: 28px;
+      color: inherit;
+      text-decoration: none;
+      min-height: 240px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 26px 60px rgba(86, 54, 155, 0.12);
+    }
+    .card h2 {
+      margin: 0 0 10px;
+      font-size: 34px;
+      line-height: .96;
+      letter-spacing: -0.04em;
+      font-family: "Bricolage Grotesque", "IBM Plex Sans SC", sans-serif;
+    }
+    .card p {
+      margin: 0;
+      max-width: 24rem;
+      line-height: 1.8;
+      font-size: 15px;
+    }
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+    .tags span {
+      padding: 8px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .campaign { background: linear-gradient(160deg, #130e29 0%, #3c1571 45%, #ff5b8a 100%); color: #fff; }
+    .campaign .tags span { background: rgba(255,255,255,.14); }
+    .editorial { background: linear-gradient(155deg, #fff4e8 0%, #ffe9d4 40%, #f7dccb 100%); }
+    .editorial .tags span { background: rgba(104, 73, 34, .08); color: #6d4e2d; }
+    .system { background: linear-gradient(155deg, #f4fbff 0%, #edf8f9 45%, #e6fff6 100%); }
+    .system .tags span { background: rgba(32, 122, 119, .1); color: #21706b; }
+    .festival { background: linear-gradient(160deg, #1b1230 0%, #10284f 40%, #0d6ca1 70%, #00b3ad 100%); color: #fff; }
+    .festival .tags span { background: rgba(255,255,255,.14); }
+    @media (max-width: 860px) {
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="hero">
+      <span>Template Family V2</span>
+      <h1>不是一套壳，<br>是四种人格。</h1>
+      <p>这一版不再沿用上一轮的默认安全解，而是把不同场景拆成 4 套真正风格分化的模板家族。它们共享 Meetu 的年轻气质，但 layout、配色、排版节奏和视觉冲击方式都明确不同。</p>
+    </section>
+    <section class="grid">
+      <a class="card campaign" href="./campaign-pop.html">
+        <h2>Campaign Pop</h2>
+        <p>街头潮牌发布会气质。适合招募、首发、动员、强转化页面。</p>
+        <div class="tags"><span>海报化</span><span>高对比</span><span>强 CTA</span></div>
+      </a>
+      <a class="card editorial" href="./youth-editorial.html">
+        <h2>Youth Editorial</h2>
+        <p>校园生活方式杂志气质。适合品牌介绍、世界观、社区故事。</p>
+        <div class="tags"><span>拼贴</span><span>留白</span><span>内容感</span></div>
+      </a>
+      <a class="card system" href="./tool-guide.html">
+        <h2>Soft Tech System</h2>
+        <p>清爽工具指南气质。适合流程、规则、安全说明等高信息密度页面。</p>
+        <div class="tags"><span>信息优先</span><span>轻系统感</span><span>极清晰</span></div>
+      </a>
+      <a class="card festival" href="./festival-topic.html">
+        <h2>Festival Topic</h2>
+        <p>音乐节 / 市集专题气质。适合活动专题、限时事件、场景种草页面。</p>
+        <div class="tags"><span>氛围感</span><span>节奏感</span><span>视觉自由度高</span></div>
+      </a>
+    </section>
+  </main>
+</body>
+</html>

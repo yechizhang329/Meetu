@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Festival Topic</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;700;800&family=IBM+Plex+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "IBM Plex Sans SC", sans-serif;
+      color: #fff;
+      background:
+        radial-gradient(circle at 10% 10%, rgba(255, 93, 118, .34), transparent 20%),
+        radial-gradient(circle at 90% 14%, rgba(0, 226, 209, .24), transparent 18%),
+        linear-gradient(180deg, #180f2c 0%, #0e2744 52%, #0d6fa5 100%);
+    }
+    .shell { width: min(calc(100% - 24px), 420px); margin: 0 auto; padding: 18px 0 34px; }
+    .topbar { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+    .chip, .link { border-radius: 999px; font-size: 12px; font-weight: 700; }
+    .chip { padding: 8px 12px; background: rgba(255,255,255,.12); }
+    .link { padding: 10px 14px; background: rgba(255,255,255,.12); text-decoration: none; color: inherit; border: 1px solid rgba(255,255,255,.14); }
+    .hero, .panel {
+      position: relative; overflow: hidden;
+      margin-top: 16px; padding: 18px;
+      border-radius: 28px;
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.14);
+      box-shadow: 0 24px 50px rgba(0,0,0,.18);
+      backdrop-filter: blur(16px);
+    }
+    .hero h1, .panel h2 {
+      margin: 14px 0 10px;
+      font-family: "Unbounded", sans-serif;
+      font-size: 34px;
+      line-height: .98;
+      letter-spacing: -0.04em;
+    }
+    .hero p, .panel p { margin: 0; color: rgba(255,255,255,.82); line-height: 1.8; }
+    .ticker {
+      margin-top: 16px;
+      padding: 12px 14px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, rgba(255, 92, 123, .22), rgba(0, 226, 209, .22));
+      font-weight: 800;
+    }
+    .agenda { display: grid; gap: 10px; margin-top: 14px; }
+    .slot {
+      display: grid;
+      grid-template-columns: 78px 1fr;
+      gap: 12px;
+      padding: 14px;
+      border-radius: 18px;
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.12);
+    }
+    .slot strong { font-size: 13px; letter-spacing: .04em; text-transform: uppercase; color: #8ff1ff; }
+    .slot span { line-height: 1.75; font-size: 14px; }
+    .labels { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px; }
+    .labels span { padding: 8px 10px; border-radius: 999px; background: rgba(255,255,255,.12); font-size: 12px; font-weight: 700; }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <div class="topbar"><span class="chip">Festival Topic / 活动专题型</span><a class="link" href="./index.html">V2 目录</a></div>
+    <section class="hero">
+      <h1>Tonight,<br>we go out.</h1>
+      <p>这类模板不靠“说明得很清楚”取胜，而靠场景代入、节奏感和主题氛围让用户产生参与冲动。适合活动专题、限时主题页、城市玩乐集合页。</p>
+      <div class="ticker">限时主题 · 报名窗口开启中 · 剩余名额实时下降</div>
+    </section>
+    <section class="panel">
+      <h2>Make it feel like an event.</h2>
+      <p>每个模块都应该像音乐节时间表、活动海报、票务页信息块。它可以更自由、更夸张，但必须始终围绕一个“想参加”的情绪目标。</p>
+      <div class="labels"><span>氛围优先</span><span>时间感</span><span>场景代入</span><span>视觉自由度高</span></div>
+    </section>
+    <section class="panel">
+      <h2>Sample Blocks</h2>
+      <div class="agenda">
+        <div class="slot"><strong>18:30</strong><span>集合 / 破冰 / 第一波人潮进入场域</span></div>
+        <div class="slot"><strong>20:00</strong><span>主题体验进入高潮，适合插入地图 / 场景 / 节目单模块</span></div>
+        <div class="slot"><strong>22:00</strong><span>CTA 收口：最后一波报名 / 下一场预告 / 分享扩散</span></div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
