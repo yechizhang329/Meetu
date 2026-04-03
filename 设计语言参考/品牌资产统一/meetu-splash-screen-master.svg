@@ -1,0 +1,57 @@
+<svg width="1242" height="2688" viewBox="0 0 1242 2688" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="splashbg" x1="621" y1="0" x2="621" y2="2688" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFB541"/>
+      <stop offset="1" stop-color="#FF7A22"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(621 2180) rotate(90) scale(420 700)">
+      <stop stop-color="#FFC86B" stop-opacity="0.65"/>
+      <stop offset="1" stop-color="#FFC86B" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1242" height="2688" fill="url(#splashbg)"/>
+  <circle cx="1032" cy="296" r="78" fill="#FFC75C" opacity="0.34"/>
+  <circle cx="170" cy="534" r="52" fill="#FFC75C" opacity="0.22"/>
+  <circle cx="944" cy="2144" r="94" fill="#FFC75C" opacity="0.18"/>
+  <path d="M0 1888C192 1780 430 1726 621 1726C812 1726 1050 1780 1242 1888V2688H0V1888Z" fill="url(#glow)"/>
+  <g opacity="0.22" fill="#FF9F33">
+    <circle cx="182" cy="284" r="12"/>
+    <circle cx="294" cy="448" r="8"/>
+    <circle cx="1014" cy="602" r="10"/>
+    <circle cx="188" cy="1086" r="14"/>
+    <circle cx="1076" cy="1360" r="22"/>
+    <circle cx="188" cy="1828" r="28"/>
+    <circle cx="1018" cy="2130" r="16"/>
+  </g>
+  <g opacity="0.2" stroke="#FF9F33" stroke-width="18" stroke-linecap="round">
+    <path d="M964 882L1012 930"/>
+    <path d="M964 930L1012 882"/>
+    <circle cx="188" cy="862" r="28"/>
+    <circle cx="1036" cy="1702" r="44"/>
+  </g>
+  <g opacity="0.28" fill="#FF9C2F">
+    <path d="M142 148L190 148L190 196L238 196L238 244L190 244L190 292L142 292L142 244L94 244L94 196L142 196Z"/>
+    <path d="M1030 284L1078 284L1078 332L1126 332L1126 380L1078 380L1078 428L1030 428L1030 380L982 380L982 332L1030 332Z"/>
+  </g>
+  <g transform="translate(267 448) scale(1.55)">
+    <path d="M272 66C293 66 308 80 310 100C330 106 344 122 344 144V352C344 427 284 488 210 488H154C79 488 18 427 18 352V144C18 122 32 106 52 100C54 80 69 66 90 66C114 66 132 81 136 103H226C230 81 248 66 272 66Z" fill="#FFF8EE" stroke="#A9501C" stroke-width="18" stroke-linejoin="round"/>
+    <path d="M127 98C127 76 144 58 166 58C188 58 205 76 205 98" stroke="#A9501C" stroke-width="18" stroke-linecap="round"/>
+    <path d="M249 98C249 76 266 58 288 58C310 58 327 76 327 98" stroke="#A9501C" stroke-width="18" stroke-linecap="round"/>
+    <rect x="108" y="136" width="254" height="178" rx="88" fill="#57494D" stroke="#A9501C" stroke-width="18"/>
+    <rect x="169" y="179" width="24" height="48" rx="12" fill="#FFC43A"/>
+    <rect x="277" y="179" width="24" height="48" rx="12" fill="#FFC43A"/>
+    <path d="M209 252C220 262 250 262 261 252" stroke="#FFC43A" stroke-width="14" stroke-linecap="round"/>
+    <path d="M62 267C31 275 12 300 12 333V370C12 390 29 406 49 406H68C88 406 105 390 105 370V338C105 313 89 291 68 279" fill="#FFF8EE" stroke="#A9501C" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M404 267C435 275 454 300 454 333V370C454 390 437 406 417 406H398C378 406 361 390 361 370V338C361 313 377 291 398 279" fill="#FFF8EE" stroke="#A9501C" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M140 330H199V425C199 447 181 465 159 465C137 465 119 447 119 425V351C119 339 128 330 140 330Z" fill="#FFF8EE" stroke="#A9501C" stroke-width="18" stroke-linejoin="round"/>
+    <path d="M267 330H326C338 330 347 339 347 351V425C347 447 329 465 307 465C285 465 267 447 267 425V330Z" fill="#FFF8EE" stroke="#A9501C" stroke-width="18" stroke-linejoin="round"/>
+    <path d="M95 296C118 258 157 234 202 234H264C309 234 348 258 371 296L339 374H127L95 296Z" fill="#FFB12D" stroke="#A9501C" stroke-width="18" stroke-linejoin="round"/>
+    <path d="M162 374H82V295C82 276 97 261 116 261H123C140 261 153 272 153 289V308H163C182 308 197 323 197 342V374H162Z" fill="#D66D32" stroke="#A9501C" stroke-width="18" stroke-linejoin="round"/>
+    <path d="M315 374H395V295C395 276 380 261 361 261H354C337 261 324 272 324 289V308H314C295 308 280 323 280 342V374H315Z" fill="#FFC03A" stroke="#A9501C" stroke-width="18" stroke-linejoin="round"/>
+    <path d="M106 319H139V352H172V385H139V418H106V385H73V352H106V319Z" fill="#D66D32" stroke="#A9501C" stroke-width="12" stroke-linejoin="round"/>
+    <path d="M363 319H396V352H429V385H396V418H363V385H330V352H363V319Z" fill="#FFC03A" stroke="#A9501C" stroke-width="12" stroke-linejoin="round"/>
+  </g>
+  <text x="621" y="1856" text-anchor="middle" font-family="Nunito, Arial, sans-serif" font-size="222" font-weight="800" fill="#FFE6AB">Meetu</text>
+  <text x="621" y="2096" text-anchor="middle" font-family="'Noto Sans SC', 'PingFang SC', sans-serif" font-size="158" font-weight="700" fill="#FFE6AB">觅遇社</text>
+  <text x="621" y="2260" text-anchor="middle" font-family="'Noto Sans SC', 'PingFang SC', sans-serif" font-size="58" font-weight="600" fill="#FFEFD0">大学生专属拼团社交平台</text>
+</svg>

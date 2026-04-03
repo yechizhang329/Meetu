@@ -1,0 +1,37 @@
+<svg width="1480" height="620" viewBox="0 0 1480 620" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="word" x1="420" y1="124" x2="1000" y2="420" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF962A"/>
+      <stop offset="1" stop-color="#FF7422"/>
+    </linearGradient>
+    <linearGradient id="plate" x1="0" y1="0" x2="1480" y2="620" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFDF8"/>
+      <stop offset="1" stop-color="#FFF2E6"/>
+    </linearGradient>
+  </defs>
+  <rect width="1480" height="620" rx="48" fill="url(#plate)"/>
+  <g transform="translate(70 24) scale(0.72)">
+    <path d="M272 66C293 66 308 80 310 100C330 106 344 122 344 144V352C344 427 284 488 210 488H154C79 488 18 427 18 352V144C18 122 32 106 52 100C54 80 69 66 90 66C114 66 132 81 136 103H226C230 81 248 66 272 66Z" fill="#FFF8EE" stroke="#6E3F2D" stroke-width="16" stroke-linejoin="round"/>
+    <path d="M127 98C127 76 144 58 166 58C188 58 205 76 205 98" stroke="#6E3F2D" stroke-width="16" stroke-linecap="round"/>
+    <path d="M249 98C249 76 266 58 288 58C310 58 327 76 327 98" stroke="#6E3F2D" stroke-width="16" stroke-linecap="round"/>
+    <rect x="108" y="136" width="254" height="178" rx="88" fill="#57494D" stroke="#6E3F2D" stroke-width="16"/>
+    <rect x="169" y="179" width="24" height="48" rx="12" fill="#FFC43A"/>
+    <rect x="277" y="179" width="24" height="48" rx="12" fill="#FFC43A"/>
+    <path d="M209 252C220 262 250 262 261 252" stroke="#FFC43A" stroke-width="14" stroke-linecap="round"/>
+    <path d="M62 267C31 275 12 300 12 333V370C12 390 29 406 49 406H68C88 406 105 390 105 370V338C105 313 89 291 68 279" fill="#FFF8EE" stroke="#6E3F2D" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M404 267C435 275 454 300 454 333V370C454 390 437 406 417 406H398C378 406 361 390 361 370V338C361 313 377 291 398 279" fill="#FFF8EE" stroke="#6E3F2D" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M140 330H199V425C199 447 181 465 159 465C137 465 119 447 119 425V351C119 339 128 330 140 330Z" fill="#FFF8EE" stroke="#6E3F2D" stroke-width="16" stroke-linejoin="round"/>
+    <path d="M267 330H326C338 330 347 339 347 351V425C347 447 329 465 307 465C285 465 267 447 267 425V330Z" fill="#FFF8EE" stroke="#6E3F2D" stroke-width="16" stroke-linejoin="round"/>
+    <path d="M95 296C118 258 157 234 202 234H264C309 234 348 258 371 296L339 374H127L95 296Z" fill="#FFB12D" stroke="#6E3F2D" stroke-width="16" stroke-linejoin="round"/>
+    <path d="M162 374H82V295C82 276 97 261 116 261H123C140 261 153 272 153 289V308H163C182 308 197 323 197 342V374H162Z" fill="#D36D2C" stroke="#6E3F2D" stroke-width="16" stroke-linejoin="round"/>
+    <path d="M315 374H395V295C395 276 380 261 361 261H354C337 261 324 272 324 289V308H314C295 308 280 323 280 342V374H315Z" fill="#FFB12D" stroke="#6E3F2D" stroke-width="16" stroke-linejoin="round"/>
+    <path d="M106 319H139V352H172V385H139V418H106V385H73V352H106V319Z" fill="#D66D32" stroke="#6E3F2D" stroke-width="12" stroke-linejoin="round"/>
+    <path d="M363 319H396V352H429V385H396V418H363V385H330V352H363V319Z" fill="#FFC03A" stroke="#6E3F2D" stroke-width="12" stroke-linejoin="round"/>
+  </g>
+  <g transform="translate(470 126)">
+    <text x="0" y="154" font-family="Nunito, Arial, sans-serif" font-size="164" font-weight="800" fill="url(#word)">Meetu</text>
+    <text x="8" y="324" font-family="'Noto Sans SC', 'PingFang SC', sans-serif" font-size="118" font-weight="700" fill="#F28B24">觅遇社</text>
+    <rect x="10" y="376" width="620" height="8" rx="4" fill="#FFD6B5"/>
+    <text x="8" y="462" font-family="'Noto Sans SC', 'PingFang SC', sans-serif" font-size="42" font-weight="600" fill="#7A5848">大学生专属拼团社交平台</text>
+  </g>
+</svg>
