@@ -29,6 +29,9 @@
 - 英文品牌名统一：`Meetu`
 - Mascot 昵称统一：`觅遇仔`
 - 旧名称 `觅途` 仅作为历史参考，不再用于正式资产
+- 在当前阶段，`meetu-mascot-standard-pose.png` 是 mascot 的 single source of truth
+- 后续所有衍生资产必须优先复用这张 PNG，不再重新手绘 / 重构 mascot 造型
+- 若未来需要真正可复用的矢量版，应使用可靠的描摹流程单独产出，不应继续靠主观重画
 
 ## 下一步
 
