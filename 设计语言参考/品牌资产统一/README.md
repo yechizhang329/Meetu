@@ -3,25 +3,19 @@
 本目录用于承接“品牌基础资产统一”的第一批正式产出，优先解决上线前阻塞项：
 
 1. 旧名称 `觅途` 全部切换为 `觅遇社`
-2. 锁定 Logo / App Icon / Mascot 的主版本基线
-3. 输出可继续迭代的 master asset
+2. 锁定 mascot 的 single source of truth
+3. 输出可继续迭代的 PNG-first master asset 基线
 
 ## 当前文件
 
-- `meetu-logo-master.svg`
-  - 正式品牌 Logo 主版本
-- `meetu-app-icon-master.svg`
-  - App Icon 主版本
 - `meetu-mascot-standard-pose.png`
   - 以 `0 Meetu mascot master.png` 为基准复制出的当前 mascot source-of-truth
-- `meetu-mascot-standard-pose.svg`
-  - 觅遇仔标准姿态展示版（基于当前 mascot source-of-truth 包装）
-- `meetu-splash-screen-master.svg`
-  - 开屏页主版本
-- `meetu-ui-design-guide-cover-master.svg`
-  - UI Design Guide 封面主版本
 - `meetu-mascot-画法参数.md`
   - 觅遇仔画法参数与统一规则
+- `meetu-mascot-变体系统.md`
+  - 觅遇仔变体规划与应用优先级
+- `meetu-拼图motif使用规则.md`
+  - 拼图 motif 的使用层级与场景规则
 
 ## 当前结论
 
