@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meetu 觅遇社 CMS模板 v3 Preview</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: #0f0f0f; font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Helvetica Neue', sans-serif; color: #fff; }
+.header { text-align: center; padding: 48px 24px 32px; }
+.header h1 { font-size: 28px; font-weight: 800; margin-bottom: 8px; background: linear-gradient(135deg, #FF7422, #FFB068); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.header p { font-size: 14px; color: rgba(255,255,255,0.4); }
+.nav { display: flex; justify-content: center; gap: 12px; padding: 0 24px 40px; flex-wrap: wrap; }
+.nav a { display: inline-block; padding: 10px 20px; border-radius: 24px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.7); font-size: 14px; font-weight: 500; text-decoration: none; transition: all 0.2s; }
+.nav a:hover, .nav a.active { background: rgba(255,116,34,0.15); border-color: rgba(255,116,34,0.3); color: #FF9456; }
+.preview-container { display: flex; justify-content: center; padding: 0 24px 80px; }
+.phone-frame { width: 390px; border-radius: 44px; background: #1a1a1a; padding: 16px; box-shadow: 0 40px 100px rgba(0,0,0,0.5), 0 0 0 2px rgba(255,255,255,0.06); }
+.phone-notch { width: 130px; height: 6px; background: #1a1a1a; border-radius: 3px; margin: 0 auto 12px; }
+.phone-screen { border-radius: 32px; overflow: hidden; background: #fff; max-height: 80vh; overflow-y: auto; }
+.phone-screen::-webkit-scrollbar { width: 0; }
+.template-section { display: none; }
+.template-section.active { display: block; }
+.meta { text-align: center; padding: 40px 24px; }
+.meta .tag { display: inline-block; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 6px 14px; font-size: 12px; color: rgba(255,255,255,0.4); margin-bottom: 12px; }
+.meta .name { font-size: 18px; font-weight: 700; color: rgba(255,255,255,0.8); margin-bottom: 4px; }
+.meta .desc { font-size: 13px; color: rgba(255,255,255,0.35); }
+</style>
+</head>
+<body>
+
+<div class="header">
+<h1>Meetu CMS v3</h1>
+<p>子页模板预览 · 点击切换</p>
+</div>
+
+<div class="nav">
+<a href="#A" class="active" onclick="show('A',this)">A · 主理人招募</a>
+<a href="#B" onclick="show('B',this)">B · 平台介绍</a>
+<a href="#C" onclick="show('C',this)">C · 活动收费</a>
+<a href="#D" onclick="show('D',this)">D · 女生专场</a>
+</div>
+
+<div class="preview-container">
+<div class="phone-frame">
+<div class="phone-notch"></div>
+<div class="phone-screen">
+<div id="tpl-A" class="template-section active"></div>
+<div id="tpl-B" class="template-section"></div>
+<div id="tpl-C" class="template-section"></div>
+<div id="tpl-D" class="template-section"></div>
+</div>
+</div>
+</div>
+
+<div class="meta">
+<div class="tag">v3 · 2026-04-04</div>
+<div class="name">觅遇社 Meetu</div>
+<div class="desc">大学生专属找搭子平台 · CMS子页模板</div>
+</div>
+
+<script>
+const files = {
+  A: 'A-campaign-pop-主理人招募.html',
+  B: 'B-youth-editorial-平台介绍.html',
+  C: 'C-soft-tech-活动收费说明.html',
+  D: 'D-festival-topic-女生专场.html'
+};
+const loaded = {};
+
+async function loadTemplate(key) {
+  if (loaded[key]) return;
+  try {
+    const resp = await fetch(files[key]);
+    const html = await resp.text();
+    document.getElementById('tpl-' + key).innerHTML = html;
+    loaded[key] = true;
+  } catch(e) {
+    document.getElementById('tpl-' + key).innerHTML = '<div style="padding:40px;text-align:center;color:#999;">加载失败</div>';
+  }
+}
+
+function show(key, el) {
+  document.querySelectorAll('.template-section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.nav a').forEach(a => a.classList.remove('active'));
+  document.getElementById('tpl-' + key).classList.add('active');
+  el.classList.add('active');
+  loadTemplate(key);
+  document.querySelector('.phone-screen').scrollTop = 0;
+}
+
+loadTemplate('A');
+</script>
+
+</body>
+</html>
