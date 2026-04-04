@@ -1,181 +1,224 @@
-<div style="max-width:750px;margin:0 auto;font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Helvetica Neue','Microsoft YaHei',sans-serif;color:#fff;line-height:1.6;overflow:hidden;">
+<style>
+  .meetu-cms-d {
+    --ink: #271c31;
+    --muted: rgba(39, 28, 49, 0.68);
+    max-width: 750px;
+    margin: 0 auto;
+    color: var(--ink);
+    font-family: "PingFang SC", "Helvetica Neue", "Microsoft YaHei", sans-serif;
+    background:
+      radial-gradient(circle at top right, rgba(255, 198, 223, 0.28), transparent 26%),
+      radial-gradient(circle at bottom left, rgba(191, 177, 255, 0.3), transparent 22%),
+      linear-gradient(180deg, #fff7fb 0%, #f7f1ff 46%, #fff8fb 100%);
+  }
+  .meetu-cms-d * { box-sizing: border-box; }
+  .meetu-cms-d .shell { padding: 24px 22px 56px; }
+  .meetu-cms-d .hero {
+    display: grid;
+    gap: 18px;
+    margin-bottom: 24px;
+    align-items: center;
+  }
+  .meetu-cms-d .tag {
+    display: inline-flex;
+    padding: 6px 14px;
+    border-radius: 999px;
+    background: rgba(176, 112, 255, 0.1);
+    color: #8d4de8;
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: 700;
+  }
+  .meetu-cms-d h1 {
+    margin: 16px 0 10px;
+    font-size: 48px;
+    line-height: 0.94;
+    font-weight: 900;
+    letter-spacing: -2px;
+  }
+  .meetu-cms-d .hero p,
+  .meetu-cms-d .copy p,
+  .meetu-cms-d .promise p,
+  .meetu-cms-d .cta p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.8; }
+  .meetu-cms-d .hero-art,
+  .meetu-cms-d .scene {
+    overflow: hidden;
+    border-radius: 34px;
+    border: 1px solid rgba(255,255,255,0.92);
+    box-shadow: 0 24px 68px rgba(108, 75, 137, 0.12);
+  }
+  .meetu-cms-d .hero-art img,
+  .meetu-cms-d .scene img { display: block; width: 100%; height: auto; }
+  .meetu-cms-d .intro {
+    margin-bottom: 22px;
+    padding: 30px 24px;
+    border-radius: 30px;
+    background: rgba(255,255,255,0.76);
+    border: 1px solid rgba(255,255,255,0.94);
+  }
+  .meetu-cms-d .intro strong {
+    display: block;
+    font-size: 32px;
+    line-height: 1.18;
+    letter-spacing: -1px;
+    margin-bottom: 10px;
+  }
+  .meetu-cms-d .feature-grid {
+    display: grid;
+    gap: 14px;
+    margin-bottom: 22px;
+  }
+  .meetu-cms-d .feature {
+    padding: 24px 22px;
+    border-radius: 26px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.92), rgba(252,247,255,0.88));
+    border: 1px solid rgba(255,255,255,0.95);
+    box-shadow: 0 16px 42px rgba(108, 75, 137, 0.07);
+  }
+  .meetu-cms-d .feature small,
+  .meetu-cms-d .copy small {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #8d4de8;
+  }
+  .meetu-cms-d .feature h2,
+  .meetu-cms-d .copy h2 {
+    margin: 0 0 8px;
+    font-size: 26px;
+    letter-spacing: -1px;
+    line-height: 1.18;
+  }
+  .meetu-cms-d .split {
+    display: grid;
+    gap: 18px;
+    align-items: center;
+    margin-bottom: 22px;
+  }
+  .meetu-cms-d .copy {
+    padding: 26px 24px;
+    border-radius: 28px;
+    background: rgba(255,255,255,0.82);
+    border: 1px solid rgba(255,255,255,0.95);
+  }
+  .meetu-cms-d .promise {
+    padding: 28px 24px;
+    border-radius: 30px;
+    background: linear-gradient(155deg, #efe3ff 0%, #fdf6ff 50%, #fff0f6 100%);
+    box-shadow: 0 18px 54px rgba(108, 75, 137, 0.08);
+    margin-bottom: 24px;
+  }
+  .meetu-cms-d .promise strong {
+    display: block;
+    font-size: 28px;
+    line-height: 1.18;
+    margin-bottom: 12px;
+    letter-spacing: -1px;
+  }
+  .meetu-cms-d .promise ul {
+    margin: 0;
+    padding-left: 18px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.9;
+  }
+  .meetu-cms-d .cta {
+    text-align: center;
+    padding: 34px 24px 40px;
+    border-radius: 32px;
+    background: linear-gradient(145deg, #f0dbff 0%, #ffd5e7 52%, #ffc9b4 100%);
+    box-shadow: 0 24px 66px rgba(155, 95, 190, 0.12);
+  }
+  .meetu-cms-d .cta strong {
+    display: block;
+    font-size: 30px;
+    line-height: 1.14;
+    letter-spacing: -1px;
+    margin-bottom: 8px;
+  }
+  .meetu-cms-d .cta .btn {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 15px 30px;
+    border-radius: 999px;
+    background: #2b163a;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 1.3px;
+  }
+  .meetu-cms-d .footer {
+    padding-top: 24px;
+    text-align: center;
+    font-style: italic;
+    color: rgba(39,28,49,0.42);
+  }
+  @media (min-width: 640px) {
+    .meetu-cms-d .hero,
+    .meetu-cms-d .split { grid-template-columns: 1fr 1fr; }
+    .meetu-cms-d .feature-grid { grid-template-columns: 1fr 1fr; }
+  }
+</style>
 
-<!-- 第1屏：氛围开场 + Hero Image -->
-<div style="position:relative;overflow:hidden;">
-<!-- Hero背景图 -->
-<div style="position:relative;width:100%;height:420px;overflow:hidden;">
-<img src="https://raw.githubusercontent.com/yechizhang329/Meetu/main/%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80%E5%8F%82%E8%80%83/Meetu%E5%85%83%E7%B4%A0%E5%8F%82%E8%80%83/nanobanana%E5%9B%BE%E7%89%87%E7%94%9F%E6%88%90v1/banner/%E5%9C%BA%E6%99%AF/3.png" style="width:100%;height:100%;object-fit:cover;filter:brightness(0.7) saturate(1.2);" />
-<!-- 紫色叠加层 -->
-<div style="position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(165deg,rgba(30,20,51,0.82) 0%,rgba(45,31,78,0.75) 30%,rgba(58,38,96,0.78) 55%,rgba(26,48,72,0.85) 100%);"></div>
-<!-- 装饰光晕 -->
-<div style="position:absolute;top:-80px;right:-60px;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(200,170,230,0.1) 0%,transparent 50%);"></div>
-<div style="position:absolute;bottom:-40px;left:-40px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(255,126,179,0.06) 0%,transparent 60%);"></div>
-<div style="position:absolute;top:48px;right:28px;transform:rotate(-8deg);font-size:64px;font-weight:100;color:rgba(255,255,255,0.02);letter-spacing:-3px;">&#9792;</div>
+<div class="meetu-cms-d">
+  <div class="shell">
+    <section class="hero">
+      <div>
+        <span class="tag">GIRLS ONLY</span>
+        <h1>安心出发，<br>也可以很漂亮。</h1>
+        <p>女生专场不是单独多写一条规则，而是把安全感、氛围感和“真的想去”的感觉同时做出来。</p>
+      </div>
+      <div class="hero-art">
+        <img src="https://raw.githubusercontent.com/yechizhang329/Meetu/main/%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80%E5%8F%82%E8%80%83/Meetu%E5%85%83%E7%B4%A0%E5%8F%82%E8%80%83/nanobanana%E5%9B%BE%E7%89%87%E7%94%9F%E6%88%90v1/banner/4.png" alt="女生专场活动横幅">
+      </div>
+    </section>
 
-<!-- 文字内容 -->
-<div style="position:absolute;top:0;left:0;width:100%;height:100%;display:flex;flex-direction:column;justify-content:center;padding:72px 32px 56px;box-sizing:border-box;">
-<div style="display:inline-block;width:fit-content;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.08);border-radius:20px;padding:5px 14px;font-size:11px;color:rgba(255,255,255,0.6);letter-spacing:3px;margin-bottom:24px;font-weight:500;">GIRLS ONLY</div>
+    <section class="intro">
+      <strong>不是“把女生放在一起”，<br>而是把安心感做成一种体验。</strong>
+      <p>这一页需要让用户第一眼就觉得温柔、干净、可相信，而不是只靠几条安全说明来证明自己安全。</p>
+    </section>
 
-<div style="font-size:48px;font-weight:900;color:#fff;line-height:0.95;letter-spacing:-3px;margin-bottom:6px;">姐妹局，</div>
-<div style="font-size:48px;font-weight:300;color:#fff;line-height:0.95;letter-spacing:-3px;margin-bottom:20px;font-style:italic;">安心约。</div>
+    <section class="feature-grid">
+      <article class="feature">
+        <small>VERIFIED</small>
+        <h2>全员女生认证</h2>
+        <p>女生专场活动只面向已完成对应认证的用户开放，先把最基础的信任感搭起来。</p>
+      </article>
+      <article class="feature">
+        <small>ATMOSPHERE</small>
+        <h2>氛围更轻松</h2>
+        <p>野餐、City Walk、观影、交流分享，这些活动本身就更适合慢慢认识人，而不是硬社交。</p>
+      </article>
+    </section>
 
-<div style="font-size:14px;color:rgba(255,255,255,0.4);font-weight:300;letter-spacing:1px;margin-bottom:28px;font-style:italic;">A safe space for her.</div>
+    <section class="split">
+      <div class="scene">
+        <img src="https://raw.githubusercontent.com/yechizhang329/Meetu/main/%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80%E5%8F%82%E8%80%83/Meetu%E5%85%83%E7%B4%A0%E5%8F%82%E8%80%83/nanobanana%E5%9B%BE%E7%89%87%E7%94%9F%E6%88%90v1/banner/%E5%9C%BA%E6%99%AF/2.png" alt="女生活动场景">
+      </div>
+      <div class="copy">
+        <small>REAL SCENES</small>
+        <h2>安全感不是口号，<br>要靠真实场景支撑。</h2>
+        <p>有真实的活动图、有温柔的版式、有清楚的规则说明，这页才会像一场可以放心参加的活动邀请，而不是一张空白保证书。</p>
+      </div>
+    </section>
 
-<div style="display:flex;gap:10px;flex-wrap:wrap;">
-<span style="background:rgba(200,170,230,0.12);border:1px solid rgba(200,170,230,0.15);border-radius:24px;padding:8px 18px;font-size:12px;color:rgba(255,255,255,0.75);font-weight:400;">全员女生认证</span>
-<span style="background:rgba(200,170,230,0.12);border:1px solid rgba(200,170,230,0.15);border-radius:24px;padding:8px 18px;font-size:12px;color:rgba(255,255,255,0.75);font-weight:400;">安心搭上</span>
-<span style="background:rgba(200,170,230,0.12);border:1px solid rgba(200,170,230,0.15);border-radius:24px;padding:8px 18px;font-size:12px;color:rgba(255,255,255,0.75);font-weight:400;">姐妹出行</span>
-</div>
-</div>
-</div>
-</div>
+    <section class="promise">
+      <strong>安心承诺</strong>
+      <ul>
+        <li>活动发起人需要把人数、费用、规则和集合方式说清楚</li>
+        <li>女生专场优先使用更轻松、更低压力的场景设计</li>
+        <li>活动信息保持透明，避免让参与者在最后一刻猜规则</li>
+      </ul>
+    </section>
 
-<!-- 第2屏：一句话定调 -->
-<div style="background:linear-gradient(180deg,#1a3048 0%,#2d1f4e 100%);padding:56px 32px;">
-<div style="background:rgba(255,255,255,0.04);backdrop-filter:blur(24px);border:1px solid rgba(255,255,255,0.08);border-radius:32px;padding:44px 32px;text-align:center;">
-<div style="font-size:13px;font-weight:300;color:rgba(200,170,230,0.7);letter-spacing:4px;margin-bottom:16px;font-style:italic;">feel safe</div>
-<div style="font-size:28px;font-weight:800;color:#fff;line-height:1.25;letter-spacing:-0.5px;margin-bottom:6px;">全员在校认证的女生局，</div>
-<div style="font-size:28px;font-weight:300;color:rgba(255,255,255,0.85);line-height:1.25;letter-spacing:-0.5px;margin-bottom:20px;font-style:italic;">不用顾虑那么多。</div>
-<div style="width:40px;height:2px;background:linear-gradient(90deg,rgba(200,170,230,0.6),rgba(200,170,230,0.1));margin:0 auto 20px;border-radius:2px;"></div>
-<div style="font-size:14px;color:rgba(255,255,255,0.5);font-weight:300;">在这里，安心感应该是默认配置。</div>
-</div>
-</div>
+    <section class="cta">
+      <strong>想认识新朋友，<br>不一定要硬着头皮。</strong>
+      <p>从一场更轻松、更安心的活动开始，先把出发变得容易一点。</p>
+      <span class="btn">安心搭上</span>
+    </section>
 
-<!-- 第3屏：专场特色 -->
-<div style="background:linear-gradient(180deg,#2d1f4e 0%,#1e1433 100%);padding:52px 28px;">
-<div style="margin-bottom:36px;">
-<div style="font-size:11px;color:rgba(200,170,230,0.7);font-weight:600;letter-spacing:4px;margin-bottom:10px;">FEATURES</div>
-<div style="font-size:28px;font-weight:800;color:#fff;letter-spacing:-1px;">女生专场有什么不同？</div>
-<div style="font-size:13px;color:rgba(255,255,255,0.35);margin-top:4px;font-weight:300;font-style:italic;">three things that matter</div>
-</div>
-
-<!-- 全员女生 - ♀ pink gradient icon -->
-<div style="background:rgba(255,255,255,0.04);backdrop-filter:blur(12px);border:1px solid rgba(200,170,230,0.1);border-radius:28px;padding:28px;margin-bottom:16px;">
-<div style="width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#ff7eb3 0%,#ff3d8a 50%,#e91e6c 100%);display:flex;align-items:center;justify-content:center;margin-bottom:14px;box-shadow:0 8px 24px rgba(255,61,138,0.25);">
-<span style="font-size:28px;font-weight:700;color:#fff;line-height:1;">&#9792;</span>
-</div>
-<div style="font-size:20px;font-weight:800;color:#fff;margin-bottom:4px;letter-spacing:-0.5px;">全员女生</div>
-<div style="font-size:12px;font-weight:300;color:rgba(255,126,179,0.7);letter-spacing:2px;margin-bottom:10px;font-style:italic;">verified girls only</div>
-<div style="font-size:14px;color:rgba(255,255,255,0.55);line-height:1.8;font-weight:300;">参与者全部为在校女生认证，安心社交，无需担心。</div>
-</div>
-
-<!-- 精选活动 - ★ purple gradient icon -->
-<div style="background:rgba(255,255,255,0.04);backdrop-filter:blur(12px);border:1px solid rgba(200,170,230,0.1);border-radius:28px;padding:28px;margin-bottom:16px;">
-<div style="width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#c8aaff 0%,#b388ff 50%,#8a5cf5 100%);display:flex;align-items:center;justify-content:center;margin-bottom:14px;box-shadow:0 8px 24px rgba(138,92,245,0.25);">
-<span style="font-size:26px;font-weight:700;color:#fff;line-height:1;">&#9733;</span>
-</div>
-<div style="font-size:20px;font-weight:800;color:#fff;margin-bottom:4px;letter-spacing:-0.5px;">精选活动</div>
-<div style="font-size:12px;font-weight:300;color:rgba(179,136,255,0.7);letter-spacing:2px;margin-bottom:10px;font-style:italic;">curated experiences</div>
-<div style="font-size:14px;color:rgba(255,255,255,0.55);line-height:1.8;font-weight:300;">情感向剧本杀、女生夜跑、City Walk、手作体验……</div>
-</div>
-
-<!-- 主理人也是姐妹 - ♥ warm gradient icon -->
-<div style="background:rgba(255,255,255,0.04);backdrop-filter:blur(12px);border:1px solid rgba(200,170,230,0.1);border-radius:28px;padding:28px;">
-<div style="width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#ffb068 0%,#ff8a5c 50%,#ff6b6b 100%);display:flex;align-items:center;justify-content:center;margin-bottom:14px;box-shadow:0 8px 24px rgba(255,138,92,0.25);">
-<span style="font-size:26px;font-weight:700;color:#fff;line-height:1;">&#9829;</span>
-</div>
-<div style="font-size:20px;font-weight:800;color:#fff;margin-bottom:4px;letter-spacing:-0.5px;">主理人也是姐妹</div>
-<div style="font-size:12px;font-weight:300;color:rgba(255,183,107,0.7);letter-spacing:2px;margin-bottom:10px;font-style:italic;">hosted by her</div>
-<div style="font-size:14px;color:rgba(255,255,255,0.55);line-height:1.8;font-weight:300;">女生专场由女生主理人组织，全程氛围轻松温暖。</div>
-</div>
-</div>
-
-<!-- 第4屏：活动 -->
-<div style="background:linear-gradient(180deg,#1e1433 0%,#2a1f3d 100%);padding:52px 28px;">
-<div style="margin-bottom:36px;">
-<div style="font-size:11px;color:rgba(200,170,230,0.7);font-weight:600;letter-spacing:4px;margin-bottom:10px;">UPCOMING</div>
-<div style="font-size:28px;font-weight:800;color:#fff;letter-spacing:-1px;">最近的女生专场</div>
-<div style="font-size:13px;color:rgba(255,255,255,0.35);margin-top:4px;font-weight:300;font-style:italic;">see what's happening</div>
-</div>
-
-<!-- 活动卡片1：全女生剧本杀之夜 -->
-<div style="background:rgba(255,255,255,0.04);border:1px solid rgba(200,170,230,0.08);border-radius:24px;padding:22px;margin-bottom:14px;">
-<div style="display:flex;justify-content:space-between;align-items:center;">
-<div style="display:flex;align-items:center;gap:12px;">
-<div style="display:flex;align-items:center;gap:10px;">
-<div style="width:6px;height:6px;border-radius:50%;background:linear-gradient(135deg,#e91e63,#ff5252);flex-shrink:0;box-shadow:0 0 6px rgba(233,30,99,0.4);"></div>
-<div>
-<div style="font-size:17px;font-weight:700;color:#fff;margin-bottom:4px;">全女生剧本杀之夜</div>
-<div style="font-size:12px;color:rgba(255,255,255,0.35);font-weight:300;">5人齐了开局 · 人均68元</div>
-</div>
-</div>
-</div>
-<div style="background:rgba(233,30,99,0.15);border:1px solid rgba(233,30,99,0.12);border-radius:16px;padding:6px 14px;font-size:12px;color:rgba(255,255,255,0.75);font-weight:600;">差1人</div>
-</div>
-</div>
-
-<!-- 活动卡片2：闺蜜City Walk -->
-<div style="background:rgba(255,255,255,0.04);border:1px solid rgba(200,170,230,0.08);border-radius:24px;padding:22px;margin-bottom:14px;">
-<div style="display:flex;justify-content:space-between;align-items:center;">
-<div style="display:flex;align-items:center;gap:12px;">
-<div style="display:flex;align-items:center;gap:10px;">
-<div style="width:6px;height:6px;border-radius:50%;background:linear-gradient(135deg,#b388ff,#8a5cf5);flex-shrink:0;box-shadow:0 0 6px rgba(179,136,255,0.4);"></div>
-<div>
-<div style="font-size:17px;font-weight:700;color:#fff;margin-bottom:4px;">闺蜜City Walk</div>
-<div style="font-size:12px;color:rgba(255,255,255,0.35);font-weight:300;">4人小队 · 门槛价&yen;0.01</div>
-</div>
-</div>
-</div>
-<div style="background:rgba(179,136,255,0.15);border:1px solid rgba(179,136,255,0.12);border-radius:16px;padding:6px 14px;font-size:12px;color:rgba(255,255,255,0.75);font-weight:600;">本周六</div>
-</div>
-</div>
-
-<!-- 活动卡片3：女生社交派对 -->
-<div style="background:rgba(255,255,255,0.04);border:1px solid rgba(200,170,230,0.08);border-radius:24px;padding:22px;">
-<div style="display:flex;justify-content:space-between;align-items:center;">
-<div style="display:flex;align-items:center;gap:12px;">
-<div style="display:flex;align-items:center;gap:10px;">
-<div style="width:6px;height:6px;border-radius:50%;background:linear-gradient(135deg,#ff7eb3,#ff3d8a);flex-shrink:0;box-shadow:0 0 6px rgba(255,126,179,0.4);"></div>
-<div>
-<div style="font-size:17px;font-weight:700;color:#fff;margin-bottom:4px;">女生社交派对</div>
-<div style="font-size:12px;color:rgba(255,255,255,0.35);font-weight:300;">8人局 · 含破冰游戏</div>
-</div>
-</div>
-</div>
-<div style="background:rgba(255,126,179,0.15);border:1px solid rgba(255,126,179,0.12);border-radius:16px;padding:6px 14px;font-size:12px;color:rgba(255,255,255,0.75);font-weight:600;">可搭上</div>
-</div>
-</div>
-</div>
-
-<!-- 第5屏：安心承诺 -->
-<div style="background:linear-gradient(180deg,#2a1f3d 0%,#3a2660 100%);padding:52px 28px;">
-<div style="margin-bottom:32px;text-align:center;">
-<div style="font-size:28px;font-weight:800;color:#fff;letter-spacing:-1px;">我们的安心承诺</div>
-<div style="font-size:13px;color:rgba(255,255,255,0.35);margin-top:6px;font-weight:300;font-style:italic;">go with confidence</div>
-</div>
-
-<div style="background:rgba(255,255,255,0.04);backdrop-filter:blur(16px);border:1px solid rgba(200,170,230,0.08);border-radius:28px;padding:32px 28px;">
-<div style="display:flex;align-items:center;gap:16px;margin-bottom:22px;">
-<div style="width:10px;height:10px;border-radius:50%;background:linear-gradient(135deg,#69f0ae,#4caf50);flex-shrink:0;box-shadow:0 0 10px rgba(76,175,80,0.45),0 0 20px rgba(76,175,80,0.15);"></div>
-<div style="font-size:15px;color:rgba(255,255,255,0.75);font-weight:400;">全员在校生认证 + 实名验证</div>
-</div>
-<div style="display:flex;align-items:center;gap:16px;margin-bottom:22px;">
-<div style="width:10px;height:10px;border-radius:50%;background:linear-gradient(135deg,#69f0ae,#4caf50);flex-shrink:0;box-shadow:0 0 10px rgba(76,175,80,0.45),0 0 20px rgba(76,175,80,0.15);"></div>
-<div style="font-size:15px;color:rgba(255,255,255,0.75);font-weight:400;">女生专场严格限制参与者性别</div>
-</div>
-<div style="display:flex;align-items:center;gap:16px;margin-bottom:22px;">
-<div style="width:10px;height:10px;border-radius:50%;background:linear-gradient(135deg,#69f0ae,#4caf50);flex-shrink:0;box-shadow:0 0 10px rgba(76,175,80,0.45),0 0 20px rgba(76,175,80,0.15);"></div>
-<div style="font-size:15px;color:rgba(255,255,255,0.75);font-weight:400;">活动规则和费用说明公开透明</div>
-</div>
-<div style="display:flex;align-items:center;gap:16px;">
-<div style="width:10px;height:10px;border-radius:50%;background:linear-gradient(135deg,#69f0ae,#4caf50);flex-shrink:0;box-shadow:0 0 10px rgba(76,175,80,0.45),0 0 20px rgba(76,175,80,0.15);"></div>
-<div style="font-size:15px;color:rgba(255,255,255,0.75);font-weight:400;">活动群内有平台安全提醒</div>
-</div>
-</div>
-</div>
-
-<!-- 第6屏：CTA -->
-<div style="background:linear-gradient(180deg,#3a2660 0%,#2d1f4e 50%,#1e1433 100%);padding:48px 32px 64px;text-align:center;">
-<div style="font-size:14px;font-weight:300;color:rgba(200,170,230,0.6);letter-spacing:3px;margin-bottom:14px;font-style:italic;">let's go girls</div>
-<div style="font-size:26px;font-weight:800;color:#fff;margin-bottom:8px;letter-spacing:-1px;">这个周末，</div>
-<div style="font-size:26px;font-weight:300;color:rgba(255,255,255,0.85);margin-bottom:28px;letter-spacing:-1px;font-style:italic;">和姐妹们一起出发吧。</div>
-<div style="display:inline-block;width:100%;max-width:300px;background:linear-gradient(135deg,#FF7422 0%,#FF9456 50%,#FFB068 100%);color:#fff;font-size:16px;font-weight:700;padding:18px 0;border-radius:50px;box-shadow:0 16px 48px rgba(255,116,34,0.3);letter-spacing:2px;">查看女生专场活动</div>
-</div>
-
-<!-- Footer -->
-<div style="background:#1e1433;text-align:center;padding:28px 20px;">
-<div style="font-size:14px;font-weight:300;color:rgba(255,255,255,0.2);font-style:italic;margin-bottom:4px;">Nice to Meetu.</div>
-<div style="font-size:11px;color:rgba(255,255,255,0.12);font-weight:300;letter-spacing:2px;"><span style="font-weight:700;color:#FF9B5A;">觅遇社</span> MEETU</div>
-</div>
-
+    <div class="footer">Nice to Meetu.</div>
+  </div>
 </div>

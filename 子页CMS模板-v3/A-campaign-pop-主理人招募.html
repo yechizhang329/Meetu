@@ -1,186 +1,283 @@
-<div style="max-width:750px;margin:0 auto;font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Helvetica Neue','Microsoft YaHei',sans-serif;color:#2f241b;line-height:1.6;overflow:hidden;">
+<style>
+  .meetu-cms-a {
+    --ink: #2d180e;
+    --muted: rgba(45, 24, 14, 0.64);
+    --accent: #ff7422;
+    --cream: #fff8f1;
+    --peach: #ffe2cb;
+    max-width: 750px;
+    margin: 0 auto;
+    color: var(--ink);
+    font-family: "PingFang SC", "Helvetica Neue", "Microsoft YaHei", sans-serif;
+    background:
+      radial-gradient(circle at top right, rgba(255, 181, 116, 0.42), transparent 32%),
+      linear-gradient(180deg, #fff6ee 0%, #fff1e5 54%, #fff8f2 100%);
+  }
+  .meetu-cms-a * { box-sizing: border-box; }
+  .meetu-cms-a .shell { padding: 28px 22px 56px; }
+  .meetu-cms-a .eyebrow {
+    display: inline-flex;
+    padding: 6px 14px;
+    border-radius: 999px;
+    background: rgba(255, 116, 34, 0.1);
+    color: #c85a18;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2.4px;
+    text-transform: uppercase;
+  }
+  .meetu-cms-a .hero {
+    display: grid;
+    gap: 22px;
+    padding: 34px 0 26px;
+  }
+  .meetu-cms-a .hero-copy h1 {
+    margin: 0 0 12px;
+    font-size: 54px;
+    line-height: 0.92;
+    letter-spacing: -3px;
+    font-weight: 900;
+  }
+  .meetu-cms-a .hero-copy p {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--muted);
+  }
+  .meetu-cms-a .hero-copy .english {
+    margin: 18px 0 10px;
+    display: block;
+    font-size: 14px;
+    font-style: italic;
+    letter-spacing: 1.2px;
+    color: #d06728;
+  }
+  .meetu-cms-a .hero-art {
+    position: relative;
+    border-radius: 34px;
+    overflow: hidden;
+    box-shadow: 0 28px 70px rgba(170, 92, 35, 0.16);
+    border: 1px solid rgba(255, 255, 255, 0.88);
+  }
+  .meetu-cms-a .hero-art img { display: block; width: 100%; height: auto; }
+  .meetu-cms-a .hero-chip {
+    position: absolute;
+    right: 18px;
+    bottom: 18px;
+    padding: 10px 16px;
+    border-radius: 18px;
+    background: rgba(47, 24, 14, 0.78);
+    color: #fff7ef;
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+  .meetu-cms-a .quote {
+    margin: 10px 0 28px;
+    padding: 28px 24px;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid rgba(255, 255, 255, 0.86);
+    box-shadow: 0 20px 55px rgba(170, 92, 35, 0.07);
+  }
+  .meetu-cms-a .quote strong {
+    display: block;
+    font-size: 30px;
+    line-height: 1.2;
+    letter-spacing: -1px;
+    margin-bottom: 8px;
+  }
+  .meetu-cms-a .quote span {
+    display: block;
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.8;
+  }
+  .meetu-cms-a .card-grid { display: grid; gap: 16px; }
+  .meetu-cms-a .card {
+    padding: 26px 22px;
+    border-radius: 28px;
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.92);
+    box-shadow: 0 18px 48px rgba(170, 92, 35, 0.06);
+  }
+  .meetu-cms-a .card .mini {
+    display: block;
+    margin-bottom: 8px;
+    color: #d06728;
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-style: italic;
+  }
+  .meetu-cms-a .card h2 {
+    margin: 0 0 8px;
+    font-size: 26px;
+    line-height: 1.18;
+    letter-spacing: -1px;
+  }
+  .meetu-cms-a .card p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.85;
+  }
+  .meetu-cms-a .split {
+    display: grid;
+    gap: 18px;
+    margin: 18px 0 0;
+  }
+  .meetu-cms-a .panel {
+    border-radius: 28px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 20px 60px rgba(170, 92, 35, 0.1);
+  }
+  .meetu-cms-a .panel img { display: block; width: 100%; height: auto; }
+  .meetu-cms-a .timeline {
+    padding: 24px 22px;
+    background: linear-gradient(180deg, #fff8f1, #fff1e4);
+  }
+  .meetu-cms-a .timeline-item {
+    position: relative;
+    padding-left: 44px;
+    margin-bottom: 22px;
+  }
+  .meetu-cms-a .timeline-item:last-child { margin-bottom: 0; }
+  .meetu-cms-a .timeline-item::before {
+    content: attr(data-step);
+    position: absolute;
+    left: 0;
+    top: -2px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ff7422, #ffa25e);
+    color: white;
+    display: grid;
+    place-items: center;
+    font-size: 13px;
+    font-weight: 800;
+  }
+  .meetu-cms-a .timeline-item strong {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 3px;
+  }
+  .meetu-cms-a .timeline-item span {
+    display: block;
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.7;
+  }
+  .meetu-cms-a .cta {
+    margin-top: 24px;
+    padding: 34px 24px 40px;
+    text-align: center;
+    border-radius: 32px;
+    background: linear-gradient(160deg, #ffd8bc 0%, #ffb474 52%, #ff7c34 100%);
+    color: #2d180e;
+    box-shadow: 0 24px 70px rgba(255, 116, 34, 0.18);
+  }
+  .meetu-cms-a .cta .line-1 {
+    display: block;
+    font-size: 30px;
+    font-weight: 900;
+    letter-spacing: -1px;
+  }
+  .meetu-cms-a .cta .line-2 {
+    display: block;
+    margin-top: 4px;
+    font-size: 18px;
+    font-style: italic;
+    color: rgba(45, 24, 14, 0.72);
+  }
+  .meetu-cms-a .cta .button {
+    display: inline-block;
+    margin-top: 22px;
+    padding: 16px 32px;
+    border-radius: 999px;
+    background: #2d180e;
+    color: white;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 1.5px;
+  }
+  .meetu-cms-a .footer {
+    padding: 28px 0 10px;
+    text-align: center;
+    color: rgba(45, 24, 14, 0.42);
+    font-style: italic;
+  }
+  @media (min-width: 640px) {
+    .meetu-cms-a .hero { grid-template-columns: 1.04fr 0.96fr; align-items: end; }
+    .meetu-cms-a .card-grid { grid-template-columns: repeat(3, 1fr); }
+    .meetu-cms-a .split { grid-template-columns: 1.05fr 0.95fr; align-items: stretch; }
+  }
+</style>
 
-<!-- 第1屏：身份爆炸 + 主理人招募海报 -->
-<div style="background:linear-gradient(165deg,#fff5ec 0%,#ffe2c9 35%,#ffd4b0 60%,#ffcba0 100%);padding:72px 32px 56px;position:relative;overflow:hidden;">
-<div style="position:absolute;top:-80px;right:-60px;width:280px;height:280px;border-radius:50%;background:radial-gradient(circle,rgba(255,116,34,0.1) 0%,transparent 60%);"></div>
-<div style="position:absolute;bottom:-40px;left:-50px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(255,126,179,0.08) 0%,transparent 60%);"></div>
-<div style="position:absolute;top:40px;right:28px;transform:rotate(12deg);font-size:11px;letter-spacing:3px;color:rgba(200,90,24,0.15);font-weight:300;">HOST</div>
+<div class="meetu-cms-a">
+  <div class="shell">
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">MEETU HOST</span>
+        <h1>把会玩，<br>变成你的主场。</h1>
+        <span class="english">Make things happen.</span>
+        <p>主理人不是填表的人，而是把一场活动做出气氛、做出人情味、也做出自己风格的人。</p>
+      </div>
+      <div class="hero-art">
+        <img src="https://raw.githubusercontent.com/yechizhang329/Meetu/main/%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80%E5%8F%82%E8%80%83/Meetu%E5%85%83%E7%B4%A0%E5%8F%82%E8%80%83/nanobanana%E5%9B%BE%E7%89%87%E7%94%9F%E6%88%90v1/%E5%B9%BF%E5%9C%BA%E9%85%8D%E5%9B%BE/%E4%B8%BB%E7%90%86%E4%BA%BA.png" alt="觅遇社主理人招募海报">
+        <div class="hero-chip">真实场景海报 · 直接进入页面主视觉</div>
+      </div>
+    </section>
 
-<div style="display:inline-block;background:rgba(255,116,34,0.1);border:1px solid rgba(255,116,34,0.12);border-radius:20px;padding:5px 14px;font-size:11px;color:#c85a18;letter-spacing:3px;font-weight:600;margin-bottom:24px;">MEETU HOST</div>
+    <section class="quote">
+      <strong>不是“发布一个活动”，<br>而是把一群人真的聚起来。</strong>
+      <span>这页应该让人先感到“当主理人很酷”，再自然理解发起流程、收益空间和平台支持，而不是像读一份后台说明。</span>
+    </section>
 
-<div style="font-size:52px;font-weight:900;color:#2f241b;line-height:0.95;letter-spacing:-3px;margin-bottom:8px;">来觅遇社，</div>
-<div style="font-size:52px;font-weight:900;color:#2f241b;line-height:0.95;letter-spacing:-3px;margin-bottom:20px;">开一场。</div>
+    <section class="card-grid">
+      <article class="card">
+        <span class="mini">host energy</span>
+        <h2>你定主题</h2>
+        <p>剧本杀、运动、City Walk、交流分享，只要你能把那一场想清楚，就可以开始。</p>
+      </article>
+      <article class="card">
+        <span class="mini">platform support</span>
+        <h2>平台接人</h2>
+        <p>曝光、收款、建群、费用说明这些流程由平台接住，你不用一个人扛所有杂事。</p>
+      </article>
+      <article class="card">
+        <span class="mini">earn your way</span>
+        <h2>收益自定</h2>
+        <p>轻量活动可以用门槛价开始，正式活动按真实成本和体验价值定价，空间由你定义。</p>
+      </article>
+    </section>
 
-<div style="font-size:15px;font-weight:300;color:#8b6b52;letter-spacing:1px;margin-bottom:6px;font-style:italic;">Make things happen.</div>
-<div style="font-size:18px;font-weight:600;color:#4a3628;letter-spacing:0.5px;margin-bottom:32px;">会玩的人，值得被看见。</div>
+    <section class="split">
+      <div class="panel">
+        <img src="https://raw.githubusercontent.com/yechizhang329/Meetu/main/%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80%E5%8F%82%E8%80%83/Meetu%E5%85%83%E7%B4%A0%E5%8F%82%E8%80%83/nanobanana%E5%9B%BE%E7%89%87%E7%94%9F%E6%88%90v1/banner/3.png" alt="主理人招募横幅">
+      </div>
+      <div class="timeline">
+        <div class="timeline-item" data-step="1">
+          <strong>想清楚这一场</strong>
+          <span>先确定主题、人数、时间和费用，这一场的气氛从你脑子里的画面开始。</span>
+        </div>
+        <div class="timeline-item" data-step="2">
+          <strong>发起并通过审核</strong>
+          <span>平台确认信息完整，就把你的活动送到更适合的人面前。</span>
+        </div>
+        <div class="timeline-item" data-step="3">
+          <strong>把人接上，把局做成</strong>
+          <span>当第一场真的有人来、有人回头找你时，主理人的身份感才算建立起来。</span>
+        </div>
+      </div>
+    </section>
 
-<div style="display:inline-block;transform:rotate(-2deg);padding:14px 28px;border-radius:22px;background:linear-gradient(135deg,#ff7422 0%,#ff9456 50%,#ffb574 100%);color:#fff;font-size:14px;font-weight:700;box-shadow:0 16px 40px rgba(255,116,34,0.28);letter-spacing:1px;">会玩，就是你的超能力</div>
+    <section class="cta">
+      <span class="line-1">你的下一场活动，</span>
+      <span class="line-2">从现在开始。</span>
+      <span class="button">立即发布第一场活动</span>
+    </section>
 
-<!-- 主理人招募海报 Hero Image -->
-<div style="margin-top:40px;">
-<img src="https://raw.githubusercontent.com/yechizhang329/Meetu/main/%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80%E5%8F%82%E8%80%83/Meetu%E5%85%83%E7%B4%A0%E5%8F%82%E8%80%83/nanobanana%E5%9B%BE%E7%89%87%E7%94%9F%E6%88%90v1/%E5%B9%BF%E5%9C%BA%E9%85%8D%E5%9B%BE/%E4%B8%BB%E7%90%86%E4%BA%BA.png" style="width:100%;border-radius:20px;box-shadow:0 20px 60px rgba(170,92,35,0.15);" />
-</div>
-</div>
-
-<!-- 第2屏：一句话定调 + 活动场景banner -->
-<div style="background:linear-gradient(180deg,#ffcba0 0%,#fff5ec 100%);padding:56px 32px;">
-<div style="background:rgba(255,255,255,0.75);backdrop-filter:blur(24px);border:1px solid rgba(255,255,255,0.85);border-radius:32px;padding:44px 32px;box-shadow:0 24px 80px rgba(170,92,35,0.07);text-align:center;">
-<div style="font-size:13px;font-weight:300;color:#c85a18;letter-spacing:4px;margin-bottom:16px;font-style:italic;">about hosting</div>
-<div style="font-size:32px;font-weight:800;color:#2f241b;line-height:1.2;letter-spacing:-1px;margin-bottom:12px;">会玩这件事，</div>
-<div style="font-size:32px;font-weight:300;color:#2f241b;line-height:1.2;letter-spacing:-1px;margin-bottom:20px;font-style:italic;">值得被认真对待。</div>
-<div style="width:40px;height:2px;background:linear-gradient(90deg,#ff7422,#ffb574);margin:0 auto 20px;border-radius:2px;"></div>
-<div style="font-size:14px;color:#8b6b52;font-weight:400;line-height:1.6;margin-bottom:24px;">你来发起一场，平台帮你把人找到。</div>
-
-<!-- 活动场景 banner -->
-<img src="https://raw.githubusercontent.com/yechizhang329/Meetu/main/%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80%E5%8F%82%E8%80%83/Meetu%E5%85%83%E7%B4%A0%E5%8F%82%E8%80%83/nanobanana%E5%9B%BE%E7%89%87%E7%94%9F%E6%88%90v1/banner/%E5%9C%BA%E6%99%AF/1.png" style="width:100%;border-radius:20px;margin-top:8px;" />
-</div>
-</div>
-
-<!-- 第3屏：三个理由 — emoji replaced with CSS gradient numbered icons -->
-<div style="background:linear-gradient(180deg,#fff5ec 0%,#fff0e3 100%);padding:52px 28px;">
-<div style="margin-bottom:36px;">
-<div style="font-size:11px;color:#c85a18;font-weight:600;letter-spacing:4px;margin-bottom:10px;">WHY YOU</div>
-<div style="font-size:28px;font-weight:800;color:#2f241b;letter-spacing:-1px;">为什么是你？</div>
-<div style="font-size:13px;color:#8b6b52;margin-top:4px;font-weight:300;">三件事，主理人全拿走</div>
-</div>
-
-<!-- Card 1: 气氛 -->
-<div style="background:rgba(255,255,255,0.8);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.9);border-radius:28px;padding:28px;margin-bottom:16px;box-shadow:0 12px 48px rgba(170,92,35,0.05);">
-<div style="width:52px;height:52px;border-radius:16px;background:linear-gradient(135deg,#ff7422 0%,#ffad6e 100%);display:flex;align-items:center;justify-content:center;margin-bottom:14px;box-shadow:0 8px 24px rgba(255,116,34,0.2);">
-<div style="color:#fff;font-size:22px;font-weight:900;line-height:1;">1</div>
-</div>
-<div style="font-size:20px;font-weight:800;color:#2f241b;margin-bottom:4px;letter-spacing:-0.5px;">你负责把气氛带起来</div>
-<div style="font-size:12px;font-weight:300;color:#c85a18;letter-spacing:2px;margin-bottom:10px;font-style:italic;">set the vibe</div>
-<div style="font-size:14px;color:#6f5441;line-height:1.8;font-weight:400;">剧本杀、运动局、City Walk、交流分享……你想发起什么，舞台就从哪里开始。</div>
-</div>
-
-<!-- Card 2: 平台 -->
-<div style="background:rgba(255,255,255,0.8);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.9);border-radius:28px;padding:28px;margin-bottom:16px;box-shadow:0 12px 48px rgba(170,92,35,0.05);">
-<div style="width:52px;height:52px;border-radius:16px;background:linear-gradient(135deg,#42a5f5 0%,#90caf9 100%);display:flex;align-items:center;justify-content:center;margin-bottom:14px;box-shadow:0 8px 24px rgba(66,165,245,0.2);">
-<div style="color:#fff;font-size:22px;font-weight:900;line-height:1;">2</div>
-</div>
-<div style="font-size:20px;font-weight:800;color:#2f241b;margin-bottom:4px;letter-spacing:-0.5px;">平台负责把人接上</div>
-<div style="font-size:12px;font-weight:300;color:#c85a18;letter-spacing:2px;margin-bottom:10px;font-style:italic;">we handle the rest</div>
-<div style="font-size:14px;color:#6f5441;line-height:1.8;font-weight:400;">活动曝光、收款、建群、费用说明，这些流程都由平台帮你接住。</div>
-</div>
-
-<!-- Card 3: 收益 -->
-<div style="background:rgba(255,255,255,0.8);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.9);border-radius:28px;padding:28px;box-shadow:0 12px 48px rgba(170,92,35,0.05);">
-<div style="width:52px;height:52px;border-radius:16px;background:linear-gradient(135deg,#ff9800 0%,#ffcc80 100%);display:flex;align-items:center;justify-content:center;margin-bottom:14px;box-shadow:0 8px 24px rgba(255,152,0,0.2);">
-<div style="color:#fff;font-size:22px;font-weight:900;line-height:1;">3</div>
-</div>
-<div style="font-size:20px;font-weight:800;color:#2f241b;margin-bottom:4px;letter-spacing:-0.5px;">收益空间由你定义</div>
-<div style="font-size:12px;font-weight:300;color:#c85a18;letter-spacing:2px;margin-bottom:10px;font-style:italic;">your rules, your pricing</div>
-<div style="font-size:14px;color:#6f5441;line-height:1.8;font-weight:400;">活动怎么定价、怎么组织，你有更大的主动权。</div>
-</div>
-</div>
-
-<!-- 第4屏：流程极简 -->
-<div style="background:linear-gradient(180deg,#fff0e3 0%,#fff8f2 100%);padding:52px 28px;">
-<div style="margin-bottom:36px;">
-<div style="font-size:11px;color:#c85a18;font-weight:600;letter-spacing:4px;margin-bottom:10px;">HOW TO START</div>
-<div style="font-size:28px;font-weight:800;color:#2f241b;letter-spacing:-1px;">3 分钟，开你的第一场。</div>
-<div style="font-size:13px;color:#8b6b52;margin-top:4px;font-weight:300;font-style:italic;">It's that simple.</div>
-</div>
-
-<div style="position:relative;padding-left:40px;">
-<div style="position:absolute;left:19px;top:28px;bottom:28px;width:1.5px;background:linear-gradient(180deg,#ff7422,#ffcba0,rgba(255,203,160,0));"></div>
-
-<div style="position:relative;margin-bottom:36px;">
-<div style="position:absolute;left:-40px;top:0;width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#ff7422,#ff9f62);color:#fff;font-size:16px;font-weight:800;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(255,116,34,0.25);z-index:1;">1</div>
-<div style="padding-left:16px;">
-<div style="font-size:18px;font-weight:700;color:#2f241b;margin-bottom:2px;">打开觅遇社小程序</div>
-<div style="font-size:13px;color:#8b6b52;font-weight:300;">先把你想做的那场活动想清楚</div>
-</div>
-</div>
-
-<div style="position:relative;margin-bottom:36px;">
-<div style="position:absolute;left:-40px;top:0;width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#ff7422,#ff9f62);color:#fff;font-size:16px;font-weight:800;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(255,116,34,0.25);z-index:1;">2</div>
-<div style="padding-left:16px;">
-<div style="font-size:18px;font-weight:700;color:#2f241b;margin-bottom:2px;">发起你的活动</div>
-<div style="font-size:13px;color:#8b6b52;font-weight:300;">写清主题、人数、时间和活动费用</div>
-</div>
-</div>
-
-<div style="position:relative;">
-<div style="position:absolute;left:-40px;top:0;width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#ff7422,#ff9f62);color:#fff;font-size:16px;font-weight:800;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(255,116,34,0.25);z-index:1;">3</div>
-<div style="padding-left:16px;">
-<div style="font-size:18px;font-weight:700;color:#2f241b;margin-bottom:2px;">审核通过，开始聚人</div>
-<div style="font-size:13px;color:#8b6b52;font-weight:300;">平台会继续帮你把这一场往前推</div>
-</div>
-</div>
-</div>
-
-<!-- 课后场景 banner -->
-<div style="margin-top:40px;">
-<img src="https://raw.githubusercontent.com/yechizhang329/Meetu/main/%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80%E5%8F%82%E8%80%83/Meetu%E5%85%83%E7%B4%A0%E5%8F%82%E8%80%83/nanobanana%E5%9B%BE%E7%89%87%E7%94%9F%E6%88%90v1/banner/%E5%9C%BA%E6%99%AF/2.png" style="width:100%;border-radius:20px;" />
-</div>
-</div>
-
-<!-- 第5屏：身份感强化 — emoji badges replaced with CSS gradient badge designs -->
-<div style="background:linear-gradient(180deg,#fff8f2 0%,#fff0e3 100%);padding:52px 28px;">
-<div style="margin-bottom:32px;text-align:center;">
-<div style="font-size:32px;font-weight:900;color:#2f241b;letter-spacing:-1px;">主理人 ≠ 打工人</div>
-<div style="font-size:13px;color:#8b6b52;margin-top:6px;font-weight:300;font-style:italic;">It's an identity, not a job.</div>
-</div>
-
-<!-- 认证+信任 banner -->
-<div style="margin-bottom:24px;">
-<img src="https://raw.githubusercontent.com/yechizhang329/Meetu/main/%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80%E5%8F%82%E8%80%83/Meetu%E5%85%83%E7%B4%A0%E5%8F%82%E8%80%83/nanobanana%E5%9B%BE%E7%89%87%E7%94%9F%E6%88%90v1/banner/1.png" style="width:100%;border-radius:20px;" />
-</div>
-
-<div style="background:rgba(255,255,255,0.8);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.9);border-radius:32px;padding:40px 28px;text-align:center;box-shadow:0 20px 64px rgba(170,92,35,0.06);">
-<div style="font-size:20px;font-weight:700;color:#2f241b;margin-bottom:8px;line-height:1.4;">把一场活动做好，</div>
-<div style="font-size:16px;font-weight:300;color:#6f5441;margin-bottom:28px;">平台会继续把你往前推。</div>
-<div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;">
-
-<!-- Badge 1: 精选标识 -->
-<span style="display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,rgba(255,116,34,0.1),rgba(255,116,34,0.03));border:1px solid rgba(255,116,34,0.15);border-radius:28px;padding:10px 20px;font-size:13px;color:#c85a18;font-weight:600;">
-<span style="display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:linear-gradient(135deg,#ff7422,#ffad6e);flex-shrink:0;">
-<span style="color:#fff;font-size:11px;font-weight:900;line-height:1;">&#10003;</span>
-</span>
-精选标识
-</span>
-
-<!-- Badge 2: 流量扶持 -->
-<span style="display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,rgba(66,165,245,0.1),rgba(66,165,245,0.03));border:1px solid rgba(66,165,245,0.15);border-radius:28px;padding:10px 20px;font-size:13px;color:#1976D2;font-weight:600;">
-<span style="display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:linear-gradient(135deg,#42a5f5,#90caf9);flex-shrink:0;">
-<span style="color:#fff;font-size:11px;font-weight:900;line-height:1;">&#9650;</span>
-</span>
-流量扶持
-</span>
-
-<!-- Badge 3: 专属礼物 -->
-<span style="display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,rgba(255,152,0,0.1),rgba(255,152,0,0.03));border:1px solid rgba(255,152,0,0.15);border-radius:28px;padding:10px 20px;font-size:13px;color:#E65100;font-weight:600;">
-<span style="display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:linear-gradient(135deg,#ff9800,#ffcc80);flex-shrink:0;">
-<span style="color:#fff;font-size:11px;font-weight:900;line-height:1;">&#9733;</span>
-</span>
-专属礼物
-</span>
-
-</div>
-</div>
-</div>
-
-<!-- 第6屏：CTA + Mascot -->
-<div style="background:linear-gradient(180deg,#fff0e3 0%,#ffdcc0 50%,#ffd4b0 100%);padding:48px 32px 64px;text-align:center;">
-<div style="font-size:14px;font-weight:300;color:#c85a18;letter-spacing:3px;margin-bottom:14px;font-style:italic;">ready?</div>
-<div style="font-size:28px;font-weight:800;color:#2f241b;margin-bottom:8px;letter-spacing:-1px;">你的下一场活动，</div>
-<div style="font-size:28px;font-weight:300;color:#2f241b;margin-bottom:28px;letter-spacing:-1px;font-style:italic;">从现在开始。</div>
-
-<!-- Mascot -->
-<div style="margin-bottom:28px;">
-<img src="https://raw.githubusercontent.com/yechizhang329/Meetu/main/%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80%E5%8F%82%E8%80%83/Meetu%E5%85%83%E7%B4%A0%E5%8F%82%E8%80%83/0%20Meetu%20mascot%20master.png" style="width:120px;border-radius:20px;" />
-</div>
-
-<div style="display:inline-block;width:100%;max-width:300px;background:linear-gradient(135deg,#ff7422 0%,#ff9456 50%,#ffb068 100%);color:#fff;font-size:16px;font-weight:700;padding:18px 0;border-radius:50px;box-shadow:0 16px 48px rgba(255,116,34,0.3);letter-spacing:2px;">立即发布第一场活动</div>
-<div style="font-size:12px;color:#8b6b52;margin-top:16px;font-weight:300;">写清内容、人数和费用就能开始</div>
-</div>
-
-<!-- Footer -->
-<div style="background:#fff8f2;text-align:center;padding:28px 20px;">
-<div style="font-size:14px;font-weight:300;color:rgba(47,36,27,0.4);font-style:italic;margin-bottom:4px;">Nice to Meetu.</div>
-<div style="font-size:11px;color:rgba(47,36,27,0.25);font-weight:300;letter-spacing:2px;"><span style="font-weight:700;color:#ff7422;">觅遇社</span> MEETU</div>
-</div>
-
+    <div class="footer">Nice to Meetu.</div>
+  </div>
 </div>

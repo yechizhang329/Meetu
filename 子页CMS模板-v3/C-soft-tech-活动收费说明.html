@@ -1,193 +1,278 @@
-<div style="max-width:750px;margin:0 auto;font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Helvetica Neue','Microsoft YaHei',sans-serif;color:#2f241b;line-height:1.6;overflow:hidden;">
+<style>
+  .meetu-cms-c {
+    --ink: #1d2730;
+    --muted: rgba(29, 39, 48, 0.68);
+    --accent: #ff7422;
+    max-width: 750px;
+    margin: 0 auto;
+    color: var(--ink);
+    font-family: "PingFang SC", "Helvetica Neue", "Microsoft YaHei", sans-serif;
+    background:
+      radial-gradient(circle at top right, rgba(116, 194, 255, 0.16), transparent 26%),
+      radial-gradient(circle at bottom left, rgba(255, 183, 122, 0.18), transparent 24%),
+      linear-gradient(180deg, #f7fbff 0%, #f0f7ff 52%, #f8fbfd 100%);
+  }
+  .meetu-cms-c * { box-sizing: border-box; }
+  .meetu-cms-c .shell { padding: 24px 22px 56px; }
+  .meetu-cms-c .hero {
+    display: grid;
+    gap: 18px;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .meetu-cms-c .badge {
+    display: inline-flex;
+    padding: 6px 14px;
+    border-radius: 999px;
+    background: rgba(255, 116, 34, 0.08);
+    color: #d16526;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  .meetu-cms-c h1 {
+    margin: 16px 0 10px;
+    font-size: 48px;
+    line-height: 0.95;
+    letter-spacing: -2.5px;
+    font-weight: 900;
+  }
+  .meetu-cms-c .sub {
+    font-size: 18px;
+    color: var(--muted);
+    line-height: 1.8;
+    margin: 0;
+  }
+  .meetu-cms-c .hero-card {
+    padding: 22px;
+    border-radius: 30px;
+    background: linear-gradient(160deg, rgba(255,255,255,0.94), rgba(244,249,255,0.92));
+    border: 1px solid rgba(255,255,255,0.94);
+    box-shadow: 0 24px 64px rgba(74, 115, 148, 0.08);
+  }
+  .meetu-cms-c .hero-card img {
+    display: block;
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 18px;
+    border-radius: 28px;
+  }
+  .meetu-cms-c .hero-card strong {
+    display: block;
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 10px;
+    letter-spacing: -0.5px;
+  }
+  .meetu-cms-c .hero-card p {
+    margin: 0;
+    text-align: center;
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.8;
+  }
+  .meetu-cms-c .highlight {
+    margin: 24px 0;
+    padding: 26px 24px;
+    border-radius: 30px;
+    background: linear-gradient(145deg, #152a3b 0%, #25435f 100%);
+    color: #fff;
+    box-shadow: 0 26px 64px rgba(29, 39, 48, 0.16);
+  }
+  .meetu-cms-c .highlight small {
+    display: block;
+    margin-bottom: 10px;
+    color: rgba(255,255,255,0.55);
+    font-size: 11px;
+    letter-spacing: 2px;
+  }
+  .meetu-cms-c .highlight strong {
+    display: block;
+    font-size: 28px;
+    line-height: 1.2;
+    margin-bottom: 10px;
+    letter-spacing: -1px;
+  }
+  .meetu-cms-c .highlight p {
+    margin: 0;
+    color: rgba(255,255,255,0.74);
+    font-size: 14px;
+    line-height: 1.8;
+  }
+  .meetu-cms-c .visual-row {
+    display: grid;
+    gap: 14px;
+    margin-bottom: 24px;
+  }
+  .meetu-cms-c .visual-card {
+    overflow: hidden;
+    border-radius: 26px;
+    border: 1px solid rgba(255,255,255,0.95);
+    background: rgba(255,255,255,0.9);
+    box-shadow: 0 16px 46px rgba(74, 115, 148, 0.08);
+  }
+  .meetu-cms-c .visual-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .meetu-cms-c .faq {
+    display: grid;
+    gap: 14px;
+    margin-bottom: 24px;
+  }
+  .meetu-cms-c .faq-card {
+    padding: 22px 20px;
+    border-radius: 24px;
+    background: rgba(255,255,255,0.84);
+    border: 1px solid rgba(255,255,255,0.95);
+    box-shadow: 0 14px 40px rgba(74, 115, 148, 0.05);
+  }
+  .meetu-cms-c .faq-card b {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 18px;
+    letter-spacing: -0.4px;
+  }
+  .meetu-cms-c .faq-card p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.8;
+  }
+  .meetu-cms-c .pricing-grid {
+    display: grid;
+    gap: 14px;
+    margin-bottom: 24px;
+  }
+  .meetu-cms-c .price-box {
+    padding: 22px;
+    border-radius: 24px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(246,250,255,0.92));
+    border: 1px solid rgba(255,255,255,0.96);
+  }
+  .meetu-cms-c .price-box small {
+    display: block;
+    margin-bottom: 8px;
+    color: #3a7fd5;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+  }
+  .meetu-cms-c .price-box strong {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 24px;
+    letter-spacing: -0.8px;
+  }
+  .meetu-cms-c .price-box p {
+    margin: 0;
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.8;
+  }
+  .meetu-cms-c .cta {
+    text-align: center;
+    padding: 34px 24px 40px;
+    border-radius: 30px;
+    background: linear-gradient(145deg, #dff2ff 0%, #f3faff 48%, #ffe0c8 100%);
+    box-shadow: 0 24px 62px rgba(74, 115, 148, 0.08);
+  }
+  .meetu-cms-c .cta strong {
+    display: block;
+    font-size: 28px;
+    line-height: 1.16;
+    letter-spacing: -1px;
+    margin-bottom: 8px;
+  }
+  .meetu-cms-c .cta span {
+    display: block;
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.8;
+  }
+  .meetu-cms-c .footer {
+    padding-top: 24px;
+    text-align: center;
+    font-style: italic;
+    color: rgba(29,39,48,0.42);
+  }
+  @media (min-width: 640px) {
+    .meetu-cms-c .hero { grid-template-columns: 1.05fr 0.95fr; }
+    .meetu-cms-c .visual-row,
+    .meetu-cms-c .faq,
+    .meetu-cms-c .pricing-grid { grid-template-columns: 1fr 1fr; }
+  }
+</style>
 
-<!-- 第1屏：问题直给 + Mascot -->
-<div style="background:linear-gradient(170deg,#fff9f3 0%,#fff2e8 40%,#ffe8d8 100%);padding:72px 32px 56px;position:relative;overflow:hidden;">
-<div style="position:absolute;top:-50px;right:-40px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(255,116,34,0.07) 0%,transparent 60%);"></div>
-<div style="position:absolute;top:50px;right:28px;transform:rotate(6deg);font-size:56px;font-weight:100;color:rgba(47,36,27,0.03);letter-spacing:-3px;">¥</div>
+<div class="meetu-cms-c">
+  <div class="shell">
+    <section class="hero">
+      <div>
+        <span class="badge">ABOUT PRICING</span>
+        <h1>费用不是门槛感，<br>而是规则感。</h1>
+        <p class="sub">这页不该像解释一条复杂规则，而是要让用户快速看懂：这场活动为什么要收费、轻量活动和正式活动差在哪、自己是在为什么付费。</p>
+      </div>
+      <div class="hero-card">
+        <img src="https://raw.githubusercontent.com/yechizhang329/Meetu/main/%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80%E5%8F%82%E8%80%83/Meetu%E5%85%83%E7%B4%A0%E5%8F%82%E8%80%83/%E5%A4%B4%E5%83%8F/image1.png" alt="觅遇仔头像">
+        <strong>先看清费用，再决定搭不搭上。</strong>
+        <p>价格透明、规则写清楚，才是让人敢出发的前提。活动收费这件事，不能被写成金融术语，也不能写成后台文档。</p>
+      </div>
+    </section>
 
-<!-- Mascot -->
-<img src="https://raw.githubusercontent.com/yechizhang329/Meetu/main/%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80%E5%8F%82%E8%80%83/Meetu%E5%85%83%E7%B4%A0%E5%8F%82%E8%80%83/0%20Meetu%20mascot%20master.png" alt="Meetu Mascot" style="position:absolute;bottom:12px;right:20px;width:80px;height:auto;opacity:0.92;filter:drop-shadow(0 6px 16px rgba(255,116,34,0.18));" />
+    <section class="highlight">
+      <small>THE SHORT ANSWER</small>
+      <strong>¥0.01 不是默认价格，<br>只是最低门槛。</strong>
+      <p>轻量活动可以从门槛价开始，正式活动按真实成本定价。费用是否退还、怎么退、是否包含场地和材料，都应该在活动页里讲清楚。</p>
+    </section>
 
-<div style="display:inline-block;background:rgba(255,116,34,0.08);border:1px solid rgba(255,116,34,0.1);border-radius:20px;padding:5px 14px;font-size:11px;color:#c85a18;font-weight:600;letter-spacing:3px;margin-bottom:24px;">PRICING GUIDE</div>
+    <section class="visual-row">
+      <div class="visual-card">
+        <img src="https://raw.githubusercontent.com/yechizhang329/Meetu/main/%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80%E5%8F%82%E8%80%83/Meetu%E5%85%83%E7%B4%A0%E5%8F%82%E8%80%83/UI%E5%85%83%E7%B4%A0/Meetu%20Discover%20Tab.png" alt="觅遇社发现页界面">
+      </div>
+      <div class="visual-card">
+        <img src="https://raw.githubusercontent.com/yechizhang329/Meetu/main/%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80%E5%8F%82%E8%80%83/Meetu%E5%85%83%E7%B4%A0%E5%8F%82%E8%80%83/notifications/Meetu%20System%20Notifications%20Set%201.png" alt="觅遇社系统提示参考">
+      </div>
+    </section>
 
-<div style="font-size:40px;font-weight:900;color:#2f241b;line-height:1.0;letter-spacing:-2px;margin-bottom:6px;">活动怎么收费？</div>
-<div style="font-size:40px;font-weight:300;color:#2f241b;line-height:1.0;letter-spacing:-2px;margin-bottom:16px;font-style:italic;">3秒看懂。</div>
-<div style="font-size:13px;color:#8b6b52;font-weight:300;">先看清规则，再决定要不要搭上</div>
-</div>
+    <section class="faq">
+      <article class="faq-card">
+        <b>为什么有的活动只要 ¥0.01？</b>
+        <p>这类活动本身成本低，收一个最低门槛价，更多是为了减少临时放弃，提高这场活动真的能成的概率。</p>
+      </article>
+      <article class="faq-card">
+        <b>为什么有的活动会更贵？</b>
+        <p>剧本杀、运动场地、KTV、物料准备本来就有真实成本。主理人把费用写清楚，参与者就按规则决定要不要来。</p>
+      </article>
+      <article class="faq-card">
+        <b>费用都会退吗？</b>
+        <p>不会。是否退、怎么退、退到哪里，取决于活动本身的规则。真正重要的是：收费逻辑要写清楚，而不是默认你自己去猜。</p>
+      </article>
+      <article class="faq-card">
+        <b>平台为什么要把这件事讲这么明白？</b>
+        <p>因为模糊收费会直接毁掉信任。把价格说明、人数门槛、成局条件都讲明白，活动才更容易真的发生。</p>
+      </article>
+    </section>
 
-<!-- 第2屏：一句话回答 -->
-<div style="background:linear-gradient(180deg,#ffe8d8 0%,#fff5ec 100%);padding:56px 32px;">
-<div style="background:rgba(255,255,255,0.75);backdrop-filter:blur(24px);border:1px solid rgba(255,255,255,0.85);border-radius:32px;padding:44px 32px;box-shadow:0 24px 80px rgba(170,92,35,0.06);text-align:center;">
-<div style="font-size:13px;font-weight:300;color:#c85a18;letter-spacing:4px;margin-bottom:16px;font-style:italic;">the short answer</div>
-<div style="font-size:26px;font-weight:800;color:#2f241b;line-height:1.25;letter-spacing:-0.5px;margin-bottom:6px;">轻量活动从 <span style="font-size:32px;color:#ff7422;">¥0.01</span> 起，</div>
-<div style="font-size:22px;font-weight:300;color:#4a3628;line-height:1.3;margin-bottom:20px;font-style:italic;">正式活动按真实成本定价。</div>
-<div style="width:40px;height:2px;background:linear-gradient(90deg,#ff7422,#ffb574);margin:0 auto 20px;border-radius:2px;"></div>
-<div style="font-size:14px;color:#8b6b52;font-weight:400;">先看活动内容，再看价格是不是适合你。</div>
-</div>
-</div>
+    <section class="pricing-grid">
+      <article class="price-box">
+        <small>LIGHTWEIGHT SCENARIO</small>
+        <strong>门槛价活动</strong>
+        <p>适合自习、打球、City Walk 这类低成本活动。重点是先把人约出来，再把活动做成。</p>
+      </article>
+      <article class="price-box">
+        <small>REAL COST SCENARIO</small>
+        <strong>正式活动定价</strong>
+        <p>适合剧本杀、KTV、展览局等有明确成本的场景。主理人需要把费用、规则和预期都说清楚。</p>
+      </article>
+    </section>
 
-<!-- 第3屏：FAQ -->
-<div style="background:linear-gradient(180deg,#fff5ec 0%,#fff9f3 100%);padding:52px 28px;">
-<div style="margin-bottom:36px;">
-<div style="font-size:11px;color:#c85a18;font-weight:600;letter-spacing:4px;margin-bottom:10px;">FAQ</div>
-<div style="font-size:28px;font-weight:800;color:#2f241b;letter-spacing:-1px;">常见问题</div>
-<div style="font-size:13px;color:#8b6b52;margin-top:4px;font-weight:300;font-style:italic;">four things to know</div>
-</div>
+    <section class="cta">
+      <strong>价格讲清楚，<br>一场活动才更容易成。</strong>
+      <span>真实成本、人数门槛、费用规则，都应该在活动页里直接说清楚。</span>
+    </section>
 
-<!-- Q1 -->
-<div style="background:rgba(255,255,255,0.8);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.9);border-radius:24px;padding:28px 24px 24px;margin-bottom:14px;box-shadow:0 10px 40px rgba(170,92,35,0.04);position:relative;">
-<div style="display:flex;align-items:flex-start;gap:16px;">
-<div style="flex-shrink:0;width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#ff7422,#ffb574);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(255,116,34,0.2);">
-<span style="font-size:14px;font-weight:800;color:#fff;letter-spacing:0.5px;">Q1</span>
-</div>
-<div>
-<div style="font-size:18px;font-weight:700;color:#2f241b;margin-bottom:8px;">活动费用是什么？</div>
-<div style="font-size:14px;color:#6f5441;line-height:1.8;font-weight:400;">每场活动都会有自己的价格，由主理人根据活动内容和实际开销来定。</div>
-</div>
-</div>
-</div>
-
-<!-- Q2 -->
-<div style="background:rgba(255,255,255,0.8);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.9);border-radius:24px;padding:28px 24px 24px;margin-bottom:14px;box-shadow:0 10px 40px rgba(170,92,35,0.04);position:relative;">
-<div style="display:flex;align-items:flex-start;gap:16px;">
-<div style="flex-shrink:0;width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#ff9456,#ffc88a);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(255,148,86,0.2);">
-<span style="font-size:14px;font-weight:800;color:#fff;letter-spacing:0.5px;">Q2</span>
-</div>
-<div>
-<div style="font-size:18px;font-weight:700;color:#2f241b;margin-bottom:8px;">为什么有的活动只要 ¥0.01？</div>
-<div style="font-size:14px;color:#6f5441;line-height:1.8;font-weight:400;">像自习、打球、City Walk 这类轻量搭子需求，可以用 ¥0.01 作为最低门槛，减少随意放弃、提高成局率。</div>
-</div>
-</div>
-</div>
-
-<!-- Q3 -->
-<div style="background:rgba(255,255,255,0.8);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.9);border-radius:24px;padding:28px 24px 24px;margin-bottom:14px;box-shadow:0 10px 40px rgba(170,92,35,0.04);position:relative;">
-<div style="display:flex;align-items:flex-start;gap:16px;">
-<div style="flex-shrink:0;width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#ff7422,#ffb574);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(255,116,34,0.2);">
-<span style="font-size:14px;font-weight:800;color:#fff;letter-spacing:0.5px;">Q3</span>
-</div>
-<div>
-<div style="font-size:18px;font-weight:700;color:#2f241b;margin-bottom:8px;">所有活动都会退费吗？</div>
-<div style="font-size:14px;color:#6f5441;line-height:1.8;font-weight:400;">不一定。很多活动本身就有真实成本，费用是否可退、怎么退，要看活动规则和成局情况。</div>
-</div>
-</div>
-</div>
-
-<!-- Q4 -->
-<div style="background:rgba(255,255,255,0.8);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.9);border-radius:24px;padding:28px 24px 24px;box-shadow:0 10px 40px rgba(170,92,35,0.04);position:relative;">
-<div style="display:flex;align-items:flex-start;gap:16px;">
-<div style="flex-shrink:0;width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#ff9456,#ffc88a);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(255,148,86,0.2);">
-<span style="font-size:14px;font-weight:800;color:#fff;letter-spacing:0.5px;">Q4</span>
-</div>
-<div>
-<div style="font-size:18px;font-weight:700;color:#2f241b;margin-bottom:8px;">主理人为什么可以定价？</div>
-<div style="font-size:14px;color:#6f5441;line-height:1.8;font-weight:400;">主理人负责组织活动、控场和资源协调，合理定价也是活动运营的一部分。</div>
-</div>
-</div>
-</div>
-</div>
-
-<!-- 第4屏：三条核心规则 -->
-<div style="background:linear-gradient(180deg,#fff9f3 0%,#fff5ec 100%);padding:52px 28px;">
-<div style="margin-bottom:36px;">
-<div style="font-size:11px;color:#c85a18;font-weight:600;letter-spacing:4px;margin-bottom:10px;">RULES</div>
-<div style="font-size:28px;font-weight:800;color:#2f241b;letter-spacing:-1px;">三条核心规则</div>
-<div style="font-size:13px;color:#8b6b52;margin-top:4px;font-weight:300;">先把边界看清，再决定参不参加</div>
-</div>
-
-<!-- Rule 1 -->
-<div style="background:rgba(255,255,255,0.8);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.9);border-radius:24px;padding:28px 24px;margin-bottom:16px;box-shadow:0 10px 40px rgba(170,92,35,0.04);position:relative;overflow:hidden;">
-<div style="position:absolute;top:0;left:0;width:4px;height:100%;background:linear-gradient(180deg,#ff7422,#ffb574);border-radius:4px 0 0 4px;"></div>
-<div style="display:flex;align-items:flex-start;gap:16px;">
-<div style="flex-shrink:0;width:48px;height:48px;border-radius:14px;background:linear-gradient(135deg,#ff7422,#ff9f62);color:#fff;font-size:20px;font-weight:900;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(255,116,34,0.25);">1</div>
-<div>
-<div style="font-size:18px;font-weight:700;color:#2f241b;margin-bottom:4px;">主理人定价</div>
-<div style="font-size:13px;color:#8b6b52;font-weight:300;line-height:1.7;">每场活动价格不同，先看活动内容和费用说明。</div>
-</div>
-</div>
-</div>
-
-<!-- Rule 2 -->
-<div style="background:rgba(255,255,255,0.8);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.9);border-radius:24px;padding:28px 24px;margin-bottom:16px;box-shadow:0 10px 40px rgba(170,92,35,0.04);position:relative;overflow:hidden;">
-<div style="position:absolute;top:0;left:0;width:4px;height:100%;background:linear-gradient(180deg,#ff9456,#ffc88a);border-radius:4px 0 0 4px;"></div>
-<div style="display:flex;align-items:flex-start;gap:16px;">
-<div style="flex-shrink:0;width:48px;height:48px;border-radius:14px;background:linear-gradient(135deg,#ff9456,#ffb574);color:#fff;font-size:20px;font-weight:900;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(255,148,86,0.25);">2</div>
-<div>
-<div style="font-size:18px;font-weight:700;color:#2f241b;margin-bottom:4px;">¥0.01 只是最低门槛</div>
-<div style="font-size:13px;color:#8b6b52;font-weight:300;line-height:1.7;">它适用于轻量需求，不代表所有活动都按这个价格走。</div>
-</div>
-</div>
-</div>
-
-<!-- Rule 3 -->
-<div style="background:rgba(255,255,255,0.8);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.9);border-radius:24px;padding:28px 24px;box-shadow:0 10px 40px rgba(170,92,35,0.04);position:relative;overflow:hidden;">
-<div style="position:absolute;top:0;left:0;width:4px;height:100%;background:linear-gradient(180deg,#ff7422,#ffb574);border-radius:4px 0 0 4px;"></div>
-<div style="display:flex;align-items:flex-start;gap:16px;">
-<div style="flex-shrink:0;width:48px;height:48px;border-radius:14px;background:linear-gradient(135deg,#ff7422,#ff9f62);color:#fff;font-size:20px;font-weight:900;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(255,116,34,0.25);">3</div>
-<div>
-<div style="font-size:18px;font-weight:700;color:#2f241b;margin-bottom:4px;">退费规则看活动说明</div>
-<div style="font-size:13px;color:#8b6b52;font-weight:300;line-height:1.7;">成局、取消、缺席、真实成本，都会影响最终费用处理。</div>
-</div>
-</div>
-</div>
-</div>
-
-<!-- 第5屏：温馨提示 + Step1 截图 -->
-<div style="background:linear-gradient(180deg,#fff5ec 0%,#ffe8d8 100%);padding:52px 28px;">
-<div style="margin-bottom:32px;">
-<div style="font-size:28px;font-weight:800;color:#2f241b;letter-spacing:-1px;">搭上前，</div>
-<div style="font-size:28px;font-weight:300;color:#2f241b;letter-spacing:-1px;font-style:italic;">看这三处。</div>
-</div>
-
-<div style="background:rgba(255,255,255,0.8);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,0.9);border-radius:28px;padding:32px 28px;box-shadow:0 16px 56px rgba(170,92,35,0.05);">
-<!-- Checklist item 1 -->
-<div style="display:flex;align-items:center;gap:14px;margin-bottom:22px;">
-<div style="flex-shrink:0;width:26px;height:26px;border-radius:50%;background:linear-gradient(135deg,#ff7422,#ffb574);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(255,116,34,0.2);">
-<span style="color:#fff;font-size:13px;font-weight:700;line-height:1;">&#10003;</span>
-</div>
-<div style="font-size:16px;color:#2f241b;font-weight:500;">活动详情页的<strong>价格、人数和费用说明</strong></div>
-</div>
-<!-- Checklist item 2 -->
-<div style="display:flex;align-items:center;gap:14px;margin-bottom:22px;">
-<div style="flex-shrink:0;width:26px;height:26px;border-radius:50%;background:linear-gradient(135deg,#ff9456,#ffc88a);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(255,148,86,0.2);">
-<span style="color:#fff;font-size:13px;font-weight:700;line-height:1;">&#10003;</span>
-</div>
-<div style="font-size:16px;color:#2f241b;font-weight:500;">主理人写明的<strong>时间、地点和成局条件</strong></div>
-</div>
-<!-- Checklist item 3 -->
-<div style="display:flex;align-items:center;gap:14px;">
-<div style="flex-shrink:0;width:26px;height:26px;border-radius:50%;background:linear-gradient(135deg,#ff7422,#ffb574);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(255,116,34,0.2);">
-<span style="color:#fff;font-size:13px;font-weight:700;line-height:1;">&#10003;</span>
-</div>
-<div style="font-size:16px;color:#2f241b;font-weight:500;"><strong>取消、未成局、缺席</strong>时的处理规则</div>
-</div>
-</div>
-
-<!-- Step1 App 截图 -->
-<div style="margin-top:28px;text-align:center;">
-<div style="font-size:12px;color:#8b6b52;font-weight:300;margin-bottom:12px;letter-spacing:1px;">活动详情页长这样 ↓</div>
-<img src="https://raw.githubusercontent.com/yechizhang329/Meetu/main/%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80%E5%8F%82%E8%80%83/Meetu%E5%85%83%E7%B4%A0%E5%8F%82%E8%80%83/nanobanana%E5%9B%BE%E7%89%87%E7%94%9F%E6%88%90v1/%E5%B9%BF%E5%9C%BA%E9%85%8D%E5%9B%BE/step1.png" alt="活动详情页截图" style="width:100%;max-width:320px;border-radius:20px;box-shadow:0 16px 48px rgba(170,92,35,0.12);border:1px solid rgba(255,255,255,0.6);" />
-</div>
-</div>
-
-<!-- 第6屏：CTA + 课后场景banner -->
-<div style="background:linear-gradient(180deg,#ffe8d8 0%,#ffdcc0 50%,#ffd4b0 100%);padding:48px 32px 64px;text-align:center;position:relative;overflow:hidden;">
-
-<!-- 课后场景banner -->
-<div style="margin-bottom:32px;border-radius:20px;overflow:hidden;box-shadow:0 12px 40px rgba(170,92,35,0.1);">
-<img src="https://raw.githubusercontent.com/yechizhang329/Meetu/main/%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80%E5%8F%82%E8%80%83/Meetu%E5%85%83%E7%B4%A0%E5%8F%82%E8%80%83/nanobanana%E5%9B%BE%E7%89%87%E7%94%9F%E6%88%90v1/banner/%E5%9C%BA%E6%99%AF/2.png" alt="课后活动场景" style="width:100%;display:block;border-radius:20px;" />
-</div>
-
-<div style="font-size:14px;font-weight:300;color:#c85a18;letter-spacing:3px;margin-bottom:14px;font-style:italic;">ready?</div>
-<div style="font-size:26px;font-weight:800;color:#2f241b;margin-bottom:8px;letter-spacing:-1px;">规则看清，</div>
-<div style="font-size:26px;font-weight:300;color:#2f241b;margin-bottom:28px;letter-spacing:-1px;font-style:italic;">再决定搭不搭上。</div>
-<div style="display:inline-block;width:100%;max-width:300px;background:linear-gradient(135deg,#ff7422 0%,#ff9456 50%,#ffb068 100%);color:#fff;font-size:16px;font-weight:700;padding:18px 0;border-radius:50px;box-shadow:0 16px 48px rgba(255,116,34,0.3);letter-spacing:2px;">去看看最近有什么活动</div>
-</div>
-
-<!-- Footer -->
-<div style="background:#fff9f3;text-align:center;padding:28px 20px;">
-<div style="font-size:14px;font-weight:300;color:rgba(47,36,27,0.4);font-style:italic;margin-bottom:4px;">Nice to Meetu.</div>
-<div style="font-size:11px;color:rgba(47,36,27,0.25);font-weight:300;letter-spacing:2px;"><span style="font-weight:700;color:#ff7422;">觅遇社</span> MEETU</div>
-</div>
-
+    <div class="footer">Nice to Meetu.</div>
+  </div>
 </div>
