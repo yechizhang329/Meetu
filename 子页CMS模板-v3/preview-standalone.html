@@ -3,67 +3,110 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Meetu 觅遇社 CMS模板 v3 Preview</title>
+<title>Meetu CMS Templates Preview</title>
 <style>
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { background: #0f0f0f; font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Helvetica Neue', sans-serif; color: #fff; }
-.header { text-align: center; padding: 48px 24px 32px; }
-.header h1 { font-size: 28px; font-weight: 800; margin-bottom: 8px; background: linear-gradient(135deg, #FF7422, #FFB068); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-.header p { font-size: 14px; color: rgba(255,255,255,0.4); }
-.nav { display: flex; justify-content: center; gap: 12px; padding: 0 24px 40px; flex-wrap: wrap; }
-.nav button { display: inline-block; padding: 10px 20px; border-radius: 24px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.7); font-size: 14px; font-weight: 500; cursor: pointer; transition: all 0.2s; }
-.nav button:hover, .nav button.active { background: rgba(255,116,34,0.15); border-color: rgba(255,116,34,0.3); color: #FF9456; }
-.preview-container { display: flex; justify-content: center; padding: 0 24px 80px; }
-.phone-frame { width: 390px; border-radius: 44px; background: #1a1a1a; padding: 16px; box-shadow: 0 40px 100px rgba(0,0,0,0.5), 0 0 0 2px rgba(255,255,255,0.06); }
-.phone-notch { width: 130px; height: 6px; background: #1a1a1a; border-radius: 3px; margin: 0 auto 12px; }
-.phone-screen { border-radius: 32px; overflow: hidden; background: #fff; max-height: 80vh; overflow-y: auto; }
-.phone-screen::-webkit-scrollbar { width: 0; }
-.template-section { display: none; }
-.template-section.active { display: block; }
-.meta { text-align: center; padding: 40px 24px; }
-.meta .tag { display: inline-block; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 6px 14px; font-size: 12px; color: rgba(255,255,255,0.4); margin-bottom: 12px; }
-.meta .name { font-size: 18px; font-weight: 700; color: rgba(255,255,255,0.8); margin-bottom: 4px; }
-.meta .desc { font-size: 13px; color: rgba(255,255,255,0.35); }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #1a1a1a;
+    font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Helvetica Neue', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px 16px;
+  }
+  h1 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 24px;
+    letter-spacing: 1px;
+    opacity: 0.85;
+  }
+  .tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .tab-btn {
+    background: #2a2a2a;
+    color: #999;
+    border: 1px solid #333;
+    border-radius: 24px;
+    padding: 10px 22px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    font-family: inherit;
+  }
+  .tab-btn:hover {
+    background: #333;
+    color: #ccc;
+  }
+  .tab-btn.active {
+    background: #ff7422;
+    color: #fff;
+    border-color: #ff7422;
+  }
+  .phone-frame {
+    width: 100%;
+    max-width: 390px;
+    background: #fff;
+    border-radius: 40px;
+    overflow: hidden;
+    box-shadow: 0 20px 80px rgba(0,0,0,0.5), 0 0 0 4px #333;
+    position: relative;
+  }
+  .phone-notch {
+    width: 120px;
+    height: 28px;
+    background: #1a1a1a;
+    border-radius: 0 0 16px 16px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+  }
+  .phone-content {
+    height: 780px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+  .phone-content::-webkit-scrollbar { width: 0; }
+  .template-panel { display: none; }
+  .template-panel.active { display: block; }
+  .phone-home {
+    width: 40px;
+    height: 5px;
+    background: #ccc;
+    border-radius: 3px;
+    margin: 8px auto 12px;
+  }
 </style>
 </head>
 <body>
 
-<div class="header">
-<h1>Meetu CMS v3</h1>
-<p>子页模板预览 · 点击切换</p>
+<h1>MEETU CMS Templates Preview</h1>
+
+<div class="tabs">
+  <button class="tab-btn active" onclick="switchTab('A', this)">主理人招募</button>
+  <button class="tab-btn" onclick="switchTab('B', this)">平台介绍</button>
+  <button class="tab-btn" onclick="switchTab('C', this)">收费说明</button>
+  <button class="tab-btn" onclick="switchTab('D', this)">女生专场</button>
 </div>
 
-<div class="nav">
-<button class="nav-btn active" data-template="A">A · 主理人招募</button>
-<button class="nav-btn" data-template="B">B · 平台介绍</button>
-<button class="nav-btn" data-template="C">C · 活动收费</button>
-<button class="nav-btn" data-template="D">D · 女生专场</button>
-</div>
-
-<div class="preview-container">
 <div class="phone-frame">
-<div class="phone-notch"></div>
-<div class="phone-screen">
-<div id="tpl-A" class="template-section active"></div>
-<div id="tpl-B" class="template-section"></div>
-<div id="tpl-C" class="template-section"></div>
-<div id="tpl-D" class="template-section"></div>
-</div>
-</div>
-</div>
+  <div class="phone-notch"></div>
+  <div class="phone-content">
 
-<div class="meta">
-<div class="tag">v3 · 2026-04-04</div>
-<div class="name">觅遇社 Meetu</div>
-<div class="desc">大学生专属找搭子平台 · CMS子页模板</div>
-</div>
+    <!-- Template A: 主理人招募 -->
+    <div id="panel-A" class="template-panel active">
+<div style="max-width:750px;margin:0 auto;font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Helvetica Neue','Microsoft YaHei',sans-serif;color:#2f241b;line-height:1.6;overflow:hidden;">
 
-<script>
-// Inline template content
-const templates = {
-  A: `<div style="max-width:750px;margin:0 auto;font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Helvetica Neue','Microsoft YaHei',sans-serif;color:#2f241b;line-height:1.6;overflow:hidden;">
-
-<!-- 第1屏：身份爆炸 -->
+<!-- 第1屏：身份爆炸 + 主理人招募海报 -->
 <div style="background:linear-gradient(165deg,#fff5ec 0%,#ffe2c9 35%,#ffd4b0 60%,#ffcba0 100%);padding:72px 32px 56px;position:relative;overflow:hidden;">
 <div style="position:absolute;top:-80px;right:-60px;width:280px;height:280px;border-radius:50%;background:radial-gradient(circle,rgba(255,116,34,0.1) 0%,transparent 60%);"></div>
 <div style="position:absolute;bottom:-40px;left:-50px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(255,126,179,0.08) 0%,transparent 60%);"></div>
@@ -78,20 +121,23 @@ const templates = {
 <div style="font-size:18px;font-weight:600;color:#4a3628;letter-spacing:0.5px;margin-bottom:32px;">会玩的人，值得被看见。</div>
 
 <div style="display:inline-block;transform:rotate(-2deg);padding:14px 28px;border-radius:22px;background:linear-gradient(135deg,#ff7422 0%,#ff9456 50%,#ffb574 100%);color:#fff;font-size:14px;font-weight:700;box-shadow:0 16px 40px rgba(255,116,34,0.28);letter-spacing:1px;">会玩，就是你的超能力</div>
+
+<div style="margin-top:40px;">
+<img src="https://raw.githubusercontent.com/yechizhang329/Meetu/main/%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80%E5%8F%82%E8%80%83/Meetu%E5%85%83%E7%B4%A0%E5%8F%82%E8%80%83/nanobanana%E5%9B%BE%E7%89%87%E7%94%9F%E6%88%90v1/%E5%B9%BF%E5%9C%BA%E9%85%8D%E5%9B%BE/%E4%B8%BB%E7%90%86%E4%BA%BA.png" style="width:100%;border-radius:20px;box-shadow:0 20px 60px rgba(170,92,35,0.15);" />
+</div>
 </div>
 
-<!-- 第2屏：一句话定调 -->
 <div style="background:linear-gradient(180deg,#ffcba0 0%,#fff5ec 100%);padding:56px 32px;">
 <div style="background:rgba(255,255,255,0.75);backdrop-filter:blur(24px);border:1px solid rgba(255,255,255,0.85);border-radius:32px;padding:44px 32px;box-shadow:0 24px 80px rgba(170,92,35,0.07);text-align:center;">
 <div style="font-size:13px;font-weight:300;color:#c85a18;letter-spacing:4px;margin-bottom:16px;font-style:italic;">about hosting</div>
 <div style="font-size:32px;font-weight:800;color:#2f241b;line-height:1.2;letter-spacing:-1px;margin-bottom:12px;">会玩这件事，</div>
 <div style="font-size:32px;font-weight:300;color:#2f241b;line-height:1.2;letter-spacing:-1px;margin-bottom:20px;font-style:italic;">值得被认真对待。</div>
 <div style="width:40px;height:2px;background:linear-gradient(90deg,#ff7422,#ffb574);margin:0 auto 20px;border-radius:2px;"></div>
-<div style="font-size:14px;color:#8b6b52;font-weight:400;line-height:1.6;">你来发起一场，平台帮你把人找到。</div>
+<div style="font-size:14px;color:#8b6b52;font-weight:400;line-height:1.6;margin-bottom:24px;">你来发起一场，平台帮你把人找到。</div>
+<img src="https://raw.githubusercontent.com/yechizhang329/Meetu/main/%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80%E5%8F%82%E8%80%83/Meetu%E5%85%83%E7%B4%A0%E5%8F%82%E8%80%83/nanobanana%E5%9B%BE%E7%89%87%E7%94%9F%E6%88%90v1/banner/%E5%9C%BA%E6%99%AF/1.png" style="width:100%;border-radius:20px;margin-top:8px;" />
 </div>
 </div>
 
-<!-- 第3屏：三个理由 -->
 <div style="background:linear-gradient(180deg,#fff5ec 0%,#fff0e3 100%);padding:52px 28px;">
 <div style="margin-bottom:36px;">
 <div style="font-size:11px;color:#c85a18;font-weight:600;letter-spacing:4px;margin-bottom:10px;">WHY YOU</div>
@@ -100,28 +146,33 @@ const templates = {
 </div>
 
 <div style="background:rgba(255,255,255,0.8);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.9);border-radius:28px;padding:28px;margin-bottom:16px;box-shadow:0 12px 48px rgba(170,92,35,0.05);">
-<div style="font-size:36px;margin-bottom:12px;">🎯</div>
+<div style="width:52px;height:52px;border-radius:16px;background:linear-gradient(135deg,#ff7422 0%,#ffad6e 100%);display:flex;align-items:center;justify-content:center;margin-bottom:14px;box-shadow:0 8px 24px rgba(255,116,34,0.2);">
+<div style="color:#fff;font-size:22px;font-weight:900;line-height:1;">1</div>
+</div>
 <div style="font-size:20px;font-weight:800;color:#2f241b;margin-bottom:4px;letter-spacing:-0.5px;">你负责把气氛带起来</div>
 <div style="font-size:12px;font-weight:300;color:#c85a18;letter-spacing:2px;margin-bottom:10px;font-style:italic;">set the vibe</div>
 <div style="font-size:14px;color:#6f5441;line-height:1.8;font-weight:400;">剧本杀、运动局、City Walk、交流分享……你想发起什么，舞台就从哪里开始。</div>
 </div>
 
 <div style="background:rgba(255,255,255,0.8);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.9);border-radius:28px;padding:28px;margin-bottom:16px;box-shadow:0 12px 48px rgba(170,92,35,0.05);">
-<div style="font-size:36px;margin-bottom:12px;">🚀</div>
+<div style="width:52px;height:52px;border-radius:16px;background:linear-gradient(135deg,#42a5f5 0%,#90caf9 100%);display:flex;align-items:center;justify-content:center;margin-bottom:14px;box-shadow:0 8px 24px rgba(66,165,245,0.2);">
+<div style="color:#fff;font-size:22px;font-weight:900;line-height:1;">2</div>
+</div>
 <div style="font-size:20px;font-weight:800;color:#2f241b;margin-bottom:4px;letter-spacing:-0.5px;">平台负责把人接上</div>
 <div style="font-size:12px;font-weight:300;color:#c85a18;letter-spacing:2px;margin-bottom:10px;font-style:italic;">we handle the rest</div>
 <div style="font-size:14px;color:#6f5441;line-height:1.8;font-weight:400;">活动曝光、收款、建群、费用说明，这些流程都由平台帮你接住。</div>
 </div>
 
 <div style="background:rgba(255,255,255,0.8);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.9);border-radius:28px;padding:28px;box-shadow:0 12px 48px rgba(170,92,35,0.05);">
-<div style="font-size:36px;margin-bottom:12px;">💰</div>
+<div style="width:52px;height:52px;border-radius:16px;background:linear-gradient(135deg,#ff9800 0%,#ffcc80 100%);display:flex;align-items:center;justify-content:center;margin-bottom:14px;box-shadow:0 8px 24px rgba(255,152,0,0.2);">
+<div style="color:#fff;font-size:22px;font-weight:900;line-height:1;">3</div>
+</div>
 <div style="font-size:20px;font-weight:800;color:#2f241b;margin-bottom:4px;letter-spacing:-0.5px;">收益空间由你定义</div>
 <div style="font-size:12px;font-weight:300;color:#c85a18;letter-spacing:2px;margin-bottom:10px;font-style:italic;">your rules, your pricing</div>
 <div style="font-size:14px;color:#6f5441;line-height:1.8;font-weight:400;">活动怎么定价、怎么组织，你有更大的主动权。</div>
 </div>
 </div>
 
-<!-- 第4屏：流程极简 -->
 <div style="background:linear-gradient(180deg,#fff0e3 0%,#fff8f2 100%);padding:52px 28px;">
 <div style="margin-bottom:36px;">
 <div style="font-size:11px;color:#c85a18;font-weight:600;letter-spacing:4px;margin-bottom:10px;">HOW TO START</div>
@@ -156,47 +207,74 @@ const templates = {
 </div>
 </div>
 </div>
+
+<div style="margin-top:40px;">
+<img src="https://raw.githubusercontent.com/yechizhang329/Meetu/main/%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80%E5%8F%82%E8%80%83/Meetu%E5%85%83%E7%B4%A0%E5%8F%82%E8%80%83/nanobanana%E5%9B%BE%E7%89%87%E7%94%9F%E6%88%90v1/banner/%E5%9C%BA%E6%99%AF/2.png" style="width:100%;border-radius:20px;" />
+</div>
 </div>
 
-<!-- 第5屏：身份感强化 -->
 <div style="background:linear-gradient(180deg,#fff8f2 0%,#fff0e3 100%);padding:52px 28px;">
 <div style="margin-bottom:32px;text-align:center;">
 <div style="font-size:32px;font-weight:900;color:#2f241b;letter-spacing:-1px;">主理人 ≠ 打工人</div>
 <div style="font-size:13px;color:#8b6b52;margin-top:6px;font-weight:300;font-style:italic;">It's an identity, not a job.</div>
 </div>
 
+<div style="margin-bottom:24px;">
+<img src="https://raw.githubusercontent.com/yechizhang329/Meetu/main/%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80%E5%8F%82%E8%80%83/Meetu%E5%85%83%E7%B4%A0%E5%8F%82%E8%80%83/nanobanana%E5%9B%BE%E7%89%87%E7%94%9F%E6%88%90v1/banner/1.png" style="width:100%;border-radius:20px;" />
+</div>
+
 <div style="background:rgba(255,255,255,0.8);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.9);border-radius:32px;padding:40px 28px;text-align:center;box-shadow:0 20px 64px rgba(170,92,35,0.06);">
 <div style="font-size:20px;font-weight:700;color:#2f241b;margin-bottom:8px;line-height:1.4;">把一场活动做好，</div>
-<div style="font-size:16px;font-weight:300;color:#6f5441;margin-bottom:24px;">平台会继续把你往前推。</div>
-<div style="display:flex;justify-content:center;gap:10px;flex-wrap:wrap;">
-<span style="background:linear-gradient(135deg,rgba(255,116,34,0.08),rgba(255,116,34,0.03));border:1px solid rgba(255,116,34,0.1);border-radius:28px;padding:10px 20px;font-size:13px;color:#c85a18;font-weight:600;">🏅 精选标识</span>
-<span style="background:linear-gradient(135deg,rgba(66,165,245,0.08),rgba(66,165,245,0.03));border:1px solid rgba(66,165,245,0.1);border-radius:28px;padding:10px 20px;font-size:13px;color:#1976D2;font-weight:600;">📈 流量扶持</span>
-<span style="background:linear-gradient(135deg,rgba(255,152,0,0.08),rgba(255,152,0,0.03));border:1px solid rgba(255,152,0,0.1);border-radius:28px;padding:10px 20px;font-size:13px;color:#E65100;font-weight:600;">🎁 专属礼物</span>
+<div style="font-size:16px;font-weight:300;color:#6f5441;margin-bottom:28px;">平台会继续把你往前推。</div>
+<div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;">
+<span style="display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,rgba(255,116,34,0.1),rgba(255,116,34,0.03));border:1px solid rgba(255,116,34,0.15);border-radius:28px;padding:10px 20px;font-size:13px;color:#c85a18;font-weight:600;">
+<span style="display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:linear-gradient(135deg,#ff7422,#ffad6e);flex-shrink:0;">
+<span style="color:#fff;font-size:11px;font-weight:900;line-height:1;">&#10003;</span>
+</span>
+精选标识
+</span>
+<span style="display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,rgba(66,165,245,0.1),rgba(66,165,245,0.03));border:1px solid rgba(66,165,245,0.15);border-radius:28px;padding:10px 20px;font-size:13px;color:#1976D2;font-weight:600;">
+<span style="display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:linear-gradient(135deg,#42a5f5,#90caf9);flex-shrink:0;">
+<span style="color:#fff;font-size:11px;font-weight:900;line-height:1;">&#9650;</span>
+</span>
+流量扶持
+</span>
+<span style="display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,rgba(255,152,0,0.1),rgba(255,152,0,0.03));border:1px solid rgba(255,152,0,0.15);border-radius:28px;padding:10px 20px;font-size:13px;color:#E65100;font-weight:600;">
+<span style="display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:linear-gradient(135deg,#ff9800,#ffcc80);flex-shrink:0;">
+<span style="color:#fff;font-size:11px;font-weight:900;line-height:1;">&#9733;</span>
+</span>
+专属礼物
+</span>
 </div>
 </div>
 </div>
 
-<!-- 第6屏：CTA -->
 <div style="background:linear-gradient(180deg,#fff0e3 0%,#ffdcc0 50%,#ffd4b0 100%);padding:48px 32px 64px;text-align:center;">
 <div style="font-size:14px;font-weight:300;color:#c85a18;letter-spacing:3px;margin-bottom:14px;font-style:italic;">ready?</div>
 <div style="font-size:28px;font-weight:800;color:#2f241b;margin-bottom:8px;letter-spacing:-1px;">你的下一场活动，</div>
 <div style="font-size:28px;font-weight:300;color:#2f241b;margin-bottom:28px;letter-spacing:-1px;font-style:italic;">从现在开始。</div>
+
+<div style="margin-bottom:28px;">
+<img src="https://raw.githubusercontent.com/yechizhang329/Meetu/main/%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80%E5%8F%82%E8%80%83/Meetu%E5%85%83%E7%B4%A0%E5%8F%82%E8%80%83/0%20Meetu%20mascot%20master.png" style="width:120px;border-radius:20px;" />
+</div>
+
 <div style="display:inline-block;width:100%;max-width:300px;background:linear-gradient(135deg,#ff7422 0%,#ff9456 50%,#ffb068 100%);color:#fff;font-size:16px;font-weight:700;padding:18px 0;border-radius:50px;box-shadow:0 16px 48px rgba(255,116,34,0.3);letter-spacing:2px;">立即发布第一场活动</div>
 <div style="font-size:12px;color:#8b6b52;margin-top:16px;font-weight:300;">写清内容、人数和费用就能开始</div>
 </div>
 
-<!-- Footer -->
 <div style="background:#fff8f2;text-align:center;padding:28px 20px;">
 <div style="font-size:14px;font-weight:300;color:rgba(47,36,27,0.4);font-style:italic;margin-bottom:4px;">Nice to Meetu.</div>
 <div style="font-size:11px;color:rgba(47,36,27,0.25);font-weight:300;letter-spacing:2px;"><span style="font-weight:700;color:#ff7422;">觅遇社</span> MEETU</div>
 </div>
 
-</div>`,
+</div>
+    </div>
 
-  B: `<div style="max-width:750px;margin:0 auto;font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Helvetica Neue','Microsoft YaHei',sans-serif;color:#34281d;line-height:1.6;overflow:hidden;">
+    <!-- Template B: 平台介绍 -->
+    <div id="panel-B" class="template-panel">
+<div style="max-width:750px;margin:0 auto;font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Helvetica Neue','Microsoft YaHei',sans-serif;color:#34281d;line-height:1.6;overflow:hidden;">
 
-<!-- 第1屏：世界观开场 -->
-<div style="background:linear-gradient(170deg,#fff8f0 0%,#fff1e3 40%,#ffe8d4 100%);padding:72px 32px 56px;position:relative;overflow:hidden;">
+<div style="background:linear-gradient(170deg,#fff8f0 0%,#fff1e3 40%,#ffe8d4 100%);padding:72px 32px 40px;position:relative;overflow:hidden;">
 <div style="position:absolute;top:-60px;left:-50px;width:240px;height:240px;border-radius:50%;background:radial-gradient(circle,rgba(179,136,255,0.07) 0%,transparent 60%);"></div>
 <div style="position:absolute;bottom:-30px;right:-40px;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,rgba(255,116,34,0.06) 0%,transparent 60%);"></div>
 <div style="position:absolute;top:50px;right:32px;transform:rotate(8deg);font-size:56px;font-weight:100;color:rgba(52,40,29,0.03);letter-spacing:-3px;line-height:1;">觅</div>
@@ -208,10 +286,11 @@ const templates = {
 <div style="width:36px;height:2px;background:linear-gradient(90deg,#ff7422,#ffb574);margin-bottom:20px;border-radius:2px;"></div>
 
 <div style="font-size:24px;font-weight:800;color:#34281d;margin-bottom:8px;letter-spacing:-0.5px;">找到你的搭子，<br>从这里开始。</div>
-<div style="font-size:13px;color:rgba(52,40,29,0.45);font-weight:300;letter-spacing:1px;">觅遇社 — 活动社交，不期而遇</div>
+<div style="font-size:13px;color:rgba(52,40,29,0.45);font-weight:300;letter-spacing:1px;margin-bottom:28px;">觅遇社 — 活动社交，不期而遇</div>
+
+<img src="https://raw.githubusercontent.com/yechizhang329/Meetu/main/%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80%E5%8F%82%E8%80%83/Meetu%E5%85%83%E7%B4%A0%E5%8F%82%E8%80%83/nanobanana%E5%9B%BE%E7%89%87%E7%94%9F%E6%88%90v1/%E5%B9%BF%E5%9C%BA%E9%85%8D%E5%9B%BE/0.%20%E6%AC%A2%E8%BF%8E.png" style="width:100%;border-radius:20px;display:block;" alt="年轻人聚在一起">
 </div>
 
-<!-- 第2屏：一句话世界观 -->
 <div style="background:linear-gradient(180deg,#ffe8d4 0%,#fff5ec 100%);padding:56px 32px;">
 <div style="background:rgba(255,255,255,0.65);backdrop-filter:blur(24px);border:1px solid rgba(255,255,255,0.8);border-radius:32px;padding:44px 32px;box-shadow:0 28px 80px rgba(104,72,45,0.06);text-align:center;">
 <div style="font-size:13px;font-weight:300;color:#c85a18;letter-spacing:4px;margin-bottom:16px;font-style:italic;">why meetu</div>
@@ -219,10 +298,12 @@ const templates = {
 <div style="font-size:30px;font-weight:300;color:#34281d;line-height:1.2;letter-spacing:-1px;margin-bottom:20px;font-style:italic;">因为搭子已经在等你了。</div>
 <div style="width:40px;height:2px;background:linear-gradient(90deg,#ff7422,#ffb574);margin:0 auto 20px;border-radius:2px;"></div>
 <div style="font-size:14px;color:#8b6b52;font-weight:400;">全员在校认证，找搭子更安心。</div>
+<div style="margin-top:24px;">
+<img src="https://raw.githubusercontent.com/yechizhang329/Meetu/main/%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80%E5%8F%82%E8%80%83/Meetu%E5%85%83%E7%B4%A0%E5%8F%82%E8%80%83/0%20Meetu%20mascot%20master.png" style="width:80px;height:80px;object-fit:contain;" alt="Meetu Mascot">
+</div>
 </div>
 </div>
 
-<!-- 第3屏：信任三卡片 -->
 <div style="background:linear-gradient(180deg,#fff5ec 0%,#fff8f2 100%);padding:52px 28px;">
 <div style="margin-bottom:36px;">
 <div style="font-size:11px;color:#c85a18;font-weight:600;letter-spacing:4px;margin-bottom:10px;">TRUST</div>
@@ -231,28 +312,52 @@ const templates = {
 </div>
 
 <div style="background:rgba(255,255,255,0.8);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.9);border-radius:28px;padding:28px;margin-bottom:16px;box-shadow:0 12px 48px rgba(104,72,45,0.04);">
-<div style="font-size:36px;margin-bottom:12px;">🛡️</div>
+<div style="display:flex;align-items:flex-start;gap:16px;">
+<div style="flex-shrink:0;width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,#1565C0,#42A5F5);display:flex;align-items:center;justify-content:center;">
+<div style="width:24px;height:28px;position:relative;">
+<div style="width:24px;height:20px;background:#fff;border-radius:3px 3px 12px 12px;position:absolute;top:4px;"></div>
+<div style="width:8px;height:8px;background:linear-gradient(135deg,#1565C0,#42A5F5);border-radius:50%;position:absolute;top:10px;left:8px;"></div>
+</div>
+</div>
+<div style="flex:1;">
 <div style="font-size:20px;font-weight:800;color:#34281d;margin-bottom:4px;letter-spacing:-0.5px;">全员在校认证</div>
 <div style="font-size:12px;font-weight:300;color:#1976D2;letter-spacing:2px;margin-bottom:10px;font-style:italic;">verified students only</div>
 <div style="font-size:14px;color:rgba(52,40,29,0.6);line-height:1.8;font-weight:400;">学信网 + 实名双重验证，每一位搭子都是真实的在校生。</div>
 </div>
+</div>
+</div>
 
 <div style="background:rgba(255,255,255,0.8);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.9);border-radius:28px;padding:28px;margin-bottom:16px;box-shadow:0 12px 48px rgba(104,72,45,0.04);">
-<div style="font-size:36px;margin-bottom:12px;">🤝</div>
+<div style="display:flex;align-items:flex-start;gap:16px;">
+<div style="flex-shrink:0;width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,#E65100,#FF9800);display:flex;align-items:center;justify-content:center;">
+<span style="font-size:24px;font-weight:800;color:#fff;font-family:'PingFang SC',sans-serif;line-height:1;">&yen;</span>
+</div>
+<div style="flex:1;">
 <div style="font-size:20px;font-weight:800;color:#34281d;margin-bottom:4px;letter-spacing:-0.5px;">活动付费更清楚</div>
 <div style="font-size:12px;font-weight:300;color:#c85a18;letter-spacing:2px;margin-bottom:10px;font-style:italic;">transparent pricing</div>
-<div style="font-size:14px;color:rgba(52,40,29,0.6);line-height:1.8;font-weight:400;">轻量活动可从¥0.01门槛价开始，正式活动按真实成本定价。</div>
+<div style="font-size:14px;color:rgba(52,40,29,0.6);line-height:1.8;font-weight:400;">轻量活动可从&yen;0.01门槛价开始，正式活动按真实成本定价。</div>
+</div>
+</div>
 </div>
 
 <div style="background:rgba(255,255,255,0.8);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.9);border-radius:28px;padding:28px;box-shadow:0 12px 48px rgba(104,72,45,0.04);">
-<div style="font-size:36px;margin-bottom:12px;">💜</div>
+<div style="display:flex;align-items:flex-start;gap:16px;">
+<div style="flex-shrink:0;width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,#7B1FA2,#CE93D8);display:flex;align-items:center;justify-content:center;">
+<span style="font-size:26px;font-weight:300;color:#fff;line-height:1;">&#9792;</span>
+</div>
+<div style="flex:1;">
 <div style="font-size:20px;font-weight:800;color:#34281d;margin-bottom:4px;letter-spacing:-0.5px;">女生安心模式</div>
 <div style="font-size:12px;font-weight:300;color:#7B1FA2;letter-spacing:2px;margin-bottom:10px;font-style:italic;">girls feel safe</div>
 <div style="font-size:14px;color:rgba(52,40,29,0.6);line-height:1.8;font-weight:400;">女生专场活动，全员女生认证。安心搭上，姐妹局放心出发。</div>
 </div>
 </div>
+</div>
 
-<!-- 第4屏：玩法一览 -->
+<div style="margin-top:24px;">
+<img src="https://raw.githubusercontent.com/yechizhang329/Meetu/main/%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80%E5%8F%82%E8%80%83/Meetu%E5%85%83%E7%B4%A0%E5%8F%82%E8%80%83/nanobanana%E5%9B%BE%E7%89%87%E7%94%9F%E6%88%90v1/banner/1.png" style="width:100%;border-radius:20px;display:block;" alt="认证信任">
+</div>
+</div>
+
 <div style="background:linear-gradient(180deg,#fff8f2 0%,#fff1e3 100%);padding:52px 28px;">
 <div style="margin-bottom:36px;">
 <div style="font-size:11px;color:#c85a18;font-weight:600;letter-spacing:4px;margin-bottom:10px;">EXPLORE</div>
@@ -261,19 +366,45 @@ const templates = {
 </div>
 
 <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;">
-<div style="background:rgba(255,255,255,0.8);border-radius:22px;padding:20px 12px;text-align:center;border:1px solid rgba(255,255,255,0.9);"><div style="font-size:28px;margin-bottom:8px;">🎲</div><div style="font-size:13px;font-weight:700;color:#34281d;">桌游·推理</div></div>
-<div style="background:rgba(255,255,255,0.8);border-radius:22px;padding:20px 12px;text-align:center;border:1px solid rgba(255,255,255,0.9);"><div style="font-size:28px;margin-bottom:8px;">🔐</div><div style="font-size:13px;font-weight:700;color:#34281d;">密室·剧本杀</div></div>
-<div style="background:rgba(255,255,255,0.8);border-radius:22px;padding:20px 12px;text-align:center;border:1px solid rgba(255,255,255,0.9);"><div style="font-size:28px;margin-bottom:8px;">🎉</div><div style="font-size:13px;font-weight:700;color:#34281d;">派对·社交</div></div>
-<div style="background:rgba(255,255,255,0.8);border-radius:22px;padding:20px 12px;text-align:center;border:1px solid rgba(255,255,255,0.9);"><div style="font-size:28px;margin-bottom:8px;">🏃</div><div style="font-size:13px;font-weight:700;color:#34281d;">运动·户外</div></div>
-<div style="background:rgba(255,255,255,0.8);border-radius:22px;padding:20px 12px;text-align:center;border:1px solid rgba(255,255,255,0.9);"><div style="font-size:28px;margin-bottom:8px;">📸</div><div style="font-size:13px;font-weight:700;color:#34281d;">City Walk</div></div>
-<div style="background:rgba(255,255,255,0.8);border-radius:22px;padding:20px 12px;text-align:center;border:1px solid rgba(255,255,255,0.9);"><div style="font-size:28px;margin-bottom:8px;">📚</div><div style="font-size:13px;font-weight:700;color:#34281d;">学习·搭伴</div></div>
-<div style="background:rgba(255,255,255,0.8);border-radius:22px;padding:20px 12px;text-align:center;border:1px solid rgba(255,255,255,0.9);"><div style="font-size:28px;margin-bottom:8px;">🎬</div><div style="font-size:13px;font-weight:700;color:#34281d;">观影·展览</div></div>
-<div style="background:rgba(255,255,255,0.8);border-radius:22px;padding:20px 12px;text-align:center;border:1px solid rgba(255,255,255,0.9);"><div style="font-size:28px;margin-bottom:8px;">💬</div><div style="font-size:13px;font-weight:700;color:#34281d;">交流·分享</div></div>
-<div style="background:rgba(255,255,255,0.8);border-radius:22px;padding:20px 12px;text-align:center;border:1px solid rgba(255,255,255,0.9);"><div style="font-size:28px;margin-bottom:8px;">❓</div><div style="font-size:13px;font-weight:700;color:#34281d;">惊喜·随机</div></div>
+<div style="background:rgba(255,255,255,0.8);border-radius:22px;padding:20px 12px;text-align:center;border:1px solid rgba(255,255,255,0.9);">
+<div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#FF7043,#FFB74D);margin:0 auto 8px;display:flex;align-items:center;justify-content:center;"><span style="font-size:20px;font-weight:800;color:#fff;">桌</span></div>
+<div style="font-size:13px;font-weight:700;color:#34281d;">桌游·推理</div>
+</div>
+<div style="background:rgba(255,255,255,0.8);border-radius:22px;padding:20px 12px;text-align:center;border:1px solid rgba(255,255,255,0.9);">
+<div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#5C6BC0,#7986CB);margin:0 auto 8px;display:flex;align-items:center;justify-content:center;"><span style="font-size:20px;font-weight:800;color:#fff;">密</span></div>
+<div style="font-size:13px;font-weight:700;color:#34281d;">密室·剧本杀</div>
+</div>
+<div style="background:rgba(255,255,255,0.8);border-radius:22px;padding:20px 12px;text-align:center;border:1px solid rgba(255,255,255,0.9);">
+<div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#EC407A,#F48FB1);margin:0 auto 8px;display:flex;align-items:center;justify-content:center;"><span style="font-size:20px;font-weight:800;color:#fff;">派</span></div>
+<div style="font-size:13px;font-weight:700;color:#34281d;">派对·社交</div>
+</div>
+<div style="background:rgba(255,255,255,0.8);border-radius:22px;padding:20px 12px;text-align:center;border:1px solid rgba(255,255,255,0.9);">
+<div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#26A69A,#80CBC4);margin:0 auto 8px;display:flex;align-items:center;justify-content:center;"><span style="font-size:20px;font-weight:800;color:#fff;">运</span></div>
+<div style="font-size:13px;font-weight:700;color:#34281d;">运动·户外</div>
+</div>
+<div style="background:rgba(255,255,255,0.8);border-radius:22px;padding:20px 12px;text-align:center;border:1px solid rgba(255,255,255,0.9);">
+<div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#42A5F5,#90CAF9);margin:0 auto 8px;display:flex;align-items:center;justify-content:center;"><span style="font-size:18px;font-weight:800;color:#fff;">C</span></div>
+<div style="font-size:13px;font-weight:700;color:#34281d;">City Walk</div>
+</div>
+<div style="background:rgba(255,255,255,0.8);border-radius:22px;padding:20px 12px;text-align:center;border:1px solid rgba(255,255,255,0.9);">
+<div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#66BB6A,#A5D6A7);margin:0 auto 8px;display:flex;align-items:center;justify-content:center;"><span style="font-size:20px;font-weight:800;color:#fff;">学</span></div>
+<div style="font-size:13px;font-weight:700;color:#34281d;">学习·搭伴</div>
+</div>
+<div style="background:rgba(255,255,255,0.8);border-radius:22px;padding:20px 12px;text-align:center;border:1px solid rgba(255,255,255,0.9);">
+<div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#AB47BC,#CE93D8);margin:0 auto 8px;display:flex;align-items:center;justify-content:center;"><span style="font-size:20px;font-weight:800;color:#fff;">观</span></div>
+<div style="font-size:13px;font-weight:700;color:#34281d;">观影·展览</div>
+</div>
+<div style="background:rgba(255,255,255,0.8);border-radius:22px;padding:20px 12px;text-align:center;border:1px solid rgba(255,255,255,0.9);">
+<div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#FFA726,#FFCC80);margin:0 auto 8px;display:flex;align-items:center;justify-content:center;"><span style="font-size:20px;font-weight:800;color:#fff;">交</span></div>
+<div style="font-size:13px;font-weight:700;color:#34281d;">交流·分享</div>
+</div>
+<div style="background:rgba(255,255,255,0.8);border-radius:22px;padding:20px 12px;text-align:center;border:1px solid rgba(255,255,255,0.9);">
+<div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#78909C,#B0BEC5);margin:0 auto 8px;display:flex;align-items:center;justify-content:center;"><span style="font-size:20px;font-weight:800;color:#fff;">?</span></div>
+<div style="font-size:13px;font-weight:700;color:#34281d;">惊喜·随机</div>
+</div>
 </div>
 </div>
 
-<!-- 第5屏：真实场景 -->
 <div style="background:linear-gradient(180deg,#fff1e3 0%,#fff8f2 100%);padding:52px 28px;">
 <div style="margin-bottom:36px;">
 <div style="font-size:11px;color:#c85a18;font-weight:600;letter-spacing:4px;margin-bottom:10px;">HAPPENING NOW</div>
@@ -281,51 +412,84 @@ const templates = {
 <div style="font-size:13px;color:rgba(52,40,29,0.45);margin-top:4px;font-weight:300;font-style:italic;">every day, new adventures</div>
 </div>
 
+<div style="margin-bottom:20px;">
+<img src="https://raw.githubusercontent.com/yechizhang329/Meetu/main/%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80%E5%8F%82%E8%80%83/Meetu%E5%85%83%E7%B4%A0%E5%8F%82%E8%80%83/nanobanana%E5%9B%BE%E7%89%87%E7%94%9F%E6%88%90v1/banner/%E5%9C%BA%E6%99%AF/1.png" style="width:100%;border-radius:20px;display:block;" alt="活动场景">
+</div>
+
 <div style="background:rgba(255,255,255,0.8);border:1px solid rgba(255,255,255,0.9);border-radius:24px;padding:24px;margin-bottom:14px;box-shadow:0 12px 40px rgba(104,72,45,0.04);">
 <div style="display:flex;align-items:center;justify-content:space-between;">
-<div><div style="font-size:17px;font-weight:700;color:#34281d;margin-bottom:4px;">🎲 周末剧本杀搭子局</div><div style="font-size:12px;color:rgba(52,40,29,0.45);font-weight:300;">6人本 · 人均60元</div></div>
+<div>
+<div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
+<div style="width:8px;height:8px;border-radius:50%;background:linear-gradient(135deg,#FF7043,#FFB74D);flex-shrink:0;"></div>
+<div style="font-size:17px;font-weight:700;color:#34281d;">周末剧本杀搭子局</div>
+</div>
+<div style="font-size:12px;color:rgba(52,40,29,0.45);font-weight:300;padding-left:16px;">6人本 · 人均60元</div>
+</div>
 <div style="background:linear-gradient(135deg,rgba(255,116,34,0.1),rgba(255,116,34,0.05));border:1px solid rgba(255,116,34,0.1);border-radius:16px;padding:6px 14px;font-size:12px;color:#c85a18;font-weight:600;">差2人</div>
 </div>
 </div>
 
 <div style="background:rgba(255,255,255,0.8);border:1px solid rgba(255,255,255,0.9);border-radius:24px;padding:24px;margin-bottom:14px;box-shadow:0 12px 40px rgba(104,72,45,0.04);">
 <div style="display:flex;align-items:center;justify-content:space-between;">
-<div><div style="font-size:17px;font-weight:700;color:#34281d;margin-bottom:4px;">📸 西湖边City Walk</div><div style="font-size:12px;color:rgba(52,40,29,0.45);font-weight:300;">4人小队 · 门槛价¥0.01</div></div>
+<div>
+<div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
+<div style="width:8px;height:8px;border-radius:50%;background:linear-gradient(135deg,#42A5F5,#90CAF9);flex-shrink:0;"></div>
+<div style="font-size:17px;font-weight:700;color:#34281d;">西湖边City Walk</div>
+</div>
+<div style="font-size:12px;color:rgba(52,40,29,0.45);font-weight:300;padding-left:16px;">4人小队 · 门槛价&yen;0.01</div>
+</div>
 <div style="background:linear-gradient(135deg,rgba(2,119,189,0.1),rgba(2,119,189,0.04));border:1px solid rgba(2,119,189,0.1);border-radius:16px;padding:6px 14px;font-size:12px;color:#0277BD;font-weight:600;">本周六</div>
 </div>
 </div>
 
-<div style="background:rgba(255,255,255,0.8);border:1px solid rgba(255,255,255,0.9);border-radius:24px;padding:24px;box-shadow:0 12px 40px rgba(104,72,45,0.04);">
+<div style="background:rgba(255,255,255,0.8);border:1px solid rgba(255,255,255,0.9);border-radius:24px;padding:24px;margin-bottom:14px;box-shadow:0 12px 40px rgba(104,72,45,0.04);">
 <div style="display:flex;align-items:center;justify-content:space-between;">
-<div><div style="font-size:17px;font-weight:700;color:#34281d;margin-bottom:4px;">🏸 羽毛球搭子局</div><div style="font-size:12px;color:rgba(52,40,29,0.45);font-weight:300;">4人局 · 人均25元</div></div>
+<div>
+<div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
+<div style="width:8px;height:8px;border-radius:50%;background:linear-gradient(135deg,#26A69A,#80CBC4);flex-shrink:0;"></div>
+<div style="font-size:17px;font-weight:700;color:#34281d;">羽毛球搭子局</div>
+</div>
+<div style="font-size:12px;color:rgba(52,40,29,0.45);font-weight:300;padding-left:16px;">4人局 · 人均25元</div>
+</div>
 <div style="background:linear-gradient(135deg,rgba(46,125,50,0.1),rgba(46,125,50,0.04));border:1px solid rgba(46,125,50,0.1);border-radius:16px;padding:6px 14px;font-size:12px;color:#2E7D32;font-weight:600;">已3人</div>
 </div>
 </div>
+
+<div style="margin-top:20px;">
+<img src="https://raw.githubusercontent.com/yechizhang329/Meetu/main/%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80%E5%8F%82%E8%80%83/Meetu%E5%85%83%E7%B4%A0%E5%8F%82%E8%80%83/nanobanana%E5%9B%BE%E7%89%87%E7%94%9F%E6%88%90v1/banner/%E5%9C%BA%E6%99%AF/2.png" style="width:100%;border-radius:20px;display:block;" alt="课后场景">
+</div>
 </div>
 
-<!-- 第6屏：CTA -->
 <div style="background:linear-gradient(180deg,#fff8f2 0%,#ffe8d4 50%,#ffdcc0 100%);padding:48px 32px 64px;text-align:center;">
 <div style="font-size:14px;font-weight:300;color:#c85a18;letter-spacing:3px;margin-bottom:14px;font-style:italic;">let's go</div>
 <div style="font-size:28px;font-weight:800;color:#34281d;margin-bottom:8px;letter-spacing:-1px;">别再一个人了，</div>
 <div style="font-size:28px;font-weight:300;color:#34281d;margin-bottom:28px;letter-spacing:-1px;font-style:italic;">你的搭子在觅遇社等你。</div>
+
+<div style="margin-bottom:24px;">
+<img src="https://raw.githubusercontent.com/yechizhang329/Meetu/main/%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80%E5%8F%82%E8%80%83/Meetu%E5%85%83%E7%B4%A0%E5%8F%82%E8%80%83/nanobanana%E5%9B%BE%E7%89%87%E7%94%9F%E6%88%90v1/%E5%B9%BF%E5%9C%BA%E9%85%8D%E5%9B%BE/step1.png" style="width:60%;border-radius:20px;display:block;margin:0 auto;" alt="手机浏览活动">
+</div>
+
 <div style="display:inline-block;width:100%;max-width:300px;background:linear-gradient(135deg,#FF7422 0%,#FF9456 50%,#FFB068 100%);color:#fff;font-size:16px;font-weight:700;padding:18px 0;border-radius:50px;box-shadow:0 16px 48px rgba(255,116,34,0.3);letter-spacing:2px;">立即探索</div>
 <div style="font-size:12px;color:rgba(52,40,29,0.35);margin-top:16px;font-weight:300;">微信搜索"觅遇社"小程序</div>
 </div>
 
-<!-- Footer -->
 <div style="background:#fff8f2;text-align:center;padding:28px 20px;">
 <div style="font-size:14px;font-weight:300;color:rgba(52,40,29,0.4);font-style:italic;margin-bottom:4px;">Nice to Meetu.</div>
 <div style="font-size:11px;color:rgba(52,40,29,0.25);font-weight:300;letter-spacing:2px;"><span style="font-weight:700;color:#8a6d4b;">觅遇社</span> MEETU</div>
 </div>
 
-</div>`,
+</div>
+    </div>
 
-  C: `<div style="max-width:750px;margin:0 auto;font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Helvetica Neue','Microsoft YaHei',sans-serif;color:#2f241b;line-height:1.6;overflow:hidden;">
+    <!-- Template C: 收费说明 -->
+    <div id="panel-C" class="template-panel">
+<div style="max-width:750px;margin:0 auto;font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Helvetica Neue','Microsoft YaHei',sans-serif;color:#2f241b;line-height:1.6;overflow:hidden;">
 
-<!-- 第1屏：问题直给 -->
 <div style="background:linear-gradient(170deg,#fff9f3 0%,#fff2e8 40%,#ffe8d8 100%);padding:72px 32px 56px;position:relative;overflow:hidden;">
 <div style="position:absolute;top:-50px;right:-40px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(255,116,34,0.07) 0%,transparent 60%);"></div>
-<div style="position:absolute;top:50px;right:28px;transform:rotate(6deg);font-size:56px;font-weight:100;color:rgba(47,36,27,0.03);letter-spacing:-3px;">¥</div>
+<div style="position:absolute;top:50px;right:28px;transform:rotate(6deg);font-size:56px;font-weight:100;color:rgba(47,36,27,0.03);letter-spacing:-3px;">&#165;</div>
+
+<img src="https://raw.githubusercontent.com/yechizhang329/Meetu/main/%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80%E5%8F%82%E8%80%83/Meetu%E5%85%83%E7%B4%A0%E5%8F%82%E8%80%83/0%20Meetu%20mascot%20master.png" alt="Meetu Mascot" style="position:absolute;bottom:12px;right:20px;width:80px;height:auto;opacity:0.92;filter:drop-shadow(0 6px 16px rgba(255,116,34,0.18));" />
 
 <div style="display:inline-block;background:rgba(255,116,34,0.08);border:1px solid rgba(255,116,34,0.1);border-radius:20px;padding:5px 14px;font-size:11px;color:#c85a18;font-weight:600;letter-spacing:3px;margin-bottom:24px;">PRICING GUIDE</div>
 
@@ -334,18 +498,16 @@ const templates = {
 <div style="font-size:13px;color:#8b6b52;font-weight:300;">先看清规则，再决定要不要搭上</div>
 </div>
 
-<!-- 第2屏：一句话回答 -->
 <div style="background:linear-gradient(180deg,#ffe8d8 0%,#fff5ec 100%);padding:56px 32px;">
 <div style="background:rgba(255,255,255,0.75);backdrop-filter:blur(24px);border:1px solid rgba(255,255,255,0.85);border-radius:32px;padding:44px 32px;box-shadow:0 24px 80px rgba(170,92,35,0.06);text-align:center;">
 <div style="font-size:13px;font-weight:300;color:#c85a18;letter-spacing:4px;margin-bottom:16px;font-style:italic;">the short answer</div>
-<div style="font-size:26px;font-weight:800;color:#2f241b;line-height:1.25;letter-spacing:-0.5px;margin-bottom:6px;">轻量活动从 <span style="font-size:32px;color:#ff7422;">¥0.01</span> 起，</div>
+<div style="font-size:26px;font-weight:800;color:#2f241b;line-height:1.25;letter-spacing:-0.5px;margin-bottom:6px;">轻量活动从 <span style="font-size:32px;color:#ff7422;">&#165;0.01</span> 起，</div>
 <div style="font-size:22px;font-weight:300;color:#4a3628;line-height:1.3;margin-bottom:20px;font-style:italic;">正式活动按真实成本定价。</div>
 <div style="width:40px;height:2px;background:linear-gradient(90deg,#ff7422,#ffb574);margin:0 auto 20px;border-radius:2px;"></div>
 <div style="font-size:14px;color:#8b6b52;font-weight:400;">先看活动内容，再看价格是不是适合你。</div>
 </div>
 </div>
 
-<!-- 第3屏：FAQ -->
 <div style="background:linear-gradient(180deg,#fff5ec 0%,#fff9f3 100%);padding:52px 28px;">
 <div style="margin-bottom:36px;">
 <div style="font-size:11px;color:#c85a18;font-weight:600;letter-spacing:4px;margin-bottom:10px;">FAQ</div>
@@ -353,32 +515,55 @@ const templates = {
 <div style="font-size:13px;color:#8b6b52;margin-top:4px;font-weight:300;font-style:italic;">four things to know</div>
 </div>
 
-<div style="background:rgba(255,255,255,0.8);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.9);border-radius:24px;padding:24px;margin-bottom:14px;box-shadow:0 10px 40px rgba(170,92,35,0.04);">
-<div style="font-size:12px;font-weight:700;color:#ff7422;letter-spacing:1px;margin-bottom:8px;">Q1</div>
+<div style="background:rgba(255,255,255,0.8);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.9);border-radius:24px;padding:28px 24px 24px;margin-bottom:14px;box-shadow:0 10px 40px rgba(170,92,35,0.04);position:relative;">
+<div style="display:flex;align-items:flex-start;gap:16px;">
+<div style="flex-shrink:0;width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#ff7422,#ffb574);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(255,116,34,0.2);">
+<span style="font-size:14px;font-weight:800;color:#fff;letter-spacing:0.5px;">Q1</span>
+</div>
+<div>
 <div style="font-size:18px;font-weight:700;color:#2f241b;margin-bottom:8px;">活动费用是什么？</div>
 <div style="font-size:14px;color:#6f5441;line-height:1.8;font-weight:400;">每场活动都会有自己的价格，由主理人根据活动内容和实际开销来定。</div>
 </div>
-
-<div style="background:rgba(255,255,255,0.8);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.9);border-radius:24px;padding:24px;margin-bottom:14px;box-shadow:0 10px 40px rgba(170,92,35,0.04);">
-<div style="font-size:12px;font-weight:700;color:#ff7422;letter-spacing:1px;margin-bottom:8px;">Q2</div>
-<div style="font-size:18px;font-weight:700;color:#2f241b;margin-bottom:8px;">为什么有的活动只要 ¥0.01？</div>
-<div style="font-size:14px;color:#6f5441;line-height:1.8;font-weight:400;">像自习、打球、City Walk 这类轻量搭子需求，可以用 ¥0.01 作为最低门槛，减少随意放弃、提高成局率。</div>
+</div>
 </div>
 
-<div style="background:rgba(255,255,255,0.8);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.9);border-radius:24px;padding:24px;margin-bottom:14px;box-shadow:0 10px 40px rgba(170,92,35,0.04);">
-<div style="font-size:12px;font-weight:700;color:#ff7422;letter-spacing:1px;margin-bottom:8px;">Q3</div>
+<div style="background:rgba(255,255,255,0.8);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.9);border-radius:24px;padding:28px 24px 24px;margin-bottom:14px;box-shadow:0 10px 40px rgba(170,92,35,0.04);position:relative;">
+<div style="display:flex;align-items:flex-start;gap:16px;">
+<div style="flex-shrink:0;width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#ff9456,#ffc88a);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(255,148,86,0.2);">
+<span style="font-size:14px;font-weight:800;color:#fff;letter-spacing:0.5px;">Q2</span>
+</div>
+<div>
+<div style="font-size:18px;font-weight:700;color:#2f241b;margin-bottom:8px;">为什么有的活动只要 &#165;0.01？</div>
+<div style="font-size:14px;color:#6f5441;line-height:1.8;font-weight:400;">像自习、打球、City Walk 这类轻量搭子需求，可以用 &#165;0.01 作为最低门槛，减少随意放弃、提高成局率。</div>
+</div>
+</div>
+</div>
+
+<div style="background:rgba(255,255,255,0.8);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.9);border-radius:24px;padding:28px 24px 24px;margin-bottom:14px;box-shadow:0 10px 40px rgba(170,92,35,0.04);position:relative;">
+<div style="display:flex;align-items:flex-start;gap:16px;">
+<div style="flex-shrink:0;width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#ff7422,#ffb574);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(255,116,34,0.2);">
+<span style="font-size:14px;font-weight:800;color:#fff;letter-spacing:0.5px;">Q3</span>
+</div>
+<div>
 <div style="font-size:18px;font-weight:700;color:#2f241b;margin-bottom:8px;">所有活动都会退费吗？</div>
 <div style="font-size:14px;color:#6f5441;line-height:1.8;font-weight:400;">不一定。很多活动本身就有真实成本，费用是否可退、怎么退，要看活动规则和成局情况。</div>
 </div>
+</div>
+</div>
 
-<div style="background:rgba(255,255,255,0.8);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.9);border-radius:24px;padding:24px;box-shadow:0 10px 40px rgba(170,92,35,0.04);">
-<div style="font-size:12px;font-weight:700;color:#ff7422;letter-spacing:1px;margin-bottom:8px;">Q4</div>
+<div style="background:rgba(255,255,255,0.8);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.9);border-radius:24px;padding:28px 24px 24px;box-shadow:0 10px 40px rgba(170,92,35,0.04);position:relative;">
+<div style="display:flex;align-items:flex-start;gap:16px;">
+<div style="flex-shrink:0;width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#ff9456,#ffc88a);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(255,148,86,0.2);">
+<span style="font-size:14px;font-weight:800;color:#fff;letter-spacing:0.5px;">Q4</span>
+</div>
+<div>
 <div style="font-size:18px;font-weight:700;color:#2f241b;margin-bottom:8px;">主理人为什么可以定价？</div>
 <div style="font-size:14px;color:#6f5441;line-height:1.8;font-weight:400;">主理人负责组织活动、控场和资源协调，合理定价也是活动运营的一部分。</div>
 </div>
 </div>
+</div>
+</div>
 
-<!-- 第4屏：三条核心规则 -->
 <div style="background:linear-gradient(180deg,#fff9f3 0%,#fff5ec 100%);padding:52px 28px;">
 <div style="margin-bottom:36px;">
 <div style="font-size:11px;color:#c85a18;font-weight:600;letter-spacing:4px;margin-bottom:10px;">RULES</div>
@@ -386,36 +571,40 @@ const templates = {
 <div style="font-size:13px;color:#8b6b52;margin-top:4px;font-weight:300;">先把边界看清，再决定参不参加</div>
 </div>
 
-<div style="position:relative;padding-left:40px;">
-<div style="position:absolute;left:19px;top:28px;bottom:28px;width:1.5px;background:linear-gradient(180deg,#ff7422,#ffcba0,rgba(255,203,160,0));"></div>
-
-<div style="position:relative;margin-bottom:32px;">
-<div style="position:absolute;left:-40px;top:0;width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#ff7422,#ff9f62);color:#fff;font-size:16px;font-weight:800;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(255,116,34,0.25);z-index:1;">1</div>
-<div style="padding-left:16px;">
-<div style="font-size:18px;font-weight:700;color:#2f241b;margin-bottom:2px;">主理人定价</div>
-<div style="font-size:13px;color:#8b6b52;font-weight:300;">每场活动价格不同，先看活动内容和费用说明。</div>
-</div>
-</div>
-
-<div style="position:relative;margin-bottom:32px;">
-<div style="position:absolute;left:-40px;top:0;width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#ff7422,#ff9f62);color:#fff;font-size:16px;font-weight:800;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(255,116,34,0.25);z-index:1;">2</div>
-<div style="padding-left:16px;">
-<div style="font-size:18px;font-weight:700;color:#2f241b;margin-bottom:2px;">¥0.01 只是最低门槛</div>
-<div style="font-size:13px;color:#8b6b52;font-weight:300;">它适用于轻量需求，不代表所有活动都按这个价格走。</div>
-</div>
-</div>
-
-<div style="position:relative;">
-<div style="position:absolute;left:-40px;top:0;width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#ff7422,#ff9f62);color:#fff;font-size:16px;font-weight:800;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(255,116,34,0.25);z-index:1;">3</div>
-<div style="padding-left:16px;">
-<div style="font-size:18px;font-weight:700;color:#2f241b;margin-bottom:2px;">退费规则看活动说明</div>
-<div style="font-size:13px;color:#8b6b52;font-weight:300;">成局、取消、缺席、真实成本，都会影响最终费用处理。</div>
-</div>
+<div style="background:rgba(255,255,255,0.8);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.9);border-radius:24px;padding:28px 24px;margin-bottom:16px;box-shadow:0 10px 40px rgba(170,92,35,0.04);position:relative;overflow:hidden;">
+<div style="position:absolute;top:0;left:0;width:4px;height:100%;background:linear-gradient(180deg,#ff7422,#ffb574);border-radius:4px 0 0 4px;"></div>
+<div style="display:flex;align-items:flex-start;gap:16px;">
+<div style="flex-shrink:0;width:48px;height:48px;border-radius:14px;background:linear-gradient(135deg,#ff7422,#ff9f62);color:#fff;font-size:20px;font-weight:900;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(255,116,34,0.25);">1</div>
+<div>
+<div style="font-size:18px;font-weight:700;color:#2f241b;margin-bottom:4px;">主理人定价</div>
+<div style="font-size:13px;color:#8b6b52;font-weight:300;line-height:1.7;">每场活动价格不同，先看活动内容和费用说明。</div>
 </div>
 </div>
 </div>
 
-<!-- 第5屏：温馨提示 -->
+<div style="background:rgba(255,255,255,0.8);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.9);border-radius:24px;padding:28px 24px;margin-bottom:16px;box-shadow:0 10px 40px rgba(170,92,35,0.04);position:relative;overflow:hidden;">
+<div style="position:absolute;top:0;left:0;width:4px;height:100%;background:linear-gradient(180deg,#ff9456,#ffc88a);border-radius:4px 0 0 4px;"></div>
+<div style="display:flex;align-items:flex-start;gap:16px;">
+<div style="flex-shrink:0;width:48px;height:48px;border-radius:14px;background:linear-gradient(135deg,#ff9456,#ffb574);color:#fff;font-size:20px;font-weight:900;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(255,148,86,0.25);">2</div>
+<div>
+<div style="font-size:18px;font-weight:700;color:#2f241b;margin-bottom:4px;">&#165;0.01 只是最低门槛</div>
+<div style="font-size:13px;color:#8b6b52;font-weight:300;line-height:1.7;">它适用于轻量需求，不代表所有活动都按这个价格走。</div>
+</div>
+</div>
+</div>
+
+<div style="background:rgba(255,255,255,0.8);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.9);border-radius:24px;padding:28px 24px;box-shadow:0 10px 40px rgba(170,92,35,0.04);position:relative;overflow:hidden;">
+<div style="position:absolute;top:0;left:0;width:4px;height:100%;background:linear-gradient(180deg,#ff7422,#ffb574);border-radius:4px 0 0 4px;"></div>
+<div style="display:flex;align-items:flex-start;gap:16px;">
+<div style="flex-shrink:0;width:48px;height:48px;border-radius:14px;background:linear-gradient(135deg,#ff7422,#ff9f62);color:#fff;font-size:20px;font-weight:900;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(255,116,34,0.25);">3</div>
+<div>
+<div style="font-size:18px;font-weight:700;color:#2f241b;margin-bottom:4px;">退费规则看活动说明</div>
+<div style="font-size:13px;color:#8b6b52;font-weight:300;line-height:1.7;">成局、取消、缺席、真实成本，都会影响最终费用处理。</div>
+</div>
+</div>
+</div>
+</div>
+
 <div style="background:linear-gradient(180deg,#fff5ec 0%,#ffe8d8 100%);padding:52px 28px;">
 <div style="margin-bottom:32px;">
 <div style="font-size:28px;font-weight:800;color:#2f241b;letter-spacing:-1px;">搭上前，</div>
@@ -423,46 +612,66 @@ const templates = {
 </div>
 
 <div style="background:rgba(255,255,255,0.8);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,0.9);border-radius:28px;padding:32px 28px;box-shadow:0 16px 56px rgba(170,92,35,0.05);">
-<div style="display:flex;align-items:center;gap:16px;margin-bottom:22px;">
-<div style="width:8px;height:8px;border-radius:50%;background:#ff7422;flex-shrink:0;"></div>
+<div style="display:flex;align-items:center;gap:14px;margin-bottom:22px;">
+<div style="flex-shrink:0;width:26px;height:26px;border-radius:50%;background:linear-gradient(135deg,#ff7422,#ffb574);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(255,116,34,0.2);">
+<span style="color:#fff;font-size:13px;font-weight:700;line-height:1;">&#10003;</span>
+</div>
 <div style="font-size:16px;color:#2f241b;font-weight:500;">活动详情页的<strong>价格、人数和费用说明</strong></div>
 </div>
-<div style="display:flex;align-items:center;gap:16px;margin-bottom:22px;">
-<div style="width:8px;height:8px;border-radius:50%;background:#ff7422;flex-shrink:0;"></div>
+<div style="display:flex;align-items:center;gap:14px;margin-bottom:22px;">
+<div style="flex-shrink:0;width:26px;height:26px;border-radius:50%;background:linear-gradient(135deg,#ff9456,#ffc88a);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(255,148,86,0.2);">
+<span style="color:#fff;font-size:13px;font-weight:700;line-height:1;">&#10003;</span>
+</div>
 <div style="font-size:16px;color:#2f241b;font-weight:500;">主理人写明的<strong>时间、地点和成局条件</strong></div>
 </div>
-<div style="display:flex;align-items:center;gap:16px;">
-<div style="width:8px;height:8px;border-radius:50%;background:#ff7422;flex-shrink:0;"></div>
+<div style="display:flex;align-items:center;gap:14px;">
+<div style="flex-shrink:0;width:26px;height:26px;border-radius:50%;background:linear-gradient(135deg,#ff7422,#ffb574);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(255,116,34,0.2);">
+<span style="color:#fff;font-size:13px;font-weight:700;line-height:1;">&#10003;</span>
+</div>
 <div style="font-size:16px;color:#2f241b;font-weight:500;"><strong>取消、未成局、缺席</strong>时的处理规则</div>
 </div>
 </div>
+
+<div style="margin-top:28px;text-align:center;">
+<div style="font-size:12px;color:#8b6b52;font-weight:300;margin-bottom:12px;letter-spacing:1px;">活动详情页长这样 &#8595;</div>
+<img src="https://raw.githubusercontent.com/yechizhang329/Meetu/main/%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80%E5%8F%82%E8%80%83/Meetu%E5%85%83%E7%B4%A0%E5%8F%82%E8%80%83/nanobanana%E5%9B%BE%E7%89%87%E7%94%9F%E6%88%90v1/%E5%B9%BF%E5%9C%BA%E9%85%8D%E5%9B%BE/step1.png" alt="活动详情页截图" style="width:100%;max-width:320px;border-radius:20px;box-shadow:0 16px 48px rgba(170,92,35,0.12);border:1px solid rgba(255,255,255,0.6);" />
+</div>
 </div>
 
-<!-- 第6屏：CTA -->
-<div style="background:linear-gradient(180deg,#ffe8d8 0%,#ffdcc0 50%,#ffd4b0 100%);padding:48px 32px 64px;text-align:center;">
+<div style="background:linear-gradient(180deg,#ffe8d8 0%,#ffdcc0 50%,#ffd4b0 100%);padding:48px 32px 64px;text-align:center;position:relative;overflow:hidden;">
+
+<div style="margin-bottom:32px;border-radius:20px;overflow:hidden;box-shadow:0 12px 40px rgba(170,92,35,0.1);">
+<img src="https://raw.githubusercontent.com/yechizhang329/Meetu/main/%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80%E5%8F%82%E8%80%83/Meetu%E5%85%83%E7%B4%A0%E5%8F%82%E8%80%83/nanobanana%E5%9B%BE%E7%89%87%E7%94%9F%E6%88%90v1/banner/%E5%9C%BA%E6%99%AF/2.png" alt="课后活动场景" style="width:100%;display:block;border-radius:20px;" />
+</div>
+
 <div style="font-size:14px;font-weight:300;color:#c85a18;letter-spacing:3px;margin-bottom:14px;font-style:italic;">ready?</div>
 <div style="font-size:26px;font-weight:800;color:#2f241b;margin-bottom:8px;letter-spacing:-1px;">规则看清，</div>
 <div style="font-size:26px;font-weight:300;color:#2f241b;margin-bottom:28px;letter-spacing:-1px;font-style:italic;">再决定搭不搭上。</div>
 <div style="display:inline-block;width:100%;max-width:300px;background:linear-gradient(135deg,#ff7422 0%,#ff9456 50%,#ffb068 100%);color:#fff;font-size:16px;font-weight:700;padding:18px 0;border-radius:50px;box-shadow:0 16px 48px rgba(255,116,34,0.3);letter-spacing:2px;">去看看最近有什么活动</div>
 </div>
 
-<!-- Footer -->
 <div style="background:#fff9f3;text-align:center;padding:28px 20px;">
 <div style="font-size:14px;font-weight:300;color:rgba(47,36,27,0.4);font-style:italic;margin-bottom:4px;">Nice to Meetu.</div>
 <div style="font-size:11px;color:rgba(47,36,27,0.25);font-weight:300;letter-spacing:2px;"><span style="font-weight:700;color:#ff7422;">觅遇社</span> MEETU</div>
 </div>
 
-</div>`,
+</div>
+    </div>
 
-  D: `<div style="max-width:750px;margin:0 auto;font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Helvetica Neue','Microsoft YaHei',sans-serif;color:#fff;line-height:1.6;overflow:hidden;">
+    <!-- Template D: 女生专场 -->
+    <div id="panel-D" class="template-panel">
+<div style="max-width:750px;margin:0 auto;font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Helvetica Neue','Microsoft YaHei',sans-serif;color:#fff;line-height:1.6;overflow:hidden;">
 
-<!-- 第1屏：氛围开场 -->
-<div style="background:linear-gradient(165deg,#1e1433 0%,#2d1f4e 30%,#3a2660 55%,#1a3048 100%);padding:72px 32px 56px;position:relative;overflow:hidden;">
+<div style="position:relative;overflow:hidden;">
+<div style="position:relative;width:100%;height:420px;overflow:hidden;">
+<img src="https://raw.githubusercontent.com/yechizhang329/Meetu/main/%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80%E5%8F%82%E8%80%83/Meetu%E5%85%83%E7%B4%A0%E5%8F%82%E8%80%83/nanobanana%E5%9B%BE%E7%89%87%E7%94%9F%E6%88%90v1/banner/%E5%9C%BA%E6%99%AF/3.png" style="width:100%;height:100%;object-fit:cover;filter:brightness(0.7) saturate(1.2);" />
+<div style="position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(165deg,rgba(30,20,51,0.82) 0%,rgba(45,31,78,0.75) 30%,rgba(58,38,96,0.78) 55%,rgba(26,48,72,0.85) 100%);"></div>
 <div style="position:absolute;top:-80px;right:-60px;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(200,170,230,0.1) 0%,transparent 50%);"></div>
 <div style="position:absolute;bottom:-40px;left:-40px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(255,126,179,0.06) 0%,transparent 60%);"></div>
-<div style="position:absolute;top:48px;right:28px;transform:rotate(-8deg);font-size:64px;font-weight:100;color:rgba(255,255,255,0.02);letter-spacing:-3px;">♀</div>
+<div style="position:absolute;top:48px;right:28px;transform:rotate(-8deg);font-size:64px;font-weight:100;color:rgba(255,255,255,0.02);letter-spacing:-3px;">&#9792;</div>
 
-<div style="display:inline-block;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.08);border-radius:20px;padding:5px 14px;font-size:11px;color:rgba(255,255,255,0.6);letter-spacing:3px;margin-bottom:24px;font-weight:500;">GIRLS ONLY</div>
+<div style="position:absolute;top:0;left:0;width:100%;height:100%;display:flex;flex-direction:column;justify-content:center;padding:72px 32px 56px;box-sizing:border-box;">
+<div style="display:inline-block;width:fit-content;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.08);border-radius:20px;padding:5px 14px;font-size:11px;color:rgba(255,255,255,0.6);letter-spacing:3px;margin-bottom:24px;font-weight:500;">GIRLS ONLY</div>
 
 <div style="font-size:48px;font-weight:900;color:#fff;line-height:0.95;letter-spacing:-3px;margin-bottom:6px;">姐妹局，</div>
 <div style="font-size:48px;font-weight:300;color:#fff;line-height:0.95;letter-spacing:-3px;margin-bottom:20px;font-style:italic;">安心约。</div>
@@ -475,8 +684,9 @@ const templates = {
 <span style="background:rgba(200,170,230,0.12);border:1px solid rgba(200,170,230,0.15);border-radius:24px;padding:8px 18px;font-size:12px;color:rgba(255,255,255,0.75);font-weight:400;">姐妹出行</span>
 </div>
 </div>
+</div>
+</div>
 
-<!-- 第2屏：一句话定调 -->
 <div style="background:linear-gradient(180deg,#1a3048 0%,#2d1f4e 100%);padding:56px 32px;">
 <div style="background:rgba(255,255,255,0.04);backdrop-filter:blur(24px);border:1px solid rgba(255,255,255,0.08);border-radius:32px;padding:44px 32px;text-align:center;">
 <div style="font-size:13px;font-weight:300;color:rgba(200,170,230,0.7);letter-spacing:4px;margin-bottom:16px;font-style:italic;">feel safe</div>
@@ -487,7 +697,6 @@ const templates = {
 </div>
 </div>
 
-<!-- 第3屏：专场特色 -->
 <div style="background:linear-gradient(180deg,#2d1f4e 0%,#1e1433 100%);padding:52px 28px;">
 <div style="margin-bottom:36px;">
 <div style="font-size:11px;color:rgba(200,170,230,0.7);font-weight:600;letter-spacing:4px;margin-bottom:10px;">FEATURES</div>
@@ -496,28 +705,33 @@ const templates = {
 </div>
 
 <div style="background:rgba(255,255,255,0.04);backdrop-filter:blur(12px);border:1px solid rgba(200,170,230,0.1);border-radius:28px;padding:28px;margin-bottom:16px;">
-<div style="font-size:36px;margin-bottom:12px;">👩</div>
+<div style="width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#ff7eb3 0%,#ff3d8a 50%,#e91e6c 100%);display:flex;align-items:center;justify-content:center;margin-bottom:14px;box-shadow:0 8px 24px rgba(255,61,138,0.25);">
+<span style="font-size:28px;font-weight:700;color:#fff;line-height:1;">&#9792;</span>
+</div>
 <div style="font-size:20px;font-weight:800;color:#fff;margin-bottom:4px;letter-spacing:-0.5px;">全员女生</div>
 <div style="font-size:12px;font-weight:300;color:rgba(255,126,179,0.7);letter-spacing:2px;margin-bottom:10px;font-style:italic;">verified girls only</div>
 <div style="font-size:14px;color:rgba(255,255,255,0.55);line-height:1.8;font-weight:300;">参与者全部为在校女生认证，安心社交，无需担心。</div>
 </div>
 
 <div style="background:rgba(255,255,255,0.04);backdrop-filter:blur(12px);border:1px solid rgba(200,170,230,0.1);border-radius:28px;padding:28px;margin-bottom:16px;">
-<div style="font-size:36px;margin-bottom:12px;">🎯</div>
+<div style="width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#c8aaff 0%,#b388ff 50%,#8a5cf5 100%);display:flex;align-items:center;justify-content:center;margin-bottom:14px;box-shadow:0 8px 24px rgba(138,92,245,0.25);">
+<span style="font-size:26px;font-weight:700;color:#fff;line-height:1;">&#9733;</span>
+</div>
 <div style="font-size:20px;font-weight:800;color:#fff;margin-bottom:4px;letter-spacing:-0.5px;">精选活动</div>
 <div style="font-size:12px;font-weight:300;color:rgba(179,136,255,0.7);letter-spacing:2px;margin-bottom:10px;font-style:italic;">curated experiences</div>
 <div style="font-size:14px;color:rgba(255,255,255,0.55);line-height:1.8;font-weight:300;">情感向剧本杀、女生夜跑、City Walk、手作体验……</div>
 </div>
 
 <div style="background:rgba(255,255,255,0.04);backdrop-filter:blur(12px);border:1px solid rgba(200,170,230,0.1);border-radius:28px;padding:28px;">
-<div style="font-size:36px;margin-bottom:12px;">💜</div>
+<div style="width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#ffb068 0%,#ff8a5c 50%,#ff6b6b 100%);display:flex;align-items:center;justify-content:center;margin-bottom:14px;box-shadow:0 8px 24px rgba(255,138,92,0.25);">
+<span style="font-size:26px;font-weight:700;color:#fff;line-height:1;">&#9829;</span>
+</div>
 <div style="font-size:20px;font-weight:800;color:#fff;margin-bottom:4px;letter-spacing:-0.5px;">主理人也是姐妹</div>
 <div style="font-size:12px;font-weight:300;color:rgba(255,183,107,0.7);letter-spacing:2px;margin-bottom:10px;font-style:italic;">hosted by her</div>
 <div style="font-size:14px;color:rgba(255,255,255,0.55);line-height:1.8;font-weight:300;">女生专场由女生主理人组织，全程氛围轻松温暖。</div>
 </div>
 </div>
 
-<!-- 第4屏：活动 -->
 <div style="background:linear-gradient(180deg,#1e1433 0%,#2a1f3d 100%);padding:52px 28px;">
 <div style="margin-bottom:36px;">
 <div style="font-size:11px;color:rgba(200,170,230,0.7);font-weight:600;letter-spacing:4px;margin-bottom:10px;">UPCOMING</div>
@@ -527,27 +741,50 @@ const templates = {
 
 <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(200,170,230,0.08);border-radius:24px;padding:22px;margin-bottom:14px;">
 <div style="display:flex;justify-content:space-between;align-items:center;">
-<div><div style="font-size:17px;font-weight:700;color:#fff;margin-bottom:4px;">🎭 全女生剧本杀之夜</div><div style="font-size:12px;color:rgba(255,255,255,0.35);font-weight:300;">5人齐了开局 · 人均68元</div></div>
+<div style="display:flex;align-items:center;gap:12px;">
+<div style="display:flex;align-items:center;gap:10px;">
+<div style="width:6px;height:6px;border-radius:50%;background:linear-gradient(135deg,#e91e63,#ff5252);flex-shrink:0;box-shadow:0 0 6px rgba(233,30,99,0.4);"></div>
+<div>
+<div style="font-size:17px;font-weight:700;color:#fff;margin-bottom:4px;">全女生剧本杀之夜</div>
+<div style="font-size:12px;color:rgba(255,255,255,0.35);font-weight:300;">5人齐了开局 · 人均68元</div>
+</div>
+</div>
+</div>
 <div style="background:rgba(233,30,99,0.15);border:1px solid rgba(233,30,99,0.12);border-radius:16px;padding:6px 14px;font-size:12px;color:rgba(255,255,255,0.75);font-weight:600;">差1人</div>
 </div>
 </div>
 
 <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(200,170,230,0.08);border-radius:24px;padding:22px;margin-bottom:14px;">
 <div style="display:flex;justify-content:space-between;align-items:center;">
-<div><div style="font-size:17px;font-weight:700;color:#fff;margin-bottom:4px;">📸 闺蜜City Walk</div><div style="font-size:12px;color:rgba(255,255,255,0.35);font-weight:300;">4人小队 · 门槛价¥0.01</div></div>
+<div style="display:flex;align-items:center;gap:12px;">
+<div style="display:flex;align-items:center;gap:10px;">
+<div style="width:6px;height:6px;border-radius:50%;background:linear-gradient(135deg,#b388ff,#8a5cf5);flex-shrink:0;box-shadow:0 0 6px rgba(179,136,255,0.4);"></div>
+<div>
+<div style="font-size:17px;font-weight:700;color:#fff;margin-bottom:4px;">闺蜜City Walk</div>
+<div style="font-size:12px;color:rgba(255,255,255,0.35);font-weight:300;">4人小队 · 门槛价&yen;0.01</div>
+</div>
+</div>
+</div>
 <div style="background:rgba(179,136,255,0.15);border:1px solid rgba(179,136,255,0.12);border-radius:16px;padding:6px 14px;font-size:12px;color:rgba(255,255,255,0.75);font-weight:600;">本周六</div>
 </div>
 </div>
 
 <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(200,170,230,0.08);border-radius:24px;padding:22px;">
 <div style="display:flex;justify-content:space-between;align-items:center;">
-<div><div style="font-size:17px;font-weight:700;color:#fff;margin-bottom:4px;">🎉 女生社交派对</div><div style="font-size:12px;color:rgba(255,255,255,0.35);font-weight:300;">8人局 · 含破冰游戏</div></div>
+<div style="display:flex;align-items:center;gap:12px;">
+<div style="display:flex;align-items:center;gap:10px;">
+<div style="width:6px;height:6px;border-radius:50%;background:linear-gradient(135deg,#ff7eb3,#ff3d8a);flex-shrink:0;box-shadow:0 0 6px rgba(255,126,179,0.4);"></div>
+<div>
+<div style="font-size:17px;font-weight:700;color:#fff;margin-bottom:4px;">女生社交派对</div>
+<div style="font-size:12px;color:rgba(255,255,255,0.35);font-weight:300;">8人局 · 含破冰游戏</div>
+</div>
+</div>
+</div>
 <div style="background:rgba(255,126,179,0.15);border:1px solid rgba(255,126,179,0.12);border-radius:16px;padding:6px 14px;font-size:12px;color:rgba(255,255,255,0.75);font-weight:600;">可搭上</div>
 </div>
 </div>
 </div>
 
-<!-- 第5屏：安心承诺 -->
 <div style="background:linear-gradient(180deg,#2a1f3d 0%,#3a2660 100%);padding:52px 28px;">
 <div style="margin-bottom:32px;text-align:center;">
 <div style="font-size:28px;font-weight:800;color:#fff;letter-spacing:-1px;">我们的安心承诺</div>
@@ -556,25 +793,24 @@ const templates = {
 
 <div style="background:rgba(255,255,255,0.04);backdrop-filter:blur(16px);border:1px solid rgba(200,170,230,0.08);border-radius:28px;padding:32px 28px;">
 <div style="display:flex;align-items:center;gap:16px;margin-bottom:22px;">
-<div style="width:8px;height:8px;border-radius:50%;background:#4caf50;flex-shrink:0;box-shadow:0 0 8px rgba(76,175,80,0.4);"></div>
+<div style="width:10px;height:10px;border-radius:50%;background:linear-gradient(135deg,#69f0ae,#4caf50);flex-shrink:0;box-shadow:0 0 10px rgba(76,175,80,0.45),0 0 20px rgba(76,175,80,0.15);"></div>
 <div style="font-size:15px;color:rgba(255,255,255,0.75);font-weight:400;">全员在校生认证 + 实名验证</div>
 </div>
 <div style="display:flex;align-items:center;gap:16px;margin-bottom:22px;">
-<div style="width:8px;height:8px;border-radius:50%;background:#4caf50;flex-shrink:0;box-shadow:0 0 8px rgba(76,175,80,0.4);"></div>
+<div style="width:10px;height:10px;border-radius:50%;background:linear-gradient(135deg,#69f0ae,#4caf50);flex-shrink:0;box-shadow:0 0 10px rgba(76,175,80,0.45),0 0 20px rgba(76,175,80,0.15);"></div>
 <div style="font-size:15px;color:rgba(255,255,255,0.75);font-weight:400;">女生专场严格限制参与者性别</div>
 </div>
 <div style="display:flex;align-items:center;gap:16px;margin-bottom:22px;">
-<div style="width:8px;height:8px;border-radius:50%;background:#4caf50;flex-shrink:0;box-shadow:0 0 8px rgba(76,175,80,0.4);"></div>
+<div style="width:10px;height:10px;border-radius:50%;background:linear-gradient(135deg,#69f0ae,#4caf50);flex-shrink:0;box-shadow:0 0 10px rgba(76,175,80,0.45),0 0 20px rgba(76,175,80,0.15);"></div>
 <div style="font-size:15px;color:rgba(255,255,255,0.75);font-weight:400;">活动规则和费用说明公开透明</div>
 </div>
 <div style="display:flex;align-items:center;gap:16px;">
-<div style="width:8px;height:8px;border-radius:50%;background:#4caf50;flex-shrink:0;box-shadow:0 0 8px rgba(76,175,80,0.4);"></div>
+<div style="width:10px;height:10px;border-radius:50%;background:linear-gradient(135deg,#69f0ae,#4caf50);flex-shrink:0;box-shadow:0 0 10px rgba(76,175,80,0.45),0 0 20px rgba(76,175,80,0.15);"></div>
 <div style="font-size:15px;color:rgba(255,255,255,0.75);font-weight:400;">活动群内有平台安全提醒</div>
 </div>
 </div>
 </div>
 
-<!-- 第6屏：CTA -->
 <div style="background:linear-gradient(180deg,#3a2660 0%,#2d1f4e 50%,#1e1433 100%);padding:48px 32px 64px;text-align:center;">
 <div style="font-size:14px;font-weight:300;color:rgba(200,170,230,0.6);letter-spacing:3px;margin-bottom:14px;font-style:italic;">let's go girls</div>
 <div style="font-size:26px;font-weight:800;color:#fff;margin-bottom:8px;letter-spacing:-1px;">这个周末，</div>
@@ -582,41 +818,30 @@ const templates = {
 <div style="display:inline-block;width:100%;max-width:300px;background:linear-gradient(135deg,#FF7422 0%,#FF9456 50%,#FFB068 100%);color:#fff;font-size:16px;font-weight:700;padding:18px 0;border-radius:50px;box-shadow:0 16px 48px rgba(255,116,34,0.3);letter-spacing:2px;">查看女生专场活动</div>
 </div>
 
-<!-- Footer -->
 <div style="background:#1e1433;text-align:center;padding:28px 20px;">
 <div style="font-size:14px;font-weight:300;color:rgba(255,255,255,0.2);font-style:italic;margin-bottom:4px;">Nice to Meetu.</div>
 <div style="font-size:11px;color:rgba(255,255,255,0.12);font-weight:300;letter-spacing:2px;"><span style="font-weight:700;color:#FF9B5A;">觅遇社</span> MEETU</div>
 </div>
 
-</div>`
-};
+</div>
+    </div>
 
-// Tab switching logic
-document.querySelectorAll('.nav-btn').forEach(btn => {
-  btn.addEventListener('click', function(e) {
-    e.preventDefault();
-    const template = this.getAttribute('data-template');
+  </div>
+  <div class="phone-home"></div>
+</div>
 
-    // Update active button
-    document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
-    this.classList.add('active');
-
-    // Update active template
-    document.querySelectorAll('.template-section').forEach(s => s.classList.remove('active'));
-    document.getElementById('tpl-' + template).classList.add('active');
-
-    // Load template content if not already loaded
-    if (!document.getElementById('tpl-' + template).innerHTML) {
-      document.getElementById('tpl-' + template).innerHTML = templates[template];
-    }
-
-    // Scroll to top
-    document.querySelector('.phone-screen').scrollTop = 0;
+<script>
+function switchTab(id, btn) {
+  document.querySelectorAll('.template-panel').forEach(function(p) {
+    p.classList.remove('active');
   });
-});
-
-// Load template A on page load
-document.getElementById('tpl-A').innerHTML = templates['A'];
+  document.querySelectorAll('.tab-btn').forEach(function(b) {
+    b.classList.remove('active');
+  });
+  document.getElementById('panel-' + id).classList.add('active');
+  btn.classList.add('active');
+  document.querySelector('.phone-content').scrollTop = 0;
+}
 </script>
 
 </body>
