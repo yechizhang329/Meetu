@@ -92,6 +92,13 @@ Text direction:
   "see / trust / join"
   "rules first"
   "host energy"
+- Chinese micro-copy options should also be included alongside English, for example:
+  "搭上就走"
+  "齐了出发"
+  "放心来"
+  "真的好玩"
+  "一起搞"
+  "搭子认证"
 - Keep text short, graphic, decorative, and highly legible
 
 Design intent:
