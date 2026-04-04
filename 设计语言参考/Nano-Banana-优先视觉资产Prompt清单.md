@@ -68,10 +68,12 @@ Create a sticker-pack style visual asset sheet for Meetu, designed for later cro
 
 Style:
 - youthful campus social platform
-- warm orange as anchor, with cream, blush pink, soft lavender, cocoa brown, and small mint accents
+- warm orange as anchor, with cream, blush pink, soft lavender, cocoa brown, and subtle blue-gray or warm purple accents
 - editorial collage + UI sticker language
 - rounded corners, thick outlines, tilted labels, capsule tags, speech bubbles, paper tape, route dots, hand-placed graphic elements
 - polished, premium, not childish, not cartoon-baby style
+- the sticker system should feel like it belongs to a "搭子" (activity buddy) social context — casual, group-oriented, activity-driven, not dating or 1v1 messaging
+- include a subtle sense of movement and connection, like people going from stranger to buddy, using route lines, dots, arrows, bridge-like linking shapes, or connection markers
 
 Required asset types in one sheet:
 - 6 tilted badges
@@ -124,6 +126,9 @@ Possible copy fragments to embed:
 "see it / trust it / join it"
 "know before you go"
 "all clear"
+"放心搭上"
+"费用透明"
+"齐了出发"
 
 The sheet should feel like a toolkit for making rule pages look trustworthy and designed, not dry.
 ```
@@ -146,11 +151,11 @@ The sheet should feel like a toolkit for making rule pages look trustworthy and 
 #### Prompt 03：欢迎 / 招手版
 
 ```text
-Using the official Meetu mascot as the exact character reference, generate a new mascot variant for onboarding and welcome scenarios.
+Using the official Meetu mascot 觅遇仔 as the exact character reference, generate a new mascot variant for onboarding and welcome scenarios.
 
 Character constraints:
 - must preserve the exact approved Meetu mascot identity from the original PNG master
-- do not redesign the body, face, mask, scarf, or puzzle-piece logic
+- do not redesign the body, face, mask, scarf, or the approved two-piece puzzle logic from the official master
 - compact cute proportions, thick outline, clean shape
 - same white body, brown facial mask, orange scarf
 
@@ -166,16 +171,18 @@ Scene style:
 
 Output:
 single mascot asset, clean and reusable, facing forward or three-quarter view, high resolution.
+
+Will be used in: onboarding pages, welcome banners, first-time user screens.
 ```
 
 #### Prompt 04：举牌 / 引导版
 
 ```text
-Using the official Meetu mascot as the exact character reference, generate a sign-holding guide variant for content pages and CTA sections.
+Using the official Meetu mascot 觅遇仔 as the exact character reference, generate a sign-holding guide variant for content pages and CTA sections.
 
 Character constraints:
 - preserve the approved mascot exactly
-- same body, face, scarf, puzzle-piece identity
+- same body, face, scarf, and approved two-piece puzzle identity
 
 Pose:
 - mascot holding a rounded signboard or paper card
@@ -189,16 +196,18 @@ Visual language:
 
 Output:
 single reusable mascot asset, transparent-friendly composition, high resolution.
+
+Will be used in: CTA sections, rule explanation cards, pricing modules.
 ```
 
 #### Prompt 05：庆祝 / 齐了版
 
 ```text
-Using the official Meetu mascot as the exact character reference, generate a celebration variant for “齐了”, success, completion, and launch-moment scenarios.
+Using the official Meetu mascot 觅遇仔 as the exact character reference, generate a celebration variant for “齐了”, success, completion, and launch-moment scenarios.
 
 Character constraints:
 - exact same mascot identity
-- no redesign, no extra puzzle count changes
+- no redesign, no extra puzzle count changes; keep the approved two-piece puzzle logic exactly
 
 Pose:
 - excited celebratory motion
@@ -208,20 +217,22 @@ Pose:
 Environment accents:
 - confetti, dots, stars, tiny spark elements
 - can include subtle activity icons or rounded celebration shapes
-- should feel like “people are gathered and ready to go”
+- should feel like “齐了，出发” — the group is formed, everyone is ready, and the activity is about to begin
 
 Output:
 single mascot success asset, suitable for banners, cards, and milestone modules.
+
+Will be used in: success states, “齐了” notifications, group-formed confirmations.
 ```
 
 #### Prompt 06：温和提醒 / 看说明版
 
 ```text
-Using the official Meetu mascot as the exact character reference, generate a gentle reminder variant for pricing, rules, FAQ, and trust sections.
+Using the official Meetu mascot 觅遇仔 as the exact character reference, generate a gentle reminder variant for pricing, rules, FAQ, and trust sections.
 
 Character constraints:
 - preserve mascot identity exactly
-- same approved visual structure
+- same approved visual structure and approved two-piece puzzle logic
 
 Pose:
 - pointing to the side or downward toward information
@@ -234,6 +245,8 @@ Visual style:
 
 Output:
 single reusable mascot helper asset, for trust and explanation modules.
+
+Will be used in: FAQ sections, pricing explanation, rule pages.
 ```
 
 ---
@@ -398,4 +411,3 @@ Avoid:
 - 若直接出图：先按本文件顺序做 P0，再逐组回看是否真的服务当前页面
 - 若先做资产库：每产出 1 组，就同步记录“可用于哪些页面 / 哪些模块 / 哪些裁切比例”
 - 若进入 CMS / Banner / 海报实装：优先从本文件调用，不再每次从零想 prompt
-
