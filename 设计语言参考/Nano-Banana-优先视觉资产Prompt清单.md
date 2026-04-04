@@ -35,6 +35,7 @@
 - 风格基线：年轻、校园、轻松、可信；不走夜店化 / 过度商业化 / 通用 stock 广告风
 - 品牌名称固定使用：`觅遇社` / `Meetu`
 - 语言体系基线：优先使用已确认的搭子文化表达，例如 `搭上`、`齐了`、`主理人`，避免生硬、说教或商务感词汇
+- 视觉资产中的文字内容以中文为主，英文仅用于少量装饰性点缀，不能反客为主
 - 不走 generic stock photo 路线
 - 优先 illustrated / hybrid graphic-ad / editorial collage / stylized UI-visual route
 - 输出时默认考虑后续可以裁成：Banner / H5 hero / 卡片 / sticker / badge
@@ -92,20 +93,20 @@ Required asset types in one sheet:
 - 4 “note” style labels
 
 Text direction:
-- Some stickers can contain short English micro-copy like:
-  "Nice to Meetu"
-  "trust comes first"
-  "go with it"
-  "see / trust / join"
-  "rules first"
-  "host energy"
-- Chinese micro-copy options should also be included alongside English, for example:
+- Chinese micro-copy should be primary and appear first, for example:
   "搭上就走"
   "齐了出发"
   "放心来"
   "真的好玩"
   "一起搞一场"
   "搭子认证"
+- English micro-copy should only be used as a secondary decorative accent, for example:
+  "Nice to Meetu"
+  "trust comes first"
+  "go with it"
+  "see / trust / join"
+  "rules first"
+  "host energy"
 - Keep text short, graphic, decorative, and highly legible
 
 Design intent:
@@ -141,15 +142,19 @@ Need:
 - CTA-adjacent micro labels
 
 Possible copy fragments to embed:
-"clear price / easy call"
-"no hidden cost"
-"rules first / then relax"
-"see it / trust it / join it"
-"know before you go"
-"all clear"
-"放心搭上"
-"费用透明"
-"齐了出发"
+- Chinese should be primary:
+  "放心搭上"
+  "费用透明"
+  "齐了出发"
+  "规则讲清"
+  "先看再搭"
+- English should only be a secondary accent:
+  "clear price / easy call"
+  "no hidden cost"
+  "rules first / then relax"
+  "see it / trust it / join it"
+  "know before you go"
+  "all clear"
 
 The sheet should feel like a toolkit for making rule pages look trustworthy and designed, not dry.
 ```
