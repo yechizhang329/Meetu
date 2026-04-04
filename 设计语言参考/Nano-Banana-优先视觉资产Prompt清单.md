@@ -1,7 +1,7 @@
 # 觅遇社 Nano Banana 优先视觉资产 Prompt 清单
 
 > 用途：补齐当前高优先级但仍欠缺的视觉资产，并把对应的 Nano Banana 生图 prompt 固化下来，便于后续持续复用与迭代。
-> 来源：`设计语言参考/` 现有内容复盘 + `Common Sense/` 品牌/语言体系 + 2026-04-04 频道打合
+> 说明：本文件按“跨平台可复用”的标准书写，不依赖本地 Markdown 文件名；所有要求都直接写成文字，执行时只需准备对应参考图。
 
 ---
 
@@ -32,13 +32,13 @@
 ## 二、统一生图原则
 
 - 优先服务实际页面 / Banner / H5 / Post 场景，不做泛泛“好看图”
-- 风格基线统一遵循 `Common Sense/品牌共识/品牌标准.md`
+- 风格基线：年轻、校园、轻松、可信；不走夜店化 / 过度商业化 / 通用 stock 广告风
 - 品牌名称固定使用：`觅遇社` / `Meetu`
-- 语言体系固定遵循 `Common Sense/品牌共识/语言体系.md`
+- 语言体系基线：优先使用已确认的搭子文化表达，例如 `搭上`、`齐了`、`主理人`，避免生硬、说教或商务感词汇
 - 不走 generic stock photo 路线
 - 优先 illustrated / hybrid graphic-ad / editorial collage / stylized UI-visual route
 - 输出时默认考虑后续可以裁成：Banner / H5 hero / 卡片 / sticker / badge
-- 若用到 mascot，统一以：`设计语言参考/Meetu元素参考/0 Meetu mascot master.png` 为唯一权威源
+- 若用到 mascot，必须以官方批准的 `觅遇仔` master PNG 为唯一权威源，不允许靠文字重新想象角色
 
 ---
 
@@ -67,9 +67,9 @@
 Create a sticker-pack style visual asset sheet for Meetu, designed for later cropping and reuse in mobile H5 pages, CMS subpages, posters, and banners.
 
 VISUAL INPUT (must be provided alongside this prompt):
-- Brand color/style reference: 设计语言参考/Meetu元素参考/UI元素/Meetu UI Design Guide - Color and Typography.png
-- Existing asset style reference: 设计语言参考/Meetu元素参考/nanobanana图片生成v1/广场配图/主理人.png
-- Component style reference: 设计语言参考/Meetu元素参考/UI元素/Meetu UI Design Guide - Component Library.png
+- one approved brand color / typography guide image
+- one approved existing hero or plaza visual that represents the current Meetu art direction
+- one approved UI component guide image
 
 The sticker pack visual style must be compatible with these existing brand assets.
 
@@ -121,9 +121,9 @@ one high-resolution asset sheet on a clean light background, ready for cropping.
 Create a reusable UI decoration sheet for Meetu focused on pricing, trust, and rule explanation pages.
 
 VISUAL INPUT (must be provided alongside this prompt):
-- Brand color/style reference: 设计语言参考/Meetu元素参考/UI元素/Meetu UI Design Guide - Color and Typography.png
-- Existing asset style reference: 设计语言参考/Meetu元素参考/nanobanana图片生成v1/广场配图/主理人.png
-- Component style reference: 设计语言参考/Meetu元素参考/UI元素/Meetu UI Design Guide - Component Library.png
+- one approved brand color / typography guide image
+- one approved existing hero or plaza visual that represents the current Meetu art direction
+- one approved UI component guide image
 
 The output must look compatible with the existing Meetu UI system, current nanobanana-derived assets, and pricing / trust page usage.
 
@@ -175,9 +175,9 @@ The sheet should feel like a toolkit for making rule pages look trustworthy and 
 Using the official Meetu mascot 觅遇仔 as the exact character reference, generate a new mascot variant for onboarding and welcome scenarios.
 
 VISUAL INPUT (must be provided alongside this prompt):
-- Primary reference: 设计语言参考/Meetu元素参考/0 Meetu mascot master.png
-- Style reference: 设计语言参考/Meetu元素参考/stickers/Meetu Mascot Chat Stickers Set 1.png
-- Style reference: 设计语言参考/Meetu元素参考/stickers/Meetu Mascot Chat Stickers Set 2.png
+- primary reference: the officially approved Meetu mascot master PNG
+- style reference 1: an approved sticker-sheet image showing the mascot in expressive poses
+- style reference 2: another approved sticker-sheet image showing the mascot in expressive poses
 
 The output MUST preserve the exact character identity from the primary reference. Style references show the approved rendering style for variant poses.
 
@@ -209,9 +209,9 @@ Will be used in: onboarding pages, welcome banners, first-time user screens.
 Using the official Meetu mascot 觅遇仔 as the exact character reference, generate a sign-holding guide variant for content pages and CTA sections.
 
 VISUAL INPUT (must be provided alongside this prompt):
-- Primary reference: 设计语言参考/Meetu元素参考/0 Meetu mascot master.png
-- Style reference: 设计语言参考/Meetu元素参考/stickers/Meetu Mascot Chat Stickers Set 1.png
-- Style reference: 设计语言参考/Meetu元素参考/stickers/Meetu Mascot Chat Stickers Set 2.png
+- primary reference: the officially approved Meetu mascot master PNG
+- style reference 1: an approved sticker-sheet image showing the mascot in expressive poses
+- style reference 2: another approved sticker-sheet image showing the mascot in expressive poses
 
 The output MUST preserve the exact character identity from the primary reference. Style references show the approved rendering style for variant poses.
 
@@ -241,9 +241,9 @@ Will be used in: CTA sections, rule explanation cards, pricing modules.
 Using the official Meetu mascot 觅遇仔 as the exact character reference, generate a celebration variant for “齐了”, success, completion, and launch-moment scenarios.
 
 VISUAL INPUT (must be provided alongside this prompt):
-- Primary reference: 设计语言参考/Meetu元素参考/0 Meetu mascot master.png
-- Style reference: 设计语言参考/Meetu元素参考/stickers/Meetu Mascot Chat Stickers Set 1.png
-- Style reference: 设计语言参考/Meetu元素参考/stickers/Meetu Mascot Chat Stickers Set 2.png
+- primary reference: the officially approved Meetu mascot master PNG
+- style reference 1: an approved sticker-sheet image showing the mascot in expressive poses
+- style reference 2: another approved sticker-sheet image showing the mascot in expressive poses
 
 The output MUST preserve the exact character identity from the primary reference. Style references show the approved rendering style for variant poses.
 
@@ -273,9 +273,9 @@ Will be used in: success states, “齐了” notifications, group-formed confir
 Using the official Meetu mascot 觅遇仔 as the exact character reference, generate a gentle reminder variant for pricing, rules, FAQ, and trust sections.
 
 VISUAL INPUT (must be provided alongside this prompt):
-- Primary reference: 设计语言参考/Meetu元素参考/0 Meetu mascot master.png
-- Style reference: 设计语言参考/Meetu元素参考/stickers/Meetu Mascot Chat Stickers Set 1.png
-- Style reference: 设计语言参考/Meetu元素参考/stickers/Meetu Mascot Chat Stickers Set 2.png
+- primary reference: the officially approved Meetu mascot master PNG
+- style reference 1: an approved sticker-sheet image showing the mascot in expressive poses
+- style reference 2: another approved sticker-sheet image showing the mascot in expressive poses
 
 The output MUST preserve the exact character identity from the primary reference. Style references show the approved rendering style for variant poses.
 
