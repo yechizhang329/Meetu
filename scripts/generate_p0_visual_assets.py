@@ -13,6 +13,7 @@ FONT_CN = "/System/Library/Fonts/Hiragino Sans GB.ttc"
 FONT_EN = "/System/Library/Fonts/HelveticaNeue.ttc"
 MASCOT = ROOT / "设计语言参考" / "Meetu元素参考" / "0 Meetu mascot master.png"
 LOGO = ROOT / "设计语言参考" / "Meetu元素参考" / "1 Meetu Logo.png"
+REF_ROOT = ROOT / "设计语言参考" / "Meetu元素参考" / "nanobanana图片生成v1"
 
 
 @dataclass
@@ -47,6 +48,9 @@ TOP_BANNERS = [
         "eyebrow": "周末别一个人玩",
         "chips": ["剧本杀", "City Walk", "运动局"],
         "palette": ("#FF7422", "#FF9B73", "#B388FF"),
+        "cta": "去看看 →",
+        "ref": REF_ROOT / "banner" / "2.png",
+        "crop": (1780, 520, 3060, 1320),
     },
     {
         "slug": "trust",
@@ -55,6 +59,9 @@ TOP_BANNERS = [
         "eyebrow": "先放心，再出发",
         "chips": ["在校认证", "实名验证", "女生安心模式"],
         "palette": ("#42A5F5", "#7AD3F7", "#FFB86B"),
+        "cta": "去看看 →",
+        "ref": REF_ROOT / "banner" / "1.png",
+        "crop": (1810, 420, 3060, 1320),
     },
     {
         "slug": "host",
@@ -63,6 +70,9 @@ TOP_BANNERS = [
         "eyebrow": "主理人招募",
         "chips": ["平台帮你找人", "活动定价更清楚", "身份更带感"],
         "palette": ("#FF7422", "#FFC046", "#FF7EB3"),
+        "cta": "立即开一场 →",
+        "ref": REF_ROOT / "banner" / "3.png",
+        "crop": (1880, 470, 3060, 1320),
     },
 ]
 
@@ -159,6 +169,23 @@ def paste_logo(base: Image.Image, width: int, pos: tuple[int, int], alpha: int =
     base.alpha_composite(logo, pos)
 
 
+def crop_and_fit(path: Path, crop_box: tuple[int, int, int, int], size: tuple[int, int], radius: int | None = None) -> Image.Image:
+    src = Image.open(path).convert("RGBA").crop(crop_box)
+    dst = Image.new("RGBA", size, (0, 0, 0, 0))
+    scale = max(size[0] / src.size[0], size[1] / src.size[1])
+    resized = src.resize((int(src.size[0] * scale), int(src.size[1] * scale)), Image.Resampling.LANCZOS)
+    x = (size[0] - resized.size[0]) // 2
+    y = (size[1] - resized.size[1]) // 2
+    dst.alpha_composite(resized, (x, y))
+    if radius is not None:
+        mask = Image.new("L", size, 0)
+        ImageDraw.Draw(mask).rounded_rectangle((0, 0, size[0] - 1, size[1] - 1), radius=radius, fill=255)
+        rounded = Image.new("RGBA", size, (0, 0, 0, 0))
+        rounded.paste(dst, (0, 0), mask)
+        return rounded
+    return dst
+
+
 def add_grain(base: Image.Image, opacity: int = 18) -> None:
     overlay = Image.new("RGBA", base.size, (255, 255, 255, 0))
     draw = ImageDraw.Draw(overlay)
@@ -188,7 +215,10 @@ def banner_asset(spec: dict) -> Image.Image:
     d.rounded_rectangle((760, 90, 1330, 540), radius=60, fill=(255, 255, 255, 24), outline=(255, 255, 255, 70))
     img.alpha_composite(decor)
 
-    paste_mascot(img, (350, 350), (995, 175))
+    ref_panel = rounded_panel((570, 450), 60, "#FFFFFF", 24, outline=(255, 255, 255, 72))
+    img.alpha_composite(ref_panel, (760, 90))
+    ref_image = crop_and_fit(spec["ref"], spec["crop"], (470, 350), radius=44)
+    img.alpha_composite(ref_image, (820, 145))
 
     eyebrow_font = load_font(34)
     title_font = fit_text(draw, spec["title"], 760, 82, 52)
@@ -211,7 +241,7 @@ def banner_asset(spec: dict) -> Image.Image:
     cta = rounded_panel((220, 72), 36, "#FFFFFF", 236)
     img.alpha_composite(cta, (88, 438))
     cta_font = load_font(30)
-    draw.text((124, 456), "去看看 →", fill="#2A1E17", font=cta_font)
+    draw.text((124, 456), spec["cta"], fill="#2A1E17", font=cta_font)
     paste_logo(img, 230, (1188, 590))
     return img
 
@@ -284,31 +314,29 @@ def plaza_card(kind: str, title: str, body: str, footer: str) -> Image.Image:
     pd.rounded_rectangle((410, 620, 1090, 1480), radius=42, outline=(225, 215, 210), width=5)
     pd.rounded_rectangle((540, 590, 960, 630), radius=20, fill=(235, 230, 225))
 
+    ref_map = {
+        "welcome": (REF_ROOT / "广场配图" / "0. 欢迎.png", (260, 560, 1530, 1930)),
+        "step1": (REF_ROOT / "广场配图" / "step1.png", (340, 420, 1460, 2190)),
+        "step2": (REF_ROOT / "广场配图" / "step2.png", (340, 450, 1460, 2240)),
+        "step3": (REF_ROOT / "广场配图" / "step3.png", (250, 520, 1550, 2030)),
+    }
+    ref_path, crop = ref_map[kind]
+    ref_visual = crop_and_fit(ref_path, crop, (560, 760), radius=42)
+    img.alpha_composite(ref_visual, (470, 670))
+
     if kind == "welcome":
-        paste_mascot(img, (330, 330), (594, 770))
         pd.rounded_rectangle((470, 1170, 1030, 1270), radius=36, fill=hex_to_rgb("#FF7422"))
         pd.text((560, 1196), "去首页看看有什么好玩的", fill="white", font=load_font(34))
     elif kind == "step1":
-        for i, label in enumerate(["剧本杀", "City Walk", "羽毛球", "观影"]):
-            y = 720 + i * 175
-            pd.rounded_rectangle((450, y, 1010, y + 132), radius=34, fill=(248, 246, 243))
-            pd.rounded_rectangle((480, y + 24, 608, y + 108), radius=28, fill=hex_to_rgb("#FFB36A"))
-            pd.text((640, y + 44), label, fill="#2C201B", font=load_font(34))
-            pd.text((640, y + 82), "看一眼就知道适不适合你", fill="#8A6E63", font=load_font(24))
+        tip = rounded_panel((520, 92), 36, "#FFFFFF", 236)
+        img.alpha_composite(tip, (490, 1340))
+        draw.text((554, 1365), "先逛一圈，再决定搭哪场", fill="#2C201B", font=load_font(30))
     elif kind == "step2":
-        pd.rounded_rectangle((460, 760, 1040, 920), radius=36, fill=(248, 246, 243))
-        pd.text((510, 808), "周六密室夜场", fill="#241A17", font=load_font(40))
-        pd.text((510, 870), "¥58 / 人 · 4人齐了", fill="#8A6E63", font=load_font(28))
         pd.rounded_rectangle((525, 1070, 975, 1180), radius=46, fill=hex_to_rgb("#FF7422"))
         pd.text((657, 1109), "搭上", fill="white", font=load_font(42))
-        for i in range(4):
-            pd.ellipse((525 + i * 95, 1260, 595 + i * 95, 1330), fill=(255, 213, 102))
     else:
-        paste_mascot(img, (320, 320), (595, 720))
         pd.text((515, 1120), "齐了！出发", fill="#2A201B", font=load_font(56))
-        pd.text((500, 1200), "到了就开始认识新搭子", fill="#6A554B", font=load_font(32))
-        for i in range(5):
-            pd.ellipse((480 + i * 105, 1320, 540 + i * 105, 1380), fill=(255, 197, 111))
+        pd.text((476, 1200), "到了就开始一起玩，也开始认识人", fill="#6A554B", font=load_font(32))
 
     footer_panel = rounded_panel((760, 86), 40, "#221714", 220)
     img.alpha_composite(footer_panel, (370, 1610))
@@ -330,7 +358,8 @@ def host_identity_card() -> Image.Image:
     img.alpha_composite(badge, (128, 290))
     draw.text((188, 309), "已认证主理人", fill="white", font=load_font(30))
 
-    paste_mascot(img, (420, 420), (675, 250))
+    host_visual = crop_and_fit(REF_ROOT / "广场配图" / "主理人.png", (260, 360, 1530, 2100), (420, 420), radius=42)
+    img.alpha_composite(host_visual, (675, 250))
 
     card = rounded_panel((944, 560), 46, "#FFFFFF", 255, outline=(241, 226, 216))
     img.alpha_composite(card, (128, 450))
