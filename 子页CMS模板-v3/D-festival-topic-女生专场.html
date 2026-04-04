@@ -1,224 +1,54 @@
-<style>
-  .meetu-cms-d {
-    --ink: #271c31;
-    --muted: rgba(39, 28, 49, 0.68);
-    max-width: 750px;
-    margin: 0 auto;
-    color: var(--ink);
-    font-family: "PingFang SC", "Helvetica Neue", "Microsoft YaHei", sans-serif;
-    background:
-      radial-gradient(circle at top right, rgba(255, 198, 223, 0.28), transparent 26%),
-      radial-gradient(circle at bottom left, rgba(191, 177, 255, 0.3), transparent 22%),
-      linear-gradient(180deg, #fff7fb 0%, #f7f1ff 46%, #fff8fb 100%);
-  }
-  .meetu-cms-d * { box-sizing: border-box; }
-  .meetu-cms-d .shell { padding: 24px 22px 56px; }
-  .meetu-cms-d .hero {
-    display: grid;
-    gap: 18px;
-    margin-bottom: 24px;
-    align-items: center;
-  }
-  .meetu-cms-d .tag {
-    display: inline-flex;
-    padding: 6px 14px;
-    border-radius: 999px;
-    background: rgba(176, 112, 255, 0.1);
-    color: #8d4de8;
-    font-size: 11px;
-    letter-spacing: 2px;
-    font-weight: 700;
-  }
-  .meetu-cms-d h1 {
-    margin: 16px 0 10px;
-    font-size: 48px;
-    line-height: 0.94;
-    font-weight: 900;
-    letter-spacing: -2px;
-  }
-  .meetu-cms-d .hero p,
-  .meetu-cms-d .copy p,
-  .meetu-cms-d .promise p,
-  .meetu-cms-d .cta p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.8; }
-  .meetu-cms-d .hero-art,
-  .meetu-cms-d .scene {
-    overflow: hidden;
-    border-radius: 34px;
-    border: 1px solid rgba(255,255,255,0.92);
-    box-shadow: 0 24px 68px rgba(108, 75, 137, 0.12);
-  }
-  .meetu-cms-d .hero-art img,
-  .meetu-cms-d .scene img { display: block; width: 100%; height: auto; }
-  .meetu-cms-d .intro {
-    margin-bottom: 22px;
-    padding: 30px 24px;
-    border-radius: 30px;
-    background: rgba(255,255,255,0.76);
-    border: 1px solid rgba(255,255,255,0.94);
-  }
-  .meetu-cms-d .intro strong {
-    display: block;
-    font-size: 32px;
-    line-height: 1.18;
-    letter-spacing: -1px;
-    margin-bottom: 10px;
-  }
-  .meetu-cms-d .feature-grid {
-    display: grid;
-    gap: 14px;
-    margin-bottom: 22px;
-  }
-  .meetu-cms-d .feature {
-    padding: 24px 22px;
-    border-radius: 26px;
-    background: linear-gradient(180deg, rgba(255,255,255,0.92), rgba(252,247,255,0.88));
-    border: 1px solid rgba(255,255,255,0.95);
-    box-shadow: 0 16px 42px rgba(108, 75, 137, 0.07);
-  }
-  .meetu-cms-d .feature small,
-  .meetu-cms-d .copy small {
-    display: block;
-    margin-bottom: 8px;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    color: #8d4de8;
-  }
-  .meetu-cms-d .feature h2,
-  .meetu-cms-d .copy h2 {
-    margin: 0 0 8px;
-    font-size: 26px;
-    letter-spacing: -1px;
-    line-height: 1.18;
-  }
-  .meetu-cms-d .split {
-    display: grid;
-    gap: 18px;
-    align-items: center;
-    margin-bottom: 22px;
-  }
-  .meetu-cms-d .copy {
-    padding: 26px 24px;
-    border-radius: 28px;
-    background: rgba(255,255,255,0.82);
-    border: 1px solid rgba(255,255,255,0.95);
-  }
-  .meetu-cms-d .promise {
-    padding: 28px 24px;
-    border-radius: 30px;
-    background: linear-gradient(155deg, #efe3ff 0%, #fdf6ff 50%, #fff0f6 100%);
-    box-shadow: 0 18px 54px rgba(108, 75, 137, 0.08);
-    margin-bottom: 24px;
-  }
-  .meetu-cms-d .promise strong {
-    display: block;
-    font-size: 28px;
-    line-height: 1.18;
-    margin-bottom: 12px;
-    letter-spacing: -1px;
-  }
-  .meetu-cms-d .promise ul {
-    margin: 0;
-    padding-left: 18px;
-    color: var(--muted);
-    font-size: 14px;
-    line-height: 1.9;
-  }
-  .meetu-cms-d .cta {
-    text-align: center;
-    padding: 34px 24px 40px;
-    border-radius: 32px;
-    background: linear-gradient(145deg, #f0dbff 0%, #ffd5e7 52%, #ffc9b4 100%);
-    box-shadow: 0 24px 66px rgba(155, 95, 190, 0.12);
-  }
-  .meetu-cms-d .cta strong {
-    display: block;
-    font-size: 30px;
-    line-height: 1.14;
-    letter-spacing: -1px;
-    margin-bottom: 8px;
-  }
-  .meetu-cms-d .cta .btn {
-    display: inline-block;
-    margin-top: 18px;
-    padding: 15px 30px;
-    border-radius: 999px;
-    background: #2b163a;
-    color: #fff;
-    font-size: 15px;
-    font-weight: 700;
-    letter-spacing: 1.3px;
-  }
-  .meetu-cms-d .footer {
-    padding-top: 24px;
-    text-align: center;
-    font-style: italic;
-    color: rgba(39,28,49,0.42);
-  }
-  @media (min-width: 640px) {
-    .meetu-cms-d .hero,
-    .meetu-cms-d .split { grid-template-columns: 1fr 1fr; }
-    .meetu-cms-d .feature-grid { grid-template-columns: 1fr 1fr; }
-  }
-</style>
-
-<div class="meetu-cms-d">
-  <div class="shell">
-    <section class="hero">
-      <div>
-        <span class="tag">GIRLS ONLY</span>
-        <h1>安心出发，<br>也可以很漂亮。</h1>
-        <p>女生专场不是单独多写一条规则，而是把安全感、氛围感和“真的想去”的感觉同时做出来。</p>
-      </div>
-      <div class="hero-art">
-        <img src="https://raw.githubusercontent.com/yechizhang329/Meetu/main/%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80%E5%8F%82%E8%80%83/Meetu%E5%85%83%E7%B4%A0%E5%8F%82%E8%80%83/nanobanana%E5%9B%BE%E7%89%87%E7%94%9F%E6%88%90v1/banner/4.png" alt="女生专场活动横幅">
-      </div>
-    </section>
-
-    <section class="intro">
-      <strong>不是“把女生放在一起”，<br>而是把安心感做成一种体验。</strong>
-      <p>这一页需要让用户第一眼就觉得温柔、干净、可相信，而不是只靠几条安全说明来证明自己安全。</p>
-    </section>
-
-    <section class="feature-grid">
-      <article class="feature">
-        <small>VERIFIED</small>
-        <h2>全员女生认证</h2>
-        <p>女生专场活动只面向已完成对应认证的用户开放，先把最基础的信任感搭起来。</p>
-      </article>
-      <article class="feature">
-        <small>ATMOSPHERE</small>
-        <h2>氛围更轻松</h2>
-        <p>野餐、City Walk、观影、交流分享，这些活动本身就更适合慢慢认识人，而不是硬社交。</p>
-      </article>
-    </section>
-
-    <section class="split">
-      <div class="scene">
-        <img src="https://raw.githubusercontent.com/yechizhang329/Meetu/main/%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80%E5%8F%82%E8%80%83/Meetu%E5%85%83%E7%B4%A0%E5%8F%82%E8%80%83/nanobanana%E5%9B%BE%E7%89%87%E7%94%9F%E6%88%90v1/banner/%E5%9C%BA%E6%99%AF/2.png" alt="女生活动场景">
-      </div>
-      <div class="copy">
-        <small>REAL SCENES</small>
-        <h2>安全感不是口号，<br>要靠真实场景支撑。</h2>
-        <p>有真实的活动图、有温柔的版式、有清楚的规则说明，这页才会像一场可以放心参加的活动邀请，而不是一张空白保证书。</p>
-      </div>
-    </section>
-
-    <section class="promise">
-      <strong>安心承诺</strong>
-      <ul>
-        <li>活动发起人需要把人数、费用、规则和集合方式说清楚</li>
-        <li>女生专场优先使用更轻松、更低压力的场景设计</li>
-        <li>活动信息保持透明，避免让参与者在最后一刻猜规则</li>
-      </ul>
-    </section>
-
-    <section class="cta">
-      <strong>想认识新朋友，<br>不一定要硬着头皮。</strong>
-      <p>从一场更轻松、更安心的活动开始，先把出发变得容易一点。</p>
-      <span class="btn">安心搭上</span>
-    </section>
-
-    <div class="footer">Nice to Meetu.</div>
-  </div>
+<div style='--ink:#271c31; --muted:rgba(39, 28, 49, 0.68); max-width:750px; margin:0 auto; color:var(--ink); font-family:"PingFang SC", "Helvetica Neue", "Microsoft YaHei", sans-serif; background:radial-gradient(circle at top right, rgba(255, 198, 223, 0.28), transparent 26%), radial-gradient(circle at bottom left, rgba(191, 177, 255, 0.3), transparent 22%), linear-gradient(180deg, #fff7fb 0%, #f7f1ff 46%, #fff8fb 100%)'>
+<div style="padding:24px 22px 56px">
+<section style="display:grid; gap:18px; margin-bottom:24px; align-items:center">
+<div>
+<span style="display:inline-flex; padding:6px 14px; border-radius:999px; background:rgba(176, 112, 255, 0.1); color:#8d4de8; font-size:11px; letter-spacing:2px; font-weight:700">GIRLS ONLY</span>
+<h1 style="margin:16px 0 10px; font-size:48px; line-height:0.94; font-weight:900; letter-spacing:-2px">安心出发，<br/>也可以很漂亮。</h1>
+<p style="margin:0; color:var(--muted); font-size:14px; line-height:1.8">女生专场不是单独多写一条规则，而是把安全感、氛围感和“真的想去”的感觉同时做出来。</p>
+</div>
+<div style="overflow:hidden; border-radius:34px; border:1px solid rgba(255, 255, 255, 0.92); box-shadow:0 24px 68px rgba(108, 75, 137, 0.12)">
+<img alt="女生专场活动横幅" height="auto" src="https://raw.githubusercontent.com/yechizhang329/Meetu/main/%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80%E5%8F%82%E8%80%83/Meetu%E5%85%83%E7%B4%A0%E5%8F%82%E8%80%83/nanobanana%E5%9B%BE%E7%89%87%E7%94%9F%E6%88%90v1/banner/4.png" style="display:block; width:100%; height:auto" width="100%"/>
+</div>
+</section>
+<section style="margin-bottom:22px; padding:30px 24px; border-radius:30px; background:rgba(255, 255, 255, 0.76); border:1px solid rgba(255, 255, 255, 0.94)">
+<strong style="display:block; font-size:32px; line-height:1.18; letter-spacing:-1px; margin-bottom:10px">不是“把女生放在一起”，<br/>而是把安心感做成一种体验。</strong>
+<p>这一页需要让用户第一眼就觉得温柔、干净、可相信，而不是只靠几条安全说明来证明自己安全。</p>
+</section>
+<section style="display:grid; gap:14px; margin-bottom:22px">
+<article style="padding:24px 22px; border-radius:26px; background:linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(252, 247, 255, 0.88)); border:1px solid rgba(255, 255, 255, 0.95); box-shadow:0 16px 42px rgba(108, 75, 137, 0.07)">
+<small style="display:block; margin-bottom:8px; font-size:11px; font-weight:700; letter-spacing:2px; color:#8d4de8">VERIFIED</small>
+<h2 style="margin:0 0 8px; font-size:26px; letter-spacing:-1px; line-height:1.18">全员女生认证</h2>
+<p>女生专场活动只面向已完成对应认证的用户开放，先把最基础的信任感搭起来。</p>
+</article>
+<article style="padding:24px 22px; border-radius:26px; background:linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(252, 247, 255, 0.88)); border:1px solid rgba(255, 255, 255, 0.95); box-shadow:0 16px 42px rgba(108, 75, 137, 0.07)">
+<small style="display:block; margin-bottom:8px; font-size:11px; font-weight:700; letter-spacing:2px; color:#8d4de8">ATMOSPHERE</small>
+<h2 style="margin:0 0 8px; font-size:26px; letter-spacing:-1px; line-height:1.18">氛围更轻松</h2>
+<p>野餐、City Walk、观影、交流分享，这些活动本身就更适合慢慢认识人，而不是硬社交。</p>
+</article>
+</section>
+<section style="display:grid; gap:18px; align-items:center; margin-bottom:22px">
+<div style="overflow:hidden; border-radius:34px; border:1px solid rgba(255, 255, 255, 0.92); box-shadow:0 24px 68px rgba(108, 75, 137, 0.12)">
+<img alt="女生活动场景" height="auto" src="https://raw.githubusercontent.com/yechizhang329/Meetu/main/%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80%E5%8F%82%E8%80%83/Meetu%E5%85%83%E7%B4%A0%E5%8F%82%E8%80%83/nanobanana%E5%9B%BE%E7%89%87%E7%94%9F%E6%88%90v1/banner/%E5%9C%BA%E6%99%AF/2.png" style="display:block; width:100%; height:auto" width="100%"/>
+</div>
+<div style="padding:26px 24px; border-radius:28px; background:rgba(255, 255, 255, 0.82); border:1px solid rgba(255, 255, 255, 0.95)">
+<small style="display:block; margin-bottom:8px; font-size:11px; font-weight:700; letter-spacing:2px; color:#8d4de8">REAL SCENES</small>
+<h2 style="margin:0 0 8px; font-size:26px; letter-spacing:-1px; line-height:1.18">安全感不是口号，<br/>要靠真实场景支撑。</h2>
+<p style="margin:0; color:var(--muted); font-size:14px; line-height:1.8">有真实的活动图、有温柔的版式、有清楚的规则说明，这页才会像一场可以放心参加的活动邀请，而不是一张空白保证书。</p>
+</div>
+</section>
+<section style="padding:28px 24px; border-radius:30px; background:linear-gradient(155deg, #efe3ff 0%, #fdf6ff 50%, #fff0f6 100%); box-shadow:0 18px 54px rgba(108, 75, 137, 0.08); margin-bottom:24px">
+<strong style="display:block; font-size:28px; line-height:1.18; margin-bottom:12px; letter-spacing:-1px">安心承诺</strong>
+<ul style="margin:0; padding-left:18px; color:var(--muted); font-size:14px; line-height:1.9">
+<li>活动发起人需要把人数、费用、规则和集合方式说清楚</li>
+<li>女生专场优先使用更轻松、更低压力的场景设计</li>
+<li>活动信息保持透明，避免让参与者在最后一刻猜规则</li>
+</ul>
+</section>
+<section align="center" style="text-align:center; padding:34px 24px 40px; border-radius:32px; background:linear-gradient(145deg, #f0dbff 0%, #ffd5e7 52%, #ffc9b4 100%); box-shadow:0 24px 66px rgba(155, 95, 190, 0.12)">
+<strong style="display:block; font-size:30px; line-height:1.14; letter-spacing:-1px; margin-bottom:8px">想认识新朋友，<br/>不一定要硬着头皮。</strong>
+<p style="margin:0; color:var(--muted); font-size:14px; line-height:1.8">从一场更轻松、更安心的活动开始，先把出发变得容易一点。</p>
+<span style="display:inline-block; margin-top:18px; padding:15px 30px; border-radius:999px; background:#2b163a; color:#fff; font-size:15px; font-weight:700; letter-spacing:1.3px">安心搭上</span>
+</section>
+<div align="center" style="padding-top:24px; text-align:center; font-style:italic; color:rgba(39, 28, 49, 0.42)">Nice to Meetu.</div>
+</div>
 </div>

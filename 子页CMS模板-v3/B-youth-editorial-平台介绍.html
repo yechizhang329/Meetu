@@ -1,276 +1,66 @@
-<style>
-  .meetu-cms-b {
-    --ink: #30231b;
-    --muted: rgba(48, 35, 27, 0.65);
-    --soft: #fff8f1;
-    --card: rgba(255, 255, 255, 0.82);
-    max-width: 750px;
-    margin: 0 auto;
-    color: var(--ink);
-    font-family: "PingFang SC", "Helvetica Neue", "Microsoft YaHei", sans-serif;
-    background:
-      radial-gradient(circle at top left, rgba(255, 183, 122, 0.3), transparent 28%),
-      radial-gradient(circle at bottom right, rgba(170, 143, 255, 0.16), transparent 24%),
-      linear-gradient(180deg, #fff9f4 0%, #fff4eb 48%, #fffbf8 100%);
-  }
-  .meetu-cms-b * { box-sizing: border-box; }
-  .meetu-cms-b .shell { padding: 24px 22px 54px; }
-  .meetu-cms-b .hero {
-    display: grid;
-    gap: 18px;
-    align-items: end;
-    margin-bottom: 20px;
-  }
-  .meetu-cms-b .hero-copy small {
-    display: block;
-    margin-bottom: 14px;
-    font-size: 13px;
-    letter-spacing: 2.2px;
-    color: #cf6b29;
-    font-style: italic;
-  }
-  .meetu-cms-b .hero-copy h1 {
-    margin: 0;
-    font-size: 46px;
-    line-height: 0.92;
-    font-weight: 250;
-    letter-spacing: -2px;
-  }
-  .meetu-cms-b .hero-copy h1 strong { font-weight: 900; }
-  .meetu-cms-b .hero-copy p {
-    margin: 16px 0 0;
-    font-size: 18px;
-    color: var(--muted);
-    line-height: 1.8;
-  }
-  .meetu-cms-b .hero-art,
-  .meetu-cms-b .trust-art {
-    overflow: hidden;
-    border-radius: 34px;
-    box-shadow: 0 26px 66px rgba(128, 89, 57, 0.14);
-    border: 1px solid rgba(255,255,255,0.9);
-  }
-  .meetu-cms-b .hero-art img,
-  .meetu-cms-b .trust-art img,
-  .meetu-cms-b .scene img { display: block; width: 100%; height: auto; }
-  .meetu-cms-b .statement {
-    margin: 18px 0 24px;
-    padding: 30px 24px;
-    border-radius: 30px;
-    background: linear-gradient(180deg, rgba(255,255,255,0.92), rgba(255,247,239,0.88));
-    border: 1px solid rgba(255,255,255,0.95);
-  }
-  .meetu-cms-b .statement strong {
-    display: block;
-    font-size: 34px;
-    line-height: 1.14;
-    letter-spacing: -1px;
-    margin-bottom: 10px;
-  }
-  .meetu-cms-b .statement span { color: var(--muted); font-size: 14px; line-height: 1.8; }
-  .meetu-cms-b .trust {
-    display: grid;
-    gap: 18px;
-    margin-bottom: 24px;
-  }
-  .meetu-cms-b .trust-copy {
-    padding: 26px 24px;
-    border-radius: 30px;
-    background: var(--card);
-    border: 1px solid rgba(255,255,255,0.92);
-    box-shadow: 0 20px 56px rgba(128, 89, 57, 0.08);
-  }
-  .meetu-cms-b .trust-copy small,
-  .meetu-cms-b .grid-title small,
-  .meetu-cms-b .scene-copy small {
-    display: block;
-    margin-bottom: 8px;
-    color: #d06b29;
-    letter-spacing: 2px;
-    font-size: 11px;
-    font-weight: 700;
-  }
-  .meetu-cms-b h2 {
-    margin: 0 0 10px;
-    font-size: 30px;
-    line-height: 1.15;
-    letter-spacing: -1px;
-  }
-  .meetu-cms-b .trust-copy p,
-  .meetu-cms-b .scene-copy p,
-  .meetu-cms-b .cta p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.8; }
-  .meetu-cms-b .chip-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 18px;
-  }
-  .meetu-cms-b .chip {
-    padding: 10px 16px;
-    border-radius: 999px;
-    background: #fff;
-    border: 1px solid rgba(255, 116, 34, 0.12);
-    font-size: 13px;
-    font-weight: 700;
-    color: #8a552a;
-  }
-  .meetu-cms-b .grid-wrap {
-    margin-bottom: 22px;
-    padding: 0 2px;
-  }
-  .meetu-cms-b .grid-title { margin-bottom: 18px; }
-  .meetu-cms-b .category-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
-  }
-  .meetu-cms-b .cat {
-    min-height: 110px;
-    padding: 16px 12px;
-    border-radius: 24px;
-    background: linear-gradient(160deg, rgba(255,255,255,0.95), rgba(255,247,240,0.88));
-    border: 1px solid rgba(255,255,255,0.95);
-    box-shadow: 0 14px 36px rgba(128, 89, 57, 0.06);
-  }
-  .meetu-cms-b .cat b {
-    display: block;
-    font-size: 34px;
-    line-height: 1;
-    margin-bottom: 10px;
-    color: #ff7422;
-  }
-  .meetu-cms-b .cat span {
-    display: block;
-    font-size: 13px;
-    line-height: 1.45;
-    font-weight: 700;
-  }
-  .meetu-cms-b .scene {
-    display: grid;
-    gap: 18px;
-    align-items: center;
-    margin-bottom: 24px;
-  }
-  .meetu-cms-b .scene-copy {
-    padding: 26px 24px;
-    border-radius: 30px;
-    background: rgba(255,255,255,0.84);
-    border: 1px solid rgba(255,255,255,0.95);
-  }
-  .meetu-cms-b .cta {
-    text-align: center;
-    padding: 34px 24px 40px;
-    border-radius: 34px;
-    background: linear-gradient(145deg, #ffd8bd 0%, #ffc786 40%, #ff9a57 100%);
-    box-shadow: 0 24px 70px rgba(255, 116, 34, 0.16);
-  }
-  .meetu-cms-b .cta strong {
-    display: block;
-    font-size: 28px;
-    line-height: 1.12;
-    letter-spacing: -1px;
-    margin-bottom: 8px;
-  }
-  .meetu-cms-b .cta em {
-    display: block;
-    font-size: 14px;
-    font-style: italic;
-    color: rgba(48,35,27,0.62);
-    margin-bottom: 18px;
-  }
-  .meetu-cms-b .cta .btn {
-    display: inline-block;
-    padding: 16px 30px;
-    border-radius: 999px;
-    background: #2f231b;
-    color: #fff;
-    font-size: 15px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-  }
-  .meetu-cms-b .footer {
-    padding-top: 24px;
-    text-align: center;
-    font-style: italic;
-    color: rgba(48,35,27,0.42);
-  }
-  @media (min-width: 640px) {
-    .meetu-cms-b .hero,
-    .meetu-cms-b .trust,
-    .meetu-cms-b .scene { grid-template-columns: 0.95fr 1.05fr; }
-    .meetu-cms-b .hero-art { order: 2; }
-  }
-</style>
-
-<div class="meetu-cms-b">
-  <div class="shell">
-    <section class="hero">
-      <div class="hero-copy">
-        <small>Nice to Meetu.</small>
-        <h1><strong>遇见有趣的人，</strong><br>从一次出发开始。</h1>
-        <p>觅遇社不是一行功能说明，而是一种更轻松的线下社交方式：先有活动，再有连接，再慢慢有你的那群人。</p>
-      </div>
-      <div class="hero-art">
-        <img src="https://raw.githubusercontent.com/yechizhang329/Meetu/main/%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80%E5%8F%82%E8%80%83/Meetu%E5%85%83%E7%B4%A0%E5%8F%82%E8%80%83/nanobanana%E5%9B%BE%E7%89%87%E7%94%9F%E6%88%90v1/%E5%B9%BF%E5%9C%BA%E9%85%8D%E5%9B%BE/0.%20%E6%AC%A2%E8%BF%8E.png" alt="觅遇社欢迎页插画">
-      </div>
-    </section>
-
-    <section class="statement">
-      <strong>一个人也能出发，<br>因为平台先把信任搭好。</strong>
-      <span>这页应该先把“为什么愿意来这里”说透，而不是把平台能力一条条念出来。好的设计要让人先觉得安心、再觉得好玩。</span>
-    </section>
-
-    <section class="trust">
-      <div class="trust-copy">
-        <small>TRUST LAYER</small>
-        <h2>信任不是辅助功能，<br>而是产品本身。</h2>
-        <p>在校认证、活动付费更清楚、女生安心模式，这三件事不是为了把页面写满，而是为了让用户更快从“想去”走到“真的敢去”。</p>
-        <div class="chip-row">
-          <span class="chip">全员在校认证</span>
-          <span class="chip">活动费用更清楚</span>
-          <span class="chip">女生安心模式</span>
-        </div>
-      </div>
-      <div class="trust-art">
-        <img src="https://raw.githubusercontent.com/yechizhang329/Meetu/main/%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80%E5%8F%82%E8%80%83/Meetu%E5%85%83%E7%B4%A0%E5%8F%82%E8%80%83/nanobanana%E5%9B%BE%E7%89%87%E7%94%9F%E6%88%90v1/banner/1.png" alt="安全认证主题横幅">
-      </div>
-    </section>
-
-    <section class="grid-wrap">
-      <div class="grid-title">
-        <small>WHAT YOU CAN DO</small>
-        <h2>9类活动，<br>总有一场适合你。</h2>
-      </div>
-      <div class="category-grid">
-        <div class="cat"><b>01</b><span>桌游 · 推理</span></div>
-        <div class="cat"><b>02</b><span>密室 · 剧本杀</span></div>
-        <div class="cat"><b>03</b><span>派对 · 社交</span></div>
-        <div class="cat"><b>04</b><span>运动 · 户外</span></div>
-        <div class="cat"><b>05</b><span>City Walk</span></div>
-        <div class="cat"><b>06</b><span>学习 · 搭伴</span></div>
-        <div class="cat"><b>07</b><span>观影 · 展览</span></div>
-        <div class="cat"><b>08</b><span>交流 · 分享</span></div>
-        <div class="cat"><b>09</b><span>惊喜 · 随机</span></div>
-      </div>
-    </section>
-
-    <section class="scene">
-      <div class="scene">
-        <img src="https://raw.githubusercontent.com/yechizhang329/Meetu/main/%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80%E5%8F%82%E8%80%83/Meetu%E5%85%83%E7%B4%A0%E5%8F%82%E8%80%83/nanobanana%E5%9B%BE%E7%89%87%E7%94%9F%E6%88%90v1/banner/%E5%9C%BA%E6%99%AF/1.png" alt="活动场景拼贴">
-      </div>
-      <div class="scene-copy">
-        <small>REAL MOMENTS</small>
-        <h2>搭子不是抽象概念，<br>而是一场场真的发生过的活动。</h2>
-        <p>桌游局、羽毛球搭子、City Walk、交流分享，这些场景越真实，页面越不会像说明书，用户也越容易把自己代进去。</p>
-      </div>
-    </section>
-
-    <section class="cta">
-      <strong>别再只是在想，<br>你的下一场活动已经在路上。</strong>
-      <em>Meet people through moments.</em>
-      <span class="btn">立即探索</span>
-    </section>
-
-    <div class="footer">Nice to Meetu.</div>
-  </div>
+<div style='--ink:#30231b; --muted:rgba(48, 35, 27, 0.65); --soft:#fff8f1; --card:rgba(255, 255, 255, 0.82); max-width:750px; margin:0 auto; color:var(--ink); font-family:"PingFang SC", "Helvetica Neue", "Microsoft YaHei", sans-serif; background:radial-gradient(circle at top left, rgba(255, 183, 122, 0.3), transparent 28%), radial-gradient(circle at bottom right, rgba(170, 143, 255, 0.16), transparent 24%), linear-gradient(180deg, #fff9f4 0%, #fff4eb 48%, #fffbf8 100%)'>
+<div style="padding:24px 22px 54px">
+<section style="display:grid; gap:18px; align-items:end; margin-bottom:20px">
+<div>
+<small style="display:block; margin-bottom:14px; font-size:13px; letter-spacing:2.2px; color:#cf6b29; font-style:italic">Nice to Meetu.</small>
+<h1 style="margin:0; font-size:46px; line-height:0.92; font-weight:250; letter-spacing:-2px"><strong style="font-weight:900">遇见有趣的人，</strong><br/>从一次出发开始。</h1>
+<p style="margin:16px 0 0; font-size:18px; color:var(--muted); line-height:1.8">觅遇社不是一行功能说明，而是一种更轻松的线下社交方式：先有活动，再有连接，再慢慢有你的那群人。</p>
+</div>
+<div style="overflow:hidden; border-radius:34px; box-shadow:0 26px 66px rgba(128, 89, 57, 0.14); border:1px solid rgba(255, 255, 255, 0.9)">
+<img alt="觅遇社欢迎页插画" height="auto" src="https://raw.githubusercontent.com/yechizhang329/Meetu/main/%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80%E5%8F%82%E8%80%83/Meetu%E5%85%83%E7%B4%A0%E5%8F%82%E8%80%83/nanobanana%E5%9B%BE%E7%89%87%E7%94%9F%E6%88%90v1/%E5%B9%BF%E5%9C%BA%E9%85%8D%E5%9B%BE/0.%20%E6%AC%A2%E8%BF%8E.png" style="display:block; width:100%; height:auto" width="100%"/>
+</div>
+</section>
+<section style="margin:18px 0 24px; padding:30px 24px; border-radius:30px; background:linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 247, 239, 0.88)); border:1px solid rgba(255, 255, 255, 0.95)">
+<strong style="display:block; font-size:34px; line-height:1.14; letter-spacing:-1px; margin-bottom:10px">一个人也能出发，<br/>因为平台先把信任搭好。</strong>
+<span style="color:var(--muted); font-size:14px; line-height:1.8">这页应该先把“为什么愿意来这里”说透，而不是把平台能力一条条念出来。好的设计要让人先觉得安心、再觉得好玩。</span>
+</section>
+<section style="display:grid; gap:18px; margin-bottom:24px">
+<div style="padding:26px 24px; border-radius:30px; background:var(--card); border:1px solid rgba(255, 255, 255, 0.92); box-shadow:0 20px 56px rgba(128, 89, 57, 0.08)">
+<small style="display:block; margin-bottom:8px; color:#d06b29; letter-spacing:2px; font-size:11px; font-weight:700">TRUST LAYER</small>
+<h2 style="margin:0 0 10px; font-size:30px; line-height:1.15; letter-spacing:-1px">信任不是辅助功能，<br/>而是产品本身。</h2>
+<p style="margin:0; color:var(--muted); font-size:14px; line-height:1.8">在校认证、活动付费更清楚、女生安心模式，这三件事不是为了把页面写满，而是为了让用户更快从“想去”走到“真的敢去”。</p>
+<div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:18px">
+<span style="padding:10px 16px; border-radius:999px; background:#fff; border:1px solid rgba(255, 116, 34, 0.12); font-size:13px; font-weight:700; color:#8a552a">全员在校认证</span>
+<span style="padding:10px 16px; border-radius:999px; background:#fff; border:1px solid rgba(255, 116, 34, 0.12); font-size:13px; font-weight:700; color:#8a552a">活动费用更清楚</span>
+<span style="padding:10px 16px; border-radius:999px; background:#fff; border:1px solid rgba(255, 116, 34, 0.12); font-size:13px; font-weight:700; color:#8a552a">女生安心模式</span>
+</div>
+</div>
+<div style="overflow:hidden; border-radius:34px; box-shadow:0 26px 66px rgba(128, 89, 57, 0.14); border:1px solid rgba(255, 255, 255, 0.9)">
+<img alt="安全认证主题横幅" height="auto" src="https://raw.githubusercontent.com/yechizhang329/Meetu/main/%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80%E5%8F%82%E8%80%83/Meetu%E5%85%83%E7%B4%A0%E5%8F%82%E8%80%83/nanobanana%E5%9B%BE%E7%89%87%E7%94%9F%E6%88%90v1/banner/1.png" style="display:block; width:100%; height:auto" width="100%"/>
+</div>
+</section>
+<section style="margin-bottom:22px; padding:0 2px">
+<div style="margin-bottom:18px">
+<small style="display:block; margin-bottom:8px; color:#d06b29; letter-spacing:2px; font-size:11px; font-weight:700">WHAT YOU CAN DO</small>
+<h2 style="margin:0 0 10px; font-size:30px; line-height:1.15; letter-spacing:-1px">9类活动，<br/>总有一场适合你。</h2>
+</div>
+<div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:12px">
+<div style="min-height:110px; padding:16px 12px; border-radius:24px; background:linear-gradient(160deg, rgba(255, 255, 255, 0.95), rgba(255, 247, 240, 0.88)); border:1px solid rgba(255, 255, 255, 0.95); box-shadow:0 14px 36px rgba(128, 89, 57, 0.06)"><b style="display:block; font-size:34px; line-height:1; margin-bottom:10px; color:#ff7422">01</b><span style="display:block; font-size:13px; line-height:1.45; font-weight:700">桌游 · 推理</span></div>
+<div style="min-height:110px; padding:16px 12px; border-radius:24px; background:linear-gradient(160deg, rgba(255, 255, 255, 0.95), rgba(255, 247, 240, 0.88)); border:1px solid rgba(255, 255, 255, 0.95); box-shadow:0 14px 36px rgba(128, 89, 57, 0.06)"><b style="display:block; font-size:34px; line-height:1; margin-bottom:10px; color:#ff7422">02</b><span style="display:block; font-size:13px; line-height:1.45; font-weight:700">密室 · 剧本杀</span></div>
+<div style="min-height:110px; padding:16px 12px; border-radius:24px; background:linear-gradient(160deg, rgba(255, 255, 255, 0.95), rgba(255, 247, 240, 0.88)); border:1px solid rgba(255, 255, 255, 0.95); box-shadow:0 14px 36px rgba(128, 89, 57, 0.06)"><b style="display:block; font-size:34px; line-height:1; margin-bottom:10px; color:#ff7422">03</b><span style="display:block; font-size:13px; line-height:1.45; font-weight:700">派对 · 社交</span></div>
+<div style="min-height:110px; padding:16px 12px; border-radius:24px; background:linear-gradient(160deg, rgba(255, 255, 255, 0.95), rgba(255, 247, 240, 0.88)); border:1px solid rgba(255, 255, 255, 0.95); box-shadow:0 14px 36px rgba(128, 89, 57, 0.06)"><b style="display:block; font-size:34px; line-height:1; margin-bottom:10px; color:#ff7422">04</b><span style="display:block; font-size:13px; line-height:1.45; font-weight:700">运动 · 户外</span></div>
+<div style="min-height:110px; padding:16px 12px; border-radius:24px; background:linear-gradient(160deg, rgba(255, 255, 255, 0.95), rgba(255, 247, 240, 0.88)); border:1px solid rgba(255, 255, 255, 0.95); box-shadow:0 14px 36px rgba(128, 89, 57, 0.06)"><b style="display:block; font-size:34px; line-height:1; margin-bottom:10px; color:#ff7422">05</b><span style="display:block; font-size:13px; line-height:1.45; font-weight:700">City Walk</span></div>
+<div style="min-height:110px; padding:16px 12px; border-radius:24px; background:linear-gradient(160deg, rgba(255, 255, 255, 0.95), rgba(255, 247, 240, 0.88)); border:1px solid rgba(255, 255, 255, 0.95); box-shadow:0 14px 36px rgba(128, 89, 57, 0.06)"><b style="display:block; font-size:34px; line-height:1; margin-bottom:10px; color:#ff7422">06</b><span style="display:block; font-size:13px; line-height:1.45; font-weight:700">学习 · 搭伴</span></div>
+<div style="min-height:110px; padding:16px 12px; border-radius:24px; background:linear-gradient(160deg, rgba(255, 255, 255, 0.95), rgba(255, 247, 240, 0.88)); border:1px solid rgba(255, 255, 255, 0.95); box-shadow:0 14px 36px rgba(128, 89, 57, 0.06)"><b style="display:block; font-size:34px; line-height:1; margin-bottom:10px; color:#ff7422">07</b><span style="display:block; font-size:13px; line-height:1.45; font-weight:700">观影 · 展览</span></div>
+<div style="min-height:110px; padding:16px 12px; border-radius:24px; background:linear-gradient(160deg, rgba(255, 255, 255, 0.95), rgba(255, 247, 240, 0.88)); border:1px solid rgba(255, 255, 255, 0.95); box-shadow:0 14px 36px rgba(128, 89, 57, 0.06)"><b style="display:block; font-size:34px; line-height:1; margin-bottom:10px; color:#ff7422">08</b><span style="display:block; font-size:13px; line-height:1.45; font-weight:700">交流 · 分享</span></div>
+<div style="min-height:110px; padding:16px 12px; border-radius:24px; background:linear-gradient(160deg, rgba(255, 255, 255, 0.95), rgba(255, 247, 240, 0.88)); border:1px solid rgba(255, 255, 255, 0.95); box-shadow:0 14px 36px rgba(128, 89, 57, 0.06)"><b style="display:block; font-size:34px; line-height:1; margin-bottom:10px; color:#ff7422">09</b><span style="display:block; font-size:13px; line-height:1.45; font-weight:700">惊喜 · 随机</span></div>
+</div>
+</section>
+<section style="display:grid; gap:18px; align-items:center; margin-bottom:24px">
+<div style="display:grid; gap:18px; align-items:center; margin-bottom:24px">
+<img alt="活动场景拼贴" height="auto" src="https://raw.githubusercontent.com/yechizhang329/Meetu/main/%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80%E5%8F%82%E8%80%83/Meetu%E5%85%83%E7%B4%A0%E5%8F%82%E8%80%83/nanobanana%E5%9B%BE%E7%89%87%E7%94%9F%E6%88%90v1/banner/%E5%9C%BA%E6%99%AF/1.png" style="display:block; width:100%; height:auto" width="100%"/>
+</div>
+<div style="padding:26px 24px; border-radius:30px; background:rgba(255, 255, 255, 0.84); border:1px solid rgba(255, 255, 255, 0.95)">
+<small style="display:block; margin-bottom:8px; color:#d06b29; letter-spacing:2px; font-size:11px; font-weight:700">REAL MOMENTS</small>
+<h2 style="margin:0 0 10px; font-size:30px; line-height:1.15; letter-spacing:-1px">搭子不是抽象概念，<br/>而是一场场真的发生过的活动。</h2>
+<p style="margin:0; color:var(--muted); font-size:14px; line-height:1.8">桌游局、羽毛球搭子、City Walk、交流分享，这些场景越真实，页面越不会像说明书，用户也越容易把自己代进去。</p>
+</div>
+</section>
+<section align="center" style="text-align:center; padding:34px 24px 40px; border-radius:34px; background:linear-gradient(145deg, #ffd8bd 0%, #ffc786 40%, #ff9a57 100%); box-shadow:0 24px 70px rgba(255, 116, 34, 0.16)">
+<strong style="display:block; font-size:28px; line-height:1.12; letter-spacing:-1px; margin-bottom:8px">别再只是在想，<br/>你的下一场活动已经在路上。</strong>
+<em style="display:block; font-size:14px; font-style:italic; color:rgba(48, 35, 27, 0.62); margin-bottom:18px">Meet people through moments.</em>
+<span style="display:inline-block; padding:16px 30px; border-radius:999px; background:#2f231b; color:#fff; font-size:15px; font-weight:700; letter-spacing:1.5px">立即探索</span>
+</section>
+<div align="center" style="padding-top:24px; text-align:center; font-style:italic; color:rgba(48, 35, 27, 0.42)">Nice to Meetu.</div>
+</div>
 </div>

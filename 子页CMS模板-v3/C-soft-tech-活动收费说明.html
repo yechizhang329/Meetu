@@ -1,278 +1,64 @@
-<style>
-  .meetu-cms-c {
-    --ink: #1d2730;
-    --muted: rgba(29, 39, 48, 0.68);
-    --accent: #ff7422;
-    max-width: 750px;
-    margin: 0 auto;
-    color: var(--ink);
-    font-family: "PingFang SC", "Helvetica Neue", "Microsoft YaHei", sans-serif;
-    background:
-      radial-gradient(circle at top right, rgba(116, 194, 255, 0.16), transparent 26%),
-      radial-gradient(circle at bottom left, rgba(255, 183, 122, 0.18), transparent 24%),
-      linear-gradient(180deg, #f7fbff 0%, #f0f7ff 52%, #f8fbfd 100%);
-  }
-  .meetu-cms-c * { box-sizing: border-box; }
-  .meetu-cms-c .shell { padding: 24px 22px 56px; }
-  .meetu-cms-c .hero {
-    display: grid;
-    gap: 18px;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  .meetu-cms-c .badge {
-    display: inline-flex;
-    padding: 6px 14px;
-    border-radius: 999px;
-    background: rgba(255, 116, 34, 0.08);
-    color: #d16526;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-  }
-  .meetu-cms-c h1 {
-    margin: 16px 0 10px;
-    font-size: 48px;
-    line-height: 0.95;
-    letter-spacing: -2.5px;
-    font-weight: 900;
-  }
-  .meetu-cms-c .sub {
-    font-size: 18px;
-    color: var(--muted);
-    line-height: 1.8;
-    margin: 0;
-  }
-  .meetu-cms-c .hero-card {
-    padding: 22px;
-    border-radius: 30px;
-    background: linear-gradient(160deg, rgba(255,255,255,0.94), rgba(244,249,255,0.92));
-    border: 1px solid rgba(255,255,255,0.94);
-    box-shadow: 0 24px 64px rgba(74, 115, 148, 0.08);
-  }
-  .meetu-cms-c .hero-card img {
-    display: block;
-    width: 96px;
-    height: 96px;
-    margin: 0 auto 18px;
-    border-radius: 28px;
-  }
-  .meetu-cms-c .hero-card strong {
-    display: block;
-    font-size: 22px;
-    text-align: center;
-    margin-bottom: 10px;
-    letter-spacing: -0.5px;
-  }
-  .meetu-cms-c .hero-card p {
-    margin: 0;
-    text-align: center;
-    font-size: 14px;
-    color: var(--muted);
-    line-height: 1.8;
-  }
-  .meetu-cms-c .highlight {
-    margin: 24px 0;
-    padding: 26px 24px;
-    border-radius: 30px;
-    background: linear-gradient(145deg, #152a3b 0%, #25435f 100%);
-    color: #fff;
-    box-shadow: 0 26px 64px rgba(29, 39, 48, 0.16);
-  }
-  .meetu-cms-c .highlight small {
-    display: block;
-    margin-bottom: 10px;
-    color: rgba(255,255,255,0.55);
-    font-size: 11px;
-    letter-spacing: 2px;
-  }
-  .meetu-cms-c .highlight strong {
-    display: block;
-    font-size: 28px;
-    line-height: 1.2;
-    margin-bottom: 10px;
-    letter-spacing: -1px;
-  }
-  .meetu-cms-c .highlight p {
-    margin: 0;
-    color: rgba(255,255,255,0.74);
-    font-size: 14px;
-    line-height: 1.8;
-  }
-  .meetu-cms-c .visual-row {
-    display: grid;
-    gap: 14px;
-    margin-bottom: 24px;
-  }
-  .meetu-cms-c .visual-card {
-    overflow: hidden;
-    border-radius: 26px;
-    border: 1px solid rgba(255,255,255,0.95);
-    background: rgba(255,255,255,0.9);
-    box-shadow: 0 16px 46px rgba(74, 115, 148, 0.08);
-  }
-  .meetu-cms-c .visual-card img {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
-  .meetu-cms-c .faq {
-    display: grid;
-    gap: 14px;
-    margin-bottom: 24px;
-  }
-  .meetu-cms-c .faq-card {
-    padding: 22px 20px;
-    border-radius: 24px;
-    background: rgba(255,255,255,0.84);
-    border: 1px solid rgba(255,255,255,0.95);
-    box-shadow: 0 14px 40px rgba(74, 115, 148, 0.05);
-  }
-  .meetu-cms-c .faq-card b {
-    display: block;
-    margin-bottom: 8px;
-    font-size: 18px;
-    letter-spacing: -0.4px;
-  }
-  .meetu-cms-c .faq-card p {
-    margin: 0;
-    color: var(--muted);
-    font-size: 14px;
-    line-height: 1.8;
-  }
-  .meetu-cms-c .pricing-grid {
-    display: grid;
-    gap: 14px;
-    margin-bottom: 24px;
-  }
-  .meetu-cms-c .price-box {
-    padding: 22px;
-    border-radius: 24px;
-    background: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(246,250,255,0.92));
-    border: 1px solid rgba(255,255,255,0.96);
-  }
-  .meetu-cms-c .price-box small {
-    display: block;
-    margin-bottom: 8px;
-    color: #3a7fd5;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 2px;
-  }
-  .meetu-cms-c .price-box strong {
-    display: block;
-    margin-bottom: 8px;
-    font-size: 24px;
-    letter-spacing: -0.8px;
-  }
-  .meetu-cms-c .price-box p {
-    margin: 0;
-    font-size: 14px;
-    color: var(--muted);
-    line-height: 1.8;
-  }
-  .meetu-cms-c .cta {
-    text-align: center;
-    padding: 34px 24px 40px;
-    border-radius: 30px;
-    background: linear-gradient(145deg, #dff2ff 0%, #f3faff 48%, #ffe0c8 100%);
-    box-shadow: 0 24px 62px rgba(74, 115, 148, 0.08);
-  }
-  .meetu-cms-c .cta strong {
-    display: block;
-    font-size: 28px;
-    line-height: 1.16;
-    letter-spacing: -1px;
-    margin-bottom: 8px;
-  }
-  .meetu-cms-c .cta span {
-    display: block;
-    font-size: 14px;
-    color: var(--muted);
-    line-height: 1.8;
-  }
-  .meetu-cms-c .footer {
-    padding-top: 24px;
-    text-align: center;
-    font-style: italic;
-    color: rgba(29,39,48,0.42);
-  }
-  @media (min-width: 640px) {
-    .meetu-cms-c .hero { grid-template-columns: 1.05fr 0.95fr; }
-    .meetu-cms-c .visual-row,
-    .meetu-cms-c .faq,
-    .meetu-cms-c .pricing-grid { grid-template-columns: 1fr 1fr; }
-  }
-</style>
-
-<div class="meetu-cms-c">
-  <div class="shell">
-    <section class="hero">
-      <div>
-        <span class="badge">ABOUT PRICING</span>
-        <h1>费用不是门槛感，<br>而是规则感。</h1>
-        <p class="sub">这页不该像解释一条复杂规则，而是要让用户快速看懂：这场活动为什么要收费、轻量活动和正式活动差在哪、自己是在为什么付费。</p>
-      </div>
-      <div class="hero-card">
-        <img src="https://raw.githubusercontent.com/yechizhang329/Meetu/main/%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80%E5%8F%82%E8%80%83/Meetu%E5%85%83%E7%B4%A0%E5%8F%82%E8%80%83/%E5%A4%B4%E5%83%8F/image1.png" alt="觅遇仔头像">
-        <strong>先看清费用，再决定搭不搭上。</strong>
-        <p>价格透明、规则写清楚，才是让人敢出发的前提。活动收费这件事，不能被写成金融术语，也不能写成后台文档。</p>
-      </div>
-    </section>
-
-    <section class="highlight">
-      <small>THE SHORT ANSWER</small>
-      <strong>¥0.01 不是默认价格，<br>只是最低门槛。</strong>
-      <p>轻量活动可以从门槛价开始，正式活动按真实成本定价。费用是否退还、怎么退、是否包含场地和材料，都应该在活动页里讲清楚。</p>
-    </section>
-
-    <section class="visual-row">
-      <div class="visual-card">
-        <img src="https://raw.githubusercontent.com/yechizhang329/Meetu/main/%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80%E5%8F%82%E8%80%83/Meetu%E5%85%83%E7%B4%A0%E5%8F%82%E8%80%83/UI%E5%85%83%E7%B4%A0/Meetu%20Discover%20Tab.png" alt="觅遇社发现页界面">
-      </div>
-      <div class="visual-card">
-        <img src="https://raw.githubusercontent.com/yechizhang329/Meetu/main/%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80%E5%8F%82%E8%80%83/Meetu%E5%85%83%E7%B4%A0%E5%8F%82%E8%80%83/notifications/Meetu%20System%20Notifications%20Set%201.png" alt="觅遇社系统提示参考">
-      </div>
-    </section>
-
-    <section class="faq">
-      <article class="faq-card">
-        <b>为什么有的活动只要 ¥0.01？</b>
-        <p>这类活动本身成本低，收一个最低门槛价，更多是为了减少临时放弃，提高这场活动真的能成的概率。</p>
-      </article>
-      <article class="faq-card">
-        <b>为什么有的活动会更贵？</b>
-        <p>剧本杀、运动场地、KTV、物料准备本来就有真实成本。主理人把费用写清楚，参与者就按规则决定要不要来。</p>
-      </article>
-      <article class="faq-card">
-        <b>费用都会退吗？</b>
-        <p>不会。是否退、怎么退、退到哪里，取决于活动本身的规则。真正重要的是：收费逻辑要写清楚，而不是默认你自己去猜。</p>
-      </article>
-      <article class="faq-card">
-        <b>平台为什么要把这件事讲这么明白？</b>
-        <p>因为模糊收费会直接毁掉信任。把价格说明、人数门槛、成局条件都讲明白，活动才更容易真的发生。</p>
-      </article>
-    </section>
-
-    <section class="pricing-grid">
-      <article class="price-box">
-        <small>LIGHTWEIGHT SCENARIO</small>
-        <strong>门槛价活动</strong>
-        <p>适合自习、打球、City Walk 这类低成本活动。重点是先把人约出来，再把活动做成。</p>
-      </article>
-      <article class="price-box">
-        <small>REAL COST SCENARIO</small>
-        <strong>正式活动定价</strong>
-        <p>适合剧本杀、KTV、展览局等有明确成本的场景。主理人需要把费用、规则和预期都说清楚。</p>
-      </article>
-    </section>
-
-    <section class="cta">
-      <strong>价格讲清楚，<br>一场活动才更容易成。</strong>
-      <span>真实成本、人数门槛、费用规则，都应该在活动页里直接说清楚。</span>
-    </section>
-
-    <div class="footer">Nice to Meetu.</div>
-  </div>
+<div style='--ink:#1d2730; --muted:rgba(29, 39, 48, 0.68); --accent:#ff7422; max-width:750px; margin:0 auto; color:var(--ink); font-family:"PingFang SC", "Helvetica Neue", "Microsoft YaHei", sans-serif; background:radial-gradient(circle at top right, rgba(116, 194, 255, 0.16), transparent 26%), radial-gradient(circle at bottom left, rgba(255, 183, 122, 0.18), transparent 24%), linear-gradient(180deg, #f7fbff 0%, #f0f7ff 52%, #f8fbfd 100%)'>
+<div style="padding:24px 22px 56px">
+<section style="display:grid; gap:18px; align-items:center; margin-bottom:20px">
+<div>
+<span style="display:inline-flex; padding:6px 14px; border-radius:999px; background:rgba(255, 116, 34, 0.08); color:#d16526; font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase">ABOUT PRICING</span>
+<h1 style="margin:16px 0 10px; font-size:48px; line-height:0.95; letter-spacing:-2.5px; font-weight:900">费用不是门槛感，<br/>而是规则感。</h1>
+<p style="font-size:18px; color:var(--muted); line-height:1.8; margin:0">这页不该像解释一条复杂规则，而是要让用户快速看懂：这场活动为什么要收费、轻量活动和正式活动差在哪、自己是在为什么付费。</p>
+</div>
+<div style="padding:22px; border-radius:30px; background:linear-gradient(160deg, rgba(255, 255, 255, 0.94), rgba(244, 249, 255, 0.92)); border:1px solid rgba(255, 255, 255, 0.94); box-shadow:0 24px 64px rgba(74, 115, 148, 0.08)">
+<img alt="觅遇仔头像" height="96" src="https://raw.githubusercontent.com/yechizhang329/Meetu/main/%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80%E5%8F%82%E8%80%83/Meetu%E5%85%83%E7%B4%A0%E5%8F%82%E8%80%83/%E5%A4%B4%E5%83%8F/image1.png" style="display:block; width:96px; height:96px; margin:0 auto 18px; border-radius:28px" width="96"/>
+<strong align="center" style="display:block; font-size:22px; text-align:center; margin-bottom:10px; letter-spacing:-0.5px">先看清费用，再决定搭不搭上。</strong>
+<p align="center" style="margin:0; text-align:center; font-size:14px; color:var(--muted); line-height:1.8">价格透明、规则写清楚，才是让人敢出发的前提。活动收费这件事，不能被写成金融术语，也不能写成后台文档。</p>
+</div>
+</section>
+<section style="margin:24px 0; padding:26px 24px; border-radius:30px; background:linear-gradient(145deg, #152a3b 0%, #25435f 100%); color:#fff; box-shadow:0 26px 64px rgba(29, 39, 48, 0.16)">
+<small style="display:block; margin-bottom:10px; color:rgba(255, 255, 255, 0.55); font-size:11px; letter-spacing:2px">THE SHORT ANSWER</small>
+<strong style="display:block; font-size:28px; line-height:1.2; margin-bottom:10px; letter-spacing:-1px">¥0.01 不是默认价格，<br/>只是最低门槛。</strong>
+<p style="margin:0; color:rgba(255, 255, 255, 0.74); font-size:14px; line-height:1.8">轻量活动可以从门槛价开始，正式活动按真实成本定价。费用是否退还、怎么退、是否包含场地和材料，都应该在活动页里讲清楚。</p>
+</section>
+<section style="display:grid; gap:14px; margin-bottom:24px">
+<div style="overflow:hidden; border-radius:26px; border:1px solid rgba(255, 255, 255, 0.95); background:rgba(255, 255, 255, 0.9); box-shadow:0 16px 46px rgba(74, 115, 148, 0.08)">
+<img alt="觅遇社发现页界面" height="auto" src="https://raw.githubusercontent.com/yechizhang329/Meetu/main/%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80%E5%8F%82%E8%80%83/Meetu%E5%85%83%E7%B4%A0%E5%8F%82%E8%80%83/UI%E5%85%83%E7%B4%A0/Meetu%20Discover%20Tab.png" style="display:block; width:100%; height:auto" width="100%"/>
+</div>
+<div style="overflow:hidden; border-radius:26px; border:1px solid rgba(255, 255, 255, 0.95); background:rgba(255, 255, 255, 0.9); box-shadow:0 16px 46px rgba(74, 115, 148, 0.08)">
+<img alt="觅遇社系统提示参考" height="auto" src="https://raw.githubusercontent.com/yechizhang329/Meetu/main/%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80%E5%8F%82%E8%80%83/Meetu%E5%85%83%E7%B4%A0%E5%8F%82%E8%80%83/notifications/Meetu%20System%20Notifications%20Set%201.png" style="display:block; width:100%; height:auto" width="100%"/>
+</div>
+</section>
+<section style="display:grid; gap:14px; margin-bottom:24px">
+<article style="padding:22px 20px; border-radius:24px; background:rgba(255, 255, 255, 0.84); border:1px solid rgba(255, 255, 255, 0.95); box-shadow:0 14px 40px rgba(74, 115, 148, 0.05)">
+<b style="display:block; margin-bottom:8px; font-size:18px; letter-spacing:-0.4px">为什么有的活动只要 ¥0.01？</b>
+<p style="margin:0; color:var(--muted); font-size:14px; line-height:1.8">这类活动本身成本低，收一个最低门槛价，更多是为了减少临时放弃，提高这场活动真的能成的概率。</p>
+</article>
+<article style="padding:22px 20px; border-radius:24px; background:rgba(255, 255, 255, 0.84); border:1px solid rgba(255, 255, 255, 0.95); box-shadow:0 14px 40px rgba(74, 115, 148, 0.05)">
+<b style="display:block; margin-bottom:8px; font-size:18px; letter-spacing:-0.4px">为什么有的活动会更贵？</b>
+<p style="margin:0; color:var(--muted); font-size:14px; line-height:1.8">剧本杀、运动场地、KTV、物料准备本来就有真实成本。主理人把费用写清楚，参与者就按规则决定要不要来。</p>
+</article>
+<article style="padding:22px 20px; border-radius:24px; background:rgba(255, 255, 255, 0.84); border:1px solid rgba(255, 255, 255, 0.95); box-shadow:0 14px 40px rgba(74, 115, 148, 0.05)">
+<b style="display:block; margin-bottom:8px; font-size:18px; letter-spacing:-0.4px">费用都会退吗？</b>
+<p style="margin:0; color:var(--muted); font-size:14px; line-height:1.8">不会。是否退、怎么退、退到哪里，取决于活动本身的规则。真正重要的是：收费逻辑要写清楚，而不是默认你自己去猜。</p>
+</article>
+<article style="padding:22px 20px; border-radius:24px; background:rgba(255, 255, 255, 0.84); border:1px solid rgba(255, 255, 255, 0.95); box-shadow:0 14px 40px rgba(74, 115, 148, 0.05)">
+<b style="display:block; margin-bottom:8px; font-size:18px; letter-spacing:-0.4px">平台为什么要把这件事讲这么明白？</b>
+<p style="margin:0; color:var(--muted); font-size:14px; line-height:1.8">因为模糊收费会直接毁掉信任。把价格说明、人数门槛、成局条件都讲明白，活动才更容易真的发生。</p>
+</article>
+</section>
+<section style="display:grid; gap:14px; margin-bottom:24px">
+<article style="padding:22px; border-radius:24px; background:linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(246, 250, 255, 0.92)); border:1px solid rgba(255, 255, 255, 0.96)">
+<small style="display:block; margin-bottom:8px; color:#3a7fd5; font-size:11px; font-weight:700; letter-spacing:2px">LIGHTWEIGHT SCENARIO</small>
+<strong style="display:block; margin-bottom:8px; font-size:24px; letter-spacing:-0.8px">门槛价活动</strong>
+<p style="margin:0; font-size:14px; color:var(--muted); line-height:1.8">适合自习、打球、City Walk 这类低成本活动。重点是先把人约出来，再把活动做成。</p>
+</article>
+<article style="padding:22px; border-radius:24px; background:linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(246, 250, 255, 0.92)); border:1px solid rgba(255, 255, 255, 0.96)">
+<small style="display:block; margin-bottom:8px; color:#3a7fd5; font-size:11px; font-weight:700; letter-spacing:2px">REAL COST SCENARIO</small>
+<strong style="display:block; margin-bottom:8px; font-size:24px; letter-spacing:-0.8px">正式活动定价</strong>
+<p style="margin:0; font-size:14px; color:var(--muted); line-height:1.8">适合剧本杀、KTV、展览局等有明确成本的场景。主理人需要把费用、规则和预期都说清楚。</p>
+</article>
+</section>
+<section align="center" style="text-align:center; padding:34px 24px 40px; border-radius:30px; background:linear-gradient(145deg, #dff2ff 0%, #f3faff 48%, #ffe0c8 100%); box-shadow:0 24px 62px rgba(74, 115, 148, 0.08)">
+<strong style="display:block; font-size:28px; line-height:1.16; letter-spacing:-1px; margin-bottom:8px">价格讲清楚，<br/>一场活动才更容易成。</strong>
+<span style="display:block; font-size:14px; color:var(--muted); line-height:1.8">真实成本、人数门槛、费用规则，都应该在活动页里直接说清楚。</span>
+</section>
+<div align="center" style="padding-top:24px; text-align:center; font-style:italic; color:rgba(29, 39, 48, 0.42)">Nice to Meetu.</div>
+</div>
 </div>
