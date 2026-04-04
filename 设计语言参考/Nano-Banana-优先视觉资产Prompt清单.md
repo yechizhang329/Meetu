@@ -66,6 +66,13 @@
 ```text
 Create a sticker-pack style visual asset sheet for Meetu, designed for later cropping and reuse in mobile H5 pages, CMS subpages, posters, and banners.
 
+VISUAL INPUT (must be provided alongside this prompt):
+- Brand color/style reference: 设计语言参考/Meetu元素参考/UI元素/Meetu UI Design Guide - Color and Typography.png
+- Existing asset style reference: 设计语言参考/Meetu元素参考/nanobanana图片生成v1/广场配图/主理人.png
+- Component style reference: 设计语言参考/Meetu元素参考/UI元素/Meetu UI Design Guide - Component Library.png
+
+The sticker pack visual style must be compatible with these existing brand assets.
+
 Style:
 - youthful campus social platform
 - warm orange as anchor, with cream, blush pink, soft lavender, cocoa brown, and subtle blue-gray or warm purple accents
@@ -112,6 +119,13 @@ one high-resolution asset sheet on a clean light background, ready for cropping.
 
 ```text
 Create a reusable UI decoration sheet for Meetu focused on pricing, trust, and rule explanation pages.
+
+VISUAL INPUT (must be provided alongside this prompt):
+- Brand color/style reference: 设计语言参考/Meetu元素参考/UI元素/Meetu UI Design Guide - Color and Typography.png
+- Existing asset style reference: 设计语言参考/Meetu元素参考/nanobanana图片生成v1/广场配图/主理人.png
+- Component style reference: 设计语言参考/Meetu元素参考/UI元素/Meetu UI Design Guide - Component Library.png
+
+The output must look compatible with the existing Meetu UI system, current nanobanana-derived assets, and pricing / trust page usage.
 
 Visual language:
 - same Meetu sticker system
@@ -160,6 +174,13 @@ The sheet should feel like a toolkit for making rule pages look trustworthy and 
 ```text
 Using the official Meetu mascot 觅遇仔 as the exact character reference, generate a new mascot variant for onboarding and welcome scenarios.
 
+VISUAL INPUT (must be provided alongside this prompt):
+- Primary reference: 设计语言参考/Meetu元素参考/0 Meetu mascot master.png
+- Style reference: 设计语言参考/Meetu元素参考/stickers/Meetu Mascot Chat Stickers Set 1.png
+- Style reference: 设计语言参考/Meetu元素参考/stickers/Meetu Mascot Chat Stickers Set 2.png
+
+The output MUST preserve the exact character identity from the primary reference. Style references show the approved rendering style for variant poses.
+
 Character constraints:
 - must preserve the exact approved Meetu mascot identity from the original PNG master
 - do not redesign the body, face, mask, scarf, or the approved two-piece puzzle logic from the official master
@@ -187,6 +208,13 @@ Will be used in: onboarding pages, welcome banners, first-time user screens.
 ```text
 Using the official Meetu mascot 觅遇仔 as the exact character reference, generate a sign-holding guide variant for content pages and CTA sections.
 
+VISUAL INPUT (must be provided alongside this prompt):
+- Primary reference: 设计语言参考/Meetu元素参考/0 Meetu mascot master.png
+- Style reference: 设计语言参考/Meetu元素参考/stickers/Meetu Mascot Chat Stickers Set 1.png
+- Style reference: 设计语言参考/Meetu元素参考/stickers/Meetu Mascot Chat Stickers Set 2.png
+
+The output MUST preserve the exact character identity from the primary reference. Style references show the approved rendering style for variant poses.
+
 Character constraints:
 - preserve the approved mascot exactly
 - same body, face, scarf, and approved two-piece puzzle identity
@@ -212,6 +240,13 @@ Will be used in: CTA sections, rule explanation cards, pricing modules.
 ```text
 Using the official Meetu mascot 觅遇仔 as the exact character reference, generate a celebration variant for “齐了”, success, completion, and launch-moment scenarios.
 
+VISUAL INPUT (must be provided alongside this prompt):
+- Primary reference: 设计语言参考/Meetu元素参考/0 Meetu mascot master.png
+- Style reference: 设计语言参考/Meetu元素参考/stickers/Meetu Mascot Chat Stickers Set 1.png
+- Style reference: 设计语言参考/Meetu元素参考/stickers/Meetu Mascot Chat Stickers Set 2.png
+
+The output MUST preserve the exact character identity from the primary reference. Style references show the approved rendering style for variant poses.
+
 Character constraints:
 - exact same mascot identity
 - no redesign, no extra puzzle count changes; keep the approved two-piece puzzle logic exactly
@@ -236,6 +271,13 @@ Will be used in: success states, “齐了” notifications, group-formed confir
 
 ```text
 Using the official Meetu mascot 觅遇仔 as the exact character reference, generate a gentle reminder variant for pricing, rules, FAQ, and trust sections.
+
+VISUAL INPUT (must be provided alongside this prompt):
+- Primary reference: 设计语言参考/Meetu元素参考/0 Meetu mascot master.png
+- Style reference: 设计语言参考/Meetu元素参考/stickers/Meetu Mascot Chat Stickers Set 1.png
+- Style reference: 设计语言参考/Meetu元素参考/stickers/Meetu Mascot Chat Stickers Set 2.png
+
+The output MUST preserve the exact character identity from the primary reference. Style references show the approved rendering style for variant poses.
 
 Character constraints:
 - preserve mascot identity exactly
