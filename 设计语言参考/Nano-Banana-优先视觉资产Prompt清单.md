@@ -97,7 +97,7 @@ Text direction:
   "齐了出发"
   "放心来"
   "真的好玩"
-  "一起搞"
+  "一起搞一场"
   "搭子认证"
 - Keep text short, graphic, decorative, and highly legible
 
