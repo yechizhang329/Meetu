@@ -39,3 +39,4 @@
 - B 平台介绍：`welcome/`、`trust/`
 - C 活动收费说明：`trust/`、`status/`
 - D 女生专场：`trust/`、`vibe/`
+- E 联系我们：`welcome/`、`trust/`、`vibe/`
