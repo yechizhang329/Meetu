@@ -65,6 +65,7 @@
 | P0 | `mascot-温和提醒.png` | mascot variant | pricing / FAQ / rule pages |
 | P1 | `kv-主理人招募主视觉.png` | hero KV | host recruitment page |
 | P1 | `kv-女生专场主视觉.png` | hero KV | girls-only page |
+| P1 | `scene-B页九类活动总览图.png` | category scene board | platform intro |
 | P2 | `scene-平台介绍生活方式拼贴.png` | lifestyle scene | platform intro |
 | P2 | `scene-收费说明规则透明视觉.png` | trust scene | pricing / rules |
 
@@ -414,6 +415,57 @@ Style:
 - no generic picnic-template feeling
 ```
 
+### P1-03 `scene-B页九类活动总览图.png`
+
+```text
+Create one single finished visual board for the Meetu platform-introduction page that replaces the current 9-category CSS grid.
+
+VISUAL INPUT:
+- one approved brand color guide image
+- one approved existing Meetu platform-intro visual
+- one approved typography / component guide image
+- one approved existing activity-related hero or plaza visual
+
+Output target:
+- one independent finished scene board asset
+- final filename: scene-B页九类活动总览图.png
+
+Goal:
+- show all 9 activity types in one visually organized image
+- replace fragile HTML grid rendering in WeChat CMS with one stable image asset
+- help users understand breadth of activity choices within 3 seconds
+
+Required categories to include in Chinese:
+- 桌游·推理
+- 密室·剧本杀
+- 派对·社交
+- 运动·户外
+- City Walk
+- 学习·搭伴
+- 观影·展览
+- 交流·分享
+- 惊喜·随机
+
+Text direction:
+- Chinese is primary
+- English may appear only as tiny decorative accents, not as main labels
+
+Style:
+- a polished editorial board, not an e-commerce category grid
+- warm orange / cream / cocoa as the main palette
+- youthful, campus, social, trustworthy
+- use icons / badges / stickers / route accents / cutout shapes as supporting decoration
+- do not use app screenshots
+- do not use generic stock-photo collage
+- do not look childish or nightlife-coded
+
+Layout requirements:
+- 9 categories must all be visible in one finished composition
+- hierarchy should be clear, but not mechanically uniform
+- at least 1-2 categories can be visually emphasized to avoid dead grid feeling
+- spacing and grouping should remain readable on a phone screen
+```
+
 ---
 
 ## 五、P2 Prompt
@@ -486,11 +538,12 @@ Style:
 
 11. `kv-主理人招募主视觉.png`
 12. `kv-女生专场主视觉.png`
+13. `scene-B页九类活动总览图.png`
 
 ### 第三轮补齐
 
-13. `scene-平台介绍生活方式拼贴.png`
-14. `scene-收费说明规则透明视觉.png`
+14. `scene-平台介绍生活方式拼贴.png`
+15. `scene-收费说明规则透明视觉.png`
 
 ---
 
