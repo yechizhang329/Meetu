@@ -21,6 +21,7 @@
 - 中文为主，英文只作少量装饰
 - 画面文案要短，适合直接做图内标题
 - 不出现禁用词：诚意金 / 免费 / 0成本 / 拼团 / 成团 / 开搭 / 觅途
+- 当前版本暂时使用「觅友」一词
 
 ### 3. 统一输入建议
 
@@ -49,8 +50,8 @@ Goal:
 
 Chinese text to include:
 - 主标题：欢迎来到广场
-- 副标题：大家的活动分享区
-- 辅助文案：在这里认识新朋友、分享好去处、找到下一场活动
+- 副标题：觅友们的公共客厅
+- 辅助文案：这里是觅遇社的广场。分享、种草、找搭子、随便聊——没有格式要求，想说什么就说。
 
 Style:
 - warm, bright, open, welcoming
@@ -78,14 +79,16 @@ Output target:
 - aspect ratio: 3:4 vertical
 
 Goal:
-- teach users that the plaza is where they can post activity recaps and recommend places
-- make sharing feel easy, social, and rewarding
+- teach users that the plaza is where they can plant ideas for interesting activities, find buddies to join, and come back to share real feelings after joining
+- make the action chain feel clear: 种草 → 找搭子搭上 → 参加 → 分享感受
 
 Chinese text to include:
-- 主标题：晒出你的搭子时刻
-- 要点 1：参加完活动？来广场晒个图
-- 要点 2：发现了好地方？种草给大家
-- 要点 3：你的分享可能帮别人找到下一场
+- 主标题：种草好活动，找搭子搭上
+- 小标题：玩完了也来说一句
+- 要点 1：刷到心动的活动？发条动态，找搭子一起搭上
+- 要点 2：周末剧本杀、City Walk、观影局……想去就来种草
+- 要点 3：参加完的活动也值得聊——好玩的、踩雷的、遇到神搭的
+- 要点 4：你的真实感受，可能帮到下一个还在犹豫的人
 
 Style:
 - light collage of post cards / photo cards / sticker notes
@@ -112,14 +115,16 @@ Output target:
 - aspect ratio: 3:4 vertical
 
 Goal:
-- tell users they can casually post and find activity buddies in the plaza
-- make posting feel low-pressure, everyday, and immediate
+- tell users they can casually post daily life and campus life updates, and find many kinds of buddies in the plaza
+- make posting feel low-pressure, everyday, immediate, and not limited to platform activity types
 
 Chinese text to include:
-- 主标题：想找搭子？发一条就好
-- 要点 1：周末想打球但缺人？发出来
-- 要点 2：想约自习又怕一个人？喊一声
-- 要点 3：不用等活动上线，广场随时可以约
+- 主标题：不只是活动，日常也能聊
+- 小标题：想找什么搭子，直接喊
+- 要点 1：校园日常、考试吐槽、今天的奶茶——都可以发
+- 要点 2：想找运动搭子、饭搭子、自习搭子、逛街搭子？说一声就好
+- 要点 3：不限于平台上的活动类型，什么搭子需求都能在广场喊
+- 要点 4：说不定你发的那条，刚好有人在等
 
 Style:
 - relaxed, conversational, daily-life social energy
@@ -146,14 +151,26 @@ Output target:
 Goal:
 - communicate plaza rules clearly without sounding harsh or bureaucratic
 - keep the tone warm, readable, and community-oriented
+- build the image as a clean visual base that can take an additional text layer later if needed
 
 Chinese text to include:
 - 主标题：几条小约定
-- 规则 1：友善交流，尊重每一位搭子
-- 规则 2：不发广告、不刷屏、不引流
-- 规则 3：活动相关的费用争议请联系主理人
-- 规则 4：违规内容会被移除，严重的会限制使用
-- 底部文案：好的氛围靠大家一起维护
+- 小标题：让广场玩得更舒服
+- 规则 1：做真实的自己
+- 规则 1 说明：分享真实的想法和体验，不搬运、不编造、不立人设。
+- 规则 2：友善说话
+- 规则 2 说明：可以有态度，但别攻击、别歧视、别阴阳。大家出来玩，开心最重要。
+- 规则 3：保护隐私
+- 规则 3 说明：别发他人的照片、联系方式或个人信息。尊重每个人的边界。
+- 规则 4：搭上了就到
+- 规则 4 说明：说好的活动请守约。放鸽子不只是浪费别人时间，也会影响你的信用。
+- 规则 5：别打广告
+- 规则 5 说明：广场不是推广位。代购、引流、刷屏，管理员看到会清理。
+- 规则 6：线下注意安全
+- 规则 6 说明：和不太熟的搭子见面，选公共场所，跟朋友说一声你去哪。
+- 规则 7：不舒服就说
+- 规则 7 说明：遇到骚扰、不友善行为或任何让你不舒服的事，随时向平台反馈。
+- 底部文案：违规内容会被删除。多次违规会限制广场使用。
 
 Style:
 - clean, readable, gentle authority
@@ -162,7 +179,8 @@ Style:
 
 Composition:
 - text readability is top priority
-- use one strong title area, then a clean rule list with visual hierarchy
+- use one strong title area, then a clean rule list with clear hierarchy
+- this image may be used as a designed base first, with the full rule text overlaid later as a separate text layer
 - decoration should be restrained: soft badges, tiny route lines, check markers, rounded panels
 - do not let decoration compete with the rule text
 - avoid feeling like a policy document or admin bulletin
