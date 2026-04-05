@@ -141,36 +141,26 @@ Composition:
 ## Prompt 04 `plaza-pinned-04-社区规则.png`
 
 ```text
-Create one finished vertical visual for the fourth image of Meetu plaza pinned post.
+Create one clean vertical base visual for the fourth image of Meetu plaza pinned post.
 
 Output target:
-- one independent final image
+- one independent base image for later text overlay
 - final filename: plaza-pinned-04-社区规则.png
 - aspect ratio: 3:4 vertical
 
 Goal:
 - communicate plaza rules clearly without sounding harsh or bureaucratic
 - keep the tone warm, readable, and community-oriented
-- build the image as a clean visual base that can take an additional text layer later if needed
+- build the image as a clean visual base that is explicitly designed for a later text layer containing all 7 rules
 
 Chinese text to include:
 - 主标题：几条小约定
 - 小标题：让广场玩得更舒服
-- 规则 1：做真实的自己
-- 规则 1 说明：分享真实的想法和体验，不搬运、不编造、不立人设。
-- 规则 2：友善说话
-- 规则 2 说明：可以有态度，但别攻击、别歧视、别阴阳。大家出来玩，开心最重要。
-- 规则 3：保护隐私
-- 规则 3 说明：别发他人的照片、联系方式或个人信息。尊重每个人的边界。
-- 规则 4：搭上了就到
-- 规则 4 说明：说好的活动请守约。放鸽子不只是浪费别人时间，也会影响你的信用。
-- 规则 5：别打广告
-- 规则 5 说明：广场不是推广位。代购、引流、刷屏，管理员看到会清理。
-- 规则 6：线下注意安全
-- 规则 6 说明：和不太熟的搭子见面，选公共场所，跟朋友说一声你去哪。
-- 规则 7：不舒服就说
-- 规则 7 说明：遇到骚扰、不友善行为或任何让你不舒服的事，随时向平台反馈。
-- 底部文案：违规内容会被删除。多次违规会限制广场使用。
+- This prompt should only include the top-level title area:
+- 主标题：几条小约定
+- 小标题：让广场玩得更舒服
+- Do NOT render the full 7 rules as generated image text.
+- The detailed rule copy will be overlaid later as a separate text layer.
 
 Style:
 - clean, readable, gentle authority
@@ -179,8 +169,9 @@ Style:
 
 Composition:
 - text readability is top priority
-- use one strong title area, then a clean rule list with clear hierarchy
-- this image may be used as a designed base first, with the full rule text overlaid later as a separate text layer
+- reserve a clear, stable content area for the later 7-rule text overlay
+- use one strong title area, then leave enough calm negative space or soft panel structure below for text placement
+- the base image must look complete even before the text layer is added, but it should not feel busy
 - decoration should be restrained: soft badges, tiny route lines, check markers, rounded panels
 - do not let decoration compete with the rule text
 - avoid feeling like a policy document or admin bulletin
