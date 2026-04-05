@@ -2,7 +2,7 @@
 
 > 目标：把当前需要生成的视觉资产按优先级排清楚，并改成「**一个 prompt = 一个具体资产文件**」的执行方式。  
 > 适用：Nano Banana 或其他外部生图平台。  
-> 原则：中文为主、英文仅少量装饰；PNG-first；每条 prompt 都对应一个最终文件，不再生成整板后 crop。
+> 原则：中文为主、英文仅少量装饰；PNG-first；每条 prompt 都对应一个最终文件。Sticker 仍按整组同图生成，但必须明确板式规则，不能挤在一起。
 
 ---
 
@@ -12,8 +12,10 @@
 
 - 必须采用 `reference PNG + prompt` 的方式执行
 - 不允许只靠文字重新想象 `觅遇仔`
-- sticker / badge / bubble / route 这类元素，默认一条 prompt 只生成一个元素
-- 不再生成 sticker sheet / sample board / toolkit board 再 crop
+- sticker / badge / bubble / route 这类元素，改为一条 prompt 生成一张 **结构化 sticker board**
+- 每张 sticker board 只使用 `3x3` 或 `4x4` 排布
+- 每个 sticker 之间必须预留 **100px** 以上间距
+- 不允许 category headers / sample board titles / 邻近元素污染 crop 区
 
 ### 2. 语言原则
 
@@ -53,12 +55,8 @@
 
 | 优先级 | 输出文件 | 资产类型 | 用途 |
 |---|---|---|---|
-| P0 | `sticker-cta-搭上就走.png` | CTA sticker | CMS / Banner / Post |
-| P0 | `sticker-badge-齐了出发.png` | badge sticker | success / group formed |
-| P0 | `sticker-badge-放心来.png` | trust badge | trust / girls-only / pricing |
-| P0 | `sticker-badge-搭子认证.png` | trust badge | platform / verification |
-| P0 | `sticker-bubble-出发时间.png` | info bubble | activity cards / posters |
-| P0 | `sticker-route-clear-price-easy-call.png` | route label | pricing / rule pages |
+| P0 | `sticker-pack-01-行动与信任标签.png` | sticker board | CMS / Banner / Post |
+| P0 | `sticker-pack-02-信息与路径装饰.png` | sticker board | pricing / guide / trust |
 | P0 | `mascot-欢迎招手.png` | mascot variant | onboarding / welcome |
 | P0 | `mascot-举牌引导.png` | mascot variant | CTA / guide / explainer |
 | P0 | `mascot-齐了庆祝.png` | mascot variant | success state / 齐了 |
@@ -73,10 +71,10 @@
 
 ## 三、P0 Prompt
 
-### P0-01 `sticker-cta-搭上就走.png`
+### P0-01 `sticker-pack-01-行动与信任标签.png`
 
 ```text
-Create one single reusable CTA sticker for Meetu.
+Create one reusable sticker board for Meetu, focused on action / trust / CTA language.
 
 VISUAL INPUT:
 - one approved brand color guide image
@@ -84,8 +82,8 @@ VISUAL INPUT:
 - one approved existing Meetu hero or plaza visual
 
 Output target:
-- one single independent sticker asset
-- final filename: sticker-cta-搭上就走.png
+- one finished sticker board image
+- final filename: sticker-pack-01-行动与信任标签.png
 
 Style:
 - warm orange as anchor
@@ -93,162 +91,69 @@ Style:
 - rounded, polished, slightly tilted, direct and energetic
 - youthful campus social tone, not childish, not salesy
 
-Text:
-- primary Chinese text: 搭上就走
-- optional decorative English accent: go with it
+Sticker set:
+- 搭上就走
+- 齐了出发
+- 放心来
+- 搭子认证
+- 费用透明
+- 一起搞一场
+- 主理人带搭
+- 真的好玩
+- 这场齐了
 
 Execution constraints:
-- only one sticker in the image
-- no neighboring stickers
+- arrange stickers in either a 3x3 or 4x4 board
+- keep at least 100px empty spacing between every sticker
+- each sticker must stand alone cleanly for later crop
 - no sheet title
 - no category header
-- no board layout
-- leave clean margin around the sticker
+- no framing UI, no sample-device mockup
+- keep clean margin around the whole board
 ```
 
-### P0-02 `sticker-badge-齐了出发.png`
+### P0-02 `sticker-pack-02-信息与路径装饰.png`
 
 ```text
-Create one single reusable badge sticker for Meetu.
+Create one reusable sticker board for Meetu, focused on info / bubble / route / rule-support elements.
 
 VISUAL INPUT:
 - one approved brand color guide image
 - one approved typography/component guide image
-- one approved existing Meetu hero or plaza visual
+- one approved existing Meetu trust or pricing visual
 
 Output target:
-- one single independent badge asset
-- final filename: sticker-badge-齐了出发.png
+- one finished sticker board image
+- final filename: sticker-pack-02-信息与路径装饰.png
 
 Style:
-- warm, exciting, ready-to-go
-- orange / cream / cocoa
-- can include tiny celebratory dots or motion accents
-- should feel like a group is formed and ready to start
-
-Text:
-- primary Chinese text: 齐了出发
-- optional decorative English accent: ready to go
-
-Execution constraints:
-- one badge only
-- no board, no sample layout, no extra UI framing
-```
-
-### P0-03 `sticker-badge-放心来.png`
-
-```text
-Create one single reusable trust badge for Meetu.
-
-VISUAL INPUT:
-- one approved brand color guide image
-- one approved typography/component guide image
-- one approved existing Meetu trust-oriented page visual
-
-Output target:
-- one single independent trust badge
-- final filename: sticker-badge-放心来.png
-
-Style:
-- warm, calm, trustworthy
-- orange anchor with cream and soft blue-gray balance
-- should feel welcoming rather than authoritative
-
-Text:
-- primary Chinese text: 放心来
-- optional decorative English accent: trust comes first
-
-Execution constraints:
-- one badge only
-- no sheet view, no neighboring elements
-```
-
-### P0-04 `sticker-badge-搭子认证.png`
-
-```text
-Create one single reusable verification badge for Meetu.
-
-VISUAL INPUT:
-- one approved brand color guide image
-- one approved typography/component guide image
-- one approved platform-intro visual
-
-Output target:
-- one single independent badge
-- final filename: sticker-badge-搭子认证.png
-
-Style:
-- clear and reliable
-- not governmental, not fintech, not enterprise
-- should belong to a student activity-buddy social platform
-
-Text:
-- primary Chinese text: 搭子认证
-- optional decorative English accent: verified
-
-Execution constraints:
-- one badge only
-- no extra icons around it unless they are part of the badge itself
-```
-
-### P0-05 `sticker-bubble-出发时间.png`
-
-```text
-Create one single reusable speech-bubble / info-bubble sticker for Meetu.
-
-VISUAL INPUT:
-- one approved brand color guide image
-- one approved component guide image
-- one approved existing event-page visual
-
-Output target:
-- one single independent info bubble
-- final filename: sticker-bubble-出发时间.png
-
-Style:
-- light, clean, easy to drop into a card or hero collage
-- should feel like useful event information, not chat-app UI
-
-Text:
-- primary Chinese text: 出发时间
-- optional micro accent: know before you go
-
-Execution constraints:
-- one bubble only
-- no neighboring labels
-- no board composition
-```
-
-### P0-06 `sticker-route-clear-price-easy-call.png`
-
-```text
-Create one single reusable route-label decoration for Meetu pricing pages.
-
-VISUAL INPUT:
-- one approved brand color guide image
-- one approved pricing / trust page visual
-- one approved component guide image
-
-Output target:
-- one independent route label asset
-- final filename: sticker-route-clear-price-easy-call.png
-
-Style:
-- pricing / rules explanation oriented
+- pricing / rules / guidance oriented
 - soft blue-gray + cream with controlled warm orange accent
 - editorial route-line language, not corporate UI
+- should feel useful, clear, and easy to drop into CMS pages
 
-Text:
-- primary Chinese text: 费用透明
-- secondary decorative English accent: clear price / easy call
+Sticker set:
+- 出发时间
+- 集合地点
+- 规则先看
+- 看完再搭
+- 清楚再搭
+- 安心出发
+- 费用透明
+- 放心搭上
+- 路径 / 节点型装饰贴
 
 Execution constraints:
-- one route label only
-- no surrounding toolkit elements
-- can include line / nodes if they belong to the same one asset
+- arrange stickers in either a 3x3 or 4x4 board
+- keep at least 100px empty spacing between every sticker
+- each sticker must stand alone cleanly for later crop
+- no sheet title
+- no category header
+- no surrounding toolkit text
+- no phone mockup
 ```
 
-### P0-07 `mascot-欢迎招手.png`
+### P0-03 `mascot-欢迎招手.png`
 
 ```text
 Using the official Meetu mascot 觅遇仔 as the exact character reference, generate one welcome / waving mascot asset.
@@ -277,7 +182,7 @@ Execution constraints:
 - clean background or transparent-friendly composition
 ```
 
-### P0-08 `mascot-举牌引导.png`
+### P0-04 `mascot-举牌引导.png`
 
 ```text
 Using the official Meetu mascot 觅遇仔 as the exact character reference, generate one sign-holding guide mascot asset.
@@ -305,7 +210,7 @@ Execution constraints:
 - clean background
 ```
 
-### P0-09 `mascot-齐了庆祝.png`
+### P0-05 `mascot-齐了庆祝.png`
 
 ```text
 Using the official Meetu mascot 觅遇仔 as the exact character reference, generate one celebration mascot asset for “齐了，出发”.
@@ -333,7 +238,7 @@ Execution constraints:
 - background clean
 ```
 
-### P0-10 `mascot-温和提醒.png`
+### P0-06 `mascot-温和提醒.png`
 
 ```text
 Using the official Meetu mascot 觅遇仔 as the exact character reference, generate one gentle reminder mascot asset.
