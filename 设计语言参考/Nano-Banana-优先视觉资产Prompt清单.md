@@ -38,7 +38,8 @@
 - 视觉资产中的文字内容以中文为主，英文仅用于少量装饰性点缀，不能反客为主
 - 不走 generic stock photo 路线
 - 优先 illustrated / hybrid graphic-ad / editorial collage / stylized UI-visual route
-- 输出时默认考虑后续可以裁成：Banner / H5 hero / 卡片 / sticker / badge
+- Sticker / badge / bubble / route 这类小资产，不再走“大图整板生成后再 crop”的路线；默认按“**一个元素 = 一个独立 prompt = 一个独立输出文件**”执行
+- 输出时默认考虑后续可以直接落到：Banner / H5 hero / 卡片 / sticker / badge
 - 若用到 mascot，必须以官方批准的 `觅遇仔` master PNG 为唯一权威源，不允许靠文字重新想象角色
 
 ---
@@ -62,17 +63,17 @@
 - corner tape / paper tags
 - soft badge capsules
 
-#### Prompt 01：品牌贴纸系统主包
+#### Prompt 01：品牌贴纸单元素模板（通用装饰类）
 
 ```text
-Create a sticker-pack style visual asset sheet for Meetu, designed for later cropping and reuse in mobile H5 pages, CMS subpages, posters, and banners.
+Create one single reusable sticker element for Meetu, not a whole sheet. The output must contain only one independent sticker / badge / bubble / route element on a clean transparent-friendly or clean light background.
 
 VISUAL INPUT (must be provided alongside this prompt):
 - one approved brand color / typography guide image
 - one approved existing hero or plaza visual that represents the current Meetu art direction
 - one approved UI component guide image
 
-The sticker pack visual style must be compatible with these existing brand assets.
+The output visual style must be compatible with these existing brand assets.
 
 Style:
 - youthful campus social platform
@@ -82,15 +83,6 @@ Style:
 - polished, premium, not childish, not cartoon-baby style
 - the sticker system should feel like it belongs to a "搭子" (activity buddy) social context — casual, group-oriented, activity-driven, not dating or 1v1 messaging
 - include a subtle sense of movement and connection, like people going from stranger to buddy, using route lines, dots, arrows, bridge-like linking shapes, or connection markers
-
-Required asset types in one sheet:
-- 6 tilted badges
-- 6 capsule trust tags
-- 4 speech bubbles
-- 4 route / path dot strips
-- 4 mini CTA labels
-- 4 paper-tape corner tags
-- 4 “note” style labels
 
 Text direction:
 - Chinese micro-copy should be primary and appear first, for example:
@@ -109,17 +101,32 @@ Text direction:
   "host energy"
 - Keep text short, graphic, decorative, and highly legible
 
+Execution mode:
+- Generate only one element per run
+- Do not compose multiple stickers into one board
+- Leave enough clean margin around the element
+- Do not include category headers, surrounding sample elements, sheet labels, or framing guides
+
+Element slot to generate in this run:
+[fill one only, for example: tilted badge / capsule trust tag / speech bubble / route strip / mini CTA label / paper tape / note label]
+
+Primary copy to generate in this run:
+[fill one only, for example: 搭上就走]
+
+Secondary decorative accent if needed:
+[optional, for example: Nice to Meetu]
+
 Design intent:
-This is not a poster. It is a reusable brand decoration kit. Each item should feel like it belongs to the same visual system.
+This is not a poster and not a full sticker sheet. It is one reusable brand decoration unit. The single output should feel finished enough to be dropped directly into a page.
 
 Output:
-one high-resolution asset sheet on a clean light background, ready for cropping.
+one high-resolution single sticker asset, clean and directly reusable.
 ```
 
-#### Prompt 02：规则 / 信任 / 收费说明标签包
+#### Prompt 02：规则 / 信任 / 收费说明单元素模板
 
 ```text
-Create a reusable UI decoration sheet for Meetu focused on pricing, trust, and rule explanation pages.
+Create one single reusable UI decoration element for Meetu focused on pricing, trust, and rule explanation pages. Do not create a full sheet. Output only one independent label / badge / bubble / route element.
 
 VISUAL INPUT (must be provided alongside this prompt):
 - one approved brand color / typography guide image
@@ -156,7 +163,21 @@ Possible copy fragments to embed:
   "know before you go"
   "all clear"
 
-The sheet should feel like a toolkit for making rule pages look trustworthy and designed, not dry.
+Execution mode:
+- Generate only one element per run
+- Leave clean space around the element
+- Do not generate neighboring stickers, sheet titles, category labels, or sample boards
+
+Element slot to generate in this run:
+[fill one only, for example: trust badge / pricing bubble / route label / rule tag / CTA-adjacent note]
+
+Primary copy to generate in this run:
+[fill one only, for example: 费用透明]
+
+Secondary decorative accent if needed:
+[optional, for example: no hidden cost]
+
+The output should feel like a direct-use trust / pricing decoration unit for a real page, not a toolkit preview sheet.
 ```
 
 ---
