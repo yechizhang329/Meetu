@@ -69,7 +69,44 @@
 
 ---
 
-## 三、P0 Prompt
+## 三、现有资产对照评估
+
+### P0-01 `sticker-pack-01-行动与信任标签.png` 覆盖率
+
+当前视觉资产库：`品牌资产统一/stickers-selected-v2/`
+
+**已满足 / 可直接复用**
+- `join-now-burst.png` / `join-now-capsule.png` / `join-now-tag.png`
+  - 对应：`搭上就走`
+- `group-ready-badge.png` / `group-ready-bubble.png`
+  - 对应：`齐了出发`
+- `come-easy-capsule.png` / `come-easy-round.png` / `come-easy-shield.png`
+  - 对应：`放心来`
+- `buddy-verified-badge.png` / `buddy-verified-shield.png`
+  - 对应：`搭子认证`
+- `really-fun-round.png` / `really-fun-sparkle.png`
+  - 对应：`真的好玩`
+
+**部分覆盖但不够稳定**
+- `group-ready-mascot.png`
+  - 能承担状态型庆祝，但不适合作为通用行动标签
+- `start-a-scene-mascot.png`
+  - 偏 mascot CTA，不够像标准文字 sticker
+
+**当前仍缺 / 需要补生成**
+- `费用透明`
+- `一起搞一场`
+- `主理人带搭`
+- `这场齐了`
+
+**结论**
+- 现有库已经覆盖了 P0-01 的动作 / 信任基础层，可支撑第一轮 CMS 使用
+- 但还缺少 **主理人语境** 和 **价格透明语境**
+- 因此不需要重做整套 P0-01，只需要补一张聚焦缺口的补充 sticker sheet
+
+---
+
+## 四、P0 Prompt
 
 ### P0-01 `sticker-pack-01-行动与信任标签.png`
 
@@ -90,6 +127,7 @@ Style:
 - cream / cocoa brown / soft lavender / blue-gray as secondary support
 - rounded, polished, slightly tilted, direct and energetic
 - youthful campus social tone, not childish, not salesy
+- solid white background for the whole sticker sheet
 
 Sticker set:
 - 搭上就走
@@ -106,10 +144,61 @@ Execution constraints:
 - arrange stickers in either a 3x3 or 4x4 board
 - keep at least 100px empty spacing between every sticker
 - each sticker must stand alone cleanly for later crop
+- the full sticker sheet background must be pure white
 - no sheet title
 - no category header
 - no framing UI, no sample-device mockup
 - keep clean margin around the whole board
+```
+
+### P0-01B `sticker-pack-01b-主理人与价格信任补充.png`
+
+```text
+Create one supplemental sticker sheet for Meetu, specifically filling the gaps not yet covered by the current action / trust sticker library.
+
+VISUAL INPUT:
+- one approved brand color guide image
+- one approved typography/component guide image
+- one approved existing Meetu hero or plaza visual
+- one approved current sticker-sheet image from the existing library
+
+Output target:
+- one finished sticker board image
+- final filename: sticker-pack-01b-主理人与价格信任补充.png
+
+Role:
+- this is NOT a full replacement for sticker-pack-01
+- this is a focused supplement for host-specific and pricing-trust scenarios
+
+Style:
+- white background for the whole sticker sheet
+- warm orange remains the anchor
+- cream / cocoa brown / soft lavender / blue-gray as support
+- same family feel as the existing Meetu sticker library
+- rounded, polished, slightly tilted, energetic but controlled
+- Chinese-first, English only if needed as tiny decoration
+
+Required stickers:
+- 费用透明
+- 一起搞一场
+- 主理人带搭
+- 这场齐了
+- 开一场
+- 放心搭上
+- 主理人招募
+- 真的会看
+- 不是机器人
+
+Execution constraints:
+- arrange stickers in either a 3x3 or 4x4 board
+- keep at least 100px empty spacing between every sticker
+- every sticker must be individually clean and crop-ready
+- full sheet background must be pure white
+- no sheet title
+- no category header
+- no surrounding toolkit labels
+- no mockup frame
+- keep clean outer margin around the board
 ```
 
 ### P0-02 `sticker-pack-02-信息与路径装饰.png`
@@ -131,6 +220,7 @@ Style:
 - soft blue-gray + cream with controlled warm orange accent
 - editorial route-line language, not corporate UI
 - should feel useful, clear, and easy to drop into CMS pages
+- solid white background for the whole sticker sheet
 
 Sticker set:
 - 出发时间
@@ -147,6 +237,7 @@ Execution constraints:
 - arrange stickers in either a 3x3 or 4x4 board
 - keep at least 100px empty spacing between every sticker
 - each sticker must stand alone cleanly for later crop
+- the full sticker sheet background must be pure white
 - no sheet title
 - no category header
 - no surrounding toolkit text
@@ -268,7 +359,7 @@ Execution constraints:
 
 ---
 
-## 四、P1 Prompt
+## 五、P1 Prompt
 
 ### P1-01 `kv-主理人招募主视觉.png`
 
