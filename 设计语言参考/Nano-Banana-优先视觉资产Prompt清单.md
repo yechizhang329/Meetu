@@ -95,9 +95,11 @@
 
 **当前仍缺 / 需要补生成**
 - `费用透明`
-- `一起搞一场`
 - `主理人带搭`
 - `这场齐了`
+
+**已有但未纳入 v2 / 待质量复核**
+- `一起搞一场`
 
 **结论**
 - 现有库已经覆盖了 P0-01 的动作 / 信任基础层，可支撑第一轮 CMS 使用
@@ -180,17 +182,15 @@ Style:
 
 Required stickers:
 - 费用透明
-- 一起搞一场
 - 主理人带搭
 - 这场齐了
+
+Recommended optional extras only if spacing allows:
 - 开一场
 - 放心搭上
-- 主理人招募
-- 真的会看
-- 不是机器人
 
 Execution constraints:
-- arrange stickers in either a 3x3 or 4x4 board
+- arrange stickers in either a single row (1x3) or a 2x2 board with one slot intentionally left empty
 - keep at least 100px empty spacing between every sticker
 - every sticker must be individually clean and crop-ready
 - full sheet background must be pure white
