@@ -2,7 +2,7 @@
 
 ## 1. 学习范围
 
-- 参考仓库：`设计语言参考/awesome-design-md/`
+- 参考仓库：本地学习用 `awesome-design-md` 克隆（未作为子仓库入库）
 - 当前本地 `DESIGN.md` 数量：58
 - 第一轮重点拆读：
   - Airbnb
