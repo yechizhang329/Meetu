@@ -10,11 +10,12 @@
 
 ### 1. 统一视觉基线
 
-- 暖橙为主，奶油白 / 可可棕为辅助
-- 年轻、校园、轻松、可信
-- 不夜店化，不低幼，不电商促销化
+- 暖橙为主，奶油白 / 可可棕为辅助，可加入少量更活泼的蜜桃橘 / 轻莓粉 / 明亮珊瑚做点缀
+- 年轻、时尚、活泼、校园、轻松、可信
+- 不夜店化，不低幼，不电商促销化，不做沉闷公告感
 - 优先呈现真实社交氛围，而不是抽象 UI 示意图
-- 如果出现觅遇仔，必须与官方 master 形象一致
+- 如果出现人物，统一使用**亚洲肤色 / 东亚大学生面孔**，年龄感控制在大学生区间
+- 如果出现觅遇仔，必须与现有 nanobanana 参考图中的品牌角色气质保持一致
 
 ### 2. 统一文本原则
 
@@ -23,7 +24,14 @@
 - 不出现禁用词：诚意金 / 免费 / 0成本 / 拼团 / 成团 / 开搭 / 觅途
 - 当前版本暂时使用「觅友」一词
 
-### 3. 统一输入建议
+### 3. 统一排版与字体气质
+
+- 文字要有设计感，但不做难读的花字
+- 标题建议更年轻、更时尚：粗字重、明确对比、干净留白
+- 可以有轻海报感 / 校园 editorial 感，但不要像官方通知
+- 如果画面里需要英文装饰，只能做极少量的辅助，不抢中文主标题
+
+### 4. 统一输入建议
 
 执行时统一只从以下资产池中取参考图：
 - `设计语言参考/Meetu元素参考/nanobanana图片生成v1/广场配图/`
@@ -67,9 +75,10 @@ Chinese text to include:
 
 Style:
 - warm, bright, open, welcoming
-- orange / cream / soft cocoa
-- friendly editorial poster feeling
+- orange / cream / soft cocoa with lively peach accents
+- youthful, stylish, slightly editorial poster feeling
 - rounded cards, soft stickers, subtle route lines or chat-bubble accents
+- if people appear, they should read as East Asian college-age users
 - if a mascot-like character appears, it should visually stay close to the existing Meetu illustration tone shown in the provided nanobanana references
 
 Composition:
@@ -112,9 +121,10 @@ Chinese text to include:
 
 Style:
 - light collage of post cards / photo cards / sticker notes
-- youth editorial, playful but clean
-- warm orange anchor with cream and soft brown support
+- youth editorial, playful, stylish, but clean
+- warm orange anchor with cream and soft brown support, plus small lively coral accents
 - more social-sharing energy than platform-intro energy
+- if people appear, they should read as East Asian college-age users
 
 Composition:
 - title at top with strong readability
@@ -158,6 +168,8 @@ Style:
 - relaxed, conversational, daily-life social energy
 - slightly more chat-like and interactive than image 02
 - warm orange / cream / cocoa, with small lively accents
+- youthful and fashionable rather than plain utility-poster
+- if people appear, they should read as East Asian college-age users
 
 Composition:
 - title first, then three low-pressure daily-use scenarios
@@ -166,57 +178,46 @@ Composition:
 - keep reading flow obvious on a phone screen
 ```
 
-## Prompt 04 `plaza-pinned-04-社区规则.png`
+## Prompt 04 `plaza-pinned-04-探索与分享.png`
 
 ```text
-Create one clean vertical base visual for the fourth image of Meetu plaza pinned post.
+Create one finished vertical visual for the fourth image of Meetu plaza pinned post.
 
 VISUAL INPUT (must be provided alongside this prompt):
 - `设计语言参考/Meetu元素参考/nanobanana图片生成v1/广场配图/0. 欢迎.png`
-  - role: plaza visual consistency reference
-- `设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/2.png`
-  - role: clean rule / trust visual style reference
+  - role: plaza visual consistency and warm tone reference
+- `设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/场景/3.png`
+  - role: social activity atmosphere reference
 - `设计语言参考/Meetu元素参考/nanobanana图片生成v1/广场配图/step3.png`
-  - role: clean informational panel rhythm reference
+  - role: post-activity sharing and social warmth reference
 
 Output target:
-- one independent base image for later text overlay
-- final filename: plaza-pinned-04-社区规则.png
+- one independent final image
+- final filename: plaza-pinned-04-探索与分享.png
 - aspect ratio: 3:4 vertical
 
 Goal:
-- communicate plaza rules clearly without sounding harsh or bureaucratic
-- keep the tone warm, readable, and community-oriented
-- build the image as a clean visual base that is explicitly designed for a later text layer containing all 7 rules
-- the later text layer should support these seven confirmed rule ideas:
-  - 做真实的自己
-  - 友善说话
-  - 保护隐私
-  - 搭上了就到
-  - 别打广告
-  - 线下注意安全
-  - 不舒服就说
+- encourage users to start exploring the plaza and share their own stories
+- make users feel that this is a space where their voice matters
+- create a feeling of "I want to post something too"
+- end the pinned post sequence on an inviting, forward-looking note
 
 Chinese text to include:
-- 主标题：几条小约定
-- 小标题：让广场玩得更舒服
-- This prompt should only include the top-level title area:
-- 主标题：几条小约定
-- 小标题：让广场玩得更舒服
-- Do NOT render the full 7 rules as generated image text.
-- The detailed rule copy will be overlaid later as a separate text layer.
+- 主标题：你的故事，广场想听
+- 副标题：发第一条动态，从这里开始
+- 辅助文案：种草一个好活动、分享一次搭子体验、或者就聊聊今天——广场的第一页，由你来写。
 
 Style:
-- clean, readable, gentle authority
-- brand orange accents, cream background, cocoa text
-- community rule card, not warning notice, not app TOS screenshot
+- warm, inviting, forward-looking energy
+- orange / cream / soft cocoa palette, with lively peach / coral accents
+- youthful, fashionable, editorial poster feeling
+- should feel like an open door or blank canvas waiting to be filled
+- if people appear, they should read as East Asian college-age users
 
 Composition:
-- text readability is top priority
-- reserve a clear, stable content area for the later 7-rule text overlay
-- use one strong title area, then leave enough calm negative space or soft panel structure below for text placement
-- the base image must look complete even before the text layer is added, but it should not feel busy
-- decoration should be restrained: soft badges, tiny route lines, check markers, rounded panels
-- do not let decoration compete with the rule text
-- avoid feeling like a policy document or admin bulletin
+- one clear title area at top
+- center visual should evoke "sharing" and "starting something" — could include open notebook, speech bubbles rising, posting cards, or a plaza scene coming alive
+- supporting elements: soft badges, route lines, warm glow, social note cards
+- should feel like the natural end of a 4-image story: welcome → learn → explore → your turn
+- avoid dense UI, stock photo look, or corporate CTA styling
 ```
