@@ -256,6 +256,7 @@ Goal:
 
 Chinese text to include:
 - 主标题：几条小约定
+- 数字标识：1 / 2 / 3 / 4 / 5 / 6 / 7
 
 Style:
 - warm-campus system first, but calmer and more trustworthy than the first four images
@@ -268,6 +269,10 @@ Composition:
 - title area only at the top
 - reserve a large clean content area underneath for later manual text overlay
 - the lower 70% of the image should be visually calm enough to support layered text later
+- pre-build seven clean text containers in the lower area, each paired with one visible number marker from 1 to 7
+- each number marker should already exist in the image as a styled visual anchor
+- each of the seven text containers should be clearly separated and ready for later manual text insertion
+- add one extra footer container at the bottom for the moderation / violation note
 - use clean rounded cards or soft dividers only as subtle structure cues, not as dense filled rule blocks
 - small icon accents are welcome, but the composition must leave generous empty space for text
 - avoid heavy gradients, cluttered collage layouts, or noisy decoration that competes with the rules
