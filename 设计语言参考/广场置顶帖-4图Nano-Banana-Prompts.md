@@ -185,11 +185,13 @@ Create one finished vertical visual for the fourth image of Meetu plaza pinned p
 
 VISUAL INPUT (must be provided alongside this prompt):
 - `设计语言参考/Meetu元素参考/nanobanana图片生成v1/广场配图/0. 欢迎.png`
-  - role: plaza visual consistency and warm tone reference
+  - role: plaza visual consistency and warm base-tone reference
 - `设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/场景/3.png`
-  - role: social activity atmosphere reference
+  - role: lively social activity atmosphere reference
 - `设计语言参考/Meetu元素参考/nanobanana图片生成v1/广场配图/step3.png`
-  - role: post-activity sharing and social warmth reference
+  - role: post-activity sharing composition reference
+- `设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/4.png`
+  - role: bolder color energy and youth visual rhythm reference
 
 Output target:
 - one independent final image
@@ -209,17 +211,20 @@ Chinese text to include:
 
 Style:
 - warm, inviting, forward-looking energy
-- orange / cream / soft cocoa palette, with brighter peach / coral / light berry accents
+- orange / cream / soft cocoa palette can be pushed harder here with brighter peach / coral / vivid berry / sunlit yellow accents
 - youthful, fashionable, lively, editorial poster feeling
+- this image is allowed to be the most energetic and imagination-opening one in the 4-image sequence
 - should feel like an open door or blank canvas waiting to be filled
 - encourage imagination, curiosity, and the urge to share something immediately
 - more “this place is alive and fun” than “please post something”
+- avoid safe poster design; prefer a more surprising, fresh, social-first composition
 - if people appear, they should read as East Asian college-age users
 
 Composition:
 - one clear title area at top
 - center visual should evoke "sharing" and "starting something" — could include open notebook, floating speech bubbles, layered post cards, hand-drawn arrows, or a plaza scene coming alive
-- supporting elements: soft badges, route lines, warm glow, social note cards, playful prompts that suggest ideas taking shape
+- supporting elements can be bolder here: colorful note cards, warm glow bursts, playful sticker-like prompts, arrows, doodles, caption snippets, or idea fragments that feel like a feed waking up
 - should feel like the natural end of a 4-image story: welcome → learn → explore → your turn
+- should make the viewer want to post something right away, not just passively read
 - avoid dense UI, stock photo look, or corporate CTA styling
 ```
