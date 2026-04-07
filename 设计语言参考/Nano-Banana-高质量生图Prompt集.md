@@ -554,12 +554,12 @@ Generate the final poster with all Chinese text embedded directly in the image.
 
 ## 七、首页 Banner 底图 Prompt
 
-### 18. 联系我们 Banner（两步法：先出底图，再叠文案）
+### 18. 联系我们 Banner（成品图直出）
 
 ```text
-Create a polished homepage contact-banner background for Meetu, 750x340px, horizontal, production-ready.
+Create a polished final homepage contact banner for Meetu, 750x340px, horizontal, production-ready.
 
-This is NOT a final poster with text. This output should be a high-quality visual background only, leaving enough clean negative space for later manual Chinese text overlay.
+This output must be a finished banner image with the final Chinese text already embedded correctly in the image.
 
 Core theme:
 - real human contact
@@ -574,13 +574,19 @@ Source mood:
 - suitable for Chinese university-age users
 
 Composition:
-- reserve a clean text-safe area on the left 42% to 48% of the image
+- reserve the left 42% to 48% of the image for the main Chinese text block
 - keep the right side as the visual focus area
 - on the right, build a refined “contact entrance” composition using two clean white card-like contact blocks or QR-like placeholders as abstract visual anchors
 - these blocks should feel like real human service entry points, not app screenshots
 - do NOT render real QR codes
-- do NOT place readable text inside those blocks
+- do NOT place important readable text inside those blocks
 - do NOT crowd the banner with too many decorative elements
+
+Render the following exact simplified Chinese text:
+Main title line 1: 有事直接来，
+Main title line 2: 我们认真回。
+Subtitle: 微信能聊｜小红书也能找到我们
+Support line: 两位真人都在
 
 Visual style:
 - dark charcoal / deep indigo base
@@ -598,10 +604,11 @@ Brand alignment:
 - if character-like presence is included, keep it soft, rounded, and friendly, consistent with Meetu’s visual language
 
 Output requirements:
-- image only
-- no Chinese text
-- no English headline
+- final banner with Chinese text already rendered
+- no English headline as the main subject
 - no logo
 - no watermark
-- leave obvious empty space for later manual text placement
+- text must be readable, stable, and correctly embedded
+- the main title should be large, bold, modern, and high-contrast
+- subtitle and support line should be smaller, clear, and elegant
 ```
