@@ -561,6 +561,12 @@ Create a polished final homepage contact banner for Meetu, 750x340px, horizontal
 
 This output must be a finished banner image with the final Chinese text already embedded correctly in the image.
 
+VISUAL INPUT (must be provided alongside this prompt):
+- one approved Meetu v4 contact-page screenshot or exported reference image
+- one approved brand color / typography guide image
+- one approved existing Meetu visual asset that shows the desired rounded, youthful brand feel
+- optional: one approved mascot or avatar reference image if a character-like presence is desired
+
 Core theme:
 - real human contact
 - warm and reachable
@@ -619,6 +625,12 @@ Output requirements:
 Create a polished final homepage banner for Meetu, 750x340px, horizontal, production-ready.
 
 This output must be a finished banner image with the final Chinese text already embedded correctly in the image.
+
+VISUAL INPUT (must be provided alongside this prompt):
+- one approved Meetu v4 pricing-page screenshot or exported reference image
+- one approved brand color / typography guide image
+- one approved existing Meetu trust / pricing visual
+- optional: one approved mascot or sticker reference image only if a small supporting character element is needed
 
 Core theme:
 - pricing clarity
