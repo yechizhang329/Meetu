@@ -152,6 +152,14 @@ Goal:
 - communicate plaza rules clearly without sounding harsh or bureaucratic
 - keep the tone warm, readable, and community-oriented
 - build the image as a clean visual base that is explicitly designed for a later text layer containing all 7 rules
+- the later text layer should support these seven confirmed rule ideas:
+  - 做真实的自己
+  - 友善说话
+  - 保护隐私
+  - 搭上了就到
+  - 别打广告
+  - 线下注意安全
+  - 不舒服就说
 
 Chinese text to include:
 - 主标题：几条小约定
