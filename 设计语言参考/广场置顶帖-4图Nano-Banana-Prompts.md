@@ -25,11 +25,15 @@
 
 ### 3. 统一输入建议
 
-执行时建议搭配：
-- 一张 approved brand color guide image
-- 一张 approved Meetu mascot master PNG（如图中要用觅遇仔）
-- 一张 approved existing plaza / banner visual
-- 一张 approved typography / component guide image
+执行时统一只从以下资产池中取参考图：
+- `设计语言参考/Meetu元素参考/nanobanana图片生成v1/广场配图/`
+- `设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/`
+- `设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/场景/`
+
+不要再额外混入：
+- mascot master
+- stickers 库
+- 其他非 `nanobanana图片生成v1` 的参考图
 
 ---
 
@@ -39,12 +43,12 @@
 Create one finished vertical visual for the first image of Meetu plaza pinned post.
 
 VISUAL INPUT (must be provided alongside this prompt):
-- `设计语言参考/Meetu元素参考/0 Meetu mascot master.png`
-  - role: mascot identity reference, if 觅遇仔 appears
 - `设计语言参考/Meetu元素参考/nanobanana图片生成v1/广场配图/0. 欢迎.png`
   - role: existing plaza welcome composition / mood reference
 - `设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/1.png`
   - role: brand color and illustration style reference
+- `设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/2.png`
+  - role: supplementary warm campus visual tone reference
 
 Output target:
 - one independent final image
@@ -66,7 +70,7 @@ Style:
 - orange / cream / soft cocoa
 - friendly editorial poster feeling
 - rounded cards, soft stickers, subtle route lines or chat-bubble accents
-- if mascot appears, use official Meetu mascot 觅遇仔 in a welcoming / waving pose
+- if a mascot-like character appears, it should visually stay close to the existing Meetu illustration tone shown in the provided nanobanana references
 
 Composition:
 - one clear hero title area
@@ -86,8 +90,8 @@ VISUAL INPUT (must be provided alongside this prompt):
   - role: activity atmosphere reference
 - `设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/场景/2.png`
   - role: youth social activity composition reference
-- `设计语言参考/品牌资产统一/stickers v1/搭上就走.png`
-  - role: sticker tone / action language reference
+- `设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/3.png`
+  - role: supporting color/sticker-density reference
 
 Output target:
 - one independent final image
@@ -130,8 +134,8 @@ VISUAL INPUT (must be provided alongside this prompt):
   - role: plaza post-style card / layout reference
 - `设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/4.png`
   - role: warm campus illustration style reference
-- `设计语言参考/品牌资产统一/stickers v1/放心来.png`
-  - role: low-pressure social tone reference
+- `设计语言参考/Meetu元素参考/nanobanana图片生成v1/广场配图/step2.png`
+  - role: low-pressure plaza composition reference
 
 Output target:
 - one independent final image
@@ -172,8 +176,8 @@ VISUAL INPUT (must be provided alongside this prompt):
   - role: plaza visual consistency reference
 - `设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/2.png`
   - role: clean rule / trust visual style reference
-- `设计语言参考/品牌资产统一/stickers v1/搭子认证.png`
-  - role: trust and community-safety sticker reference
+- `设计语言参考/Meetu元素参考/nanobanana图片生成v1/广场配图/step3.png`
+  - role: clean informational panel rhythm reference
 
 Output target:
 - one independent base image for later text overlay
