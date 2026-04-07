@@ -612,3 +612,61 @@ Output requirements:
 - the main title should be large, bold, modern, and high-contrast
 - subtitle and support line should be smaller, clear, and elegant
 ```
+
+### 19. 费用透明 Banner（成品图直出，替代上一条误用的联系我们来源）
+
+```text
+Create a polished final homepage banner for Meetu, 750x340px, horizontal, production-ready.
+
+This output must be a finished banner image with the final Chinese text already embedded correctly in the image.
+
+Core theme:
+- pricing clarity
+- real cost, no hidden surprise
+- low-friction trust
+- “价格讲清楚，搭上更痛快”
+
+Source mood:
+- based on the strongest visual language of the Meetu v4 pricing page
+- Stripe-like precision + Linear-like clarity
+- calm, modern, trustworthy
+- suitable for Chinese university-age users
+
+Composition:
+- reserve the left 42% to 48% of the image for the main Chinese text block
+- keep the right side as the visual focus area
+- on the right, build a refined pricing / rule-trust composition using one strong price card and one supporting rule card
+- emphasize the idea of “透明、清楚、提前说清”
+- do NOT use app screenshots
+- do NOT render QR codes
+- keep the layout premium, clean, and easy to scan
+
+Render the following exact simplified Chinese text:
+Main title line 1: 费用透明，
+Main title line 2: 搭上更痛快。
+Subtitle: ¥0.01 起｜门槛价防放鸽子｜正式活动按实际费用分摊
+Support line: 规则写清楚，搭上之前心里就有底
+
+Visual style:
+- light blue-gray / mist white base
+- deep indigo or slate blue as trust anchor
+- small touches of aqua / cool cyan for precision glow
+- premium information-design feel
+- not corporate finance ad
+- not e-commerce promotion
+- not childish
+
+Brand alignment:
+- youthful campus social tone
+- transparent, direct, reassuring
+- information should feel accurate, not cold
+
+Output requirements:
+- final banner with Chinese text already rendered
+- no English headline as the main subject
+- no logo
+- no watermark
+- text must be readable, stable, and correctly embedded
+- the main title should be large, bold, modern, and high-contrast
+- subtitle and support line should be smaller, clear, and elegant
+```
