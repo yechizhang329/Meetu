@@ -549,3 +549,59 @@ Typography requirements:
 
 Generate the final poster with all Chinese text embedded directly in the image.
 ```
+
+---
+
+## 七、首页 Banner 底图 Prompt
+
+### 18. 联系我们 Banner（两步法：先出底图，再叠文案）
+
+```text
+Create a polished homepage contact-banner background for Meetu, 750x340px, horizontal, production-ready.
+
+This is NOT a final poster with text. This output should be a high-quality visual background only, leaving enough clean negative space for later manual Chinese text overlay.
+
+Core theme:
+- real human contact
+- warm and reachable
+- startup-team sincerity
+- “有事直接来，会有人认真回”
+
+Source mood:
+- based on the strongest visual language of the Meetu v4 contact page
+- warm dark-tech atmosphere
+- more memorable than a standard customer-service banner
+- suitable for Chinese university-age users
+
+Composition:
+- reserve a clean text-safe area on the left 42% to 48% of the image
+- keep the right side as the visual focus area
+- on the right, build a refined “contact entrance” composition using two clean white card-like contact blocks or QR-like placeholders as abstract visual anchors
+- these blocks should feel like real human service entry points, not app screenshots
+- do NOT render real QR codes
+- do NOT place readable text inside those blocks
+- do NOT crowd the banner with too many decorative elements
+
+Visual style:
+- dark charcoal / deep indigo base
+- warm pink / violet / electric blue glow accents
+- small touches of cream or soft orange are allowed only to add warmth
+- polished, contemporary, youthful, slightly futuristic
+- not corporate, not government-service style, not generic call-center advertising
+- no photoreal office workers
+- no customer-service headset clichés
+- no app UI screenshot
+
+Brand alignment:
+- youthful campus social tone
+- approachable, responsive, human
+- if character-like presence is included, keep it soft, rounded, and friendly, consistent with Meetu’s visual language
+
+Output requirements:
+- image only
+- no Chinese text
+- no English headline
+- no logo
+- no watermark
+- leave obvious empty space for later manual text placement
+```
