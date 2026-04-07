@@ -562,10 +562,12 @@ Create a polished final homepage contact banner for Meetu, 750x340px, horizontal
 This output must be a finished banner image with the final Chinese text already embedded correctly in the image.
 
 VISUAL INPUT (must be provided alongside this prompt):
-- one approved Meetu v4 contact-page screenshot or exported reference image
-- one approved brand color / typography guide image
-- one approved existing Meetu visual asset that shows the desired rounded, youthful brand feel
-- optional: one approved mascot or avatar reference image if a character-like presence is desired
+- `/Meetu/设计语言参考/品牌资产统一/meetu-mascot-standard-pose.png`
+  role: mascot / avatar consistency reference, only if a character-like presence is included
+- `/Meetu/设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/4.png`
+  role: banner mood reference for warm, polished, youthful brand atmosphere
+- `/Meetu/设计语言参考/Meetu元素参考/nanobanana图片生成v1/广场配图/0. 欢迎.png`
+  role: composition and friendliness reference for a welcoming contact-entry feeling
 
 Core theme:
 - real human contact
@@ -627,10 +629,14 @@ Create a polished final homepage banner for Meetu, 750x340px, horizontal, produc
 This output must be a finished banner image with the final Chinese text already embedded correctly in the image.
 
 VISUAL INPUT (must be provided alongside this prompt):
-- one approved Meetu v4 pricing-page screenshot or exported reference image
-- one approved brand color / typography guide image
-- one approved existing Meetu trust / pricing visual
-- optional: one approved mascot or sticker reference image only if a small supporting character element is needed
+- `/Meetu/设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/2.png`
+  role: pricing / trust banner mood reference
+- `/Meetu/设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/场景/2.png`
+  role: scene and composition reference for calm, modern, trustworthy visual rhythm
+- `/Meetu/设计语言参考/品牌资产统一/stickers v1/放心来.png`
+  role: trust-language sticker reference for friendly, reassuring action cues
+- `/Meetu/设计语言参考/品牌资产统一/stickers v1/搭子认证.png`
+  role: certified / verified tone reference for transparent, rule-based trust
 
 Core theme:
 - pricing clarity
