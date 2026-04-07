@@ -1,4 +1,4 @@
-# 广场置顶帖 4 图 Nano Banana Prompt 清单
+# 广场置顶帖 5 图 Nano Banana Prompt 清单
 
 > 用途：觅遇社广场置顶帖配图生成  
 > 默认画幅：**3:4 竖版**
@@ -227,4 +227,57 @@ Composition:
 - should feel like the natural end of a 4-image story: welcome → learn → explore → your turn
 - should make the viewer want to post something right away, not just passively read
 - avoid dense UI, stock photo look, or corporate CTA styling
+```
+
+## Prompt 05 `plaza-pinned-05-几条小约定.png`
+
+```text
+Create one finished vertical visual for the fifth image of Meetu plaza pinned post.
+
+VISUAL INPUT (must be provided alongside this prompt):
+- `设计语言参考/Meetu元素参考/nanobanana图片生成v1/广场配图/0. 欢迎.png`
+  - role: plaza visual consistency / warm orange and cream baseline reference
+- `设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/2.png`
+  - role: trust-oriented composition and soft information-poster tone reference
+- `设计语言参考/Meetu元素参考/nanobanana图片生成v1/广场配图/step2.png`
+  - role: friendly card layout rhythm / readable content-block reference
+- `设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/场景/2.png`
+  - role: youthful East Asian campus-social atmosphere reference
+
+Output target:
+- one independent final image
+- final filename: plaza-pinned-05-几条小约定.png
+- aspect ratio: 3:4 vertical
+
+Goal:
+- present the plaza rules clearly without looking like a cold announcement
+- make users feel the rules are there to keep the space comfortable, not to lecture them
+- keep the image readable on a phone screen while still feeling stylish, youthful, and branded
+
+Chinese text to include:
+- 主标题：几条小约定，花半分钟看完就好
+- 规则 1：❶ 做真实的自己 🪞 说真话、聊真事。不搬运、不编造、不立人设。
+- 规则 2：❷ 好好说话 🤝 有态度没问题，但别攻击、别歧视、别阴阳。出来玩嘛，开心最重要。
+- 规则 3：❸ 保护隐私 🔒 别发别人的照片、联系方式或个人信息。每个人的边界都值得尊重。
+- 规则 4：❹ 搭上了就到 ✅ 说好的活动请守约。放鸽子不只浪费别人的时间，也会影响你在平台上的信用。
+- 规则 5：❺ 别打广告 🚫 广场不是推广位。代购、引流、刷屏，管理员看到会清理。
+- 规则 6：❻ 线下注意安全 📍 和不太熟的搭子见面，选公共场所，跟朋友说一声你去哪儿。
+- 规则 7：❼ 不舒服就说 🙋 遇到骚扰、不友善行为、或者任何让你不舒服的事，随时向平台反馈。我们会处理。
+- 尾注：违规内容会被删除，多次违规会限制广场使用。
+
+Style:
+- warm-campus system first, but calmer and more trustworthy than the first four images
+- still young, stylish, lively, and readable
+- orange / cream / soft cocoa as the main palette, with small coral or peach accents only
+- should feel like a well-designed community guide, not a legal notice or corporate policy board
+- if people appear, they should read as East Asian college-age users
+
+Composition:
+- clear hierarchy from top to bottom: title → 7 rules → footer note
+- use clean rounded cards or soft dividers so the 7 rules are easy to scan
+- each rule should feel like a friendly reminder card, not dense paragraph text
+- small icon accents are welcome, but text readability is the priority
+- leave comfortable whitespace between rule blocks
+- avoid heavy gradients, cluttered collage layouts, or noisy decoration that competes with the rules
+- the mood should be “this is a comfortable community we maintain together”
 ```
