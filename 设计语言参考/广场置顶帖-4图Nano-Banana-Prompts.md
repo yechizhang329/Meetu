@@ -38,6 +38,14 @@
 ```text
 Create one finished vertical visual for the first image of Meetu plaza pinned post.
 
+VISUAL INPUT (must be provided alongside this prompt):
+- `设计语言参考/Meetu元素参考/0 Meetu mascot master.png`
+  - role: mascot identity reference, if 觅遇仔 appears
+- `设计语言参考/Meetu元素参考/nanobanana图片生成v1/广场配图/0. 欢迎.png`
+  - role: existing plaza welcome composition / mood reference
+- `设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/1.png`
+  - role: brand color and illustration style reference
+
 Output target:
 - one independent final image
 - final filename: plaza-pinned-01-欢迎图.png
@@ -72,6 +80,14 @@ Composition:
 
 ```text
 Create one finished vertical visual for the second image of Meetu plaza pinned post.
+
+VISUAL INPUT (must be provided alongside this prompt):
+- `设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/场景/1.png`
+  - role: activity atmosphere reference
+- `设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/场景/2.png`
+  - role: youth social activity composition reference
+- `设计语言参考/品牌资产统一/stickers v1/搭上就走.png`
+  - role: sticker tone / action language reference
 
 Output target:
 - one independent final image
@@ -109,6 +125,14 @@ Composition:
 ```text
 Create one finished vertical visual for the third image of Meetu plaza pinned post.
 
+VISUAL INPUT (must be provided alongside this prompt):
+- `设计语言参考/Meetu元素参考/nanobanana图片生成v1/广场配图/step1.png`
+  - role: plaza post-style card / layout reference
+- `设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/4.png`
+  - role: warm campus illustration style reference
+- `设计语言参考/品牌资产统一/stickers v1/放心来.png`
+  - role: low-pressure social tone reference
+
 Output target:
 - one independent final image
 - final filename: plaza-pinned-03-日常分享与找搭子.png
@@ -142,6 +166,14 @@ Composition:
 
 ```text
 Create one clean vertical base visual for the fourth image of Meetu plaza pinned post.
+
+VISUAL INPUT (must be provided alongside this prompt):
+- `设计语言参考/Meetu元素参考/nanobanana图片生成v1/广场配图/0. 欢迎.png`
+  - role: plaza visual consistency reference
+- `设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/2.png`
+  - role: clean rule / trust visual style reference
+- `设计语言参考/品牌资产统一/stickers v1/搭子认证.png`
+  - role: trust and community-safety sticker reference
 
 Output target:
 - one independent base image for later text overlay
