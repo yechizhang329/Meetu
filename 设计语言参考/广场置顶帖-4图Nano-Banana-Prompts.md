@@ -203,21 +203,23 @@ Goal:
 - end the pinned post sequence on an inviting, forward-looking note
 
 Chinese text to include:
-- 主标题：你的故事，广场想听
-- 副标题：发第一条动态，从这里开始
-- 辅助文案：种草一个好活动、分享一次搭子体验、或者就聊聊今天——广场的第一页，由你来写。
+- 主标题：轮到你了
+- 副标题：想说什么就说什么，广场接得住
+- 辅助文案：刚搭完一场好活动想吹一下？来。想找个周末搭子但还没想好干嘛？发条动态看谁接你。或者今天就是心情好想聊两句——说呗，这里有人听。
 
 Style:
 - warm, inviting, forward-looking energy
-- orange / cream / soft cocoa palette, with lively peach / coral accents
-- youthful, fashionable, editorial poster feeling
+- orange / cream / soft cocoa palette, with brighter peach / coral / light berry accents
+- youthful, fashionable, lively, editorial poster feeling
 - should feel like an open door or blank canvas waiting to be filled
+- encourage imagination, curiosity, and the urge to share something immediately
+- more “this place is alive and fun” than “please post something”
 - if people appear, they should read as East Asian college-age users
 
 Composition:
 - one clear title area at top
-- center visual should evoke "sharing" and "starting something" — could include open notebook, speech bubbles rising, posting cards, or a plaza scene coming alive
-- supporting elements: soft badges, route lines, warm glow, social note cards
+- center visual should evoke "sharing" and "starting something" — could include open notebook, floating speech bubbles, layered post cards, hand-drawn arrows, or a plaza scene coming alive
+- supporting elements: soft badges, route lines, warm glow, social note cards, playful prompts that suggest ideas taking shape
 - should feel like the natural end of a 4-image story: welcome → learn → explore → your turn
 - avoid dense UI, stock photo look, or corporate CTA styling
 ```
