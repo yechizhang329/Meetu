@@ -702,38 +702,25 @@ This output is not a poster or banner. It is a brand logo concept board used for
 
 VISUAL INPUT (must be provided alongside this prompt):
 - `设计语言参考/logo-style-anchors/soul-logo.png`
-  role: Soul 主参考; use for concise young-trend platform confidence, clean wordmark handling, and dark-scene logo dignity, not for color or form copying
+  role: Soul 主参考; directly reuse Soul logo’s design language as a base skin, but replace the character/content with `M` and `Meetu`
 - `设计语言参考/logo-style-anchors/dewu-logo.png`
-  role: 得物主参考; use for Chinese youth-culture platform identity, restrained but forceful logo attitude, and stylish credibility, not for color or form copying
-- `设计语言参考/logo-style-anchors/jike-logo.png`
-  role: 次要参考 only; use for the feeling of a clean but characterful sans-serif wordmark
-- `设计语言参考/logo-style-anchors/mschf-logo.png`
-  role: 次要参考 only; use for monogram attitude and one memorable twist in the M structure
+  role: 得物主参考; directly reuse Dewu logo’s design language as a base skin, but replace the character/content with `M` and `Meetu`
 - `设计语言参考/Meetu元素参考/1 Meetu Logo.png`
-  role: Meetu 品牌连续性与配色锚点参考; the final color system must stay inside Meetu’s own palette logic
+  role: Meetu 配色锚点参考; all generated results must use Meetu’s own orange-centered palette instead of Soul or Dewu’s original colors
 
 Brand attitude:
 - 我们知道什么是好玩的，而且我们认为你也应该来。
 
 Core design direction:
 - D1 system = M main icon + Meetu custom wordmark
-- this prompt must follow the PM-confirmed version, not the previous experimental D1 concept sketch
-- the logo must feel youthful, stylish, confident, memorable, and cool in a way that young people would actually want on their phone home screen
-- the first emotional read should be 70-80% “fun / freedom / cool / attitude”, not “safe / warm / companion”
+- do not freely reinterpret; this round is a controlled “换皮对比” exercise
+- build two parallel solutions on one board:
+  1. Soul-style solution: directly borrow Soul’s logo design language and swap in `M` + `Meetu`
+  2. Dewu-style solution: directly borrow Dewu’s logo design language and swap in `M` + `Meetu`
+- the point is not originality in this round; the point is to compare which base direction is closer to Meetu’s future logo path
+- keep the output youthful, stylish, cool, and suitable for Chinese university students
 - avoid childish, overly cute, mascot-led, overly soft, or neutral-corporate behavior
-- avoid literal puzzle graphics, literal two-people-connecting graphics, or obvious “connection diagram” storytelling
-- the M should communicate: an entrance, a signal, a badge of identity, the feeling that something fun is happening here
-- overall temperament reference: streetwear monogram confidence + independent brand attitude + music-festival / culture-event rally energy
-- the feeling should be: cool but not cold, confident but not distant
-- brand-anchor blend:
-  - Soul: concise wordmark handling, deep-scene quality, young trend-platform confidence
-  - 得物 / Dewu: restrained but forceful Chinese youth-platform identity, stylish without looking childish
-  - 即刻 / Jike: clean but characterful sans-serif wordmark attitude
-  - MSCHF: monogram attitude and one “look twice” detail
-- Soul and 得物 are the primary anchors; 即刻 and MSCHF are secondary anchors
-- these reference logos are style anchors only; do not copy any exact silhouette, letterform, lockup, composition, or color usage from them
-- Meetu should sit between them: Soul 的年轻潮流感 + 得物的克制力量感 + 即刻的干净 + MSCHF 的态度细节
-- keep Meetu’s own color identity; the reference logos must influence only style / structure / temperament, never replace Meetu’s palette
+- keep Meetu’s own color identity; Soul and Dewu references influence only style / structure / temperament, never replace Meetu’s palette
 
 Audience:
 - Chinese university students, 18-25
@@ -742,38 +729,34 @@ Audience:
 
 Board composition:
 - top-left: title area for the concept name
-- left large panel: primary app icon concept, shown large on a dark square tile
-- upper-right: icon + wordmark lockup on a clean light background
-- lower-right: three small usage mockups:
+- left half: Soul-style route
+  - one `M` icon concept
+  - one `Meetu` wordmark concept
+- right half: Dewu-style route
+  - one `M` icon concept
+  - one `Meetu` wordmark concept
+- below or beside each route, include small usage previews for:
   1. app icon 64x64
   2. poster corner mark
   3. cover watermark
-- include short Chinese labels for each usage area
+- include short Chinese labels that clearly separate the two routes
 - the board should feel premium, sharp, and design-review ready
 
 Logo design requirements:
-- icon must be based on a bold, simplified M
-- the M should feel stable but not stiff
-- the M must contain one memorable and slightly addictive detail that makes people want to look twice
-- use one of these devices clearly: an unexpected angle, a small directional tension, a smart negative-space trick, or a subtle asymmetry
-- think of the recognizability logic of a streetwear monogram: simple at first glance, but with one discovered twist on second glance
-- the M should communicate confidence and attitude first; any “connection” feeling must remain abstract and secondary
-- do not make the M purely geometric and cold
-- orange can be bolder than before: one full stroke, one strong segment, or one clear structural accent can be orange
-- the orange should feel intentional and energetic, not decorative
+- icon must be based on a bold, simplified `M`
+- for the Soul-style route, adapt Soul’s concise young-trend logo language into an `M` icon and a `Meetu` wordmark
+- for the Dewu-style route, adapt Dewu’s restrained but forceful logo language into an `M` icon and a `Meetu` wordmark
+- the two routes should be visibly different in structure and typographic temperament because they inherit from different parent styles
 - wordmark should read exactly: Meetu
-- custom wordmark should feel like a youthful, slightly opinionated sans-serif wordmark
-- it should feel closer to the energy of 即刻 or Spotify wordmarks than neutral system fonts like Helvetica / SF
-- the initial M in the wordmark should feel related to the icon’s attitude and geometry
+- in both routes, the initial `M` in the wordmark should feel related to the icon’s geometry
 - do not use handwritten style, rounded childish style, or overly friendly bubble typography
 - monochrome stability matters: the logo should still make sense in one color
 
 Color system:
 - Meetu core brand color is warm orange `#FF7422`; this must appear in the logo system as the key accent / anchor color
 - support colors should stay inside Meetu’s own palette logic: charcoal or deep near-black, ivory / warm off-white, and orange as the focal accent
-- do not describe or interpret Meetu as a “dark-first brand”; the logo must support both light-background and dark-background usage equally well
-- follow Meetu color ownership, not the reference brands’ exact brand colors
-- orange is not just a tiny dot; it can occupy one meaningful stroke or one assertive portion of the M
+- do not follow Soul or Dewu’s original colors; only borrow their design language
+- orange should be clearly visible as part of Meetu ownership
 - keep large surfaces dark/light and premium
 - prefer flat / crisp / graphic color usage, not glossy 3D gradients
 - do not use rainbow gradients
@@ -786,10 +769,11 @@ Color system:
 
 Chinese text to render on the board:
 - 主标题：Meetu Logo Concept D1
-- 小标题：M 主 icon + Meetu 定制字标
-- 标签1：小程序 icon
-- 标签2：海报角标
-- 标签3：封面水印
+- 小标题：Soul 路线 vs 得物路线
+- 标签1：Soul 风格 M icon
+- 标签2：Soul 风格 Meetu
+- 标签3：得物风格 M icon
+- 标签4：得物风格 Meetu
 
 Typography requirements:
 - keep Chinese board labels modern, clean, and readable
@@ -799,9 +783,9 @@ Typography requirements:
 
 Output requirements:
 - one final concept board image that presents two logo directions side by side for direct comparison:
-  1. `M` main icon direction
-  2. `Meetu` custom wordmark direction
-- the board must make both directions equally readable and reviewable at first glance
+  1. Soul-style `M` + `Meetu`
+  2. Dewu-style `M` + `Meetu`
+- the board must make both routes equally readable and reviewable at first glance
 - no mascot as the main logo
 - no old Chinese name
 - no old brand name variant
