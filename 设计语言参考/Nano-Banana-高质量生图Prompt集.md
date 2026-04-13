@@ -688,3 +688,82 @@ Output requirements:
 - the main title should be large, bold, modern, and high-contrast
 - subtitle and support line should be smaller, clear, and elegant
 ```
+
+---
+
+## 六、品牌 Logo 概念稿
+
+### 20. D1 Logo 概念稿展示板（M 主 icon + Meetu 定制字标）
+
+```text
+Create one polished logo concept presentation board for Meetu, 1600x1100px, horizontal, production-ready.
+
+This output is not a poster or banner. It is a brand logo concept board used for internal review and decision-making.
+
+VISUAL INPUT (must be provided alongside this prompt):
+- `/Meetu/设计语言参考/logo-concept-d1-v1.svg`
+  role: primary structure reference for the D1 direction, including icon logic, lockup idea, and usage-scene layout
+- `/Meetu/项目资料/REF_logo.jpg`
+  role: legacy brand reference only for brand continuity awareness; preserve warmth and recognizability, but move away from mascot-led childish feeling
+
+Core design direction:
+- D1 system = M main icon + Meetu custom wordmark
+- the logo must feel youthful, stylish, confident, and memorable
+- the first emotional read should be 70-80% “fun / freedom / cool / attitude”, not “safe / warm / companion”
+- avoid childish, overly cute, or mascot-led logo behavior
+- avoid literal puzzle-joint, literal two-people-connecting graphics, or soft companionship metaphors
+- the M should feel like a signal, a scene, a call-to-join, something exciting is happening here
+- overall temperament reference: INS 新乐园的文化自信感 + 即刻的聪明感
+
+Audience:
+- Chinese university students, 18-25
+- curious, expressive, independent, stylish, socially aware
+- they should feel “this brand knows what is fun, and I want in”
+
+Board composition:
+- top-left: title area for the concept name
+- left large panel: primary app icon concept, shown large on a dark square tile
+- upper-right: icon + wordmark lockup on a clean light background
+- lower-right: three small usage mockups:
+  1. app icon 64x64
+  2. poster corner mark
+  3. cover watermark
+- include short Chinese labels for each usage area
+- the board should feel premium, sharp, and design-review ready
+
+Logo design requirements:
+- icon must be based on a bold, simplified M
+- the M should have a distinctive inner cut / fold / notch that creates memory
+- include one focused accent in signal orange, used sparingly as a hotspot, not as the whole logo color
+- wordmark should read exactly: Meetu
+- custom wordmark should feel modern, tightened, slightly refined, not generic system text
+- rounded enough to stay approachable, but not soft enough to feel childish
+- monochrome stability matters: the logo should still make sense in one color
+
+Color system:
+- primary dark: charcoal / deep near-black
+- light support: ivory / warm off-white
+- accent: signal orange (#FF7422-like)
+- do not use rainbow gradients
+- do not use pastel “cute app” palette
+
+Chinese text to render on the board:
+- 主标题：Meetu Logo Concept D1
+- 小标题：M 主 icon + Meetu 定制字标
+- 标签1：小程序 icon
+- 标签2：海报角标
+- 标签3：封面水印
+
+Typography requirements:
+- keep Chinese board labels modern, clean, and readable
+- the main visual priority is the logo itself, not the board text
+- “Meetu” must be rendered correctly and consistently
+
+Output requirements:
+- final concept board image
+- no mascot as the main logo
+- no old Chinese name
+- no old brand name variant
+- no extra decorative stickers
+- strong, review-ready presentation quality
+```
