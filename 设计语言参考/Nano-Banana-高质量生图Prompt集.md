@@ -701,14 +701,14 @@ Create one polished logo concept presentation board for Meetu, 1600x1100px, hori
 This output is not a poster or banner. It is a brand logo concept board used for internal review and decision-making.
 
 VISUAL INPUT (must be provided alongside this prompt):
-- `设计语言参考/logo-style-anchors/jike-logo.png`
-  role: 即刻字标气质参考 only; use for the feeling of a clean but characterful sans-serif logo
-- `设计语言参考/logo-style-anchors/mschf-logo.png`
-  role: MSCHF monogram态度参考 only; use for the feeling of a simple but culturally confident symbol
-- `设计语言参考/logo-style-anchors/spotify-logo.svg`
-  role: Spotify 年轻全球品牌自信度参考 only; use for overall brand boldness and non-corporate coolness
 - `设计语言参考/logo-style-anchors/soul-logo.png`
-  role: Soul 年轻潮流平台感参考 only; use for youthful trend-platform confidence, not for color or form copying
+  role: Soul 主参考; use for concise young-trend platform confidence, clean wordmark handling, and dark-scene logo dignity, not for color or form copying
+- `设计语言参考/logo-style-anchors/dewu-logo.png`
+  role: 得物主参考; use for Chinese youth-culture platform identity, restrained but forceful logo attitude, and stylish credibility, not for color or form copying
+- `设计语言参考/logo-style-anchors/jike-logo.png`
+  role: 次要参考 only; use for the feeling of a clean but characterful sans-serif wordmark
+- `设计语言参考/logo-style-anchors/mschf-logo.png`
+  role: 次要参考 only; use for monogram attitude and one memorable twist in the M structure
 - `设计语言参考/Meetu元素参考/1 Meetu Logo.png`
   role: Meetu 品牌连续性与配色锚点参考; the final color system must stay inside Meetu’s own palette logic
 
@@ -726,13 +726,14 @@ Core design direction:
 - overall temperament reference: streetwear monogram confidence + independent brand attitude + music-festival / culture-event rally energy
 - the feeling should be: cool but not cold, confident but not distant
 - brand-anchor blend:
-  - Jike / 即刻: clean but characterful sans-serif wordmark attitude
-  - MSCHF: monogram attitude and street-culture confidence
-  - Spotify: globally confident youth brand energy
-  - Soul: Chinese young-trend platform energy, especially dark base + accent-color control
-- these four are style anchors only; do not copy any exact silhouette, letterform, lockup, or composition from them
-- Meetu should sit between them: 即刻的干净 + MSCHF的态度 + Spotify的自信 + Soul的年轻潮流感
-- keep Meetu’s own color identity; the four reference logos are style anchors only and must not replace Meetu’s palette
+  - Soul: concise wordmark handling, deep-scene quality, young trend-platform confidence
+  - 得物 / Dewu: restrained but forceful Chinese youth-platform identity, stylish without looking childish
+  - 即刻 / Jike: clean but characterful sans-serif wordmark attitude
+  - MSCHF: monogram attitude and one “look twice” detail
+- Soul and 得物 are the primary anchors; 即刻 and MSCHF are secondary anchors
+- these reference logos are style anchors only; do not copy any exact silhouette, letterform, lockup, composition, or color usage from them
+- Meetu should sit between them: Soul 的年轻潮流感 + 得物的克制力量感 + 即刻的干净 + MSCHF 的态度细节
+- keep Meetu’s own color identity; the reference logos must influence only style / structure / temperament, never replace Meetu’s palette
 
 Audience:
 - Chinese university students, 18-25
@@ -797,7 +798,10 @@ Typography requirements:
 - overall typography on the board should feel contemporary and not editorial-vintage
 
 Output requirements:
-- final concept board image
+- one final concept board image that presents two logo directions side by side for direct comparison:
+  1. `M` main icon direction
+  2. `Meetu` custom wordmark direction
+- the board must make both directions equally readable and reviewable at first glance
 - no mascot as the main logo
 - no old Chinese name
 - no old brand name variant
