@@ -862,3 +862,167 @@ Absolutely avoid:
 - too many UI components or fake app screenshots
 - generic stock-photo collage
 ```
+
+### 22. DROP 小红书引流帖配图（3张 1080×1440）
+
+#### 22.1 封面图（点击钩子）
+
+```text
+Create one finished vertical cover image for a Xiaohongshu traffic-driving post about Meetu DROP.
+
+VISUAL INPUT (must be provided alongside this prompt):
+- `activity-detail-demos/demo-4-DROP-狠人杀.html`
+  role: core visual language reference; use for the neon-dark palette, nightlife tension, and premium youth-event mood
+- `设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/场景/1.png`
+  role: youth social heat reference; use for the feeling of "something is happening tonight"
+- `设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/场景/2.png`
+  role: dark gathering atmosphere reference; use for contrast, lighting, and social mystery
+
+Output target:
+- one final image
+- final filename: drop-xhs-01-cover.png
+- size: 1080 × 1440px
+
+Goal:
+- stop a user in the Xiaohongshu feed within 0.5 seconds
+- make people feel: “这局看起来有点狠，我想点进去看看”
+- visual role is hook first, information second
+
+Chinese text to include:
+- 主标题：武汉高校的人 这周六要坐一桌了
+- 标签：跨校盲盒局
+- 品牌标记：DROP · 第1期
+
+Style:
+- dark, stylish, youthful, high-energy
+- deep black background with neon pink / purple glow and cyan sparks
+- club-poster / underground event / cool youth-culture feeling
+- fashionable, sharp, and memorable rather than warm or explanatory
+- if any people appear, use East Asian / Chinese university-age faces with consistent warm light-beige Asian skin tones
+
+Composition:
+- huge title occupying the upper-middle area
+- small but clear `DROP · 第1期` brand mark
+- one compact capsule tag for `跨校盲盒局`
+- visual center can suggest a dark table, chairs, cards, or a social scene about to start
+- keep enough negative space so the typography feels premium, not crowded
+
+Typography:
+- oversized condensed Chinese display with strong impact
+- sharp hierarchy, strong contrast, not cute, not soft
+- text should feel like a music-event poster, not a campus notice
+
+Absolutely avoid:
+- listing detailed event facts
+- warm orange campus brochure feeling
+- overly literal UI or app screenshot elements
+- generic nightlife stock-photo collage
+```
+
+#### 22.2 氛围图（局感）
+
+```text
+Create one finished vertical atmosphere image for a Xiaohongshu traffic-driving post about Meetu DROP.
+
+VISUAL INPUT (must be provided alongside this prompt):
+- `activity-detail-demos/demo-4-DROP-狠人杀.html`
+  role: visual-system reference; use for the same DROP neon-dark language and premium card-game energy
+- `设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/场景/2.png`
+  role: nightlife / group atmosphere reference
+- `设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/场景/3.png`
+  role: stylish social-scene warmth reference; use selectively to avoid losing the dark tone
+
+Output target:
+- one final image
+- final filename: drop-xhs-02-vibe.png
+- size: 1080 × 1440px
+
+Goal:
+- communicate what this DROP session feels like
+- cool, confident, mysterious, social, a little provocative
+- make users imagine the room, the tension, and the moment before talking
+
+Text policy:
+- no large informational copy
+- no school list
+- no price / date / CTA
+- if absolutely needed, allow only a tiny `DROP` mark as a subtle signature
+
+Style:
+- dark base with bold neon accents
+- stylish, youthful, high-contrast, a little cinematic
+- not explanatory; this image should sell the mood
+- if any people appear, use East Asian / Chinese university-age faces with consistent warm light-beige Asian skin tones
+
+Visual cues allowed:
+- close-up card textures
+- coded identity cards / alias-card feeling
+- table-edge light, hands, drinks, chairs, name-card silhouettes
+- suggestive social staging without fully spelling out the mechanics
+
+Composition:
+- strong focal object or scene in the center
+- use shadows, glow, layered surfaces, and visual tension
+- image should feel like a fragment from a stylish poster campaign
+- preserve a clean composition with enough rhythm, not visual noise
+
+Absolutely avoid:
+- large text blocks
+- infographic layout
+- cute mascot energy
+- bright lifestyle sunshine scenes
+- too much explanatory symbolism
+```
+
+#### 22.3 品牌签名图（记忆点）
+
+```text
+Create one finished vertical signature image for a Xiaohongshu traffic-driving post about Meetu DROP.
+
+VISUAL INPUT (must be provided alongside this prompt):
+- `activity-detail-demos/demo-4-DROP-狠人杀.html`
+  role: primary visual-language reference; use for typography confidence, dark base, and neon accents
+- `设计语言参考/Meetu元素参考/1 Meetu Logo.png`
+  role: parent-brand ownership reference; use only to keep relationship with Meetu, not to bring back warm-orange main style
+- `设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/场景/1.png`
+  role: youth-culture energy reference
+
+Output target:
+- one final image
+- final filename: drop-xhs-03-signature.png
+- size: 1080 × 1440px
+
+Goal:
+- leave a clean, strong, memorable brand impression at the end of the image set
+- make users remember `DROP` as a sub-series with attitude
+- feel like a campaign sign-off, not an informational poster
+
+Chinese text to include:
+- 主标题：DROP
+- 副标题：武汉高校社交图鉴 · 第1期
+- 辅助文案：这周六 · 街道口
+- CTA：好奇的话 👇 评论你的学校
+
+Style:
+- dark, fashionable, youth-culture-first
+- premium black background with electric pink / violet / cyan accents
+- stronger brand-signature feeling than the first two images
+- if any people appear, use East Asian / Chinese university-age faces with consistent warm light-beige Asian skin tones
+
+Composition:
+- huge `DROP` as the hero at top or center
+- subtitle sits tightly below as a clean editorial line
+- bottom CTA should feel native to Xiaohongshu interaction culture
+- add subtle geometric light, badge-like marks, or monogram energy to make the brand feel ownable
+
+Typography:
+- `DROP` should feel like a youth-culture label, almost merch-worthy
+- subtitle should be clean and smaller
+- CTA should be simple, direct, and scroll-stopping
+
+Absolutely avoid:
+- repeating the information-heavy cover style
+- corporate brand board layout
+- warm campus brochure palette
+- mascot-led composition
+```
