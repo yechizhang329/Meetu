@@ -688,3 +688,122 @@ Output requirements:
 - the main title should be large, bold, modern, and high-contrast
 - subtitle and support line should be smaller, clear, and elegant
 ```
+
+---
+
+## 六、品牌 Logo 概念稿
+
+### 20. D1 Logo 概念稿展示板（M 主 icon + Meetu 定制字标）
+
+```text
+Create one polished logo concept presentation board for Meetu, 1600x1100px, horizontal, production-ready.
+
+This output is not a poster or banner. It is a brand logo concept board used for internal review and decision-making.
+
+VISUAL INPUT (must be provided alongside this prompt):
+- `设计语言参考/logo-style-anchors/jike-logo.png`
+  role: 即刻字标气质参考 only; use for the feeling of a clean but characterful sans-serif logo
+- `设计语言参考/logo-style-anchors/mschf-logo.png`
+  role: MSCHF monogram态度参考 only; use for the feeling of a simple but culturally confident symbol
+- `设计语言参考/logo-style-anchors/spotify-logo.svg`
+  role: Spotify 年轻全球品牌自信度参考 only; use for overall brand boldness and non-corporate coolness
+- `设计语言参考/logo-style-anchors/soul-logo.png`
+  role: Soul 年轻潮流平台感参考 only; use for youthful trend-platform confidence, not for color or form copying
+- `设计语言参考/Meetu元素参考/1 Meetu Logo.png`
+  role: Meetu 品牌连续性与配色锚点参考; the final color system must stay inside Meetu’s own palette logic
+
+Brand attitude:
+- 我们知道什么是好玩的，而且我们认为你也应该来。
+
+Core design direction:
+- D1 system = M main icon + Meetu custom wordmark
+- this prompt must follow the PM-confirmed version, not the previous experimental D1 concept sketch
+- the logo must feel youthful, stylish, confident, memorable, and cool in a way that young people would actually want on their phone home screen
+- the first emotional read should be 70-80% “fun / freedom / cool / attitude”, not “safe / warm / companion”
+- avoid childish, overly cute, mascot-led, overly soft, or neutral-corporate behavior
+- avoid literal puzzle graphics, literal two-people-connecting graphics, or obvious “connection diagram” storytelling
+- the M should communicate: an entrance, a signal, a badge of identity, the feeling that something fun is happening here
+- overall temperament reference: streetwear monogram confidence + independent brand attitude + music-festival / culture-event rally energy
+- the feeling should be: cool but not cold, confident but not distant
+- brand-anchor blend:
+  - Jike / 即刻: clean but characterful sans-serif wordmark attitude
+  - MSCHF: monogram attitude and street-culture confidence
+  - Spotify: globally confident youth brand energy
+  - Soul: Chinese young-trend platform energy, especially dark base + accent-color control
+- these four are style anchors only; do not copy any exact silhouette, letterform, lockup, or composition from them
+- Meetu should sit between them: 即刻的干净 + MSCHF的态度 + Spotify的自信 + Soul的年轻潮流感
+- keep Meetu’s own color identity; the four reference logos are style anchors only and must not replace Meetu’s palette
+
+Audience:
+- Chinese university students, 18-25
+- curious, expressive, independent, stylish, socially aware
+- they should feel “this brand knows what is fun, and I want in”
+
+Board composition:
+- top-left: title area for the concept name
+- left large panel: primary app icon concept, shown large on a dark square tile
+- upper-right: icon + wordmark lockup on a clean light background
+- lower-right: three small usage mockups:
+  1. app icon 64x64
+  2. poster corner mark
+  3. cover watermark
+- include short Chinese labels for each usage area
+- the board should feel premium, sharp, and design-review ready
+
+Logo design requirements:
+- icon must be based on a bold, simplified M
+- the M should feel stable but not stiff
+- the M must contain one memorable and slightly addictive detail that makes people want to look twice
+- use one of these devices clearly: an unexpected angle, a small directional tension, a smart negative-space trick, or a subtle asymmetry
+- think of the recognizability logic of a streetwear monogram: simple at first glance, but with one discovered twist on second glance
+- the M should communicate confidence and attitude first; any “connection” feeling must remain abstract and secondary
+- do not make the M purely geometric and cold
+- orange can be bolder than before: one full stroke, one strong segment, or one clear structural accent can be orange
+- the orange should feel intentional and energetic, not decorative
+- wordmark should read exactly: Meetu
+- custom wordmark should feel like a youthful, slightly opinionated sans-serif wordmark
+- it should feel closer to the energy of 即刻 or Spotify wordmarks than neutral system fonts like Helvetica / SF
+- the initial M in the wordmark should feel related to the icon’s attitude and geometry
+- do not use handwritten style, rounded childish style, or overly friendly bubble typography
+- monochrome stability matters: the logo should still make sense in one color
+
+Color system:
+- Meetu core brand color is warm orange `#FF7422`; this must appear in the logo system as the key accent / anchor color
+- support colors should stay inside Meetu’s own palette logic: charcoal or deep near-black, ivory / warm off-white, and orange as the focal accent
+- do not describe or interpret Meetu as a “dark-first brand”; the logo must support both light-background and dark-background usage equally well
+- follow Meetu color ownership, not the reference brands’ exact brand colors
+- orange is not just a tiny dot; it can occupy one meaningful stroke or one assertive portion of the M
+- keep large surfaces dark/light and premium
+- prefer flat / crisp / graphic color usage, not glossy 3D gradients
+- do not use rainbow gradients
+- do not use pastel “cute app” palette
+- explicitly show two usage variants:
+  - dark-background scene: light logo + orange detail
+  - light-background scene: dark logo + orange detail
+- it is allowed to show multiple color variants for different future activity categories, as long as the M structure stays unchanged
+- absolutely avoid a pure black/white/gray finance-tech look
+
+Chinese text to render on the board:
+- 主标题：Meetu Logo Concept D1
+- 小标题：M 主 icon + Meetu 定制字标
+- 标签1：小程序 icon
+- 标签2：海报角标
+- 标签3：封面水印
+
+Typography requirements:
+- keep Chinese board labels modern, clean, and readable
+- the main visual priority is the logo itself, not the board text
+- “Meetu” must be rendered correctly and consistently
+- overall typography on the board should feel contemporary and not editorial-vintage
+
+Output requirements:
+- final concept board image
+- no mascot as the main logo
+- no old Chinese name
+- no old brand name variant
+- no extra decorative stickers
+- must still feel premium when mentally compared beside INS 新乐园, Soul, and 即刻 on a phone screen
+- if color is removed, the silhouette should still be recognizable
+- show enough attitude that it could plausibly live on a youth culture poster, campus event cover, or music-event campaign
+- strong, review-ready presentation quality
+```

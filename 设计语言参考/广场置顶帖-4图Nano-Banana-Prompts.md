@@ -1,4 +1,4 @@
-# 广场置顶帖 4 图 Nano Banana Prompt 清单
+# 广场置顶帖 5 图 Nano Banana Prompt 清单
 
 > 用途：觅遇社广场置顶帖配图生成  
 > 默认画幅：**3:4 竖版**
@@ -227,4 +227,54 @@ Composition:
 - should feel like the natural end of a 4-image story: welcome → learn → explore → your turn
 - should make the viewer want to post something right away, not just passively read
 - avoid dense UI, stock photo look, or corporate CTA styling
+```
+
+## Prompt 05 `plaza-pinned-05-几条小约定.png`
+
+```text
+Create one finished vertical visual for the fifth image of Meetu plaza pinned post.
+
+VISUAL INPUT (must be provided alongside this prompt):
+- `设计语言参考/Meetu元素参考/nanobanana图片生成v1/广场配图/0. 欢迎.png`
+  - role: plaza visual consistency / warm orange and cream baseline reference
+- `设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/2.png`
+  - role: trust-oriented composition and soft information-poster tone reference
+- `设计语言参考/Meetu元素参考/nanobanana图片生成v1/广场配图/step2.png`
+  - role: friendly card layout rhythm / readable content-block reference
+- `设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/场景/2.png`
+  - role: youthful East Asian campus-social atmosphere reference
+
+Output target:
+- one independent final image
+- final filename: plaza-pinned-05-几条小约定.png
+- aspect ratio: 3:4 vertical
+
+Goal:
+- create the visual base for the plaza rules image without rendering the full rule copy
+- make users feel the rules are there to keep the space comfortable, not to lecture them
+- leave a large, stable text-safe area for later manual text overlay
+
+Chinese text to include:
+- 主标题：几条小约定
+- 数字标识：1 / 2 / 3 / 4 / 5 / 6 / 7
+
+Style:
+- warm-campus system first, but calmer and more trustworthy than the first four images
+- still young, stylish, lively, and readable
+- orange / cream / soft cocoa as the main palette, with small coral or peach accents only
+- should feel like a well-designed community guide, not a legal notice or corporate policy board
+- if people appear, they should read as East Asian college-age users
+
+Composition:
+- title area only at the top
+- reserve a large clean content area underneath for later manual text overlay
+- the lower 70% of the image should be visually calm enough to support layered text later
+- pre-build seven clean text containers in the lower area, each paired with one visible number marker from 1 to 7
+- each number marker should already exist in the image as a styled visual anchor
+- each of the seven text containers should be clearly separated and ready for later manual text insertion
+- add one extra footer container at the bottom for the moderation / violation note
+- use clean rounded cards or soft dividers only as subtle structure cues, not as dense filled rule blocks
+- small icon accents are welcome, but the composition must leave generous empty space for text
+- avoid heavy gradients, cluttered collage layouts, or noisy decoration that competes with the rules
+- the mood should be “this is a comfortable community we maintain together”
 ```
