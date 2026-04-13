@@ -1026,3 +1026,158 @@ Absolutely avoid:
 - warm campus brochure palette
 - mascot-led composition
 ```
+
+### 23. DROP 活动详情页视觉资产（3张横图）
+
+#### 23.1 Hero 区背景图（750×400）
+
+```text
+Create one finished horizontal background image for the hero section of a Meetu DROP activity-detail page.
+
+VISUAL INPUT (must be provided alongside this prompt):
+- `activity-detail-demos/demo-4-DROP-狠人杀.html`
+  role: primary visual-system reference; use for the same neon-dark palette, nightlife tension, and premium youth-event mood
+- `设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/场景/1.png`
+  role: youth social-energy reference; use for the feeling that “something is happening tonight”
+- `设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/场景/2.png`
+  role: nightlife atmosphere reference; use for contrast, glow, and gathering tension
+
+Output target:
+- one final image
+- final filename: drop-detail-hero-bg.png
+- size: 750 × 400px
+
+Goal:
+- serve as the top atmospheric background of the activity-detail page
+- deliver “有事在发生”的能量感 before any body copy appears
+- look premium, dark, and youth-culture-driven
+
+Text policy:
+- no text in the image
+- no numbers, no badges, no UI labels
+- image must leave room for HTML text overlay later
+
+Style:
+- dark base, neon pink / purple / cyan glow, subtle gold highlights
+- club-poster energy, not corporate, not lifestyle sunshine
+- premium and stylish, with a sense of anticipation
+- if any people appear, use East Asian / Chinese university-age faces with consistent warm light-beige Asian skin tones
+
+Composition:
+- keep the upper-middle area visually dramatic but not too busy
+- preserve readable negative space for overlaid HTML title and metadata
+- allowed cues: blurred table scene, chairs, drinks, card edges, dark room glow, silhouettes
+- image should feel like the air in the room before the event begins
+
+Absolutely avoid:
+- embedded text
+- centered character portraits that block headline space
+- mascot-led composition
+- bright warm-orange brochure feeling
+```
+
+#### 23.2 DROP 释义区视觉（750×300）
+
+```text
+Create one finished horizontal visual for the “DROP = 放下” explanation block of a Meetu DROP activity-detail page.
+
+VISUAL INPUT (must be provided alongside this prompt):
+- `activity-detail-demos/demo-4-DROP-狠人杀.html`
+  role: visual-language reference; use for dark neon confidence and the premium social-game atmosphere
+- `设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/场景/3.png`
+  role: stylish youth-scene warmth reference; use selectively so the visual still belongs to DROP
+- `设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/4.png`
+  role: stronger color-energy reference; use for boldness and youth-culture attitude
+
+Output target:
+- one final image
+- final filename: drop-detail-meaning-visual.png
+- size: 750 × 300px
+
+Goal:
+- visually support the brand meaning of “Drop = 放下”
+- suggest letting go of labels, tension, self-introduction scripts, or guarded identity
+- feel abstract, stylish, and concept-driven rather than literal
+
+Text policy:
+- no text in the image
+- this is a concept visual only; HTML copy will explain the meaning
+
+Style:
+- dark, abstract, conceptual, youthful, stylish
+- neon accents in pink / cyan / violet with restrained gold sparks
+- not sad, not heavy, not therapy-brand calm
+- should feel like a small revelation inside a nightlife poster system
+
+Visual cues allowed:
+- identity tag slipping off
+- mask being set aside
+- alias card turning over
+- label fragments falling away
+- negative-space shape suggesting release or openness
+
+Composition:
+- strong central metaphor with clear silhouette
+- enough calm space around the metaphor so the section doesn’t feel crowded
+- should read as “drop the script, show up as you are” without becoming literal illustration
+
+Absolutely avoid:
+- explanatory infographic
+- happy stock-photo people
+- warm campus brochure composition
+- too many discrete objects with no focal point
+```
+
+#### 23.3 卡牌氛围图（750×300）
+
+```text
+Create one finished horizontal atmosphere image for the “狠人杀” card section of a Meetu DROP activity-detail page.
+
+VISUAL INPUT (must be provided alongside this prompt):
+- `activity-detail-demos/demo-4-DROP-狠人杀.html`
+  role: primary style reference; use for color system, mood, and overall DROP identity
+- `设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/场景/2.png`
+  role: dark social-scene reference
+- `设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/场景/1.png`
+  role: social energy and table-scene reference
+
+Output target:
+- one final image
+- final filename: drop-detail-card-atmosphere.png
+- size: 750 × 300px
+
+Goal:
+- show the texture and atmosphere of the 狠人杀 card system
+- create intrigue without revealing actual card content
+- make users feel that the cards are part game mechanic, part social accelerator
+
+Text policy:
+- no text in the image
+- do not show readable card copy
+- card faces can be partially hidden, blurred, turned away, or cropped
+
+Style:
+- dark, tactile, stylish, premium
+- moody tabletop scene with neon edge light
+- social tension and curiosity over explanation
+- if any people appear, use East Asian / Chinese university-age hands/faces with consistent warm light-beige Asian skin tones
+
+Visual cues allowed:
+- card corners
+- partial deck spread
+- fingers flipping a card
+- table reflection
+- drinks, glow, badge-like markers, alias-card hints
+
+Composition:
+- hero focus on card texture or flipping motion
+- shallow depth or selective crop is welcome
+- preserve a cinematic, mystery-first feeling
+- should feel like a detail shot from a campaign film frame
+
+Absolutely avoid:
+- readable question text on cards
+- bright casual board-game cafe mood
+- mascot or cartoon treatment
+- cluttered tabletop with too many unrelated props
+```
