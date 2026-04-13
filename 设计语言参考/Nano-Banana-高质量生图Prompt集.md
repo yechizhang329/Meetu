@@ -701,19 +701,25 @@ Create one polished logo concept presentation board for Meetu, 1600x1100px, hori
 This output is not a poster or banner. It is a brand logo concept board used for internal review and decision-making.
 
 VISUAL INPUT (must be provided alongside this prompt):
-- `/Meetu/设计语言参考/logo-concept-d1-v1.svg`
-  role: primary structure reference for the D1 direction, including icon logic, lockup idea, and usage-scene layout
 - `/Meetu/项目资料/REF_logo.jpg`
-  role: legacy brand reference only for brand continuity awareness; preserve warmth and recognizability, but move away from mascot-led childish feeling
+  role: legacy brand continuity reference only; keep the sense of a youthful social brand, but do not inherit the mascot-led childish form
+- `/Meetu/设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/1.png`
+  role: premium youth-campus color and tone reference; use for overall contemporary atmosphere, not for logo shape
+- `/Meetu/设计语言参考/Meetu元素参考/nanobanana图片生成v1/广场配图/0. 欢迎.png`
+  role: Meetu brand warmth and friendliness reference; use for emotional tone balance, not for composition copying
+
+Brand attitude:
+- 我们知道什么是好玩的，而且我们认为你也应该来。
 
 Core design direction:
 - D1 system = M main icon + Meetu custom wordmark
-- the logo must feel youthful, stylish, confident, and memorable
+- this prompt must follow the PM-confirmed version, not the previous experimental D1 concept sketch
+- the logo must feel youthful, stylish, confident, memorable, and slightly cool
 - the first emotional read should be 70-80% “fun / freedom / cool / attitude”, not “safe / warm / companion”
-- avoid childish, overly cute, or mascot-led logo behavior
-- avoid literal puzzle-joint, literal two-people-connecting graphics, or soft companionship metaphors
-- the M should feel like a signal, a scene, a call-to-join, something exciting is happening here
-- overall temperament reference: INS 新乐园的文化自信感 + 即刻的聪明感
+- avoid childish, overly cute, mascot-led, or soft companionship behavior
+- avoid literal puzzle graphics, literal two-people-connecting graphics, or obvious “connection diagram” storytelling
+- the M should communicate: an entrance, a signal, a badge of identity, the feeling that something fun is happening here
+- overall temperament reference: INS 新乐园的文化 self-confidence + 即刻的 smart clarity
 
 Audience:
 - Chinese university students, 18-25
@@ -733,19 +739,27 @@ Board composition:
 
 Logo design requirements:
 - icon must be based on a bold, simplified M
-- the M should have a distinctive inner cut / fold / notch that creates memory
+- the M should feel stable but not stiff
+- the M must contain one memorable rule-breaking detail: a cut corner, offset stroke, inner notch, or slightly unexpected structural interruption
+- the M should communicate confidence and attitude first; any “connection” feeling must remain abstract and secondary
 - include one focused accent in signal orange, used sparingly as a hotspot, not as the whole logo color
 - wordmark should read exactly: Meetu
-- custom wordmark should feel modern, tightened, slightly refined, not generic system text
-- rounded enough to stay approachable, but not soft enough to feel childish
+- custom wordmark should feel modern sans-serif, slightly tightened, slightly customized, not generic system text
+- the initial M in the wordmark should feel related to the icon’s attitude and geometry
+- do not use handwritten style, rounded childish style, or overly friendly bubble typography
 - monochrome stability matters: the logo should still make sense in one color
 
 Color system:
 - primary dark: charcoal / deep near-black
 - light support: ivory / warm off-white
 - accent: signal orange (#FF7422-like)
+- orange is only a highlight, never the full background
+- keep large surfaces dark/light and premium
+- prefer flat / crisp / graphic color usage, not glossy 3D gradients
 - do not use rainbow gradients
 - do not use pastel “cute app” palette
+- for dark-background scenes: light logo + orange detail
+- for light-background scenes: dark logo + orange detail
 
 Chinese text to render on the board:
 - 主标题：Meetu Logo Concept D1
@@ -758,6 +772,7 @@ Typography requirements:
 - keep Chinese board labels modern, clean, and readable
 - the main visual priority is the logo itself, not the board text
 - “Meetu” must be rendered correctly and consistently
+- overall typography on the board should feel contemporary and not editorial-vintage
 
 Output requirements:
 - final concept board image
@@ -765,5 +780,7 @@ Output requirements:
 - no old Chinese name
 - no old brand name variant
 - no extra decorative stickers
+- must still feel premium when mentally compared beside INS 新乐园, Soul, and 即刻 on a phone screen
+- if color is removed, the silhouette should still be recognizable
 - strong, review-ready presentation quality
 ```
