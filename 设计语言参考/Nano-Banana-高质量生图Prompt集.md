@@ -721,6 +721,13 @@ Core design direction:
 - the M should communicate: an entrance, a signal, a badge of identity, the feeling that something fun is happening here
 - overall temperament reference: streetwear monogram confidence + independent brand attitude + music-festival / culture-event rally energy
 - the feeling should be: cool but not cold, confident but not distant
+- brand-anchor blend:
+  - Jike / 即刻: clean but characterful sans-serif wordmark attitude
+  - MSCHF: monogram attitude and street-culture confidence
+  - Spotify: globally confident youth brand energy
+  - Soul: Chinese young-trend platform energy, especially dark base + accent-color control
+- these four are style anchors only; do not copy any exact silhouette, letterform, lockup, or composition from them
+- Meetu should sit between them: 即刻的干净 + MSCHF的态度 + Spotify的自信 + Soul的年轻潮流感
 
 Audience:
 - Chinese university students, 18-25
