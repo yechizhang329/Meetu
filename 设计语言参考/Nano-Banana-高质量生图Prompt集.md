@@ -714,12 +714,13 @@ Brand attitude:
 Core design direction:
 - D1 system = M main icon + Meetu custom wordmark
 - this prompt must follow the PM-confirmed version, not the previous experimental D1 concept sketch
-- the logo must feel youthful, stylish, confident, memorable, and slightly cool
+- the logo must feel youthful, stylish, confident, memorable, and cool in a way that young people would actually want on their phone home screen
 - the first emotional read should be 70-80% “fun / freedom / cool / attitude”, not “safe / warm / companion”
-- avoid childish, overly cute, mascot-led, or soft companionship behavior
+- avoid childish, overly cute, mascot-led, overly soft, or neutral-corporate behavior
 - avoid literal puzzle graphics, literal two-people-connecting graphics, or obvious “connection diagram” storytelling
 - the M should communicate: an entrance, a signal, a badge of identity, the feeling that something fun is happening here
-- overall temperament reference: INS 新乐园的文化 self-confidence + 即刻的 smart clarity
+- overall temperament reference: streetwear monogram confidence + independent brand attitude + music-festival / culture-event rally energy
+- the feeling should be: cool but not cold, confident but not distant
 
 Audience:
 - Chinese university students, 18-25
@@ -740,11 +741,16 @@ Board composition:
 Logo design requirements:
 - icon must be based on a bold, simplified M
 - the M should feel stable but not stiff
-- the M must contain one memorable rule-breaking detail: a cut corner, offset stroke, inner notch, or slightly unexpected structural interruption
+- the M must contain one memorable and slightly addictive detail that makes people want to look twice
+- use one of these devices clearly: an unexpected angle, a small directional tension, a smart negative-space trick, or a subtle asymmetry
+- think of the recognizability logic of a streetwear monogram: simple at first glance, but with one discovered twist on second glance
 - the M should communicate confidence and attitude first; any “connection” feeling must remain abstract and secondary
-- include one focused accent in signal orange, used sparingly as a hotspot, not as the whole logo color
+- do not make the M purely geometric and cold
+- orange can be bolder than before: one full stroke, one strong segment, or one clear structural accent can be orange
+- the orange should feel intentional and energetic, not decorative
 - wordmark should read exactly: Meetu
-- custom wordmark should feel modern sans-serif, slightly tightened, slightly customized, not generic system text
+- custom wordmark should feel like a youthful, slightly opinionated sans-serif wordmark
+- it should feel closer to the energy of 即刻 or Spotify wordmarks than neutral system fonts like Helvetica / SF
 - the initial M in the wordmark should feel related to the icon’s attitude and geometry
 - do not use handwritten style, rounded childish style, or overly friendly bubble typography
 - monochrome stability matters: the logo should still make sense in one color
@@ -753,13 +759,15 @@ Color system:
 - primary dark: charcoal / deep near-black
 - light support: ivory / warm off-white
 - accent: signal orange (#FF7422-like)
-- orange is only a highlight, never the full background
+- orange is not just a tiny dot; it can occupy one meaningful stroke or one assertive portion of the M
 - keep large surfaces dark/light and premium
 - prefer flat / crisp / graphic color usage, not glossy 3D gradients
 - do not use rainbow gradients
 - do not use pastel “cute app” palette
 - for dark-background scenes: light logo + orange detail
 - for light-background scenes: dark logo + orange detail
+- it is allowed to show multiple color variants for different future activity categories, as long as the M structure stays unchanged
+- absolutely avoid a pure black/white/gray finance-tech look
 
 Chinese text to render on the board:
 - 主标题：Meetu Logo Concept D1
@@ -782,5 +790,6 @@ Output requirements:
 - no extra decorative stickers
 - must still feel premium when mentally compared beside INS 新乐园, Soul, and 即刻 on a phone screen
 - if color is removed, the silhouette should still be recognizable
+- show enough attitude that it could plausibly live on a youth culture poster, campus event cover, or music-event campaign
 - strong, review-ready presentation quality
 ```
