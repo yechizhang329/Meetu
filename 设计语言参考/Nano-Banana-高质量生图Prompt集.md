@@ -701,12 +701,16 @@ Create one polished logo concept presentation board for Meetu, 1600x1100px, hori
 This output is not a poster or banner. It is a brand logo concept board used for internal review and decision-making.
 
 VISUAL INPUT (must be provided alongside this prompt):
-- `/Meetu/项目资料/REF_logo.jpg`
-  role: legacy brand continuity reference only; keep the sense of a youthful social brand, but do not inherit the mascot-led childish form
-- `/Meetu/设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/1.png`
-  role: premium youth-campus color and tone reference; use for overall contemporary atmosphere, not for logo shape
-- `/Meetu/设计语言参考/Meetu元素参考/nanobanana图片生成v1/广场配图/0. 欢迎.png`
-  role: Meetu brand warmth and friendliness reference; use for emotional tone balance, not for composition copying
+- `设计语言参考/logo-style-anchors/jike-logo.png`
+  role: 即刻字标气质参考 only; use for the feeling of a clean but characterful sans-serif logo
+- `设计语言参考/logo-style-anchors/mschf-logo.png`
+  role: MSCHF monogram态度参考 only; use for the feeling of a simple but culturally confident symbol
+- `设计语言参考/logo-style-anchors/spotify-logo.svg`
+  role: Spotify 年轻全球品牌自信度参考 only; use for overall brand boldness and non-corporate coolness
+- `设计语言参考/logo-style-anchors/soul-logo.png`
+  role: Soul 年轻潮流平台感参考 only; use for youthful trend-platform confidence, not for color or form copying
+- `设计语言参考/Meetu元素参考/1 Meetu Logo.png`
+  role: Meetu 品牌连续性与配色锚点参考; the final color system must stay inside Meetu’s own palette logic
 
 Brand attitude:
 - 我们知道什么是好玩的，而且我们认为你也应该来。
@@ -728,6 +732,7 @@ Core design direction:
   - Soul: Chinese young-trend platform energy, especially dark base + accent-color control
 - these four are style anchors only; do not copy any exact silhouette, letterform, lockup, or composition from them
 - Meetu should sit between them: 即刻的干净 + MSCHF的态度 + Spotify的自信 + Soul的年轻潮流感
+- keep Meetu’s own color identity; the four reference logos are style anchors only and must not replace Meetu’s palette
 
 Audience:
 - Chinese university students, 18-25
@@ -763,16 +768,18 @@ Logo design requirements:
 - monochrome stability matters: the logo should still make sense in one color
 
 Color system:
-- primary dark: charcoal / deep near-black
-- light support: ivory / warm off-white
-- accent: signal orange (#FF7422-like)
+- Meetu core brand color is warm orange `#FF7422`; this must appear in the logo system as the key accent / anchor color
+- support colors should stay inside Meetu’s own palette logic: charcoal or deep near-black, ivory / warm off-white, and orange as the focal accent
+- do not describe or interpret Meetu as a “dark-first brand”; the logo must support both light-background and dark-background usage equally well
+- follow Meetu color ownership, not the reference brands’ exact brand colors
 - orange is not just a tiny dot; it can occupy one meaningful stroke or one assertive portion of the M
 - keep large surfaces dark/light and premium
 - prefer flat / crisp / graphic color usage, not glossy 3D gradients
 - do not use rainbow gradients
 - do not use pastel “cute app” palette
-- for dark-background scenes: light logo + orange detail
-- for light-background scenes: dark logo + orange detail
+- explicitly show two usage variants:
+  - dark-background scene: light logo + orange detail
+  - light-background scene: dark logo + orange detail
 - it is allowed to show multiple color variants for different future activity categories, as long as the M structure stays unchanged
 - absolutely avoid a pure black/white/gray finance-tech look
 
