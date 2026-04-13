@@ -795,3 +795,70 @@ Output requirements:
 - show enough attitude that it could plausibly live on a youth culture poster, campus event cover, or music-event campaign
 - strong, review-ready presentation quality
 ```
+
+### 21. DROP 活动封面图 / 海报（750×560）
+
+```text
+Create one finished cover poster for a Meetu DROP event.
+
+VISUAL INPUT (must be provided alongside this prompt):
+- `设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/场景/1.png`
+  role: youth social-scene energy reference; use for the feeling of “something is happening tonight”, not for literal composition reuse
+- `设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/场景/2.png`
+  role: nightlife / gathering atmosphere reference; use for density, tension, and social heat
+- `设计语言参考/Meetu元素参考/1 Meetu Logo.png`
+  role: brand ownership reference; use to keep the result inside Meetu’s identity logic
+
+Output target:
+- one final image
+- final filename: drop-cover-poster-01.png
+- size: 750 × 560px
+
+Goal:
+- create a small-program event cover that feels like a nightlife campaign poster, not an event instruction card
+- the image should make university students feel: “有事在发生，我得去看看”
+- brand tone: 有趣、自由、酷、有态度
+
+Style:
+- dark base with strong neon highlights
+- punk / club-poster / youth-culture tension
+- high contrast and highly memorable
+- not warm companionship, not corporate, not generic app banner
+- bold but still readable on a phone screen
+- use East Asian / Chinese university-age faces if any people appear
+
+Color system:
+- background: `#0D0D0D`
+- neon headline gradient: `#FF3CAC` to `#784BA0`
+- accent cyan: `#00F5FF`
+- accent gold: `#FFD700`
+- body/supporting text can use near-white or light gray
+- avoid soft pastel, beige, or lifestyle-brand warmth
+
+Information hierarchy that must appear in the image:
+1. `DROP第X局`
+2. `16个人坐下，0个认识，刚刚好`
+3. `8男8女 · ¥39/人 · 含饮品`
+4. `[日期] 周六 19:00`
+5. `武汉 · 高校附近`
+
+Composition:
+- top area: huge `DROP第X局` as the anchor
+- center: slogan with strong emotional pull
+- lower area: concise info strip / badges for gender ratio, price, included drink, date, and location
+- can include subtle card-game / table / night gathering cues, but do not clutter
+- should feel like a premium youth event poster with urgency and social intrigue
+
+Typography:
+- bold, condensed, high-impact display treatment
+- mix oversized title with tighter support copy
+- punk/editorial energy is welcome, but text must remain readable
+- avoid cute rounded type and avoid corporate neutral sans
+
+Absolutely avoid:
+- enterprise event poster style
+- wedding/party invitation style
+- warm campus brochure look
+- too many UI components or fake app screenshots
+- generic stock-photo collage
+```
