@@ -563,8 +563,6 @@ This output must be a finished banner image with the final Chinese text already 
 
 VISUAL INPUT (must be provided alongside this prompt):
 Reference images are for mood and direction only — the output should feel original, not derivative.
-- `/Meetu/设计语言参考/品牌资产统一/meetu-mascot-standard-pose.png`
-  role: mascot / avatar anchor; draw loose inspiration from it only if a character-like presence is included
 - `/Meetu/设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/4.png`
   role: mood anchor; draw loose inspiration from its warm, polished, youthful banner atmosphere
 - `/Meetu/设计语言参考/Meetu元素参考/nanobanana图片生成v1/广场配图/0. 欢迎.png`
@@ -638,8 +636,6 @@ VISUAL INPUT (must be provided alongside this prompt):
 Reference images are for mood and direction only — the output should feel original, not derivative.
 - `/Meetu/设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/2.png`
   role: mood anchor; draw loose inspiration from its pricing / trust banner atmosphere
-- `/Meetu/设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/场景/2.png`
-  role: composition anchor; draw loose inspiration from its calm, modern, trustworthy visual rhythm
 - `/Meetu/设计语言参考/品牌资产统一/stickers v1/放心来.png`
   role: trust-cue anchor; draw loose inspiration from its friendly, reassuring action-cue language
 
@@ -716,8 +712,6 @@ Reference images are for mood and direction only — the output should feel orig
   role: Soul primary anchor; draw loose inspiration from its concise young-trend logo language, but do not replicate its exact structure
 - `设计语言参考/logo-style-anchors/dewu-logo.png`
   role: Dewu primary anchor; draw loose inspiration from its restrained but forceful logo language, but do not replicate its exact structure
-- `设计语言参考/Meetu元素参考/1 Meetu Logo.png`
-  role: Meetu color anchor; use it only to keep the generated result inside Meetu’s own palette logic
 
 Reference handling:
 - references are for style direction only
@@ -821,8 +815,6 @@ VISUAL INPUT (must be provided alongside this prompt):
 Reference images are for mood and direction only — the output should feel original, not derivative.
 - `设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/场景/1.png`
   role: energy anchor; draw loose inspiration from the feeling of “something is happening tonight”
-- `设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/场景/2.png`
-  role: atmosphere anchor; draw loose inspiration from its density, tension, and social heat
 - `设计语言参考/Meetu元素参考/1 Meetu Logo.png`
   role: brand anchor; use only to keep the result inside Meetu’s identity logic
 
@@ -898,8 +890,6 @@ Reference images are for mood and direction only — the output should feel orig
   role: primary system anchor; draw loose inspiration from its dark neon palette, nightlife tension, and premium youth-event mood
 - `项目资料/meetu卡牌/5.png`
   role: secondary color-and-packaging anchor; draw loose inspiration from its galaxy purple-blue-pink energy and branded rhythm
-- `设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/场景/2.png`
-  role: mood anchor; draw loose inspiration from its dark gathering atmosphere, contrast, and social mystery
 
 Reference handling:
 - use the references only as loose style anchors
@@ -960,8 +950,6 @@ Reference images are for mood and direction only — the output should feel orig
   role: primary system anchor; draw loose inspiration from its DROP neon-dark language and premium card-game energy
 - `项目资料/meetu卡牌/1.jpg`
   role: coded-identity anchor; draw loose inspiration from the neon-number / alias-card feeling
-- `设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/场景/3.png`
-  role: mood anchor; draw loose inspiration from its stylish social-scene warmth while keeping the overall tone dark
 
 Reference handling:
 - use the references only as loose style anchors
@@ -1022,8 +1010,6 @@ Reference images are for mood and direction only — the output should feel orig
   role: primary system anchor; draw loose inspiration from its typography confidence, dark base, and neon accents
 - `项目资料/meetu卡牌/5.png`
   role: packaging-energy anchor; draw loose inspiration from the real DROP sub-brand color rhythm and branded energy
-- `设计语言参考/Meetu元素参考/1 Meetu Logo.png`
-  role: parent-brand anchor; use only to keep relationship with Meetu, not to pull the result back into a warm-orange main style
 
 Reference handling:
 - use the references only as loose style anchors
@@ -1084,8 +1070,6 @@ Reference images are for mood and direction only — the output should feel orig
   role: primary system anchor; draw loose inspiration from its neon-dark palette, nightlife tension, and premium youth-event mood
 - `项目资料/meetu卡牌/5.png`
   role: palette anchor; draw loose inspiration from the galaxy purple-blue-pink swirl and glint accents
-- `设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/场景/2.png`
-  role: mood anchor; draw loose inspiration from its nightlife atmosphere, contrast, and gathering tension
 
 Reference handling:
 - use the references only as loose style anchors
@@ -1138,8 +1122,6 @@ Reference images are for mood and direction only — the output should feel orig
   role: primary system anchor; draw loose inspiration from its dark neon confidence and premium social-game atmosphere
 - `项目资料/meetu卡牌/1.jpg`
   role: concept anchor; draw loose inspiration from the idea of removing real names and switching into coded roles
-- `设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/4.png`
-  role: energy anchor; draw loose inspiration from its bold color energy and youth-culture attitude
 
 Reference handling:
 - use the references only as loose style anchors
@@ -1195,8 +1177,6 @@ VISUAL INPUT (must be provided alongside this prompt):
 Reference images are for mood and direction only — the output should feel original, not derivative.
 - `项目资料/meetu卡牌/2.jpg`
   role: SPARK anchor; draw loose inspiration from the yellow-black hazard-sign aesthetic, fire-icon energy, and graffiti-like boldness
-- `项目资料/meetu卡牌/3.jpg`
-  role: CONNECT anchor; draw loose inspiration from the deep purple / indigo / signal-icon visual language and introspective mood
 - `项目资料/meetu卡牌/0.jpg`
   role: RESONANCE anchor; draw loose inspiration from the hot-pink + cyan pop-art comic burst energy
 
@@ -1265,8 +1245,6 @@ Reference images are for mood and direction only — the output should feel orig
   role: official brand anchor; draw loose inspiration from it for logo presence, brand consistency, and orange accent logic
 - `cms-pages-v4/B-youth-editorial-平台介绍.html`
   role: positioning anchor; draw loose inspiration from its “大学生活动社交平台” tone and its warmth / clarity balance
-- `设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/1.png`
-  role: poster-energy anchor; draw loose inspiration from its youthful compositional confidence and social-product atmosphere
 
 Reference handling:
 - use the references only as loose style anchors
@@ -1329,8 +1307,6 @@ Reference images are for mood and direction only — the output should feel orig
   role: brand anchor; draw loose inspiration from it for logo consistency and accent logic
 - `cms-pages-v4/B-youth-editorial-平台介绍.html`
   role: trust-system anchor; draw loose inspiration from its in-school verification / fee clarity / safe participation tone
-- `设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/2.png`
-  role: layout-and-trust anchor; draw loose inspiration from its calm information framing
 
 Reference handling:
 - use the references only as loose style anchors
@@ -1391,8 +1367,6 @@ Reference images are for mood and direction only — the output should feel orig
   role: platform-structure anchor; draw loose inspiration from the relationship between trust, discovery, and social experience
 - `设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/场景/1.png`
   role: event-side anchor; draw loose inspiration from its event-discovery and social-energy feel
-- `设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/场景/3.png`
-  role: plaza-side anchor; draw loose inspiration from its browsing / sharing / community-atmosphere feel
 
 Reference handling:
 - use the references only as loose style anchors
