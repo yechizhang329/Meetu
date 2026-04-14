@@ -562,12 +562,18 @@ Create a polished final homepage contact banner for Meetu, 750x340px, horizontal
 This output must be a finished banner image with the final Chinese text already embedded correctly in the image.
 
 VISUAL INPUT (must be provided alongside this prompt):
+Reference images are for mood and direction only — the output should feel original, not derivative.
 - `/Meetu/设计语言参考/品牌资产统一/meetu-mascot-standard-pose.png`
-  role: mascot / avatar consistency reference, only if a character-like presence is included
+  role: mascot / avatar anchor; draw loose inspiration from it only if a character-like presence is included
 - `/Meetu/设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/4.png`
-  role: banner mood reference for warm, polished, youthful brand atmosphere
+  role: mood anchor; draw loose inspiration from its warm, polished, youthful banner atmosphere
 - `/Meetu/设计语言参考/Meetu元素参考/nanobanana图片生成v1/广场配图/0. 欢迎.png`
-  role: composition and friendliness reference for a welcoming contact-entry feeling
+  role: composition anchor; draw loose inspiration from its welcoming contact-entry feeling
+
+Reference handling:
+- use the references only as loose style anchors
+- do not replicate their exact composition, card placement, or mascot staging
+- the final banner should feel new, not like a recomposed version of the inputs
 
 Core theme:
 - real human contact
@@ -629,14 +635,18 @@ Create a polished final homepage banner for Meetu, 750x340px, horizontal, produc
 This output must be a finished banner image with the final Chinese text already embedded correctly in the image.
 
 VISUAL INPUT (must be provided alongside this prompt):
+Reference images are for mood and direction only — the output should feel original, not derivative.
 - `/Meetu/设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/2.png`
-  role: pricing / trust banner mood reference
+  role: mood anchor; draw loose inspiration from its pricing / trust banner atmosphere
 - `/Meetu/设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/场景/2.png`
-  role: scene and composition reference for calm, modern, trustworthy visual rhythm
+  role: composition anchor; draw loose inspiration from its calm, modern, trustworthy visual rhythm
 - `/Meetu/设计语言参考/品牌资产统一/stickers v1/放心来.png`
-  role: trust-language sticker reference for friendly, reassuring action cues
-- `/Meetu/设计语言参考/品牌资产统一/stickers v1/搭子认证.png`
-  role: certified / verified tone reference for transparent, rule-based trust
+  role: trust-cue anchor; draw loose inspiration from its friendly, reassuring action-cue language
+
+Reference handling:
+- use the references only as loose style anchors
+- do not directly recreate any existing sticker, badge, or card layout from the sources
+- the final banner should feel newly designed while staying inside Meetu’s trust language
 
 Core theme:
 - pricing clarity
@@ -701,23 +711,29 @@ Create one polished logo concept presentation board for Meetu, 1600x1100px, hori
 This output is not a poster or banner. It is a brand logo concept board used for internal review and decision-making.
 
 VISUAL INPUT (must be provided alongside this prompt):
+Reference images are for mood and direction only — the output should feel original, not derivative.
 - `设计语言参考/logo-style-anchors/soul-logo.png`
-  role: Soul 主参考; directly reuse Soul logo’s design language as a base skin, but replace the character/content with `M` and `Meetu`
+  role: Soul primary anchor; draw loose inspiration from its concise young-trend logo language, but do not replicate its exact structure
 - `设计语言参考/logo-style-anchors/dewu-logo.png`
-  role: 得物主参考; directly reuse Dewu logo’s design language as a base skin, but replace the character/content with `M` and `Meetu`
+  role: Dewu primary anchor; draw loose inspiration from its restrained but forceful logo language, but do not replicate its exact structure
 - `设计语言参考/Meetu元素参考/1 Meetu Logo.png`
-  role: Meetu 配色锚点参考; all generated results must use Meetu’s own orange-centered palette instead of Soul or Dewu’s original colors
+  role: Meetu color anchor; use it only to keep the generated result inside Meetu’s own palette logic
+
+Reference handling:
+- references are for style direction only
+- do not copy exact logo contours, exact typographic lockups, or exact composition from Soul or Dewu
+- keep the result original while making the comparison route legible
 
 Brand attitude:
 - 我们知道什么是好玩的，而且我们认为你也应该来。
 
 Core design direction:
 - D1 system = M main icon + Meetu custom wordmark
-- do not freely reinterpret; this round is a controlled “换皮对比” exercise
 - build two parallel solutions on one board:
-  1. Soul-style solution: directly borrow Soul’s logo design language and swap in `M` + `Meetu`
-  2. Dewu-style solution: directly borrow Dewu’s logo design language and swap in `M` + `Meetu`
-- the point is not originality in this round; the point is to compare which base direction is closer to Meetu’s future logo path
+  1. Soul-inspired route: reinterpret Soul’s concise young-trend logo attitude into `M` + `Meetu`
+  2. Dewu-inspired route: reinterpret Dewu’s restrained but forceful logo attitude into `M` + `Meetu`
+- the point is controlled comparison, not literal reskinning
+- both routes should feel fresh enough to stand as original concept directions
 - keep the output youthful, stylish, cool, and suitable for Chinese university students
 - avoid childish, overly cute, mascot-led, overly soft, or neutral-corporate behavior
 - keep Meetu’s own color identity; Soul and Dewu references influence only style / structure / temperament, never replace Meetu’s palette
@@ -802,12 +818,18 @@ Output requirements:
 Create one finished cover poster for a Meetu DROP event.
 
 VISUAL INPUT (must be provided alongside this prompt):
+Reference images are for mood and direction only — the output should feel original, not derivative.
 - `设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/场景/1.png`
-  role: youth social-scene energy reference; use for the feeling of “something is happening tonight”, not for literal composition reuse
+  role: energy anchor; draw loose inspiration from the feeling of “something is happening tonight”
 - `设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/场景/2.png`
-  role: nightlife / gathering atmosphere reference; use for density, tension, and social heat
+  role: atmosphere anchor; draw loose inspiration from its density, tension, and social heat
 - `设计语言参考/Meetu元素参考/1 Meetu Logo.png`
-  role: brand ownership reference; use to keep the result inside Meetu’s identity logic
+  role: brand anchor; use only to keep the result inside Meetu’s identity logic
+
+Reference handling:
+- use the references only as loose style anchors
+- do not reuse any exact scene composition, crowd arrangement, or poster layout from the inputs
+- the final image should feel like a new DROP campaign cover, not a remixed source image
 
 Output target:
 - one final image
@@ -871,16 +893,18 @@ Absolutely avoid:
 Create one finished vertical cover image for a Xiaohongshu traffic-driving post about Meetu DROP.
 
 VISUAL INPUT (must be provided alongside this prompt):
+Reference images are for mood and direction only — the output should feel original, not derivative.
 - `activity-detail-demos/demo-4-DROP-狠人杀.html`
-  role: core visual language reference; use for the neon-dark palette, nightlife tension, and premium youth-event mood
+  role: primary system anchor; draw loose inspiration from its dark neon palette, nightlife tension, and premium youth-event mood
 - `项目资料/meetu卡牌/5.png`
-  role: actual 狠人杀 packaging reference; use for the real galaxy purple-blue-pink energy and branded color rhythm
-- `项目资料/meetu卡牌/1.jpg`
-  role: alias-card / neon-number reference; use for the coded-identity feeling
-- `设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/场景/1.png`
-  role: youth social heat reference; use for the feeling of "something is happening tonight"
+  role: secondary color-and-packaging anchor; draw loose inspiration from its galaxy purple-blue-pink energy and branded rhythm
 - `设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/场景/2.png`
-  role: dark gathering atmosphere reference; use for contrast, lighting, and social mystery
+  role: mood anchor; draw loose inspiration from its dark gathering atmosphere, contrast, and social mystery
+
+Reference handling:
+- use the references only as loose style anchors
+- do not replicate their exact composition, object placement, poster structure, or scene framing
+- the final image should feel recognizably DROP, but still new
 
 Output target:
 - one final image
@@ -931,16 +955,18 @@ Absolutely avoid:
 Create one finished vertical atmosphere image for a Xiaohongshu traffic-driving post about Meetu DROP.
 
 VISUAL INPUT (must be provided alongside this prompt):
+Reference images are for mood and direction only — the output should feel original, not derivative.
 - `activity-detail-demos/demo-4-DROP-狠人杀.html`
-  role: visual-system reference; use for the same DROP neon-dark language and premium card-game energy
+  role: primary system anchor; draw loose inspiration from its DROP neon-dark language and premium card-game energy
 - `项目资料/meetu卡牌/1.jpg`
-  role: alias-card reference; use for the coded identity / neon-number feeling
-- `项目资料/meetu卡牌/5.png`
-  role: actual package-color-system reference; use for the real DROP sub-series visual energy
-- `设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/场景/2.png`
-  role: nightlife / group atmosphere reference
+  role: coded-identity anchor; draw loose inspiration from the neon-number / alias-card feeling
 - `设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/场景/3.png`
-  role: stylish social-scene warmth reference; use selectively to avoid losing the dark tone
+  role: mood anchor; draw loose inspiration from its stylish social-scene warmth while keeping the overall tone dark
+
+Reference handling:
+- use the references only as loose style anchors
+- do not reproduce exact card angles, exact table layouts, or scene framing from the references
+- keep the final image original and mood-first
 
 Output target:
 - one final image
@@ -991,14 +1017,18 @@ Absolutely avoid:
 Create one finished vertical signature image for a Xiaohongshu traffic-driving post about Meetu DROP.
 
 VISUAL INPUT (must be provided alongside this prompt):
+Reference images are for mood and direction only — the output should feel original, not derivative.
 - `activity-detail-demos/demo-4-DROP-狠人杀.html`
-  role: primary visual-language reference; use for typography confidence, dark base, and neon accents
+  role: primary system anchor; draw loose inspiration from its typography confidence, dark base, and neon accents
 - `项目资料/meetu卡牌/5.png`
-  role: packaging-system reference; use for the real DROP sub-brand color rhythm and branded energy
+  role: packaging-energy anchor; draw loose inspiration from the real DROP sub-brand color rhythm and branded energy
 - `设计语言参考/Meetu元素参考/1 Meetu Logo.png`
-  role: parent-brand ownership reference; use only to keep relationship with Meetu, not to bring back warm-orange main style
-- `设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/场景/1.png`
-  role: youth-culture energy reference
+  role: parent-brand anchor; use only to keep relationship with Meetu, not to pull the result back into a warm-orange main style
+
+Reference handling:
+- use the references only as loose style anchors
+- do not mimic the exact layout, type lockup, or logo placement from any single source
+- the final signature page should feel like a fresh DROP campaign asset
 
 Output target:
 - one final image
@@ -1049,16 +1079,18 @@ Absolutely avoid:
 Create one finished horizontal background image for the hero section of a Meetu DROP activity-detail page.
 
 VISUAL INPUT (must be provided alongside this prompt):
+Reference images are for mood and direction only — the output should feel original, not derivative.
 - `activity-detail-demos/demo-4-DROP-狠人杀.html`
-  role: primary visual-system reference; use for the same neon-dark palette, nightlife tension, and premium youth-event mood
+  role: primary system anchor; draw loose inspiration from its neon-dark palette, nightlife tension, and premium youth-event mood
 - `项目资料/meetu卡牌/5.png`
-  role: actual card-box palette reference; use for the galaxy purple-blue-pink swirl and glint accents
-- `项目资料/meetu卡牌/1.jpg`
-  role: neon-number / alias-card reference; use for subtle coded-identity energy in the background
-- `设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/场景/1.png`
-  role: youth social-energy reference; use for the feeling that “something is happening tonight”
+  role: palette anchor; draw loose inspiration from the galaxy purple-blue-pink swirl and glint accents
 - `设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/场景/2.png`
-  role: nightlife atmosphere reference; use for contrast, glow, and gathering tension
+  role: mood anchor; draw loose inspiration from its nightlife atmosphere, contrast, and gathering tension
+
+Reference handling:
+- use the references only as loose style anchors
+- do not recreate any one reference image’s composition or exact lighting setup
+- preserve originality while staying inside the DROP system
 
 Output target:
 - one final image
@@ -1101,16 +1133,18 @@ Absolutely avoid:
 Create one finished horizontal visual for the “DROP = 放下” explanation block of a Meetu DROP activity-detail page.
 
 VISUAL INPUT (must be provided alongside this prompt):
+Reference images are for mood and direction only — the output should feel original, not derivative.
 - `activity-detail-demos/demo-4-DROP-狠人杀.html`
-  role: visual-language reference; use for dark neon confidence and the premium social-game atmosphere
+  role: primary system anchor; draw loose inspiration from its dark neon confidence and premium social-game atmosphere
 - `项目资料/meetu卡牌/1.jpg`
-  role: alias-card / identity-drop reference; use for the idea of removing real names and switching into coded roles
-- `项目资料/meetu卡牌/5.png`
-  role: actual DROP palette reference
-- `设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/场景/3.png`
-  role: stylish youth-scene warmth reference; use selectively so the visual still belongs to DROP
+  role: concept anchor; draw loose inspiration from the idea of removing real names and switching into coded roles
 - `设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/4.png`
-  role: stronger color-energy reference; use for boldness and youth-culture attitude
+  role: energy anchor; draw loose inspiration from its bold color energy and youth-culture attitude
+
+Reference handling:
+- use the references only as loose style anchors
+- do not directly reproduce the reference composition or object arrangement
+- let the final image feel more abstract and concept-led than the sources
 
 Output target:
 - one final image
@@ -1158,18 +1192,18 @@ Absolutely avoid:
 Create one finished horizontal atmosphere image for the “狠人杀” card section of a Meetu DROP activity-detail page.
 
 VISUAL INPUT (must be provided alongside this prompt):
-- `activity-detail-demos/demo-4-DROP-狠人杀.html`
-  role: primary style reference; use for color system, mood, and overall DROP identity
+Reference images are for mood and direction only — the output should feel original, not derivative.
 - `项目资料/meetu卡牌/2.jpg`
-  role: SPARK 气氛组 reference; use for the yellow-black hazard-sign aesthetic, fire-icon energy, and graffiti-like boldness
+  role: SPARK anchor; draw loose inspiration from the yellow-black hazard-sign aesthetic, fire-icon energy, and graffiti-like boldness
 - `项目资料/meetu卡牌/3.jpg`
-  role: CONNECT 走心局 reference; use for the deep purple / indigo / signal-icon visual language and more introspective card mood
+  role: CONNECT anchor; draw loose inspiration from the deep purple / indigo / signal-icon visual language and introspective mood
 - `项目资料/meetu卡牌/0.jpg`
-  role: RESONANCE 共振局 reference; use for the hot-pink + cyan pop-art comic burst energy
-- `项目资料/meetu卡牌/1.jpg`
-  role: alias-card reference; use for neon-number identity card hints
-- `项目资料/meetu卡牌/5.png`
-  role: card-box / packaging reference; use for system cohesion and the actual DROP palette
+  role: RESONANCE anchor; draw loose inspiration from the hot-pink + cyan pop-art comic burst energy
+
+Reference handling:
+- use the references only as loose style anchors
+- do not copy exact card layout, exact border treatment, or literal card-face composition
+- translate the three systems into one fresh atmosphere image rather than a collage of source cards
 
 Output target:
 - one final image
@@ -1226,14 +1260,18 @@ Absolutely avoid:
 Create one finished Xiaohongshu poster announcing the official launch of Meetu.
 
 VISUAL INPUT (must be provided alongside this prompt):
+Reference images are for mood and direction only — the output should feel original, not derivative.
 - `设计语言参考/Meetu元素参考/1 Meetu Logo.png`
-  role: official brand anchor reference; use for logo shape, brand consistency, and core orange accent logic
+  role: official brand anchor; draw loose inspiration from it for logo presence, brand consistency, and orange accent logic
 - `cms-pages-v4/B-youth-editorial-平台介绍.html`
-  role: platform-positioning reference; use for the “大学生活动社交平台” tone and the balance of warmth + clarity
+  role: positioning anchor; draw loose inspiration from its “大学生活动社交平台” tone and its warmth / clarity balance
 - `设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/1.png`
-  role: youthful poster-system reference; use for energy, compositional confidence, and social-product atmosphere
-- `设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/4.png`
-  role: bolder color-energy reference; use selectively so the poster feels current, youthful, and memorable
+  role: poster-energy anchor; draw loose inspiration from its youthful compositional confidence and social-product atmosphere
+
+Reference handling:
+- use the references only as loose style anchors
+- do not recreate their exact composition, layout rhythm, or decorative details
+- this should look like a new launch poster, not a remix of existing assets
 
 Output target:
 - one final poster image
@@ -1286,14 +1324,18 @@ Absolutely avoid:
 Create one finished Xiaohongshu poster explaining Meetu’s student-verification mechanism.
 
 VISUAL INPUT (must be provided alongside this prompt):
+Reference images are for mood and direction only — the output should feel original, not derivative.
 - `设计语言参考/Meetu元素参考/1 Meetu Logo.png`
-  role: brand anchor reference; use for logo consistency and core accent logic
+  role: brand anchor; draw loose inspiration from it for logo consistency and accent logic
 - `cms-pages-v4/B-youth-editorial-平台介绍.html`
-  role: trust-system reference; use for the tone of in-school verification / fee clarity / safe participation
+  role: trust-system anchor; draw loose inspiration from its in-school verification / fee clarity / safe participation tone
 - `设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/2.png`
-  role: calm trust-and-system design reference; use for clean information framing
-- `设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/场景/2.png`
-  role: youth-platform atmosphere reference; use selectively so the result feels warm and peer-level, not institutional
+  role: layout-and-trust anchor; draw loose inspiration from its calm information framing
+
+Reference handling:
+- use the references only as loose style anchors
+- do not turn the result into a screenshot remake or a close variation of the source poster
+- the final visual should feel new, but trustworthy
 
 Output target:
 - one final poster image
@@ -1344,14 +1386,18 @@ Absolutely avoid:
 Create one finished Xiaohongshu poster introducing Meetu’s two core modules: 活动 and 广场.
 
 VISUAL INPUT (must be provided alongside this prompt):
-- `设计语言参考/Meetu元素参考/1 Meetu Logo.png`
-  role: brand anchor reference; use for overall identity consistency
+Reference images are for mood and direction only — the output should feel original, not derivative.
 - `cms-pages-v4/B-youth-editorial-平台介绍.html`
-  role: platform-structure reference; use for the relationship between trust, discovery, and social experience
+  role: platform-structure anchor; draw loose inspiration from the relationship between trust, discovery, and social experience
 - `设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/场景/1.png`
-  role: event-discovery and social-energy reference
+  role: event-side anchor; draw loose inspiration from its event-discovery and social-energy feel
 - `设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/场景/3.png`
-  role: browsing / sharing / community-atmosphere reference
+  role: plaza-side anchor; draw loose inspiration from its browsing / sharing / community-atmosphere feel
+
+Reference handling:
+- use the references only as loose style anchors
+- do not reproduce any source image as a side-by-side copy
+- build a fresh dual-module poster with new hierarchy and new visual rhythm
 
 Output target:
 - one final poster image
