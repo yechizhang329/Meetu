@@ -889,7 +889,7 @@ Goal:
 - visual role is hook first, information second
 
 Chinese text to include:
-- 主标题：武汉高校的人 这周六要坐一桌了
+- 主标题：8个陌生武汉大学生坐一桌会发生什么？
 - 标签：跨校盲盒局
 - 品牌标记：DROP · 第1期
 
