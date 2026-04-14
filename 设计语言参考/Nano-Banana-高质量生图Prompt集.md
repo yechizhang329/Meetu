@@ -468,9 +468,9 @@ Create a final Chinese launch countdown poster, 750x1334px, polished and product
 Visual style: warm orange launch anticipation, large glowing number 3, clean but exciting composition, modern mobile internet poster aesthetic.
 
 Render the following exact simplified Chinese text:
-Main title: 3天后，找搭子这件事将变得无比简单
-Subtitle: 觅遇社｜大学生专属拼团社交平台 即将上线
-Bottom line: 微信搜索“觅遇社”小程序
+Main title: 3天后，认识新的人这件事会变得不一样
+Subtitle: 觅遇社｜大学生活动社交平台 即将上线
+Bottom line: 🔍「觅遇社」
 
 Typography requirements:
 - Main title large and highly readable
@@ -489,9 +489,9 @@ Create a final Chinese launch countdown poster, 750x1334px, polished and product
 Visual style: pink to purple countdown atmosphere, stronger anticipation, dynamic particles, youthful but trustworthy.
 
 Render the following exact simplified Chinese text:
-Main title: 还有2天，你的搭子已经在路上了
-Subtitle: 全员在校认证｜诚意金防鸽｜女生安心模式
-Bottom line: 微信搜索“觅遇社”小程序
+Main title: 还有2天，有人已经准备好和你坐同一桌了
+Subtitle: 全员在校认证｜活动付费保障出席｜女生安心模式
+Bottom line: 🔍「觅遇社」
 
 Typography requirements:
 - Main title bold and prominent
@@ -510,9 +510,9 @@ Create a final Chinese launch countdown poster, 750x1334px, polished and product
 Visual style: final-day launch excitement, magenta to deep purple, celebratory confetti, energetic and action-oriented.
 
 Render the following exact simplified Chinese text:
-Main title: 明天见！你的第一场搭子局等你来
+Main title: 明天见！第一场活动，等你来
 Subtitle: 首批活动已上架｜准备好了吗？
-Bottom line: 微信搜索“觅遇社”小程序
+Bottom line: 🔍「觅遇社」
 
 Typography requirements:
 - Main title strong and emotional
@@ -873,6 +873,10 @@ Create one finished vertical cover image for a Xiaohongshu traffic-driving post 
 VISUAL INPUT (must be provided alongside this prompt):
 - `activity-detail-demos/demo-4-DROP-狠人杀.html`
   role: core visual language reference; use for the neon-dark palette, nightlife tension, and premium youth-event mood
+- `项目资料/meetu卡牌/5.png`
+  role: actual 狠人杀 packaging reference; use for the real galaxy purple-blue-pink energy and branded color rhythm
+- `项目资料/meetu卡牌/1.jpg`
+  role: alias-card / neon-number reference; use for the coded-identity feeling
 - `设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/场景/1.png`
   role: youth social heat reference; use for the feeling of "something is happening tonight"
 - `设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/场景/2.png`
@@ -896,6 +900,7 @@ Chinese text to include:
 Style:
 - dark, stylish, youthful, high-energy
 - deep black background with neon pink / purple glow and cyan sparks
+- let the color energy feel closer to the real 狠人杀 system: galaxy purple-blue-pink, neon-number glow, and high-contrast event-poster confidence
 - club-poster / underground event / cool youth-culture feeling
 - fashionable, sharp, and memorable rather than warm or explanatory
 - if any people appear, use East Asian / Chinese university-age faces with consistent warm light-beige Asian skin tones
@@ -905,6 +910,7 @@ Composition:
 - small but clear `DROP · 第1期` brand mark
 - one compact capsule tag for `跨校盲盒局`
 - visual center can suggest a dark table, chairs, cards, or a social scene about to start
+- if card hints appear, they should feel consistent with the actual DROP deck language rather than generic nightlife props
 - keep enough negative space so the typography feels premium, not crowded
 
 Typography:
@@ -927,6 +933,10 @@ Create one finished vertical atmosphere image for a Xiaohongshu traffic-driving 
 VISUAL INPUT (must be provided alongside this prompt):
 - `activity-detail-demos/demo-4-DROP-狠人杀.html`
   role: visual-system reference; use for the same DROP neon-dark language and premium card-game energy
+- `项目资料/meetu卡牌/1.jpg`
+  role: alias-card reference; use for the coded identity / neon-number feeling
+- `项目资料/meetu卡牌/5.png`
+  role: actual package-color-system reference; use for the real DROP sub-series visual energy
 - `设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/场景/2.png`
   role: nightlife / group atmosphere reference
 - `设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/场景/3.png`
@@ -957,6 +967,7 @@ Style:
 Visual cues allowed:
 - close-up card textures
 - coded identity cards / alias-card feeling
+- galaxy-swirl packaging accents, neon-number glow, a sense that each seat has a hidden code
 - table-edge light, hands, drinks, chairs, name-card silhouettes
 - suggestive social staging without fully spelling out the mechanics
 
@@ -982,6 +993,8 @@ Create one finished vertical signature image for a Xiaohongshu traffic-driving p
 VISUAL INPUT (must be provided alongside this prompt):
 - `activity-detail-demos/demo-4-DROP-狠人杀.html`
   role: primary visual-language reference; use for typography confidence, dark base, and neon accents
+- `项目资料/meetu卡牌/5.png`
+  role: packaging-system reference; use for the real DROP sub-brand color rhythm and branded energy
 - `设计语言参考/Meetu元素参考/1 Meetu Logo.png`
   role: parent-brand ownership reference; use only to keep relationship with Meetu, not to bring back warm-orange main style
 - `设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/场景/1.png`
@@ -1006,6 +1019,7 @@ Chinese text to include:
 Style:
 - dark, fashionable, youth-culture-first
 - premium black background with electric pink / violet / cyan accents
+- closer to the actual 狠人杀 packaging language than a generic neon poster
 - stronger brand-signature feeling than the first two images
 - if any people appear, use East Asian / Chinese university-age faces with consistent warm light-beige Asian skin tones
 
@@ -1037,6 +1051,10 @@ Create one finished horizontal background image for the hero section of a Meetu 
 VISUAL INPUT (must be provided alongside this prompt):
 - `activity-detail-demos/demo-4-DROP-狠人杀.html`
   role: primary visual-system reference; use for the same neon-dark palette, nightlife tension, and premium youth-event mood
+- `项目资料/meetu卡牌/5.png`
+  role: actual card-box palette reference; use for the galaxy purple-blue-pink swirl and glint accents
+- `项目资料/meetu卡牌/1.jpg`
+  role: neon-number / alias-card reference; use for subtle coded-identity energy in the background
 - `设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/场景/1.png`
   role: youth social-energy reference; use for the feeling that “something is happening tonight”
 - `设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/场景/2.png`
@@ -1059,6 +1077,7 @@ Text policy:
 
 Style:
 - dark base, neon pink / purple / cyan glow, subtle gold highlights
+- lean toward the real 狠人杀 packaging system: galaxy purple-blue-pink + coded neon accents
 - club-poster energy, not corporate, not lifestyle sunshine
 - premium and stylish, with a sense of anticipation
 - if any people appear, use East Asian / Chinese university-age faces with consistent warm light-beige Asian skin tones
@@ -1084,6 +1103,10 @@ Create one finished horizontal visual for the “DROP = 放下” explanation bl
 VISUAL INPUT (must be provided alongside this prompt):
 - `activity-detail-demos/demo-4-DROP-狠人杀.html`
   role: visual-language reference; use for dark neon confidence and the premium social-game atmosphere
+- `项目资料/meetu卡牌/1.jpg`
+  role: alias-card / identity-drop reference; use for the idea of removing real names and switching into coded roles
+- `项目资料/meetu卡牌/5.png`
+  role: actual DROP palette reference
 - `设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/场景/3.png`
   role: stylish youth-scene warmth reference; use selectively so the visual still belongs to DROP
 - `设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/4.png`
@@ -1113,6 +1136,7 @@ Visual cues allowed:
 - identity tag slipping off
 - mask being set aside
 - alias card turning over
+- numbered code card replacing a name tag
 - label fragments falling away
 - negative-space shape suggesting release or openness
 
@@ -1136,10 +1160,16 @@ Create one finished horizontal atmosphere image for the “狠人杀” card sec
 VISUAL INPUT (must be provided alongside this prompt):
 - `activity-detail-demos/demo-4-DROP-狠人杀.html`
   role: primary style reference; use for color system, mood, and overall DROP identity
-- `设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/场景/2.png`
-  role: dark social-scene reference
-- `设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/场景/1.png`
-  role: social energy and table-scene reference
+- `项目资料/meetu卡牌/2.jpg`
+  role: SPARK 气氛组 reference; use for the yellow-black hazard-sign aesthetic, fire-icon energy, and graffiti-like boldness
+- `项目资料/meetu卡牌/3.jpg`
+  role: CONNECT 走心局 reference; use for the deep purple / indigo / signal-icon visual language and more introspective card mood
+- `项目资料/meetu卡牌/0.jpg`
+  role: RESONANCE 共振局 reference; use for the hot-pink + cyan pop-art comic burst energy
+- `项目资料/meetu卡牌/1.jpg`
+  role: alias-card reference; use for neon-number identity card hints
+- `项目资料/meetu卡牌/5.png`
+  role: card-box / packaging reference; use for system cohesion and the actual DROP palette
 
 Output target:
 - one final image
@@ -1150,6 +1180,10 @@ Goal:
 - show the texture and atmosphere of the 狠人杀 card system
 - create intrigue without revealing actual card content
 - make users feel that the cards are part game mechanic, part social accelerator
+- specifically reflect the real three-part card language:
+  - SPARK = yellow/black hazard-sign energy
+  - CONNECT = deep purple / indigo reflective mood
+  - RESONANCE = hot-pink / cyan comic-burst energy
 
 Text policy:
 - no text in the image
@@ -1160,14 +1194,17 @@ Style:
 - dark, tactile, stylish, premium
 - moody tabletop scene with neon edge light
 - social tension and curiosity over explanation
+- the composition should clearly feel rooted in the real card family rather than a generic neon tabletop
+- let yellow-black, deep purple, and hot-pink/cyan coexist as a three-system palette
 - if any people appear, use East Asian / Chinese university-age hands/faces with consistent warm light-beige Asian skin tones
 
 Visual cues allowed:
-- card corners
+- card corners from all three systems
 - partial deck spread
 - fingers flipping a card
 - table reflection
 - drinks, glow, badge-like markers, alias-card hints
+- hazard stripes, signal / wifi-like glyph hints, comic burst shapes
 
 Composition:
 - hero focus on card texture or flipping motion
@@ -1180,4 +1217,189 @@ Absolutely avoid:
 - bright casual board-game cafe mood
 - mascot or cartoon treatment
 - cluttered tabletop with too many unrelated props
+- flattening all cards into one generic neon style that loses the SPARK / CONNECT / RESONANCE distinction
+```
+
+#### 24. 平台正式上线通知海报（1242×1660）
+
+```text
+Create one finished Xiaohongshu poster announcing the official launch of Meetu.
+
+VISUAL INPUT (must be provided alongside this prompt):
+- `设计语言参考/Meetu元素参考/1 Meetu Logo.png`
+  role: official brand anchor reference; use for logo shape, brand consistency, and core orange accent logic
+- `cms-pages-v4/B-youth-editorial-平台介绍.html`
+  role: platform-positioning reference; use for the “大学生活动社交平台” tone and the balance of warmth + clarity
+- `设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/1.png`
+  role: youthful poster-system reference; use for energy, compositional confidence, and social-product atmosphere
+- `设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/4.png`
+  role: bolder color-energy reference; use selectively so the poster feels current, youthful, and memorable
+
+Output target:
+- one final poster image
+- final filename: xhs-launch-poster-01-正式上线.png
+- size: 1242 × 1660px
+- aspect ratio: 3:4 vertical
+
+Goal:
+- announce that Meetu is officially live
+- make university students feel “this is finally here, I should go search it now”
+- sound like a confident peer announcing something worth paying attention to, not an official brand bulletin
+
+Render the following exact simplified Chinese text:
+- 主标题：觅遇社，正式上线了
+- 副标题：大学生活动社交平台
+- 卖点1：全员在校认证
+- 卖点2：活动付费保障出席
+- 卖点3：女生安心模式
+- 底部引导：🔍「觅遇社」
+
+Style:
+- young, stylish, energetic, socially native
+- 70-80% interesting / free / confident, not corporate, not explanatory
+- celebratory without looking like a grand-opening discount poster
+- must feel like something a college student would screenshot and repost without embarrassment
+- if any people appear, use East Asian / Chinese university-age faces and warm light-beige Asian skin tones
+
+Color direction:
+- keep Meetu brand consistency
+- use #FF7422 as the anchor accent
+- support with cream, deep charcoal, and one fresh contemporary accent if needed
+- avoid overusing orange as a full-page fill; use it as a controlled focal energy
+
+Composition:
+- one dominant headline zone with strong stop-scroll power
+- supporting selling points should feel like confident badges / signals, not a dense information board
+- bottom search instruction must be very clear and easy to notice
+- the whole poster should feel like “something has started”
+
+Absolutely avoid:
+- coupon / opening sale aesthetics
+- childish mascot-led composition
+- overcrowded UI screenshot style
+- bland corporate app-launch poster design
+```
+
+#### 25. 平台功能介绍海报 A：学生认证入口（1242×1660）
+
+```text
+Create one finished Xiaohongshu poster explaining Meetu’s student-verification mechanism.
+
+VISUAL INPUT (must be provided alongside this prompt):
+- `设计语言参考/Meetu元素参考/1 Meetu Logo.png`
+  role: brand anchor reference; use for logo consistency and core accent logic
+- `cms-pages-v4/B-youth-editorial-平台介绍.html`
+  role: trust-system reference; use for the tone of in-school verification / fee clarity / safe participation
+- `设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/2.png`
+  role: calm trust-and-system design reference; use for clean information framing
+- `设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/场景/2.png`
+  role: youth-platform atmosphere reference; use selectively so the result feels warm and peer-level, not institutional
+
+Output target:
+- one final poster image
+- final filename: xhs-feature-poster-01-学生认证入口.png
+- size: 1242 × 1660px
+- aspect ratio: 3:4 vertical
+
+Goal:
+- explain that full access requires student verification
+- make the mechanism feel like protection and filtering, not like a hurdle
+- create the feeling of “这里的人，我们已经先筛过一遍了”
+
+Render the following exact simplified Chinese text:
+- 主标题：这里的每个人，都是在校大学生
+- 副标题：先认证，再放心认识新的人
+- 说明1：学生证 / 在校证明
+- 说明2：平台审核
+- 说明3：通过后解锁全部功能
+- 底部说明：这不是障碍，是我们先帮你筛过了
+
+Style:
+- trustworthy, youthful, clean, reassuring
+- same-generation tone, not school administration, not customer-service explanation
+- should feel like a well-designed student community entry rule
+- if any people appear, use East Asian / Chinese university-age faces and warm light-beige Asian skin tones
+
+Color direction:
+- keep Meetu brand consistency with #FF7422 as anchor
+- support with cream / warm gray / deep charcoal / subtle green verification accents
+- use green only as a verification cue, not as the main brand color
+
+Composition:
+- title first, with a strong sense of trust and clarity
+- middle zone can imply the three-step verification path through tags, signals, or badge-like structure
+- no literal app tutorial screenshots
+- visual should feel designed, not instructional
+
+Absolutely avoid:
+- enterprise compliance poster feeling
+- school office / campus admin aesthetics
+- screenshot-heavy product tutorial layout
+- too much text density
+```
+
+#### 26. 平台功能介绍海报 B：活动 + 广场双核功能（1242×1660）
+
+```text
+Create one finished Xiaohongshu poster introducing Meetu’s two core modules: 活动 and 广场.
+
+VISUAL INPUT (must be provided alongside this prompt):
+- `设计语言参考/Meetu元素参考/1 Meetu Logo.png`
+  role: brand anchor reference; use for overall identity consistency
+- `cms-pages-v4/B-youth-editorial-平台介绍.html`
+  role: platform-structure reference; use for the relationship between trust, discovery, and social experience
+- `设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/场景/1.png`
+  role: event-discovery and social-energy reference
+- `设计语言参考/Meetu元素参考/nanobanana图片生成v1/banner/场景/3.png`
+  role: browsing / sharing / community-atmosphere reference
+
+Output target:
+- one final poster image
+- final filename: xhs-feature-poster-02-活动与广场.png
+- size: 1242 × 1660px
+- aspect ratio: 3:4 vertical
+
+Goal:
+- explain that Meetu has two complementary engines:
+  1) 活动：发现并线下见面
+  2) 广场：逛、发现、分享
+- make users feel “这不是只有活动，也不是只有内容，它两个都能玩”
+
+Render the following exact simplified Chinese text:
+- 主标题：不止有活动，还有广场
+- 模块A标题：活动
+- 模块A说明1：发现活动
+- 模块A说明2：搭上
+- 模块A说明3：线下见
+- 模块A说明4：评价
+- 模块A补充：9大品类，活动付费保障出席
+- 模块B标题：广场
+- 模块B说明1：逛
+- 模块B说明2：发现
+- 模块B说明3：分享
+- 模块B补充：校园动态、种草内容、社交氛围
+
+Style:
+- modern, youthful, clearly structured
+- one side should feel more action-oriented, the other more discovery-oriented
+- should feel like a cool student platform map, not a product brochure
+- same-generation tone, not a brand lecturing users
+- if any people appear, use East Asian / Chinese university-age faces and warm light-beige Asian skin tones
+
+Color direction:
+- use #FF7422 as the brand anchor
+- allow one cooler support tone for the 广场 side and one warmer / more kinetic tone for the 活动 side
+- keep the two modules clearly distinguishable but still in the same system
+
+Composition:
+- split or contrast layout is encouraged
+- 活动 side should feel dynamic / forward / action-led
+- 广场 side should feel browseable / open / socially alive
+- hierarchy must stay simple enough to read fast in Xiaohongshu feed browsing
+
+Absolutely avoid:
+- screenshot-like feature list
+- heavy tutorial logic
+- over-dense lists of all 9 categories in body text
+- boring two-column corporate infographic aesthetics
 ```
