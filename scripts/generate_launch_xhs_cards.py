@@ -147,7 +147,7 @@ def make_cover():
     sdraw.line((800, 300, 875, 255), fill="#FF5B2E", width=8)
     sdraw.line((870, 255, 905, 310), fill="#FF5B2E", width=8)
     sdraw.line((870, 255, 930, 245), fill="#FF5B2E", width=8)
-    sdraw.text((88, 950), "那就来看看", font=font(FONT_HAND, 58), fill="#2C63F2")
+    sdraw.text((88, 950), "那就来看看", font=font(FONT_CH, 52), fill="#2C63F2")
     paste_rotated(base, sticky, 122, 210, -4.2)
 
     # desk scribbles
