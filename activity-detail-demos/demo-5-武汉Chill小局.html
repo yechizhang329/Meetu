@@ -4,116 +4,353 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
 <title>5/10 武汉大学生 Chill 小局</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: #f3eadf;
+    color: #2c2118;
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", "Microsoft YaHei", sans-serif;
+  }
+  .page {
+    width: 100%;
+    max-width: 750px;
+    margin: 0 auto;
+    overflow: hidden;
+    background:
+      radial-gradient(circle at 10% 0%, rgba(255,116,34,.10), transparent 24%),
+      linear-gradient(180deg, #fffaf2 0%, #f7efe5 52%, #efe2d3 100%);
+  }
+  .section { padding: 0 20px 18px; }
+  .section-final { padding-bottom: 32px; }
+  .hero-wrap { padding: 24px 18px 18px; }
+  .hero {
+    position: relative;
+    border-radius: 34px;
+    background: linear-gradient(135deg, #fff5e8 0%, #ead1b9 100%);
+    border: 1px solid rgba(92,60,38,.12);
+    box-shadow: 0 22px 56px rgba(108,74,42,.14);
+    overflow: hidden;
+    padding: 22px 18px 20px;
+  }
+  .hero:before {
+    content: "";
+    position: absolute;
+    right: -30px;
+    top: -24px;
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    background: rgba(255,250,242,.50);
+    border: 1px solid rgba(44,33,24,.08);
+  }
+  .hero:after {
+    content: "";
+    position: absolute;
+    left: 24px;
+    bottom: 34px;
+    width: 116px;
+    height: 58px;
+    border-radius: 18px;
+    background: rgba(255,250,242,.46);
+    transform: rotate(-3deg);
+  }
+  .date-row {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 26px;
+  }
+  .pill {
+    display: inline-block;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 850;
+    line-height: 1;
+    padding: 8px 11px;
+    border: 1px solid rgba(110,75,53,.12);
+    background: rgba(255,255,255,.66);
+    color: #6e4b35;
+  }
+  .pill-dark { background: #2c2118; color: #fffaf2; border-color: #2c2118; }
+  .pill-orange { background: #ff7422; color: #fff; border-color: #ff7422; box-shadow: 0 8px 18px rgba(255,116,34,.20); }
+  .invite-card {
+    position: relative;
+    z-index: 1;
+    padding: 24px 20px 22px;
+    border-radius: 28px;
+    background: rgba(255,252,246,.91);
+    border: 1px solid rgba(255,255,255,.70);
+    box-shadow: 0 16px 34px rgba(82,55,31,.10);
+  }
+  .hero-title {
+    margin: 0;
+    color: #24170f;
+    font-size: 38px;
+    line-height: 1.08;
+    font-weight: 950;
+    letter-spacing: -1.4px;
+  }
+  .hero-desc {
+    margin: 14px 0 0;
+    font-size: 15px;
+    line-height: 1.82;
+    color: rgba(44,33,24,.70);
+  }
+  .hero-note {
+    margin-top: 13px;
+    color: #6e4b35;
+    font-size: 13px;
+    line-height: 1.65;
+    font-weight: 850;
+  }
+  .hero-tags {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
+  }
+  .hero-tags .pill { background: #fffaf2; color: #2c2118; }
+  .eyebrow {
+    margin: 0 0 10px 2px;
+    color: #ff7422;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 1px;
+  }
+  .fact-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .fact-card {
+    flex: 1 1 146px;
+    min-width: 146px;
+    padding: 15px;
+    border-radius: 23px;
+    background: rgba(255,252,246,.78);
+    border: 1px solid rgba(102,69,43,.10);
+  }
+  .fact-label {
+    color: #8d6447;
+    font-size: 12px;
+    font-weight: 850;
+  }
+  .fact-main {
+    margin-top: 7px;
+    color: #2c2118;
+    font-size: 17px;
+    line-height: 1.30;
+    font-weight: 950;
+  }
+  .fact-sub {
+    margin-top: 4px;
+    color: rgba(44,33,24,.56);
+    font-size: 11px;
+    line-height: 1.45;
+  }
+  .card {
+    padding: 20px;
+    border-radius: 30px;
+    background: rgba(255,252,246,.80);
+    border: 1px solid rgba(102,69,43,.10);
+    box-shadow: 0 14px 32px rgba(92,60,38,.07);
+  }
+  .card-plain { box-shadow: none; }
+  .card-title {
+    margin: 0;
+    color: #2c2118;
+    font-size: 24px;
+    line-height: 1.24;
+    font-weight: 950;
+  }
+  .card-text {
+    margin: 10px 0 0;
+    color: rgba(44,33,24,.70);
+    font-size: 14px;
+    line-height: 1.84;
+  }
+  .tag-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 14px;
+  }
+  .soft-tag {
+    display: inline-block;
+    padding: 7px 10px;
+    border-radius: 999px;
+    background: #f4e5d3;
+    color: #674630;
+    font-size: 12px;
+    font-weight: 850;
+  }
+  .soft-tag-accent { background: #ff7422; color: #fff; }
+  .check-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 14px;
+  }
+  .check-item {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    color: rgba(44,33,24,.72);
+    font-size: 14px;
+    line-height: 1.65;
+  }
+  .check-mark { color: #ff7422; font-weight: 950; }
+  .host-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .host-card {
+    padding: 18px;
+    border-radius: 28px;
+    background: #fffaf2;
+    border: 1px solid rgba(102,69,43,.10);
+    box-shadow: 0 14px 32px rgba(92,60,38,.07);
+  }
+  .host-name {
+    color: #2c2118;
+    font-size: 22px;
+    font-weight: 950;
+    letter-spacing: -.4px;
+  }
+  .host-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+  }
+  .host-tags span {
+    display: inline-block;
+    padding: 7px 10px;
+    border-radius: 999px;
+    background: #f3e2cf;
+    color: #5f3e28;
+    font-size: 12px;
+    font-weight: 850;
+  }
+  .cta {
+    padding: 23px 20px;
+    border-radius: 32px;
+    background: #ff7422;
+    color: #fffaf2;
+    box-shadow: 0 18px 44px rgba(255,116,34,.22);
+  }
+  .cta-title {
+    margin: 0;
+    font-size: 27px;
+    line-height: 1.15;
+    font-weight: 950;
+    letter-spacing: -.8px;
+  }
+  .cta-text {
+    margin: 10px 0 0;
+    color: rgba(255,250,242,.88);
+    font-size: 14px;
+    line-height: 1.75;
+  }
+  @media (max-width: 380px) {
+    .hero-title { font-size: 35px; letter-spacing: -1.2px; }
+    .hero-wrap { padding-left: 14px; padding-right: 14px; }
+    .section { padding-left: 16px; padding-right: 16px; }
+    .invite-card { padding-left: 17px; padding-right: 17px; }
+  }
+</style>
 </head>
-<body style="margin:0;background:#f3eadf;">
-<div style="width:100%;max-width:750px;margin:0 auto;overflow:hidden;background:
-radial-gradient(circle at 10% 0%,rgba(255,116,34,0.12),transparent 24%),
-radial-gradient(circle at 88% 6%,rgba(136,95,64,0.12),transparent 20%),
-linear-gradient(180deg,#fffaf2 0%,#f7efe5 52%,#efe2d3 100%);color:#2c2118;font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Helvetica Neue','Microsoft YaHei',sans-serif;">
-
-  <section style="padding:24px 18px 18px;">
-    <div style="position:relative;min-height:420px;border-radius:36px;background:#efe0cf;overflow:hidden;border:1px solid rgba(92,60,38,.12);box-shadow:0 26px 70px rgba(108,74,42,.16);">
-      <div style="position:absolute;left:16px;right:16px;top:16px;bottom:16px;border-radius:30px;background:
-        radial-gradient(circle at 22% 24%,rgba(255,255,255,.42),transparent 18%),
-        linear-gradient(135deg,#fff5e8 0%,#ead1b9 100%);border:1px solid rgba(255,255,255,.42);"></div>
-
-      <div style="position:absolute;right:28px;top:28px;width:132px;height:132px;border-radius:50%;background:rgba(255,250,242,.54);border:1px solid rgba(44,33,24,.08);"></div>
-      <div style="position:absolute;right:50px;top:50px;width:72px;height:72px;border-radius:50%;background:#fff8ee;border:10px solid #c78b58;box-shadow:inset 0 0 0 9px #f2d6b9,0 16px 30px rgba(90,52,24,.11);"></div>
-      <div style="position:absolute;right:38px;top:94px;width:34px;height:17px;border:7px solid #c78b58;border-left:0;border-radius:0 24px 24px 0;opacity:.62;"></div>
-
-      <div style="position:absolute;left:26px;bottom:30px;width:150px;height:88px;border-radius:24px;background:#fffaf2;border:1px solid rgba(44,33,24,.10);box-shadow:0 16px 32px rgba(82,55,31,.10);transform:rotate(-3deg);"></div>
-      <div style="position:absolute;left:46px;bottom:90px;width:64px;height:8px;border-radius:99px;background:#ff7422;opacity:.70;transform:rotate(-3deg);"></div>
-      <div style="position:absolute;left:46px;bottom:68px;width:96px;height:7px;border-radius:99px;background:rgba(44,33,24,.13);transform:rotate(-3deg);"></div>
-
-      <div style="position:absolute;left:30px;top:30px;width:58px;height:27px;border-radius:999px;background:#2c2118;color:#fffaf2;font-size:12px;font-weight:800;line-height:27px;text-align:center;">5.10</div>
-      <div style="position:absolute;left:94px;top:30px;width:118px;height:27px;border-radius:999px;background:rgba(255,255,255,.62);color:#6e4b35;font-size:12px;font-weight:800;line-height:27px;text-align:center;border:1px solid rgba(110,75,53,.10);">周日 14:00-16:00</div>
-
-      <div style="position:relative;margin:92px 22px 0;padding:24px 20px 22px;border-radius:28px;background:rgba(255,252,246,.88);border:1px solid rgba(255,255,255,.64);box-shadow:0 18px 38px rgba(82,55,31,.10);backdrop-filter:blur(2px);">
-        <div style="position:absolute;right:18px;top:-13px;padding:7px 11px;border-radius:999px;background:#ff7422;color:#fff;font-size:12px;font-weight:900;box-shadow:0 10px 22px rgba(255,116,34,.24);">街道口附近</div>
-        <div style="font-size:41px;line-height:1.04;font-weight:950;letter-spacing:-1.8px;color:#24170f;">周日出来坐坐，<br/>认识几个新朋友</div>
-        <p style="margin:15px 0 0;font-size:15px;line-height:1.85;color:rgba(44,33,24,.70);">不是讲座，不是相亲局，也不是酒局。就是找个舒服的地方，喝点东西，随便聊聊。</p>
-        <div style="margin-top:14px;font-size:13px;line-height:1.7;color:#6e4b35;font-weight:800;">重点是：低压力、公共场合、认识几个原本不会认识的人。</div>
+<body>
+<div class="page">
+  <section class="hero-wrap">
+    <div class="hero">
+      <div class="date-row">
+        <span class="pill pill-dark">5.10</span>
+        <span class="pill">周日 14:00-16:00</span>
+        <span class="pill pill-orange">街道口附近</span>
       </div>
 
-      <div style="position:absolute;left:24px;right:24px;bottom:20px;display:flex;gap:8px;flex-wrap:wrap;">
-        <span style="display:inline-block;padding:8px 11px;border-radius:999px;background:#fffaf2;color:#2c2118;font-size:12px;font-weight:800;border:1px solid rgba(44,33,24,.10);">在校学生</span>
-        <span style="display:inline-block;padding:8px 11px;border-radius:999px;background:#fffaf2;color:#2c2118;font-size:12px;font-weight:800;border:1px solid rgba(44,33,24,.10);">20人左右</span>
-        <span style="display:inline-block;padding:8px 11px;border-radius:999px;background:#fffaf2;color:#2c2118;font-size:12px;font-weight:800;border:1px solid rgba(44,33,24,.10);">奶茶咖啡+小食</span>
+      <div class="invite-card">
+        <h1 class="hero-title">周日出来坐坐，<br />认识几个新朋友</h1>
+        <p class="hero-desc">不是讲座，不是相亲局，也不是酒局。就是找个舒服的地方，喝点东西，随便聊聊。</p>
+        <div class="hero-note">重点是：低压力、公共场合、认识几个原本不会认识的人。</div>
+      </div>
+
+      <div class="hero-tags">
+        <span class="pill">在校学生</span>
+        <span class="pill">20人左右</span>
+        <span class="pill">奶茶咖啡+小食</span>
       </div>
     </div>
   </section>
 
-  <section style="padding:4px 20px 18px;">
-    <div style="font-size:12px;font-weight:900;color:#ff7422;letter-spacing:1px;">关键事实</div>
-    <div style="margin-top:10px;display:flex;flex-wrap:wrap;gap:10px;">
-      <div style="box-sizing:border-box;flex:1 1 calc(50% - 5px);min-width:146px;padding:15px 15px 14px;border-radius:23px;background:rgba(255,252,246,.74);border:1px solid rgba(102,69,43,.10);"><div style="font-size:12px;color:#8d6447;font-weight:850;">时间</div><div style="margin-top:7px;font-size:17px;line-height:1.35;font-weight:950;">5月10日<br/>14:00-16:00</div></div>
-      <div style="box-sizing:border-box;flex:1 1 calc(50% - 5px);min-width:146px;padding:15px 15px 14px;border-radius:23px;background:rgba(255,252,246,.74);border:1px solid rgba(102,69,43,.10);"><div style="font-size:12px;color:#8d6447;font-weight:850;">地点</div><div style="margin-top:7px;font-size:17px;line-height:1.35;font-weight:950;">街道口附近</div><div style="margin-top:5px;font-size:12px;line-height:1.5;color:rgba(44,33,24,.56);">报名确认后通知</div></div>
-      <div style="box-sizing:border-box;flex:1 1 calc(50% - 5px);min-width:146px;padding:15px 15px 14px;border-radius:23px;background:rgba(255,252,246,.74);border:1px solid rgba(102,69,43,.10);"><div style="font-size:12px;color:#8d6447;font-weight:850;">人数</div><div style="margin-top:7px;font-size:17px;line-height:1.35;font-weight:950;">20人左右</div><div style="margin-top:5px;font-size:12px;line-height:1.5;color:rgba(44,33,24,.56);">最多30人</div></div>
-      <div style="box-sizing:border-box;flex:1 1 calc(50% - 5px);min-width:146px;padding:15px 15px 14px;border-radius:23px;background:rgba(255,252,246,.74);border:1px solid rgba(102,69,43,.10);"><div style="font-size:12px;color:#8d6447;font-weight:850;">对象</div><div style="margin-top:7px;font-size:17px;line-height:1.35;font-weight:950;">在校学生</div><div style="margin-top:5px;font-size:12px;line-height:1.5;color:rgba(44,33,24,.56);">本科 / 研究生都可以</div></div>
+  <section class="section">
+    <div class="eyebrow">关键事实</div>
+    <div class="fact-list">
+      <div class="fact-card"><div class="fact-label">时间</div><div class="fact-main">5月10日<br />14:00-16:00</div></div>
+      <div class="fact-card"><div class="fact-label">地点</div><div class="fact-main">街道口附近</div><div class="fact-sub">报名确认后通知</div></div>
+      <div class="fact-card"><div class="fact-label">人数</div><div class="fact-main">20人左右</div><div class="fact-sub">最多30人</div></div>
+      <div class="fact-card"><div class="fact-label">对象</div><div class="fact-main">在校学生</div><div class="fact-sub">本科 / 研究生都可以</div></div>
     </div>
   </section>
 
-  <section style="padding:0 20px 18px;">
-    <div style="padding:20px;border-radius:30px;background:#fffaf2;border:1px solid rgba(102,69,43,.10);box-shadow:0 16px 36px rgba(92,60,38,.08);">
-      <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
-        <span style="display:inline-block;padding:7px 10px;border-radius:999px;background:#ff7422;color:#fff;font-size:12px;font-weight:900;">饮品 + 小食</span>
-        <span style="display:inline-block;padding:7px 10px;border-radius:999px;background:#f4e5d3;color:#674630;font-size:12px;font-weight:850;">轻松坐坐</span>
+  <section class="section">
+    <div class="card">
+      <div class="tag-row">
+        <span class="soft-tag soft-tag-accent">饮品 + 小食</span>
+        <span class="soft-tag">轻松坐坐</span>
       </div>
-      <div style="margin-top:14px;font-size:24px;line-height:1.24;font-weight:950;color:#2c2118;">来喝点东西，顺便认识几个人。</div>
-      <p style="margin:10px 0 0;font-size:14px;line-height:1.85;color:rgba(44,33,24,.68);">每个人会有一杯奶茶/咖啡和一点小食。费用按活动上架页显示为准，主要用于确认位置。</p>
+      <h2 class="card-title">来喝点东西，顺便认识几个人。</h2>
+      <p class="card-text">每个人会有一杯奶茶/咖啡和一点小食。费用按活动上架页显示为准，主要用于确认位置。</p>
     </div>
   </section>
 
-  <section style="padding:0 20px 18px;">
-    <div style="padding:20px;border-radius:30px;background:rgba(255,252,246,.78);border:1px solid rgba(102,69,43,.10);">
-      <div style="font-size:24px;line-height:1.24;font-weight:950;color:#2c2118;">放心来</div>
-      <div style="margin-top:14px;display:flex;flex-direction:column;gap:12px;">
-        <div style="display:flex;gap:10px;align-items:flex-start;font-size:14px;line-height:1.65;color:rgba(44,33,24,.72);"><span style="color:#ff7422;font-weight:950;">✓</span><span>公共场合，具体地点报名确认后通知。</span></div>
-        <div style="display:flex;gap:10px;align-items:flex-start;font-size:14px;line-height:1.65;color:rgba(44,33,24,.72);"><span style="color:#ff7422;font-weight:950;">✓</span><span>女生如果担心安全感，可以带一个朋友。</span></div>
-        <div style="display:flex;gap:10px;align-items:flex-start;font-size:14px;line-height:1.65;color:rgba(44,33,24,.72);"><span style="color:#ff7422;font-weight:950;">✓</span><span>不强制加微信、不强制拍照、不强制续摊。</span></div>
+  <section class="section">
+    <div class="card card-plain">
+      <h2 class="card-title">放心来</h2>
+      <div class="check-list">
+        <div class="check-item"><span class="check-mark">✓</span><span>公共场合，具体地点报名确认后通知。</span></div>
+        <div class="check-item"><span class="check-mark">✓</span><span>女生如果担心安全感，可以带一个朋友。</span></div>
+        <div class="check-item"><span class="check-mark">✓</span><span>不强制加微信、不强制拍照、不强制续摊。</span></div>
       </div>
     </div>
   </section>
 
-  <section style="padding:0 20px 18px;">
-    <div style="position:relative;padding:22px 20px;border-radius:32px;background:#fffaf2;color:#2c2118;overflow:hidden;border:1px solid rgba(102,69,43,.10);box-shadow:0 14px 32px rgba(92,60,38,.07);">
-      <div style="position:absolute;right:-42px;top:-46px;width:130px;height:130px;border-radius:50%;background:rgba(255,116,34,.10);"></div>
-      <div style="position:relative;font-size:24px;line-height:1.22;font-weight:950;">不需要准备什么</div>
-      <p style="position:relative;margin:10px 0 0;font-size:14px;line-height:1.86;color:rgba(44,33,24,.70);">不用准备自我介绍，不用很社牛。想聊就聊，想先听别人聊也可以。你来坐坐，剩下的交给现场。</p>
+  <section class="section">
+    <div class="card">
+      <h2 class="card-title">不需要准备什么</h2>
+      <p class="card-text">不用准备自我介绍，不用很社牛。想聊就聊，想先听别人聊也可以。你来坐坐，剩下的交给现场。</p>
     </div>
   </section>
 
-  <section style="padding:0 20px 18px;">
-    <div style="font-size:12px;font-weight:900;color:#ff7422;letter-spacing:1px;margin-left:2px;">怕不知道聊什么，可以找我们开头</div>
-    <div style="margin-top:10px;display:flex;flex-direction:column;gap:12px;">
-      <div style="padding:18px;border-radius:28px;background:#fffaf2;border:1px solid rgba(102,69,43,.10);box-shadow:0 14px 32px rgba(92,60,38,.07);">
-        <div style="font-size:22px;font-weight:950;letter-spacing:-.4px;">Jonathan</div>
-        <div style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap;">
-          <span style="padding:7px 10px;border-radius:999px;background:#f3e2cf;color:#5f3e28;font-size:12px;font-weight:850;">三本到 UCLA</span>
-          <span style="padding:7px 10px;border-radius:999px;background:#f3e2cf;color:#5f3e28;font-size:12px;font-weight:850;">AI和技术</span>
-          <span style="padding:7px 10px;border-radius:999px;background:#f3e2cf;color:#5f3e28;font-size:12px;font-weight:850;">裸辞 MBA</span>
-          <span style="padding:7px 10px;border-radius:999px;background:#f3e2cf;color:#5f3e28;font-size:12px;font-weight:850;">滑雪健身</span>
-          <span style="padding:7px 10px;border-radius:999px;background:#f3e2cf;color:#5f3e28;font-size:12px;font-weight:850;">摩托 318、219</span>
+  <section class="section">
+    <div class="eyebrow">怕不知道聊什么，可以找我们开头</div>
+    <div class="host-list">
+      <div class="host-card">
+        <div class="host-name">Jonathan</div>
+        <div class="host-tags">
+          <span>三本到 UCLA</span><span>AI和技术</span><span>裸辞 MBA</span><span>滑雪健身</span><span>摩托 318、219</span>
         </div>
       </div>
-      <div style="padding:18px;border-radius:28px;background:#fffaf2;border:1px solid rgba(102,69,43,.10);box-shadow:0 14px 32px rgba(92,60,38,.07);">
-        <div style="font-size:22px;font-weight:950;letter-spacing:-.4px;">David</div>
-        <div style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap;">
-          <span style="padding:7px 10px;border-radius:999px;background:#f3e2cf;color:#5f3e28;font-size:12px;font-weight:850;">美国几年</span>
-          <span style="padding:7px 10px;border-radius:999px;background:#f3e2cf;color:#5f3e28;font-size:12px;font-weight:850;">金融</span>
-          <span style="padding:7px 10px;border-radius:999px;background:#f3e2cf;color:#5f3e28;font-size:12px;font-weight:850;">MBA</span>
-          <span style="padding:7px 10px;border-radius:999px;background:#f3e2cf;color:#5f3e28;font-size:12px;font-weight:850;">职业转型</span>
-          <span style="padding:7px 10px;border-radius:999px;background:#f3e2cf;color:#5f3e28;font-size:12px;font-weight:850;">创业探索</span>
-          <span style="padding:7px 10px;border-radius:999px;background:#f3e2cf;color:#5f3e28;font-size:12px;font-weight:850;">很多事没按计划走</span>
+      <div class="host-card">
+        <div class="host-name">David</div>
+        <div class="host-tags">
+          <span>美国几年</span><span>金融</span><span>MBA</span><span>职业转型</span><span>创业探索</span><span>很多事没按计划走</span>
         </div>
       </div>
     </div>
   </section>
 
-  <section style="padding:0 20px 32px;">
-    <div style="padding:23px 20px;border-radius:32px;background:#ff7422;color:#fffaf2;box-shadow:0 18px 44px rgba(255,116,34,.22);">
-      <div style="font-size:27px;line-height:1.15;font-weight:950;letter-spacing:-.8px;">感兴趣先报名 / 私聊</div>
-      <p style="margin:10px 0 0;font-size:14px;line-height:1.75;color:rgba(255,250,242,.88);">人数差不多后发具体地点。没想好聊什么也没关系，先来坐坐。</p>
+  <section class="section section-final">
+    <div class="cta">
+      <h2 class="cta-title">感兴趣先报名 / 私聊</h2>
+      <p class="cta-text">人数差不多后发具体地点。没想好聊什么也没关系，先来坐坐。</p>
     </div>
   </section>
 </div>
