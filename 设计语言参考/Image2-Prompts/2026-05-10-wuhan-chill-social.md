@@ -3,7 +3,8 @@
 > 用途：5/10 武汉大学生 Chill 小局活动主封面 + 活动说明图。  
 > 执行模型：GPT Image 2。  
 > 当前状态：本环境未暴露真实 Image2 出图工具/API，因此这里只交付可直接复制到 Image2 的 prompt。  
-> 新方向：从“活动海报”改为“清爽邀请卡”。画面只服务一个重点：周日出来坐坐，认识几个新朋友。不要道具堆叠，不要把价格做成视觉卖点。
+> 使用模板：`Image2-Prompt-Templates-For-Meetu.md` 的“活动主封面模板 / Template 7A”和“活动说明长图模板 / Template 7B”。
+> 新方向：从“活动海报”改为“清爽邀请卡”。封面只服务一个重点：周日出来坐坐，认识几个新朋友。不要道具堆叠，不要把价格做成视觉卖点。
 > 视觉边界：周日下午、公共空间、奶茶/咖啡、小食、松弛、安全、干净；不要夜店感、酒局感、暧昧感、相亲感、讲座感、职业咨询感。
 
 ---
@@ -16,7 +17,8 @@ Create a 3:4 vertical lifestyle invitation cover for Meetu, a campus activity so
 Purpose:
 - This is the main cover for a small Sunday afternoon social gathering in Wuhan.
 - It should feel like a clean invitation card from a friend, not a marketing poster and not a cafe brand ad.
-- In 0.5 seconds, students should feel: safe, relaxed, real, easy to join.
+- The first visual priority is the Chinese title and invitation message, not the scene.
+- In 0.5 seconds, students should understand: Sunday afternoon, a low-pressure student gathering, easy to join.
 
 Canvas:
 - Aspect ratio: 3:4 vertical
@@ -24,21 +26,21 @@ Canvas:
 - Platform: WeChat mini program activity cover / private sharing image
 
 Visual concept:
-- A clean warm invitation card with a very light Sunday afternoon cafe / public-space hint.
+- A clean warm invitation card with only a very subtle public-space hint in the background.
 - The main visual should be the invitation card and text, not a detailed cafe scene.
-- Use only 2-3 supporting objects at most: a coffee or milk tea cup, a small snack, a soft table shadow, or one simple paper strip.
+- Use only 1-2 supporting objects at most: a coffee or milk tea cup, a soft table shadow, or one simple paper strip.
 - You may softly imply Chinese / Asian college students through subtle hand/cup silhouettes or blurred background seating, but keep them secondary.
 - Avoid complex tabletop still life, too many objects, heavy cafe branding, or staged influencer scenes.
 
 Exact Chinese text to render on the paper note:
 - Main title: “周日出来坐坐”
-- Subtitle: “5.10 武汉街道口附近”
-- Small label: “在校学生｜20人左右”
-- Small text: “奶茶/咖啡 + 小食”
+- Subtitle: “认识几个新朋友”
+- Small label: “5.10 周日｜街道口附近｜在校学生小局”
 
 Layout:
 - Use the paper note / invitation card as the text zone.
 - Main title must be the clearest element and readable on a phone feed thumbnail.
+- Subtitle should be clearly connected to the title, not treated as a small decoration.
 - Keep supporting objects minimal and quiet. The title must remain the strongest focus.
 - Use slight asymmetry: the note can be slightly off-center, with cups/snacks framing it naturally.
 - Leave enough visual breathing room; do not overfill the canvas.
@@ -108,10 +110,11 @@ Visual system:
 
 Constraints:
 - Accurate simplified Chinese text. Do not change wording.
+- If all body text cannot be rendered perfectly, prioritize a clean card layout with clear blank text zones for manual typesetting rather than hallucinating or adding wrong text.
 - Do not include any cost-related or payment-related text, numbers, badges, or symbols in this public-facing image.
 - No QR code, no external app marks, no fake screenshots.
 - No nightlife, alcohol, neon, black-gold, cyber, romance, dating, nightclub, party, lecture, or career-salon cues.
-- Do not make it look like a formal government/school notice.
+- Do not make it look like a formal government/school notice, campus announcement, or instructional flyer.
 - If people appear, use Asian skin tones, but this image can be mostly graphic information design.
 ```
 
