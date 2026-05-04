@@ -3,19 +3,19 @@
 > 用途：5/10 武汉大学生 Chill 小局活动主封面 + 活动说明图。  
 > 执行模型：GPT Image 2。  
 > 当前状态：本环境未暴露真实 Image2 出图工具/API，因此这里只交付可直接复制到 Image2 的 prompt。  
-> 新方向：从“活动海报”改为“生活方式邀请封面”。参考 70% Airbnb/Pinterest 生活方式感 + 20% Notion 信息秩序 + 10% Figma 标签系统。  
-> 视觉边界：周日下午、公共空间、奶茶/咖啡、小食、桌面细节、松弛、安全、干净；不要夜店感、酒局感、暧昧感、相亲感、讲座感、职业咨询感。
+> 新方向：从“活动海报”改为“清爽邀请卡”。画面只服务一个重点：周日出来坐坐，认识几个新朋友。不要道具堆叠，不要把价格做成视觉卖点。
+> 视觉边界：周日下午、公共空间、奶茶/咖啡、小食、松弛、安全、干净；不要夜店感、酒局感、暧昧感、相亲感、讲座感、职业咨询感。
 
 ---
 
-## Prompt 1：活动主封面图（生活方式邀请卡）
+## Prompt 1：活动主封面图（清爽邀请卡）
 
 ```text
 Create a 3:4 vertical lifestyle invitation cover for Meetu, a campus activity social product for Chinese college students.
 
 Purpose:
 - This is the main cover for a small Sunday afternoon social gathering in Wuhan.
-- It should feel like a real friend placed an invitation note on a cafe table, not like a marketing poster.
+- It should feel like a clean invitation card from a friend, not a marketing poster and not a cafe brand ad.
 - In 0.5 seconds, students should feel: safe, relaxed, real, easy to join.
 
 Canvas:
@@ -24,22 +24,22 @@ Canvas:
 - Platform: WeChat mini program activity cover / private sharing image
 
 Visual concept:
-- A Sunday afternoon cafe tabletop near Jiedaokou, Wuhan.
-- The image is mostly a warm tabletop still life, not a staged event poster.
-- On the table: milk tea, coffee cup, small snacks, phone, sticky notes, a simple paper invitation card, soft shadows.
-- You may softly imply 4-6 Chinese / Asian college students chatting nearby through hands, cups, blurred silhouettes, or seating hints, but do not rely on clear front-facing portraits.
-- The invitation note / paper card on the table carries the main text.
+- A clean warm invitation card with a very light Sunday afternoon cafe / public-space hint.
+- The main visual should be the invitation card and text, not a detailed cafe scene.
+- Use only 2-3 supporting objects at most: a coffee or milk tea cup, a small snack, a soft table shadow, or one simple paper strip.
+- You may softly imply Chinese / Asian college students through subtle hand/cup silhouettes or blurred background seating, but keep them secondary.
+- Avoid complex tabletop still life, too many objects, heavy cafe branding, or staged influencer scenes.
 
 Exact Chinese text to render on the paper note:
 - Main title: “周日出来坐坐”
 - Subtitle: “5.10 武汉街道口附近”
-- Small label: “在校学生｜20人左右｜¥1占位”
+- Small label: “在校学生｜20人左右”
 - Small text: “奶茶/咖啡 + 小食”
 
 Layout:
 - Use the paper note / invitation card as the text zone.
 - Main title must be the clearest element and readable on a phone feed thumbnail.
-- Keep the tabletop objects around the note as atmosphere, not clutter.
+- Keep supporting objects minimal and quiet. The title must remain the strongest focus.
 - Use slight asymmetry: the note can be slightly off-center, with cups/snacks framing it naturally.
 - Leave enough visual breathing room; do not overfill the canvas.
 
@@ -51,6 +51,7 @@ Visual system:
 
 Constraints:
 - Accurate simplified Chinese text. Do not add extra Chinese or English words.
+- Do not include any cost-related or payment-related text, numbers, badges, or symbols on the cover image.
 - No QR code, no external platform marks, no fake app UI.
 - Do not use alcohol, cocktails, dark club lighting, neon lights, black-gold styling, red romantic lighting, heart symbols, dating-app cues, nightclub elements, or party cues.
 - Do not make it look like a lecture, job salon, MBA talk, career consulting poster, official announcement, or corporate ad.
@@ -60,7 +61,7 @@ Constraints:
 
 ---
 
-## Prompt 2：活动说明长图（清爽邀请说明卡）
+## Prompt 2：活动说明长图（清爽说明卡）
 
 ```text
 Create a 3:4 vertical information card for Meetu, explaining a small Sunday afternoon college-student social gathering in Wuhan.
@@ -68,7 +69,7 @@ Create a 3:4 vertical information card for Meetu, explaining a small Sunday afte
 Purpose:
 - This image should work as the second image after the lifestyle cover.
 - It should feel like a carefully edited invitation note, not an official notice.
-- The reader should immediately understand when, where, who can come, what to prepare, and why it feels safe.
+- The reader should immediately understand when, where, who can come, what to prepare, and why it feels safe. Do not turn cost into a highlighted selling point.
 
 Canvas:
 - Aspect ratio: 3:4 vertical or 4:5 vertical
@@ -88,7 +89,7 @@ Exact Chinese text to render:
 - Section 4 text: “不用自我介绍，不用很社牛，来了坐坐也行”
 - Section 5 title: “放心来”
 - Section 5 text: “公共场合｜女生可带朋友｜不强制交换联系方式、不强制拍照、不强制续摊”
-- Bottom label: “¥1占位｜奶茶咖啡 + 小食”
+- Bottom label: “奶茶咖啡 + 小食”
 - Bottom CTA: “感兴趣先私聊我们”
 
 Layout:
@@ -107,6 +108,7 @@ Visual system:
 
 Constraints:
 - Accurate simplified Chinese text. Do not change wording.
+- Do not include any cost-related or payment-related text, numbers, badges, or symbols in this public-facing image.
 - No QR code, no external app marks, no fake screenshots.
 - No nightlife, alcohol, neon, black-gold, cyber, romance, dating, nightclub, party, lecture, or career-salon cues.
 - Do not make it look like a formal government/school notice.
