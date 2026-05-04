@@ -46,6 +46,50 @@ used-by:
 5. **参考图只做方向，不做复刻**：最多 2 张；写明 “for mood and direction only, do not replicate”。
 6. **真实粗糙感不要滥用 AI**：手机备忘录截图、手写便签、真实白板等，如果目标是“真的随手做”，优先真做真拍；Image 2 只适合生成可控的模拟稿。
 
+## 2026-05-04 网上模板复盘后的新增规则
+
+参考来源：
+
+- OpenAI Academy — `https://openai.com/academy/image-generation/`
+- OpenAI Image API Guide — `https://platform.openai.com/docs/guides/images/image-generation`
+- EvoLinkAI awesome-gpt-image-2-prompts — `https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts`
+- PixelDojo GPT Image 2 Prompting Guide — `https://pixeldojo.ai/guides/gpt-image-2-prompting-guide`
+- Morphed GPT Image 2 Prompt Guide — `https://morphed.app/blog/gpt-image-2-prompt-guide`
+
+可迁移到 Meetu 的方法，不照抄案例：
+
+1. **先写“图的职责”，再写画面**：封面、信息长图、聊天截图、详情页 hero 背景的目标不同，不能把所有信息塞进同一张图。
+2. **文字图要固定 exact text，并限制模型加字**：所有标题、副标题、标签、卡片文字逐行列出；同时写 `Do not add extra Chinese or English words`。
+3. **复杂图用结构化描述**：UI mockup、聊天截图、多宫格、信息图用 JSON-like 或分区结构，减少模型自由发挥。
+4. **负向约束必须针对“跑偏风险”写**：不要只写 `beautiful / clean`，要写清 `No coffee brand advertisement / No price-focused design / No complex tabletop still life` 这类具体禁止项。
+5. **少参考图、弱参考图**：参考图上限 2 张；写明 `for mood and direction only, do not replicate`。参考太重会导致生成结果过分雷同。
+6. **信息图不要贪多**：如果是小红书 3:4 图，一张图只解决一个任务；超过 5-7 个模块就必须减少正文长度。
+7. **封面不要承担说明书职责**：封面只负责停住用户；细节、规则、安全说明放到第二张图或详情页。
+8. **真实感任务优先低保真真实制作**：手机备忘录截图、手写纸条、白板、截图拼贴，如果追求“真的粗糙”，优先真做真拍，AI 只做备选。
+
+### Meetu 的 Image 2 选型原则
+
+| 场景 | Image 2 价值 | 注意事项 |
+|---|---|---|
+| 小红书大字封面 | 高，中文标题准确、构图可控 | 只放主标题 + 少量副标题 |
+| 活动主封面 | 中高，可做活动气质 | 不要让生活方式场景抢掉活动重点 |
+| 活动说明长图 | 高，信息卡/规则卡适合 | 模块不要超过 5-7 个 |
+| 聊天/备忘录截图 | 高，适合准确中文 UI | 不要直接冒充真实平台，做 generic UI |
+| Logo 概念板 | 中，适合快速发散 | 不能替代最终矢量设计；要做小尺寸测试 |
+| 纯氛围背景 | 中，Nano Banana 也可 | 如果没有文字，未必需要 Image 2 |
+
+### Meetu prompt 最小质量线
+
+每条 Image 2 prompt 交付前必须包含：
+
+1. `Purpose`：这张图在哪用、0.5 秒要传达什么。
+2. `Canvas`：尺寸、比例、平台。
+3. `Exact Chinese text`：所有要渲染的文字。
+4. `Hierarchy`：主标题、副标题、标签/说明的顺序。
+5. `Visual system`：色彩、材质、字体气质、参考方法。
+6. `Runaway guardrails`：针对本图最容易跑偏的 5-8 条负向约束。
+7. `Reference images`（如有）：最多 2 张，只作 mood/direction，不复刻。
+
 ## 通用 Prompt 骨架
 
 ```text
@@ -299,6 +343,125 @@ Constraints:
 - no exaggerated promises
 - if people are shown, use Asian skin tones
 - do not show alcohol as the core object unless activity requires it
+```
+
+## Template 7A — 轻社交活动清爽邀请卡
+
+Use for low-pressure daytime activities like 周日下午坐坐 / 咖啡聊天 / City Walk / English Corner. This is the corrected pattern after the 2026-05-04 Wuhan Chill 小局 Image2 output issue.
+
+```text
+Create a 3:4 vertical clean invitation cover for Meetu.
+
+Purpose:
+- This is the main cover for a low-pressure college-student social activity.
+- In 0.5 seconds, users should understand: [主活动动作], [城市/地点], [适合谁].
+- The image should make people want to click, not explain every rule.
+
+Canvas:
+- size: 1242x1660 or 1080x1440
+- platform: Xiaohongshu / WeChat mini program cover
+
+Exact Chinese text:
+- main title: "[例如：周日出来坐坐]"
+- subtitle: "[例如：认识几个新朋友]"
+- small info: "[例如：5.10 周日｜街道口附近｜在校学生小局]"
+
+Hierarchy:
+- main title is the strongest focus
+- subtitle is second
+- small info is quiet, not a chip wall
+- do not include price, payment, host resume, rules, or long body copy on the cover
+
+Visual system:
+- clean warm invitation card, light cream background, soft paper texture
+- only 1-3 supporting scene hints: cup, small snack, paper card, soft table shadow, or subtle public-space blur
+- the activity invitation card/text is the hero; scene props are secondary
+- warm, safe, clear, low-pressure; not a cafe brand advertisement
+
+Runaway guardrails:
+- no price-focused design
+- no coffee brand advertisement
+- no coffee product poster
+- no cluttered tabletop still life
+- no over-decorated lifestyle shot
+- no nightclub, alcohol, romantic dating, lecture, career salon, or corporate ad feeling
+- no extra Chinese or English text beyond exact text
+- if people appear, use Asian skin tones and keep them natural/background-level
+```
+
+## Template 7B — 活动说明长图 / 5模块信息卡
+
+Use for the second image after a cover, when the cover has done the attention job and this image explains details.
+
+```text
+Create a 3:4 vertical information card for Meetu.
+
+Purpose:
+- This is the second image after the cover.
+- It should explain the activity clearly without feeling like an official notice.
+- It should answer: when, where, who, what to prepare, and why it feels safe.
+
+Canvas:
+- size: 1242x1660 or 1080x1440
+- mobile-first readability
+
+Exact Chinese text:
+- title: "[活动标题]"
+- subtitle: "[时间地点]"
+- section 1 title: "什么时候"
+- section 1 text: "[...]"
+- section 2 title: "在哪里"
+- section 2 text: "[...]"
+- section 3 title: "谁可以来"
+- section 3 text: "[...]"
+- section 4 title: "需要准备吗"
+- section 4 text: "[...]"
+- section 5 title: "放心来"
+- section 5 text: "[...]"
+- bottom CTA: "[...]"
+
+Layout:
+- top title area, then 5 clearly separated cards
+- cards use light borders, rounded corners, generous spacing
+- icons are optional and small; do not make the image an icon catalog
+- if cost is already shown by the product listing, do not repeat it here unless explicitly required
+
+Visual system:
+- Notion-like clarity + Airbnb-like warmth + a small amount of editorial card rhythm
+- cream / beige / cocoa text with one Meetu warm-orange accent
+- high readability, no decorative Chinese font
+
+Runaway guardrails:
+- no formal government/school notice feeling
+- no sales button look
+- no price-focused design unless asked
+- no dense paragraph blocks
+- no fake UI screenshots
+- no QR code or external platform guidance
+```
+
+## Template 7C — Prompt 纠偏 / 失败后重写清单
+
+Use when an Image2 output is “设计感欠佳 / 重点不突出 / 跑偏成广告”。
+
+```text
+Before rewriting the prompt, diagnose:
+
+1. What is the single most important message?
+   - If it cannot be stated in one sentence, the prompt is overloaded.
+2. What should NOT be visually emphasized?
+   - price / host / scene props / rules / product mechanism / brand assets
+3. What did the previous output overdo?
+   - too many props / too polished / too commercial / too much lifestyle / too much UI
+4. Which text can be removed from the image because product UI already shows it?
+5. What negative constraints need to be concrete, not generic?
+
+Rewrite pattern:
+- Keep the exact text shorter.
+- Move details from cover to second image or HTML.
+- Reduce supporting visual objects to 1-3.
+- Add explicit runaway guardrails.
+- Avoid “more beautiful” as a direction; use “clearer hierarchy / less clutter / stronger focus”.
 ```
 
 ## Template 8 — 活动详情页 Hero 背景图
