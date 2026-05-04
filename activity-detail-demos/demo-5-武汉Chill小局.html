@@ -44,17 +44,6 @@
     background: rgba(255,250,242,.50);
     border: 1px solid rgba(44,33,24,.08);
   }
-  .hero:after {
-    content: "";
-    position: absolute;
-    left: 24px;
-    bottom: 34px;
-    width: 116px;
-    height: 58px;
-    border-radius: 18px;
-    background: rgba(255,250,242,.46);
-    transform: rotate(-3deg);
-  }
   .date-row {
     position: relative;
     z-index: 1;
@@ -107,12 +96,12 @@
     font-weight: 850;
   }
   .hero-tags {
-    position: relative;
-    z-index: 1;
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
     margin-top: 16px;
+    padding-top: 14px;
+    border-top: 1px solid rgba(110,75,53,.13);
   }
   .hero-tags .pill { background: #fffaf2; color: #2c2118; }
   .eyebrow {
@@ -128,8 +117,8 @@
     gap: 10px;
   }
   .fact-card {
-    flex: 1 1 146px;
-    min-width: 146px;
+    flex: 1 1 calc(50% - 5px);
+    min-width: 0;
     padding: 15px;
     border-radius: 23px;
     background: rgba(255,252,246,.78);
@@ -280,12 +269,11 @@
         <h1 class="hero-title">周日出来坐坐，<br />认识几个新朋友</h1>
         <p class="hero-desc">不是讲座，不是相亲局，也不是酒局。就是找个舒服的地方，喝点东西，随便聊聊。</p>
         <div class="hero-note">重点是：低压力、公共场合、认识几个原本不会认识的人。</div>
-      </div>
-
-      <div class="hero-tags">
-        <span class="pill">在校学生</span>
-        <span class="pill">20人左右</span>
-        <span class="pill">奶茶咖啡+小食</span>
+        <div class="hero-tags">
+          <span class="pill">在校学生</span>
+          <span class="pill">20人左右</span>
+          <span class="pill">奶茶咖啡+小食</span>
+        </div>
       </div>
     </div>
   </section>
