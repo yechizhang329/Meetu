@@ -3,19 +3,19 @@
 > 用途：5/10 武汉大学生 Chill 小局活动主封面 + 活动说明图。  
 > 执行模型：GPT Image 2。  
 > 当前状态：本环境未暴露真实 Image2 出图工具/API，因此这里只交付可直接复制到 Image2 的 prompt。  
-> 新方向：从“活动海报”改为“第三空间生活方式邀请卡”。主参考 `starbucks` 的白天公共咖啡空间/社区氛围，辅以 `mastercard` 的暖色 editorial card 信息秩序。
+> 新方向：从“活动海报”改为“生活方式邀请封面”。参考 70% Airbnb/Pinterest 生活方式感 + 20% Notion 信息秩序 + 10% Figma 标签系统。  
 > 视觉边界：周日下午、公共空间、奶茶/咖啡、小食、桌面细节、松弛、安全、干净；不要夜店感、酒局感、暧昧感、相亲感、讲座感、职业咨询感。
 
 ---
 
-## Prompt 1：活动主封面图（第三空间邀请卡）
+## Prompt 1：活动主封面图（生活方式邀请卡）
 
 ```text
 Create a 3:4 vertical lifestyle invitation cover for Meetu, a campus activity social product for Chinese college students.
 
 Purpose:
 - This is the main cover for a small Sunday afternoon social gathering in Wuhan.
-- It should feel like a real friend placed an invitation note on a cafe table inside a warm public third place, not like a marketing poster.
+- It should feel like a real friend placed an invitation note on a cafe table, not like a marketing poster.
 - In 0.5 seconds, students should feel: safe, relaxed, real, easy to join.
 
 Canvas:
@@ -24,11 +24,11 @@ Canvas:
 - Platform: WeChat mini program activity cover / private sharing image
 
 Visual concept:
-- A Sunday afternoon public cafe / casual community space near Jiedaokou, Wuhan.
-- The image should show both tabletop details and a believable third-place environment: window daylight, warm wood table, nearby chairs, soft background seating, quiet public-space depth.
-- On the table: milk tea, coffee cup, small snacks, phone, sticky notes, a simple paper invitation card, maybe a receipt/menu strip or napkin, soft shadows.
-- You may softly imply 4-6 Chinese / Asian college students chatting nearby through hands, cups, blurred silhouettes, shoulder-level background shapes, or seating hints, but do not rely on clear front-facing portraits.
-- The invitation note / paper card on the table carries the main text. The note should feel casually placed, not designed like a printed advertisement.
+- A Sunday afternoon cafe tabletop near Jiedaokou, Wuhan.
+- The image is mostly a warm tabletop still life, not a staged event poster.
+- On the table: milk tea, coffee cup, small snacks, phone, sticky notes, a simple paper invitation card, soft shadows.
+- You may softly imply 4-6 Chinese / Asian college students chatting nearby through hands, cups, blurred silhouettes, or seating hints, but do not rely on clear front-facing portraits.
+- The invitation note / paper card on the table carries the main text.
 
 Exact Chinese text to render on the paper note:
 - Main title: “周日出来坐坐”
@@ -39,15 +39,15 @@ Exact Chinese text to render on the paper note:
 Layout:
 - Use the paper note / invitation card as the text zone.
 - Main title must be the clearest element and readable on a phone feed thumbnail.
-- Keep the tabletop objects and cafe-space hints around the note as atmosphere, not clutter.
-- Use slight asymmetry: the note can be slightly off-center, with cups/snacks framing it naturally and a visible warm window-light direction.
+- Keep the tabletop objects around the note as atmosphere, not clutter.
+- Use slight asymmetry: the note can be slightly off-center, with cups/snacks framing it naturally.
 - Leave enough visual breathing room; do not overfill the canvas.
 
 Visual system:
-- Palette: warm cream, milk tea beige, light coffee brown, soft white, a tiny muted sage / warm green accent for public-space calm, with Meetu warm orange (#FF7422) as a small accent on label/tape/underline.
-- Texture: real paper note, warm cafe daylight, subtle table grain, soft shadows, quiet cafe-space depth.
+- Palette: warm cream, milk tea beige, light coffee brown, soft white, with Meetu warm orange (#FF7422) as a small accent on label/tape/underline.
+- Texture: real paper note, warm cafe daylight, subtle table grain, soft shadows.
 - Typography: modern Chinese sans-serif, friendly and clear; looks printed or neatly written on a note, not a giant digital poster.
-- Mood: Starbucks-style third-place warmth + Pinterest tabletop inspiration + clean editorial composition. Do not copy Starbucks branding, logo, green dominance, or coffee-chain identity.
+- Mood: Airbnb-style accessible lifestyle scene + Pinterest tabletop inspiration + clean editorial composition.
 
 Constraints:
 - Accurate simplified Chinese text. Do not add extra Chinese or English words.
@@ -60,14 +60,14 @@ Constraints:
 
 ---
 
-## Prompt 2：活动说明长图（暖色 editorial 信息卡）
+## Prompt 2：活动说明长图（清爽邀请说明卡）
 
 ```text
 Create a 3:4 vertical information card for Meetu, explaining a small Sunday afternoon college-student social gathering in Wuhan.
 
 Purpose:
 - This image should work as the second image after the lifestyle cover.
-- It should feel like a carefully edited warm editorial invitation card, not an official notice.
+- It should feel like a carefully edited invitation note, not an official notice.
 - The reader should immediately understand when, where, who can come, what to prepare, and why it feels safe.
 
 Canvas:
@@ -92,19 +92,18 @@ Exact Chinese text to render:
 - Bottom CTA: “感兴趣先私聊我们”
 
 Layout:
-- Warm editorial information card, like a soft paper invitation system with Mastercard-like rounded-card rhythm and Notion-like clarity.
+- Warm editorial information card, like a Notion page turned into a soft paper poster.
 - Title at top, large and calm.
-- Use five clearly separated sections with light borders, soft rounded cards, tiny ordinary icons, and generous spacing.
-- Add a few subtle orbit/arc/pill shapes as background structure to guide reading flow, but do not use Mastercard's red-yellow circle symbol or payment-brand cues.
+- Use five clearly separated sections with light borders, small icons, and generous spacing.
 - Section cards can have slightly different widths or offsets for a Pinterest inspiration-board feeling, but keep reading order clear.
 - Bottom CTA should feel like a soft invitation, not a sales button.
 
 Visual system:
 - Background: light cream paper texture.
-- Accent elements: tiny calendar mark, map pin, coffee cup, chat bubble, people-count tag, simple check marks, soft pill labels.
-- Palette: cream white, milk tea beige, light coffee brown, soft cocoa text, a very small muted sage accent, Meetu warm orange (#FF7422) as small accents.
+- Accent elements: tiny calendar mark, map pin, coffee cup, chat bubble, people-count tag, simple check marks.
+- Palette: cream white, milk tea beige, light coffee brown, soft cocoa text, Meetu warm orange (#FF7422) as small accents.
 - Typography: clear modern Chinese sans-serif, high readability, no decorative hard-to-read font.
-- Style: Mastercard warm editorial card rhythm + Notion information order + Figma label clarity. Do not copy Mastercard brand circles, payment aesthetics, or corporate fintech look.
+- Style: Airbnb warmth + Notion information order + Figma label clarity.
 
 Constraints:
 - Accurate simplified Chinese text. Do not change wording.
