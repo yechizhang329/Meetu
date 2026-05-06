@@ -8,6 +8,8 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
+    "crop:animals": "npx tsx scripts/crop-contact-sheet.ts",
+    "verify:crops": "npx tsx scripts/verify-animal-crops.ts",
     "deploy": "npm run build && rm -rf ../../../docs/social-animal-test && cp -r dist ../../../docs/social-animal-test"
   },
   "dependencies": {

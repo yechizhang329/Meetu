@@ -1,242 +1,242 @@
 [
   {
     "id": "power_cat",
-    "bgHex": "#577389",
+    "bgHex": "#56738a",
     "bgRgb": [
-      87,
+      86,
       115,
-      137
+      138
     ],
     "cropBox": {
-      "left": 0,
-      "top": 0,
-      "width": 344,
-      "height": 286
+      "left": 18,
+      "top": 18,
+      "width": 308,
+      "height": 250
     }
   },
   {
     "id": "warm_dog",
-    "bgHex": "#fa6829",
+    "bgHex": "#fa6728",
     "bgRgb": [
       250,
-      104,
-      41
+      103,
+      40
     ],
     "cropBox": {
-      "left": 344,
-      "top": 0,
-      "width": 343,
-      "height": 286
+      "left": 362,
+      "top": 18,
+      "width": 307,
+      "height": 250
     }
   },
   {
     "id": "calm_capybara",
-    "bgHex": "#b9946a",
+    "bgHex": "#ba956a",
     "bgRgb": [
-      185,
-      148,
+      186,
+      149,
       106
     ],
     "cropBox": {
-      "left": 687,
-      "top": 0,
-      "width": 344,
-      "height": 286
+      "left": 705,
+      "top": 18,
+      "width": 308,
+      "height": 250
     }
   },
   {
     "id": "corner_mouse",
-    "bgHex": "#83789b",
+    "bgHex": "#85799c",
     "bgRgb": [
-      131,
-      120,
-      155
+      133,
+      121,
+      156
     ],
     "cropBox": {
-      "left": 1031,
-      "top": 0,
-      "width": 343,
-      "height": 286
+      "left": 1049,
+      "top": 18,
+      "width": 307,
+      "height": 250
     }
   },
   {
     "id": "vibe_monkey",
-    "bgHex": "#cbbb59",
+    "bgHex": "#fed943",
     "bgRgb": [
-      203,
-      187,
-      89
+      254,
+      217,
+      67
     ],
     "cropBox": {
-      "left": 0,
-      "top": 286,
-      "width": 344,
-      "height": 287
+      "left": 18,
+      "top": 304,
+      "width": 308,
+      "height": 251
     }
   },
   {
     "id": "prep_hamster",
-    "bgHex": "#e3a560",
+    "bgHex": "#d9bf76",
     "bgRgb": [
-      227,
-      165,
-      96
+      217,
+      191,
+      118
     ],
     "cropBox": {
-      "left": 344,
-      "top": 286,
-      "width": 343,
-      "height": 287
+      "left": 362,
+      "top": 304,
+      "width": 307,
+      "height": 251
     }
   },
   {
     "id": "border_collie",
-    "bgHex": "#7c94b1",
+    "bgHex": "#6096d4",
     "bgRgb": [
-      124,
-      148,
-      177
+      96,
+      150,
+      212
     ],
     "cropBox": {
-      "left": 687,
-      "top": 286,
-      "width": 344,
-      "height": 287
+      "left": 705,
+      "top": 304,
+      "width": 308,
+      "height": 251
     }
   },
   {
     "id": "meme_fox",
-    "bgHex": "#cf6f51",
+    "bgHex": "#ef6c31",
     "bgRgb": [
-      207,
-      111,
-      81
+      239,
+      108,
+      49
     ],
     "cropBox": {
-      "left": 1031,
-      "top": 286,
-      "width": 343,
-      "height": 287
+      "left": 1049,
+      "top": 304,
+      "width": 307,
+      "height": 251
     }
   },
   {
     "id": "show_peacock",
-    "bgHex": "#3e9f96",
+    "bgHex": "#2eb29c",
     "bgRgb": [
-      62,
-      159,
-      150
+      46,
+      178,
+      156
     ],
     "cropBox": {
-      "left": 0,
-      "top": 573,
-      "width": 344,
-      "height": 286
+      "left": 18,
+      "top": 591,
+      "width": 308,
+      "height": 250
     }
   },
   {
     "id": "empathy_otter",
-    "bgHex": "#6eb6d2",
+    "bgHex": "#5eb3d6",
     "bgRgb": [
-      110,
-      182,
-      210
+      94,
+      179,
+      214
     ],
     "cropBox": {
-      "left": 344,
-      "top": 573,
-      "width": 343,
-      "height": 286
+      "left": 362,
+      "top": 591,
+      "width": 307,
+      "height": 250
     }
   },
   {
     "id": "border_hedgehog",
-    "bgHex": "#a2896e",
+    "bgHex": "#987c63",
     "bgRgb": [
-      162,
-      137,
-      110
+      152,
+      124,
+      99
     ],
     "cropBox": {
-      "left": 687,
-      "top": 573,
-      "width": 344,
-      "height": 286
+      "left": 705,
+      "top": 591,
+      "width": 308,
+      "height": 250
     }
   },
   {
     "id": "recharge_panda",
-    "bgHex": "#99ac80",
+    "bgHex": "#8cc067",
     "bgRgb": [
-      153,
-      172,
-      128
+      140,
+      192,
+      103
     ],
     "cropBox": {
-      "left": 1031,
-      "top": 573,
-      "width": 343,
-      "height": 286
+      "left": 1049,
+      "top": 591,
+      "width": 307,
+      "height": 250
     }
   },
   {
     "id": "night_owl",
-    "bgHex": "#504890",
+    "bgHex": "#4f4790",
     "bgRgb": [
-      80,
-      72,
+      79,
+      71,
       144
     ],
     "cropBox": {
-      "left": 0,
-      "top": 859,
-      "width": 344,
-      "height": 286
+      "left": 18,
+      "top": 877,
+      "width": 308,
+      "height": 250
     }
   },
   {
     "id": "lastminute_pigeon",
-    "bgHex": "#92c0d9",
+    "bgHex": "#92bfd9",
     "bgRgb": [
       146,
-      192,
+      191,
       217
     ],
     "cropBox": {
-      "left": 344,
-      "top": 859,
-      "width": 343,
-      "height": 286
+      "left": 362,
+      "top": 877,
+      "width": 307,
+      "height": 250
     }
   },
   {
     "id": "bullet_alpaca",
-    "bgHex": "#d9b280",
+    "bgHex": "#dab37e",
     "bgRgb": [
-      217,
-      178,
-      128
+      218,
+      179,
+      126
     ],
     "cropBox": {
-      "left": 687,
-      "top": 859,
-      "width": 344,
-      "height": 286
+      "left": 705,
+      "top": 877,
+      "width": 308,
+      "height": 250
     }
   },
   {
     "id": "social_butterfly",
-    "bgHex": "#bc77f7",
+    "bgHex": "#bc78f7",
     "bgRgb": [
       188,
-      119,
+      120,
       247
     ],
     "cropBox": {
-      "left": 1031,
-      "top": 859,
-      "width": 343,
-      "height": 286
+      "left": 1049,
+      "top": 877,
+      "width": 307,
+      "height": 250
     }
   }
 ]

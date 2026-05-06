@@ -23,6 +23,10 @@ const OUT_DIR = path.resolve(__dirname, '..', 'src', 'assets', 'animals');
 // shipping full-res PNGs that bloat the bundle.
 const OUTPUT_W = 400;
 const OUTPUT_H = 334;
+// The uploaded contact sheet is visually a 4×4 grid, but the generated cell
+// seams are not mathematically even. A safe inner crop avoids carrying a strip
+// of the previous/next cell into the exported animal image.
+const SAFE_INSET = 18;
 
 const ANIMALS = [
   'power_cat',         // (0,0)
@@ -56,34 +60,63 @@ function rgbToHex(r: number, g: number, b: number) {
 }
 
 async function sampleEdgeColor(buf: Buffer, w: number, h: number): Promise<[number, number, number]> {
-  // Sample a 12px frame around the edges (top, bottom, left, right) and avg.
-  const FRAME = 12;
+  // Sample a frame around the edges and pick the dominant quantized color.
+  // Average edge color is unsafe because some animals intentionally touch the
+  // bottom edge; the dominant background bucket is what the page container must
+  // match.
+  const FRAME = 18;
+  const BUCKET = 8;
   const px = await sharp(buf).raw().toBuffer({ resolveWithObject: true });
   const data = px.data;
   const channels = px.info.channels;
-  let r = 0, g = 0, b = 0, count = 0;
+  const buckets = new Map<string, { r: number; g: number; b: number; count: number }>();
 
   const sample = (x: number, y: number) => {
     if (x < 0 || x >= w || y < 0 || y >= h) return;
     const i = (y * w + x) * channels;
-    r += data[i];
-    g += data[i + 1];
-    b += data[i + 2];
-    count++;
+    const r = data[i];
+    const g = data[i + 1];
+    const b = data[i + 2];
+    const key = [r, g, b].map((value) => Math.round(value / BUCKET) * BUCKET).join(',');
+    const bucket = buckets.get(key) ?? { r: 0, g: 0, b: 0, count: 0 };
+    bucket.r += r;
+    bucket.g += g;
+    bucket.b += b;
+    bucket.count++;
+    buckets.set(key, bucket);
   };
-  for (let x = 0; x < w; x += 4) {
+  for (let x = 0; x < w; x += 2) {
     for (let dy = 0; dy < FRAME; dy++) {
       sample(x, dy);
       sample(x, h - 1 - dy);
     }
   }
-  for (let y = 0; y < h; y += 4) {
+  for (let y = 0; y < h; y += 2) {
     for (let dx = 0; dx < FRAME; dx++) {
       sample(dx, y);
       sample(w - 1 - dx, y);
     }
   }
-  return [Math.round(r / count), Math.round(g / count), Math.round(b / count)];
+
+  const dominant = [...buckets.values()].sort((a, b) => b.count - a.count)[0];
+  return [
+    Math.round(dominant.r / dominant.count),
+    Math.round(dominant.g / dominant.count),
+    Math.round(dominant.b / dominant.count),
+  ];
+}
+
+function applySafeInset(left: number, top: number, width: number, height: number) {
+  if (width <= SAFE_INSET * 2 || height <= SAFE_INSET * 2) {
+    throw new Error(`cell too small for SAFE_INSET=${SAFE_INSET}: ${width}×${height}`);
+  }
+
+  return {
+    left: left + SAFE_INSET,
+    top: top + SAFE_INSET,
+    width: width - SAFE_INSET * 2,
+    height: height - SAFE_INSET * 2,
+  };
 }
 
 async function main() {
@@ -108,10 +141,11 @@ async function main() {
       const top = ys[r];
       const width = xs[c + 1] - xs[c];
       const height = ys[r + 1] - ys[r];
+      const cropBox = applySafeInset(left, top, width, height);
 
       // Crop, then resize to a uniform component size.
       const rawCrop = await sharp(SOURCE)
-        .extract({ left, top, width, height })
+        .extract(cropBox)
         .png()
         .toBuffer();
 
@@ -122,16 +156,16 @@ async function main() {
 
       await writeFile(path.join(OUT_DIR, `${id}.png`), resized);
 
-      const [bgR, bgG, bgB] = await sampleEdgeColor(rawCrop, width, height);
+      const [bgR, bgG, bgB] = await sampleEdgeColor(rawCrop, cropBox.width, cropBox.height);
       colors.push({
         id,
         bgHex: rgbToHex(bgR, bgG, bgB),
         bgRgb: [bgR, bgG, bgB],
-        cropBox: { left, top, width, height },
+        cropBox,
       });
 
       console.log(
-        `[${idx + 1}/16] ${id.padEnd(20)} crop=${width}x${height}@${left},${top}  bg=${rgbToHex(bgR, bgG, bgB)}`,
+        `[${idx + 1}/16] ${id.padEnd(20)} crop=${cropBox.width}x${cropBox.height}@${cropBox.left},${cropBox.top}  bg=${rgbToHex(bgR, bgG, bgB)}`,
       );
     }
   }
