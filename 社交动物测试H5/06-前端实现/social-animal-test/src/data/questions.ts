@@ -122,7 +122,7 @@ export const questions: QuizQuestion[] = [
       },
       {
         id: 'B',
-        text: '我会说得很正常，但说完需要恢复一下',
+        text: '我会说得很正常 说完默默喝口奶茶冷静一下',
         scores: { power_cat: 2, recharge_panda: 2, corner_mouse: 1 },
       },
       {
@@ -295,7 +295,7 @@ export const questions: QuizQuestion[] = [
   },
   {
     id: 'q12',
-    title: '如果这次测试给你一句"社交通关提示"，你最想要哪条？',
+    title: '如果这测试最后送你一张社交秘籍 你会先翻哪一页？',
     options: [
       {
         id: 'A',
