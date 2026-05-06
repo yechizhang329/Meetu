@@ -32,9 +32,11 @@ export function IntroPage({ onStart }: Props) {
           <span className="num">2</span>
           <span>测完拿一张你的社交动物卡。</span>
         </li>
-        <li className="intro-point">
+        <li className="intro-point is-highlight">
           <span className="num">3</span>
-          <span>发群里，问问朋友"这不就是你？"</span>
+          <span>
+            <strong>发群里</strong>，看朋友会不会说<strong>"这不就是你？"</strong>
+          </span>
         </li>
       </ul>
 

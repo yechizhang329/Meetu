@@ -186,6 +186,17 @@ button {
   line-height: 1.55;
 }
 
+.intro-point.is-highlight {
+  background: var(--sa-green);
+  box-shadow: 3px 3px 0 var(--sa-line);
+  transform: rotate(-0.6deg);
+  font-size: 15px;
+}
+
+.intro-point.is-highlight strong {
+  font-weight: 900;
+}
+
 .intro-point .num {
   flex-shrink: 0;
   width: 24px;

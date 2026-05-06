@@ -23,12 +23,12 @@ export function ResultPage({ resultId, onRetake }: Props) {
       await exportShareCard(shareRef.current, `social-animal-${result.id}.png`);
       setHint(
         isLikelyWeChat()
-          ? '微信里请滑到下方预览，长按图片保存。'
-          : '图片已下载，可以发群里试试。',
+          ? '微信里请滑到下方预览，长按图片保存 → 转发给朋友。'
+          : '图片已下载，可以直接发群 / 朋友圈 / 小红书。',
       );
     } catch (err) {
       console.error(err);
-      setHint('浏览器没支持直接下载，滑到下方长按预览图保存。');
+      setHint('浏览器没支持直接下载，滑到下方长按预览图保存 → 转发给朋友。');
     } finally {
       setSaving(false);
     }
@@ -110,7 +110,7 @@ export function ResultPage({ resultId, onRetake }: Props) {
           onClick={onSave}
           disabled={saving}
         >
-          {saving ? '生成中…' : '保存分享卡 ✦'}
+          {saving ? '生成中…' : '发给朋友看 ✦'}
         </button>
         <button type="button" className="big-btn secondary" onClick={onRetake}>
           再测一次
