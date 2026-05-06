@@ -23,10 +23,10 @@ export function ShareCard({ result }: Props) {
       </h2>
 
       <div className="share-hero-row">
-        <div className="share-illus" style={{ background: result.accentColor, borderRadius: 18 }}>
+        <div className="share-illus" style={{ background: result.accentColor, borderRadius: 14 }}>
           <AnimalIllustration
             type={result.id}
-            size={120}
+            size={96}
             primary={result.themeColor}
             accent="#fffdf5"
           />

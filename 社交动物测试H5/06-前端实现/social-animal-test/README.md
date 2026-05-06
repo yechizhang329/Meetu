@@ -35,6 +35,10 @@ npm run preview
 # 打分数据与可达性 sanity check（20 000 次随机抽样）
 npx tsx scripts/verify-scoring.ts
 
+# 分享卡尺寸 strict 3:4 verify（16 个结果逐个测）
+npm run preview &
+npx tsx scripts/verify-share-card-dims.ts
+
 # 生成 QA 截图（375 + 390px + 16 种结果）
 npm run preview &   # 先起 preview
 npx tsx scripts/snap-mobile.ts
@@ -165,13 +169,15 @@ social-animal-test/
 
 ## 8. 自测清单（每次改动前跑一遍）
 
+- [ ] `npm run lint` 通过（零 error）
 - [ ] `npm run build` 通过（含 TS 严格模式）
 - [ ] `npx tsx scripts/verify-scoring.ts` → 所有 16 动物可达
+- [ ] `npx tsx scripts/verify-share-card-dims.ts` → 16 张分享卡均 360×480（严格 3:4）
 - [ ] `npx tsx scripts/snap-mobile.ts` → 入口/答题/结果在 375 + 390 都无横向滚动
 - [ ] hash 深链 `#result=power_cat` 直达对应结果页
 - [ ] 答题流程 12/12 完成后落到 loading → result
-- [ ] 结果页"保存分享卡"不报错（可能在 CI 环境无 UI，手动验证）
-- [ ] 全文 grep `报名|加群|注册|手机号|下载 App` 为 0
+- [ ] 结果页"保存分享卡"不报错（CI 环境无 UI 时手动验证）
+- [ ] 人工 review：确认无**登录入口 / 注册入口 / 手机号输入 / 活动报名按钮 / 加群 CTA / 下载 App CTA / 强 QR**（"报名/附近/下载"这类词可能在结果文案里出现，如 `lastminute_pigeon` 的"报名时很真诚"——这类是内容不是 CTA，不算违规）
 
 ---
 

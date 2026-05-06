@@ -45,42 +45,42 @@ function readUrlHashOverride(): AnimalType | null {
   return allAnimalIds.includes(candidate) ? candidate : null;
 }
 
-export default function App() {
-  const [stage, setStage] = useState<Stage>('intro');
-  const [answers, setAnswers] = useState<UserAnswer[]>([]);
-  const [resultId, setResultId] = useState<AnimalType | null>(null);
+function computeInitialState(): { stage: Stage; answers: UserAnswer[]; resultId: AnimalType | null } {
+  const override = readUrlHashOverride();
+  if (override) return { stage: 'result', answers: [], resultId: override };
+  const restored = loadState();
+  if (restored.stage === 'result' && restored.resultId) {
+    return { stage: 'result', answers: restored.answers, resultId: restored.resultId };
+  }
+  if (restored.stage === 'quiz' && restored.answers.length > 0) {
+    // Keep the answers in state so the user can continue after restart, but land them on intro.
+    return { stage: 'intro', answers: restored.answers, resultId: null };
+  }
+  return { stage: 'intro', answers: [], resultId: null };
+}
 
+export default function App() {
+  // Lazy initializer runs once at mount; returns a single object so we don't recompute 3 times.
+  const initial = useState(() => computeInitialState())[0];
+  const [stage, setStage] = useState<Stage>(initial.stage);
+  const [answers, setAnswers] = useState<UserAnswer[]>(initial.answers);
+  const [resultId, setResultId] = useState<AnimalType | null>(initial.resultId);
+
+  // Keep hash routing reactive (deep-link / QA navigation) without calling setState synchronously
+  // at mount — only inside the event handler.
   useEffect(() => {
-    const applyHash = () => {
+    const onHashChange = () => {
       const override = readUrlHashOverride();
       if (override) {
         setResultId(override);
         setStage('result');
-        return true;
       }
-      return false;
     };
-    if (applyHash()) {
-      // Still listen for subsequent hash changes (useful for QA + deep links).
-      const onChange = () => applyHash();
-      window.addEventListener('hashchange', onChange);
-      return () => window.removeEventListener('hashchange', onChange);
-    }
-    const restored = loadState();
-    if (restored.stage === 'result' && restored.resultId) {
-      setAnswers(restored.answers);
-      setResultId(restored.resultId);
-      setStage('result');
-    } else if (restored.stage === 'quiz' && restored.answers.length > 0) {
-      setAnswers(restored.answers);
-      // Resume mid-quiz next time; for P0 we keep it simple and send back to intro.
-      setStage('intro');
-    }
-    const onChange = () => applyHash();
-    window.addEventListener('hashchange', onChange);
-    return () => window.removeEventListener('hashchange', onChange);
+    window.addEventListener('hashchange', onHashChange);
+    return () => window.removeEventListener('hashchange', onHashChange);
   }, []);
 
+  // Persist on every change (standalone effect = single responsibility, no render cascades).
   useEffect(() => {
     try {
       window.localStorage.setItem(

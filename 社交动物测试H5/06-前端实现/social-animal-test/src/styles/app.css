@@ -568,9 +568,9 @@ button {
 
 .share-card {
   width: 360px;
-  min-height: 480px;
+  height: 480px;
   box-sizing: border-box;
-  padding: 24px;
+  padding: 20px;
   background:
     radial-gradient(circle at 10px 10px, rgba(31, 31, 31, 0.05) 1.1px, transparent 1.3px) 0 0 /
       16px 16px,
@@ -582,6 +582,9 @@ button {
   box-shadow: var(--shadow-heavy);
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .share-topline {
@@ -592,15 +595,14 @@ button {
   font-weight: 900;
   letter-spacing: 0.2em;
   color: var(--sa-muted);
-  margin-bottom: 12px;
 }
 
 .share-title {
-  font-size: 32px;
-  line-height: 1.05;
+  font-size: 28px;
+  line-height: 1.04;
   font-weight: 950;
   letter-spacing: -1.2px;
-  margin: 0 0 10px;
+  margin: 0;
 }
 
 .share-title em {
@@ -610,22 +612,21 @@ button {
 
 .share-hero-row {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 10px;
-  margin-bottom: 14px;
 }
 
 .share-illus {
   flex-shrink: 0;
-  width: 120px;
-  height: 120px;
+  width: 96px;
+  height: 96px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .share-oneliner {
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.4;
   font-weight: 900;
   letter-spacing: -0.3px;
@@ -636,24 +637,22 @@ button {
   display: flex;
   gap: 6px;
   flex-wrap: wrap;
-  margin-bottom: 12px;
 }
 
 .share-keywords .sticky-label {
   font-size: 11px;
   padding: 3px 9px;
-  min-height: 22px;
+  min-height: 20px;
 }
 
 .share-roast {
-  padding: 10px 12px;
+  padding: 8px 10px;
   border: 2px dashed var(--sa-line);
-  border-radius: 14px;
+  border-radius: 12px;
   background: #fff;
-  font-size: 12.5px;
-  line-height: 1.5;
+  font-size: 12px;
+  line-height: 1.42;
   font-weight: 800;
-  margin-bottom: 10px;
 }
 
 .share-roast-label {
@@ -662,27 +661,25 @@ button {
   font-weight: 900;
   color: var(--sa-muted);
   letter-spacing: 0.15em;
-  margin-bottom: 4px;
+  margin-bottom: 3px;
 }
 
 .share-self {
-  padding: 10px 12px;
+  padding: 8px 10px;
   border: 2px solid var(--sa-line);
-  border-radius: 14px;
+  border-radius: 12px;
   background: var(--sa-yellow);
-  font-size: 12.5px;
-  line-height: 1.5;
+  font-size: 12px;
+  line-height: 1.42;
   font-weight: 900;
-  margin-bottom: 10px;
   transform: rotate(-0.6deg);
 }
 
 .share-vibe {
-  font-size: 12px;
-  line-height: 1.5;
+  font-size: 11.5px;
+  line-height: 1.42;
   font-weight: 700;
   color: var(--sa-ink);
-  margin-bottom: 14px;
 }
 
 .share-vibe-label {
@@ -691,10 +688,11 @@ button {
   font-weight: 900;
   color: var(--sa-muted);
   letter-spacing: 0.15em;
-  margin-bottom: 3px;
+  margin-bottom: 2px;
 }
 
 .share-footer {
+  margin-top: auto;
   font-size: 10px;
   color: var(--sa-muted);
   letter-spacing: 0.08em;
