@@ -1,0 +1,62 @@
+/* Social Animal Test — Design Tokens
+ * Source: 03-视觉设计/前端视觉Token与分享卡安全区Spec-v1.md (Phoebe2)
+ * DO NOT edit without sync to the spec doc.
+ */
+
+:root {
+  /* Paper & ink */
+  --sa-paper: #fff8ea;
+  --sa-paper-deep: #f6ebdd;
+  --sa-paper-card: #fffdf5;
+  --sa-paper-highlight: #fffbe6;
+  --sa-ink: #1f1f1f;
+  --sa-muted: #70685e;
+  --sa-line: #2b2b2b;
+
+  /* Accent */
+  --sa-orange: #ff7a3d;
+  --sa-green: #c8ff5a;
+  --sa-pink: #ffb7c5;
+  --sa-blue: #9dd7ff;
+  --sa-yellow: #ffe15a;
+  --sa-purple: #c7a4ff;
+  --sa-brown: #b7926b;
+
+  /* Shadow */
+  --sa-shadow: rgba(31, 31, 31, 0.12);
+  --shadow-paper: 6px 6px 0 var(--sa-shadow);
+  --shadow-heavy: 10px 10px 0 rgba(31, 31, 31, 0.16);
+
+  /* Radius */
+  --radius-card: 28px;
+  --radius-note: 20px;
+  --radius-pill: 999px;
+
+  /* Stroke */
+  --stroke: 2px solid var(--sa-line);
+
+  /* Typography */
+  --font-main: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Noto Sans SC',
+    'Microsoft YaHei', sans-serif;
+  --font-weight-title: 900;
+  --font-weight-body: 500;
+  --font-weight-tag: 800;
+
+  /* Animal primaries — per token spec §1.2 */
+  --animal-power_cat: #5d7186;
+  --animal-warm_dog: #ff7a3d;
+  --animal-calm_capybara: #b7926b;
+  --animal-corner_mouse: #8b7c9e;
+  --animal-vibe_monkey: #ffe15a;
+  --animal-prep_hamster: #d7bd82;
+  --animal-border_collie: #6f9ed9;
+  --animal-meme_fox: #e8793e;
+  --animal-show_peacock: #32b6a6;
+  --animal-empathy_otter: #59b7d8;
+  --animal-border_hedgehog: #9b8068;
+  --animal-recharge_panda: #98d36f;
+  --animal-night_owl: #5d4b8c;
+  --animal-lastminute_pigeon: #a9c4d8;
+  --animal-bullet_alpaca: #d8b88e;
+  --animal-social_butterfly: #c27cff;
+}
