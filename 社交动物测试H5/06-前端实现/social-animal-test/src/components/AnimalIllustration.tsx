@@ -71,7 +71,7 @@ interface Props {
  * AnimalIllustration
  * Renders a 4×4 contact-sheet crop. The PNG already includes its own
  * background color (sampled in `_colors.json`); the parent container should
- * use the matching `themeColor` from results.ts so there is no edge seam.
+ * use the matching `themeColor` from results.ts so there is no edge seam. The image is contained, not covered, so poster crops never cut off the animal.
  */
 export function AnimalIllustration({ type, size = 140, primary }: Props) {
   return (
@@ -86,7 +86,7 @@ export function AnimalIllustration({ type, size = 140, primary }: Props) {
         display: 'block',
         width: size,
         height: size,
-        objectFit: 'cover',
+        objectFit: 'contain',
         background: primary ?? 'transparent',
         borderRadius: 'inherit',
       }}
