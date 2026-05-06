@@ -662,10 +662,11 @@ button {
       16px 16px,
     linear-gradient(160deg, var(--sa-paper) 0%, var(--sa-paper-deep) 100%);
   border: 3px solid var(--sa-line);
-  border-radius: 22px;
+  /* Exported PNG is a rectangular file; keep the poster frame rectangular so WeChat/XHS do not show white outside rounded corners. */
+  border-radius: 0;
   color: var(--sa-ink);
   font-family: var(--font-main);
-  box-shadow: var(--shadow-heavy);
+  box-shadow: none;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -806,7 +807,7 @@ button {
   width: min(100%, 320px);
   height: auto;
   border: 2px solid var(--sa-line);
-  border-radius: 18px;
+  border-radius: 0;
   box-shadow: var(--shadow-soft);
   -webkit-user-select: none;
   user-select: none;
