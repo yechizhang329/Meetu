@@ -21,6 +21,16 @@
 - “癫”来自姿势和结构：歪头、过长手脚、卡住的尾巴、空洞眼神、过度准备、脑内弹幕、启动失败；
 - “美”来自统一线条、统一尺度、清楚构图、准确背景色。
 
+本版不再把 `cute / friendly / warm / pet / sticker / kawaii / adorable / children / storybook` 当主风格词。这些词会把模型拉回萌宠贴纸。主风格词改为：
+
+- `weird little editorial animals`
+- `absurd personality mascots`
+- `deadpan anxious internet doodles`
+- `rough black-line typographic animal symbols`
+- `offbeat college meme characters`
+- `anti-cute, funny, slightly unhinged, but still readable`
+- `flat graphic line art, imperfect proportions, wobbly limbs, deadpan eyes`
+
 ## Production 硬规格
 
 - PNG
@@ -80,13 +90,15 @@ BACKGROUND REQUIREMENTS:
 
 STYLE REQUIREMENTS:
 - Adult college-student meme-test aesthetic.
+- The characters should feel like adult internet personality symbols, not pets.
+- They can be awkward, deadpan, distorted, and slightly unhinged.
 - Abstract, slightly unhinged, deadpan, witty, but still clean and beautiful.
 - Black-line doodle / editorial icon system, stroke color #2b2b2b.
 - Thick rounded lines, intentionally awkward proportions, asymmetric posture, blank stare, odd limbs, expressive negative space.
 - Flat fills only, with the given accent color used sparingly for props or small details.
 - Each animal should feel like a personality diagram, not a normal animal mascot.
 - Weird enough to screenshot, clean enough to ship in a product.
-- Avoid cute kawaii pet style, chibi style, glossy sticker style, plush toy style, baby animal style, emoji style, 3D style, realistic fur, big sparkling eyes, soft gradients, drop shadows.
+- Avoid round baby faces, shiny eyes, paw-heart poses, soft plush proportions, cute sticker expressions, cute kawaii pet style, chibi style, glossy sticker style, plush toy style, baby animal style, emoji style, 3D style, realistic fur, big sparkling eyes, soft gradients, drop shadows.
 
 CROP SAFETY:
 - Each animal is centered in its own 600×500 cell.
@@ -102,26 +114,26 @@ NO TEXT:
 EXACT 4×4 CELL MAP:
 
 ROW 1:
-1. power_cat / 省电猫 — background EXACT #5d7186, accent #9dd7ff. Draw a cat collapsed like a low-battery icon. Half-closed deadpan eyes. Tail broken into battery bars. Abstract social-energy exhaustion, not sleepy cute kitten.
-2. warm_dog / 热心犬 — background EXACT #ff7a3d, accent #ffe15a. Draw a dog leaning forward too much with one overlong arm offering a blank note, trying very hard to help. Friendly but slightly over-eager, not puppy-cute.
+1. power_cat / 省电猫 — background EXACT #5d7186, accent #9dd7ff. Draw a cat collapsed like a grey low-battery system popup /毛毯. Half-closed deadpan eyes already offline. Tail broken into battery bars. Abstract social-energy exhaustion, not sleepy cute kitten.
+2. warm_dog / 热心犬 — background EXACT #ff7a3d, accent #ffe15a. Draw a dog whose paw has already raised itself before the brain agreed; one overlong arm offering a blank note. Expression says “I don’t know why I started talking either”. Over-eager, not puppy-cute.
 3. calm_capybara / 稳定水豚 — background EXACT #b7926b, accent #fff8ea. Draw a capybara sitting like a heavy paperweight pinning down chaotic squiggle lines. Flat calm face, zero drama, body as stabilizing block.
-4. corner_mouse / 角落鼠 — background EXACT #8b7c9e, accent #c7a4ff. Draw a mouse compressed into an L-shaped corner, holding or surrounded by blank draft bubbles. Anxious observation posture, tiny but intense.
+4. corner_mouse / 角落鼠 — background EXACT #8b7c9e, accent #c7a4ff. Draw a mouse compressed into an L-shaped corner, surrounded by ten blank draft windows/bubbles. Anxious observation posture, tiny but intense.
 
 ROW 2:
-5. vibe_monkey / 整活猴 — background EXACT #ffe15a, accent #ff7a3d. Draw a monkey flung sideways by its own joke energy, holding a banana microphone. Limbs rhythmically mismatched, chaotic performer energy, not cute circus monkey.
-6. prep_hamster / 攻略仓鼠 — background EXACT #d7bd82, accent #b7926b. Draw a hamster carrying an absurdly serious stack of blank checklist cards / map sheets. Overprepared, tiny project manager energy.
-7. border_collie / 控场边牧 — background EXACT #6f9ed9, accent #1f1f1f. Draw a border collie blocking chaotic arrows with its body, holding a blank voting board or flowchart card. Looks like an emergency process manager.
-8. meme_fox / 接梗狐 — background EXACT #e8793e, accent #ffe15a. Draw a fox whose tail curls into a question-mark / boomerang shape, catching a flying blank joke card. Clever, defensive, quick-witted.
+5. vibe_monkey / 整活猴 — background EXACT #ffe15a, accent #ff7a3d. Draw a monkey as an abstract unhinged host holding a banana microphone. Limbs rhythmically wrong but musical, body flung by its own joke energy, not cute circus monkey.
+6. prep_hamster / 攻略仓鼠 — background EXACT #d7bd82, accent #b7926b. Draw a hamster carrying an overcomplicated but blank route map / checklist stack. Eyes absurdly serious, tiny project manager energy.
+7. border_collie / 控场边牧 — background EXACT #6f9ed9, accent #1f1f1f. Draw a border collie giving a meeting to the air, blocking chaotic arrows with its body, holding a blank flow board. Looks like an emergency process manager.
+8. meme_fox / 接梗狐 — background EXACT #e8793e, accent #ffe15a. Draw a fox whose body twists into a question-mark / boomerang shape, catching a flying blank joke block. Clever, defensive, quick-witted.
 
 ROW 3:
-9. show_peacock / 开屏孔雀 — background EXACT #32b6a6, accent #ff7a3d. Draw a peacock with a compact fan tail shaped like a tiny stage sign / spotlight burst. Expression says “the camera found me, I did nothing”. Confident, not luxury-pretty.
-10. empathy_otter / 共情海獭 — background EXACT #59b7d8, accent #ffb7c5. Draw an otter hugging a rescue cushion or tissue pack like a human social buffer. Body curved like a soft shield, emotionally alert but not sentimental.
-11. border_hedgehog / 边界刺猬 — background EXACT #9b8068, accent #c7a4ff. Draw a hedgehog inside a dotted safety-distance zone. Spikes look like tiny traffic cones / boundary markers. Defensive but soft inside.
-12. recharge_panda / 回血熊猫 — background EXACT #98d36f, accent #1f1f1f. Draw a panda half-lying inside a charging cable loop, holding a blank do-not-disturb sign. Empty stare, recovery mode, not cute sleepy panda.
+9. show_peacock / 开屏孔雀 — background EXACT #32b6a6, accent #ff7a3d. Draw a peacock as a suddenly unfolding awkward mini-stage device. Compact fan tail like a stage sign / spotlight burst. Expression says “the camera found me, I did nothing”. Not luxury-pretty.
+10. empathy_otter / 共情海獭 — background EXACT #59b7d8, accent #ffb7c5. Draw an otter hugging a tissue pack / cushion, expression like it already felt everyone’s embarrassment for them. Body curved like a social buffer, not sentimental.
+11. border_hedgehog / 边界刺猬 — background EXACT #9b8068, accent #c7a4ff. Draw a hedgehog inside a dotted safety-distance zone. Spikes and boundary line form a tiny defense system / roadblock pattern. Defensive but soft inside.
+12. recharge_panda / 回血熊猫 — background EXACT #98d36f, accent #1f1f1f. Draw a panda flattened into a black-white battery being charged, holding a blank do-not-disturb sign. Empty stare, recovery mode, not cute sleepy panda.
 
 ROW 4:
-13. night_owl / 夜航猫头鹰 — background EXACT #5d4b8c, accent #c7a4ff. Draw an owl whose two eyes look like glowing night windows, standing on a moon / keyboard hybrid. Late-night brain online, daytime offline.
-14. lastminute_pigeon / 临门鸽 — background EXACT #a9c4d8, accent #70685e. Draw a pigeon stuck in a doorway, one foot outside and one foot braking backward. Body silhouette resembles a pause icon. Commitment panic, funny but not childish.
+13. night_owl / 夜航猫头鹰 — background EXACT #5d4b8c, accent #c7a4ff. Draw an owl with overly bright 3am startup eyes, standing on a moon / keyboard hybrid. Late-night brain suddenly online, daytime offline.
+14. lastminute_pigeon / 临门鸽 — background EXACT #a9c4d8, accent #70685e. Draw a pigeon stuck in a doorway: body points outside, soul points back to bed, one foot braking hard. Body silhouette resembles a pause icon. Commitment panic, funny but not childish.
 15. bullet_alpaca / 弹幕羊驼 — background EXACT #d8b88e, accent #1f1f1f. Draw a very calm alpaca face with many blank comment bubbles stacked above its head. Outside blank, inside noisy. No text in bubbles.
 16. social_butterfly / 社交蝴蝶 — background EXACT #c27cff, accent #ffb7c5. Draw a butterfly whose wings are layered like blank group-chat windows. Dotted flight path loops between blank social bubbles. Social but slightly fragmented.
 
@@ -256,4 +268,3 @@ Each animal centered, same scale, generous safe padding, no crossing slot bounda
 5. 缩到 H5 结果卡尺寸后动物仍可识别。
 6. 风格不能回到儿童贴纸；如果像宠物 sticker，本轮判失败，需要继续 prompt/edit。
 7. 通过后再交给 Dave 集成，并重跑移动端/分享卡尺寸验证。
-
