@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Meetu 社交动物测试 H5 视觉探索 v1</title>
+<style>
+  :root {
+    --paper: #fff8ea;
+    --paper-2: #f6ebdd;
+    --ink: #1f1f1f;
+    --muted: #70685e;
+    --line: #2b2b2b;
+    --orange: #ff7a3d;
+    --green: #c8ff5a;
+    --pink: #ffb7c5;
+    --blue: #9dd7ff;
+    --yellow: #ffe15a;
+    --purple: #c7a4ff;
+    --brown: #b7926b;
+    --shadow: 0 16px 0 rgba(31, 31, 31, .08);
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+    background:
+      radial-gradient(circle at 16px 16px, rgba(31, 31, 31, .055) 1.2px, transparent 1.4px) 0 0 / 22px 22px,
+      linear-gradient(135deg, #f2dfc7 0%, #fff8ea 44%, #f6ebdd 100%);
+  }
+
+  .board {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 42px 20px 70px;
+  }
+
+  .hero-note {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 22px;
+  }
+
+  .stamp {
+    display: inline-flex;
+    align-items: center;
+    min-height: 34px;
+    padding: 8px 12px;
+    border: 2px solid var(--line);
+    border-radius: 999px;
+    background: var(--green);
+    box-shadow: 3px 3px 0 var(--line);
+    font-size: 13px;
+    font-weight: 900;
+    transform: rotate(-2deg);
+  }
+
+  .stamp:nth-child(2) { background: var(--pink); transform: rotate(1.5deg); }
+  .stamp:nth-child(3) { background: var(--blue); transform: rotate(-1deg); }
+
+  h1 {
+    margin: 0;
+    max-width: 980px;
+    font-size: clamp(44px, 7vw, 92px);
+    line-height: .95;
+    letter-spacing: -4px;
+    font-weight: 950;
+  }
+
+  .lead {
+    margin: 18px 0 34px;
+    max-width: 760px;
+    color: var(--muted);
+    font-size: 18px;
+    line-height: 1.75;
+    font-weight: 650;
+  }
+
+  .section-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 48px 0 18px;
+    font-size: 24px;
+    font-weight: 950;
+    letter-spacing: -.5px;
+  }
+
+  .section-title:before {
+    content: "";
+    width: 42px;
+    height: 18px;
+    border: 2px solid var(--line);
+    border-radius: 999px;
+    background: var(--orange);
+    box-shadow: 3px 3px 0 var(--line);
+  }
+
+  .directions {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .direction-card,
+  .phone,
+  .animal-card,
+  .token-card {
+    border: 2px solid var(--line);
+    border-radius: 28px;
+    background: rgba(255, 248, 234, .94);
+    box-shadow: var(--shadow);
+  }
+
+  .direction-card {
+    min-height: 240px;
+    padding: 24px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .direction-card.recommended { background: #fff2cc; }
+  .direction-card:after {
+    content: "";
+    position: absolute;
+    right: 18px;
+    top: 18px;
+    width: 56px;
+    height: 20px;
+    border: 2px solid rgba(31,31,31,.7);
+    background: rgba(255,255,255,.45);
+    transform: rotate(8deg);
+  }
+
+  .direction-card h3 { margin: 0 0 10px; font-size: 26px; line-height: 1.05; }
+  .direction-card p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.7; font-weight: 600; }
+
+  .screens {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+    align-items: start;
+  }
+
+  .phone {
+    width: 100%;
+    min-height: 640px;
+    padding: 12px;
+    background: #1f1f1f;
+    border-radius: 36px;
+  }
+
+  .screen {
+    min-height: 616px;
+    border-radius: 26px;
+    background:
+      linear-gradient(rgba(31,31,31,.035) 1px, transparent 1px) 0 0 / 100% 28px,
+      var(--paper);
+    overflow: hidden;
+    position: relative;
+    padding: 20px;
+  }
+
+  .screen:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(circle at 18% 8%, rgba(255,122,61,.12), transparent 24%), radial-gradient(circle at 82% 80%, rgba(157,215,255,.18), transparent 24%);
+  }
+
+  .screen > * { position: relative; z-index: 1; }
+  .topbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+  .mini { color: var(--muted); font-size: 11px; font-weight: 850; letter-spacing: .4px; }
+  .dotline { display: flex; gap: 5px; }
+  .dot { width: 7px; height: 7px; border-radius: 50%; border: 1.5px solid var(--line); background: #fff; }
+  .dot.on { background: var(--orange); }
+
+  .cover-title {
+    margin: 40px 0 12px;
+    font-size: 46px;
+    line-height: .98;
+    font-weight: 950;
+    letter-spacing: -2.5px;
+  }
+
+  .cover-sub { color: var(--muted); font-size: 15px; line-height: 1.65; font-weight: 650; }
+  .start-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 24px;
+    min-height: 56px;
+    border: 2px solid var(--line);
+    border-radius: 999px;
+    background: var(--ink);
+    color: #fff8ea;
+    box-shadow: 4px 4px 0 var(--orange);
+    font-size: 18px;
+    font-weight: 950;
+  }
+
+  .animal-sticker-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+  .mini-sticker {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 10px;
+    border: 2px solid var(--line);
+    border-radius: 14px;
+    background: #fff;
+    box-shadow: 3px 3px 0 rgba(31,31,31,.18);
+    font-size: 12px;
+    font-weight: 900;
+  }
+  .mini-sticker:nth-child(2) { background: var(--yellow); transform: rotate(2deg); }
+  .mini-sticker:nth-child(3) { background: var(--pink); transform: rotate(-2deg); }
+  .mini-sticker:nth-child(4) { background: var(--blue); transform: rotate(1deg); }
+
+  .question-title { margin: 18px 0 20px; font-size: 27px; line-height: 1.24; font-weight: 950; letter-spacing: -.8px; }
+  .progress { height: 10px; border: 2px solid var(--line); border-radius: 999px; background: #fff; overflow: hidden; }
+  .progress span { display: block; width: 25%; height: 100%; background: var(--green); }
+  .option {
+    margin: 10px 0;
+    padding: 14px 14px 14px 46px;
+    border: 2px solid var(--line);
+    border-radius: 20px;
+    background: rgba(255,255,255,.72);
+    box-shadow: 3px 3px 0 rgba(31,31,31,.08);
+    position: relative;
+    font-size: 14px;
+    line-height: 1.55;
+    font-weight: 700;
+  }
+  .option:before {
+    content: attr(data-letter);
+    position: absolute;
+    left: 13px;
+    top: 15px;
+    width: 22px;
+    height: 22px;
+    border: 2px solid var(--line);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: var(--paper);
+    font-size: 12px;
+    font-weight: 950;
+  }
+  .option.selected { background: var(--green); transform: rotate(-1deg); }
+
+  .result-title { margin: 10px 0 4px; font-size: 16px; color: var(--muted); font-weight: 900; }
+  .animal-name { margin: 0; font-size: 48px; line-height: .95; font-weight: 950; letter-spacing: -2px; }
+  .one-liner { display: inline-block; margin: 12px 0 14px; padding: 8px 10px; border: 2px solid var(--line); border-radius: 14px; background: var(--blue); font-weight: 950; line-height: 1.4; transform: rotate(-1deg); }
+  .note-card { margin-top: 10px; padding: 14px; border: 2px solid var(--line); border-radius: 20px; background: rgba(255,255,255,.72); }
+  .note-card h4 { margin: 0 0 8px; font-size: 14px; }
+  .note-card p { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.7; font-weight: 650; }
+  .quote { margin-top: 12px; padding: 12px; border: 2px dashed var(--line); border-radius: 18px; background: #fff; font-size: 13px; line-height: 1.5; font-weight: 850; }
+
+  .share-screen { padding: 16px; background: #e9f1ff; }
+  .share-card {
+    min-height: 584px;
+    padding: 20px;
+    border: 2px solid var(--line);
+    border-radius: 26px;
+    background: var(--paper);
+    box-shadow: 8px 8px 0 rgba(31,31,31,.12);
+  }
+  .share-card .animal-name { font-size: 52px; }
+  .keywords { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0; }
+  .keyword { padding: 7px 10px; border: 2px solid var(--line); border-radius: 999px; background: var(--green); font-size: 12px; font-weight: 950; }
+  .keyword:nth-child(2) { background: var(--pink); }
+  .keyword:nth-child(3) { background: var(--blue); }
+
+  .animal-hero { display: flex; justify-content: center; margin: 16px 0 4px; }
+  svg.animal { width: 150px; height: 132px; overflow: visible; }
+  .animal * { vector-effect: non-scaling-stroke; }
+  .stroke { fill: none; stroke: var(--line); stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; }
+  .fill-blue { fill: #5d7186; }
+  .fill-yellow { fill: var(--yellow); }
+  .fill-brown { fill: #b99571; }
+  .fill-purple { fill: var(--purple); }
+  .fill-paper { fill: var(--paper); }
+
+  .animals {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+  }
+  .animal-card { padding: 18px; background: rgba(255,255,255,.62); }
+  .animal-card h3 { margin: 8px 0 4px; font-size: 22px; }
+  .animal-card p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.6; font-weight: 650; }
+  .animal-card .animal-hero { min-height: 134px; align-items: center; }
+
+  .tokens {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+  }
+  .token-card { padding: 20px; }
+  .token-card h3 { margin: 0 0 10px; }
+  .swatches { display: flex; gap: 8px; flex-wrap: wrap; }
+  .swatch { width: 42px; height: 42px; border: 2px solid var(--line); border-radius: 12px; box-shadow: 2px 2px 0 var(--line); }
+  .small-copy { color: var(--muted); font-size: 13px; line-height: 1.7; font-weight: 650; }
+
+  @media (max-width: 1080px) {
+    .screens { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .animals { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .directions, .tokens { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 620px) {
+    .board { padding: 28px 14px 48px; }
+    h1 { letter-spacing: -2px; }
+    .screens, .animals { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+  <main class="board">
+    <div class="hero-note">
+      <span class="stamp">P0 推荐方向</span>
+      <span class="stamp">桌面便签动物园</span>
+      <span class="stamp">不是心理诊断</span>
+    </div>
+    <h1>社交动物测试<br>H5 视觉语言探索</h1>
+    <p class="lead">简笔动物负责记忆点，排版梗图负责传播，结果卡负责让用户觉得“有点像我”。这版先验证入口、答题、结果、分享卡和 4 只代表动物。</p>
+
+    <h2 class="section-title">Art Direction</h2>
+    <section class="directions">
+      <article class="direction-card recommended">
+        <h3>桌面便签动物园</h3>
+        <p>暖白纸张、贴纸标签、草稿线、朋友锐评。像大学生桌上的社交观察笔记，被整理成一张可截图的结果卡。推荐作为 P0 主方向。</p>
+      </article>
+      <article class="direction-card">
+        <h3>群聊截图动物局</h3>
+        <p>用聊天气泡、弹幕、消息截图和表情包动物制造传播感。梗感强，但 H5 产品感偏弱，适合后续做分享变体。</p>
+      </article>
+      <article class="direction-card">
+        <h3>标本卡动物档案</h3>
+        <p>编号、档案卡、观察笔记、关键词标签，系统感更强。适合承载 16 个动物体系，但首版可能略严肃。</p>
+      </article>
+    </section>
+
+    <h2 class="section-title">页面小样</h2>
+    <section class="screens">
+      <div class="phone"><section class="screen">
+        <div class="topbar"><span class="mini">Meetu · SOCIAL ANIMAL</span><div class="dotline"><i class="dot on"></i><i class="dot"></i><i class="dot"></i></div></div>
+        <div class="animal-hero">
+          <svg class="animal" viewBox="0 0 180 150" aria-hidden="true">
+            <ellipse class="fill-blue" cx="86" cy="88" rx="45" ry="38" />
+            <path class="stroke" d="M45 84c-8-25 9-45 36-48 31-4 54 12 59 39 7 39-26 60-64 51-18-4-27-16-31-42Z" />
+            <path class="stroke" d="M61 44 52 25 76 37M112 39l17-15-2 25" />
+            <path class="stroke" d="M72 78h.1M105 76h.1M82 95c8 5 17 4 24-2" />
+            <path class="stroke" d="M125 105c22 5 25 27 7 32-17 4-26-12-15-24" />
+            <path class="stroke" d="M50 128h82" />
+          </svg>
+        </div>
+        <h2 class="cover-title">社交动物<br>测试</h2>
+        <p class="cover-sub">12 个小场景，测着玩。<br>不算心理诊断，但可能会有点像你。</p>
+        <button class="start-btn">开始测试</button>
+        <div class="animal-sticker-row">
+          <span class="mini-sticker">省电猫</span><span class="mini-sticker">整活猴</span><span class="mini-sticker">边界刺猬</span><span class="mini-sticker">社交蝴蝶</span>
+        </div>
+      </section></div>
+
+      <div class="phone"><section class="screen">
+        <div class="topbar"><span class="mini">03 / 12</span><div style="width:112px"><div class="progress"><span></span></div></div></div>
+        <h2 class="question-title">第一次见面，大家围坐一圈，空气安静到能听见吸管戳奶茶盖。</h2>
+        <div class="option" data-letter="A">低头喝水：只要我不抬头，尴尬就看不见我</div>
+        <div class="option" data-letter="B">温和开口：“你们是怎么知道这个局的？”</div>
+        <div class="option selected" data-letter="C">笑一下：“我们是不是在等系统匹配话题？”</div>
+        <div class="option" data-letter="D">默默观察：谁也想逃，谁在硬撑，我都看见了</div>
+        <button class="start-btn" style="margin-top:18px;background:var(--orange);color:#1f1f1f;box-shadow:4px 4px 0 var(--line)">下一题</button>
+      </section></div>
+
+      <div class="phone"><section class="screen">
+        <div class="topbar"><span class="mini">你的社交动物是</span><span class="stamp" style="min-height:28px;padding:5px 9px;font-size:11px">仅供娱乐</span></div>
+        <p class="result-title">RESULT 01</p>
+        <h2 class="animal-name">省电猫</h2>
+        <div class="animal-hero">
+          <svg class="animal" viewBox="0 0 180 150" aria-hidden="true">
+            <ellipse class="fill-blue" cx="86" cy="88" rx="45" ry="38" />
+            <path class="stroke" d="M45 84c-8-25 9-45 36-48 31-4 54 12 59 39 7 39-26 60-64 51-18-4-27-16-31-42Z" />
+            <path class="stroke" d="M61 44 52 25 76 37M112 39l17-15-2 25" />
+            <path class="stroke" d="M72 78h.1M105 76h.1M82 95c8 5 17 4 24-2" />
+            <path class="stroke" d="M125 105c22 5 25 27 7 32-17 4-26-12-15-24" />
+          </svg>
+        </div>
+        <div class="one-liner">不是不想社交，是电量需要精打细算。</div>
+        <div class="keywords"><span class="keyword">慢热</span><span class="keyword">观察</span><span class="keyword">低消耗</span></div>
+        <div class="note-card"><h4>你在社交场里的常见模式</h4><p>你通常不会第一时间跳进人群，而是先观察气氛和这个场子安不安全。熟起来之后，你反而会有很多细节和稳定陪伴感。</p></div>
+        <div class="quote">朋友锐评：你不是冷，你只是还没加载完。</div>
+      </section></div>
+
+      <div class="phone"><section class="screen share-screen">
+        <div class="share-card">
+          <p class="mini">社交动物测试</p>
+          <h2 class="animal-name">我是「省电猫」</h2>
+          <div class="animal-hero">
+            <svg class="animal" viewBox="0 0 180 150" aria-hidden="true">
+              <ellipse class="fill-blue" cx="86" cy="88" rx="45" ry="38" />
+              <path class="stroke" d="M45 84c-8-25 9-45 36-48 31-4 54 12 59 39 7 39-26 60-64 51-18-4-27-16-31-42Z" />
+              <path class="stroke" d="M61 44 52 25 76 37M112 39l17-15-2 25" />
+              <path class="stroke" d="M72 78h.1M105 76h.1M82 95c8 5 17 4 24-2" />
+              <path class="stroke" d="M125 105c22 5 25 27 7 32-17 4-26-12-15-24" />
+            </svg>
+          </div>
+          <div class="one-liner">不是不想社交，是电量需要精打细算。</div>
+          <div class="keywords"><span class="keyword">慢热</span><span class="keyword">观察</span><span class="keyword">低消耗</span></div>
+          <div class="note-card"><h4>适合氛围</h4><p>小范围、低压力、不强制表演、允许慢慢熟。</p></div>
+          <div class="quote">测着玩，但可能有点像。朋友说像我，我不承认但先保存。</div>
+        </div>
+      </section></div>
+    </section>
+
+    <h2 class="section-title">4 只代表动物</h2>
+    <section class="animals">
+      <article class="animal-card">
+        <div class="animal-hero"><svg class="animal" viewBox="0 0 180 150"><ellipse class="fill-blue" cx="86" cy="88" rx="45" ry="38"/><path class="stroke" d="M45 84c-8-25 9-45 36-48 31-4 54 12 59 39 7 39-26 60-64 51-18-4-27-16-31-42Z"/><path class="stroke" d="M61 44 52 25 76 37M112 39l17-15-2 25"/><path class="stroke" d="M72 78h.1M105 76h.1M82 95c8 5 17 4 24-2"/><path class="stroke" d="M125 105c22 5 25 27 7 32-17 4-26-12-15-24"/></svg></div>
+        <h3>省电猫</h3><p>内向省电。尾巴像电量条，姿态低、眼神在观察。</p>
+      </article>
+      <article class="animal-card">
+        <div class="animal-hero"><svg class="animal" viewBox="0 0 180 150"><circle class="fill-yellow" cx="88" cy="78" r="39"/><path class="stroke" d="M54 82c-8-25 4-44 33-47 29-3 52 15 48 43-4 31-29 47-57 38-14-4-21-16-24-34Z"/><path class="stroke" d="M57 58c-20-5-28 7-18 18M124 55c19-8 31 3 22 17"/><path class="stroke" d="M76 76h.1M104 75h.1M78 94c11 8 26 6 34-4"/><path class="stroke" d="M129 109l22 19M41 119l22-17"/><path class="stroke" d="M138 43c12-18 26-19 31-7"/></svg></div>
+        <h3>整活猴</h3><p>外放整活。像拿着香蕉麦克风，先把空气救活。</p>
+      </article>
+      <article class="animal-card">
+        <div class="animal-hero"><svg class="animal" viewBox="0 0 180 150"><path class="fill-brown" d="M44 89c0-31 22-49 55-45 33 4 47 24 39 52-8 29-34 42-64 32-20-7-30-20-30-39Z"/><path class="stroke" d="M44 89c0-31 22-49 55-45 33 4 47 24 39 52-8 29-34 42-64 32-20-7-30-20-30-39Z"/><path class="stroke" d="M50 62 40 45M65 50 61 28M83 44 86 24M101 45l9-21M118 53l16-18M135 69l20-11"/><path class="stroke" d="M78 82h.1M108 84h.1M85 101c8 4 16 4 23 0"/><rect class="fill-paper" x="54" y="116" width="76" height="25" rx="6"/><path class="stroke" d="M54 116h76v25H54zM70 129h43"/></svg></div>
+        <h3>边界刺猬</h3><p>外刺内软。抱着“先问问”牌子，边界清楚但不冷。</p>
+      </article>
+      <article class="animal-card">
+        <div class="animal-hero"><svg class="animal" viewBox="0 0 180 150"><path class="fill-purple" d="M88 76C58 35 20 45 30 84c8 33 44 29 58-8Z"/><path class="fill-pink" d="M92 76c30-41 68-31 58 8-8 33-44 29-58-8Z"/><path class="stroke" d="M88 76C58 35 20 45 30 84c8 33 44 29 58-8ZM92 76c30-41 68-31 58 8-8 33-44 29-58-8Z"/><path class="stroke" d="M90 60v58M76 47 62 29M104 47l14-18M70 119c15 13 29 13 42 0"/><path class="stroke" d="M22 126c18 12 41 6 56-11M121 116c20 7 34 1 43-10" stroke-dasharray="6 8"/></svg></div>
+        <h3>社交蝴蝶</h3><p>圈层游走。路线虚线穿过贴纸，轻松进入不同场域。</p>
+      </article>
+    </section>
+
+    <h2 class="section-title">Token / 组件规范</h2>
+    <section class="tokens">
+      <article class="token-card"><h3>颜色</h3><div class="swatches"><i class="swatch" style="background:#fff8ea"></i><i class="swatch" style="background:#1f1f1f"></i><i class="swatch" style="background:#ff7a3d"></i><i class="swatch" style="background:#c8ff5a"></i><i class="swatch" style="background:#ffb7c5"></i><i class="swatch" style="background:#9dd7ff"></i></div></article>
+      <article class="token-card"><h3>字体</h3><p class="small-copy">系统中文字体。标题 800-950，正文 400-650；手作感用圈线、贴纸、划线表达，不依赖手写字体。</p></article>
+      <article class="token-card"><h3>组件</h3><p class="small-copy">便签卡、贴纸标签、朋友锐评框、圈选选项、内联 SVG 动物。H5 页面与分享卡组件分离，方便导出。</p></article>
+    </section>
+  </main>
+</body>
+</html>
