@@ -8,8 +8,8 @@ interface Props {
 }
 
 /**
- * ShareCard — rendered both as an on-screen preview (inside .share-preview)
- * and off-screen inside .share-card-viewport for html2canvas capture.
+ * ShareCard — rendered off-screen inside .share-card-viewport for html2canvas capture.
+ * The visible preview is a generated PNG <img>, so WeChat long-press saves an image instead of selecting DOM text.
  * 3:4 ratio ≈ 360×480 px logical; exported at 3x for final 1080×1440.
  */
 export function ShareCard({ result }: Props) {

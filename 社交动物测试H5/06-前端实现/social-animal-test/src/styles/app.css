@@ -796,6 +796,38 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: default;
+}
+
+.share-preview-img {
+  display: block;
+  width: min(100%, 320px);
+  height: auto;
+  border: 2px solid var(--sa-line);
+  border-radius: 18px;
+  box-shadow: var(--shadow-soft);
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: default;
+}
+
+.share-preview-loading {
+  width: min(100%, 320px);
+  aspect-ratio: 3 / 4;
+  border: 2px dashed var(--sa-line);
+  border-radius: 18px;
+  background: var(--sa-paper-deep);
+  color: var(--sa-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 18px;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.5;
 }
 
 .share-preview-hint {
@@ -805,10 +837,4 @@ button {
   font-weight: 700;
   text-align: center;
   line-height: 1.5;
-}
-
-.share-preview .share-card {
-  transform: scale(0.92);
-  transform-origin: top center;
-  margin-bottom: -30px;
 }

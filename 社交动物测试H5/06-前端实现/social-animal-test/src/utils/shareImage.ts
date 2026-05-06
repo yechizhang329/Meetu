@@ -6,14 +6,7 @@ const SHARE_CARD_WIDTH = 360;
 const SHARE_CARD_HEIGHT = 480;
 const EXPORT_SCALE = 3;
 
-/**
- * Export the share card DOM to a PNG at strict 1080×1440 (3:4).
- * - Asserts the DOM node is exactly 360×480 before capture; throws otherwise.
- * - html2canvas is given explicit width/height so clipping is deterministic.
- * - Tries native download; on WeChat-ish UAs where download may be blocked,
- *   the result page's on-screen preview handles long-press save.
- */
-export async function exportShareCard(element: HTMLElement, filename: string) {
+async function renderShareCardCanvas(element: HTMLElement) {
   assertShareCardDimensions(element);
 
   const canvas = await html2canvas(element, {
@@ -36,7 +29,23 @@ export async function exportShareCard(element: HTMLElement, filename: string) {
     );
   }
 
-  const dataUrl = canvas.toDataURL('image/png');
+  return canvas;
+}
+
+export async function renderShareCardImage(element: HTMLElement) {
+  const canvas = await renderShareCardCanvas(element);
+  return canvas.toDataURL('image/png');
+}
+
+/**
+ * Export the share card DOM to a PNG at strict 1080×1440 (3:4).
+ * - Asserts the DOM node is exactly 360×480 before capture; throws otherwise.
+ * - html2canvas is given explicit width/height so clipping is deterministic.
+ * - Tries native download; on WeChat-ish UAs where download may be blocked,
+ *   the result page's generated PNG preview handles long-press save.
+ */
+export async function exportShareCard(element: HTMLElement, filename: string) {
+  const dataUrl = await renderShareCardImage(element);
 
   const link = document.createElement('a');
   link.href = dataUrl;

@@ -1,11 +1,11 @@
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { results } from '../data/results';
 import type { AnimalType } from '../data/types';
 import { AnimalIllustration } from './AnimalIllustration';
 import { RarityBadge } from './RarityBadge';
 import { ShareCard } from './ShareCard';
 import { keywordPillStyle, readableTextOn } from '../utils/color';
-import { exportShareCard, isLikelyWeChat } from '../utils/shareImage';
+import { exportShareCard, isLikelyWeChat, renderShareCardImage } from '../utils/shareImage';
 
 interface Props {
   resultId: AnimalType;
@@ -17,20 +17,49 @@ export function ResultPage({ resultId, onRetake }: Props) {
   const shareRef = useRef<HTMLDivElement | null>(null);
   const [saving, setSaving] = useState(false);
   const [hint, setHint] = useState<string | null>(null);
+  const [previewState, setPreviewState] = useState<{ resultId: AnimalType; image: string | null; loading: boolean }>({
+    resultId,
+    image: null,
+    loading: true,
+  });
+
+  useEffect(() => {
+    let cancelled = false;
+    const timer = window.setTimeout(() => {
+      if (!shareRef.current) return;
+      renderShareCardImage(shareRef.current)
+        .then((dataUrl) => {
+          if (!cancelled) setPreviewState({ resultId: result.id, image: dataUrl, loading: false });
+        })
+        .catch((error) => {
+          console.error(error);
+          if (!cancelled) {
+            setHint('分享图生成失败，可以先截图结果页发给朋友。');
+            setPreviewState({ resultId: result.id, image: null, loading: false });
+          }
+        });
+    }, 120);
+
+    return () => {
+      cancelled = true;
+      window.clearTimeout(timer);
+    };
+  }, [result.id]);
 
   const onSave = async () => {
     if (!shareRef.current || saving) return;
     setSaving(true);
     try {
-      await exportShareCard(shareRef.current, `social-animal-${result.id}.png`);
+      const dataUrl = await exportShareCard(shareRef.current, `social-animal-${result.id}.png`);
+      setPreviewState({ resultId: result.id, image: dataUrl, loading: false });
       setHint(
         isLikelyWeChat()
-          ? '微信里请滑到下方预览，长按图片保存 → 转发给朋友。'
+          ? '微信里请长按下方图片保存 → 转发给朋友。'
           : '图片已下载，可以直接发群 / 朋友圈 / 小红书。',
       );
     } catch (err) {
       console.error(err);
-      setHint('浏览器没支持直接下载，滑到下方长按预览图保存 → 转发给朋友。');
+      setHint('浏览器没支持直接下载，请长按下方图片保存 → 转发给朋友。');
     } finally {
       setSaving(false);
     }
@@ -123,16 +152,26 @@ export function ResultPage({ resultId, onRetake }: Props) {
         {hint ? <p className="intro-disclaimer">{hint}</p> : null}
       </div>
 
-      {/* Visible preview for long-press save on WeChat */}
       <div className="paper-card share-preview" style={{ marginTop: 24 }}>
-        <ShareCard result={result} />
+        {previewState.resultId === result.id && previewState.image ? (
+          <img
+            className="share-preview-img"
+            src={previewState.image}
+            alt={`${result.name}分享海报`}
+            draggable={false}
+          />
+        ) : (
+          <div className="share-preview-loading">
+            {previewState.resultId !== result.id || previewState.loading ? '正在生成可长按保存的图片…' : '分享图暂时没生成，请点上方按钮重试。'}
+          </div>
+        )}
         <p className="share-preview-hint">
-          微信里长按这张图就能存。<br />
+          微信里长按上方图片保存。<br />
           朋友看到你愿意发，就成功了。
         </p>
       </div>
 
-      {/* Off-screen clone used for html2canvas export */}
+      {/* Off-screen clone used for html2canvas export and PNG preview generation */}
       <div className="share-card-viewport" aria-hidden>
         <div ref={shareRef}>
           <ShareCard result={result} />
