@@ -24,12 +24,11 @@ export function ShareCard({ result }: Props) {
       </h2>
 
       <div className="share-hero-row">
-        <div className="share-illus" style={{ background: result.accentColor, borderRadius: 14 }}>
+        <div className="share-illus" style={{ background: result.themeColor, borderRadius: 14 }}>
           <AnimalIllustration
             type={result.id}
             size={96}
             primary={result.themeColor}
-            accent="#fffdf5"
           />
         </div>
         <div className="share-oneliner">{result.oneLiner}</div>

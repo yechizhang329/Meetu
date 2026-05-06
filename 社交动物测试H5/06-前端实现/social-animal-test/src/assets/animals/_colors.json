@@ -1,0 +1,242 @@
+[
+  {
+    "id": "power_cat",
+    "bgHex": "#577389",
+    "bgRgb": [
+      87,
+      115,
+      137
+    ],
+    "cropBox": {
+      "left": 0,
+      "top": 0,
+      "width": 344,
+      "height": 286
+    }
+  },
+  {
+    "id": "warm_dog",
+    "bgHex": "#fa6829",
+    "bgRgb": [
+      250,
+      104,
+      41
+    ],
+    "cropBox": {
+      "left": 344,
+      "top": 0,
+      "width": 343,
+      "height": 286
+    }
+  },
+  {
+    "id": "calm_capybara",
+    "bgHex": "#b9946a",
+    "bgRgb": [
+      185,
+      148,
+      106
+    ],
+    "cropBox": {
+      "left": 687,
+      "top": 0,
+      "width": 344,
+      "height": 286
+    }
+  },
+  {
+    "id": "corner_mouse",
+    "bgHex": "#83789b",
+    "bgRgb": [
+      131,
+      120,
+      155
+    ],
+    "cropBox": {
+      "left": 1031,
+      "top": 0,
+      "width": 343,
+      "height": 286
+    }
+  },
+  {
+    "id": "vibe_monkey",
+    "bgHex": "#cbbb59",
+    "bgRgb": [
+      203,
+      187,
+      89
+    ],
+    "cropBox": {
+      "left": 0,
+      "top": 286,
+      "width": 344,
+      "height": 287
+    }
+  },
+  {
+    "id": "prep_hamster",
+    "bgHex": "#e3a560",
+    "bgRgb": [
+      227,
+      165,
+      96
+    ],
+    "cropBox": {
+      "left": 344,
+      "top": 286,
+      "width": 343,
+      "height": 287
+    }
+  },
+  {
+    "id": "border_collie",
+    "bgHex": "#7c94b1",
+    "bgRgb": [
+      124,
+      148,
+      177
+    ],
+    "cropBox": {
+      "left": 687,
+      "top": 286,
+      "width": 344,
+      "height": 287
+    }
+  },
+  {
+    "id": "meme_fox",
+    "bgHex": "#cf6f51",
+    "bgRgb": [
+      207,
+      111,
+      81
+    ],
+    "cropBox": {
+      "left": 1031,
+      "top": 286,
+      "width": 343,
+      "height": 287
+    }
+  },
+  {
+    "id": "show_peacock",
+    "bgHex": "#3e9f96",
+    "bgRgb": [
+      62,
+      159,
+      150
+    ],
+    "cropBox": {
+      "left": 0,
+      "top": 573,
+      "width": 344,
+      "height": 286
+    }
+  },
+  {
+    "id": "empathy_otter",
+    "bgHex": "#6eb6d2",
+    "bgRgb": [
+      110,
+      182,
+      210
+    ],
+    "cropBox": {
+      "left": 344,
+      "top": 573,
+      "width": 343,
+      "height": 286
+    }
+  },
+  {
+    "id": "border_hedgehog",
+    "bgHex": "#a2896e",
+    "bgRgb": [
+      162,
+      137,
+      110
+    ],
+    "cropBox": {
+      "left": 687,
+      "top": 573,
+      "width": 344,
+      "height": 286
+    }
+  },
+  {
+    "id": "recharge_panda",
+    "bgHex": "#99ac80",
+    "bgRgb": [
+      153,
+      172,
+      128
+    ],
+    "cropBox": {
+      "left": 1031,
+      "top": 573,
+      "width": 343,
+      "height": 286
+    }
+  },
+  {
+    "id": "night_owl",
+    "bgHex": "#504890",
+    "bgRgb": [
+      80,
+      72,
+      144
+    ],
+    "cropBox": {
+      "left": 0,
+      "top": 859,
+      "width": 344,
+      "height": 286
+    }
+  },
+  {
+    "id": "lastminute_pigeon",
+    "bgHex": "#92c0d9",
+    "bgRgb": [
+      146,
+      192,
+      217
+    ],
+    "cropBox": {
+      "left": 344,
+      "top": 859,
+      "width": 343,
+      "height": 286
+    }
+  },
+  {
+    "id": "bullet_alpaca",
+    "bgHex": "#d9b280",
+    "bgRgb": [
+      217,
+      178,
+      128
+    ],
+    "cropBox": {
+      "left": 687,
+      "top": 859,
+      "width": 344,
+      "height": 286
+    }
+  },
+  {
+    "id": "social_butterfly",
+    "bgHex": "#bc77f7",
+    "bgRgb": [
+      188,
+      119,
+      247
+    ],
+    "cropBox": {
+      "left": 1031,
+      "top": 859,
+      "width": 343,
+      "height": 286
+    }
+  }
+]

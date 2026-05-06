@@ -6,6 +6,20 @@ import { RarityBadge } from './RarityBadge';
 import { ShareCard } from './ShareCard';
 import { exportShareCard, isLikelyWeChat } from '../utils/shareImage';
 
+// Pick black or white text depending on themeColor luminance.
+// Most crop edge colors are saturated mid-tones; this gives reliable contrast.
+function readableTextOn(hex: string) {
+  const m = /^#?([\da-f]{6})$/i.exec(hex);
+  if (!m) return '#1f1f1f';
+  const n = parseInt(m[1], 16);
+  const r = (n >> 16) & 0xff;
+  const g = (n >> 8) & 0xff;
+  const b = n & 0xff;
+  // Per WCAG, perceived luminance.
+  const l = 0.2126 * r + 0.7152 * g + 0.0722 * b;
+  return l > 160 ? '#1f1f1f' : '#fffdf5';
+}
+
 interface Props {
   resultId: AnimalType;
   onRetake: () => void;
@@ -35,6 +49,8 @@ export function ResultPage({ resultId, onRetake }: Props) {
     }
   };
 
+  const heroTextColor = readableTextOn(result.themeColor);
+
   return (
     <section className="app-shell">
       <div className="result-topline">
@@ -48,16 +64,15 @@ export function ResultPage({ resultId, onRetake }: Props) {
         我是 <em>「{result.name}」</em>
       </h1>
 
-      <div className="paper-card result-hero-card" style={{ background: result.accentColor }}>
+      <div className="paper-card result-hero-card" style={{ background: result.themeColor, color: heroTextColor }}>
         <div className="result-hero-illus">
           <AnimalIllustration
             type={result.id}
             size={170}
             primary={result.themeColor}
-            accent="#fffdf5"
           />
         </div>
-        <p className="result-one-liner">{result.oneLiner}</p>
+        <p className="result-one-liner" style={{ color: heroTextColor }}>{result.oneLiner}</p>
         <div className="result-keywords">
           {result.keywords.map((k, i) => (
             <span key={k} className={`sticky-label ${['plain', 'blue', 'yellow'][i % 3]}`}>
