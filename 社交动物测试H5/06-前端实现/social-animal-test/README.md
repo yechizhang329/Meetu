@@ -157,6 +157,25 @@ social-animal-test/
 
 ---
 
+## 6. ⚠️ 分布是"产品调音"，不是心理学/人口统计学
+
+`scripts/verify-scoring.ts` 输出的 16 类概率分布（基于 20,000 次"用户每题随机选项"模拟）反映的是**计分规则的输出形态**，不是大学生真实社交人格分布。我们没有真实人口统计学样本支撑任何 demographic 判断。
+
+P1 rebalance（task #4）后的目标分布如下，按 4 个稀有度 tier 分组（结果页与分享卡都会渲染对应 badge 文案）：
+
+| Tier | 概率范围 | Badge 文案 | 当前动物 |
+|---|---|---|---|
+| `common` 高发物种 | ≥9% | 别笑 你们学校可能一抓一把 | prep_hamster / bullet_alpaca / warm_dog / power_cat / border_hedgehog |
+| `uncommon` 隐藏常见款 | 5–9% | 你以为少 其实群里潜伏很多 | show_peacock / corner_mouse / vibe_monkey / meme_fox |
+| `rare` 小众分支 | 2.5–5% | 不是怪 是样本量不够懂你 | recharge_panda / night_owl / empathy_otter / calm_capybara / social_butterfly |
+| `legendary` 珍稀物种 | <2.5% | 系统都要二次确认你真的存在 | border_collie / lastminute_pigeon |
+
+最高单类 ~12.6%（远低于 16% 上限），全部 16 类可达，不过度均匀（PM 同意"主流共鸣 + 中频辨识 + 小众爽感 + 真稀有彩蛋"4 层结构）。
+
+**口径：** 这只是当前阶段的产品调音目标，不是断言 12.6% 的中国大学生是 prep_hamster。等接入埋点后会用真实选项分布重新校准。
+
+---
+
 ## 7. 已知限制 / 非 P0
 
 1. **16 动物 SVG 只画了 4 款**（`power_cat` / `vibe_monkey` / `border_hedgehog` / `social_butterfly`），其余 12 用占位（主色块 + 动物字）。PRD §13.4 明示 P0 可占位；Phoebe2 后续扩展。

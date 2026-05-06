@@ -2,6 +2,7 @@ import { useRef, useState } from 'react';
 import { results } from '../data/results';
 import type { AnimalType } from '../data/types';
 import { AnimalIllustration } from './AnimalIllustration';
+import { RarityBadge } from './RarityBadge';
 import { ShareCard } from './ShareCard';
 import { exportShareCard, isLikelyWeChat } from '../utils/shareImage';
 
@@ -40,6 +41,8 @@ export function ResultPage({ resultId, onRetake }: Props) {
         <span className="sticky-label">社交动物测试</span>
         <span className="sticky-label pink">#{result.keywords[0]}</span>
       </div>
+
+      <RarityBadge rarity={result.rarity} variant="page" />
 
       <h1 className="result-animal-name">
         我是 <em>「{result.name}」</em>

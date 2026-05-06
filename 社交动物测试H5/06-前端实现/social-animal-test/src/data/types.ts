@@ -30,6 +30,8 @@ export interface QuizQuestion {
   options: QuizOption[];
 }
 
+export type RarityTier = 'legendary' | 'rare' | 'uncommon' | 'common';
+
 export interface AnimalResult {
   id: AnimalType;
   name: string;
@@ -44,6 +46,7 @@ export interface AnimalResult {
   shareText: string;
   themeColor: string;
   accentColor: string;
+  rarity: RarityTier;
 }
 
 export interface UserAnswer {

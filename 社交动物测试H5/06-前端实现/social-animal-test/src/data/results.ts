@@ -25,6 +25,7 @@ export const results: Record<AnimalType, AnimalResult> = {
     shareText: '我不是失踪 我只是进入了省电模式。',
     themeColor: '#5d7186',
     accentColor: '#9dd7ff',
+    rarity: 'common',
   },
   warm_dog: {
     id: 'warm_dog',
@@ -44,6 +45,7 @@ export const results: Record<AnimalType, AnimalResult> = {
     shareText: '对真诚邀请 我没有抵抗力。',
     themeColor: '#ff7a3d',
     accentColor: '#ffe15a',
+    rarity: 'common',
   },
   calm_capybara: {
     id: 'calm_capybara',
@@ -63,6 +65,7 @@ export const results: Record<AnimalType, AnimalResult> = {
     shareText: '我是这局的情绪稳压器。',
     themeColor: '#b7926b',
     accentColor: '#fff8ea',
+    rarity: 'rare',
   },
   corner_mouse: {
     id: 'corner_mouse',
@@ -82,6 +85,7 @@ export const results: Record<AnimalType, AnimalResult> = {
     shareText: '想去 但要先开预演会。',
     themeColor: '#8b7c9e',
     accentColor: '#c7a4ff',
+    rarity: 'uncommon',
   },
   vibe_monkey: {
     id: 'vibe_monkey',
@@ -101,6 +105,7 @@ export const results: Record<AnimalType, AnimalResult> = {
     shareText: '没有我 这个群可能已经默哀。',
     themeColor: '#ffe15a',
     accentColor: '#ff7a3d',
+    rarity: 'uncommon',
   },
   prep_hamster: {
     id: 'prep_hamster',
@@ -120,6 +125,7 @@ export const results: Record<AnimalType, AnimalResult> = {
     shareText: '我不是难约 你把 SOP 发我就行。',
     themeColor: '#d7bd82',
     accentColor: '#b7926b',
+    rarity: 'common',
   },
   border_collie: {
     id: 'border_collie',
@@ -139,6 +145,7 @@ export const results: Record<AnimalType, AnimalResult> = {
     shareText: '群里所有局基本都是我催的。',
     themeColor: '#6f9ed9',
     accentColor: '#1f1f1f',
+    rarity: 'legendary',
   },
   meme_fox: {
     id: 'meme_fox',
@@ -158,6 +165,7 @@ export const results: Record<AnimalType, AnimalResult> = {
     shareText: '我每个梗背后 都有一次小型距离测量。',
     themeColor: '#e8793e',
     accentColor: '#ffe15a',
+    rarity: 'uncommon',
   },
   show_peacock: {
     id: 'show_peacock',
@@ -177,6 +185,7 @@ export const results: Record<AnimalType, AnimalResult> = {
     shareText: '在场必须有声音 不然我难受。',
     themeColor: '#32b6a6',
     accentColor: '#ff7a3d',
+    rarity: 'uncommon',
   },
   empathy_otter: {
     id: 'empathy_otter',
@@ -196,6 +205,7 @@ export const results: Record<AnimalType, AnimalResult> = {
     shareText: '别人还没说累 我已经替他累了。',
     themeColor: '#59b7d8',
     accentColor: '#ffb7c5',
+    rarity: 'rare',
   },
   border_hedgehog: {
     id: 'border_hedgehog',
@@ -215,6 +225,7 @@ export const results: Record<AnimalType, AnimalResult> = {
     shareText: '我能熟 但需要走正规流程。',
     themeColor: '#9b8068',
     accentColor: '#c7a4ff',
+    rarity: 'common',
   },
   recharge_panda: {
     id: 'recharge_panda',
@@ -234,6 +245,7 @@ export const results: Record<AnimalType, AnimalResult> = {
     shareText: '我反对一切 KPI 式社交。',
     themeColor: '#98d36f',
     accentColor: '#1f1f1f',
+    rarity: 'rare',
   },
   night_owl: {
     id: 'night_owl',
@@ -253,6 +265,7 @@ export const results: Record<AnimalType, AnimalResult> = {
     shareText: '白天的我在加载 晚上的我才上线。',
     themeColor: '#5d4b8c',
     accentColor: '#c7a4ff',
+    rarity: 'rare',
   },
   lastminute_pigeon: {
     id: 'lastminute_pigeon',
@@ -272,6 +285,7 @@ export const results: Record<AnimalType, AnimalResult> = {
     shareText: '你不是鸽 你只是出门启动失败。',
     themeColor: '#a9c4d8',
     accentColor: '#70685e',
+    rarity: 'legendary',
   },
   bullet_alpaca: {
     id: 'bullet_alpaca',
@@ -291,6 +305,7 @@ export const results: Record<AnimalType, AnimalResult> = {
     shareText: '表面风平浪静 内心已经开了八个直播间。',
     themeColor: '#d8b88e',
     accentColor: '#1f1f1f',
+    rarity: 'common',
   },
   social_butterfly: {
     id: 'social_butterfly',
@@ -310,7 +325,40 @@ export const results: Record<AnimalType, AnimalResult> = {
     shareText: '哪个群我都说过话 但深聊的不到3个。',
     themeColor: '#c27cff',
     accentColor: '#ffb7c5',
+    rarity: 'rare',
   },
 };
 
 export const allAnimalIds = Object.keys(results) as AnimalType[];
+
+// Rarity tier mapping based on locked-in distribution from random-uniform 20k sample
+// (see scripts/verify-scoring.ts at commit recording P1 rebalance):
+//   legendary (<2.5%):  border_collie 2.3 / lastminute_pigeon 2.0
+//   rare (2.5-5%):      social_butterfly 2.7 / calm_capybara 3.3 / empathy_otter 3.3
+//                       night_owl 3.3 / recharge_panda 3.6
+//   uncommon (5-9%):    meme_fox 5.4 / vibe_monkey 6.5 / corner_mouse 6.9 / show_peacock 7.1
+//   common (≥9%):       border_hedgehog 9.3 / power_cat 9.8 / warm_dog 10.9
+//                       bullet_alpaca 11.1 / prep_hamster 12.6
+// Copy follows DavidC/Fiona spec: reward rarity, not psychology — never imply
+// the result is "good" or "bad", just "how often this comes up".
+
+import type { RarityTier } from './types';
+
+export const RARITY_COPY: Record<RarityTier, { label: string; tagline: string }> = {
+  legendary: {
+    label: '珍稀物种',
+    tagline: '系统都要二次确认你真的存在',
+  },
+  rare: {
+    label: '小众分支',
+    tagline: '不是怪 是样本量不够懂你',
+  },
+  uncommon: {
+    label: '隐藏常见款',
+    tagline: '你以为少 其实群里潜伏很多',
+  },
+  common: {
+    label: '高发物种',
+    tagline: '别笑 你们学校可能一抓一把',
+  },
+};

@@ -1,5 +1,6 @@
 import type { AnimalResult } from '../data/types';
 import { AnimalIllustration } from './AnimalIllustration';
+import { RarityBadge } from './RarityBadge';
 
 interface Props {
   result: AnimalResult;
@@ -15,7 +16,7 @@ export function ShareCard({ result }: Props) {
     <div className="share-card" data-animal={result.id}>
       <div className="share-topline">
         <span>社交动物测试</span>
-        <span>仅供娱乐</span>
+        <RarityBadge rarity={result.rarity} variant="card" />
       </div>
 
       <h2 className="share-title">

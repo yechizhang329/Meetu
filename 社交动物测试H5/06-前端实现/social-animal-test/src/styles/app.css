@@ -391,6 +391,75 @@ button {
   color: var(--sa-ink);
 }
 
+/* ============== RARITY BADGE ============== */
+
+.rarity-badge {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0;
+  padding: 5px 10px;
+  border: var(--stroke);
+  border-radius: var(--radius-pill);
+  box-shadow: 3px 3px 0 rgba(31, 31, 31, 0.2);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1.4;
+  max-width: 100%;
+}
+
+.rarity-badge strong {
+  font-weight: 900;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  flex-shrink: 0;
+}
+
+.rarity-badge .rarity-sep {
+  color: rgba(31, 31, 31, 0.55);
+  margin: 0 1px;
+  flex-shrink: 0;
+}
+
+.rarity-badge .rarity-tagline {
+  font-weight: 700;
+  font-size: 11px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+}
+
+.rarity-page {
+  margin-bottom: 14px;
+  transform: rotate(-1deg);
+}
+
+.rarity-card {
+  font-size: 10px;
+  padding: 3px 8px;
+  box-shadow: 2px 2px 0 rgba(31, 31, 31, 0.2);
+  transform: rotate(-1deg);
+  flex-shrink: 0;
+}
+
+.rarity-card strong {
+  font-size: 11px;
+}
+
+.rarity-card .rarity-tagline {
+  font-size: 10px;
+}
+
+/* Special legendary aura — slightly more attention without being ad-y */
+.rarity-tier-legendary {
+  box-shadow: 0 0 0 3px rgba(255, 122, 61, 0.18), 3px 3px 0 rgba(31, 31, 31, 0.2);
+}
+
+.rarity-card.rarity-tier-legendary {
+  box-shadow: 0 0 0 2px rgba(255, 122, 61, 0.18), 2px 2px 0 rgba(31, 31, 31, 0.2);
+}
+
 /* ============== RESULT PAGE ============== */
 
 .result-topline {
