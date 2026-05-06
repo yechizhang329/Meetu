@@ -510,6 +510,12 @@ button {
   margin-top: 4px;
 }
 
+.keyword-pill {
+  border-width: 1.5px;
+  text-shadow: none;
+  box-shadow: 0 1px 0 rgba(31, 31, 31, 0.08);
+}
+
 .friend-roast {
   padding: 14px 16px;
   border: 2px dashed var(--sa-line);

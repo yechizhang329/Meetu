@@ -1,6 +1,7 @@
 import type { AnimalResult } from '../data/types';
 import { AnimalIllustration } from './AnimalIllustration';
 import { RarityBadge } from './RarityBadge';
+import { keywordPillStyle } from '../utils/color';
 
 interface Props {
   result: AnimalResult;
@@ -38,7 +39,8 @@ export function ShareCard({ result }: Props) {
         {result.keywords.map((k, i) => (
           <span
             key={k}
-            className={`sticky-label ${['plain', 'pink', 'blue'][i % 3]}`}
+            className="sticky-label keyword-pill"
+            style={keywordPillStyle(result.themeColor, i)}
           >
             #{k}
           </span>
