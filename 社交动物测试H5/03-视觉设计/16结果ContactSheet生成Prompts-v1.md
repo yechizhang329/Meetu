@@ -8,7 +8,7 @@
 
 优先级：
 1. 4×4 位置准确；
-2. 每格背景色接近 H5 `themeColor`；
+2. 每格背景色必须以 H5 `themeColor` 精确值为准；
 3. 每只动物居中、安全边距稳定；
 4. 16 只风格统一；
 5. 动物有动作/道具/表情记忆点。
@@ -50,6 +50,10 @@
 | 14 | `lastminute_pigeon` | 临门鸽 | `#a9c4d8` | `#70685e` | 一只脚出门一只脚刹车，门框/倒计时 |
 | 15 | `bullet_alpaca` | 弹幕羊驼 | `#d8b88e` | `#1f1f1f` | 脑内弹幕气泡但无文字，表面平静 |
 | 16 | `social_butterfly` | 社交蝴蝶 | `#c27cff` | `#ffb7c5` | 多个群聊气泡/虚线飞行路径，但无文字 |
+
+## 背景色精度硬规则
+
+DavidC 要求：背景颜色必须与 H5 展示页颜色完全一致。AI 生成阶段可能只能接近 hex 值，因此正式替换前必须做一次后处理：用脚本、设计工具或图像编辑流程，把每个 600×500 crop 的纯色背景强制填充为对应 `themeColor` 精确值。不能把“近似色”直接带进 H5。
 
 ---
 
@@ -109,7 +113,7 @@ NEGATIVE CONSTRAINTS:
 No Chinese text, no English text, no animal names, no labels, no numbers, no UI chrome, no app screenshots, no poster title, no watermark, no grid captions, no speech-bubble text, no emoji, no photorealistic animals, no 3D toy style, no highly detailed fur, no mixed illustration styles, no different camera angles per cell, no shadows crossing cell boundaries, no merged animals, no animal crossing into another slot.
 
 QUALITY CHECK:
-The final PNG must look like one coherent illustration system. All animals must have consistent stroke weight, similar visual density, similar scale, and clean safe padding. Background colors should match the provided hex values as closely as possible. The sheet must be directly sliceable into 16 equal 600×500 crops.
+The final PNG must look like one coherent illustration system. All animals must have consistent stroke weight, similar visual density, similar scale, and clean safe padding. Use the exact provided hex values for all cell backgrounds. If the generator cannot preserve exact colors, post-process every crop background to the exact hex value before implementation. The sheet must be directly sliceable into 16 equal 600×500 crops.
 ```
 
 建议 GPT Image 2 参数：
@@ -249,7 +253,7 @@ social_butterfly.png
 ## 正式替换前检查清单
 
 1. 16 格顺序是否完全一致；
-2. 16 格背景色是否接近对应 `themeColor`；
+2. 16 格背景色是否已被强制校正为对应 `themeColor` 精确值；
 3. 每格是否没有任何文字、编号、标签、水印；
 4. 动物是否居中，裁成 600×500 后不缺尾巴/翅膀/道具；
 5. 缩到 H5 分享卡尺寸后，动物轮廓和道具是否仍可辨认；
