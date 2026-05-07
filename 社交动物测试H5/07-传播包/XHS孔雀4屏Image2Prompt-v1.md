@@ -29,9 +29,14 @@
 4. `Meetu/社交动物测试H5/07-传播包/微信公众号首篇-文末CTA-v2.png`
    - 用途：文末互动语气、挂牌/便签风格参考。
 
+5. `Meetu/社交动物测试H5/07-传播包/微信公众号首篇-正文长图.png`
+   - 用途：参考公众号最终正文长图里的内容节奏和视觉层级。
+   - 只参考：`首屏强钩子 → 结果卡证据 → 短吐槽 → CTA` 的叙事推进，以及暖纸底、强黑字、挂牌/便签的层级关系。
+   - 不要照搬：长图构图、竖向连续阅读节奏、公众号文章感；XHS 仍然必须是 4 张独立 4:5 图，不做成长图切片。
+
 ### 可选反例参考
 
-5. `Meetu/社交动物测试H5/07-传播包/XHS-动物园挂牌-孔雀多图/01-cover.png` 到 `04-cta.png`
+6. `Meetu/社交动物测试H5/07-传播包/XHS-动物园挂牌-孔雀多图/01-cover.png` 到 `04-cta.png`
    - 用途：只看 4 屏结构。
    - 明确反例：不要继续做 PPT/说明书/模板卡片。
 
@@ -99,6 +104,7 @@ Goal: slide 1 should stop users in 0.5 seconds; slide 2 should clearly show this
 ## B 轨：无字底图 / 后期手工排版兜底
 
 > 如果 A 轨中文字不稳，使用 B 轨。B 轨只生成 4 张无字视觉底图，中文全部后期手工排。
+> 执行顺序：先试 A 轨直接带中文；只要出现错字、伪字、额外文字或缩略图不可读，立刻回退 B 轨无字底图 + 手工排字。
 
 ```text
 Create a coherent 4-image Xiaohongshu carousel visual background set, each image 1080×1350, 4:5 vertical PNG. No text anywhere.
