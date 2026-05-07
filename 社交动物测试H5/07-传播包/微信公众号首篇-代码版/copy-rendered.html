@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>公众号首篇 · 渲染预览 / 复制源</title>
+  <style>
+    body { margin: 0; padding: 0; background: #f2ecdc; color: #1f1f1f; font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Noto Sans SC", "Microsoft YaHei", sans-serif; }
+    .wechat-instructions {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 16px 20px;
+      background: #2b2b2b;
+      color: #fff8ea;
+      border-bottom: 3px solid #ff7a3d;
+      font-size: 14px;
+      line-height: 1.55;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    }
+    .wechat-instructions h1 {
+      margin: 0 0 8px;
+      font-size: 16px;
+      font-weight: 900;
+      letter-spacing: 0.02em;
+    }
+    .wechat-instructions ol {
+      margin: 6px 0 10px 20px;
+      padding: 0;
+      font-size: 13.5px;
+      line-height: 1.65;
+    }
+    .wechat-instructions .note {
+      color: #ffe15a;
+      font-size: 12.5px;
+    }
+    .wechat-instructions button {
+      margin-top: 4px;
+      padding: 10px 18px;
+      background: #ffe15a;
+      color: #1f1f1f;
+      border: 2px solid #1f1f1f;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 900;
+      cursor: pointer;
+      letter-spacing: 0.04em;
+      box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.28);
+    }
+    .wechat-instructions button:active { transform: translate(1px, 1px); box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.28); }
+    .wechat-instructions .copy-hint { display: block; margin-top: 6px; color: #c8ff5a; font-size: 12px; }
+    .copy-frame {
+      max-width: 760px;
+      margin: 20px auto;
+      padding: 0 18px 24px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="wechat-instructions">
+  <h1>如何把这篇文章贴进公众号</h1>
+  <ol>
+    <li>点下方蓝按钮「全选下方文章」→ 再按 <strong>⌘/Ctrl + C</strong> 复制（或点「复制到剪贴板」）。</li>
+    <li>切到公众号后台「新的创作 → 图文」，光标点进正文编辑区。</li>
+    <li><strong>直接 ⌘/Ctrl + V 粘贴。</strong>公众号会把样式一起带进来。</li>
+    <li>检查两张图：头图和文末图要替换成你公众号素材库里的图（选中图片 → 替换图片）。</li>
+    <li>「原文链接」设为：<code style="background:#fff8ea;color:#1f1f1f;padding:2px 6px;border-radius:4px;">https://a.meetu.asia/index.html?source=wechat_mp</code>。</li>
+  </ol>
+  <button type="button" onclick="selectRoot()">全选下方文章</button>
+  <button type="button" onclick="copyRoot()">复制到剪贴板</button>
+  <span id="copy-status" class="copy-hint"></span>
+  <span class="note">⚠️ 不要复制这个页面的 HTML 源码。公众号识别不了。请选中<strong>渲染后的内容</strong>复制。</span>
+</div>
+
+<div class="copy-frame">
+  <div id="wechat-copy-root" contenteditable="false">
+
+    <section style="margin:0 auto;max-width:720px;padding:8px 0 24px;color:#1F1F1F;font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif;font-size:16px;line-height:1.78;">
+
+      <p style="margin:0 0 20px;">
+        <img src="../微信公众号首篇-头图-v2.png" alt="今日动物园挂牌：你" style="display:block;width:100%;height:auto;margin:0;border:0;" />
+      </p>
+
+      <section style="margin:18px 0;padding:18px 16px;border:2px solid #2B2B2B;border-radius:22px;background:#FFFDF5;box-shadow:5px 5px 0 rgba(31,31,31,.12);">
+        <div style="display:inline-block;margin-bottom:12px;padding:4px 10px;border:2px solid #2B2B2B;border-radius:999px;background:#C8FF5A;font-size:13px;font-weight:900;letter-spacing:.04em;">今日展出</div>
+        <p style="margin:0 0 10px;font-size:26px;line-height:1.22;font-weight:900;letter-spacing:-0.5px;color:#1F1F1F;">今日动物园挂牌：你。</p>
+        <div style="margin-top:12px;padding-top:12px;border-top:2px solid #2B2B2B;font-size:16px;font-weight:700;color:#1F1F1F;line-height:1.9;">
+          品种：未知。<br />
+          习性：可疑。<br />
+          朋友锐评：待生成。
+        </div>
+      </section>
+
+      <p style="margin:26px 0;text-align:center;color:#2B2B2B;font-weight:900;letter-spacing:0.6em;">——</p>
+
+      <p style="margin:18px 0;color:#1F1F1F;font-size:17px;line-height:1.84;font-weight:600;">
+        我先挂牌了。
+      </p>
+
+      <p style="margin:18px 0;color:#1F1F1F;font-size:17px;line-height:1.84;font-weight:500;">
+        本来只想随手点一下，<br />
+        谁知道它这么懂。
+      </p>
+
+      <section style="margin:22px 0;padding:16px 16px;border:2px solid #2B2B2B;border-radius:16px;background:#FFE15A;box-shadow:4px 4px 0 rgba(31,31,31,.14);transform:rotate(-1deg);">
+        <p style="margin:0;font-size:17px;line-height:1.7;font-weight:800;color:#1F1F1F;">
+          它说我白天勿扰，晚上才开机；<br />
+          说我报名时真诚，出门前消失；<br />
+          说我没说话不代表脑内弹幕停过。
+        </p>
+      </section>
+
+      <p style="margin:18px 0;color:#1F1F1F;font-size:17px;line-height:1.84;font-weight:600;">
+        品种我先不说。<br />
+        怕你提前代入。
+      </p>
+
+      <p style="margin:26px 0;text-align:center;color:#2B2B2B;font-weight:900;letter-spacing:0.6em;">——</p>
+
+      <p style="margin:18px 0;color:#1F1F1F;font-size:17px;line-height:1.84;font-weight:500;">
+        最缺德的是挂牌下面那栏：
+      </p>
+
+      <p style="margin:16px 0;text-align:center;">
+        <span style="display:inline-block;padding:6px 14px;background:#FFE15A;border:2px solid #2B2B2B;border-radius:10px;font-size:20px;font-weight:900;letter-spacing:0.02em;color:#1F1F1F;box-shadow:3px 3px 0 rgba(31,31,31,.16);">朋友锐评</span>
+      </p>
+
+      <p style="margin:18px 0;color:#1F1F1F;font-size:17px;line-height:1.84;font-weight:500;">
+        那不是给你看的。<br />
+        是给你朋友截图用的。
+      </p>
+
+      <p style="margin:18px 0;color:#1F1F1F;font-size:17px;line-height:1.84;font-weight:500;">
+        我把说明牌发群里。<br />
+        本来想让大家反驳一下。
+      </p>
+
+      <p style="margin:18px 0;color:#1F1F1F;font-size:17px;line-height:1.84;font-weight:500;">
+        朋友只回了五个字：
+      </p>
+
+      <p style="margin:18px 0;text-align:center;">
+        <span style="display:inline-block;padding:12px 20px;background:#2B2B2B;color:#FFFDF5;border-radius:20px 20px 20px 6px;font-size:19px;font-weight:900;letter-spacing:0.02em;box-shadow:4px 4px 0 rgba(31,31,31,.18);">这不就是你？</span>
+      </p>
+
+      <p style="margin:18px 0;color:#1F1F1F;font-size:17px;line-height:1.84;font-weight:600;">
+        行。<br />
+        我闭嘴。
+      </p>
+
+      <p style="margin:26px 0;text-align:center;color:#2B2B2B;font-weight:900;letter-spacing:0.6em;">——</p>
+
+      <p style="margin:18px 0;color:#1F1F1F;font-size:17px;line-height:1.84;font-weight:600;">
+        动物园现在对所有人开放。
+      </p>
+
+      <p style="margin:18px 0;color:#1F1F1F;font-size:17px;line-height:1.84;font-weight:500;">
+        先进来转一圈 挂牌不报品种。<br />
+        测完你再决定要不要告诉朋友。
+      </p>
+
+      <p style="margin:22px 0;color:#1F1F1F;font-size:18px;line-height:1.7;font-weight:900;text-align:center;">
+        建议别当着熟人点开🍑
+      </p>
+
+      <p style="margin:26px 0 12px;">
+        <img src="../微信公众号首篇-文末CTA-v2.png" alt="测完别急着认，先发群里看看" style="display:block;width:100%;height:auto;margin:0;border:0;" />
+      </p>
+
+      <section style="margin:22px 0 12px;padding:20px 16px;border:2px solid #2B2B2B;border-radius:22px;background:#FFFDF5;box-shadow:5px 5px 0 rgba(31,31,31,.12);text-align:center;">
+        <p style="margin:0 0 14px;font-size:22px;line-height:1.35;font-weight:900;color:#1F1F1F;letter-spacing:-0.2px;">测完别急着认，先发群里看看。</p>
+        <p style="margin:0 0 14px;color:#70685E;font-size:14px;line-height:1.65;font-weight:700;">点下方「阅读原文」，今天挂的是哪只你。</p>
+        <p style="margin:0;">
+          <span style="display:inline-flex;align-items:center;gap:8px;padding:12px 26px;background:#2B2B2B;color:#FFFDF5;border-radius:999px;font-size:16px;font-weight:900;letter-spacing:0.04em;box-shadow:4px 4px 0 rgba(31,31,31,.2);">
+            👉 阅读原文 · 进入动物园
+          </span>
+        </p>
+      </section>
+
+      <p style="margin:18px 0 0;color:#70685E;font-size:12px;text-align:center;line-height:1.6;font-weight:600;letter-spacing:0.02em;">
+        直达链接：<a href="https://a.meetu.asia/index.html?source=wechat_mp" style="color:#FF7A3D;text-decoration:none;font-weight:900;">a.meetu.asia</a>
+      </p>
+
+    </section>
+
+  </div>
+</div>
+
+<script>
+  function selectRoot() {
+    var root = document.getElementById('wechat-copy-root');
+    if (!root) return;
+    var range = document.createRange();
+    range.selectNodeContents(root);
+    var sel = window.getSelection();
+    sel.removeAllRanges();
+    sel.addRange(range);
+    showStatus('已选中，按 ⌘/Ctrl + C 复制，然后粘贴到公众号正文。');
+    root.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  async function copyRoot() {
+    var root = document.getElementById('wechat-copy-root');
+    if (!root) return;
+    // Prefer rich-text copy so styles survive.
+    var html = root.innerHTML;
+    var plain = root.innerText;
+    try {
+      if (window.ClipboardItem && navigator.clipboard && navigator.clipboard.write) {
+        var blobHtml = new Blob([html], { type: 'text/html' });
+        var blobText = new Blob([plain], { type: 'text/plain' });
+        await navigator.clipboard.write([
+          new ClipboardItem({ 'text/html': blobHtml, 'text/plain': blobText })
+        ]);
+        showStatus('已复制（富文本）。切到公众号正文 ⌘/Ctrl + V 粘贴。');
+        return;
+      }
+    } catch (e) {
+      console.warn('ClipboardItem write failed, falling back:', e);
+    }
+    // Fallback: select range + document.execCommand('copy')
+    try {
+      selectRoot();
+      var ok = document.execCommand('copy');
+      showStatus(ok ? '已复制（execCommand）。切到公众号正文粘贴。' : '复制未生效，请手动选中再按 ⌘/Ctrl + C。');
+    } catch (e) {
+      showStatus('浏览器不支持一键复制，请手动选中再按 ⌘/Ctrl + C。');
+    }
+  }
+
+  function showStatus(msg) {
+    var el = document.getElementById('copy-status');
+    if (!el) return;
+    el.textContent = msg;
+    window.setTimeout(function () {
+      if (el.textContent === msg) el.textContent = '';
+    }, 6000);
+  }
+</script>
+
+</body>
+</html>
