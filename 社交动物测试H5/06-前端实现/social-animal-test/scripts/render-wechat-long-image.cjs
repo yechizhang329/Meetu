@@ -30,7 +30,8 @@ const OUT_PNG = path.join(
   }
   const browser = await puppeteer.launch({ headless: true, args: ['--no-sandbox'] });
   const page = await browser.newPage();
-  await page.setViewport({ width: 900, height: 2200, deviceScaleFactor: 1 });
+  // 750px logical width × 2x DPR = 1500px output. Mobile-friendly retina.
+  await page.setViewport({ width: 750, height: 2400, deviceScaleFactor: 2 });
   const fileUrl = 'file://' + SRC_HTML;
   await page.goto(fileUrl, { waitUntil: 'networkidle0' });
   await page.waitForFunction(() => {
