@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=1080,initial-scale=1" />
+  <title>XHS · 开屏孔雀 4 屏渲染源</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #d6cdb6;
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+      color: #1f1f1f;
+    }
+    .screen {
+      width: 1080px;
+      height: 1350px;
+      box-sizing: border-box;
+      padding: 80px 80px 70px;
+      background: #fff8e8;
+      position: relative;
+      overflow: hidden;
+      margin: 24px auto;
+    }
+    .top-tag {
+      font-size: 24px;
+      letter-spacing: 0.42em;
+      color: #a0958a;
+      font-weight: 900;
+      margin: 0 0 22px;
+    }
+    /* === Screen 01: cover === */
+    .cover h1 {
+      margin: 0 0 30px;
+      font-size: 130px;
+      line-height: 1.04;
+      letter-spacing: -5px;
+      font-weight: 950;
+      color: #1f1f1f;
+    }
+    .cover h1 em {
+      font-style: normal;
+      display: inline-block;
+      padding: 0 16px;
+      background: #1f1f1f;
+      color: #fff8ea;
+    }
+    .cover .stamp-row { margin: 0 0 50px; }
+    .stamp-red {
+      display: inline-block;
+      padding: 14px 30px;
+      background: #ff5a3d;
+      color: #fff8ea;
+      border-radius: 999px;
+      font-size: 36px;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+      box-shadow: 7px 7px 0 rgba(31,31,31,0.32);
+      transform: rotate(-2deg);
+    }
+    .cover .hook-pill {
+      display: inline-block;
+      margin: 0 0 30px;
+      padding: 28px 44px;
+      background: #ffe15a;
+      border: 5px solid #1f1f1f;
+      border-radius: 28px;
+      font-size: 70px;
+      font-weight: 950;
+      letter-spacing: -1.5px;
+      color: #1f1f1f;
+      box-shadow: 12px 12px 0 rgba(31,31,31,0.24);
+    }
+    .footer-mark {
+      position: absolute;
+      bottom: 50px;
+      left: 80px;
+      right: 80px;
+      font-size: 22px;
+      color: #a0958a;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      text-align: center;
+    }
+
+    /* === Screen 02: result card evidence === */
+    .result h2 {
+      margin: 0 0 14px;
+      font-size: 66px;
+      line-height: 1.08;
+      font-weight: 950;
+      letter-spacing: -2px;
+      color: #1f1f1f;
+    }
+    .result h2 em {
+      font-style: normal;
+      color: #ff7a3d;
+    }
+    .result .sub {
+      margin: 0 0 36px;
+      font-size: 30px;
+      line-height: 1.45;
+      font-weight: 800;
+      color: #70685e;
+    }
+    .result-card-wrap { text-align: center; margin: 0 auto; }
+    .result-card-wrap img {
+      display: inline-block;
+      width: 800px;
+      height: auto;
+      border: 5px solid #1f1f1f;
+      border-radius: 30px;
+      box-shadow: 14px 14px 0 rgba(31,31,31,0.18);
+    }
+
+    /* === Screen 03: roast wall === */
+    .roast h2 {
+      margin: 0 0 50px;
+      font-size: 76px;
+      line-height: 1.08;
+      font-weight: 950;
+      letter-spacing: -2px;
+      color: #1f1f1f;
+    }
+    .label {
+      display: inline-block;
+      padding: 10px 22px;
+      background: #ff7a3d;
+      color: #fff8ea;
+      border-radius: 999px;
+      font-size: 26px;
+      font-weight: 900;
+      letter-spacing: 0.06em;
+      margin: 0 0 18px;
+    }
+    .roast .quote {
+      margin: 0 0 40px;
+      padding: 30px 36px;
+      background: #fffdf5;
+      border: 4px solid #1f1f1f;
+      border-radius: 24px;
+      box-shadow: 8px 8px 0 rgba(31,31,31,0.18);
+    }
+    .roast .quote p {
+      margin: 0;
+      font-size: 50px;
+      line-height: 1.32;
+      font-weight: 950;
+      color: #1f1f1f;
+      letter-spacing: -1px;
+    }
+    .roast .self {
+      background: #ffe15a;
+      transform: rotate(-1deg);
+    }
+
+    /* === Screen 04: CTA === */
+    .cta { display: flex; flex-direction: column; justify-content: center; }
+    .cta h2 {
+      margin: 0 0 20px;
+      font-size: 160px;
+      line-height: 1;
+      font-weight: 950;
+      letter-spacing: -8px;
+      color: #1f1f1f;
+    }
+    .cta .sub {
+      margin: 0 0 60px;
+      font-size: 60px;
+      line-height: 1.18;
+      font-weight: 950;
+      letter-spacing: -1.5px;
+      color: #1f1f1f;
+    }
+    .cta .invite {
+      padding: 36px 40px;
+      background: #ffe15a;
+      border: 5px solid #1f1f1f;
+      border-radius: 28px;
+      box-shadow: 12px 12px 0 rgba(31,31,31,0.22);
+    }
+    .cta .invite p {
+      margin: 0;
+      font-size: 50px;
+      line-height: 1.3;
+      font-weight: 950;
+      letter-spacing: -1px;
+      color: #1f1f1f;
+    }
+    .cta .invite p + p { margin-top: 18px; font-size: 38px; font-weight: 800; color: #70685e; letter-spacing: 0; }
+  </style>
+</head>
+<body>
+
+<!-- 01 cover -->
+<section class="screen cover" id="screen-01">
+  <p class="top-tag">今 日 挂 牌</p>
+  <h1>今日动物园<br />挂牌：<em>我</em></h1>
+  <p class="stamp-row"><span class="stamp-red">朋友锐评：已生成</span></p>
+  <div style="text-align:center;">
+    <span class="hook-pill">别当熟人面点开</span>
+  </div>
+  <p class="footer-mark">Meetu · 社交动物测试</p>
+</section>
+
+<!-- 02 result evidence -->
+<section class="screen result" id="screen-02">
+  <p class="top-tag">今 日 展 出</p>
+  <h2>展示品种：<em>开屏孔雀</em></h2>
+  <p class="sub">我没抢镜头，<br />镜头自己飘过来的。</p>
+  <div class="result-card-wrap">
+    <img src="./peacock-share-card.png" alt="开屏孔雀分享卡" />
+  </div>
+  <p class="footer-mark">Meetu · 社交动物测试</p>
+</section>
+
+<!-- 03 roast wall -->
+<section class="screen roast" id="screen-03">
+  <p class="top-tag">挂 牌 锐 评</p>
+  <h2>挂牌下面那栏写着——</h2>
+
+  <span class="label">朋友锐评</span>
+  <div class="quote">
+    <p>你不是要 C 位，<br />你就是自带光源。</p>
+  </div>
+
+  <span class="label">自我认领</span>
+  <div class="quote self">
+    <p>安静坐着不行，<br />我会自己消失。</p>
+  </div>
+
+  <p class="footer-mark">Meetu · 社交动物测试</p>
+</section>
+
+<!-- 04 CTA -->
+<section class="screen cta" id="screen-04">
+  <p class="top-tag" style="text-align:center;">— 不 服 —</p>
+  <h2 style="text-align:center;">不服？</h2>
+  <p class="sub" style="text-align:center;">你也去挂牌。</p>
+  <div class="invite">
+    <p style="text-align:center;">测完回来报品种，</p>
+    <p style="text-align:center;color:#1f1f1f;font-size:50px;font-weight:950;">看看谁是孤品。</p>
+  </div>
+  <p class="footer-mark">Meetu · 社交动物测试</p>
+</section>
+
+</body>
+</html>
