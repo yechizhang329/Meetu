@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>公众号首篇 · 简洁版 · 复制源</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #ece5d4;
+      color: #1f1f1f;
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+    }
+    .toolbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 14px 20px 16px;
+      background: #1f1f1f;
+      color: #fff8ea;
+      border-bottom: 3px solid #ff7a3d;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+    }
+    .toolbar h1 { margin: 0 0 6px; font-size: 15px; font-weight: 900; }
+    .toolbar ol { margin: 4px 0 8px 18px; padding: 0; font-size: 13px; line-height: 1.6; }
+    .toolbar code { background: #fff8ea; color: #1f1f1f; padding: 1px 6px; border-radius: 4px; font-size: 12px; }
+    .toolbar button {
+      margin-top: 4px; margin-right: 8px;
+      padding: 9px 16px;
+      background: #ffe15a; color: #1f1f1f;
+      border: 2px solid #1f1f1f; border-radius: 999px;
+      font-size: 13px; font-weight: 900; cursor: pointer;
+      box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.28);
+    }
+    .toolbar button:active { transform: translate(1px, 1px); box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.28); }
+    .toolbar .status { display: block; margin-top: 6px; color: #c8ff5a; font-size: 12px; min-height: 1.4em; }
+    .toolbar .warn { display: block; margin-top: 6px; color: #ffe15a; font-size: 12px; }
+    .copy-frame {
+      max-width: 720px;
+      margin: 24px auto;
+      padding: 0 16px 32px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="toolbar">
+  <h1>公众号简洁版 · 一键复制</h1>
+  <ol>
+    <li>点「复制到剪贴板」→ 切公众号「新的创作 → 图文」→ 正文区 ⌘/Ctrl+V 粘贴。</li>
+    <li>选中两处占位图（头图 / 文末图）→ 替换为公众号素材库里的图。</li>
+    <li>后台「原文链接」字段填：<code>https://a.meetu.asia/index.html?source=wechat_mp</code></li>
+    <li>正文里没有任何外链按钮：用户只通过底部「阅读原文」进入。</li>
+  </ol>
+  <button type="button" onclick="copyRoot()">复制到剪贴板</button>
+  <button type="button" onclick="selectRoot()">手动全选</button>
+  <span id="status" class="status"></span>
+  <span class="warn">⚠️ 是复制下方<strong>渲染后内容</strong>，不是这页 HTML 源码。</span>
+</div>
+
+<div class="copy-frame">
+  <div id="wechat-copy-root">
+
+    <p style="margin:0 0 22px;">
+      <img src="../微信公众号首篇-头图-v2.png" alt="今日动物园挂牌：你" style="display:block;width:100%;height:auto;margin:0;border:0;" />
+    </p>
+
+    <p style="margin:18px 0 8px;font-size:13px;color:#a0958a;letter-spacing:0.2em;font-weight:700;">今 日 展 出</p>
+
+    <p style="margin:0 0 22px;font-size:15px;line-height:2;color:#1f1f1f;font-weight:600;">
+      品种：未知。<br />
+      习性：可疑。<br />
+      朋友锐评：待生成。
+    </p>
+
+    <hr style="border:0;border-top:1px solid #d8cfb9;margin:28px 0;" />
+
+    <p style="margin:18px 0;font-size:17px;line-height:1.95;color:#1f1f1f;font-weight:600;">
+      我先挂牌了。
+    </p>
+
+    <p style="margin:18px 0;font-size:17px;line-height:1.95;color:#1f1f1f;">
+      本来只想随手点一下，<br />
+      谁知道它这么懂。
+    </p>
+
+    <p style="margin:18px 0;font-size:17px;line-height:1.95;color:#1f1f1f;">
+      它说我白天勿扰，晚上才开机；<br />
+      说我报名时真诚，出门前消失；<br />
+      说我没说话不代表脑内弹幕停过。
+    </p>
+
+    <p style="margin:18px 0;font-size:17px;line-height:1.95;color:#1f1f1f;font-weight:600;">
+      品种我先不说。<br />
+      怕你提前代入。
+    </p>
+
+    <hr style="border:0;border-top:1px solid #d8cfb9;margin:28px 0;" />
+
+    <p style="margin:18px 0;font-size:17px;line-height:1.95;color:#1f1f1f;">
+      最缺德的是挂牌下面那栏：
+    </p>
+
+    <p style="margin:18px 0;font-size:17px;line-height:1.95;color:#1f1f1f;font-weight:900;">
+      朋友锐评。
+    </p>
+
+    <p style="margin:18px 0;font-size:17px;line-height:1.95;color:#1f1f1f;">
+      那不是给你看的。<br />
+      是给你朋友截图用的。
+    </p>
+
+    <p style="margin:18px 0;font-size:17px;line-height:1.95;color:#1f1f1f;">
+      我把说明牌发群里。<br />
+      本来想让大家反驳一下。
+    </p>
+
+    <p style="margin:18px 0;font-size:17px;line-height:1.95;color:#1f1f1f;">
+      朋友只回了五个字：
+    </p>
+
+    <blockquote style="margin:22px 0;padding:14px 20px;border-left:4px solid #ff7a3d;background:#fffbef;font-size:20px;line-height:1.5;font-weight:900;color:#1f1f1f;">
+      这不就是你？
+    </blockquote>
+
+    <p style="margin:18px 0;font-size:17px;line-height:1.95;color:#1f1f1f;font-weight:600;">
+      行。<br />
+      我闭嘴。
+    </p>
+
+    <hr style="border:0;border-top:1px solid #d8cfb9;margin:28px 0;" />
+
+    <p style="margin:18px 0;font-size:17px;line-height:1.95;color:#1f1f1f;font-weight:600;">
+      动物园现在对所有人开放。
+    </p>
+
+    <p style="margin:18px 0;font-size:17px;line-height:1.95;color:#1f1f1f;">
+      先进来转一圈，挂牌不报品种。<br />
+      测完你再决定要不要告诉朋友。
+    </p>
+
+    <p style="margin:22px 0;font-size:17px;line-height:1.95;color:#1f1f1f;font-weight:900;">
+      建议别当着熟人点开🍑
+    </p>
+
+    <p style="margin:28px 0 16px;">
+      <img src="../微信公众号首篇-文末CTA-v2.png" alt="测完别急着认，先发群里看看" style="display:block;width:100%;height:auto;margin:0;border:0;" />
+    </p>
+
+    <p style="margin:24px 0 4px;font-size:17px;line-height:1.7;color:#1f1f1f;text-align:center;font-weight:900;">
+      点下方「阅读原文」，进动物园。
+    </p>
+
+  </div>
+</div>
+
+<script>
+  function selectRoot() {
+    var root = document.getElementById('wechat-copy-root');
+    if (!root) return;
+    var range = document.createRange();
+    range.selectNodeContents(root);
+    var sel = window.getSelection();
+    sel.removeAllRanges();
+    sel.addRange(range);
+    showStatus('已选中。按 ⌘/Ctrl + C 复制 → 切公众号正文 ⌘/Ctrl + V 粘贴。');
+    root.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  async function copyRoot() {
+    var root = document.getElementById('wechat-copy-root');
+    if (!root) return;
+    var html = root.innerHTML;
+    var plain = root.innerText;
+    try {
+      if (window.ClipboardItem && navigator.clipboard && navigator.clipboard.write) {
+        var blobHtml = new Blob([html], { type: 'text/html' });
+        var blobText = new Blob([plain], { type: 'text/plain' });
+        await navigator.clipboard.write([
+          new ClipboardItem({ 'text/html': blobHtml, 'text/plain': blobText })
+        ]);
+        showStatus('已复制（富文本）。切公众号正文 ⌘/Ctrl + V 粘贴。');
+        return;
+      }
+    } catch (e) {
+      console.warn('ClipboardItem write failed, falling back:', e);
+    }
+    try {
+      selectRoot();
+      var ok = document.execCommand('copy');
+      showStatus(ok ? '已复制（execCommand）。切公众号正文粘贴。' : '复制未生效，请手动选中再按 ⌘/Ctrl + C。');
+    } catch (e) {
+      showStatus('浏览器不支持一键复制，请手动选中再按 ⌘/Ctrl + C。');
+    }
+  }
+
+  function showStatus(msg) {
+    var el = document.getElementById('status');
+    if (!el) return;
+    el.textContent = msg;
+    window.setTimeout(function () {
+      if (el.textContent === msg) el.textContent = '';
+    }, 6000);
+  }
+</script>
+
+</body>
+</html>
