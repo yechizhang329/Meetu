@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=900,initial-scale=1" />
+  <title>公众号首篇 · 正文长图 · 渲染源</title>
+  <style>
+    @font-face {
+      font-family: "PingFang SC";
+      src: local("PingFang SC"), local("Noto Sans SC"), local("Microsoft YaHei");
+    }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #ece5d4;
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+      color: #1f1f1f;
+    }
+    .canvas {
+      width: 900px;
+      margin: 0 auto;
+      padding: 40px 56px 44px;
+      background: #fff8e8;
+      box-sizing: border-box;
+    }
+    .top-tag {
+      font-size: 20px;
+      letter-spacing: 0.42em;
+      color: #a0958a;
+      font-weight: 900;
+      margin: 0 0 14px;
+    }
+    h1.title {
+      margin: 0 0 24px;
+      font-size: 70px;
+      line-height: 1.08;
+      letter-spacing: -3px;
+      font-weight: 950;
+      color: #1f1f1f;
+    }
+    .meta {
+      margin: 0 0 26px;
+      padding: 22px 28px;
+      background: #fffdf5;
+      border: 4px dashed #1f1f1f;
+      border-radius: 26px;
+    }
+    .meta p {
+      margin: 0 0 14px;
+      font-size: 28px;
+      line-height: 1.55;
+      font-weight: 800;
+      color: #1f1f1f;
+    }
+    .stamp {
+      display: inline-block;
+      padding: 8px 20px;
+      background: #ff5a3d;
+      color: #fff8ea;
+      border-radius: 999px;
+      font-size: 22px;
+      font-weight: 900;
+      letter-spacing: 0.06em;
+      box-shadow: 5px 5px 0 rgba(31,31,31,0.32);
+      transform: rotate(-2deg);
+    }
+    .hook-pill {
+      display: inline-block;
+      margin: 0 0 36px;
+      padding: 18px 32px;
+      background: #ffe15a;
+      border: 4px solid #1f1f1f;
+      border-radius: 22px;
+      font-size: 44px;
+      font-weight: 950;
+      letter-spacing: -1px;
+      color: #1f1f1f;
+      box-shadow: 8px 8px 0 rgba(31,31,31,0.24);
+    }
+    .hook-wrap { text-align: center; }
+    .result-img-wrap { text-align: center; margin: 4px 0 8px; }
+    .result-img-wrap img {
+      display: inline-block;
+      width: 480px;
+      height: auto;
+      border: 4px solid #1f1f1f;
+      border-radius: 24px;
+      box-shadow: 10px 10px 0 rgba(31,31,31,0.18);
+    }
+    .caption {
+      text-align: center;
+      font-size: 22px;
+      line-height: 1.5;
+      color: #70685e;
+      font-weight: 800;
+      margin: 16px 0 36px;
+    }
+    .lead {
+      margin: 0 0 10px;
+      font-size: 26px;
+      line-height: 1.5;
+      font-weight: 900;
+      color: #1f1f1f;
+    }
+    .lead-small {
+      margin: 0 0 16px;
+      font-size: 20px;
+      line-height: 1.5;
+      color: #a0958a;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+    }
+    blockquote.quote {
+      margin: 0 0 14px;
+      padding: 18px 24px;
+      background: #fffdf5;
+      border-left: 8px solid #ff7a3d;
+      border-radius: 0 16px 16px 0;
+      font-size: 26px;
+      line-height: 1.42;
+      font-weight: 900;
+      color: #1f1f1f;
+    }
+    .cta-q {
+      margin: 36px 0 6px;
+      font-size: 50px;
+      line-height: 1.18;
+      font-weight: 950;
+      letter-spacing: -1.5px;
+      color: #1f1f1f;
+    }
+    .cta-line {
+      margin: 0 0 4px;
+      font-size: 28px;
+      line-height: 1.4;
+      font-weight: 900;
+      color: #1f1f1f;
+    }
+    .footer {
+      margin-top: 28px;
+      padding-top: 14px;
+      border-top: 2px solid rgba(31,31,31,0.18);
+      font-size: 16px;
+      color: #a0958a;
+      letter-spacing: 0.18em;
+      font-weight: 700;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<div class="canvas" id="poster">
+  <p class="top-tag">今 日 挂 牌</p>
+  <h1 class="title">今日动物园挂牌：你。</h1>
+
+  <div class="meta">
+    <p>品种：未知<br />习性：可疑</p>
+    <span class="stamp">朋友锐评：已生成</span>
+  </div>
+
+  <div class="hook-wrap">
+    <span class="hook-pill">别当熟人面点开。</span>
+  </div>
+
+  <div class="result-img-wrap">
+    <img src="../微信公众号首篇-弹幕羊驼结果图.png" alt="弹幕羊驼·分享卡示例" />
+  </div>
+  <p class="caption">先别笑，下一张可能是你。</p>
+
+  <p class="lead">它不像测试，</p>
+  <p class="lead">像群友提前写好的说明牌。</p>
+
+  <p class="lead-small">可能会写——</p>
+
+  <blockquote class="quote">你不是失踪，<br />你只是进入了省电模式。</blockquote>
+  <blockquote class="quote">你不是鸽，<br />你只是出门启动失败。</blockquote>
+  <blockquote class="quote">表面风平浪静，<br />内心已经开了八个直播间。</blockquote>
+
+  <p class="cta-q">不服？</p>
+  <p class="cta-line">点下方「阅读原文」，<br />把自己挂上去。</p>
+
+  <p class="footer">Meetu · 社交动物测试</p>
+</div>
+
+</body>
+</html>
