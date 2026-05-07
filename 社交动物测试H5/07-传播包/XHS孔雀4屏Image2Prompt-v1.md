@@ -1,10 +1,10 @@
-# XHS 孔雀 4 屏 Image2 Prompt v1
+# XHS 孔雀 4 屏 Contact Sheet Image2 Prompt v1
 
 ## 任务定位
 
 用于重新生成小红书 4 屏图，展示「开屏孔雀」结果。工程版已经证明结构清楚但视觉太模板化，本次 prompt 目标是让 Image2 做出更像内容创作的图：有首图钩子、有滑动欲、有孔雀结果记忆点，但不硬广、不像 PPT。
 
-最终图规格：每张 `1080×1350`，4:5，PNG。
+最终生成规格：为节省 Image2 quota，优先生成 **一张 2×2 contact sheet**，整体 `2160×2700`，4 格；每格 `1080×1350`，后期裁成 4 张小红书 4:5 PNG。
 
 ## 参考图清单
 
@@ -40,12 +40,12 @@
    - 用途：只看 4 屏结构。
    - 明确反例：不要继续做 PPT/说明书/模板卡片。
 
-## A 轨：Image2 直接带中文排版生成 4 图
+## A 轨：Image2 直接带中文排版生成 2×2 contact sheet
 
-> 用于直接生成完整 4 张小红书图片。中文必须逐字正确；如果有错字/伪字/多字/小图不可读，回退 B 轨。
+> 用于一次生成完整 4 屏内容，节省 quota。中文必须逐字正确；如果有错字/伪字/多字/小图不可读，回退 B 轨。
 
 ```text
-Create a coherent 4-image Xiaohongshu carousel for a Chinese college social personality test result, each image 1080×1350, 4:5 vertical PNG.
+Create ONE single 2×2 contact sheet image for a Xiaohongshu carousel. The full canvas must be 2160×2700 PNG, arranged as a clean 2 columns × 2 rows grid. Each slot is exactly 1080×1350, 4:5 vertical, and will be cropped later into four separate Xiaohongshu images.
 
 Use the provided reference images for the “show peacock / 开屏孔雀” result and the zoo placard visual world. Keep the same visual universe across all four slides: warm paper background, rough black hand-drawn outlines, zoo exhibit placards, sticky notes, friend-roast stamps, slightly unhinged editorial animal energy. Make it feel like a native Xiaohongshu content post, not a PPT deck, not a product ad.
 
@@ -57,7 +57,13 @@ Style direction:
 - playful friend-roast, not judgmental
 - more visually striking and scroll-worthy than a clean HTML template
 
-Important: create four separate slides with consistent style but different compositions.
+Important: do NOT output four separate files. Output one single 2×2 sheet. Each slot must be self-contained and crop-safe: no important text or mascot crosses the slot boundary, no gutter text, no crop marks, no page numbers. Use subtle visual separation only if needed, but each crop should work as an independent 1080×1350 XHS image.
+
+Slot order on the 2×2 sheet:
+- Top-left = Slide 1 cover hook
+- Top-right = Slide 2 result reveal
+- Bottom-left = Slide 3 friend roast wall
+- Bottom-right = Slide 4 interaction page
 
 Slide 1 — Cover hook:
 Exact Chinese text, no changes:
@@ -101,15 +107,23 @@ Hard constraints:
 Goal: slide 1 should stop users in 0.5 seconds; slide 2 should clearly show this is the 开屏孔雀 result; slide 3 should make people want to send it to a friend; slide 4 should invite comments without platform-sensitive links.
 ```
 
-## B 轨：无字底图 / 后期手工排版兜底
+## B 轨：无字 2×2 contact sheet / 后期手工排版兜底
 
-> 如果 A 轨中文字不稳，使用 B 轨。B 轨只生成 4 张无字视觉底图，中文全部后期手工排。
+> 如果 A 轨中文字不稳，使用 B 轨。B 轨只生成一张无字 2×2 contact sheet，中文全部后期手工排。
 > 执行顺序：先试 A 轨直接带中文；只要出现错字、伪字、额外文字或缩略图不可读，立刻回退 B 轨无字底图 + 手工排字。
 
 ```text
-Create a coherent 4-image Xiaohongshu carousel visual background set, each image 1080×1350, 4:5 vertical PNG. No text anywhere.
+Create ONE single 2×2 contact sheet image for a Xiaohongshu carousel visual background set. The full canvas must be 2160×2700 PNG, arranged as a clean 2 columns × 2 rows grid. Each slot is exactly 1080×1350, 4:5 vertical, and will be cropped later into four separate images. No text anywhere.
 
-Use the provided reference images for the “show peacock / 开屏孔雀” result and the zoo placard visual world. Generate four no-text visual layouts for manual Chinese typography overlay later.
+Use the provided reference images for the “show peacock / 开屏孔雀” result and the zoo placard visual world. Generate four no-text visual layouts inside one sheet for manual Chinese typography overlay later.
+
+Slot order on the 2×2 sheet:
+- Top-left = Slide 1 cover background
+- Top-right = Slide 2 result reveal background
+- Bottom-left = Slide 3 friend-roast wall background
+- Bottom-right = Slide 4 interaction background
+
+Crop safety: each slot must be fully self-contained, with no important mascot, placard, sticky note, or blank typography area crossing into another slot. No gutters, crop marks, numbers, labels, or separator text.
 
 Unified style:
 - warm off-white paper background
@@ -152,9 +166,16 @@ Hard constraints:
 fake text, garbled Chinese, misspelled Chinese, English letters, numbers, watermark, QR code, link, WeChat, download button, sign-up button, join group, scan code, 16 animal grid, test questions, H5 screenshot, MBTI, SBTI, PPT slide, corporate advertisement, product manual, cute sticker, kawaii pet, plush toy, baby face, shiny eyes, children’s book, glossy 3D, horror, courtroom, police evidence board, public shaming
 ```
 
-## 后期排字建议
+## 后期裁切与排字建议
 
-如果走 B 轨，手工排字建议：
+先将 2×2 contact sheet 按以下坐标裁切成 4 张：
+
+- `01-cover.png`: x=0, y=0, w=1080, h=1350
+- `02-result.png`: x=1080, y=0, w=1080, h=1350
+- `03-roast.png`: x=0, y=1350, w=1080, h=1350
+- `04-cta.png`: x=1080, y=1350, w=1080, h=1350
+
+如果走 B 轨，裁切后再手工排中文。排字建议：
 
 ### 01 封面
 
@@ -202,12 +223,15 @@ fake text, garbled Chinese, misspelled Chinese, English letters, numbers, waterm
 - 参考 `peacock-share-card.png`：只取开屏孔雀内容和语气，不照搬结果卡 UI；
 - 参考 `show_peacock.png`：取孔雀形象方向；
 - 参考公众号 v2：取挂牌/暖纸/强黑线，不照搬横图构图；
+- 参考 `微信公众号首篇-正文长图.png`：只取“强钩子 → 结果证据 → 短吐槽 → CTA”的内容节奏，不照搬长图构图，不做长图切片；
 - 工程版 4 图只做反例：不要 PPT 化、不要模板卡片、不要说明书感。
 
 ## 验收标准
 
-- [ ] 4 张都是 1080×1350；
-- [ ] 4 张风格统一，但构图不重复；
+- [ ] 原始输出是一张 `2160×2700` 的 2×2 contact sheet；
+- [ ] 按坐标裁切后 4 张都是 `1080×1350`；
+- [ ] 4 个 slot 风格统一，但构图不重复；
+- [ ] 每个 slot 可独立裁切，无跨格文字、动物、便签、边界污染；
 - [ ] 第一张 0.5 秒能停住人；
 - [ ] 第二张能看懂“开屏孔雀”结果；
 - [ ] 第三张有朋友吐槽传播感；
