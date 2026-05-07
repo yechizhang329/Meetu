@@ -854,3 +854,114 @@ button {
   text-align: center;
   line-height: 1.5;
 }
+
+/* ============== SOFT CTA CARD ============== */
+/* Lives only in the in-page result flow — not inside ShareCard. */
+
+.soft-cta-card {
+  margin-top: 18px;
+  padding: 18px 16px 16px;
+  border: 2px solid var(--sa-line);
+  border-radius: 24px;
+  background: var(--sa-paper-card);
+  box-shadow: 5px 5px 0 rgba(31, 31, 31, 0.12);
+  position: relative;
+  overflow: hidden;
+}
+
+.soft-cta-card::before {
+  content: '';
+  position: absolute;
+  inset: 10px auto auto 62%;
+  width: 74px;
+  height: 74px;
+  border: 2px solid var(--sa-line);
+  border-radius: 20px;
+  background: var(--sa-green);
+  transform: rotate(4deg);
+  opacity: 0.95;
+  pointer-events: none;
+}
+
+.soft-cta-note {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  padding: 4px 10px;
+  border: 2px solid var(--sa-line);
+  border-radius: 999px;
+  background: var(--sa-yellow);
+  box-shadow: 2px 2px 0 rgba(31, 31, 31, 0.16);
+  font-size: 11px;
+  font-weight: 900;
+  transform: rotate(-3deg);
+}
+
+.soft-cta-copy {
+  position: relative;
+  z-index: 1;
+}
+
+.soft-cta-copy h3 {
+  margin: 12px 0 10px;
+  max-width: 66%;
+  font-size: 28px;
+  line-height: 1.08;
+  font-weight: 950;
+  letter-spacing: -0.8px;
+}
+
+.soft-cta-copy p {
+  margin: 0 0 14px;
+  color: var(--sa-muted);
+  font-size: 13px;
+  line-height: 1.55;
+  font-weight: 700;
+}
+
+.soft-cta-search {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 46px;
+  padding: 0 14px;
+  border: 2px solid var(--sa-line);
+  border-radius: 999px;
+  background: #fff;
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.soft-cta-search-icon {
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--sa-line);
+  border-radius: 999px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.soft-cta-search-icon::after {
+  content: '';
+  position: absolute;
+  width: 9px;
+  height: 2px;
+  right: -7px;
+  bottom: -4px;
+  background: var(--sa-line);
+  transform: rotate(45deg);
+  border-radius: 999px;
+}
+
+.soft-cta-brand {
+  position: relative;
+  z-index: 1;
+  margin-top: 12px;
+  text-align: center;
+  color: var(--sa-muted);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}

@@ -4,6 +4,7 @@ import type { AnimalType } from '../data/types';
 import { AnimalIllustration } from './AnimalIllustration';
 import { RarityBadge } from './RarityBadge';
 import { ShareCard } from './ShareCard';
+import { SoftCtaCard } from './SoftCtaCard';
 import { keywordPillStyle, readableTextOn } from '../utils/color';
 import { exportShareCard, isLikelyWeChat, renderShareCardImage } from '../utils/shareImage';
 
@@ -206,6 +207,8 @@ export function ResultPage({ resultId, onRetake }: Props) {
         )}
         <p className="share-preview-hint">{previewHint}</p>
       </div>
+
+      <SoftCtaCard />
 
       {/* Off-screen clone used for html2canvas export and PNG preview generation */}
       <div className="share-card-viewport" aria-hidden>
