@@ -1,10 +1,16 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-// Deployed as a subfolder of the Meetu GitHub Pages site:
-//   https://yechizhang329.github.io/Meetu/social-animal-test/
-// The base must match that subpath so all asset URLs are relative to it.
+// Two deploy targets:
+// - GitHub Pages (default):  https://yechizhang329.github.io/Meetu/social-animal-test/
+//                            base = '/Meetu/social-animal-test/'
+// - Aliyun OSS / 自有域名 root: base = '/'
+//
+// Switch with `SA_DEPLOY_TARGET=oss npm run build` (or use `npm run build:oss`).
+const target = process.env.SA_DEPLOY_TARGET ?? 'gh-pages';
+const base = target === 'oss' ? '/' : '/Meetu/social-animal-test/';
+
 export default defineConfig({
   plugins: [react()],
-  base: '/Meetu/social-animal-test/',
+  base,
 });

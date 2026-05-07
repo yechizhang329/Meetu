@@ -7,6 +7,7 @@ import { ResultPage } from './components/ResultPage';
 import { calculateResult } from './data/scoring';
 import { allAnimalIds } from './data/results';
 import type { AnimalType, UserAnswer } from './data/types';
+import { readSource } from './utils/source';
 
 type Stage = 'intro' | 'quiz' | 'loading' | 'result';
 
@@ -66,6 +67,10 @@ export default function App() {
   const [answers, setAnswers] = useState<UserAnswer[]>(initial.answers);
   const [resultId, setResultId] = useState<AnimalType | null>(initial.resultId);
 
+  // Source (?source=wechat_mp / ?utm_source=xhs / ?source=friend_share) is captured once
+  // from the URL at mount — changes to intro copy for that traffic, nothing more.
+  const source = useState(() => readSource())[0];
+
   // Keep hash routing reactive (deep-link / QA navigation) without calling setState synchronously
   // at mount — only inside the event handler.
   useEffect(() => {
@@ -119,7 +124,7 @@ export default function App() {
     }
   }, []);
 
-  if (stage === 'intro') return <IntroPage onStart={handleStart} />;
+  if (stage === 'intro') return <IntroPage onStart={handleStart} source={source} />;
   if (stage === 'quiz')
     return <QuizPage onComplete={handleQuizComplete} initialAnswers={answers} />;
   if (stage === 'loading') return <LoadingPage onDone={handleLoadingDone} />;
@@ -127,5 +132,5 @@ export default function App() {
     return <ResultPage resultId={resultId} onRetake={handleRetake} />;
 
   // Safety fallback — should not hit.
-  return <IntroPage onStart={handleStart} />;
+  return <IntroPage onStart={handleStart} source={source} />;
 }

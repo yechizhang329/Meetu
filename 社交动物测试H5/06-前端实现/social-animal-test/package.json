@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "build:oss": "tsc -b && SA_DEPLOY_TARGET=oss vite build --outDir dist-oss",
     "lint": "eslint .",
     "preview": "vite preview",
     "crop:animals": "npx tsx scripts/crop-contact-sheet.ts",

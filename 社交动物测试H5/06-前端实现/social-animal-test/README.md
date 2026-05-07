@@ -14,6 +14,22 @@ Meetu/社交动物测试H5/06-前端实现/social-animal-test/
 
 ---
 
+## 0.1 传播投放链接（按来源选一条）
+
+主域名：**https://a.meetu.asia/index.html**（阿里云 OSS，国内稳定）
+备用域名：**https://yechizhang329.github.io/Meetu/social-animal-test/**（GitHub Pages）
+
+| 投放场景 | 追加参数 | 入口页顶标签变化 |
+|---|---|---|
+| 默认 / 朋友圈 / 直链 | 无 | `测着玩 / 可能有点像` |
+| 微信公众号 | `?source=wechat_mp`（或 `?utm_source=mp`） | `公众号来的 / 先别急着装死` |
+| 小红书 | `?source=xhs`（或 `?utm_source=xiaohongshu`） | `小红书来的 / 先别剧透` |
+| 朋友分享 | `?source=friend_share` | `朋友发来的 / 先别急着认` |
+
+所有 source 追加在 query string。hash deep-link 不受影响（`#result=power_cat` 仍直达结果页）。
+
+---
+
 ## 1. 运行 / 构建
 
 ```bash
