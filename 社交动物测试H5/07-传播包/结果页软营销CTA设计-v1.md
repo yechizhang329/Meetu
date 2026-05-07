@@ -192,3 +192,45 @@ Meetu · 让认识新朋友自然一点
 - 不进入分享卡；
 - 用户可以忽略它，不影响测试体验；
 - 品牌露出是“懂社交场景的人”，不是“卖产品的人”。
+
+## GPT Image 2 Prompt（仅生成无字视觉底图）
+
+> 口径：后续图片类 component 不直接用 AI 成图作为最终生产件。此 prompt 只用于生成**无字背景/抽象视觉素材**，中文、搜索条文字、品牌文案必须由前端或公众号后台手工排版。
+
+```text
+Create a small soft-CTA visual background for a mobile H5 result page, aspect ratio 9:5, PNG.
+
+Context: this card appears near the bottom of a Chinese college social personality test result page. It should feel like a natural sticky-note card inside the test result, not an advertisement banner.
+
+Visual style:
+- warm off-white desktop paper background
+- rough black hand-drawn outlines (#2B2B2B)
+- sticky-note collage, small taped paper scraps, doodle arrows, paper grain
+- one abstract Meetu-style “M” mark or anonymous social-animal doodle as a small decorative element on the right side
+- slightly tilted, handmade, casual, desktop-sticky-note-animal-test feeling
+- adult college meme tone: playful, low-pressure, not cute/kawaii/pet/sticker
+
+Composition:
+- leave a large clean text area on the left/top for a manually typeset headline
+- leave a clear horizontal pill-shaped blank area in the middle/lower area for a manually typeset search bar
+- leave a small calm footer area at the bottom for manually typeset brand text
+- decorative doodles must stay at the edges and not interfere with text placement
+
+Hard constraints:
+- NO Chinese text, NO English text, NO numbers, NO fake letters, NO labels, NO watermark
+- NO QR code
+- NO app download / register / join / sign-up visual cues
+- NO ad banner feeling, NO glossy marketing button, NO e-commerce style
+- DO NOT include a screenshot of the H5, DO NOT include the result animal card, DO NOT include the share card
+- Keep the image as a background/layout reference only; all readable copy will be added manually in frontend.
+
+Color palette:
+base #FFF8EA, ink #2B2B2B, sticky note yellow #FFE15A, accent green #C8FF5A, soft blue #9DD7FF, small orange accent #FF7A3D.
+```
+
+### Prompt 使用说明
+
+- 如果生成图里出现任何文字、伪文字、二维码、按钮文案，直接废弃；
+- 生成图只能作为无字底图参考，不能替代前端组件；
+- 最终实现仍按本文档的 TSX/CSS spec 手工排版；
+- 当前 `结果页软营销CTA卡片预览-v1.png` 只作为 layout reference，不作为生产图片组件。
