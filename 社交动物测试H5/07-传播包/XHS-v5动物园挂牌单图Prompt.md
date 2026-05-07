@@ -30,6 +30,72 @@ AI 只生成无字底图。最终请手工排入以下文字：
 2. `品种：未知`、`习性：可疑`：像动物园展牌档案行；
 3. `朋友锐评：已生成`：像一个被盖章/便签覆盖的小状态。
 
+
+## A/B 双轨 Prompt 口径
+
+### A 轨：GPT Image 2 直接带中文排版版
+
+优先可以试 A 轨，因为本图中文字很短，GPT Image 2 有机会直接处理。A 轨目标是直接生成完整 XHS 首图。
+
+```text
+Create a vertical Xiaohongshu cover poster, 1080×1350, 4:5 aspect ratio, PNG.
+
+Concept: a Chinese college social personality test cover built around a “zoo exhibit placard / today on display” metaphor. It should feel like the user is about to be humorously listed as a social animal specimen, in a playful friend-roast way, not judgmental.
+
+The poster must accurately display exactly these four Chinese text blocks, with no changes, no extra words, no fake characters:
+1. Main headline, largest: "今日动物园挂牌：我"
+2. Small field line: "品种：未知"
+3. Small field line: "习性：可疑"
+4. Status stamp / sticky note: "朋友锐评：已生成"
+
+Text layout:
+- Put the main headline on the large zoo placard as the first visual priority.
+- Put "品种：未知" and "习性：可疑" as two smaller animal-file field lines on the placard.
+- Put "朋友锐评：已生成" on a small sticky note or stamp-like label, but keep it readable.
+- Typography should look like handmade poster typography / marker-on-paper / zoo placard labels, not a formal ad poster.
+- Chinese characters must be crisp, legible, correctly shaped, and readable in a mobile feed thumbnail.
+
+Visual direction:
+- large warm-paper zoo exhibit placard / hanging tag as the central object
+- rough black hand-drawn outlines (#2B2B2B), taped corners, pin holes, uneven marker lines
+- abstract anti-cute social animal shadow on one side, deadpan eyes, awkward limbs, slightly unhinged posture
+- small sticky notes, blank stamp shapes, doodle arrows, circle marks around the placard
+- desktop sticky-note animal-test visual language, adult college meme tone
+
+Color palette:
+- paper base #FFF8EA
+- card paper #FFFDF5
+- ink line #2B2B2B
+- orange accent #FF7A3D
+- yellow sticky note #FFE15A
+- green tag #C8FF5A
+- soft pink #FFB7C5
+- soft blue #9DD7FF
+
+Hard constraints:
+- Do not add any text beyond the four specified Chinese text blocks.
+- No fake Chinese, no extra labels, no English, no numbers except none are needed.
+- No QR code, no app download/register/join-group/sign-up visuals.
+- No 16 animals, no result list, no test questions, no H5 screenshot.
+- No MBTI/SBTI wording.
+- No cute pet, no kawaii, no plush toy, no baby face, no shiny eyes, no children’s book style.
+- No horror, no shame, no public execution feeling.
+- Do not make it look like an advertisement banner or product promo.
+
+Goal: in 0.5 seconds, a Xiaohongshu user should read "今日动物园挂牌：我" and understand this is a funny social animal test that might tag them.
+```
+
+### A 轨验收
+
+- 四段中文必须逐字正确：`今日动物园挂牌：我` / `品种：未知` / `习性：可疑` / `朋友锐评：已生成`；
+- 不允许多字、错字、伪字、英文、假标签；
+- 主标题在小红书缩略图里必须可读；
+- 只要出现错字/伪字/排版弱/小图不可读，立即回退 B 轨。
+
+### B 轨：无字底图 + 手工排版兜底
+
+B 轨保留原来的无字底图方案，适用于 A 轨文字失败时。B 轨生成后必须由设计稿/前端/后期手工排入中文。
+
 ## GPT Image 2 Prompt（无字底图）
 
 ```text
