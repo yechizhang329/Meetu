@@ -802,6 +802,21 @@ button {
   -webkit-touch-callout: default;
 }
 
+.share-preview-primary {
+  background: var(--sa-yellow);
+  box-shadow: 4px 4px 0 var(--sa-line);
+  padding: 18px 14px;
+}
+
+.share-preview-title {
+  margin: 0 0 12px;
+  font-size: 17px;
+  font-weight: 900;
+  letter-spacing: -0.2px;
+  text-align: center;
+  color: var(--sa-ink);
+}
+
 .share-preview-img {
   display: block;
   width: min(100%, 320px);
