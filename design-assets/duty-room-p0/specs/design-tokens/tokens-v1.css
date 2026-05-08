@@ -1,0 +1,217 @@
+/* 心情值班室 P0 — Design Tokens v1
+ * 来源：design-language-candidates-v0.2 + Fiona PM 决策 5 项 (会议室 msg 00883cf7)
+ * 用途：H5（duty-room）+ 分享卡 + 后续运营物料 共用 token
+ * 维护：Phoebe2（视觉）+ Dave（落地）
+ *
+ * 硬规则（不可在 token 层突破）：
+ * - 禁渐变 / 禁玻璃拟态 / 禁深投影
+ * - 禁粉甜 / 禁韩系 ins / 禁 SaaS 表单感
+ * - 禁高饱和大色块；值班黄 UI 1-3% / 分享图 5-8%
+ * - 任何卡片不带超过 1px shadow；圆角 12px 为基线
+ */
+
+:root {
+  /* ============= COLOR ============= */
+  /* 主色系 */
+  --color-paper:        #F2EAD8;  /* 暖纸米 — 全局背景 60-70% */
+  --color-paper-soft:   #FAF4E6;  /* 奶油米 — 备用更轻底 */
+  --color-ink:          #1C1A17;  /* 墨线黑 — 全部线条 + 主文字 */
+  --color-ink-soft:     #3A372F;  /* 墨灰 — 次级文字 */
+  --color-mute:         #7A8B7B;  /* 灰绿辅 — 禁用/次说明 */
+
+  /* 强调色 */
+  --color-accent:       #F2C744;  /* 值班黄 — UI 1-3% / 分享图 5-8% */
+  --color-accent-warm:  #D7563B;  /* 橙红 — 警示/印章/极少用 */
+
+  /* 卡片描边/分隔 */
+  --color-line:         #D9D2C2;  /* 燕麦灰 — 卡片描边、分隔线 */
+  --color-line-soft:    #E8E2D2;  /* 极浅 — 1px 微分隔 */
+
+  /* 角色岗位色（仅角色范围内，不入页面级 UI）*/
+  --role-stubborn-goose-main:  #3F5C7A;  /* 警卫蓝 */
+  --role-stubborn-goose-sub:   #D7563B;  /* 拒签红 */
+  --role-low-battery-cat-main: #E68A3A;  /* 低电橙 */
+  --role-low-battery-cat-sub:  #7AB5B5;  /* 充电青 */
+  --role-ddl-hamster-main:     #C43E3E;  /* 倒计红 */
+  --role-ddl-hamster-sub:      #F2EAD8;  /* 日历米 */
+  --role-backstage-alpaca-main: #5C6A75; /* 屏幕灰 */
+  --role-backstage-alpaca-sub:  #7A9F6E; /* 待机绿 */
+
+  /* ============= TYPOGRAPHY ============= */
+  --font-sans:    "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "Noto Sans CJK SC", system-ui, sans-serif;
+  --font-handwrite: "Reach 楷", "字魂手写体", "Ma Shan Zheng", cursive;  /* SCOPE: 仅小注解 / annotation；禁主标题 / 按钮 / 正文使用 */
+  --font-mono:    "SF Mono", "JetBrains Mono", "Source Code Pro", monospace;
+
+  /* UI 字号 */
+  --fs-title:     28px;    /* 主标题 H1 */
+  --fs-subtitle:  20px;    /* H2 */
+  --fs-body:      16px;    /* 正文 */
+  --fs-quote:     22px;    /* 角色金句 */
+  --fs-caption:   14px;    /* 小注解 */
+  --fs-mini:      12px;    /* 极小水印 */
+
+  /* 字重 */
+  --fw-regular:   400;
+  --fw-medium:    500;
+  --fw-semibold:  600;
+
+  /* 行高 */
+  --lh-tight:     1.3;
+  --lh-base:      1.6;
+  --lh-relax:     1.75;
+
+  /* ============= SPACING ============= */
+  /* 8px 栅格 */
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  24px;
+  --space-6:  32px;
+  --space-7:  48px;
+  --space-8:  64px;
+  --space-9:  80px;
+  --space-10: 96px;
+
+  /* 卡片内边距 */
+  --pad-card:   var(--space-5);   /* 24px */
+  --pad-card-l: var(--space-6);   /* 32px */
+
+  /* ============= RADIUS ============= */
+  --radius-xs:  4px;
+  --radius-sm:  8px;
+  --radius-md:  12px;   /* 卡片基线 */
+  --radius-lg:  16px;   /* 仅角色卡可用 */
+  --radius-pill: 999px;
+
+  /* ============= SHADOW ============= */
+  /* P0 禁用任何深投影；只允许"几乎看不见"的提示性投影 */
+  --shadow-none: none;
+  --shadow-hint: 0 1px 0 rgba(28, 26, 23, 0.04);
+  /* 禁: --shadow-md / --shadow-lg / 任何 blur >= 4px */
+
+  /* ============= BORDER ============= */
+  --border-thin:  1px solid var(--color-line);
+  --border-mute:  1px solid var(--color-line-soft);
+  --border-bold:  1.5px solid var(--color-ink);
+
+  /* ============= MOTION ============= */
+  --ease-out:     cubic-bezier(0.22, 1, 0.36, 1);
+  --dur-fast:     120ms;
+  --dur-base:     180ms;
+  /* 禁: 任何弹性动画 / >300ms / hero 转场 */
+
+  /* ============= LAYER ============= */
+  --z-bg:    0;
+  --z-card:  10;
+  --z-popup: 100;
+  --z-toast: 1000;
+
+  /* ============= SHARE-CARD（4:5 1080×1350 专用变量）============= */
+  /* 仅用于 html2canvas 场景；UI 端不引用 */
+  --share-w:           1080px;
+  --share-h:           1350px;
+  --share-banner-h:    6px;     /* 顶部黄条 */
+  --share-watermark-h: 70px;    /* 底部水印 */
+  --share-friend-y:    1130px;  /* 朋友鉴定区文字位 y */
+  --share-friend-x:    80px;
+  --share-friend-w:    920px;
+  --share-friend-h:    130px;
+  --share-friend-fs:   44px;
+  --share-yellow-cov:  0.06;    /* 6% 黄覆盖率 上限（不是目标）；分享卡可在 5-8% 区间，但不能为了凑 6% 硬刷黄。H5 内仍 1-3% */
+}
+
+/* ============= 全局 base style（作为 Dave 落地参考）============= */
+html, body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  line-height: var(--lh-base);
+  font-weight: var(--fw-regular);
+  /* 极轻纸纹噪点；如不愿引入图片可省略 */
+  /* background-image: url("data:image/svg+xml;utf8,<svg .../>"); */
+  /* background-blend-mode: multiply; */
+}
+
+/* 禁用全局 link 默认蓝 */
+a { color: var(--color-ink); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ============= 主 CTA 按钮 ============= */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  padding: 0 var(--space-5);
+  background: var(--color-ink);
+  color: var(--color-paper);
+  border: 0;
+  border-radius: var(--radius-md);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-semibold);
+  transition: opacity var(--dur-fast) var(--ease-out);
+  cursor: pointer;
+}
+.btn-primary:hover { opacity: 0.85; }
+.btn-primary:active { opacity: 0.75; }
+
+/* 次 CTA：描边 */
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  padding: 0 var(--space-5);
+  background: transparent;
+  color: var(--color-ink);
+  border: var(--border-bold);
+  border-radius: var(--radius-md);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-medium);
+  transition: background var(--dur-fast) var(--ease-out);
+  cursor: pointer;
+}
+.btn-secondary:hover { background: rgba(28, 26, 23, 0.04); }
+
+/* ============= 选项条（场景/语气选择）============= */
+.option-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--pad-card);
+  background: var(--color-paper);
+  border: var(--border-thin);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: border-color var(--dur-fast) var(--ease-out);
+  position: relative;
+}
+.option-row:hover { border-color: var(--color-mute); }
+.option-row[aria-selected="true"] {
+  border: var(--border-bold);
+  /* 选中态：边框变实心黑；禁 checkmark / checkbox / 黄底高亮 */
+}
+.option-row[aria-selected="true"]::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 6px;
+  height: 6px;
+  border-radius: var(--radius-pill);
+  background: var(--color-ink);
+  /* 反馈点：右上 6px 黑色小圆点（默认）；
+     若按角色绑定：运行时覆盖 background 为 var(--role-{slug}-main) */
+}
+
+/* ============= 结果卡 ============= */
+.result-card {
+  background: var(--color-paper);
+  border: var(--border-mute);
+  border-radius: var(--radius-md);
+  padding: var(--pad-card-l);
+  /* 禁卡片投影 */
+  box-shadow: var(--shadow-none);
+}

@@ -1,0 +1,94 @@
+{
+  "$schema": "https://design-tokens.org/draft-1.json",
+  "_meta": {
+    "name": "duty-room-p0 design tokens v1",
+    "version": "1.0.0",
+    "source": "design-language-candidates-v0.2 + Fiona PM 决策 5 项 (会议室 msg 00883cf7)",
+    "owner": "Phoebe2",
+    "status": "draft - awaiting Dave integration"
+  },
+  "color": {
+    "paper":            { "value": "#F2EAD8", "comment": "暖纸米 — 全局 60-70%" },
+    "paperSoft":        { "value": "#FAF4E6", "comment": "奶油米 — 备用更轻底" },
+    "ink":              { "value": "#1C1A17", "comment": "墨线黑 — 全部线 + 主文字" },
+    "inkSoft":          { "value": "#3A372F", "comment": "墨灰 — 次级文字" },
+    "mute":             { "value": "#7A8B7B", "comment": "灰绿辅 — 禁用/次说明" },
+    "accent":           { "value": "#F2C744", "comment": "值班黄 — UI 1-3% / 分享图 5-8%" },
+    "accentWarm":       { "value": "#D7563B", "comment": "橙红 — 警示/印章 极少用" },
+    "line":             { "value": "#D9D2C2", "comment": "燕麦灰 — 卡片描边" },
+    "lineSoft":         { "value": "#E8E2D2", "comment": "极浅 — 1px 微分隔" },
+    "role": {
+      "stubbornGoose":   { "main": "#3F5C7A", "sub": "#D7563B" },
+      "lowBatteryCat":   { "main": "#E68A3A", "sub": "#7AB5B5" },
+      "ddlHamster":      { "main": "#C43E3E", "sub": "#F2EAD8" },
+      "backstageAlpaca": { "main": "#5C6A75", "sub": "#7A9F6E" }
+    }
+  },
+  "typography": {
+    "fontFamily": {
+      "sans":       "PingFang SC, Hiragino Sans GB, Microsoft YaHei, Source Han Sans CN, Noto Sans CJK SC, system-ui, sans-serif",
+      "handwrite":  "Reach 楷, 字魂手写体, Ma Shan Zheng, cursive",
+      "mono":       "SF Mono, JetBrains Mono, Source Code Pro, monospace"
+    },
+    "fontSize": {
+      "title":    "28px",
+      "subtitle": "20px",
+      "body":     "16px",
+      "quote":    "22px",
+      "caption":  "14px",
+      "mini":     "12px"
+    },
+    "fontWeight": {
+      "regular":  400,
+      "medium":   500,
+      "semibold": 600
+    },
+    "lineHeight": {
+      "tight": 1.3,
+      "base":  1.6,
+      "relax": 1.75
+    }
+  },
+  "space": {
+    "1": "4px", "2": "8px", "3": "12px", "4": "16px",
+    "5": "24px", "6": "32px", "7": "48px", "8": "64px",
+    "9": "80px", "10": "96px"
+  },
+  "radius": {
+    "xs":   "4px",
+    "sm":   "8px",
+    "md":   "12px",
+    "lg":   "16px",
+    "pill": "999px"
+  },
+  "shadow": {
+    "none": "none",
+    "hint": "0 1px 0 rgba(28, 26, 23, 0.04)"
+  },
+  "border": {
+    "thin": "1px solid #D9D2C2",
+    "mute": "1px solid #E8E2D2",
+    "bold": "1.5px solid #1C1A17"
+  },
+  "motion": {
+    "easeOut":  "cubic-bezier(0.22, 1, 0.36, 1)",
+    "durFast":  "120ms",
+    "durBase":  "180ms",
+    "_forbidden": ["bounce", ">300ms transitions", "hero transitions"]
+  },
+  "shareCard": {
+    "_comment": "4:5 1080×1350 专用，仅 html2canvas 渲染层引用",
+    "width":         "1080px",
+    "height":        "1350px",
+    "bannerHeight":  "6px",
+    "watermarkHeight": "70px",
+    "friendOverlay": {
+      "x":      80,
+      "y":      1130,
+      "width":  920,
+      "height": 130,
+      "fontSize": "44px"
+    },
+    "yellowCoverageMax": 0.06
+  }
+}
