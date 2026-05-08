@@ -1,0 +1,36 @@
+{
+  "name": "duty-room",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "build:oss": "tsc -b && SA_DEPLOY_TARGET=oss vite build --outDir dist-oss",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "verify:share": "npx tsx scripts/verify-share-card-dims.ts",
+    "verify:scoring": "npx tsx scripts/verify-recommendation.ts",
+    "deploy": "npm run build && rm -rf ../../../docs/duty-room && cp -r dist ../../../docs/duty-room"
+  },
+  "dependencies": {
+    "html2canvas": "^1.4.1",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^24.12.2",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.1",
+    "eslint": "^10.2.1",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.2",
+    "globals": "^17.5.0",
+    "puppeteer": "^24.43.0",
+    "typescript": "~6.0.2",
+    "typescript-eslint": "^8.58.2",
+    "vite": "^8.0.10"
+  }
+}
