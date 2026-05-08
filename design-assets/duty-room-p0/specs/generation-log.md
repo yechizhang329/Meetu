@@ -30,3 +30,18 @@
 | 2026-05-09 01:06:11 | share-low-battery-cat-no-yingye-v3.4 | v3.4 | gpt-image-2 (1024x1280) | https://oss.filenest.top/uploads/738e2051-5a4e-47ae-9651-bc22738f43e7.png | 41s |
 | 2026-05-09 01:06:59 | share-ddl-hamster-final-ddl-v3.4 | v3.4 | gpt-image-2 (1024x1280) | https://oss.filenest.top/uploads/3dfa3789-66f3-4166-bce3-ab7e0d6d30b9.png | 42s |
 | 2026-05-09 01:08:03 | share-backstage-alpaca-after-socializing-v3.4 | v3.4 | gpt-image-2 (1024x1280) | https://oss.filenest.top/uploads/46ca9e6e-2532-4759-8f73-b28d89b31186.png | 62s |
+| 2026-05-09 03:50:08 | mouthpiece-stubborn-goose | task30 | gpt-image-2 (1024x1280) | https://oss.filenest.top/uploads/8d1bbfda-33e9-4295-8c35-e28a88dcf8dd.png | 42s |
+| 2026-05-09 03:50:50 | mouthpiece-low-battery-cat | task30 | gpt-image-2 (1024x1280) | https://oss.filenest.top/uploads/62df690b-634a-41e6-b762-a50b9ca0b672.png | 40s |
+| 2026-05-09 03:51:20 | mouthpiece-ddl-hamster | task30 | gpt-image-2 (1024x1280) | https://oss.filenest.top/uploads/d6d3a02d-bd84-4272-afd3-08cf4887d483.png | 28s |
+| 2026-05-09 03:51:53 | mouthpiece-backstage-alpaca | task30 | gpt-image-2 (1024x1280) | https://oss.filenest.top/uploads/282cf32f-f487-471d-8a1c-733b8f091698.png | 31s |
+
+## task #30 嘴替试金石 PM 评分（msg `1e72acb7`）
+
+| 角色 | 评分 | PM 评语 |
+|---|---|---|
+| 嘴硬鹅 | A- | 通过；final 时身体更心虚，帽子别加重 |
+| 低电量猫 | A | 本批最稳正样本 |
+| DDL 仓鼠 | A- | 通过；final 时加强仓鼠辨识，避免泛小动物 |
+| 后台羊驼 | B+ | 通过方向；final 时乱涂减 25-35%，羊驼表情更"礼貌撑住" |
+
+口径：本批入库 `mouthpiece-teststone-v0.1/`，作 reference 不是 final。task #30 Done。
