@@ -63,7 +63,7 @@ export function DutyResultPage({ scene, tone, initialCards, onRetake }: Props) {
     return (
       <section className="app-shell">
         <p>没有可显示的卡片。</p>
-        <button type="button" className="dr-btn" onClick={onRetake}>
+        <button type="button" className="btn-primary" onClick={onRetake}>
           重新来一次
         </button>
       </section>
@@ -119,16 +119,21 @@ export function DutyResultPage({ scene, tone, initialCards, onRetake }: Props) {
 
   return (
     <section className="app-shell">
-      <div className="result-topline">
-        <span className="dr-sticky">心情值班室</span>
-        <span className="dr-sticky orange">{role.emotionTag}</span>
-      </div>
-
-      <h1 className="result-name">
-        今天替你值班的：<em>「{role.name}」</em>
-      </h1>
+      <span className="result-eyebrow">今天替你值班</span>
+      <h1 className="result-name">「{role.name}」</h1>
       <p className="result-station">岗位 · {role.station}</p>
 
+      <div className="result-hero">
+        <div className="result-hero-img">
+          <img src={role.assets.main} alt={role.name} draggable={false} />
+        </div>
+        <div className="result-hero-quote">
+          <p className="quote">{active.styledText}</p>
+          <span className="role-tag">{role.emotionTag}</span>
+        </div>
+      </div>
+
+      <h3 className="dr-section-title">这句替我说</h3>
       <div className="cards-stack">
         {cards.map((c, i) => {
           const r = ROLES[c.roleId];
@@ -136,11 +141,10 @@ export function DutyResultPage({ scene, tone, initialCards, onRetake }: Props) {
           return (
             <article
               key={`${c.baseText}-${i}`}
-              className="candidate-card"
-              style={{ borderColor: isActive ? r.accentColor : undefined }}
+              className={`candidate-card ${isActive ? 'is-active' : ''}`}
               onClick={() => setActiveIdx(i)}
             >
-              <span className="role-badge">{r.name}</span>
+              <div className="role-name">{r.name}</div>
               <p className="text">{c.styledText}</p>
               <div className="tags">
                 {c.tags.map((t) => (
@@ -148,16 +152,20 @@ export function DutyResultPage({ scene, tone, initialCards, onRetake }: Props) {
                 ))}
               </div>
               <div className="actions">
-                <button type="button" className="action" onClick={() => { setActiveIdx(i); reroll(); }}>
+                <button
+                  type="button"
+                  className="action"
+                  onClick={(e) => { e.stopPropagation(); setActiveIdx(i); reroll(); }}
+                >
                   换一句
                 </button>
                 <button
                   type="button"
-                  className="action primary"
-                  onClick={() => setActiveIdx(i)}
+                  className="action"
+                  onClick={(e) => { e.stopPropagation(); setActiveIdx(i); }}
                   disabled={isActive}
                 >
-                  {isActive ? '当前选中' : '选这一句'}
+                  {isActive ? '当前' : '选这句'}
                 </button>
               </div>
             </article>
@@ -166,29 +174,29 @@ export function DutyResultPage({ scene, tone, initialCards, onRetake }: Props) {
       </div>
 
       <h3 className="dr-section-title">自评一句</h3>
-      <div className="self-comment-box">
+      <div className={`self-comment-box ${selfLine ? 'has-content' : ''}`}>
         {selfLine ?? '点下方按钮，给评论区补一条起手白。'}
       </div>
-      <button type="button" className="dr-btn secondary" onClick={selfComment}>
-        生成自评一句 ✦
+      <button type="button" className="btn-secondary" onClick={selfComment}>
+        生成自评一句
       </button>
 
       <h3 className="dr-section-title">复制给朋友的配文</h3>
-      <div className="friend-caption-box">
-        {friendCaption ?? '点下方按钮生成一条带问题的配文，方便朋友接话。'}
+      <div className={`friend-caption-box ${friendCaption ? 'has-content' : ''}`}>
+        {friendCaption ?? '点下方按钮，生成一条带问句的配文，方便朋友接话。'}
       </div>
-      <button type="button" className="dr-btn secondary" onClick={copyCaption}>
-        复制配文 ✦
+      <button type="button" className="btn-secondary" onClick={copyCaption}>
+        复制配文
       </button>
 
       <div className="dr-actions">
-        <button type="button" className="dr-btn" onClick={onSave} disabled={saving}>
-          {saving ? '生成中…' : inWeChat ? '看下方分享图 ✦' : '下载分享图 ✦'}
+        <button type="button" className="btn-primary" onClick={onSave} disabled={saving}>
+          {saving ? '生成中…' : inWeChat ? '看下方分享图' : '下载分享图'}
         </button>
-        <button type="button" className="dr-btn secondary" onClick={onRetake}>
+        <button type="button" className="btn-secondary" onClick={onRetake}>
           换一次心情
         </button>
-        {hint ? <p className="intro-disclaimer">{hint}</p> : null}
+        {hint ? <p className="hint">{hint}</p> : null}
       </div>
 
       <div className="share-preview">
@@ -217,7 +225,7 @@ export function DutyResultPage({ scene, tone, initialCards, onRetake }: Props) {
         </div>
       </div>
 
-      <p className="result-footer">Meetu · 心情值班室 · 今天派谁出来？</p>
+      <p className="result-footer">Meetu · 心情值班室</p>
     </section>
   );
 }

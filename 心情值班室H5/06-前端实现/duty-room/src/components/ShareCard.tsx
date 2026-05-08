@@ -6,52 +6,39 @@ interface Props {
 }
 
 /**
- * ShareCard — 4:5 (360×450 logical → 1080×1350 export at 3x).
- * Positioning follows Phoebe2's `share-card-spec-v1.md`:
- *   - Top brand band: y=0..60 (logical 0..20)
- *   - Main visual:    y=60..1100 (logical 20..366)
- *   - Friend verdict: y=1100..1280 (logical 366..426) — front overlay, blank line for 朋友鉴定
- *   - Footer:         y=1280..1350 (logical 426..450)
+ * ShareCard — design-language-v1 §6 分享图 4:5 落点规则
+ *   logical 360×450 → export 1080×1350 @3x
+ *
+ * 顶部 6px 黄条（1080 × 6）→ 360 框中 = 2px 黄条
+ * 主视觉占中段 40-50%（角色立绘 contain；不烧文字到底图）
+ * 朋友鉴定区前端图层：1080×1350 坐标 {x:80, y:1130, w:920, h:130}
+ *   → 360×450 换算 {x:27, y≈377, w≈306, h≈43}
+ * 底部水印 70/1350 → 23px；先不烧域名
  */
 export function ShareCard({ card }: Props) {
   const role = ROLES[card.roleId];
 
   return (
     <div className="share-card" data-role={card.roleId}>
+      <div className="share-banner" aria-hidden />
       <div className="share-topline">
         <span>心情值班室</span>
-        <span>仅供娱乐</span>
+        <span>{role.emotionTag}</span>
       </div>
-
-      <h2 className="share-name">
-        今日值班：<em>「{role.name}」</em>
-      </h2>
 
       <div className="share-hero">
-        <div
-          className="share-illus"
-          style={{ background: role.themeColor }}
-        >
-          <img src={role.assets.main} alt={role.name} draggable={false} />
-        </div>
-        <p className="share-text">{card.styledText}</p>
+        <img src={role.assets.main} alt={role.name} draggable={false} />
       </div>
 
-      <div className="share-tags">
-        {card.tags.map((t) => (
-          <span key={t}>{t}</span>
-        ))}
+      <p className="share-quote">
+        「{card.styledText}」
+      </p>
+
+      <div className="share-friend-slot">
+        <span className="blank" aria-hidden />
       </div>
 
-      {/* 朋友鉴定区 · 前端图层留白触发器 (PRD §9.2) */}
-      <div className="friend-verdict-slot">
-        <span className="label">朋友鉴定区</span>
-        <span>
-          今日值班评价：<span className="blank" />
-        </span>
-      </div>
-
-      <div className="share-footer">Meetu · 心情值班室 · 今天派谁出来？</div>
+      <div className="share-watermark">Meetu · 心情值班室</div>
     </div>
   );
 }

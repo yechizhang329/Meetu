@@ -41,8 +41,8 @@ async function navAndDeepRender(
   await page.evaluate(() => localStorage.clear());
   await page.reload({ waitUntil: 'networkidle0' });
 
-  await page.waitForSelector('button.dr-btn');
-  await page.click('button.dr-btn');
+  await page.waitForSelector('button.btn-primary');
+  await page.click('button.btn-primary');
 
   await page.waitForSelector('.option-card');
   let texts = await page.$$eval('.option-card', (els) =>
