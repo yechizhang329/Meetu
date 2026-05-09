@@ -37,7 +37,16 @@ export function ResultPage({ artBaseUrl, scene, onBackToSelect, onBackToHome }: 
   const [seed, setSeed] = useState(1);
   const [exportState, setExportState] = useState<'idle' | 'busy' | 'blocked' | 'ok'>('idle');
   const [errMsg, setErrMsg] = useState('');
+  const [longPressImg, setLongPressImg] = useState<string | null>(null);
   const canvasRef = useRef<MouthpieceCanvasHandle | null>(null);
+
+  // UA hint for iOS / WeChat webview: `<a download>` is unreliable there, so
+  // we show the PNG as an <img> with a "长按保存到相册" tip instead.
+  const needsLongPressFallback = useMemo(() => {
+    if (typeof navigator === 'undefined') return false;
+    const ua = navigator.userAgent;
+    return /MicroMessenger|iPhone|iPad|iPod/i.test(ua);
+  }, []);
 
   if (pool.length === 0) {
     return (
@@ -73,6 +82,17 @@ export function ResultPage({ artBaseUrl, scene, onBackToSelect, onBackToHome }: 
     }
     try {
       const blob = await canvasRef.current!.toBlob();
+      // iOS Safari + WeChat 内置浏览器：<a download> 不触发原生下载。
+      // fallback：把 PNG 以 <img> 展示，提示用户长按保存到相册。
+      if (needsLongPressFallback) {
+        const reader = new FileReader();
+        reader.onload = () => {
+          setLongPressImg(reader.result as string);
+          setExportState('ok');
+        };
+        reader.readAsDataURL(blob);
+        return;
+      }
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
@@ -131,6 +151,23 @@ export function ResultPage({ artBaseUrl, scene, onBackToSelect, onBackToHome }: 
           回值班室首页
         </button>
       </div>
+
+      {longPressImg ? (
+        <div
+          className="longpress-overlay"
+          onClick={() => setLongPressImg(null)}
+          role="button"
+          tabIndex={-1}
+        >
+          <div className="longpress-sheet" onClick={(e) => e.stopPropagation()}>
+            <div className="longpress-tip">长按下面图片 → 保存到相册</div>
+            <img src={longPressImg} alt="保存嘴替图" />
+            <button type="button" className="longpress-close" onClick={() => setLongPressImg(null)}>
+              关闭
+            </button>
+          </div>
+        </div>
+      ) : null}
     </div>
   );
 }
