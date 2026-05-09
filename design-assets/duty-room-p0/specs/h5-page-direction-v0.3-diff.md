@@ -188,3 +188,33 @@ const RESULT_ACTIONS = {
 如果通过 → Fiona 转接给 Dave 进 H5 集成实作。
 如果某点仍不对 → 单点修，不改方向。
 任何超时 / blocker 立即在 thread 公开。
+
+---
+
+## v0.3 PM gate 通过后的 2 条工程实现硬约束（Fiona msg `6301352e`）
+
+### 硬约束 1：结果页输出预览必须以 Dave Canvas 最终 PNG 为准
+
+v0.3 mockup 的结果页大便签是**布局参考**（角色嵌入便签 50% 宽 / 文字位置 / 安全区），**不是** PNG 的视觉源。
+
+工程实现时：
+- 大便签内的 **角色 + 嘴替句视觉** 必须直接渲染 Dave Canvas 输出的 1080×1350 PNG（按比例缩放到便签内）
+- 不要前端用 React/Canvas 复刻一个"和最终 PNG 不一致的预览"
+- 如果 Canvas PNG 已包含完整角色 + 文字 + 背景融合，直接 `<img src={canvasPNG} />` 渲染到大便签内即可
+- 大便签的纸色 / 胶带 / 桌面物件等 H5 装饰 **保持** 在 PNG 之外的页面层（不进入 PNG）
+
+口径核心：**输出图 PNG = 最终分享物**，**H5 页面 = 用户操作和预览容器**。两层不同源不同权重，但预览必须是真 PNG，不能是前端模拟图。
+
+### 硬约束 2："换一只" 弱入口写法
+
+v0.3 mockup 中显示的 "换一只 □" 方框是 PIL 渲染时 macOS 系统字体 STHeiti Light 对 `›`(U+203A) emoji fallback 失败导致，**不是设计意图**。
+
+工程实现：
+- 弱入口标准写法：`换一只 ›`（纯字符 SINGLE RIGHT-POINTING ANGLE QUOTATION MARK）
+- 字体使用：Hiragino Sans GB / PingFang SC / 系统通用 sans，不会出现 fallback
+- 如果某些环境仍显示方框，**降级为纯文本** `换一只`（不要写 SVG 箭头 / icon font）
+- 字号 14px，颜色 `#826E50`（INK_LIGHT）
+- 居中显示，y = 600（在 L1 主按钮下 28px）
+
+不要自己加 emoji 图标 / 不要用 →（会破坏视觉克制感）。
+
