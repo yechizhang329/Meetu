@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>心情值班室 · 今日代班凭条 · {{CHARACTER_NAME}} {{SCENE_TITLE}}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&family=Noto+Serif+SC:wght@500;700;900&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&family=Long+Cang&family=Liu+Jian+Mao+Cao&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper-base: #F1ECDF;
+    --paper-warm: #EBE4D3;
+    --stamp-red: #B8463A;
+    --stamp-red-deep: #9A372D;
+    --sign-blue: #2C4A6E;
+    --ink-main: #2A2823;
+    --ink-mute: #7A6F5E;
+    --ink-ghost: rgba(42, 40, 35, 0.35);
+    --character-accent: {{ACCENT_COLOR}};
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body {
+    width: 1080px;
+    height: 1350px;
+    overflow: hidden;
+    background: #D6CFBC;
+  }
+
+  .receipt {
+    position: relative;
+    width: 1080px;
+    height: 1350px;
+    background:
+      radial-gradient(circle at 20% 30%, rgba(184, 74, 60, 0.02) 0, transparent 50%),
+      radial-gradient(circle at 80% 70%, rgba(46, 74, 58, 0.02) 0, transparent 50%),
+      linear-gradient(135deg, var(--paper-base) 0%, var(--paper-warm) 100%);
+    padding: 70px 80px 60px 80px;
+    color: var(--ink-main);
+    font-family: 'Noto Sans SC', 'PingFang SC', sans-serif;
+    overflow: hidden;
+  }
+
+  /* 纸纹噪点 */
+  .receipt::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='400'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.35 0 0 0 0 0.3 0 0 0 0 0.2 0 0 0 0.14 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+    opacity: 0.5;
+    mix-blend-mode: multiply;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .receipt::after {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 120px; height: 120px;
+    background: radial-gradient(ellipse at top right, rgba(0,0,0,0.05), transparent 60%);
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  .inner {
+    position: relative;
+    z-index: 3;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* ==== L1 表头 ==== */
+  .l1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 10px;
+  }
+
+  .l1-title {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 700;
+    font-size: 28px;
+    letter-spacing: 2px;
+    color: var(--ink-main);
+    line-height: 1.1;
+  }
+
+  .l1-subtitle {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 16px;
+    color: var(--ink-mute);
+    margin-top: 6px;
+    letter-spacing: 1.5px;
+  }
+
+  .signed-stamp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 96px;
+    height: 52px;
+    border: 2.5px solid var(--sign-blue);
+    color: var(--sign-blue);
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 700;
+    font-size: 19px;
+    letter-spacing: 3px;
+    transform: rotate(-4.5deg);
+    opacity: 0.88;
+    margin-top: 4px;
+    background: rgba(255,255,255,0.08);
+    box-shadow: inset 0 0 6px rgba(44,74,110,0.25);
+    position: relative;
+  }
+  .signed-stamp::after {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border: 1px solid var(--sign-blue);
+    opacity: 0.4;
+    filter: blur(0.6px);
+  }
+
+  /* ==== 撕口虚线 ==== */
+  .tear {
+    height: 18px;
+    display: flex;
+    align-items: center;
+  }
+  .tear-line {
+    flex: 1;
+    border: 0;
+    border-top: 2.5px dashed var(--ink-mute);
+    opacity: 0.5;
+  }
+  .tear-scissor {
+    padding: 0 14px;
+    font-size: 15px;
+    color: var(--ink-mute);
+    opacity: 0.55;
+    transform: translateY(-2px);
+  }
+
+  /* ==== L2 嘴替主文 ==== */
+  .l2 {
+    padding: 42px 0 38px 0;
+    text-align: center;
+    position: relative;
+  }
+
+  .l2-lines {
+    font-family: 'Ma Shan Zheng', 'Noto Serif SC', serif;
+    font-weight: 900;
+    font-size: 96px;
+    line-height: 1.22;
+    letter-spacing: 8px;
+    color: var(--ink-main);
+  }
+  .l2-line {
+    display: block;
+    position: relative;
+  }
+  .l2-line::after {
+    content: '';
+    position: absolute;
+    left: 22%; right: 22%;
+    bottom: 8px;
+    height: 1.5px;
+    background: var(--ink-ghost);
+    opacity: 0.42;
+    transform: skewY(-0.5deg);
+  }
+  .l2-line:nth-child(2) { transform: translateX(-10px) rotate(-0.4deg); }
+  .l2-line:nth-child(3) { transform: translateX(8px) rotate(0.3deg); }
+
+  /* ==== L3 动物签名 ==== */
+  .l3 {
+    padding: 22px 8px;
+    display: flex;
+    align-items: flex-start;
+    gap: 28px;
+  }
+
+  /* ==== 动物头像 - 通用 ==== */
+  .avatar {
+    position: relative;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border: 3px solid var(--ink-main);
+    flex-shrink: 0;
+    transform: rotate(-3deg);
+    box-shadow: 2px 3px 0 rgba(0,0,0,0.12);
+    overflow: visible;
+  }
+
+  /* 猫：红色底 + 猫耳 + 胡须 + 低电量符号 */
+  .avatar-cat {
+    background: radial-gradient(circle at 30% 28%, #D96F5F 0%, var(--character-accent) 45%, #9A372D 100%);
+  }
+  /* 猫耳 */
+  .avatar-cat::before {
+    content: '';
+    position: absolute;
+    top: -12px; left: 18px;
+    width: 22px; height: 26px;
+    background: var(--character-accent);
+    clip-path: polygon(50% 0, 100% 100%, 0 100%);
+    box-shadow: 50px 0 0 var(--character-accent);
+    z-index: 10;
+  }
+  /* 猫的内容: 困眼 + 胡须 + 低电量 */
+  .avatar-cat .face {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .avatar-cat .eyes {
+    font-size: 22px;
+    font-weight: 900;
+    letter-spacing: 16px;
+    text-indent: 16px;
+    color: #2A1810;
+    margin-top: 6px;
+  }
+  .avatar-cat .whiskers {
+    position: absolute;
+    top: 58%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 8px;
+  }
+  .avatar-cat .whiskers::before,
+  .avatar-cat .whiskers::after {
+    content: '〰';
+    font-size: 12px;
+    color: #2A1810;
+    opacity: 0.7;
+  }
+  .avatar-cat .battery {
+    position: absolute;
+    bottom: 10px;
+    right: -8px;
+    width: 22px;
+    height: 12px;
+    border: 2px solid #2A1810;
+    border-radius: 2px;
+    opacity: 0.8;
+  }
+  .avatar-cat .battery::before {
+    content: '';
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    width: 5px;
+    height: 6px;
+    background: #B8463A;
+    border-radius: 1px;
+  }
+  .avatar-cat .battery::after {
+    content: '';
+    position: absolute;
+    right: -4px;
+    top: 3px;
+    width: 3px;
+    height: 6px;
+    background: #2A1810;
+    border-radius: 0 2px 2px 0;
+    opacity: 0.8;
+  }
+
+  /* 鹅：绿底 + 长脖 + 嘴 */
+  .avatar-goose {
+    background: radial-gradient(circle at 30% 28%, #5A8E6A 0%, var(--character-accent) 45%, #1E3A28 100%);
+  }
+  .avatar-goose::before {
+    content: '';
+    position: absolute;
+    top: -16px; left: 50%;
+    transform: translateX(-50%);
+    width: 16px; height: 22px;
+    background: var(--character-accent);
+    border-radius: 8px 8px 0 0;
+    z-index: 10;
+  }
+  .avatar-goose .face {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .avatar-goose .eyes {
+    font-size: 22px;
+    font-weight: 900;
+    letter-spacing: 16px;
+    text-indent: 16px;
+    color: #1E3A28;
+    margin-top: 2px;
+  }
+  .avatar-goose .beak {
+    position: absolute;
+    bottom: 26px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 12px solid #D4A020;
+  }
+
+  /* 仓鼠：橙底 + 圆耳 + 种子 */
+  .avatar-hamster {
+    background: radial-gradient(circle at 30% 28%, #E8A060 0%, var(--character-accent) 45%, #A85820 100%);
+  }
+  .avatar-hamster::before {
+    content: '';
+    position: absolute;
+    top: -6px; left: 14px;
+    width: 20px; height: 20px;
+    background: var(--character-accent);
+    border-radius: 50%;
+    box-shadow: 56px 0 0 var(--character-accent);
+    z-index: 10;
+  }
+  .avatar-hamster .face {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .avatar-hamster .eyes {
+    font-size: 18px;
+    font-weight: 900;
+    letter-spacing: 14px;
+    text-indent: 14px;
+    color: #4A2800;
+    margin-top: 4px;
+  }
+  .avatar-hamster .seed {
+    position: absolute;
+    bottom: 18px;
+    font-size: 14px;
+    color: #4A2800;
+    opacity: 0.8;
+  }
+
+  /* 羊驼：蓝底 + 卷毛 + 眼镜 */
+  .avatar-alpaca {
+    background: radial-gradient(circle at 30% 28%, #6AA0B8 0%, var(--character-accent) 45%, #2A5A6E 100%);
+  }
+  .avatar-alpaca::before {
+    content: '';
+    position: absolute;
+    top: -10px; left: 22px;
+    width: 66px; height: 18px;
+    background: var(--character-accent);
+    border-radius: 10px 10px 0 0;
+    z-index: 10;
+    opacity: 0.9;
+  }
+  .avatar-alpaca .face {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .avatar-alpaca .eyes {
+    font-size: 16px;
+    font-weight: 900;
+    letter-spacing: 8px;
+    text-indent: 8px;
+    color: #1A3A4A;
+    margin-top: 8px;
+    border: 1.5px solid #1A3A4A;
+    border-radius: 8px;
+    padding: 2px 6px;
+  }
+  .avatar-alpaca .curl {
+    position: absolute;
+    top: 8px;
+    font-size: 10px;
+    color: #1A3A4A;
+    opacity: 0.6;
+    letter-spacing: 2px;
+  }
+
+  .l3-text {
+    flex: 1;
+    padding-top: 4px;
+  }
+  .l3-row {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 1.5;
+    color: var(--ink-main);
+    letter-spacing: 1px;
+  }
+  .l3-row strong {
+    font-weight: 900;
+    color: var(--character-accent);
+  }
+  .l3-sign {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .l3-sign-label {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 20px;
+    color: var(--ink-mute);
+  }
+  .l3-sign-value {
+    font-family: 'Liu Jian Mao Cao', 'Zhi Mang Xing', cursive;
+    font-size: 54px;
+    color: var(--ink-main);
+    line-height: 1;
+    transform: rotate(-5deg) skewX(-8deg);
+    letter-spacing: -4px;
+    position: relative;
+    font-weight: 900;
+  }
+  .l3-sign-scratch {
+    display: inline-block;
+    width: 46px;
+    height: 38px;
+    position: relative;
+    margin-left: 8px;
+    transform: rotate(-6deg);
+  }
+  .l3-sign-scratch::before,
+  .l3-sign-scratch::after {
+    content: '';
+    position: absolute;
+    height: 4px;
+    background: var(--ink-main);
+    border-radius: 2px;
+    transform: rotate(-38deg);
+  }
+  .l3-sign-scratch::before { top: 2px; left: 0; width: 40px; }
+  .l3-sign-scratch::after { top: 16px; left: 6px; width: 32px; }
+
+  /* ==== L4 今日状态 ==== */
+  .l4 {
+    padding: 14px 0 10px 0;
+    position: relative;
+  }
+  .l4-head {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 700;
+    font-size: 19px;
+    color: var(--ink-mute);
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+  }
+  .l4-row {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 21px;
+    line-height: 1.55;
+    color: var(--ink-main);
+    padding-right: 240px;
+  }
+  .l4-row .k {
+    color: var(--ink-mute);
+    letter-spacing: 1.5px;
+  }
+  .l4-row .v {
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--ink-main);
+  }
+
+  /* ==== 大红章 — 修复：横排两行，正常读法 ==== */
+  .big-stamp {
+    position: absolute;
+    top: -20px;
+    right: 10px;
+    width: 200px;
+    height: 200px;
+    border: 7px solid var(--stamp-red);
+    border-radius: 50%;
+    color: var(--stamp-red);
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 900;
+    font-size: 34px;
+    letter-spacing: 4px;
+    transform: rotate(8deg);
+    background: transparent;
+    opacity: 0.85;
+    z-index: 5;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0 0 0 3px rgba(184, 70, 58, 0.2);
+  }
+  .big-stamp::before {
+    content: '';
+    position: absolute;
+    inset: -3px;
+    border: 2px solid var(--stamp-red);
+    border-radius: 50%;
+    opacity: 0.45;
+    filter: blur(2px);
+  }
+  .big-stamp-line {
+    display: block;
+    line-height: 1.3;
+  }
+  /* 横排分割线 */
+  .big-stamp-divider {
+    width: 60%;
+    height: 2px;
+    background: var(--stamp-red);
+    opacity: 0.4;
+    margin: 4px 0;
+  }
+
+  /* ==== L5 footer ==== */
+  .l5 {
+    margin-top: auto;
+    padding-top: 10px;
+  }
+  .l5-title {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 700;
+    font-size: 21px;
+    color: var(--ink-mute);
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+  }
+  .l5-list {
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 22px;
+    line-height: 1.58;
+    color: var(--ink-main);
+    padding-left: 4px;
+  }
+  .l5-list .row {
+    display: flex;
+    align-items: baseline;
+  }
+  .l5-list .bullet {
+    color: var(--ink-mute);
+    margin-right: 12px;
+    font-family: monospace;
+  }
+  .l5-no {
+    margin-top: 18px;
+    text-align: center;
+    font-family: 'Long Cang', cursive;
+    font-size: 22px;
+    color: var(--ink-mute);
+    opacity: 0.55;
+    letter-spacing: 2px;
+  }
+</style>
+</head>
+<body>
+<div class="receipt">
+  <div class="inner">
+
+    <!-- L1 表头 -->
+    <div class="l1">
+      <div>
+        <div class="l1-title">心情值班室 · 今日代班凭条</div>
+        <div class="l1-subtitle">编号 {{SERIAL}}</div>
+      </div>
+      <div class="signed-stamp">已签收</div>
+    </div>
+
+    <div class="tear">
+      <div class="tear-line"></div>
+      <div class="tear-scissor">&#9986;</div>
+      <div class="tear-line"></div>
+    </div>
+
+    <!-- L2 嘴替主文 -->
+    <div class="l2">
+      <div class="l2-lines">
+        <span class="l2-line">{{L2_LINE1}}</span>
+        <span class="l2-line">{{L2_LINE2}}</span>
+        <span class="l2-line">{{L2_LINE3}}</span>
+      </div>
+    </div>
+
+    <div class="tear">
+      <div class="tear-line"></div>
+      <div class="tear-scissor">&#9986;</div>
+      <div class="tear-line"></div>
+    </div>
+
+    <!-- L3 动物签名 -->
+    <div class="l3">
+      <div class="avatar {{AVATAR_CLASS}}">
+        {{AVATAR_INNER}}
+      </div>
+      <div class="l3-text">
+        <div class="l3-row">本次由：<strong>{{CHARACTER_NAME}}</strong> 接管</div>
+        <div class="l3-row">负责范围：<span style="font-weight:700">{{SCOPE}}</span></div>
+        <div class="l3-sign">
+          <span class="l3-sign-label">签字</span>
+          <span class="l3-sign-value">{{SIGN}}</span>
+          <span class="l3-sign-scratch"></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tear">
+      <div class="tear-line"></div>
+      <div class="tear-scissor">&#9986;</div>
+      <div class="tear-line"></div>
+    </div>
+
+    <!-- L4 今日状态 + 红方章 -->
+    <div class="l4">
+      <div class="l4-head">今日状态</div>
+      <div class="l4-row">
+        <span class="k">生效时间</span>
+        <span class="v">{{TIME}}</span>
+      </div>
+      <div class="l4-row">
+        <span class="k">有效期</span>
+        <span class="v">{{VALIDITY}}</span>
+      </div>
+
+      <!-- 红章: 横排两行，正常读法 -->
+      <div class="big-stamp">
+        <span class="big-stamp-line">{{STAMP_LINE1}}</span>
+        <span class="big-stamp-divider"></span>
+        <span class="big-stamp-line">{{STAMP_LINE2}}</span>
+      </div>
+    </div>
+
+    <!-- L5 footer -->
+    <div class="l5">
+      <div class="l5-title">这张单子可以：</div>
+      <div class="l5-list">
+        <div class="row"><span class="bullet">—</span><span>{{FOOTER1}}</span></div>
+        <div class="row"><span class="bullet">—</span><span>{{FOOTER2}}</span></div>
+        <div class="row"><span class="bullet">—</span><span>{{FOOTER3}}</span></div>
+      </div>
+      <div class="l5-no">No.{{NO}}</div>
+    </div>
+
+  </div>
+</div>
+</body>
+</html>

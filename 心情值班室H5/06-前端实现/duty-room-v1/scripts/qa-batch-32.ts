@@ -35,25 +35,7 @@ const SCENES = [
   'S8_pushed_along',
 ];
 
-const SCENE_TO_PHOEBE: Record<string, string> = {
-  S1_stubborn_deny: 'S1',
-  S2_low_battery: 'S2',
-  S3_ddl_procrast: 'S3',
-  S4_polite_overflow: 'S4',
-  S5_need_quiet: 'S5',
-  S6_invited_out: 'S6',
-  S7_msg_unreplied: 'S7',
-  S8_pushed_along: 'S8',
-};
-
 const ROLES = ['stubborn_goose', 'low_battery_cat', 'ddl_hamster', 'backstage_alpaca'];
-
-const ROLE_TO_PHOEBE: Record<string, string> = {
-  stubborn_goose: 'tough-mouth-goose',
-  low_battery_cat: 'low-battery-cat',
-  ddl_hamster: 'ddl-hamster',
-  backstage_alpaca: 'backend-alpaca',
-};
 
 async function startStaticServer() {
   const server = createServer(async (req, res) => {
@@ -126,9 +108,7 @@ async function main() {
       await page.goto(BASE_URL, { waitUntil: 'networkidle0' });
       for (const sceneId of SCENES) {
         for (const roleId of ROLES) {
-          const phoebeScene = SCENE_TO_PHOEBE[sceneId];
-          const phoebeRole = ROLE_TO_PHOEBE[roleId];
-          const pngUrl = `${BASE_URL}duty-room-v1/receipts/${phoebeScene}-${phoebeRole}.png`;
+          const pngUrl = `${BASE_URL}duty-room-v1/receipts/${sceneId}-${roleId}.png`;
           let pngFetchOk = false;
           let pngWidth = 0;
           let pngHeight = 0;
@@ -154,7 +134,7 @@ async function main() {
           const dimsOk = pngWidth === 1080 && pngHeight === 1350;
           const ok = pngFetchOk && dimsOk;
           console.log(
-            `${ok ? '✓' : '✗'} ${sceneId} × ${roleId} → ${phoebeScene}-${phoebeRole}.png (${pngWidth}×${pngHeight})${error ? ` err=${error}` : ''}`,
+            `${ok ? '✓' : '✗'} ${sceneId} × ${roleId} → ${sceneId}-${roleId}.png (${pngWidth}×${pngHeight})${error ? ` err=${error}` : ''}`,
           );
           results.push({
             sceneId,
