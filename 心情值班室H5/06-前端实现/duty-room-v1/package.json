@@ -10,7 +10,8 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "verify:canvas": "npx tsx scripts/verify-canvas-dims.ts",
-    "qa:mouthpiece": "npx tsx scripts/qa-mouthpiece-samples.ts"
+    "qa:mouthpiece": "npx tsx scripts/qa-mouthpiece-samples.ts",
+    "qa:h5": "npx tsx scripts/qa-h5-pages.ts"
   },
   "dependencies": {
     "react": "^19.2.5",

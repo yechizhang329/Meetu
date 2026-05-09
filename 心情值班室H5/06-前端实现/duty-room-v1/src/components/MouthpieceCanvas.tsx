@@ -7,20 +7,18 @@ import { useEffect, useImperativeHandle, useRef, forwardRef } from 'react';
 import type { MouthpieceLine, RoleDef } from '../data/types';
 import { drawMouthpieceText } from '../canvas/mouthpiece-layout';
 import { ensureFontLoaded } from '../canvas/font-loader';
+import { CANVAS_LAYOUT_PRESETS, type CanvasLayoutPreset } from '../canvas/layout-presets';
+import { activeTheme } from '../config/theme';
 
 const CANVAS_W = 1080;
 const CANVAS_H = 1350;
 
-// Default paper background color — kept as the H5 / app-shell baseline color
-// (variants override the canvas paper independently, see VARIANT_PARAMS).
-const INK = '#2A2420';
-const SIGNATURE_COLOR = '#7E7065';
-
 /** Variant style — controls layout, font, frame, and background.
- *  See task #23 thread (Jonathan f7a98482 + Fiona dde4438d) for direction.
- *  V3_1 = Fiona PM gate iteration on V3 (msg f4466cbc).
+ *  Kept for back-compat with the 4-flagship debug grid (qa-screenshots).
+ *  task #24: V3_1 values now pull from CANVAS_LAYOUT_PRESETS['v3_1'] so
+ *  theme/layout swaps only change one file.
  */
-export type Variant = 'V1_clean' | 'V2_note_frame' | 'V3_fusion' | 'V3_1';
+export type Variant = 'V1_clean' | 'V2_note_frame' | 'V3_fusion' | 'V3_1' | 'theme';
 
 export interface VariantParams {
   paper: string;             // canvas background fill
@@ -36,9 +34,11 @@ export interface VariantParams {
   characterTrim: boolean;    // V1/V3 — apply chroma-key alpha clean of #F2EAD8 paper bg from PNG
   signatureFontPx: number;   // bottom-right "心情值班室" size
   signatureAlpha: number;    // signature opacity
+  inkColor: string;          // mouthpiece text color
+  signatureColor: string;    // signature color
 }
 
-const VARIANT_PARAMS: Record<Variant, VariantParams> = {
+const VARIANT_PARAMS: Record<Exclude<Variant, 'theme'>, VariantParams> = {
   V1_clean: {
     paper: '#F2EAD8',
     noiseAlpha: 0.018,
@@ -53,6 +53,8 @@ const VARIANT_PARAMS: Record<Variant, VariantParams> = {
     characterTrim: true,
     signatureFontPx: 22,
     signatureAlpha: 1,
+    inkColor: '#2A2420',
+    signatureColor: '#7E7065',
   },
   V2_note_frame: {
     paper: '#F2EAD8',
@@ -68,6 +70,8 @@ const VARIANT_PARAMS: Record<Variant, VariantParams> = {
     characterTrim: false,
     signatureFontPx: 22,
     signatureAlpha: 1,
+    inkColor: '#2A2420',
+    signatureColor: '#7E7065',
   },
   V3_fusion: {
     paper: '#FBF6E8',
@@ -83,23 +87,35 @@ const VARIANT_PARAMS: Record<Variant, VariantParams> = {
     characterTrim: true,
     signatureFontPx: 22,
     signatureAlpha: 1,
+    inkColor: '#2A2420',
+    signatureColor: '#7E7065',
   },
-  V3_1: {
-    paper: '#FBF6E8',
-    noiseAlpha: 0.012,
-    fontFamily: 'LXGW WenKai',
-    scaleOverride: 0.72,
-    textPadding: 70,
-    textTopOffset: 80,           // PM 4: text moves down ~80px from canvas top
-    lineHeightMul: 1.12,
-    fontSizeBoost: 1.32,
-    jitterAmp: 1.4,              // PM 2: 40% more handwritten jitter (still controlled)
-    drawFrame: false,
-    characterTrim: true,
-    signatureFontPx: 16,         // PM 4: smaller watermark
-    signatureAlpha: 0.42,        // PM 4: much fainter watermark
-  },
+  // task #24: `V3_1` is NOT a self-contained value anymore — it mirrors the
+  // `v3_1` Canvas layout preset from src/canvas/layout-presets.ts so theme
+  // swaps only change one file. When Phoebe task #33 picks the final look,
+  // flip `activeTheme.layoutPreset` (not this block).
+  V3_1: presetToVariantParams(CANVAS_LAYOUT_PRESETS.v3_1),
 };
+
+function presetToVariantParams(p: CanvasLayoutPreset): VariantParams {
+  return {
+    paper: p.paper,
+    noiseAlpha: p.noiseAlpha,
+    fontFamily: p.fontFamily,
+    scaleOverride: p.scaleOverride,
+    textPadding: p.textPadding,
+    textTopOffset: p.textTopOffset,
+    lineHeightMul: p.lineHeightMul,
+    fontSizeBoost: p.fontSizeBoost,
+    jitterAmp: p.jitterAmp,
+    drawFrame: p.drawFrame,
+    characterTrim: p.characterTrim,
+    signatureFontPx: p.signatureFontPx,
+    signatureAlpha: p.signatureAlpha,
+    inkColor: p.inkColor,
+    signatureColor: p.signatureColor,
+  };
+}
 
 export interface MouthpieceCanvasHandle {
   /** Export the current canvas as a PNG Blob (1080×1350) */
@@ -117,7 +133,7 @@ interface Props {
   artBaseUrl: string;
   /** Optional render seed — change to re-jitter text */
   seed?: number;
-  /** Variant — V1_clean / V2_note_frame / V3_fusion (default V1_clean) */
+  /** Variant — V1_clean / V2_note_frame / V3_fusion / V3_1 / 'theme' (default: theme). */
   variant?: Variant;
   /** Optional CSS class on the wrapping <canvas> */
   className?: string;
@@ -184,7 +200,7 @@ function loadImage(src: string): Promise<HTMLImageElement> {
 }
 
 export const MouthpieceCanvas = forwardRef<MouthpieceCanvasHandle, Props>(
-  function MouthpieceCanvas({ line, role, artBaseUrl, seed = 1, variant = 'V1_clean', className }, ref) {
+  function MouthpieceCanvas({ line, role, artBaseUrl, seed = 1, variant = 'theme', className }, ref) {
     const canvasRef = useRef<HTMLCanvasElement | null>(null);
     const lastDrawRef = useRef<{ line: MouthpieceLine; role: RoleDef; seed: number; variant: Variant }>({
       line,
@@ -201,7 +217,13 @@ export const MouthpieceCanvas = forwardRef<MouthpieceCanvasHandle, Props>(
       const ctx = canvas.getContext('2d');
       if (!ctx) return;
 
-      const params = VARIANT_PARAMS[variant];
+      // task #24: default variant 'theme' resolves to the active layout preset.
+      // Explicit V1_clean / V2_note_frame / V3_fusion / V3_1 are still honoured
+      // for debug grids and qa samples.
+      const params: VariantParams =
+        variant === 'theme'
+          ? presetToVariantParams(CANVAS_LAYOUT_PRESETS[activeTheme.layoutPreset])
+          : VARIANT_PARAMS[variant];
 
       // 1. Paper background
       ctx.fillStyle = params.paper;
@@ -240,10 +262,50 @@ export const MouthpieceCanvas = forwardRef<MouthpieceCanvasHandle, Props>(
               drawW = drawH * aspect;
             }
             // Re-anchor based on imagePosition: keep visual bottom aligned to
-            // the original rect's bottom edge for `b*` positions, and center
-            // horizontally within the original rect.
-            const drawX = rect.x + (rect.w - drawW) / 2;
-            const drawY = rect.y + (rect.h - drawH);
+            // the original rect's bottom edge for `b*` positions; horizontally
+            // hug the rect's outer edge (not center) so a portrait character
+            // anchored at `br` stays out of the top-left text column.
+            let drawX: number;
+            switch (role.imagePosition) {
+              case 'br':
+              case 'cr':
+                drawX = rect.x + rect.w - drawW;
+                break;
+              case 'bl':
+              case 'cl':
+                drawX = rect.x;
+                break;
+              default:
+                drawX = rect.x + (rect.w - drawW) / 2;
+            }
+            // drawY clamp: if the natural drawH (aspect-corrected) makes the
+            // top of the image go above the canvas safe top (text region),
+            // shrink drawH to fit instead of letting the head clip off-canvas.
+            // Safe top = max(canvas margin, text region bottom).
+            // For now we just clamp to a hard top margin of 80px so the head
+            // is always inside the canvas — the previous behaviour silently
+            // pushed `pose3` goose's head OUT of frame, which Jonathan caught.
+            const SAFE_TOP = 80;
+            let drawY = rect.y + (rect.h - drawH);
+            if (drawY < SAFE_TOP) {
+              const overflow = SAFE_TOP - drawY;
+              drawH -= overflow;
+              drawW = drawH * aspect;
+              drawY = SAFE_TOP;
+              // Re-apply horizontal anchoring with new drawW
+              switch (role.imagePosition) {
+                case 'br':
+                case 'cr':
+                  drawX = rect.x + rect.w - drawW;
+                  break;
+                case 'bl':
+                case 'cl':
+                  drawX = rect.x;
+                  break;
+                default:
+                  drawX = rect.x + (rect.w - drawW) / 2;
+              }
+            }
             ctx.drawImage(
               trimmed,
               bbox.x,
@@ -286,14 +348,14 @@ export const MouthpieceCanvas = forwardRef<MouthpieceCanvasHandle, Props>(
           maxLineWidth: CANVAS_W - params.textPadding * 2,
           jitterAmp: params.jitterAmp,
         },
-        { color: INK },
+        { color: params.inkColor },
         seed,
       );
 
       // 4. Signature
       ctx.save();
       ctx.globalAlpha = params.signatureAlpha;
-      ctx.fillStyle = SIGNATURE_COLOR;
+      ctx.fillStyle = params.signatureColor;
       ctx.font = `${params.signatureFontPx}px "${params.fontFamily}", "PingFang SC", system-ui`;
       const sig = '心情值班室';
       const sigW = ctx.measureText(sig).width;
