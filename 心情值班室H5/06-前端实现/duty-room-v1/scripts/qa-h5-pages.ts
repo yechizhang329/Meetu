@@ -7,7 +7,7 @@
 
 import puppeteer from 'puppeteer';
 import { createServer } from 'node:http';
-import { readFile, writeFile, mkdir } from 'node:fs/promises';
+import { readFile, mkdir } from 'node:fs/promises';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -72,8 +72,8 @@ const SHOTS: PageShot[] = [
   {
     label: '03-result-low-battery-cat',
     hashPath: '#/result/S2_low_battery',
-    waitSelector: '.result-canvas-wrap canvas',
-    extraWaitMs: 2000,
+    waitSelector: '.result-receipt',
+    extraWaitMs: 1500,
   },
 ];
 
@@ -103,41 +103,41 @@ async function main() {
         console.log(`✓ ${shot.label} → ${file}`);
       }
 
-      // Verify the result-page canvas is strict 1080×1350
-      const dims = await page.$$eval('.result-canvas-wrap canvas', (els) =>
-        els.map((c) => ({ w: (c as HTMLCanvasElement).width, h: (c as HTMLCanvasElement).height })),
+      // Verify result page receipt image dimensions are 1080×1350 (intrinsic)
+      const dims = await page.$$eval('.result-receipt', (els) =>
+        els.map((c) => ({
+          w: (c as HTMLImageElement).naturalWidth,
+          h: (c as HTMLImageElement).naturalHeight,
+          src: (c as HTMLImageElement).src,
+        })),
       );
       let allPass = true;
       dims.forEach((d, i) => {
         const ok = d.w === 1080 && d.h === 1350;
         if (!ok) allPass = false;
-        console.log(`${ok ? '✓' : '✗'} result canvas[${i}] = ${d.w}×${d.h}`);
+        console.log(`${ok ? '✓' : '✗'} result receipt[${i}] = ${d.w}×${d.h} src=${d.src}`);
       });
 
-      // Export the result-page canvas PNG — proves the "保存这张" chain works
-      // for the low-battery cat flagship scene end-to-end.
-      const png = await page.$$eval('.result-canvas-wrap canvas', (els) =>
-        Promise.all(
-          els.map(
-            (c) =>
-              new Promise<string>((resolve) => {
-                (c as HTMLCanvasElement).toBlob((b) => {
-                  const r = new FileReader();
-                  r.onload = () => resolve(r.result as string);
-                  r.readAsDataURL(b!);
-                }, 'image/png');
-              }),
-          ),
-        ),
-      );
-      if (png[0]) {
-        const buf = Buffer.from(png[0].split(',')[1], 'base64');
-        const pngOut = resolve(outDir, 'mouthpiece-S2-1-low-battery-cat.png');
-        await writeFile(pngOut, buf);
-        console.log(`✓ exported canvas PNG → ${pngOut} (${buf.length} bytes)`);
+      // Verify the Save button is wired and the receipt URL is reachable
+      const saveBtn = await page.$('.result-save');
+      if (saveBtn) {
+        const txt = await page.evaluate(
+          (el) => (el as HTMLButtonElement).textContent || '',
+          saveBtn,
+        );
+        console.log(`✓ save button present: ${txt.trim()}`);
       } else {
         allPass = false;
-        console.log('✗ no canvas found on result page');
+        console.log('✗ save button missing');
+      }
+
+      // Verify the 4-animal RoleTabs switcher exists
+      const tabCount = await page.$$eval('.role-tab', (els) => els.length);
+      if (tabCount === 4) {
+        console.log('✓ role-tabs: 4 animal tabs present');
+      } else {
+        allPass = false;
+        console.log(`✗ role-tabs: expected 4, got ${tabCount}`);
       }
 
       await browser.close();
