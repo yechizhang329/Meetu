@@ -88,7 +88,7 @@ async function main() {
       page.on('console', (m) => {
         if (m.type() === 'error') console.log('[browser err]', m.text());
       });
-      page.on('pageerror', (e) => console.log('[pageerror]', e.message));
+      page.on('pageerror', (e) => console.log('[pageerror]', (e as Error).message));
 
       for (const shot of SHOTS) {
         const url = `${BASE_URL}${shot.hashPath}`;
