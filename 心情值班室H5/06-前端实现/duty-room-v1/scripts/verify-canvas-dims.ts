@@ -88,27 +88,33 @@ async function main() {
         console.log(`${tag} canvas[${i}] = ${d.w}×${d.h}`);
       });
 
-      // Export each canvas as a PNG file
+      // Export each canvas as a PNG file, naming by data-line-id + data-role-id
       const blobs = await page.$$eval('canvas', (els) =>
         Promise.all(
           els.map(
             (c, i) =>
-              new Promise<{ idx: number; dataUrl: string }>((resolve) => {
-                (c as HTMLCanvasElement).toBlob((b) => {
-                  const r = new FileReader();
-                  r.onload = () => resolve({ idx: i, dataUrl: r.result as string });
-                  r.readAsDataURL(b!);
-                }, 'image/png');
-              }),
+              new Promise<{ idx: number; lineId: string; roleId: string; dataUrl: string }>(
+                (resolve) => {
+                  const canvas = c as HTMLCanvasElement;
+                  const lineId = canvas.dataset.lineId ?? `idx${i}`;
+                  const roleId = canvas.dataset.roleId ?? '';
+                  canvas.toBlob((b) => {
+                    const r = new FileReader();
+                    r.onload = () =>
+                      resolve({ idx: i, lineId, roleId, dataUrl: r.result as string });
+                    r.readAsDataURL(b!);
+                  }, 'image/png');
+                },
+              ),
           ),
         ),
       );
 
-      for (const { idx, dataUrl } of blobs) {
+      for (const { lineId, roleId, dataUrl } of blobs) {
         const buf = Buffer.from(dataUrl.split(',')[1], 'base64');
-        // Variant names match VARIANTS order in App.tsx
-        const labels = ['V3_1'];
-        const name = `mouthpiece-${labels[idx] ?? `idx${idx + 1}`}.png`;
+        const name = roleId
+          ? `mouthpiece-${lineId}-${roleId}.png`
+          : `mouthpiece-${lineId}.png`;
         await writeFile(resolve(outDir, name), buf);
         console.log(`  → wrote ${name} (${buf.length} bytes)`);
       }

@@ -229,11 +229,21 @@ export const MouthpieceCanvas = forwardRef<MouthpieceCanvasHandle, Props>(
             const { canvas: trimmed, bbox } = trimPaperBackground(img, '#F2EAD8');
             // Aspect ratio from the actual content
             const aspect = bbox.w / bbox.h;
-            const targetW = rect.w;
-            const targetH = targetW / aspect;
-            const drawX = rect.x;
-            // Re-anchor to keep the image bottom aligned with original rect bottom
-            const drawY = rect.y + (rect.h - targetH);
+            // Each role has a max width (rect.w) AND we cap height to roughly
+            // 60% of canvas so portrait characters (alpaca / goose) don't
+            // overflow into the text region.
+            const maxH = CANVAS_H * 0.6;
+            let drawW = rect.w;
+            let drawH = drawW / aspect;
+            if (drawH > maxH) {
+              drawH = maxH;
+              drawW = drawH * aspect;
+            }
+            // Re-anchor based on imagePosition: keep visual bottom aligned to
+            // the original rect's bottom edge for `b*` positions, and center
+            // horizontally within the original rect.
+            const drawX = rect.x + (rect.w - drawW) / 2;
+            const drawY = rect.y + (rect.h - drawH);
             ctx.drawImage(
               trimmed,
               bbox.x,
@@ -242,8 +252,8 @@ export const MouthpieceCanvas = forwardRef<MouthpieceCanvasHandle, Props>(
               bbox.h,
               drawX,
               drawY,
-              targetW,
-              targetH,
+              drawW,
+              drawH,
             );
           } else {
             ctx.drawImage(img, rect.x, rect.y, rect.w, rect.h);
@@ -326,6 +336,9 @@ export const MouthpieceCanvas = forwardRef<MouthpieceCanvasHandle, Props>(
         className={className}
         width={CANVAS_W}
         height={CANVAS_H}
+        data-line-id={line.lineId}
+        data-role-id={role.id}
+        data-variant={variant}
       />
     );
   },
