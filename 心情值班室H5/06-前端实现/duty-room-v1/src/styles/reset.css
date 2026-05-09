@@ -1,0 +1,41 @@
+/* LXGW WenKai Screen — handwritten CJK font (used as primary on Canvas)
+ * Hosted via jsDelivr; cn-font-split sliced into unicode-range subsets,
+ * so only the shards needed by rendered text get fetched.
+ *
+ * V3 also pulls the regular (non-Screen) variant for a slightly looser /
+ * less-edited feel.
+ */
+@import url('https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-web@1.522.0/lxgwwenkaiscreen/result.css');
+@import url('https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/lxgwwenkai-regular.css');
+
+/* Basic reset — only what we need on mobile H5 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #f2ead8;
+  color: #2a2420;
+  font-family:
+    'LXGW WenKai Screen', 'LXGW WenKai', 'PingFang SC', 'Hiragino Sans GB',
+    system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+button {
+  font: inherit;
+  color: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
+}

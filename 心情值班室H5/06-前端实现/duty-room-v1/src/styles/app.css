@@ -1,0 +1,81 @@
+/* LXGW WenKai Screen 已通过 reset.css 的 @import 引入 */
+
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 16px 48px;
+  gap: 20px;
+}
+
+.app-shell h1 {
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  margin: 0;
+}
+
+.app-shell .subtitle {
+  font-size: 13px;
+  opacity: 0.6;
+  margin: 0;
+}
+
+.mouthpiece-stage {
+  width: min(100%, 360px);
+  aspect-ratio: 1080 / 1350;
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(42, 36, 32, 0.12);
+}
+
+.mouthpiece-stage canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.sample-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 22px;
+  width: min(100%, 1080px);
+}
+
+.sample-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+
+.sample-card .sample-title {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: #2a2420;
+}
+
+.sample-card .sample-meta {
+  font-size: 11px;
+  opacity: 0.55;
+  text-align: center;
+  max-width: 360px;
+  line-height: 1.5;
+}
+
+.sample-card .sample-action {
+  padding: 8px 14px;
+  font-size: 12px;
+  border: 1px solid rgba(42, 36, 32, 0.35);
+  border-radius: 999px;
+  background: transparent;
+  color: #2a2420;
+  letter-spacing: 0.04em;
+  transition: background 0.15s;
+}
+.sample-card .sample-action:hover {
+  background: rgba(42, 36, 32, 0.08);
+}
