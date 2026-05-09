@@ -9,6 +9,8 @@ import { drawMouthpieceText } from '../canvas/mouthpiece-layout';
 import { ensureFontLoaded } from '../canvas/font-loader';
 import { CANVAS_LAYOUT_PRESETS, type CanvasLayoutPreset } from '../canvas/layout-presets';
 import { activeTheme } from '../config/theme';
+import { paintReceiptOverlay } from '../canvas/receipt-overlay';
+import { resolveSlipFields } from '../data/slip-config';
 
 const CANVAS_W = 1080;
 const CANVAS_H = 1350;
@@ -361,6 +363,14 @@ export const MouthpieceCanvas = forwardRef<MouthpieceCanvasHandle, Props>(
       const sigW = ctx.measureText(sig).width;
       ctx.fillText(sig, CANVAS_W - sigW - 32, CANVAS_H - 32);
       ctx.restore();
+
+      // 5. Receipt overlay (duty_slip mode only)
+      // Paints the 今日代班凭条 chrome: dashed border, header, scope, stamp, footer.
+      const resolvedPresetId = variant === 'theme' ? activeTheme.layoutPreset : undefined;
+      if (resolvedPresetId === 'duty_slip' || (variant !== 'theme' && params === presetToVariantParams(CANVAS_LAYOUT_PRESETS.duty_slip))) {
+        const slipFields = resolveSlipFields(line.sceneId, line.roleId);
+        paintReceiptOverlay(ctx, slipFields);
+      }
 
       lastDrawRef.current = { line, role, seed, variant };
     };

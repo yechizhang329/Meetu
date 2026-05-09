@@ -11,7 +11,8 @@
     "preview": "vite preview",
     "verify:canvas": "npx tsx scripts/verify-canvas-dims.ts",
     "qa:mouthpiece": "npx tsx scripts/qa-mouthpiece-samples.ts",
-    "qa:h5": "npx tsx scripts/qa-h5-pages.ts"
+    "qa:h5": "npx tsx scripts/qa-h5-pages.ts",
+    "qa:batch": "npx tsx scripts/qa-batch-32.ts"
   },
   "dependencies": {
     "react": "^19.2.5",

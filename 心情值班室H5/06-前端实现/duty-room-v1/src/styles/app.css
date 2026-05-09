@@ -421,3 +421,85 @@
 .sample-card .sample-action:hover {
   background: var(--theme-divider);
 }
+
+/* ───── PRD v1.1: 4-animal tab switcher on Result page ───────────────────── */
+
+.role-tabs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  width: min(100%, 480px);
+  margin: 0 auto 16px;
+  padding: 0 16px;
+}
+
+.role-tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 10px 6px 8px;
+  background: var(--theme-surface);
+  border: 2px solid transparent;
+  border-radius: var(--theme-radius-card);
+  cursor: pointer;
+  transition: border-color 0.15s, transform 0.1s;
+  font: inherit;
+  color: var(--theme-ink);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.role-tab:active {
+  transform: scale(0.96);
+}
+
+.role-tab-active {
+  border-color: var(--theme-accent);
+  background: var(--theme-bg);
+}
+
+.role-tab img {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  display: block;
+}
+
+.role-tab-fallback {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--theme-ink-muted);
+  background: var(--theme-divider);
+  border-radius: 50%;
+}
+
+.role-tab-name {
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+/* ───── Result receipt image (replaces previous canvas) ──────────────────── */
+
+.result-receipt {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  border-radius: 8px;
+  background: var(--theme-surface);
+  /* Maintain 1080×1350 aspect ratio while loading */
+  aspect-ratio: 1080 / 1350;
+  object-fit: contain;
+}
+
+.result-empty-scope {
+  font-size: 13px;
+  color: var(--theme-ink-muted);
+  margin: 8px 0;
+}

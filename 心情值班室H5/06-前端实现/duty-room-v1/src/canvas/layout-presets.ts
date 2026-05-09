@@ -12,7 +12,7 @@
 // branches — it reads only from the preset object.
 
 export interface CanvasLayoutPreset {
-  id: 'v3_1' | 'next_placeholder';
+  id: 'v3_1' | 'next_placeholder' | 'duty_slip';
   /** Canvas background fill color */
   paper: string;
   /** Paper grain noise alpha (0..1) */
@@ -81,5 +81,29 @@ export const CANVAS_LAYOUT_PRESETS: Record<CanvasLayoutPreset['id'], CanvasLayou
     signatureAlpha: 0.35,
     inkColor: '#1F2A33',
     signatureColor: '#6A7785',
+  },
+
+  // P0 主线「今日代班凭条」layout — tentative values.
+  // Visual contract: 热敏小票纸感, mono font, minimal jitter (打印不抖),
+  // no paper grain (printer paper is flat), character art smaller (凭条 narrow).
+  // Phoebe v0.2 conditional pass 23:31 — these values will be re-tuned
+  // but the slot is live & type-safe.
+  duty_slip: {
+    id: 'duty_slip',
+    paper: '#FAF7F0',            // 小票白偏米，不是纯白
+    noiseAlpha: 0,               // 热敏打印无grain
+    fontFamily: 'JetBrains Mono, IBM Plex Mono, Menlo, PingFang SC',
+    scaleOverride: 0.48,         // 凭条纸窄，角色头像小
+    textPadding: 60,
+    textTopOffset: 120,          // 留出顶部凭条 header 区域
+    lineHeightMul: 1.4,          // 小票行距宽松
+    fontSizeBoost: 0.95,         // 不放大; 等宽字体本身就重
+    jitterAmp: 0,                // 打印字不抖
+    drawFrame: true,             // 画凭条边框 (dashed rect)
+    characterTrim: true,
+    signatureFontPx: 12,
+    signatureAlpha: 0.3,
+    inkColor: '#1A1614',         // 热敏打印深棕黑
+    signatureColor: '#6B5F50',
   },
 };

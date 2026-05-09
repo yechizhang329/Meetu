@@ -1,0 +1,106 @@
+{
+  "characters": {
+    "low-battery-cat": {
+      "name": "低电量猫",
+      "accent": "#B8463A",
+      "sign": "低猫",
+      "avatarType": "cat",
+      "stampStyle": "circle"
+    },
+    "tough-mouth-goose": {
+      "name": "嘴硬鹅",
+      "accent": "#2E4A3A",
+      "sign": "硬鹅",
+      "avatarType": "goose",
+      "stampStyle": "circle"
+    },
+    "ddl-hamster": {
+      "name": "DDL仓鼠",
+      "accent": "#D27A3A",
+      "sign": "DDL",
+      "avatarType": "hamster",
+      "stampStyle": "circle"
+    },
+    "backend-alpaca": {
+      "name": "后台羊驼",
+      "accent": "#4A7B8E",
+      "sign": "羊后",
+      "avatarType": "alpaca",
+      "stampStyle": "circle"
+    }
+  },
+  "scenes": {
+    "S1": {
+      "title": "嘴硬否认",
+      "l2": ["我没说过", "不是我", "你记错了"],
+      "scope": "嘴硬否认",
+      "stampLine1": "嘴硬中",
+      "stampLine2": "已免责",
+      "footer": ["假装不在意 · 但全都记着", "嘴硬≠心硬，只是需要缓冲", "此单生效期间，概不承认"],
+      "validity": "至你不信为止"
+    },
+    "S2": {
+      "title": "低电量拒绝营业",
+      "l2": ["我没电了", "真 的", "别叫我"],
+      "scope": "拒绝营业",
+      "stampLine1": "低电量",
+      "stampLine2": "值班中",
+      "footer": ["跳过消息 · 拒接电话", "不回应「你怎么了」", "想说话时自动失效"],
+      "validity": "至你想说话为止"
+    },
+    "S3": {
+      "title": "DDL拖延",
+      "l2": ["还没开始", "但快了", "真的快了"],
+      "scope": "合理拖延",
+      "stampLine1": "拖延中",
+      "stampLine2": "已生效",
+      "footer": ["合理摆烂 · 心安理得", "DDL 是第一生产力 · 现在还不是", "此单失效前，请勿催促"],
+      "validity": "至 DDL 前 1 小时"
+    },
+    "S4": {
+      "title": "表面OK后台崩",
+      "l2": ["我没事", "真没事", "别看后台"],
+      "scope": "表面镇定",
+      "stampLine1": "镇定中",
+      "stampLine2": "后台代班",
+      "footer": ["外表从容 · 内心警报", "允许崩溃但不允许被看到", "此单持有人享有微笑豁免权"],
+      "validity": "至你看穿为止"
+    },
+    "S5": {
+      "title": "想安静别问",
+      "l2": ["别问了", "没事", "想静静"],
+      "scope": "安静值班",
+      "stampLine1": "静音中",
+      "stampLine2": "请勿打扰",
+      "footer": ["不说话≠生气 · 只是累了", "安静是充电 · 不是冷战", "此单生效期间，问了也不答"],
+      "validity": "至你不问为止"
+    },
+    "S6": {
+      "title": "约了但身体没签",
+      "l2": ["嘴上答应了", "身体没签字", "出不了门"],
+      "scope": "精神出席",
+      "stampLine1": "精神到场",
+      "stampLine2": "身体缺席",
+      "footer": ["心意已到 · 肉体叛变", "社交电量不足 · 无法启动", "持此单可合法放鸽子"],
+      "validity": "至你下次约为止"
+    },
+    "S7": {
+      "title": "消息看到没回",
+      "l2": ["看到了", "没回", "不是针对你"],
+      "scope": "已读不回",
+      "stampLine1": "已读",
+      "stampLine2": "暂不回复",
+      "footer": ["看到≠能回 · 能回≠想回", "回复需要能量 · 现在没有", "持此单享有延迟回复权"],
+      "validity": "至你再发一条为止"
+    },
+    "S8": {
+      "title": "被催被安排",
+      "l2": ["别催了", "催也没用", "我知道了"],
+      "scope": "抗催值班",
+      "stampLine1": "抗催中",
+      "stampLine2": "请排队",
+      "footer": ["催一次扣一次进度 · 现在已欠费", "你的催促已加入队列 · 预计明天处理", "持此单可自动屏蔽催促"],
+      "validity": "至你不催为止"
+    }
+  }
+}
