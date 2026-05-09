@@ -45,3 +45,7 @@
 | 后台羊驼 | B+ | 通过方向；final 时乱涂减 25-35%，羊驼表情更"礼貌撑住" |
 
 口径：本批入库 `mouthpiece-teststone-v0.1/`，作 reference 不是 final。task #30 Done。
+| 2026-05-09 12:24:43 | contact-stubborn-goose-v1 | task31-batch1 | gpt-image-2 (1024x1024 contact 3x2) | https://oss.filenest.top/uploads/77065ea7-5510-4ec2-86ee-fb19d8218e22.png | 42s |
+| 2026-05-09 12:25:16 | contact-low-battery-cat-v1 | task31-batch1 | gpt-image-2 (1024x1024 contact 3x2) | https://oss.filenest.top/uploads/96f77a93-4b7d-472c-b219-2ac88eecb1cb.png | 30s |
+| 2026-05-09 12:25:55 | contact-ddl-hamster-v1 | task31-batch1 | gpt-image-2 (1024x1024 contact 3x2) | https://oss.filenest.top/uploads/c2ad4536-4198-414f-ae10-46ec8b13a1a0.png | 36s |
+| 2026-05-09 12:26:28 | contact-backstage-alpaca-v1 | task31-batch1 | gpt-image-2 (1024x1024 contact 3x2) | https://oss.filenest.top/uploads/53f3212c-5f0f-4e41-9440-432fd184b3e9.png | 29s |
