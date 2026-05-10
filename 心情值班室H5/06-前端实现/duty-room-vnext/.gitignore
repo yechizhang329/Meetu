@@ -1,0 +1,14 @@
+# Logs / build / IDE
+node_modules
+dist
+*.log
+*.local
+.DS_Store
+.vscode/*
+!.vscode/extensions.json
+.idea
+*.tsbuildinfo
+
+# QA scratch / staging output (kept local; not deployed)
+qa-screenshots/
+.qa-tmp/

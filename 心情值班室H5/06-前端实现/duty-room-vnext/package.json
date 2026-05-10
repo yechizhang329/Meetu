@@ -1,0 +1,29 @@
+{
+  "name": "duty-room-vnext",
+  "private": true,
+  "version": "0.1.0-prework",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "lint": "eslint .",
+    "qa:vnext-config-integrity": "npx tsx scripts/qa-vnext-config-integrity.ts",
+    "qa:no-placeholder-text": "node scripts/qa-no-placeholder-text.cjs",
+    "qa:no-v1-leak": "node scripts/qa-no-v1-leak.cjs",
+    "qa:all-prework": "npm run qa:vnext-config-integrity && npm run qa:no-v1-leak"
+  },
+  "dependencies": {
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5"
+  },
+  "devDependencies": {
+    "@types/node": "^24.12.2",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.1",
+    "tsx": "^4.21.0",
+    "typescript": "~6.0.2",
+    "vite": "^8.0.10"
+  }
+}
