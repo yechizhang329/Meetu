@@ -15,6 +15,7 @@
     "qa:batch": "npx tsx scripts/qa-batch-32.ts",
     "qa:no-placeholder": "node scripts/qa-no-placeholder.cjs",
     "qa:asset-magenta": "node scripts/qa-asset-magenta.cjs",
+    "qa:live-receipt-avatar": "node scripts/qa-live-receipt-avatar.cjs",
     "deploy:gh": "npm run build && rm -rf ../../../docs/duty-room-v1/duty-room-v1/receipts-staging-whitelist-v1 && cp -R dist/* ../../../docs/duty-room-v1/"
   },
   "dependencies": {
