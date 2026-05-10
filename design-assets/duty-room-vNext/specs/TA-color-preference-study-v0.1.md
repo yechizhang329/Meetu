@@ -77,7 +77,76 @@
 
 ---
 
-## §2 各角色色彩 mapping (具体)
+## §1.5 Color Preference Matrix — 4 维 (per David 5:20:30 + Fiona 5:21:03)
+
+PM 初口径 (Fiona 5:21:02): **低压力底色 + 中高可读局部对比 + 主体中低饱和 + 1 个小面积 accent; 不全屏多巴胺, 不全灰米性冷淡**。本节用样本证据支撑或修正。
+
+**注 (per Fiona DM 5:21:40 #2)**: 本节 HSL / ΔE / 饱和度百分比是 **estimated / approximate** 推算, 不是 pixel-measured 精确数据 — 由 hex 值用标准颜色空间转换工具估算, 用作设计参考区间, 不是 brand spec 硬数据。
+
+**注 (per Fiona DM 5:21:40 #1)**: 本节引用的 cultural IP (Loopy / Chiikawa / Capybara / momo) 仅作 **research evidence**, **不进入 prompt v3** — prompt v3 § 6 已自检无 IP 名称引用, 只用 register 描述 (dusty rose-pink / warm tan / etc.)。
+
+### 1. 对比度
+
+| 维度 | TA 偏好 | 证据 / 反例 |
+| --- | --- | --- |
+| 全局对比 (画面整体) | **中等-偏低**, "低压力" | Loopy/Chiikawa 表情包都是 cream 底 + warm pastel body, 不是黑白强对比. momo 头像也是 cream + dusty pink mid-tone |
+| 局部对比 (角色轮廓 / 描边) | **高对比** (warm near-black `#3A332C` 1.5-2px 不规则 outline on warm pastel body, ΔE ~70+) | Capybara/Loopy IP 共通: outline 必须高对比清晰; uniform thin gray line = 弱; pure black uniform = chibi 红线 |
+| 角色表情对比 (眼/嘴/cheek dot) | **中-高对比** (小区域强信号) | rosy cheek dot 是高对比小红点 (Loopy/Chiikawa 共有); 眼是 dot pupil 强黑点; 嘴是 outline 黑线 — 全部小面积高对比 |
+| 文字 / 小道具对比 | **高对比** (能一眼读) | 道具如 sage mug / butter book 都是中-高对比小区域 hit |
+| 不偏好 | **全画面黑白硬对比** / **素描式明暗** | David 1:51 拒 monochrome warm beige + "性冷淡素描垃圾" 直接对应 |
+
+**5 角色构图执行**: 背景柔和 (warm cream `#F4EDE2`) + 角色主体中低饱和 + outline + 1 accent 小面积高对比 = "低压力 + 局部冲突可读"
+
+### 2. 饱和度
+
+| 维度 | TA 偏好 | HSL S 区间 | 证据 / 反例 |
+| --- | --- | --- | --- |
+| 角色主体 | **低-中饱和 (desaturated pastel)** | S 30-55% | dusty rose `#E89BAE` ≈ S 60% pastel; warm tan `#C8A887` ≈ S 32%; muddy khaki `#A89A86` ≈ S 12% (cool side) — 全是 desat pastel, 与 Loopy 粉海狸 / Capybara tan / Chiikawa pastel 一致 register |
+| 背景主底 | **极低饱和** (近中性 warm) | S < 20% | warm cream `#F4EDE2` ≈ S 35% 浅 cream, 接近中性; WeChat 表情包顶流 6/8 都是 warm cream/white 底 |
+| Accent (1 小面积) | **中-高饱和点缀** | S 60-85% | butter yellow `#F5C84B` ≈ S 89%; sage `#7FA88E` ≈ S 18% (低饱和补色) — 一场景 1 种, 不双撞 |
+| 不偏好 | candy pink `#FF6B9D` (S 100%) / 多巴胺撞色全开 | S > 80% 大面积 | 发疯文学视觉机制 "**软萌无攻击性卡通表情配合杀伤力文案**" — 视觉**不升饱和**, 张力靠文字 (知乎源直接引用) |
+| 也不偏好 | 全灰米 monochrome | S < 10% 全画面 | David 1:51 死刑 "性冷淡素描垃圾" |
+
+**关键原则**: 单图饱和度**分级**(背景<10%, 主体30-55%, accent 60-89%), 不是统一一档
+
+### 3. 色彩数量
+
+| 角色构图复杂度 | 推荐 effective color 数 | 拆解 |
+| --- | --- | --- |
+| **单角色简单 (B 猫睡)** | **4 个有效色** | bg `#F4EDE2` + body `#D9D4CC` + accent panel `#E8F0E5` + outline `#3A332C` |
+| **C 树懒 + 咖啡 + 课本** | **5 个有效色** | bg + body tan + belly cream + accent (sage mug 或 butter book) + outline |
+| **D 猴 + 键盘 + 香蕉 + 反穿装扮 + mismatched 袜** | **6 个有效色** (D 允许多 1) | bg + body khaki + cream face + vest blue + sock 1 mismatch + sock 2 mismatch + outline; 但 vest + 2 sock 都是低饱和 + 香蕉作 1 主 accent yellow `#F5C84B` |
+| **不推荐** | **超过 6 色** | 易显杂乱低龄 / sticker pack 感; D 允许"乱" 但要"乱但不脏" (per Fiona 5:21) |
+| **不推荐** | **少于 3 色** | 易显性冷淡 monochrome |
+
+**5 角色统一规则**: 共享 base 3 色 (bg `#F4EDE2` / outline `#3A332C` / accent panel 1 种) + 角色独有 1-3 色
+
+**D 允许多色错位的理由**: PRD §5 D "把状态变成怪东西"; D 的反穿装扮 + mismatched 袜本身就是色彩 mismatch 视觉化, 是产品意图。但仍守"低饱和主导 + 1 个 accent" 防止变成 dopamine 撞色。
+
+### 4. 色彩搭配
+
+| 搭配方式 | 适用层级 | 推荐 / 不推荐 |
+| --- | --- | --- |
+| **相近色 / 邻近色 (analogous)** | 角色主体 + 背景 + cream belly | ✅ **主导搭配** — A 章鱼粉系 / C 树懒棕系 / E 刺猬焦糖系都是邻近色和谐; momo 也是 dusty pink 同色系 |
+| **互补色作 accent hit** | 1 小面积点缀 | ✅ **允许 1 处** — sage `#7FA88E` 对 dusty pink, butter `#F5C84B` 对 muddy khaki D 猴; 但**不大面积**, accent 占 < 10% 画面 |
+| **撞色 / dopamine quartet** | 任何场景 | ❌ **拒** — 发疯文学反向证据 (视觉保软, 文字升张力) |
+| **D 的"系统错位" 小面积反差** | D 反穿 vest + mismatched 袜 + 香蕉 accent | ✅ **D 限定允许小面积反差** — D 是产品意图允许的特例, 但仍守"低饱和主导, 反差点缀" (例: vest 是 muted blue `#9BAEBA` 不是电光蓝 `#3D8BFF`; 袜子是 muted color mismatch 不是 dopamine 撞) |
+| **monochrome 同色系无 accent** | 任何场景 | ❌ **拒** — 性冷淡死路 |
+
+**关键决策 (per Fiona 5:21:03 提问)**: D 是否允许更强对比? **小面积**允许 (反穿 vest 与 vest 内 cream face 颜色差, 2 只袜子颜色 mismatch) — 这是 D 形态的产品意图; **大面积**仍守同色系主导 — 防止整个 D 变成 dopamine 撞色背景。
+
+### §1.5.5 5 角色 4 维 cross-check 表
+
+| 角色 | 全局对比 | 主体饱和度 | 色彩数 | 搭配方式 |
+| --- | --- | --- | --- | --- |
+| A 章鱼 | 中 | dusty rose ≈ S 60% | 5 (bg + body 粉 + 灰紫腹 + dusty pink panel + outline) | 同色系 (粉/紫邻近) + 1 sage accent (small hit) |
+| B 猫 | 低 | grey-cream ≈ S 8% | 4 (bg + body + sage panel + outline) | 极相近色 (灰白 + sage panel) + 1 butter accent (small hit) |
+| C 树懒 | 中 | tan ≈ S 32% | 5 (bg + body + belly + sage mug + butter book + outline) | 邻近色 (tan/cream 暖系) + sage + butter 互补 accent 双 hit (但都小面积 < 10%) |
+| D 猴 | 中-高局部 | khaki ≈ S 12% (body) | 6 (bg + body + face + vest + sock×2 + 香蕉 + outline) | 同色系主导 (khaki/cream) + D 限定小面积反差 (反穿 vest + mismatched 袜 + 香蕉 accent) |
+| E 刺猬 | 中 | caramel ≈ S 38% | 4 (bg + body + 刺色 + outline) | 单色系 (caramel/dark brown 同温度) + 1 sage 或 butter accent (small hit) |
+
+---
+
 
 | 角色 | 形态 | 主体色 hex | accent panel | 调性参考 IP |
 | --- | --- | --- | --- | --- |
