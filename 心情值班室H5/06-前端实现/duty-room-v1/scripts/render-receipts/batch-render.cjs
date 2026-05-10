@@ -30,12 +30,14 @@ const DEFAULT_OUTPUT = path.join(PROJECT_ROOT, 'public', 'duty-room-v1', 'receip
 const argOutIdx = process.argv.indexOf('--out');
 const OUTPUT_DIR = argOutIdx >= 0 ? path.resolve(process.argv[argOutIdx + 1]) : DEFAULT_OUTPUT;
 
-// Avatar inner HTML per character type
-const AVATAR_INNER = {
-  cat: `<div class="face"><span class="eyes">— —</span><span class="whiskers"></span><span class="battery"></span></div>`,
-  goose: `<div class="face"><span class="eyes">• •</span><span class="beak"></span></div>`,
-  hamster: `<div class="face"><span class="eyes">· ·</span><span class="seed">🌰</span></div>`,
-  alpaca: `<div class="face"><span class="curl">〰〰〰</span><span class="eyes">◉ ◉</span></div>`
+// Whitelist v1 role asset paths (per brief v2 §3 / Phoebe 13:14 W4 v2 lock)
+// Per Fiona 12:48:02 / 12:48:38: AVATAR_INNER / .avatar-* CSS placeholder integer-group banned in final
+const ROLE_ASSETS_DIR = path.resolve(PROJECT_ROOT, '..', '..', 'design-assets', 'duty-room-p0', 'contact-crops-transparent');
+const ROLE_IMG_SRC = {
+  cat:     `file://${path.join(ROLE_ASSETS_DIR, 'low-battery-cat',   'low-battery-cat-main-v1.png')}`,
+  goose:   `file://${path.join(ROLE_ASSETS_DIR, 'stubborn-goose',    'stubborn-goose-main-v1.png')}`,
+  hamster: `file://${path.join(ROLE_ASSETS_DIR, 'ddl-hamster',       'ddl-hamster-main-v1.png')}`,
+  alpaca:  `file://${path.join(ROLE_ASSETS_DIR, 'backstage-alpaca',  'backstage-alpaca-main-v3.png')}`,
 };
 
 async function main() {
@@ -102,8 +104,7 @@ async function main() {
         .replace(/\{\{L2_LINE1\}\}/g, l2[0])
         .replace(/\{\{L2_LINE2\}\}/g, l2[1])
         .replace(/\{\{L2_LINE3\}\}/g, l2[2])
-        .replace(/\{\{AVATAR_CLASS\}\}/g, `avatar-${char.avatarType}`)
-        .replace(/\{\{AVATAR_INNER\}\}/g, AVATAR_INNER[char.avatarType] || '')
+        .replace(/\{\{ROLE_IMG_SRC\}\}/g, ROLE_IMG_SRC[char.avatarType] || '')
         .replace(/\{\{SCOPE\}\}/g, scene.scope)
         .replace(/\{\{SIGN\}\}/g, char.sign)
         .replace(/\{\{TIME\}\}/g, time)

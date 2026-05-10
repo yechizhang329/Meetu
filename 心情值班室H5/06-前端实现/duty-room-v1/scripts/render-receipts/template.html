@@ -137,13 +137,7 @@
     border-top: 2.5px dashed var(--ink-mute);
     opacity: 0.5;
   }
-  .tear-scissor {
-    padding: 0 14px;
-    font-size: 15px;
-    color: var(--ink-mute);
-    opacity: 0.55;
-    transform: translateY(-2px);
-  }
+  /* .tear-scissor: removed per Phoebe 13:14 B.2 / Fiona 13:15 PM 锁 (final 红线: emoji 占位) */
 
   /* ==== L2 嘴替主文 ==== */
   .l2 {
@@ -185,219 +179,24 @@
     gap: 28px;
   }
 
-  /* ==== 动物头像 - 通用 ==== */
+  /* ==== 角色资产容器 (whitelist v1, form A) ==== */
+  /* per Phoebe 13:14 B.1 / Fiona 13:15 PM 锁 / Fiona 13:31 PM QA bump: height 160 + 去除 box-shadow/卡片感 */
   .avatar {
     position: relative;
-    width: 110px;
-    height: 110px;
-    border-radius: 50%;
-    border: 3px solid var(--ink-main);
+    width: auto;
+    height: 160px;
     flex-shrink: 0;
     transform: rotate(-3deg);
-    box-shadow: 2px 3px 0 rgba(0,0,0,0.12);
     overflow: visible;
   }
-
-  /* 猫：红色底 + 猫耳 + 胡须 + 低电量符号 */
-  .avatar-cat {
-    background: radial-gradient(circle at 30% 28%, #D96F5F 0%, var(--character-accent) 45%, #9A372D 100%);
-  }
-  /* 猫耳 */
-  .avatar-cat::before {
-    content: '';
-    position: absolute;
-    top: -12px; left: 18px;
-    width: 22px; height: 26px;
-    background: var(--character-accent);
-    clip-path: polygon(50% 0, 100% 100%, 0 100%);
-    box-shadow: 50px 0 0 var(--character-accent);
-    z-index: 10;
-  }
-  /* 猫的内容: 困眼 + 胡须 + 低电量 */
-  .avatar-cat .face {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  .avatar-cat .eyes {
-    font-size: 22px;
-    font-weight: 900;
-    letter-spacing: 16px;
-    text-indent: 16px;
-    color: #2A1810;
-    margin-top: 6px;
-  }
-  .avatar-cat .whiskers {
-    position: absolute;
-    top: 58%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 8px;
-  }
-  .avatar-cat .whiskers::before,
-  .avatar-cat .whiskers::after {
-    content: '〰';
-    font-size: 12px;
-    color: #2A1810;
-    opacity: 0.7;
-  }
-  .avatar-cat .battery {
-    position: absolute;
-    bottom: 10px;
-    right: -8px;
-    width: 22px;
-    height: 12px;
-    border: 2px solid #2A1810;
-    border-radius: 2px;
-    opacity: 0.8;
-  }
-  .avatar-cat .battery::before {
-    content: '';
-    position: absolute;
-    left: 2px;
-    top: 2px;
-    width: 5px;
-    height: 6px;
-    background: #B8463A;
-    border-radius: 1px;
-  }
-  .avatar-cat .battery::after {
-    content: '';
-    position: absolute;
-    right: -4px;
-    top: 3px;
-    width: 3px;
-    height: 6px;
-    background: #2A1810;
-    border-radius: 0 2px 2px 0;
-    opacity: 0.8;
+  .role-img {
+    display: block;
+    width: auto;
+    height: 160px;
+    object-fit: contain;
+    /* 红线: 禁 border-radius / mask / clip-path / object-cover / 中心 crop */
   }
 
-  /* 鹅：绿底 + 长脖 + 嘴 */
-  .avatar-goose {
-    background: radial-gradient(circle at 30% 28%, #5A8E6A 0%, var(--character-accent) 45%, #1E3A28 100%);
-  }
-  .avatar-goose::before {
-    content: '';
-    position: absolute;
-    top: -16px; left: 50%;
-    transform: translateX(-50%);
-    width: 16px; height: 22px;
-    background: var(--character-accent);
-    border-radius: 8px 8px 0 0;
-    z-index: 10;
-  }
-  .avatar-goose .face {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  .avatar-goose .eyes {
-    font-size: 22px;
-    font-weight: 900;
-    letter-spacing: 16px;
-    text-indent: 16px;
-    color: #1E3A28;
-    margin-top: 2px;
-  }
-  .avatar-goose .beak {
-    position: absolute;
-    bottom: 26px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 0;
-    height: 0;
-    border-left: 8px solid transparent;
-    border-right: 8px solid transparent;
-    border-top: 12px solid #D4A020;
-  }
-
-  /* 仓鼠：橙底 + 圆耳 + 种子 */
-  .avatar-hamster {
-    background: radial-gradient(circle at 30% 28%, #E8A060 0%, var(--character-accent) 45%, #A85820 100%);
-  }
-  .avatar-hamster::before {
-    content: '';
-    position: absolute;
-    top: -6px; left: 14px;
-    width: 20px; height: 20px;
-    background: var(--character-accent);
-    border-radius: 50%;
-    box-shadow: 56px 0 0 var(--character-accent);
-    z-index: 10;
-  }
-  .avatar-hamster .face {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  .avatar-hamster .eyes {
-    font-size: 18px;
-    font-weight: 900;
-    letter-spacing: 14px;
-    text-indent: 14px;
-    color: #4A2800;
-    margin-top: 4px;
-  }
-  .avatar-hamster .seed {
-    position: absolute;
-    bottom: 18px;
-    font-size: 14px;
-    color: #4A2800;
-    opacity: 0.8;
-  }
-
-  /* 羊驼：蓝底 + 卷毛 + 眼镜 */
-  .avatar-alpaca {
-    background: radial-gradient(circle at 30% 28%, #6AA0B8 0%, var(--character-accent) 45%, #2A5A6E 100%);
-  }
-  .avatar-alpaca::before {
-    content: '';
-    position: absolute;
-    top: -10px; left: 22px;
-    width: 66px; height: 18px;
-    background: var(--character-accent);
-    border-radius: 10px 10px 0 0;
-    z-index: 10;
-    opacity: 0.9;
-  }
-  .avatar-alpaca .face {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  .avatar-alpaca .eyes {
-    font-size: 16px;
-    font-weight: 900;
-    letter-spacing: 8px;
-    text-indent: 8px;
-    color: #1A3A4A;
-    margin-top: 8px;
-    border: 1.5px solid #1A3A4A;
-    border-radius: 8px;
-    padding: 2px 6px;
-  }
-  .avatar-alpaca .curl {
-    position: absolute;
-    top: 8px;
-    font-size: 10px;
-    color: #1A3A4A;
-    opacity: 0.6;
-    letter-spacing: 2px;
-  }
 
   .l3-text {
     flex: 1;
@@ -589,7 +388,6 @@
 
     <div class="tear">
       <div class="tear-line"></div>
-      <div class="tear-scissor">&#9986;</div>
       <div class="tear-line"></div>
     </div>
 
@@ -604,14 +402,13 @@
 
     <div class="tear">
       <div class="tear-line"></div>
-      <div class="tear-scissor">&#9986;</div>
       <div class="tear-line"></div>
     </div>
 
     <!-- L3 动物签名 -->
     <div class="l3">
-      <div class="avatar {{AVATAR_CLASS}}">
-        {{AVATAR_INNER}}
+      <div class="avatar">
+        <img class="role-img" src="{{ROLE_IMG_SRC}}" alt="{{CHARACTER_NAME}}">
       </div>
       <div class="l3-text">
         <div class="l3-row">本次由：<strong>{{CHARACTER_NAME}}</strong> 接管</div>
@@ -626,7 +423,6 @@
 
     <div class="tear">
       <div class="tear-line"></div>
-      <div class="tear-scissor">&#9986;</div>
       <div class="tear-line"></div>
     </div>
 

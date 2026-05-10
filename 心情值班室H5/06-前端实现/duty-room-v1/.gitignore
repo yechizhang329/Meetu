@@ -23,3 +23,7 @@ dist-ssr
 
 # QA artifacts (regenerated locally; not part of source)
 qa-screenshots/
+
+# Whitelist integration staging output (kept local; not deployed)
+public/duty-room-v1/receipts-staging-whitelist-v1/
+qa-screenshots/

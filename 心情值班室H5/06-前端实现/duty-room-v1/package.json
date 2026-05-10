@@ -12,7 +12,9 @@
     "verify:canvas": "npx tsx scripts/verify-canvas-dims.ts",
     "qa:mouthpiece": "npx tsx scripts/qa-mouthpiece-samples.ts",
     "qa:h5": "npx tsx scripts/qa-h5-pages.ts",
-    "qa:batch": "npx tsx scripts/qa-batch-32.ts"
+    "qa:batch": "npx tsx scripts/qa-batch-32.ts",
+    "qa:no-placeholder": "node scripts/qa-no-placeholder.cjs",
+    "qa:asset-magenta": "node scripts/qa-asset-magenta.cjs"
   },
   "dependencies": {
     "react": "^19.2.5",
@@ -28,6 +30,7 @@
     "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-plugin-react-refresh": "^0.5.2",
     "globals": "^17.5.0",
+    "pngjs": "^7.0.0",
     "puppeteer": "^24.43.0",
     "typescript": "~6.0.2",
     "typescript-eslint": "^8.58.2",
