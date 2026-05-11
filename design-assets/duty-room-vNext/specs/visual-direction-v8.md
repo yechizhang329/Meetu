@@ -127,12 +127,12 @@ against the floor / picture-bottom edge, some prop up the body from the
 sides, some interlock for support. Visible muscle tension strain marks
 at the base of each tentacle (small angular strain marks) showing they
 are all working hard. The pose reads as "stubbornly holding it together,
-refusing to give an inch". Face: mouth is a tightly compressed flat
-horizontal line (one short thick black stroke), eyes simple deadpan dot
-pupils (small, NOT cute, NOT big), eyebrows 2 simple rough strokes
-slightly furrowed. SPIKE COLOR: bright fluorescent green #1FE07B in
-1-2 small spots — at the contact points where tentacles meet the
-floor/edges, OR a tiny green spark at the corner of the compressed
+refusing to give an inch". Face: mouth is a tightly clenched flat
+horizontal line (one short thick black stroke, tense and unyielding),
+eyes simple deadpan dot pupils (small, NOT cute, NOT big), eyebrows
+2 simple rough strokes slightly furrowed. SPIKE COLOR: bright fluorescent
+green #1FE07B in 1-2 small spots — at the contact points where tentacles
+meet the floor/edges, OR a tiny green spark at the corner of the clenched
 mouth. NO ink spurt, NO yellow splash, NO tears, NO sweat — the 8-leg
 bracing IS the entire visual statement. NO text near this character.
 
@@ -197,7 +197,7 @@ polite smirk, NOT warm, NOT cute, NOT friendly, just composure holding
 back the spines. SPIKE COLOR: light purple #C7A4FF or bright yellow
 #F2EB1B for the dashed safety-distance line OR for 1-2 spine tips. NO
 note-paper edges, NO sticky-note collage, NO orange-red annotation
-marks, NO "?"/"!" symbols (those tokens belong to character 4).
+marks, NO "?" or "!" symbols anywhere on the hedgehog.
 
 OVERALL — All 5 characters share ONE clean white background with no
 panel borders, no gutters, no color block divisions. Characters do not
@@ -251,10 +251,10 @@ monkey posture, NO asymmetric monkey eyes, NO keyboard, NO typewriter,
 NO clothes on the monkey, NO vest, NO socks, NO mismatched outfits.
 NO ball-curl posture for sloth (sloth sprawled flat on paper notes).
 NO aggressive hedgehog, NO bared spines, NO angry hedgehog posture.
-NO ink spurt on the octopus, NO leaking yellow ink — A's "嘴硬" must
-come from 8-leg bracing and tight mouth line, NOT from ink leaks.
-NO orange-red annotation marks on hedgehog (those belong to character
-4 splatters). NO party hat, NO clown costume, NO bowtie, NO top-hat.
+NO ink spurt on the octopus, NO leaking yellow ink — the octopus'
+stubborn-mouth quality must come from 8-leg bracing and tight mouth
+line, NOT from ink leaks.
+NO orange-red annotation marks on hedgehog. NO party hat, NO clown costume, NO bowtie, NO top-hat.
 NO "offline" text, NO "loading" text, NO "ESC" text, NO "ERROR" text
 on B or D characters.
 ```
