@@ -148,7 +148,7 @@ patterns, NO pink-purple feminine palette, NO pastel candy colors, NO
 brand-mascot polish. NO Chinese characters in image (only allowed
 typography is short symbol-like English/numbers: "1%", "404", "DDL",
 "offline", "ZZZ", "!@#", "?", "!". NO "loading" text, NO "ESC", NO
-other English words — ONLY this whitelist).).
+other English words — ONLY this whitelist).
 ```
 
 ---
