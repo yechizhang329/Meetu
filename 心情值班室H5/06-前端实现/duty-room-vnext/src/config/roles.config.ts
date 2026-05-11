@@ -20,7 +20,7 @@ export const ROLES: readonly Role[] = [
     do: ['先否认情绪 + 客观借口推卸 / 虚张声势的决绝', '句末留一个出卖的小细节'],
     dont: ['直接说"我难过/我希望被关心"', '自我揭示"其实我..."', '卖惨'],
     redline: ['不能让用户看到 A 在求安慰', '不能滑向脆弱诊断'],
-    defaultScene: 'S1',
+    defaultScenes: ['S1'],
     backupScenes: ['S2', 'S5'],
   },
   {
@@ -33,8 +33,8 @@ export const ROLES: readonly Role[] = [
     do: ['用系统/配额/状态/在线/低能量等技术化词描述自己关闭', '承认接收'],
     dont: ['说"懒得理你/别烦我"', '带怒气', '把不接入解释成针对某个具体的人'],
     redline: ['不能冷暴力', '不能高姿态'],
-    defaultScene: 'S2',
-    backupScenes: ['S1', 'S5'],
+    defaultScenes: ['S2', 'S5'],
+    backupScenes: ['S1'],
   },
   {
     id: 'C',
@@ -46,7 +46,7 @@ export const ROLES: readonly Role[] = [
     do: ['用任务实操词反讽承认没动（文件夹/在写/明天/进度条）', '保留自知动作'],
     dont: ['甩锅别人', '说"我做不到"撂挑子', '真摆烂式宣言'],
     redline: ['不能消极弃权', '不能怪外部'],
-    defaultScene: 'S3',
+    defaultScenes: ['S3'],
     backupScenes: ['S4', 'S6'],
   },
   {
@@ -59,7 +59,7 @@ export const ROLES: readonly Role[] = [
     do: ['用伪术语/伪学术/同字反复/废话哲学绕开正常回答'],
     dont: ['写正常解释', '用病/症/崩溃/抑郁/疯字', '胡言乱语到读不懂'],
     redline: ['不能精神疾病隐喻', '不能完全没逻辑只为搞怪'],
-    defaultScene: 'S4',
+    defaultScenes: ['S4'],
     backupScenes: ['S1', 'S3', 'S6'],
   },
   {
@@ -76,7 +76,7 @@ export const ROLES: readonly Role[] = [
       '不论用何种 result_text 都不指向具体人',
       '"啊对对对" 仅用于回应观点/说法/讲道理/催促话术；事件/操作/局面用"好好好"',
     ],
-    defaultScene: 'S6',
+    defaultScenes: ['S6'],
     backupScenes: ['S2', 'S3', 'S4', 'S5'],
   },
 ];

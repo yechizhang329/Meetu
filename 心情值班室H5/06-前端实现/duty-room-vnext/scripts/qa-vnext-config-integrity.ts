@@ -59,13 +59,43 @@ for (const r of ROLES) {
   if (!Array.isArray(r.do) || r.do.length === 0) fail.push(`role ${r.id} do empty`);
   if (!Array.isArray(r.dont) || r.dont.length === 0) fail.push(`role ${r.id} dont empty`);
   if (!Array.isArray(r.redline) || r.redline.length === 0) fail.push(`role ${r.id} redline empty`);
-  if (!r.defaultScene) fail.push(`role ${r.id} defaultScene empty`);
+  if (!Array.isArray(r.defaultScenes) || r.defaultScenes.length === 0) fail.push(`role ${r.id} defaultScenes empty`);
   if (!Array.isArray(r.backupScenes)) fail.push(`role ${r.id} backupScenes not array`);
 
-  // Cross-check: role's defaultScene must list role in its rolePool.
-  const defScene = SCENES.find((s) => s.id === r.defaultScene);
-  if (defScene && !defScene.rolePool.includes(r.id)) {
-    fail.push(`role ${r.id} defaultScene ${r.defaultScene} does not include role in its rolePool`);
+  // Cross-check: each defaultScene must list role in its rolePool with role as the scene's defaultRoleId.
+  for (const sId of r.defaultScenes || []) {
+    const defScene = SCENES.find((s) => s.id === sId);
+    if (!defScene) {
+      fail.push(`role ${r.id} defaultScenes contains unknown scene ${sId}`);
+      continue;
+    }
+    if (defScene.defaultRoleId !== r.id) {
+      fail.push(`role ${r.id} claims default in scene ${sId}, but scene.defaultRoleId is ${defScene.defaultRoleId}`);
+    }
+    if (!defScene.rolePool.includes(r.id)) {
+      fail.push(`role ${r.id} claims default in scene ${sId}, but role not in scene.rolePool`);
+    }
+  }
+
+  // Cross-check: each backupScene must list role in its rolePool but NOT as default.
+  for (const sId of r.backupScenes || []) {
+    const bScene = SCENES.find((s) => s.id === sId);
+    if (!bScene) {
+      fail.push(`role ${r.id} backupScenes contains unknown scene ${sId}`);
+      continue;
+    }
+    if (!bScene.rolePool.includes(r.id)) {
+      fail.push(`role ${r.id} claims backup in scene ${sId}, but role not in scene.rolePool`);
+    }
+    if (bScene.defaultRoleId === r.id) {
+      fail.push(`role ${r.id} listed as backup in scene ${sId}, but scene.defaultRoleId is ${r.id} (should be in defaultScenes)`);
+    }
+  }
+
+  // Cross-check: defaultScenes ∩ backupScenes must be empty
+  const ds = new Set(r.defaultScenes || []);
+  for (const sId of r.backupScenes || []) {
+    if (ds.has(sId)) fail.push(`role ${r.id} scene ${sId} listed in both defaultScenes and backupScenes`);
   }
 
   // Quote coverage
@@ -75,9 +105,24 @@ for (const r of ROLES) {
   const anyPreview = qs.find((q) => q.usages.includes('preview'));
   if (!anyPreview) fail.push(`role ${r.id} missing preview quote (any tier)`);
 
-  // imageRef field exists (placeholder OK; tested separately by qa:no-placeholder-text in strict mode)
   if (typeof r.imageRef !== 'string' || r.imageRef.length === 0) {
     fail.push(`role ${r.id} imageRef empty`);
+  }
+}
+
+// Reverse cross-check: every scene's defaultRoleId must list this scene in role.defaultScenes;
+// every (rolePool - defaultRoleId) member must list this scene in role.backupScenes.
+for (const s of SCENES) {
+  const defRole = ROLES.find((r) => r.id === s.defaultRoleId);
+  if (defRole && !defRole.defaultScenes.includes(s.id)) {
+    fail.push(`scene ${s.id} defaultRoleId is ${s.defaultRoleId}, but role.defaultScenes does not include ${s.id}`);
+  }
+  for (const r of s.rolePool) {
+    if (r === s.defaultRoleId) continue;
+    const role = ROLES.find((x) => x.id === r);
+    if (role && !role.backupScenes.includes(s.id)) {
+      fail.push(`scene ${s.id} rolePool member ${r} is not default, but role.backupScenes does not include ${s.id}`);
+    }
   }
 }
 

@@ -38,9 +38,9 @@ export interface Role {
   dont: string[];
   /** SoT §2 redline: 角色硬红线, 不外显. */
   redline: string[];
-  /** 该角色的默认 scene (SoT §2 default scene). */
-  defaultScene: SceneId;
-  /** 该角色作为备选的 scenes (SoT §2 backup scenes). */
+  /** 该角色的默认 scenes (SoT §2 default scene; B 有 S2+S5 两个). */
+  defaultScenes: SceneId[];
+  /** 该角色作为备选的 scenes (SoT §2 backup scenes); 与 defaultScenes 不重叠. */
   backupScenes: SceneId[];
 }
 

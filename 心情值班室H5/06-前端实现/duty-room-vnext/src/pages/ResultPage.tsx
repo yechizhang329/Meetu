@@ -4,7 +4,7 @@ import type { Scene, RoleId, RoleQuote } from '../data/types';
 import { useResultPageState } from '../state/useResultPageState';
 import { ROLE_BY_ID } from '../config/roles.config';
 import { pickRoleCardQuote, pickPreviewQuote } from '../config/quotes.config';
-import { VARIANTS } from '../config/variants.config';
+import { VARIANTS, variantCountOf } from '../config/variants.config';
 import { ResultImage } from '../components/ResultImage';
 import { CurrentRoleCard } from '../components/CurrentRoleCard';
 import { ChangeWordingButton } from '../components/ChangeWordingButton';
@@ -42,7 +42,10 @@ export function ResultPage({ scene, onBackToSelect }: Props) {
       <CurrentRoleCard role={currentRole} roleCardQuote={currentRoleCardQuote} />
 
       <div style={{ margin: '12px 0' }}>
-        <ChangeWordingButton onClick={changeWording} />
+        <ChangeWordingButton
+          variantCount={variantCountOf(state.sceneId, state.currentRoleId)}
+          onClick={changeWording}
+        />
       </div>
 
       <AlternateRoleCards
