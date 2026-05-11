@@ -76,11 +76,10 @@ SIMPLIFIED: large block-shape bodies, minimal interior detail, NO
 detailed eyebrows, NO muscle lines, NO realistic fur texture, NO fine
 hatching. Each panel includes ONE small-area accent "spike color" that
 provides emotional punch. Hand-written wobbly characters only —
-absolutely NO printed/monospace/terminal fonts. Allowed text tokens
-(all in hand-written wobbly style): "ZZZ", "DDL", "404", "1%", "???",
-"!!!", and short Chinese annotations of 2-4 characters at most. NO
-English words other than the listed tokens. NO long sentences. NO
-captions. NO logos.
+absolutely NO printed/monospace/terminal fonts. Allowed text tokens (all in hand-written wobbly style): "ZZZ", "DDL",
+"404", "1%", "%", "!", "???", "!!!". NO Chinese characters anywhere
+in the image. NO English words other than the listed tokens. NO long
+sentences. NO captions. NO logos.
 
 PANEL 1 (vivid orange-red #FF6A3D background, clean solid color) — An
 octopus with a light cream / off-white body and rough thick black marker
