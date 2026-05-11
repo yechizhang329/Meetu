@@ -1,9 +1,9 @@
-// vNext ResultPage — 5 block layout per PRD §7.
+// vNext ResultPage — 5 block layout per PRD §7 + SoT §6.
 
-import type { Scene } from '../data/types';
+import type { Scene, RoleId, RoleQuote } from '../data/types';
 import { useResultPageState } from '../state/useResultPageState';
 import { ROLE_BY_ID } from '../config/roles.config';
-import { QUOTES_BY_ROLE } from '../config/quotes.config';
+import { pickRoleCardQuote, pickPreviewQuote } from '../config/quotes.config';
 import { VARIANTS } from '../config/variants.config';
 import { ResultImage } from '../components/ResultImage';
 import { CurrentRoleCard } from '../components/CurrentRoleCard';
@@ -20,23 +20,26 @@ export function ResultPage({ scene, onBackToSelect }: Props) {
   const { state, changeWording, switchRole, alternateRoleIds } = useResultPageState(scene);
   const currentRole = ROLE_BY_ID[state.currentRoleId];
   const variant = VARIANTS.find((v) => v.variantId === state.variantId);
-  const currentRoleQuote = QUOTES_BY_ROLE[state.currentRoleId]?.find((q) => q.usage === 'role_card');
+  const currentRoleCardQuote = pickRoleCardQuote(state.currentRoleId);
 
   const alternateRoles = alternateRoleIds.map((rid) => ROLE_BY_ID[rid]).filter(Boolean);
-  const quotePreviewByRole = Object.fromEntries(
-    alternateRoleIds.map((rid) => [rid, QUOTES_BY_ROLE[rid]?.find((q) => q.usage === 'alternate_card')]),
-  );
+  const previewQuoteByRole: Partial<Record<RoleId, RoleQuote>> = {};
+  for (const rid of alternateRoleIds) {
+    const q = pickPreviewQuote(rid);
+    if (q) previewQuoteByRole[rid] = q;
+  }
 
   return (
     <div className="vnext-result-page" style={{ padding: 24, maxWidth: 600, margin: '0 auto' }}>
       <button onClick={onBackToSelect} style={{ fontSize: 12 }}>← 重选场景</button>
       <h2 style={{ fontSize: 16, marginTop: 12 }}>
-        {scene.id}: {scene.externalDirection}
+        {scene.id}: {scene.sceneTitle}
       </h2>
+      <div style={{ fontSize: 11, opacity: 0.6, marginTop: 4 }}>{scene.sceneExamples}</div>
 
       <ResultImage scene={scene} role={currentRole} variant={variant} />
 
-      <CurrentRoleCard role={currentRole} quote={currentRoleQuote} />
+      <CurrentRoleCard role={currentRole} roleCardQuote={currentRoleCardQuote} />
 
       <div style={{ margin: '12px 0' }}>
         <ChangeWordingButton onClick={changeWording} />
@@ -44,7 +47,7 @@ export function ResultPage({ scene, onBackToSelect }: Props) {
 
       <AlternateRoleCards
         alternateRoles={alternateRoles}
-        quotePreviewByRole={quotePreviewByRole}
+        previewQuoteByRole={previewQuoteByRole}
         onPick={switchRole}
       />
 

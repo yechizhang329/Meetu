@@ -1,10 +1,11 @@
-# 心情值班室 vNext (P0 prework)
+# 心情值班室 vNext (P1 文案接入)
 
-**Status**: P0 技术底座 — placeholder 内容, 不接 final copy / final visual。
-**Created**: 2026-05-10 (commit pending)
+**Status**: P1 文案接入完成 — final copy 已落 (5 角色 / 6 场景 / 32 quotes / 18 result_text); imageRef 仍 placeholder 等 P2 视觉。
+**Created**: 2026-05-10 (P0); **Updated**: 2026-05-11 (P1 SoT 接入)
 **Owner**: @Dave (engineering)
-**SoT**: `Meetu/产品文档/2026-05-10-心情值班室-vNext-PRD-v2.1-角色嘴替重构中文版.md`
-**Task**: #28 (`#代码Engineering:54595862`)
+**Product SoT**: `Meetu/产品文档/2026-05-10-心情值班室-vNext-PRD-v2.1-角色嘴替重构中文版.md`
+**Copy SoT**: `Meetu/产品文档/2026-05-11-心情值班室-vNext-copy-sot-final.md` (post-personality_line removal)
+**Task**: #28 (`#代码Engineering:54595862` + `#代码Engineering:4d1a2260` 文案 handoff thread)
 
 ---
 
@@ -41,50 +42,43 @@
 
 ---
 
-## P0 范围 (本 commit)
+## P1 已完成 (本 commit)
 
-- 数据 schema (`src/data/types.ts`): RoleId / SceneId / Role / RoleQuote / Scene / ResultVariant / ResultPageState
-- Config (`src/config/{roles,scenes,quotes,variants}.config.ts`): 5 角色 / 6 场景 / 35 quotes / 36 variants 全 placeholder
-- 状态机 (`src/state/useResultPageState.ts`): init / changeWording / switchRole / resetScene
+- 数据 schema (`src/data/types.ts`): RoleId / SceneId / Role (含 roleProfile / voicePrinciple / do / dont / redline / defaultScene / backupScenes) / RoleQuote (含 usages 数组 + tier=master/backup) / Scene (含 sceneTitle + sceneExamples) / ResultVariant / ResultPageState
+- Config 全部 final 文案 (`src/config/{roles,scenes,quotes,variants}.config.ts`):
+  - 5 角色 final 命名: 嘴硬章鱼 / 断电猫 / 躺平树懒 / 整活吗喽 / 高情商刺猬
+  - 6 场景 final sceneTitle + sceneExamples
+  - 32 quotes (15 master + 17 backup, 含 usages 多用途)
+  - 18 result_text final
+  - imageRef 仍 placeholder (等 P2 视觉)
+- 状态机 (`src/state/useResultPageState.ts`): init / changeWording (round-robin, P1 单 variant 退化) / switchRole (pool 内, variant 回 default) / resetScene
 - Hash router (`src/lib/hash-router.ts`)
-- 5 组件 (`src/components/{ResultImage, CurrentRoleCard, ChangeWordingButton, AlternateRoleCards, ResultActions}.tsx`)
-- 3 页面 (`src/pages/{IntroPage, SceneSelectPage, ResultPage}.tsx`)
-- App + main (`src/App.tsx`, `src/main.tsx`)
-- 3 QA gate (`scripts/qa-{vnext-config-integrity, no-placeholder-text, no-v1-leak}.cjs`)
-- Vite / TSC / package / .gitignore / index.html
+- 5 组件骨架 (P1 用 final 文案 render, neutral CSS placeholder 等 P2 视觉)
+- 3 页面: IntroPage / SceneSelectPage / ResultPage
+- 3 QA gate (npm scripts):
+  - `qa:vnext-config-integrity`: 6 scene / 5 role / role 字段完整 (含 do/dont/redline/voicePrinciple) / 18 result_text 覆盖 18 组合 / 每 role ≥1 master role_card quote + ≥1 preview quote / role.defaultScene 在该 scene rolePool 内
+  - `qa:no-placeholder-text`: count-only; P1 仅 imageRef placeholder
+  - `qa:no-v1-leak`: 24 黑名单 patterns, 0 hit
 
-## 不在 P0 范围 (留 P1/P2/P3)
+## 不在 P1 范围 (留 P2/P3)
 
-- 最终角色名、style phrase、personality line、quotes (P1 等文案 brief)
-- 最终视觉资产、imageRef 真实路径、结果图 layout (P2 等视觉 brief)
-- 分享图 canvas 导出 (P2)
-- 部署 npm script `deploy:gh-vnext` + GH Pages live (P3)
-- `qa:asset-magenta` / `qa:live-receipt-avatar` 校准到 vNext (P3)
+- imageRef 真实路径 (`scripts/qa-asset-magenta` 校准 vNext)
+- 结果图 layout / Block2/Block4 视觉细化
+- 分享图 canvas 导出
+- 部署 npm script `deploy:gh-vnext` + GH Pages live
+- `qa:live-receipt-avatar` 校准到 vNext
 
-## P0 验证
+## P1 验证
 
 ```bash
 cd Meetu/心情值班室H5/06-前端实现/duty-room-vnext
 npm install
-npm run qa:vnext-config-integrity   # PASS: 6 scene + 5 role + ≥35 quote + ≥36 variant + 18 组合覆盖
-npm run qa:no-placeholder-text      # ℹ️ count-only (P0 全 placeholder 是 expected)
+npm run qa:vnext-config-integrity   # PASS
+npm run qa:no-placeholder-text      # ℹ️ 1 placeholder (imageRef placeholder, P2 等)
 npm run qa:no-v1-leak               # PASS: 0 v1 leakage
 npm run build                       # PASS: tsc + vite build OK
-npm run dev                         # 本地 H5: intro → scene select → result page; 切换嘴替 / 换说法状态机正确
+npm run dev                         # 本地 H5: 5 final 角色 + 6 final 场景 + 18 final result_text + role_card quote 替代 personality_line
 ```
-
-任何 PR description 必须列: 复用 v1.x 工程能力的清单 + 不复用的产品模块清单。
-
----
-
-## P1 准入条件 (文案侧)
-
-- 5 角色命名候选确定
-- 35+ quotes 文本确定 (3 role_card + 2 alternate_card + 2 result_support × 5)
-- 36+ variants 结果句确定 (18 组合 × ≥2)
-- style phrase / personality line / voice rules / forbidden moves 确定
-- 替换 config 文件 placeholder
-- `qa:no-placeholder-text -- --strict` PASS
 
 ## P2 准入条件 (视觉侧)
 

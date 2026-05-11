@@ -1,14 +1,16 @@
 // Block2: 当前嘴替角色卡 — neutral placeholder skeleton.
-// 视觉 / 卡片样式 / role image 渲染等待 Phoebe v0.1+ 视觉 brief 收口后重写.
+// 视觉细节等 P2 视觉 brief 收口后重写.
+// SoT (post personality_line removal): 角色卡人格/说明位用 §3/§4 quotes (按 usage='role_card') 替代.
 
 import type { Role, RoleQuote } from '../data/types';
 
 interface Props {
   role: Role;
-  quote?: RoleQuote;
+  /** role_card quote — 替代原 personality_line 的人格说明文案. */
+  roleCardQuote?: RoleQuote;
 }
 
-export function CurrentRoleCard({ role, quote }: Props) {
+export function CurrentRoleCard({ role, roleCardQuote }: Props) {
   return (
     <div
       className="vnext-current-role-card"
@@ -36,13 +38,11 @@ export function CurrentRoleCard({ role, quote }: Props) {
           color: '#999',
         }}
       >
-        image: {role.imageRef}
+        {`image: ${role.imageRef}`}
       </div>
       <div style={{ fontWeight: 700 }}>{role.roleName}</div>
-      <div style={{ fontSize: 13, opacity: 0.85 }}>{role.stylePhrase}</div>
-      <div style={{ fontSize: 13, opacity: 0.85, marginTop: 4 }}>{role.personalityLine}</div>
-      {quote ? (
-        <div style={{ marginTop: 8, fontSize: 13, fontStyle: 'italic' }}>“{quote.text}”</div>
+      {roleCardQuote ? (
+        <div style={{ marginTop: 8, fontSize: 14 }}>“{roleCardQuote.text}”</div>
       ) : null}
     </div>
   );

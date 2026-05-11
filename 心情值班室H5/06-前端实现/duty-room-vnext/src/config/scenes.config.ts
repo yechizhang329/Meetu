@@ -1,46 +1,49 @@
-// vNext scenes config — PRD §6 表锁定的 6 场景 + 每场景 3 角色池.
-// externalDirection 是 placeholder, 由文案侧填实.
-// rolePool / defaultRoleId 来自 PRD §6, 是产品决策, 不变.
+// vNext scenes config — final, sourced from SoT §1.
+// SoT: Meetu/产品文档/2026-05-11-心情值班室-vNext-copy-sot-final.md
 
 import type { Scene } from '../data/types';
-
-const TBD = 'TBD-NOT-FINAL-COPY-';
 
 export const SCENES: readonly Scene[] = [
   {
     id: 'S1',
-    externalDirection: TBD + 'S1-想把话轻轻带过',
-    defaultRoleId: 'A',
-    rolePool: ['A', 'B', 'D'] as const,
+    sceneTitle: '想把话轻轻带过',
+    sceneExamples: '你咋了 / 不想解释 / 室友追问近况',
+    defaultRoleId: 'A', // 嘴硬章鱼
+    rolePool: ['A', 'B', 'D'] as const, // 默认 + 备选 1 (断电猫) + 备选 2 (整活吗喽)
   },
   {
     id: 'S2',
-    externalDirection: TBD + 'S2-消息看见但接不住',
-    defaultRoleId: 'B',
+    sceneTitle: '消息看见了，但现在接不住',
+    sceneExamples: '群聊 99+ / 私信已读没回 / 被@但不想回',
+    defaultRoleId: 'B', // 断电猫
     rolePool: ['B', 'A', 'E'] as const,
   },
   {
     id: 'S3',
-    externalDirection: TBD + 'S3-任务在那但没启动',
-    defaultRoleId: 'C',
+    sceneTitle: '任务在那，但人还没启动',
+    sceneExamples: 'DDL / 作业 / 论文 / 被催进度',
+    defaultRoleId: 'C', // 躺平树懒
     rolePool: ['C', 'D', 'E'] as const,
   },
   {
     id: 'S4',
-    externalDirection: TBD + 'S4-校园日常突然离谱',
-    defaultRoleId: 'D',
+    sceneTitle: '校园日常突然离谱',
+    sceneExamples: '课上突然加作业 / 学校发奇怪通知 / 宿舍怪事',
+    defaultRoleId: 'D', // 整活吗喽
     rolePool: ['D', 'E', 'C'] as const,
   },
   {
     id: 'S5',
-    externalDirection: TBD + 'S5-不想被拉进互动',
-    defaultRoleId: 'B',
+    sceneTitle: '现在不想被拉进互动',
+    sceneExamples: '宿舍邀约 / 聚餐活动 / 群里被 cue',
+    defaultRoleId: 'B', // 断电猫
     rolePool: ['B', 'A', 'E'] as const,
   },
   {
     id: 'S6',
-    externalDirection: TBD + 'S6-这事离谱不想开怼',
-    defaultRoleId: 'E',
+    sceneTitle: '这事离谱，但不想亲自开怼',
+    sceneExamples: '被白嫖 / 被安排 / 被甩锅',
+    defaultRoleId: 'E', // 高情商刺猬
     rolePool: ['E', 'C', 'D'] as const,
   },
 ];

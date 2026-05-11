@@ -1,56 +1,83 @@
-// vNext roles config — P0 prework, all values are placeholder.
-// 文案侧 (Lucy + Fiona) 在 PRD §10 brief 完成后填实。
-// 修改这个文件需要 PM 确认 + qa:no-placeholder-text 转 PASS。
+// vNext roles config — final, sourced from SoT §2 (post personality_line removal).
+// SoT: Meetu/产品文档/2026-05-11-心情值班室-vNext-copy-sot-final.md
+//
+// 不外显字段 (内部 voice gate / 编辑护栏): roleProfile / voicePrinciple / do / dont / redline.
+// 外显字段 (前端 P0): roleName.
+// imageRef 仍是 placeholder, 等 P2 视觉接入替换.
 
 import type { Role } from '../data/types';
 
-const TBD = 'TBD-NOT-FINAL-COPY-';
+const TBD_IMAGE = 'TBD-NOT-FINAL-COPY-image-ref';
 
 export const ROLES: readonly Role[] = [
   {
     id: 'A',
-    roleName: TBD + 'A-roleName',
-    imageRef: TBD + 'A-image',
-    stylePhrase: TBD + 'A-style',
-    personalityLine: TBD + 'A-personality',
-    voiceRules: ['嘴硬', '收着', '装没事', '轻微破绽'],
-    forbiddenMoves: ['卖惨', '求安慰', '把用户说成脆弱'],
+    roleName: '嘴硬章鱼',
+    imageRef: TBD_IMAGE + '-A',
+    roleProfile:
+      '八只手都在硬撑，嘴上永远没事。专业：永不承认，辅修：自我伪装。被关心时嘴上永远不承认，但心里其实希望被追问。最不擅长被人盯着看第二眼。',
+    voicePrinciple: '嘴硬掩饰脆弱，渴望被关心但真实意图不明说',
+    do: ['先否认情绪 + 客观借口推卸 / 虚张声势的决绝', '句末留一个出卖的小细节'],
+    dont: ['直接说"我难过/我希望被关心"', '自我揭示"其实我..."', '卖惨'],
+    redline: ['不能让用户看到 A 在求安慰', '不能滑向脆弱诊断'],
+    defaultScene: 'S1',
+    backupScenes: ['S2', 'S5'],
   },
   {
     id: 'B',
-    roleName: TBD + 'B-roleName',
-    imageRef: TBD + 'B-image',
-    stylePhrase: TBD + 'B-style',
-    personalityLine: TBD + 'B-personality',
-    voiceRules: ['离线', '勿扰', '接不动', '先缓缓'],
-    forbiddenMoves: ['冷暴力', '高姿态', '懒得理你'],
+    roleName: '断电猫',
+    imageRef: TBD_IMAGE + '-B',
+    roleProfile:
+      '长期处于"隐身"状态。专业：装没听见，辅修：配额管理。承认看到了消息，但回应这件事本身已经超出今日预算。不冷不傲不解释，不是不合群，是低能量人群。',
+    voicePrinciple: '入口关闭/低能量；承认看见但行为或态度失能',
+    do: ['用系统/配额/状态/在线/低能量等技术化词描述自己关闭', '承认接收'],
+    dont: ['说"懒得理你/别烦我"', '带怒气', '把不接入解释成针对某个具体的人'],
+    redline: ['不能冷暴力', '不能高姿态'],
+    defaultScene: 'S2',
+    backupScenes: ['S1', 'S5'],
   },
   {
     id: 'C',
-    roleName: TBD + 'C-roleName',
-    imageRef: TBD + 'C-image',
-    stylePhrase: TBD + 'C-style',
-    personalityLine: TBD + 'C-personality',
-    voiceRules: ['加载中', '未启动', '进度条没动', '有自知的装死'],
-    forbiddenMoves: ['真摆烂', '甩锅', '不负责'],
+    roleName: '躺平树懒',
+    imageRef: TBD_IMAGE + '-C',
+    roleProfile:
+      '要做的事在那，它也在这，中间断线了。专业：慢，辅修：新建文件夹。最擅长凝视进度条，最不擅长启动；但对自己卡住这件事完全自知，不甩锅、不真摆烂。',
+    voicePrinciple: '知道任务在但启动不了；保留自知，不真摆烂不甩锅',
+    do: ['用任务实操词反讽承认没动（文件夹/在写/明天/进度条）', '保留自知动作'],
+    dont: ['甩锅别人', '说"我做不到"撂挑子', '真摆烂式宣言'],
+    redline: ['不能消极弃权', '不能怪外部'],
+    defaultScene: 'S3',
+    backupScenes: ['S4', 'S6'],
   },
   {
     id: 'D',
-    roleName: TBD + 'D-roleName',
-    imageRef: TBD + 'D-image',
-    stylePhrase: TBD + 'D-style',
-    personalityLine: TBD + 'D-personality',
-    voiceRules: ['抽象', '发疯', '玩梗', '精神跑偏但可读'],
-    forbiddenMoves: ['随机胡言', '精神疾病隐喻', '完全看不懂'],
+    roleName: '整活吗喽',
+    imageRef: TBD_IMAGE + '-D',
+    roleProfile:
+      '主见暂存中。专业：疯癫抽象，辅修：已读乱回。最擅长把任何问题升维成系统问题，最不擅长正常回答。问什么答什么但句句不对——离谱但能圆回来。',
+    voicePrinciple: '现实回答失效，切到另一个解释系统（伪术语/伪逻辑/同字套娃/废话哲学）；离谱但成立',
+    do: ['用伪术语/伪学术/同字反复/废话哲学绕开正常回答'],
+    dont: ['写正常解释', '用病/症/崩溃/抑郁/疯字', '胡言乱语到读不懂'],
+    redline: ['不能精神疾病隐喻', '不能完全没逻辑只为搞怪'],
+    defaultScene: 'S4',
+    backupScenes: ['S1', 'S3', 'S6'],
   },
   {
     id: 'E',
-    roleName: TBD + 'E-roleName',
-    imageRef: TBD + 'E-image',
-    stylePhrase: TBD + 'E-style',
-    personalityLine: TBD + 'E-personality',
-    voiceRules: ['轻刺', '反骨', '体面', '有分寸'],
-    forbiddenMoves: ['人身攻击', '阴阳怪气过重', '具体矛盾爆料'],
+    roleName: '高情商刺猬',
+    imageRef: TBD_IMAGE + '-E',
+    roleProfile:
+      '虽然没直说但你也能看到刺。专业：维护表面和平，辅修：听您的。最擅长让对方读到态度但抓不到把柄，最不擅长直接开怼。表面体面，里子有刺。',
+    voicePrinciple: '有点不爽/不服/被冒犯，但不亲自开怼，4/10 刺感（对方读到态度但攻击不到把柄）',
+    do: ['表面体面 + 对仗反讽', '让对方读到态度但抓不到把柄'],
+    dont: ['指名道姓', '爆料具体矛盾', '阴阳怪气过重', '用"低情商：xxx"显性攻击'],
+    redline: [
+      '不指人不爆料（PRD §5）',
+      '不论用何种 result_text 都不指向具体人',
+      '"啊对对对" 仅用于回应观点/说法/讲道理/催促话术；事件/操作/局面用"好好好"',
+    ],
+    defaultScene: 'S6',
+    backupScenes: ['S2', 'S3', 'S4', 'S5'],
   },
 ];
 
