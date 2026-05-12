@@ -113,8 +113,10 @@ export function Block5ShareImage({ role, variant }: Props) {
         </div>
         <div
           style={{
-            fontSize: 17,
-            fontWeight: 700,
+            fontFamily: "'ZCOOL KuaiLe', cursive",
+            fontSize: 36, // 72pt ≈ 96px, 缩放到 540px 画布 = 36px (spec §7.1: 72pt)
+            fontWeight: 400,
+            color: '#1A1715',
             lineHeight: 1.45,
             textAlign: 'center',
             margin: '6px 0 14px',

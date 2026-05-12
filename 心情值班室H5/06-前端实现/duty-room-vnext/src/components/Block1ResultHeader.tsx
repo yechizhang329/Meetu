@@ -51,9 +51,11 @@ export function Block1ResultHeader({ role, variant }: Props) {
           background: '#FFF',
           border: '1px solid #2221',
           borderRadius: 14,
-          fontSize: 20,
-          lineHeight: 1.55,
-          fontWeight: 600,
+          fontFamily: "'ZCOOL KuaiLe', cursive",
+          fontSize: 28, // 72pt ≈ 96px CSS, 缩放到移动端 28px (spec §7.1 + §11.3)
+          lineHeight: 1.45,
+          fontWeight: 400,
+          color: '#1A1715',
           textAlign: 'center',
         }}
       >
