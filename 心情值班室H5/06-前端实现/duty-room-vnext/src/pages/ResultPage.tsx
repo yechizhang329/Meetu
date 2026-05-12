@@ -1,26 +1,29 @@
-// vNext ResultPage — 5 block layout per PRD §7 + SoT §6.
+// vNext ResultPage — P3, 6 blocks per PRD v2.3 §7.
 
 import type { Scene, RoleId, RoleQuote } from '../data/types';
 import { useResultPageState } from '../state/useResultPageState';
 import { ROLE_BY_ID } from '../config/roles.config';
-import { pickRoleCardQuote, pickPreviewQuote } from '../config/quotes.config';
+import { masterQuotesOf, pickPreviewQuote } from '../config/quotes.config';
 import { VARIANTS, variantCountOf } from '../config/variants.config';
-import { ResultImage } from '../components/ResultImage';
-import { CurrentRoleCard } from '../components/CurrentRoleCard';
-import { ChangeWordingButton } from '../components/ChangeWordingButton';
-import { AlternateRoleCards } from '../components/AlternateRoleCards';
-import { ResultActions } from '../components/ResultActions';
+import { Block1ResultHeader } from '../components/Block1ResultHeader';
+import { Block2RoleProfile } from '../components/Block2RoleProfile';
+import { Block3ChangeWording } from '../components/Block3ChangeWording';
+import { Block4AlternateRoles } from '../components/Block4AlternateRoles';
+import { Block5ShareImage } from '../components/Block5ShareImage';
+import { Block6MeetuCTA } from '../components/Block6MeetuCTA';
 
 interface Props {
   scene: Scene;
-  onBackToSelect: () => void;
+  initialRoleId: RoleId;
+  onBackToRoleSelect: () => void;
+  onBackToSceneSelect: () => void;
 }
 
-export function ResultPage({ scene, onBackToSelect }: Props) {
-  const { state, changeWording, switchRole, alternateRoleIds } = useResultPageState(scene);
+export function ResultPage({ scene, initialRoleId, onBackToRoleSelect, onBackToSceneSelect }: Props) {
+  const { state, changeWording, switchRole, alternateRoleIds } = useResultPageState(scene, initialRoleId);
   const currentRole = ROLE_BY_ID[state.currentRoleId];
   const variant = VARIANTS.find((v) => v.variantId === state.variantId);
-  const currentRoleCardQuote = pickRoleCardQuote(state.currentRoleId);
+  const masterQuotes = masterQuotesOf(state.currentRoleId);
 
   const alternateRoles = alternateRoleIds.map((rid) => ROLE_BY_ID[rid]).filter(Boolean);
   const previewQuoteByRole: Partial<Record<RoleId, RoleQuote>> = {};
@@ -30,31 +33,64 @@ export function ResultPage({ scene, onBackToSelect }: Props) {
   }
 
   return (
-    <div className="vnext-result-page" style={{ padding: 24, maxWidth: 600, margin: '0 auto' }}>
-      <button onClick={onBackToSelect} style={{ fontSize: 12 }}>← 重选场景</button>
-      <h2 style={{ fontSize: 16, marginTop: 12 }}>
-        {scene.id}: {scene.sceneTitle}
-      </h2>
-      <div style={{ fontSize: 11, opacity: 0.6, marginTop: 4 }}>{scene.sceneExamples}</div>
+    <div
+      className="vnext-result-page"
+      style={{
+        padding: '12px 16px 40px',
+        maxWidth: 480,
+        margin: '0 auto',
+        fontFamily: '"PingFang SC", "Hiragino Sans GB", system-ui, sans-serif',
+      }}
+    >
+      <header
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          gap: 12,
+          fontSize: 12,
+          opacity: 0.65,
+          padding: '8px 4px',
+        }}
+      >
+        <button
+          onClick={onBackToRoleSelect}
+          style={{ background: 'transparent', border: 'none', fontSize: 12, cursor: 'pointer', padding: 0 }}
+        >
+          ← 换角色
+        </button>
+        <span style={{ opacity: 0.4 }}>·</span>
+        <button
+          onClick={onBackToSceneSelect}
+          style={{ background: 'transparent', border: 'none', fontSize: 12, cursor: 'pointer', padding: 0 }}
+        >
+          重选场景
+        </button>
+        <span style={{ flex: 1 }} />
+        <span style={{ fontSize: 11, opacity: 0.55 }}>
+          {scene.id} · {scene.sceneTitle}
+        </span>
+      </header>
 
-      <ResultImage scene={scene} role={currentRole} variant={variant} />
+      <Block1ResultHeader role={currentRole} variant={variant} />
 
-      <CurrentRoleCard role={currentRole} roleCardQuote={currentRoleCardQuote} />
-
-      <div style={{ margin: '12px 0' }}>
-        <ChangeWordingButton
+      <div style={{ marginTop: 16 }}>
+        <Block3ChangeWording
           variantCount={variantCountOf(state.sceneId, state.currentRoleId)}
           onClick={changeWording}
         />
       </div>
 
-      <AlternateRoleCards
+      <Block2RoleProfile role={currentRole} masterQuotes={masterQuotes} />
+
+      <Block4AlternateRoles
         alternateRoles={alternateRoles}
         previewQuoteByRole={previewQuoteByRole}
         onPick={switchRole}
       />
 
-      <ResultActions onReselect={onBackToSelect} />
+      <Block5ShareImage role={currentRole} variant={variant} />
+
+      <Block6MeetuCTA />
     </div>
   );
 }

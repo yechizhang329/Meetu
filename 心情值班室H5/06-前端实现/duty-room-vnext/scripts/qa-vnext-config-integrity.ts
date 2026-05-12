@@ -1,14 +1,12 @@
-// qa:vnext-config-integrity — schema/data integrity gate.
+// qa:vnext-config-integrity — schema/data integrity gate (PRD v2.3 / SoT v2 schema).
 //
 // 检查:
-//   - SCENES.length === 6
-//   - ROLES.length === 5
+//   - SCENES.length === 6, ROLES.length === 5
 //   - 每 scene rolePool.length === 3, 默认 ∈ rolePool, 元素 ⊆ {A..E}
 //   - 每 scene 至少有 sceneTitle + sceneExamples
-//   - 每 role 至少有 roleName / roleProfile / voicePrinciple / do / dont / redline /
-//     defaultScene / backupScenes 字段
-//   - 每 role 在 scenes 表里至少作为 default 或 backup 出现
-//   - 每 role 至少有 1 条 master role_card quote
+//   - 每 role 必填: roleName / roleProfile / voicePrinciple / do / dont / redline /
+//     defaultScenes / backupScenes / imageRef.{single,profile} / stylePhrase / tags[2] / profileBgColor
+//   - 每 role 至少有 3 条 master quotes (Block 2 "角色资料" 区并列展示, DavidC 23:32)
 //   - 每 role 至少有 1 条 preview quote (master 或 backup)
 //   - 每 (sceneId, roleId) ∈ 18 组合 至少 1 条 ResultVariant + resultText 非空
 //   - "切换嘴替"模拟: alternateRoles 派生恒 = 2
@@ -98,15 +96,40 @@ for (const r of ROLES) {
     if (ds.has(sId)) fail.push(`role ${r.id} scene ${sId} listed in both defaultScenes and backupScenes`);
   }
 
-  // Quote coverage
+  // Quote coverage — Block 2 needs 3 master quotes per role (DavidC 23:32 全部并列展示, 不 filter usage).
   const qs = QUOTES.filter((q) => q.roleId === r.id);
-  const masterRoleCard = qs.find((q) => q.tier === 'master' && q.usages.includes('role_card'));
-  if (!masterRoleCard) fail.push(`role ${r.id} missing master role_card quote`);
+  const masterQuotes = qs.filter((q) => q.tier === 'master');
+  if (masterQuotes.length < 3) {
+    fail.push(`role ${r.id} needs ≥3 master quotes (Block 2 "角色资料" 并列展示), got ${masterQuotes.length}`);
+  }
   const anyPreview = qs.find((q) => q.usages.includes('preview'));
   if (!anyPreview) fail.push(`role ${r.id} missing preview quote (any tier)`);
 
-  if (typeof r.imageRef !== 'string' || r.imageRef.length === 0) {
-    fail.push(`role ${r.id} imageRef empty`);
+  // imageRef shape — PRD v2.3 §8 拆 single/profile.
+  if (!r.imageRef || typeof r.imageRef !== 'object') {
+    fail.push(`role ${r.id} imageRef must be object {single, profile}, got ${typeof r.imageRef}`);
+  } else {
+    if (typeof r.imageRef.single !== 'string' || !r.imageRef.single.trim()) {
+      fail.push(`role ${r.id} imageRef.single empty`);
+    }
+    if (typeof r.imageRef.profile !== 'string' || !r.imageRef.profile.trim()) {
+      fail.push(`role ${r.id} imageRef.profile empty`);
+    }
+  }
+
+  // stylePhrase, tags, profileBgColor — PRD v2.3 §8 + §11 + DavidC 23:20.
+  if (typeof r.stylePhrase !== 'string' || !r.stylePhrase.trim()) {
+    fail.push(`role ${r.id} stylePhrase empty (PRD §11.1 / SoT §5.1)`);
+  }
+  if (!Array.isArray(r.tags) || r.tags.length !== 2) {
+    fail.push(`role ${r.id} tags must be tuple [master, backup], got length ${r.tags?.length}`);
+  } else {
+    for (const t of r.tags) {
+      if (typeof t !== 'string' || !t.trim()) fail.push(`role ${r.id} tags element empty`);
+    }
+  }
+  if (typeof r.profileBgColor !== 'string' || !/^#[0-9A-Fa-f]{6}$/.test(r.profileBgColor)) {
+    fail.push(`role ${r.id} profileBgColor must be #RRGGBB hex, got "${r.profileBgColor}"`);
   }
 }
 

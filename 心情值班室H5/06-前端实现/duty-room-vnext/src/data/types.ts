@@ -1,8 +1,8 @@
 // 心情值班室 vNext — Domain types
 // SoT (文案):
-//   Meetu/产品文档/2026-05-11-心情值班室-vNext-copy-sot-final.md (post-personality-line removal)
+//   Meetu/产品文档/2026-05-12-心情值班室-vNext-copy-sot-v2.md
 // SoT (产品):
-//   Meetu/产品文档/2026-05-10-心情值班室-vNext-PRD-v2.1-角色嘴替重构中文版.md
+//   Meetu/产品文档/2026-05-12-心情值班室-vNext-PRD-v2.3.md
 // 不依赖 / 不复用 / 不 import duty-room-v1 任何 product module。
 //
 // vNext role names (final, locked by DavidC 22:25 + 12:18 sloth rename):
@@ -22,12 +22,26 @@ export type SceneId = 'S1' | 'S2' | 'S3' | 'S4' | 'S5' | 'S6';
  */
 export type QuoteUsage = 'role_card' | 'preview' | 'result_support';
 
+/** 角色形象资源路径. PRD v2.3 §8 拆 single/profile 双 ref. */
+export interface RoleImageRef {
+  /** 单角色 PNG, 1080x1080, 浅米底 #F9F7F3. 用于 Block 1 / Block 5. */
+  single: string;
+  /** profile 头像图, 1200x1200, 极低饱和彩色背景. 用于 Block 2 / Block 4 / P2. */
+  profile: string;
+}
+
 export interface Role {
   id: RoleId;
   /** 角色名称, 外显. SoT §2 final. */
   roleName: string;
-  /** 角色形象资源 key. P0/P1 阶段是 placeholder, 等 P2 视觉接入. */
-  imageRef: string;
+  /** 角色形象资源 (PRD v2.3 §8). */
+  imageRef: RoleImageRef;
+  /** 风格短语 master, 7-12 字, 外显 (SoT §5.1 final, 22:47 更新版). 用于 Block 2 + Block 4. */
+  stylePhrase: string;
+  /** 角色标签 [master, backup], 外显 (SoT §9.1 final, 21:08 final). 用于 Block 2 + Block 5. */
+  tags: readonly [string, string];
+  /** profile 图自身视觉属性 (图片自带 5 色背景). 不驱动 section 背景色 (DavidC 23:20: profile 只作头像小范围使用, 不影响页面整体背景). */
+  profileBgColor: string;
   /** SoT §2 个人资料: 第三人称半口语档案, 内部用, 不外显, 不在前端渲染. */
   roleProfile: string;
   /** SoT §2 voice principle: 内部声线核心 (一句). 不外显. */

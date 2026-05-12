@@ -1,7 +1,7 @@
 {
   "name": "duty-room-vnext",
   "private": true,
-  "version": "0.1.0-prework",
+  "version": "0.2.0-p2-visual",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -11,9 +11,13 @@
     "qa:vnext-config-integrity": "npx tsx scripts/qa-vnext-config-integrity.ts",
     "qa:no-placeholder-text": "node scripts/qa-no-placeholder-text.cjs",
     "qa:no-v1-leak": "node scripts/qa-no-v1-leak.cjs",
-    "qa:all-prework": "npm run qa:vnext-config-integrity && npm run qa:no-v1-leak"
+    "qa:all": "npm run qa:vnext-config-integrity && npm run qa:no-placeholder-text -- --strict && npm run qa:no-v1-leak",
+    "qa:all-prework": "npm run qa:vnext-config-integrity && npm run qa:no-v1-leak",
+    "sync-dist-to-docs": "node scripts/sync-dist-to-docs.cjs",
+    "deploy:gh-vnext": "npm run qa:all && npm run build && npm run sync-dist-to-docs"
   },
   "dependencies": {
+    "html2canvas-pro": "^2.0.2",
     "react": "^19.2.5",
     "react-dom": "^19.2.5"
   },

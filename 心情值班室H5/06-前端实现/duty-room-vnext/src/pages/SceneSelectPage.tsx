@@ -1,8 +1,8 @@
-// vNext SceneSelectPage — 6 scene 选择.
+// vNext SceneSelectPage — 6 scene 选择 (PRD §4.1 P1).
+// Click scene → 进入 P2 RoleSelectPage (in-scene 选嘴替).
 
 import type { Scene } from '../data/types';
 import { SCENES } from '../config/scenes.config';
-import { ROLE_BY_ID } from '../config/roles.config';
 
 interface Props {
   onPick: (scene: Scene) => void;
@@ -11,33 +11,45 @@ interface Props {
 
 export function SceneSelectPage({ onPick, onBack }: Props) {
   return (
-    <div className="vnext-scene-select" style={{ padding: 24 }}>
-      <button onClick={onBack} style={{ fontSize: 12 }}>← 返回</button>
-      <h2 style={{ fontSize: 18, marginTop: 16 }}>选状态 / 场景</h2>
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 12, marginTop: 12 }}>
-        {SCENES.map((s) => {
-          const defaultRole = ROLE_BY_ID[s.defaultRoleId];
-          return (
-            <button
-              key={s.id}
-              onClick={() => onPick(s)}
-              style={{
-                padding: 16,
-                textAlign: 'left',
-                border: '1px dashed #BBB',
-                background: '#FAF7EE',
-                cursor: 'pointer',
-              }}
-            >
-              <div style={{ fontSize: 11, opacity: 0.6 }}>{s.id}</div>
-              <div style={{ fontWeight: 600 }}>{s.sceneTitle}</div>
-              <div style={{ fontSize: 11, opacity: 0.55, marginTop: 4 }}>{s.sceneExamples}</div>
-              <div style={{ fontSize: 11, opacity: 0.5, marginTop: 6 }}>
-                默认: {defaultRole?.roleName ?? s.defaultRoleId} · pool: {s.rolePool.join(' / ')}
-              </div>
-            </button>
-          );
-        })}
+    <div
+      className="vnext-scene-select"
+      style={{
+        padding: 24,
+        minHeight: '100vh',
+        background: '#F9F7F3',
+        fontFamily: '"PingFang SC", "Hiragino Sans GB", system-ui, sans-serif',
+      }}
+    >
+      <button
+        onClick={onBack}
+        style={{ fontSize: 12, background: 'transparent', border: 'none', opacity: 0.6, cursor: 'pointer', padding: 0 }}
+      >
+        ← 返回
+      </button>
+      <h2 style={{ fontSize: 22, marginTop: 16, fontWeight: 700 }}>现在是哪种状态？</h2>
+      <p style={{ fontSize: 13, opacity: 0.6, marginTop: 8 }}>选一个最像当下的场景。</p>
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: 12, marginTop: 20 }}>
+        {SCENES.map((s) => (
+          <button
+            key={s.id}
+            onClick={() => onPick(s)}
+            style={{
+              padding: 18,
+              textAlign: 'left',
+              border: '1px solid #2221',
+              borderRadius: 14,
+              background: '#FFF',
+              cursor: 'pointer',
+              fontFamily: 'inherit',
+            }}
+          >
+            <div style={{ fontSize: 11, opacity: 0.45, letterSpacing: 1 }}>{s.id}</div>
+            <div style={{ fontSize: 17, fontWeight: 600, marginTop: 6 }}>{s.sceneTitle}</div>
+            <div style={{ fontSize: 12, opacity: 0.55, marginTop: 8, lineHeight: 1.5 }}>
+              {s.sceneExamples}
+            </div>
+          </button>
+        ))}
       </div>
     </div>
   );
