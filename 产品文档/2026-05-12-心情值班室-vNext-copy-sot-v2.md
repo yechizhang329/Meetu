@@ -278,40 +278,52 @@
 
 ---
 
-## §8 Block 5 分享图文案槽（v2 新增 / 21:35+21:57 final）
+## §8 Block 5 分享图文案槽（v2 新增 / 23:53 final v3）
 
-> 结果页 Block 5 是**静态分享图**（3:4 竖版），用户保存/分享用。
-> 元素清单 DavidC 21:35 + 21:57 final 拍板。本段定义文案槽来源。
+> 结果页 Block 5 是**分享图**（3:4 竖版），用户保存/分享用。
+> 元素清单 DavidC 23:53 final v3 拍板（经多轮迭代）。
 
 ### §8.1 元素清单
 
 | 槽位 | 文案来源 | 说明 |
 |---|---|---|
-| **顶部标题** | 固定模板 | "心情值班室 · {role.roleName}"（产品名 + 角色专属，DavidC 21:57 拍 a+c） |
+| **顶部标题** | 固定模板 | "心情值班室 · {role.roleName}"（产品名 + 角色专属，DavidC 21:57） |
 | 角色图 | — | 单角色 PNG（非文案槽，1080x1080 浅米底） |
-| **一句 master quote** | §3 Master Quotes（每角色 3 条） | DavidC 21:57：默认展示 1 条 master quote，用户点 Block 3 "换个说法" CTA 后切换为另一条；每角色对应 3 个分享图变体 |
+| **result_text** | §6 Result Variant Matrix > resultText | 当前 {scene, role} variant（与 Block 1 联动，DavidC 23:53 新增） |
 | **Meetu branding** | 固定 | "觅遇社 + Nice to Meetu"，底部居中 |
 
-### §8.2 不包含（21:35 后明确）
+### §8.2 不包含
 
-- ❌ **result_text**：DavidC 21:35 拍板，result_text 只在 Block 1 H5 动态展示，**不进 Block 5**
-- ❌ **角色标签**：DavidC 21:35 拍板，只在 Block 2 嘴替 profile 介绍出现
-- ❌ **style phrase**：DavidC 21:35 拍板，只在 Block 2 出现
-- ❌ **场景名称**：DavidC 16:30 拍板
+- ❌ **master quote**：DavidC 23:32 移到 Block 2 并列展示
+- ❌ **角色标签** / **style phrase**：只在 Block 2
+- ❌ **场景名称**（DavidC 16:30）
 - ❌ **scene_examples**
 
 ### §8.3 文案校对规则
 
 - 顶部标题模板"心情值班室 · {角色名}" 严格遵守，{角色名} 取 §2 role_name 完全一致
-- master quote 必须从 §3 取，不另造（每角色 3 条）
+- result_text 从 §6 取，与 Block 1 同 variant 联动（不在 Block 5 单独切换）
 - branding 固定"Meetu · Nice to Meetu"（与 §10 Block 6 branding 同一份）
 
-### §8.4 历史变更
+### §8.4 联动逻辑
 
-- DavidC 16:30 旧版：角色图+角色名+result_text+标签+branding
-- DavidC 21:35 新版：顶部标题+角色形象+一句quote+branding（result_text/标签/style phrase 移出）
+- result_text 在 Block 1（H5 动态）+ Block 5（分享图）共享同一 variant
+- 用户点 Block 3 "换个说法" CTA → Block 1 + Block 5 result_text **同步 update**
+- 每 {scene, role} 1 张动态分享图（共 18 张潜在），用户切换说法时 Block 5 随之变
+
+### §8.5 视觉风格
+
+- **C 方向（社交动物测试同款手绘海报式）**：粗 marker 边框 / 不对称排版 / 编辑式
+- **风格 anchor**：社交动物测试结果页"长按这张图发给朋友"的黄边框整合卡
+- 具体 layout spec：Phoebe2 `block-5-share-image-spec-v1.md`
+
+### §8.6 历史变更
+
+- DavidC 16:30 旧版：角色图+角色名+result_text+标签+branding（v1）
+- DavidC 21:35 新版：顶部标题+角色形象+一句quote+branding（v2，result_text/标签/style phrase 移出）
 - DavidC 21:57 明确 quote = master quote，"换个说法"切 quote
-- 21:35-21:57 final 即本表
+- DavidC 23:32 简化：Block 5 不含 master quote（3 条 quote 全移到 Block 2 并列），Block 5 纯角色名片（v3 初版）
+- **DavidC 23:53 final v3**：新增 result_text 槽（底图前端叠加），选 C 方向手绘海报式风格——即本表
 
 ---
 
