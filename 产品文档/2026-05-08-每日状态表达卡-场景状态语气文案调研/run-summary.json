@@ -1,0 +1,14 @@
+{
+  "queries": 22,
+  "raw_rows": 220,
+  "dedup": 206,
+  "detail": 42,
+  "group_detail_counts": {
+    "state_core": 8,
+    "scene_daily": 8,
+    "copy_tone": 8,
+    "test_result": 8,
+    "visual_format": 10
+  },
+  "errors": []
+}

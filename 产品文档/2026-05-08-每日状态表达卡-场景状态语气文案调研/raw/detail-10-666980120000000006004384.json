@@ -1,0 +1,4 @@
+Usage: xhs read [OPTIONS] ID_OR_URL
+Try 'xhs read --help' for help.
+
+Error: Index 666980120000000006004384 not found — run a listing command first (search / feed / hot / user-posts / favorites / my-notes)

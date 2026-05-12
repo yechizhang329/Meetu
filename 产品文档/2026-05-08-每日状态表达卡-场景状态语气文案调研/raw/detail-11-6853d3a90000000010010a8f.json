@@ -1,0 +1,89 @@
+{
+  "ok": true,
+  "schema_version": "1",
+  "data": {
+    "cursor_score": "",
+    "items": [
+      {
+        "id": "6853d3a90000000010010a8f",
+        "model_type": "note",
+        "note_card": {
+          "last_update_time": 1750399530000,
+          "share_info": {
+            "un_share": false
+          },
+          "desc": "期末周总是会莫名崩溃…\n\t\n拿着高中的文凭\n用两周的时间\n速成一学期的大学知识\n大学生还是太厉害了\n#期末周[话题]# #破碎的大学生[话题]#",
+          "user": {
+            "nickname": "木风",
+            "avatar": "https://sns-avatar-qc.xhscdn.com/avatar/1040g2jo30v0hs3ol58605njfe8u09ciq8o2mfvg",
+            "xsec_token": "ABfgu8ZNCt54YVXkKV6UaGz4QJhgSb4vlPmr33hohh1RM=",
+            "user_id": "5e6f723c000000000100b25a"
+          },
+          "interact_info": {
+            "relation": "none",
+            "liked": false,
+            "liked_count": "5724",
+            "collected": false,
+            "collected_count": "426",
+            "comment_count": "500",
+            "share_count": "328",
+            "followed": false
+          },
+          "image_list": [
+            {
+              "url_pre": "http://sns-webpic-qc.xhscdn.com/202605081905/8d8500a5e9067d346be437798c01fc15/1040g00831ithqj85gm005njfe8u09ciq3adotgg!nd_prv_wlteh_webp_3",
+              "url_default": "http://sns-webpic-qc.xhscdn.com/202605081905/7a3eca3e25a3ea708ff50f23056ca07b/1040g00831ithqj85gm005njfe8u09ciq3adotgg!nd_dft_wlteh_webp_3",
+              "stream": {
+                "h266": [],
+                "av1": [],
+                "h264": [
+                  {
+                    "master_url": "http://sns-video-hs.xhscdn.com/stream/1/10/19/01e853d3a60624a501005003978bf169d0_19.mp4?sign=72edf77a4a6678b8df5d72f02ecd9873&t=6a0260af",
+                    "backup_urls": [
+                      "http://sns-bak-v1.xhscdn.com/stream/1/10/19/01e853d3a60624a501005003978bf169d0_19.mp4"
+                    ]
+                  }
+                ],
+                "h265": []
+              },
+              "live_photo": true,
+              "height": 2560,
+              "url": "",
+              "trace_id": "",
+              "file_id": "",
+              "width": 1920,
+              "info_list": [
+                {
+                  "image_scene": "WB_PRV",
+                  "url": "http://sns-webpic-qc.xhscdn.com/202605081905/8d8500a5e9067d346be437798c01fc15/1040g00831ithqj85gm005njfe8u09ciq3adotgg!nd_prv_wlteh_webp_3"
+                },
+                {
+                  "image_scene": "WB_DFT",
+                  "url": "http://sns-webpic-qc.xhscdn.com/202605081905/7a3eca3e25a3ea708ff50f23056ca07b/1040g00831ithqj85gm005njfe8u09ciq3adotgg!nd_dft_wlteh_webp_3"
+                }
+              ]
+            }
+          ],
+          "at_user_list": [],
+          "note_id": "6853d3a90000000010010a8f",
+          "type": "normal",
+          "title": "北大 期末周…",
+          "tag_list": [
+            {
+              "type": "topic",
+              "id": "60d2045e0000000001004c05",
+              "name": "期末周"
+            },
+            {
+              "id": "653dd5390000000001011bf7",
+              "name": "破碎的大学生",
+              "type": "topic"
+            }
+          ],
+          "time": 1750324137000
+        }
+      }
+    ],
+    "current_time": 1778238319900
+  }
+}

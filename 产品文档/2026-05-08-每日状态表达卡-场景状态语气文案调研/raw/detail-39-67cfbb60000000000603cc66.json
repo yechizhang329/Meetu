@@ -1,0 +1,180 @@
+{
+  "ok": true,
+  "schema_version": "1",
+  "data": {
+    "cursor_score": "",
+    "items": [
+      {
+        "id": "67cfbb60000000000603cc66",
+        "model_type": "note",
+        "note_card": {
+          "at_user_list": [
+            {
+              "user_id": "622f299f00000000100098c8",
+              "nickname": "热点薯",
+              "xsec_token": "ABO4TK93R5GB0KeySvARpsOwV8Yv7nl3YmSYMtJGRMovc="
+            }
+          ],
+          "last_update_time": 1757732332000,
+          "title": "“我擅长感受，却拙于开口”",
+          "desc": "细腻者心向繁花，却常忘己。愿每个敏感灵魂，既能感知万物，也懂自我珍视。\n\t\n可惜，我总是在这个平衡里踉跄。我总是试图用目光替代拥抱，用察言观色填补语言的空白。我能分辨风拂过树叶的声音，看得见晨露在叶尖悬着震颤的宇宙，地铁站里陌生人睫毛上挂着的疲惫，但我却未能学会轻松表达自己，那些比风更躁动的情绪常常梗塞在喉头。\n感受比行动更容易，也更安全。这是细腻敏感者的矛盾宿命。\n我经常想，对生命的敏感是一种幸运吗？而每次得到的答案，总是说不清的复杂混沌。朋友说我像一面镜子，能映照出他们生活里每一道细微细节，却在说起自己的感受时，莫名空白。我也会气恼：为什么总想掩藏，却又如此渴望被看见？\n后来，发现这不是我一个人的困境。那些敏感而真诚的人，总能轻易接住别人的破碎，洞悉情绪深处的光和暗，但温柔久了仿佛累积成厚重的铠甲，像沉默的城墙，既保护自己，也冷漠了对外的港口。\n你有没有想过：这样会不会忘记了自己？在期待懂得别人的同时，要告诉他人我们的世界需要烟火，也需要理解。\n我们应该开始学着对人对己温柔。学会不再嘲笑自己的脆弱，也试着直接告诉朋友：“陪陪我，我有点累。”时间教会人的，不是变得坚不可摧，而是能卸下那过度的敏感，拾起自我的勇气。\n假如命运让我擅长倾听与感受，那么我愿让世界听见我的声音，哪怕它初时颤抖不安，但那便是真相，也是心灵的自在所在。\n敏感从来不是错，何必执意抗拒？愿我们能为繁花驻足，也学会善待自己。这天地万物全然深爱我们，我们也应该从心底慢慢学爱自己。\n\t\n以上。\n祝你早安午安晚安，有趣有盼。@校园薯 @热点薯\n#大大方方做自己[话题]# #原创随笔[话题]# #文案[话题]# #治愈[话题]# #成长[话题]# #社恐日常[话题]# #高敏感[话题]# #表达能力[话题]# #感受到了文字的力量[话题]# #我在好好感受这个世界[话题]# #生活荣誉博士[话题]#  #生活走读生[话题]# #小红书游学团[话题]#",
+          "user": {
+            "avatar": "https://sns-avatar-qc.xhscdn.com/avatar/1040g2jo31p454hf1jc005oabp5p0kb92f5kfmag",
+            "xsec_token": "ABji-i0sDLH9JyJs_YpR1dzcNrcGA1sjUkgGIo5vsKVTw=",
+            "user_id": "614bc9720000000002022d22",
+            "nickname": "李晴朗与雾"
+          },
+          "image_list": [
+            {
+              "url_pre": "http://sns-webpic-qc.xhscdn.com/202605081906/8ec22611d517508bfbfee52324cb7406/1040g2sg31eshroja6a705oabp5p0kb92cvmugp0!nd_prv_wlteh_webp_3",
+              "live_photo": false,
+              "height": 1560,
+              "width": 1170,
+              "url": "",
+              "trace_id": "",
+              "info_list": [
+                {
+                  "image_scene": "WB_PRV",
+                  "url": "http://sns-webpic-qc.xhscdn.com/202605081906/8ec22611d517508bfbfee52324cb7406/1040g2sg31eshroja6a705oabp5p0kb92cvmugp0!nd_prv_wlteh_webp_3"
+                },
+                {
+                  "image_scene": "WB_DFT",
+                  "url": "http://sns-webpic-qc.xhscdn.com/202605081906/15d235f7d4196afaa864e0db2928574d/1040g2sg31eshroja6a705oabp5p0kb92cvmugp0!nd_dft_wlteh_webp_3"
+                }
+              ],
+              "file_id": "",
+              "url_default": "http://sns-webpic-qc.xhscdn.com/202605081906/15d235f7d4196afaa864e0db2928574d/1040g2sg31eshroja6a705oabp5p0kb92cvmugp0!nd_dft_wlteh_webp_3",
+              "stream": {}
+            },
+            {
+              "height": 1560,
+              "url": "",
+              "url_pre": "http://sns-webpic-qc.xhscdn.com/202605081906/cb1aa85af92e0f73442b50d9fcfcd702/1040g2sg31eshroja6a7g5oabp5p0kb9282b2l7g!nd_prv_wlteh_webp_3",
+              "live_photo": false,
+              "file_id": "",
+              "width": 1170,
+              "trace_id": "",
+              "info_list": [
+                {
+                  "image_scene": "WB_PRV",
+                  "url": "http://sns-webpic-qc.xhscdn.com/202605081906/cb1aa85af92e0f73442b50d9fcfcd702/1040g2sg31eshroja6a7g5oabp5p0kb9282b2l7g!nd_prv_wlteh_webp_3"
+                },
+                {
+                  "image_scene": "WB_DFT",
+                  "url": "http://sns-webpic-qc.xhscdn.com/202605081906/92aae5fb8bc9e9912fb7aa9b61680e23/1040g2sg31eshroja6a7g5oabp5p0kb9282b2l7g!nd_dft_wlteh_webp_3"
+                }
+              ],
+              "url_default": "http://sns-webpic-qc.xhscdn.com/202605081906/92aae5fb8bc9e9912fb7aa9b61680e23/1040g2sg31eshroja6a7g5oabp5p0kb9282b2l7g!nd_dft_wlteh_webp_3",
+              "stream": {}
+            },
+            {
+              "file_id": "",
+              "width": 1170,
+              "url": "",
+              "url_pre": "http://sns-webpic-qc.xhscdn.com/202605081906/71cc24ea2d131fe396e91dcf3f820016/1040g2sg31eshroja6a805oabp5p0kb92jp4pb98!nd_prv_wlteh_webp_3",
+              "url_default": "http://sns-webpic-qc.xhscdn.com/202605081906/82eed126d0f7e7d3027a47d2bfec50d1/1040g2sg31eshroja6a805oabp5p0kb92jp4pb98!nd_dft_wlteh_webp_3",
+              "height": 1560,
+              "trace_id": "",
+              "info_list": [
+                {
+                  "image_scene": "WB_PRV",
+                  "url": "http://sns-webpic-qc.xhscdn.com/202605081906/71cc24ea2d131fe396e91dcf3f820016/1040g2sg31eshroja6a805oabp5p0kb92jp4pb98!nd_prv_wlteh_webp_3"
+                },
+                {
+                  "image_scene": "WB_DFT",
+                  "url": "http://sns-webpic-qc.xhscdn.com/202605081906/82eed126d0f7e7d3027a47d2bfec50d1/1040g2sg31eshroja6a805oabp5p0kb92jp4pb98!nd_dft_wlteh_webp_3"
+                }
+              ],
+              "stream": {},
+              "live_photo": false
+            }
+          ],
+          "tag_list": [
+            {
+              "id": "62215ef800000000010025c4",
+              "name": "大大方方做自己",
+              "type": "topic"
+            },
+            {
+              "name": "原创随笔",
+              "type": "topic",
+              "id": "5e44e23a00000000010090f9"
+            },
+            {
+              "id": "5bfba3484283b500010f59fe",
+              "name": "文案",
+              "type": "topic"
+            },
+            {
+              "id": "5bfeb1f0a209fd0001573c7e",
+              "name": "治愈",
+              "type": "topic"
+            },
+            {
+              "id": "5be2e7532a9bce000128d3e9",
+              "name": "成长",
+              "type": "topic"
+            },
+            {
+              "id": "5f3f9fc6000000000100b2f9",
+              "name": "社恐日常",
+              "type": "topic"
+            },
+            {
+              "id": "5e26d1e400000000010024c3",
+              "name": "高敏感",
+              "type": "topic"
+            },
+            {
+              "type": "topic",
+              "id": "5d35909f000000000e02b9e2",
+              "name": "表达能力"
+            },
+            {
+              "id": "63d8de1f0000000001004489",
+              "name": "感受到了文字的力量",
+              "type": "topic"
+            },
+            {
+              "id": "666458ca000000000202caf6",
+              "name": "我在好好感受这个世界",
+              "type": "topic"
+            },
+            {
+              "type": "topic",
+              "id": "67dd683c000000000401b952",
+              "name": "生活荣誉博士"
+            },
+            {
+              "id": "6044c1d40000000001004c39",
+              "name": "生活走读生",
+              "type": "topic"
+            },
+            {
+              "id": "5bf4c4ca2703340001f041fa",
+              "name": "小红书游学团",
+              "type": "topic"
+            }
+          ],
+          "note_id": "67cfbb60000000000603cc66",
+          "type": "normal",
+          "interact_info": {
+            "liked_count": "3.9万",
+            "collected": false,
+            "collected_count": "1.6万",
+            "comment_count": "551",
+            "share_count": "1198",
+            "followed": false,
+            "relation": "none",
+            "liked": false
+          },
+          "time": 1741685162000,
+          "share_info": {
+            "un_share": false
+          }
+        }
+      }
+    ],
+    "current_time": 1778238388266
+  }
+}

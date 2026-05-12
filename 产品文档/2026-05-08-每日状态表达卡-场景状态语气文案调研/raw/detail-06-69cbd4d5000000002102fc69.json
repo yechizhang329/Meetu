@@ -1,0 +1,87 @@
+{
+  "ok": true,
+  "schema_version": "1",
+  "data": {
+    "items": [
+      {
+        "id": "69cbd4d5000000002102fc69",
+        "model_type": "note",
+        "note_card": {
+          "interact_info": {
+            "collected": false,
+            "collected_count": "212",
+            "comment_count": "350",
+            "share_count": "291",
+            "followed": false,
+            "relation": "none",
+            "liked": false,
+            "liked_count": "4247"
+          },
+          "time": 1774965973000,
+          "last_update_time": 1774966468000,
+          "share_info": {
+            "un_share": false
+          },
+          "desc": "随便你吧，学校。而我只是一个学生。一个想睡觉的人。一个脑子不好的弱智。一个社交能力低下的外星生物。一个体能不行的废柴。放假好吗，佛在救你。#大学[话题]# #大学生崩溃瞬间[话题]# #本来上学就烦[话题]# #好想退学[话题]#",
+          "user": {
+            "xsec_token": "ABe3UaMuUWXjI5xvZpoLdXDW6pts8NtIIQPBFyRltazj4=",
+            "user_id": "662c9054000000000303231c",
+            "nickname": "一直以来所希望的是",
+            "avatar": "https://sns-avatar-qc.xhscdn.com/avatar/1040g2jo31vrtdcqb2qeg5phci1a0u8osb8d7f0g"
+          },
+          "title": "大学你赢了",
+          "image_list": [
+            {
+              "url": "",
+              "trace_id": "",
+              "url_pre": "http://sns-webpic-qc.xhscdn.com/202605081905/ea088d173c3f331f88e096c731a07a32/1040g2sg31ucntu06iic05phci1a0u8os3cbtcio!nd_prv_wlteh_webp_3",
+              "url_default": "http://sns-webpic-qc.xhscdn.com/202605081905/ba7e608d9d5e9730888093cf55806021/1040g2sg31ucntu06iic05phci1a0u8os3cbtcio!nd_dft_wlteh_webp_3",
+              "file_id": "",
+              "height": 1600,
+              "width": 1200,
+              "info_list": [
+                {
+                  "url": "http://sns-webpic-qc.xhscdn.com/202605081905/ea088d173c3f331f88e096c731a07a32/1040g2sg31ucntu06iic05phci1a0u8os3cbtcio!nd_prv_wlteh_webp_3",
+                  "image_scene": "WB_PRV"
+                },
+                {
+                  "image_scene": "WB_DFT",
+                  "url": "http://sns-webpic-qc.xhscdn.com/202605081905/ba7e608d9d5e9730888093cf55806021/1040g2sg31ucntu06iic05phci1a0u8os3cbtcio!nd_dft_wlteh_webp_3"
+                }
+              ],
+              "stream": {},
+              "live_photo": false
+            }
+          ],
+          "tag_list": [
+            {
+              "id": "5c468bf1000000000f0359ac",
+              "name": "大学",
+              "type": "topic"
+            },
+            {
+              "type": "topic",
+              "id": "6173df05000000000100a6e5",
+              "name": "大学生崩溃瞬间"
+            },
+            {
+              "id": "63385d0f0000000001001893",
+              "name": "本来上学就烦",
+              "type": "topic"
+            },
+            {
+              "id": "62b86cec0000000001009852",
+              "name": "好想退学",
+              "type": "topic"
+            }
+          ],
+          "at_user_list": [],
+          "note_id": "69cbd4d5000000002102fc69",
+          "type": "normal"
+        }
+      }
+    ],
+    "current_time": 1778238308773,
+    "cursor_score": ""
+  }
+}

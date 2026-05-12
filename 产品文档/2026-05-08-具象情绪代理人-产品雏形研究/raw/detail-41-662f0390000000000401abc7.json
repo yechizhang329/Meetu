@@ -1,0 +1,322 @@
+{
+  "ok": true,
+  "schema_version": "1",
+  "data": {
+    "cursor_score": "",
+    "items": [
+      {
+        "id": "662f0390000000000401abc7",
+        "model_type": "note",
+        "note_card": {
+          "share_info": {
+            "un_share": false
+          },
+          "note_id": "662f0390000000000401abc7",
+          "type": "normal",
+          "user": {
+            "user_id": "54ab81e9b4c4d623305f9d6f",
+            "nickname": "🐻小熊书心",
+            "avatar": "https://sns-avatar-qc.xhscdn.com/avatar/1040g2jo30nb36as7645040116a0uj7bffelplr8",
+            "xsec_token": "ABfBUQlPWnOc8-qVG9RDutglWBdQaubKMaXi3n6xLCYxc="
+          },
+          "interact_info": {
+            "collected": false,
+            "collected_count": "5788",
+            "comment_count": "1175",
+            "share_count": "767",
+            "followed": false,
+            "relation": "none",
+            "liked": false,
+            "liked_count": "6824"
+          },
+          "image_list": [
+            {
+              "height": 2560,
+              "width": 1920,
+              "stream": {},
+              "url_default": "http://sns-webpic-qc.xhscdn.com/202605081930/c6752e31f119f4020538a591e519a075/1040g0083125jcpc44o5g40116a0uj7bfkiu9mp0!nd_dft_wlteh_webp_3",
+              "live_photo": false,
+              "file_id": "",
+              "url": "",
+              "trace_id": "",
+              "info_list": [
+                {
+                  "image_scene": "WB_PRV",
+                  "url": "http://sns-webpic-qc.xhscdn.com/202605081930/8af89339faa6535f5a4565c5c51d20ea/1040g0083125jcpc44o5g40116a0uj7bfkiu9mp0!nd_prv_wlteh_webp_3"
+                },
+                {
+                  "image_scene": "WB_DFT",
+                  "url": "http://sns-webpic-qc.xhscdn.com/202605081930/c6752e31f119f4020538a591e519a075/1040g0083125jcpc44o5g40116a0uj7bfkiu9mp0!nd_dft_wlteh_webp_3"
+                }
+              ],
+              "url_pre": "http://sns-webpic-qc.xhscdn.com/202605081930/8af89339faa6535f5a4565c5c51d20ea/1040g0083125jcpc44o5g40116a0uj7bfkiu9mp0!nd_prv_wlteh_webp_3"
+            },
+            {
+              "url": "",
+              "trace_id": "",
+              "info_list": [
+                {
+                  "image_scene": "WB_PRV",
+                  "url": "http://sns-webpic-qc.xhscdn.com/202605081930/752e1c41de530da479e2744dc6dfb504/1040g0083125jcpc44o3g40116a0uj7bfraaljao!nd_prv_wlteh_webp_3"
+                },
+                {
+                  "image_scene": "WB_DFT",
+                  "url": "http://sns-webpic-qc.xhscdn.com/202605081930/554924c79fc129015d3a868a728ce4ec/1040g0083125jcpc44o3g40116a0uj7bfraaljao!nd_dft_wlteh_webp_3"
+                }
+              ],
+              "url_pre": "http://sns-webpic-qc.xhscdn.com/202605081930/752e1c41de530da479e2744dc6dfb504/1040g0083125jcpc44o3g40116a0uj7bfraaljao!nd_prv_wlteh_webp_3",
+              "stream": {},
+              "file_id": "",
+              "height": 2559,
+              "live_photo": false,
+              "width": 1920,
+              "url_default": "http://sns-webpic-qc.xhscdn.com/202605081930/554924c79fc129015d3a868a728ce4ec/1040g0083125jcpc44o3g40116a0uj7bfraaljao!nd_dft_wlteh_webp_3"
+            },
+            {
+              "height": 1542,
+              "width": 1156,
+              "url_pre": "http://sns-webpic-qc.xhscdn.com/202605081930/febe358ebd05ec5705782201dcf24d12/1040g0083125jcpc44o3040116a0uj7bfkgiuhf0!nd_prv_wlteh_webp_3",
+              "url_default": "http://sns-webpic-qc.xhscdn.com/202605081930/93bc92efc10889b507959c10e78cb2cd/1040g0083125jcpc44o3040116a0uj7bfkgiuhf0!nd_dft_wlteh_webp_3",
+              "live_photo": false,
+              "file_id": "",
+              "url": "",
+              "trace_id": "",
+              "info_list": [
+                {
+                  "image_scene": "WB_PRV",
+                  "url": "http://sns-webpic-qc.xhscdn.com/202605081930/febe358ebd05ec5705782201dcf24d12/1040g0083125jcpc44o3040116a0uj7bfkgiuhf0!nd_prv_wlteh_webp_3"
+                },
+                {
+                  "image_scene": "WB_DFT",
+                  "url": "http://sns-webpic-qc.xhscdn.com/202605081930/93bc92efc10889b507959c10e78cb2cd/1040g0083125jcpc44o3040116a0uj7bfkgiuhf0!nd_dft_wlteh_webp_3"
+                }
+              ],
+              "stream": {}
+            },
+            {
+              "file_id": "",
+              "trace_id": "",
+              "info_list": [
+                {
+                  "image_scene": "WB_PRV",
+                  "url": "http://sns-webpic-qc.xhscdn.com/202605081930/8a689f004bf730d8e60f1aa791785755/1040g0083125jcpc44o2040116a0uj7bf0vk1mro!nd_prv_wlteh_webp_3"
+                },
+                {
+                  "image_scene": "WB_DFT",
+                  "url": "http://sns-webpic-qc.xhscdn.com/202605081930/448ea7ee520982432a0bf9c152a5b9be/1040g0083125jcpc44o2040116a0uj7bf0vk1mro!nd_dft_wlteh_webp_3"
+                }
+              ],
+              "url_default": "http://sns-webpic-qc.xhscdn.com/202605081930/448ea7ee520982432a0bf9c152a5b9be/1040g0083125jcpc44o2040116a0uj7bf0vk1mro!nd_dft_wlteh_webp_3",
+              "height": 2559,
+              "width": 1920,
+              "url": "",
+              "url_pre": "http://sns-webpic-qc.xhscdn.com/202605081930/8a689f004bf730d8e60f1aa791785755/1040g0083125jcpc44o2040116a0uj7bf0vk1mro!nd_prv_wlteh_webp_3",
+              "stream": {},
+              "live_photo": false
+            },
+            {
+              "url_default": "http://sns-webpic-qc.xhscdn.com/202605081930/4107364ea215ec2b777c2dc00e944238/1040g0083125jcpc44o5040116a0uj7bf91dgd00!nd_dft_wlteh_webp_3",
+              "stream": {},
+              "height": 1558,
+              "width": 1168,
+              "trace_id": "",
+              "url_pre": "http://sns-webpic-qc.xhscdn.com/202605081930/91ab5f3cfbdf40015625f74f082aa304/1040g0083125jcpc44o5040116a0uj7bf91dgd00!nd_prv_wlteh_webp_3",
+              "live_photo": false,
+              "file_id": "",
+              "url": "",
+              "info_list": [
+                {
+                  "image_scene": "WB_PRV",
+                  "url": "http://sns-webpic-qc.xhscdn.com/202605081930/91ab5f3cfbdf40015625f74f082aa304/1040g0083125jcpc44o5040116a0uj7bf91dgd00!nd_prv_wlteh_webp_3"
+                },
+                {
+                  "image_scene": "WB_DFT",
+                  "url": "http://sns-webpic-qc.xhscdn.com/202605081930/4107364ea215ec2b777c2dc00e944238/1040g0083125jcpc44o5040116a0uj7bf91dgd00!nd_dft_wlteh_webp_3"
+                }
+              ]
+            },
+            {
+              "url_pre": "http://sns-webpic-qc.xhscdn.com/202605081930/1fa7959e2f6356ee9bca5c63223f8f21/1040g0083125jcpc44o1g40116a0uj7bfri0boko!nd_prv_wlteh_webp_3",
+              "file_id": "",
+              "height": 1490,
+              "width": 1118,
+              "url_default": "http://sns-webpic-qc.xhscdn.com/202605081930/2acffa52813fbd41057d5168c06c0522/1040g0083125jcpc44o1g40116a0uj7bfri0boko!nd_dft_wlteh_webp_3",
+              "stream": {},
+              "live_photo": false,
+              "url": "",
+              "trace_id": "",
+              "info_list": [
+                {
+                  "image_scene": "WB_PRV",
+                  "url": "http://sns-webpic-qc.xhscdn.com/202605081930/1fa7959e2f6356ee9bca5c63223f8f21/1040g0083125jcpc44o1g40116a0uj7bfri0boko!nd_prv_wlteh_webp_3"
+                },
+                {
+                  "image_scene": "WB_DFT",
+                  "url": "http://sns-webpic-qc.xhscdn.com/202605081930/2acffa52813fbd41057d5168c06c0522/1040g0083125jcpc44o1g40116a0uj7bfri0boko!nd_dft_wlteh_webp_3"
+                }
+              ]
+            },
+            {
+              "trace_id": "",
+              "info_list": [
+                {
+                  "image_scene": "WB_PRV",
+                  "url": "http://sns-webpic-qc.xhscdn.com/202605081930/abeeaf429163695a1fc6687e252d02aa/1040g0083125jcpc44o6g40116a0uj7bfohlh47g!nd_prv_wlteh_webp_3"
+                },
+                {
+                  "image_scene": "WB_DFT",
+                  "url": "http://sns-webpic-qc.xhscdn.com/202605081930/7ea8f0e767f1cae55cdc14ce09812922/1040g0083125jcpc44o6g40116a0uj7bfohlh47g!nd_dft_wlteh_webp_3"
+                }
+              ],
+              "url_default": "http://sns-webpic-qc.xhscdn.com/202605081930/7ea8f0e767f1cae55cdc14ce09812922/1040g0083125jcpc44o6g40116a0uj7bfohlh47g!nd_dft_wlteh_webp_3",
+              "stream": {},
+              "live_photo": false,
+              "file_id": "",
+              "height": 2559,
+              "width": 1920,
+              "url": "",
+              "url_pre": "http://sns-webpic-qc.xhscdn.com/202605081930/abeeaf429163695a1fc6687e252d02aa/1040g0083125jcpc44o6g40116a0uj7bfohlh47g!nd_prv_wlteh_webp_3"
+            },
+            {
+              "url_default": "http://sns-webpic-qc.xhscdn.com/202605081930/50c76375d63afe08e2f345784e399e9e/1040g0083125jcpc44o6040116a0uj7bfpkdqqko!nd_dft_wlteh_webp_3",
+              "live_photo": false,
+              "height": 2559,
+              "width": 1920,
+              "url": "",
+              "trace_id": "",
+              "file_id": "",
+              "info_list": [
+                {
+                  "image_scene": "WB_PRV",
+                  "url": "http://sns-webpic-qc.xhscdn.com/202605081930/5891208c20f88ad0cad10732c354e81a/1040g0083125jcpc44o6040116a0uj7bfpkdqqko!nd_prv_wlteh_webp_3"
+                },
+                {
+                  "image_scene": "WB_DFT",
+                  "url": "http://sns-webpic-qc.xhscdn.com/202605081930/50c76375d63afe08e2f345784e399e9e/1040g0083125jcpc44o6040116a0uj7bfpkdqqko!nd_dft_wlteh_webp_3"
+                }
+              ],
+              "url_pre": "http://sns-webpic-qc.xhscdn.com/202605081930/5891208c20f88ad0cad10732c354e81a/1040g0083125jcpc44o6040116a0uj7bfpkdqqko!nd_prv_wlteh_webp_3",
+              "stream": {}
+            },
+            {
+              "file_id": "",
+              "trace_id": "",
+              "info_list": [
+                {
+                  "image_scene": "WB_PRV",
+                  "url": "http://sns-webpic-qc.xhscdn.com/202605081930/08d31d9289cbb0cd9425d0496a9d4754/1040g0083125jcpc44o0g40116a0uj7bf6t00f3g!nd_prv_wlteh_webp_3"
+                },
+                {
+                  "image_scene": "WB_DFT",
+                  "url": "http://sns-webpic-qc.xhscdn.com/202605081930/9c7226de6350aa6c6cea0e8636f01144/1040g0083125jcpc44o0g40116a0uj7bf6t00f3g!nd_dft_wlteh_webp_3"
+                }
+              ],
+              "url_pre": "http://sns-webpic-qc.xhscdn.com/202605081930/08d31d9289cbb0cd9425d0496a9d4754/1040g0083125jcpc44o0g40116a0uj7bf6t00f3g!nd_prv_wlteh_webp_3",
+              "stream": {},
+              "live_photo": false,
+              "height": 2559,
+              "width": 1920,
+              "url": "",
+              "url_default": "http://sns-webpic-qc.xhscdn.com/202605081930/9c7226de6350aa6c6cea0e8636f01144/1040g0083125jcpc44o0g40116a0uj7bf6t00f3g!nd_dft_wlteh_webp_3"
+            },
+            {
+              "info_list": [
+                {
+                  "image_scene": "WB_PRV",
+                  "url": "http://sns-webpic-qc.xhscdn.com/202605081930/783c411493caf3c2e5b3acb89455fbab/1040g0083125jcpc44o4g40116a0uj7bf131sglo!nd_prv_wlteh_webp_3"
+                },
+                {
+                  "image_scene": "WB_DFT",
+                  "url": "http://sns-webpic-qc.xhscdn.com/202605081930/f4fe8667296dc76dd6c1b0a139b5ac4c/1040g0083125jcpc44o4g40116a0uj7bf131sglo!nd_dft_wlteh_webp_3"
+                }
+              ],
+              "url_default": "http://sns-webpic-qc.xhscdn.com/202605081930/f4fe8667296dc76dd6c1b0a139b5ac4c/1040g0083125jcpc44o4g40116a0uj7bf131sglo!nd_dft_wlteh_webp_3",
+              "live_photo": false,
+              "file_id": "",
+              "url": "",
+              "trace_id": "",
+              "url_pre": "http://sns-webpic-qc.xhscdn.com/202605081930/783c411493caf3c2e5b3acb89455fbab/1040g0083125jcpc44o4g40116a0uj7bf131sglo!nd_prv_wlteh_webp_3",
+              "stream": {},
+              "height": 2559,
+              "width": 1920
+            },
+            {
+              "file_id": "",
+              "height": 2559,
+              "trace_id": "",
+              "info_list": [
+                {
+                  "image_scene": "WB_PRV",
+                  "url": "http://sns-webpic-qc.xhscdn.com/202605081930/8a69abc20edfe2ac45d2446416e4b645/1040g0083125jcpc44o4040116a0uj7bf752n400!nd_prv_wlteh_webp_3"
+                },
+                {
+                  "image_scene": "WB_DFT",
+                  "url": "http://sns-webpic-qc.xhscdn.com/202605081930/273d7f0531a3925fe18096c2df9c3ee5/1040g0083125jcpc44o4040116a0uj7bf752n400!nd_dft_wlteh_webp_3"
+                }
+              ],
+              "width": 1920,
+              "url": "",
+              "url_pre": "http://sns-webpic-qc.xhscdn.com/202605081930/8a69abc20edfe2ac45d2446416e4b645/1040g0083125jcpc44o4040116a0uj7bf752n400!nd_prv_wlteh_webp_3",
+              "url_default": "http://sns-webpic-qc.xhscdn.com/202605081930/273d7f0531a3925fe18096c2df9c3ee5/1040g0083125jcpc44o4040116a0uj7bf752n400!nd_dft_wlteh_webp_3",
+              "stream": {},
+              "live_photo": false
+            }
+          ],
+          "time": 1714357136000,
+          "title": "我完全不介意大家想做博主的来抄我。",
+          "desc": "当博主以来，一共出过10篇万👍笔记，33篇千👍笔记，赚了40590💰，很多人问我怎么那么多小眼睛，看了《情绪价值》才发现，原来是我很会拿捏情绪。\n.\n1.建立情绪浓度库。\n书里说：“wb热搜话题，点👍最高的评论，B站的弹幕，抖音，快手和小红书的热门内容题材，网抑☁️音乐的高赞留言都是情绪浓度高的消费者典型表达。”每一句话起码先打动自己，才能和对方产生情绪共鸣。\n.\n2.绝不说教，当好情绪“嘴替”。\n“轻逻辑，重情绪，就是为了在人群中扮演情绪嘴替。”我有个笔记9.1w👍，116w个小眼睛，就是说出了大家：学种学又学不进，玩又玩不好，摆又摆不烂，躺又躺不平的心理。\n.\n3.你要找的不是赛道，而是角色。\n“①智者，也就是提点和启发消费人的人。\n②陪练，也就是陪着消费者变强的人。\n③副手，也就是为消费者出力，跟消费者共进退的人。\n④代理人，跟消费者说放着我来，替消费者出头的人。\n⑤疗愈者，也就是开导宽慰消费者的人。”\n.\n可以任意叠加组合，我是②+⑤，Study motivation 你的线上自习室+心理松解疗愈。充分利他，而不是自我中心。\n.\n4.互联网缺的是鲜活的人。\nxhs很喜欢“用塑料感去模糊自己的权威性，让受众觉得他跟你的差别没那么大，可以跟你算自己人。这就是姐妹逻辑，允许强者示弱，也允许弱者在虚弱的处境里呆一呆。”大家都是真实的社 畜，都想赚💰，也想躺平。\n.\n5.用第三只眼，看自己的笔记。\n让对方在你的笔记里体验4种获得感：\n“成长or和解——自我认同。\n归属or存在——社会认同。\n.\n替对方确认表达（嘴替）和化解（宣泄）已有情绪。给对方提供想要的情绪资源（带来爽感or消除痛感）。”\n.\n一定不要用努力与付出衡量笔记，起码笔记的每一句话，要先打动自己。用结果去复盘优化，再继续尝试，至少坚持半年，做自媒体需要一颗大心脏，千万别放弃。\n.\n最后，祝大家多多涨 粉，睡后收入自由！\n偷偷做博主真的hin爽，像同时拥有了两种人格，展开了两种人生~\n.\n#大大方方做自己[话题]# #如何做博主[话题]# #自媒体运营[话题]# #观点分享[话题]# #情绪价值[话题]# #读书[话题]# #情绪文案[话题]# #如何做博主[话题]# #xmind[话题]# #思维导图[话题]#",
+          "tag_list": [
+            {
+              "id": "62215ef800000000010025c4",
+              "name": "大大方方做自己",
+              "type": "topic"
+            },
+            {
+              "id": "600b1d5b000000000100b1d8",
+              "name": "如何做博主",
+              "type": "topic"
+            },
+            {
+              "id": "5c7125aa000000000e00b660",
+              "name": "自媒体运营",
+              "type": "topic"
+            },
+            {
+              "id": "5c6544df000000000e008ec0",
+              "name": "观点分享",
+              "type": "topic"
+            },
+            {
+              "id": "5c2041ad000000000a03ad5c",
+              "name": "情绪价值",
+              "type": "topic"
+            },
+            {
+              "id": "59db26c6092b5b20ef9e588c",
+              "name": "读书",
+              "type": "topic"
+            },
+            {
+              "name": "情绪文案",
+              "type": "topic",
+              "id": "5e84a5600000000001002933"
+            },
+            {
+              "id": "5d3277d4000000001800730c",
+              "name": "xmind",
+              "type": "topic"
+            },
+            {
+              "id": "5be555706604350001a13a23",
+              "name": "思维导图",
+              "type": "topic"
+            }
+          ],
+          "at_user_list": [],
+          "last_update_time": 1714831192000
+        }
+      }
+    ],
+    "current_time": 1778239833972
+  }
+}

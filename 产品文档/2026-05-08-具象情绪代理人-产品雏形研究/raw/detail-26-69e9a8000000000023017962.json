@@ -1,0 +1,167 @@
+{
+  "ok": true,
+  "schema_version": "1",
+  "data": {
+    "cursor_score": "",
+    "items": [
+      {
+        "id": "69e9a8000000000023017962",
+        "model_type": "note",
+        "note_card": {
+          "interact_info": {
+            "share_count": "1199",
+            "followed": false,
+            "relation": "none",
+            "liked": false,
+            "liked_count": "6288",
+            "collected": false,
+            "collected_count": "3319",
+            "comment_count": "1196"
+          },
+          "image_list": [
+            {
+              "width": 3024,
+              "live_photo": false,
+              "height": 4032,
+              "url": "",
+              "trace_id": "",
+              "info_list": [
+                {
+                  "image_scene": "WB_PRV",
+                  "url": "http://sns-webpic-qc.xhscdn.com/202605081930/699d5641ee37007dd01af4a080ba3e8f/note_pre_post_uhdr/1040g3r031v9rojrt2g1g4ag2k700imarrmdhb0g!nd_prv_wlteh_webp_3"
+                },
+                {
+                  "image_scene": "WB_DFT",
+                  "url": "http://sns-webpic-qc.xhscdn.com/202605081930/d75545914f2f59489cf85a560152e949/note_pre_post_uhdr/1040g3r031v9rojrt2g1g4ag2k700imarrmdhb0g!nd_dft_wlteh_webp_3"
+                }
+              ],
+              "url_pre": "http://sns-webpic-qc.xhscdn.com/202605081930/699d5641ee37007dd01af4a080ba3e8f/note_pre_post_uhdr/1040g3r031v9rojrt2g1g4ag2k700imarrmdhb0g!nd_prv_wlteh_webp_3",
+              "url_default": "http://sns-webpic-qc.xhscdn.com/202605081930/d75545914f2f59489cf85a560152e949/note_pre_post_uhdr/1040g3r031v9rojrt2g1g4ag2k700imarrmdhb0g!nd_dft_wlteh_webp_3",
+              "stream": {},
+              "file_id": ""
+            },
+            {
+              "file_id": "",
+              "height": 4032,
+              "width": 3024,
+              "url": "",
+              "trace_id": "",
+              "info_list": [
+                {
+                  "image_scene": "WB_PRV",
+                  "url": "http://sns-webpic-qc.xhscdn.com/202605081930/1f92c6dae65b7d062062032a788f130d/note_pre_post_uhdr/1040g3r031v9rojrt2g104ag2k700imar4lvf1f8!nd_prv_wlteh_webp_3"
+                },
+                {
+                  "image_scene": "WB_DFT",
+                  "url": "http://sns-webpic-qc.xhscdn.com/202605081930/7e44714ed4452ef5ffe997f89c8a9b5b/note_pre_post_uhdr/1040g3r031v9rojrt2g104ag2k700imar4lvf1f8!nd_dft_wlteh_webp_3"
+                }
+              ],
+              "url_pre": "http://sns-webpic-qc.xhscdn.com/202605081930/1f92c6dae65b7d062062032a788f130d/note_pre_post_uhdr/1040g3r031v9rojrt2g104ag2k700imar4lvf1f8!nd_prv_wlteh_webp_3",
+              "stream": {
+                "h264": [
+                  {
+                    "master_url": "http://sns-video-hs.xhscdn.com/stream/1/10/19/01e9e9a77809c78d010050039db8b872e3_19.mp4?sign=b5d1860b27f9d2f695c781f3e325d6f0&t=6a02667b",
+                    "backup_urls": [
+                      "http://sns-bak-v1.xhscdn.com/stream/1/10/19/01e9e9a77809c78d010050039db8b872e3_19.mp4"
+                    ]
+                  }
+                ],
+                "h265": [],
+                "h266": [],
+                "av1": []
+              },
+              "url_default": "http://sns-webpic-qc.xhscdn.com/202605081930/7e44714ed4452ef5ffe997f89c8a9b5b/note_pre_post_uhdr/1040g3r031v9rojrt2g104ag2k700imar4lvf1f8!nd_dft_wlteh_webp_3",
+              "live_photo": true
+            },
+            {
+              "file_id": "",
+              "url": "",
+              "stream": {},
+              "height": 641,
+              "width": 1179,
+              "trace_id": "",
+              "info_list": [
+                {
+                  "image_scene": "WB_PRV",
+                  "url": "http://sns-webpic-qc.xhscdn.com/202605081930/9c63c4e54f977b3e7745c42f60513a7b/notes_pre_post/1040g3k031v9rkrrn2g0g4ag2k700imargbb7q6g!nd_prv_wgth_webp_3"
+                },
+                {
+                  "image_scene": "WB_DFT",
+                  "url": "http://sns-webpic-qc.xhscdn.com/202605081930/1609e7a10f941c87b6d1d6037c2da371/notes_pre_post/1040g3k031v9rkrrn2g0g4ag2k700imargbb7q6g!nd_dft_wgth_webp_3"
+                }
+              ],
+              "url_pre": "http://sns-webpic-qc.xhscdn.com/202605081930/9c63c4e54f977b3e7745c42f60513a7b/notes_pre_post/1040g3k031v9rkrrn2g0g4ag2k700imargbb7q6g!nd_prv_wgth_webp_3",
+              "url_default": "http://sns-webpic-qc.xhscdn.com/202605081930/1609e7a10f941c87b6d1d6037c2da371/notes_pre_post/1040g3k031v9rkrrn2g0g4ag2k700imargbb7q6g!nd_dft_wgth_webp_3",
+              "live_photo": false
+            }
+          ],
+          "tag_list": [
+            {
+              "id": "5ce5644b000000000f03f18f",
+              "name": "adhd",
+              "type": "topic"
+            },
+            {
+              "id": "61a997f20000000001008095",
+              "name": "效率工具",
+              "type": "topic"
+            },
+            {
+              "id": "65f005c70000000002018598",
+              "name": "人在工位心在冒险",
+              "type": "topic"
+            },
+            {
+              "name": "任何时间任何地点",
+              "type": "topic",
+              "id": "62e51a12000000000100ad6f"
+            },
+            {
+              "type": "topic",
+              "id": "61a282c1000000000100553f",
+              "name": "无聊但有趣"
+            },
+            {
+              "type": "topic",
+              "id": "5bf6c239eb334400010ae7e4",
+              "name": "我爱学习学习爱我"
+            },
+            {
+              "id": "64fed231000000000e0347f1",
+              "name": "班味儿直冲屏幕",
+              "type": "topic"
+            },
+            {
+              "id": "65a1380e000000003f02cdba",
+              "name": "晕碳但要学习",
+              "type": "topic"
+            },
+            {
+              "id": "6098f5550000000001008e23",
+              "name": "牛马日常",
+              "type": "topic"
+            }
+          ],
+          "time": 1776920576000,
+          "share_info": {
+            "un_share": false
+          },
+          "note_id": "69e9a8000000000023017962",
+          "type": "normal",
+          "title": "实在没招了..搓了一个桌宠监督我不要分心",
+          "desc": "adhder每次一打开电脑工作，就能开五百个页面，从任务a一直发散到什么是宇宙的真理…..\n为了治好我这毛病，做了一个桌面宠物监督我不要分心。\n每次开始前输入一个任务，他就会开始监督我有没有偏离主线任务。\n这几天下来使用效果还不错嘎嘎，有人需要的话我可以打包上线[棒R]\n\t\n#adhd[话题]# #效率工具[话题]##人在工位心在冒险[话题]# #任何时间任何地点[话题]# #无聊但有趣[话题]# #我爱学习学习爱我[话题]# #班味儿直冲屏幕[话题]# #晕碳但要学习[话题]# #牛马日常[话题]#",
+          "user": {
+            "user_id": "5b77c00970408d0001fe595b",
+            "nickname": "桌宠墩墩",
+            "avatar": "https://sns-avatar-qc.xhscdn.com/avatar/seller_69fdaf19b3a5f700011ba698",
+            "xsec_token": "AB1ekxQAdI8c8OAPNlgi7cXuwOzbhMVS9amrgmeUzE8B0="
+          },
+          "at_user_list": [],
+          "last_update_time": 1776920576000,
+          "ip_location": "加拿大"
+        }
+      }
+    ],
+    "current_time": 1778239803588
+  }
+}

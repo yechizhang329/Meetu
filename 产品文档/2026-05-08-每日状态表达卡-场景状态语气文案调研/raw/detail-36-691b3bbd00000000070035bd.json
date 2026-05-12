@@ -1,0 +1,66 @@
+{
+  "ok": true,
+  "schema_version": "1",
+  "data": {
+    "cursor_score": "",
+    "items": [
+      {
+        "id": "691b3bbd00000000070035bd",
+        "model_type": "note",
+        "note_card": {
+          "type": "normal",
+          "time": 1763392445000,
+          "user": {
+            "avatar": "https://sns-avatar-qc.xhscdn.com/avatar/1040g2jo31j5amj9iii005nmj8et08udl08c4lc0",
+            "xsec_token": "AB_B4jz66ql1UILbM2OKA9b3GypOKEDJVg8-hIqhKDBd0=",
+            "user_id": "5ed343ba00000000010079b5",
+            "nickname": "Sisley"
+          },
+          "interact_info": {
+            "collected": false,
+            "collected_count": "1053",
+            "comment_count": "1249",
+            "share_count": "3469",
+            "followed": false,
+            "relation": "none",
+            "liked": false,
+            "liked_count": "1.3万"
+          },
+          "image_list": [
+            {
+              "info_list": [
+                {
+                  "image_scene": "WB_PRV",
+                  "url": "http://sns-webpic-qc.xhscdn.com/202605081906/14428c44848172f3a5b969bd146ef1ff/1040g00831p09282ji6005nmj8et08udldquvjn8!nd_prv_wlteh_webp_3"
+                },
+                {
+                  "image_scene": "WB_DFT",
+                  "url": "http://sns-webpic-qc.xhscdn.com/202605081906/fec37adcac3c1f5d292b5b4561375938/1040g00831p09282ji6005nmj8et08udldquvjn8!nd_dft_wlteh_webp_3"
+                }
+              ],
+              "url_default": "http://sns-webpic-qc.xhscdn.com/202605081906/fec37adcac3c1f5d292b5b4561375938/1040g00831p09282ji6005nmj8et08udldquvjn8!nd_dft_wlteh_webp_3",
+              "stream": {},
+              "live_photo": false,
+              "file_id": "",
+              "height": 2400,
+              "width": 1440,
+              "trace_id": "",
+              "url": "",
+              "url_pre": "http://sns-webpic-qc.xhscdn.com/202605081906/14428c44848172f3a5b969bd146ef1ff/1040g00831p09282ji6005nmj8et08udldquvjn8!nd_prv_wlteh_webp_3"
+            }
+          ],
+          "tag_list": [],
+          "at_user_list": [],
+          "note_id": "691b3bbd00000000070035bd",
+          "title": "大学十大脑残行为",
+          "desc": "校园生活充满各种形式的打卡、作业和活动，包括小组作业、PPT演讲、微电影拍摄、随机点名、无意义班会、体测、职业规划大赛、抽签、刷网课和凑数运动会等，让人感到疲惫和无奈。",
+          "last_update_time": 1763392445000,
+          "share_info": {
+            "un_share": false
+          }
+        }
+      }
+    ],
+    "current_time": 1778238380112
+  }
+}

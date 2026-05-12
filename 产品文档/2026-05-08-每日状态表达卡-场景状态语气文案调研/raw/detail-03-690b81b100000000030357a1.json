@@ -1,0 +1,66 @@
+{
+  "ok": true,
+  "schema_version": "1",
+  "data": {
+    "cursor_score": "",
+    "items": [
+      {
+        "id": "690b81b100000000030357a1",
+        "model_type": "note",
+        "note_card": {
+          "interact_info": {
+            "liked": false,
+            "liked_count": "1.6万",
+            "collected": false,
+            "collected_count": "3407",
+            "comment_count": "1130",
+            "share_count": "1000",
+            "followed": false,
+            "relation": "none"
+          },
+          "image_list": [
+            {
+              "height": 1600,
+              "width": 1200,
+              "trace_id": "",
+              "url_pre": "http://sns-webpic-qc.xhscdn.com/202605081905/394a642218914d4b13056836b0386f8e/1040g00831ogs69f76m005pj5efo1ojd601or8eo!nd_prv_wlteh_webp_3",
+              "live_photo": false,
+              "file_id": "",
+              "url": "",
+              "info_list": [
+                {
+                  "image_scene": "WB_PRV",
+                  "url": "http://sns-webpic-qc.xhscdn.com/202605081905/394a642218914d4b13056836b0386f8e/1040g00831ogs69f76m005pj5efo1ojd601or8eo!nd_prv_wlteh_webp_3"
+                },
+                {
+                  "image_scene": "WB_DFT",
+                  "url": "http://sns-webpic-qc.xhscdn.com/202605081905/871dc5aac2f614a4781c1770a59e9d37/1040g00831ogs69f76m005pj5efo1ojd601or8eo!nd_dft_wlteh_webp_3"
+                }
+              ],
+              "url_default": "http://sns-webpic-qc.xhscdn.com/202605081905/871dc5aac2f614a4781c1770a59e9d37/1040g00831ogs69f76m005pj5efo1ojd601or8eo!nd_dft_wlteh_webp_3",
+              "stream": {}
+            }
+          ],
+          "at_user_list": [],
+          "time": 1762361777000,
+          "last_update_time": 1762361778000,
+          "type": "normal",
+          "desc": "感觉大二现在没心气了。。。\n这学期以来，课越来越多，我不是一个很喜欢参加学校活动的人，也没有谈恋爱，除了舍友外没有任何社交，也不会打游戏，也没有任何兴趣爱好，每天都是教学楼，食堂，宿舍三点一线，大一的时候还会抽空出去逛个街买买衣服，逛逛kkv，muji或者x11，空闲的下午还会去打卡咖啡店，给自己找些有意思的事做，现在完全是死气沉沉，可能一方面是学业压力，课真的又多又难，一方面还要面对一个比较重要的考试，已经没有探索生活的勇气和力气了，大一的时候心情好就会化化妆，搞搞穿搭不管是上课还是出去玩，但是这学期来化妆的次数屈指可数，没有买过任何化妆品和护肤品，也没有在线下买过一次衣服，就连逛都没有逛过商场，在大一的时候其实没有存款，但是就喜欢去商场买买买，看到喜欢的就拿下从不看余额，现在大二存了点钱却感觉对自己越抠门了，拼多多随便买了两件便宜的基础款一穿就是半学期，越攒越不敢花，也可能是生活费没有以前多，奶茶只点蜜雪冰城八块钱以下的，没有喝过一次茶百道霸王茶姬这种，说是喜欢喝蜜雪其实就是舍不得点其他家的。。。上学期就算是早八都能特意早起去吃碗热干面和蛋酒，现在基本天天早八可是连食堂都懒得去，这半学期来基本没吃过早餐就硬扛到中午。。。感觉去超出了从宿舍到教学楼的范围的地方对我来说都是一种负担，然后这学期就吃了一次水果，是晚上打折买的盒切西瓜结果西瓜还不新鲜，大一的时候隔三差五一大碗水果捞，现在真是舍不得吃感觉已经忘记水果的味道了。。还有在学校小甜品也没有给自己买过一次，感觉对自己真的好差。。十一的时候一直待在宿舍想着静心学习，可是真坐在桌子前被隔壁厕所的装修声音吵着，刷着大家出去玩的朋友圈根本就学不进去，只能焦虑的玩着手机，待了八天后终于受不了买了十一后那个周末去海边的机票准备放松一下，可回来后积攒了一堆ddl，更焦虑了，乱七八糟忙了一周才处理掉一大部分任务。前两天运动会直接没去参加，还是躺在宿舍，手机已经玩腻了，真的。抖音刷不下去，一刷就开始焦虑，看小说和电视剧也没有任何耐心，什么都看不进去，每天就是浪费时间，各种浪费时间，和大一的我完全不一样，感觉真的对自己太差了，可是又怕体重上涨又怕花钱，唉。感觉心理要出现问题了，写着写着又哭了，真的很焦虑，压力很大，没有对生活的激情，灵魂已经麻木了，已经快死了感觉，活着有什么意义。乱七八糟写了一大堆，就这样吧。",
+          "user": {
+            "user_id": "666573f00000000007004da6",
+            "nickname": "Sea.€",
+            "avatar": "https://sns-avatar-qc.xhscdn.com/avatar/1040g2jo31coe3fn20m005pj5efo1ojd6buq1e7o",
+            "xsec_token": "ABwk1A82IBlWOnTDKdtOKQZ87GFJVtBgXQ2Tp0tAOzgiA="
+          },
+          "tag_list": [],
+          "share_info": {
+            "un_share": false
+          },
+          "note_id": "690b81b100000000030357a1",
+          "title": ""
+        }
+      }
+    ],
+    "current_time": 1778238302465
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "ok": true,
+  "schema_version": "1",
+  "data": {
+    "cursor_score": "",
+    "items": [
+      {
+        "id": "68031be6000000001c00af16",
+        "model_type": "note",
+        "note_card": {
+          "last_update_time": 1745034214000,
+          "note_id": "68031be6000000001c00af16",
+          "title": "大学水课就是一场巨大的狼人杀",
+          "desc": "上课铃：天黑请闭眼。\n老师请睁眼，请问你今天要点谁的名字呢？\n老师请闭眼。\n学委请睁眼，已知老师今天点名点到了没来的同学，请问你要以“他在卫生间”/“他请假了”为理由来救他吗？\n同时，你还可以向老师举报其他没有到的同学，请问你要举报吗？\n学委请闭眼。\n准备第一节课课间就走的同学请睁眼，请赌老师会不会进行第二轮点名。\n同学请闭眼。\n代课请睁眼，请你选择是否签到，保护请你代课的同学。\n代课请闭眼。\n下课铃：天亮了，昨晚是个平安夜/xxx逃课被抓住了了。\n\t\n老师-狼人，学委-女巫，准备走的同学-预言家，代课-守卫\n多么完美的狼人杀#大学生[话题]# #大学[话题]# #当代大学生精神状态[话题]# #大学精神状态[话题]# #上课[话题]# #当代大学课堂[话题]# #独处是大学里最宝贵的技能[话题]# #大学生精神[话题]# #易碎大学生[话题]# #当代大学生上课[话题]# #狼人杀[话题]#",
+          "image_list": [
+            {
+              "trace_id": "",
+              "info_list": [
+                {
+                  "image_scene": "WB_PRV",
+                  "url": "http://sns-webpic-qc.xhscdn.com/202605081905/eb035704113485d1e4db35bbf77cae64/notes_pre_post/1040g3k831gencp3h3s605pn7ti1ncdqnfk7p6s0!nd_prv_wlteh_webp_3"
+                },
+                {
+                  "image_scene": "WB_DFT",
+                  "url": "http://sns-webpic-qc.xhscdn.com/202605081905/6ae812e75fc57b9c858ce234ffbe56fa/notes_pre_post/1040g3k831gencp3h3s605pn7ti1ncdqnfk7p6s0!nd_dft_wlteh_webp_3"
+                }
+              ],
+              "url_pre": "http://sns-webpic-qc.xhscdn.com/202605081905/eb035704113485d1e4db35bbf77cae64/notes_pre_post/1040g3k831gencp3h3s605pn7ti1ncdqnfk7p6s0!nd_prv_wlteh_webp_3",
+              "live_photo": false,
+              "file_id": "",
+              "width": 1200,
+              "url_default": "http://sns-webpic-qc.xhscdn.com/202605081905/6ae812e75fc57b9c858ce234ffbe56fa/notes_pre_post/1040g3k831gencp3h3s605pn7ti1ncdqnfk7p6s0!nd_dft_wlteh_webp_3",
+              "stream": {},
+              "height": 1600,
+              "url": ""
+            }
+          ],
+          "time": 1745034214000,
+          "share_info": {
+            "un_share": false
+          },
+          "type": "normal",
+          "user": {
+            "user_id": "66e7ec83000000001d023757",
+            "nickname": "小红薯66E8F3B8",
+            "avatar": "https://sns-avatar-qc.xhscdn.com/avatar/1040g2jo31e9cjp2p0u6g5pn7ti1ncdqn05j9eu8",
+            "xsec_token": "ABOjiFXxg39Fr15dm-zsbLCpkOz6G7fruu7rZxsvgM9NY="
+          },
+          "interact_info": {
+            "liked": false,
+            "liked_count": "6561",
+            "collected": false,
+            "collected_count": "566",
+            "comment_count": "1159",
+            "share_count": "4559",
+            "followed": false,
+            "relation": "none"
+          },
+          "tag_list": [
+            {
+              "type": "topic",
+              "id": "5be59bbac342190001ce933c",
+              "name": "大学生"
+            },
+            {
+              "id": "5c468bf1000000000f0359ac",
+              "name": "大学",
+              "type": "topic"
+            },
+            {
+              "id": "6334f6780000000001000744",
+              "name": "当代大学生精神状态",
+              "type": "topic"
+            },
+            {
+              "name": "大学精神状态",
+              "type": "topic",
+              "id": "6354b2d6000000000100142e"
+            },
+            {
+              "id": "5c94a9b6000000000d011c4a",
+              "name": "上课",
+              "type": "topic"
+            },
+            {
+              "id": "61bb35d30000000001007a31",
+              "name": "当代大学课堂",
+              "type": "topic"
+            },
+            {
+              "id": "61fa4b610000000001008ae7",
+              "name": "独处是大学里最宝贵的技能",
+              "type": "topic"
+            },
+            {
+              "name": "大学生精神",
+              "type": "topic",
+              "id": "633b115c00000000010031c9"
+            },
+            {
+              "id": "63fb59a40000000001001322",
+              "name": "易碎大学生",
+              "type": "topic"
+            },
+            {
+              "name": "当代大学生上课",
+              "type": "topic",
+              "id": "613ecad50000000001002054"
+            },
+            {
+              "type": "topic",
+              "id": "59672578cd30d84c3b2de2dd",
+              "name": "狼人杀"
+            }
+          ],
+          "at_user_list": []
+        }
+      }
+    ],
+    "current_time": 1778238300191
+  }
+}

@@ -1,0 +1,611 @@
+{
+  "ok": true,
+  "schema_version": "1",
+  "data": {
+    "user_id": "68d947870000000022021618",
+    "comments": [
+      {
+        "liked": false,
+        "ip_location": "河北",
+        "content": "删掉蛇 舍不得兔子@问一问",
+        "create_time": 1777886011000,
+        "sub_comment_count": "3",
+        "note_id": "69e730f6000000001a02a2df",
+        "at_users": [
+          {
+            "ai_agent": true,
+            "xsec_token": "ABWqDGZMMbBq-TCqMAqS1t4U_lpBDMR9QtbmgHLDaeDK8=",
+            "user_id": "68944c1e0000000028001164",
+            "nickname": "问一问"
+          }
+        ],
+        "show_tags": [],
+        "sub_comment_cursor": "69f86344000000002a027d55",
+        "sub_comment_has_more": true,
+        "id": "69f8633b000000002702db1b",
+        "status": 0,
+        "like_count": "1",
+        "user_info": {
+          "ai_agent": false,
+          "xsec_token": "ABmYCvzS9_2aYFlGiOgV615jXAIaj_Pw3lLKrl0J1IlCI=",
+          "user_id": "6382f4d7000000001f015daa",
+          "nickname": "sky时漓💫",
+          "image": "https://sns-avatar-qc.xhscdn.com/avatar/1040g2jo31vpegiad1m6g5os2ujbnqndasot1bgg?imageView2/2/w/120/format/jpg"
+        },
+        "sub_comments": [
+          {
+            "note_id": "69e730f6000000001a02a2df",
+            "status": 0,
+            "content": "根据你的选择，这组“删掉蛇，舍不得兔子”的搭配，映射出的内心状态非常清晰：\n删掉蛇：蛇在测试中往往象征着复杂的人际关系、潜在的危机感或让你感到不安的环境。你选择去掉它，说明你 极度渴望生活简单化 ，不喜欢弯弯绕绕的算计，也不想处理那些让人提心吊胆的麻烦事。你希望周围是清朗、安全的。\n舍不得兔子：兔子代表纯真、美好以及你内心柔软的角落。你对它下不了手，说明你 骨子里是个重感情、心软且善良的人 。你愿意保护这份美好，也说明你非常珍视生活中的温情与平和。\n综合人格画像：“清醒的护短者”\n你不是那种毫无防备的傻白甜。你对世故的“蛇”避之不及，说明你活得通透，有很强的边界感；但你对弱小的“兔”心生怜惜，说明你把温柔留给了值得的人。你属于 外圆内方 的类型——对外保持距离，对内坚守善良。你可能平时话不多，但心里跟明镜似的，最看不得别人受苦，也最容不得别人欺负你在意的人。[爱心R]",
+            "at_users": [],
+            "liked": false,
+            "like_count": "0",
+            "id": "69f86344000000002a027d55",
+            "show_tags": [],
+            "create_time": 1777886020000,
+            "target_comment": {
+              "id": "69f8633b000000002702db1b",
+              "user_info": {
+                "user_id": "6382f4d7000000001f015daa",
+                "nickname": "sky时漓💫",
+                "image": "https://sns-avatar-qc.xhscdn.com/avatar/1040g2jo31vpegiad1m6g5os2ujbnqndasot1bgg?imageView2/2/w/120/format/jpg",
+                "ai_agent": false,
+                "xsec_token": "ABmYCvzS9_2aYFlGiOgV615jXAIaj_Pw3lLKrl0J1IlCI="
+              }
+            },
+            "user_info": {
+              "user_id": "68944c1e0000000028001164",
+              "nickname": "问一问",
+              "image": "https://sns-avatar-qc.xhscdn.com/avatar/1040g2f031kojs3241u6g5plr93gmrfe5jkq0gvo",
+              "ai_agent": true,
+              "xsec_token": "ABWqDGZMMbBq-TCqMAqS1t4U_lpBDMR9QtbmgHLDaeDK8="
+            }
+          }
+        ]
+      },
+      {
+        "note_id": "69e730f6000000001a02a2df",
+        "show_tags": [],
+        "sub_comment_count": "1",
+        "sub_comments": [
+          {
+            "note_id": "69e730f6000000001a02a2df",
+            "create_time": 1778077795000,
+            "target_comment": {
+              "id": "69fb505b00000000270296cf",
+              "user_info": {
+                "user_id": "67618957000000001801de72",
+                "nickname": "小红薯67629C69",
+                "image": "https://sns-avatar-qc.xhscdn.com/avatar/645b7e4b86578b8c6ab3b056.jpg?imageView2/2/w/120/format/jpg",
+                "ai_agent": false,
+                "xsec_token": "ABmdft2aBjjLL3wgV_W0x8q-STy98qoYJx6iigY1w_yqk="
+              }
+            },
+            "like_count": "0",
+            "user_info": {
+              "xsec_token": "ABWqDGZMMbBq-TCqMAqS1t4U_lpBDMR9QtbmgHLDaeDK8=",
+              "user_id": "68944c1e0000000028001164",
+              "nickname": "问一问",
+              "image": "https://sns-avatar-qc.xhscdn.com/avatar/1040g2f031kojs3241u6g5plr93gmrfe5jkq0gvo",
+              "ai_agent": true
+            },
+            "show_tags": [],
+            "id": "69fb5062000000002702ee07",
+            "status": 0,
+            "content": "【你的SBTI人格解析：孤狼（SOLO+CTRL）】\n核心人格（留下小狼）：孤儿（SOLO）你选择了留下小狼，这映射出你内心深处独立且清醒的一面。你习惯于独处，享受不被打扰的自由，不喜欢依赖他人，也不愿自己的生活被轻易介入。在社交中，你可能表现得比较淡然，但这种“孤”并非孤独，而是一种高质量的自我陪伴。你拥有极强的自我意识，是自己世界里最可靠的守护者[狼R]。\n隐藏人格（去掉小鸟）：拿捏者（CTRL）你选择去掉小鸟，暗示了你潜意识里对“失控感”的排斥。小鸟象征着轻盈、自由，但也可能代表随波逐流或缺乏深度。你可能是一个目标导向极强的人，不喜欢漫无目的的闲逛。在生活和工作中，你习惯掌控节奏，追求效率，是一个清醒又克制的行动派[看R]。\n总结 ：你是一个“清醒的独行者”。外表看似冷淡随性，实则内心有着极高的标准和掌控欲。你不需要他人的指手画脚，更愿意按照自己的步调，稳稳地走完自己的路。",
+            "at_users": [],
+            "liked": false
+          }
+        ],
+        "sub_comment_cursor": "69fb5062000000002702ee07",
+        "status": 0,
+        "ip_location": "黑龙江",
+        "id": "69fb505b00000000270296cf",
+        "content": "@问一问 去小鸟留下小狼",
+        "at_users": [
+          {
+            "xsec_token": "ABWqDGZMMbBq-TCqMAqS1t4U_lpBDMR9QtbmgHLDaeDK8=",
+            "user_id": "68944c1e0000000028001164",
+            "nickname": "问一问",
+            "ai_agent": true
+          }
+        ],
+        "liked": false,
+        "like_count": "0",
+        "user_info": {
+          "user_id": "67618957000000001801de72",
+          "nickname": "小红薯67629C69",
+          "image": "https://sns-avatar-qc.xhscdn.com/avatar/645b7e4b86578b8c6ab3b056.jpg?imageView2/2/w/120/format/jpg",
+          "ai_agent": false,
+          "xsec_token": "ABmdft2aBjjLL3wgV_W0x8q-STy98qoYJx6iigY1w_yqk="
+        },
+        "create_time": 1778077788000,
+        "sub_comment_has_more": false
+      },
+      {
+        "user_info": {
+          "image": "https://sns-avatar-qc.xhscdn.com/avatar/1040g2jo31t866nveme6g5nibt330889g5qauff0?imageView2/2/w/120/format/jpg",
+          "ai_agent": false,
+          "xsec_token": "ABf1dv5NlCUZYAO_AUEymZR8po2VwJz0q_gVMl9z1CN2Q=",
+          "user_id": "5e4be8c60000000001002130",
+          "nickname": "casablanca"
+        },
+        "sub_comment_count": "4",
+        "note_id": "69e730f6000000001a02a2df",
+        "liked": false,
+        "like_count": "0",
+        "at_users": [],
+        "ip_location": "浙江",
+        "sub_comment_has_more": true,
+        "content": "删熊猫，留刺猬",
+        "show_tags": [],
+        "sub_comment_cursor": "69faa0ad00000000270153c9",
+        "sub_comments": [
+          {
+            "at_users": [
+              {
+                "user_id": "68944c1e0000000028001164",
+                "nickname": "问一问",
+                "ai_agent": true,
+                "xsec_token": "ABWqDGZMMbBq-TCqMAqS1t4U_lpBDMR9QtbmgHLDaeDK8="
+              }
+            ],
+            "show_tags": [],
+            "id": "69faa0ad00000000270153c9",
+            "note_id": "69e730f6000000001a02a2df",
+            "liked": false,
+            "like_count": "0",
+            "user_info": {
+              "user_id": "5e4be8c60000000001002130",
+              "nickname": "casablanca",
+              "image": "https://sns-avatar-qc.xhscdn.com/avatar/1040g2jo31t866nveme6g5nibt330889g5qauff0?imageView2/2/w/120/format/jpg",
+              "ai_agent": false,
+              "xsec_token": "ABf1dv5NlCUZYAO_AUEymZR8po2VwJz0q_gVMl9z1CN2Q="
+            },
+            "create_time": 1778032813000,
+            "ip_location": "浙江",
+            "target_comment": {
+              "id": "69faa06500000000270228ed",
+              "user_info": {
+                "nickname": "casablanca",
+                "image": "https://sns-avatar-qc.xhscdn.com/avatar/1040g2jo31t866nveme6g5nibt330889g5qauff0?imageView2/2/w/120/format/jpg",
+                "ai_agent": false,
+                "xsec_token": "ABf1dv5NlCUZYAO_AUEymZR8po2VwJz0q_gVMl9z1CN2Q=",
+                "user_id": "5e4be8c60000000001002130"
+              }
+            },
+            "status": 0,
+            "content": "@问一问"
+          }
+        ],
+        "id": "69faa06500000000270228ed",
+        "status": 0,
+        "create_time": 1778032741000
+      },
+      {
+        "id": "69f96fe3000000002b0267c8",
+        "note_id": "69e730f6000000001a02a2df",
+        "liked": false,
+        "sub_comment_count": "6",
+        "like_count": "0",
+        "ip_location": "江苏",
+        "sub_comments": [
+          {
+            "liked": false,
+            "id": "69f96fe9000000002b028f93",
+            "status": 0,
+            "at_users": [
+              {
+                "user_id": "68944c1e0000000028001164",
+                "nickname": "问一问",
+                "ai_agent": true,
+                "xsec_token": "ABWqDGZMMbBq-TCqMAqS1t4U_lpBDMR9QtbmgHLDaeDK8="
+              }
+            ],
+            "like_count": "0",
+            "user_info": {
+              "nickname": "爱这五彩斑斓世界的喵",
+              "image": "https://sns-avatar-qc.xhscdn.com/avatar/6021e31dd986ddcfbbccda6f.jpg?imageView2/2/w/120/format/jpg",
+              "ai_agent": false,
+              "xsec_token": "ABxxsQgMi18dgdDwvgXoOdzyK7kDtYmXBK-2O8aWTdDkM=",
+              "user_id": "5d32d1d90000000016007502"
+            },
+            "show_tags": [],
+            "create_time": 1777954793000,
+            "ip_location": "江苏",
+            "note_id": "69e730f6000000001a02a2df",
+            "content": "@问一问",
+            "target_comment": {
+              "id": "69f96fe3000000002b0267c8",
+              "user_info": {
+                "image": "https://sns-avatar-qc.xhscdn.com/avatar/6021e31dd986ddcfbbccda6f.jpg?imageView2/2/w/120/format/jpg",
+                "ai_agent": false,
+                "xsec_token": "ABxxsQgMi18dgdDwvgXoOdzyK7kDtYmXBK-2O8aWTdDkM=",
+                "user_id": "5d32d1d90000000016007502",
+                "nickname": "爱这五彩斑斓世界的喵"
+              }
+            }
+          }
+        ],
+        "sub_comment_cursor": "69f96fe9000000002b028f93",
+        "content": "删蜜蜂留狐狸",
+        "user_info": {
+          "xsec_token": "ABxxsQgMi18dgdDwvgXoOdzyK7kDtYmXBK-2O8aWTdDkM=",
+          "user_id": "5d32d1d90000000016007502",
+          "nickname": "爱这五彩斑斓世界的喵",
+          "image": "https://sns-avatar-qc.xhscdn.com/avatar/6021e31dd986ddcfbbccda6f.jpg?imageView2/2/w/120/format/jpg",
+          "ai_agent": false
+        },
+        "show_tags": [],
+        "status": 0,
+        "at_users": [],
+        "create_time": 1777954787000,
+        "sub_comment_has_more": true
+      },
+      {
+        "sub_comment_cursor": "69f8e202000000002902f37b",
+        "id": "69f8e1f9000000002a02c252",
+        "at_users": [],
+        "create_time": 1777918458000,
+        "sub_comment_count": "5",
+        "note_id": "69e730f6000000001a02a2df",
+        "liked": false,
+        "show_tags": [],
+        "content": "去蜜蜂留小狗",
+        "user_info": {
+          "xsec_token": "ABthXbAZhUdIUEHrMhappEmOhakpr9YJyijMiOoc35k0c=",
+          "user_id": "5b1a8bbeb1da144a9975c770",
+          "nickname": "鸭鸭鸭",
+          "image": "https://sns-avatar-qc.xhscdn.com/avatar/1040g2jo31f6lfv97mo6g4a62kc5rthrg2ss8g38?imageView2/2/w/120/format/jpg",
+          "ai_agent": false
+        },
+        "sub_comment_has_more": true,
+        "status": 0,
+        "like_count": "0",
+        "ip_location": "山东",
+        "sub_comments": [
+          {
+            "liked": false,
+            "like_count": "0",
+            "user_info": {
+              "user_id": "5b1a8bbeb1da144a9975c770",
+              "nickname": "鸭鸭鸭",
+              "image": "https://sns-avatar-qc.xhscdn.com/avatar/1040g2jo31f6lfv97mo6g4a62kc5rthrg2ss8g38?imageView2/2/w/120/format/jpg",
+              "ai_agent": false,
+              "xsec_token": "ABthXbAZhUdIUEHrMhappEmOhakpr9YJyijMiOoc35k0c="
+            },
+            "show_tags": [],
+            "create_time": 1777918467000,
+            "id": "69f8e202000000002902f37b",
+            "note_id": "69e730f6000000001a02a2df",
+            "at_users": [
+              {
+                "nickname": "问一问",
+                "ai_agent": true,
+                "xsec_token": "ABWqDGZMMbBq-TCqMAqS1t4U_lpBDMR9QtbmgHLDaeDK8=",
+                "user_id": "68944c1e0000000028001164"
+              }
+            ],
+            "ip_location": "山东",
+            "status": 0,
+            "content": "@问一问",
+            "target_comment": {
+              "id": "69f8e1f9000000002a02c252",
+              "user_info": {
+                "xsec_token": "ABthXbAZhUdIUEHrMhappEmOhakpr9YJyijMiOoc35k0c=",
+                "user_id": "5b1a8bbeb1da144a9975c770",
+                "nickname": "鸭鸭鸭",
+                "image": "https://sns-avatar-qc.xhscdn.com/avatar/1040g2jo31f6lfv97mo6g4a62kc5rthrg2ss8g38?imageView2/2/w/120/format/jpg",
+                "ai_agent": false
+              }
+            }
+          }
+        ]
+      },
+      {
+        "status": 0,
+        "content": "去蜜蜂留兔子",
+        "sub_comment_count": "6",
+        "at_users": [],
+        "like_count": "0",
+        "user_info": {
+          "ai_agent": false,
+          "xsec_token": "ABBtPcU3JG_LD5iiGDIaWSzwuV7Rb1leSFijRC95HCYgU=",
+          "user_id": "63d10f0300000000260119d9",
+          "nickname": "时阮阮阮阮阮",
+          "image": "https://sns-avatar-qc.xhscdn.com/avatar/1040g2jo31t1vpjqs566g5ouh1s1pi6ep783dl70?imageView2/2/w/120/format/jpg"
+        },
+        "sub_comments": [
+          {
+            "create_time": 1777896720000,
+            "note_id": "69e730f6000000001a02a2df",
+            "status": 0,
+            "liked": false,
+            "user_info": {
+              "nickname": "时阮阮阮阮阮",
+              "image": "https://sns-avatar-qc.xhscdn.com/avatar/1040g2jo31t1vpjqs566g5ouh1s1pi6ep783dl70?imageView2/2/w/120/format/jpg",
+              "ai_agent": false,
+              "xsec_token": "ABBtPcU3JG_LD5iiGDIaWSzwuV7Rb1leSFijRC95HCYgU=",
+              "user_id": "63d10f0300000000260119d9"
+            },
+            "show_tags": [],
+            "ip_location": "江苏",
+            "target_comment": {
+              "id": "69f88d0b000000002701e433",
+              "user_info": {
+                "ai_agent": false,
+                "xsec_token": "ABBtPcU3JG_LD5iiGDIaWSzwuV7Rb1leSFijRC95HCYgU=",
+                "user_id": "63d10f0300000000260119d9",
+                "nickname": "时阮阮阮阮阮",
+                "image": "https://sns-avatar-qc.xhscdn.com/avatar/1040g2jo31t1vpjqs566g5ouh1s1pi6ep783dl70?imageView2/2/w/120/format/jpg"
+              }
+            },
+            "id": "69f88d10000000002702c581",
+            "content": "@问一问",
+            "at_users": [
+              {
+                "user_id": "68944c1e0000000028001164",
+                "nickname": "问一问",
+                "ai_agent": true,
+                "xsec_token": "ABWqDGZMMbBq-TCqMAqS1t4U_lpBDMR9QtbmgHLDaeDK8="
+              }
+            ],
+            "like_count": "0"
+          }
+        ],
+        "ip_location": "江苏",
+        "sub_comment_has_more": true,
+        "id": "69f88d0b000000002701e433",
+        "note_id": "69e730f6000000001a02a2df",
+        "liked": false,
+        "create_time": 1777896716000,
+        "show_tags": [],
+        "sub_comment_cursor": "69f88d10000000002702c581"
+      },
+      {
+        "note_id": "69e730f6000000001a02a2df",
+        "status": 0,
+        "content": "删蜜蜂，留小鸟",
+        "user_info": {
+          "user_id": "642c16710000000012012bed",
+          "nickname": "丰富骨灰",
+          "image": "https://sns-avatar-qc.xhscdn.com/avatar/1040g2jo31so3l9jv68005p1c2pokiavdlmauuv0?imageView2/2/w/120/format/jpg",
+          "ai_agent": false,
+          "xsec_token": "ABOVJ9O2j0g3DB4HAiKpvFR3rT-fOVn52rBDMeXsNjgpQ="
+        },
+        "sub_comment_count": "2",
+        "sub_comment_has_more": true,
+        "id": "69f93fd7000000002a025be3",
+        "ip_location": "河北",
+        "sub_comments": [
+          {
+            "content": "@问一问",
+            "at_users": [
+              {
+                "user_id": "68944c1e0000000028001164",
+                "nickname": "问一问",
+                "ai_agent": true,
+                "xsec_token": "ABWqDGZMMbBq-TCqMAqS1t4U_lpBDMR9QtbmgHLDaeDK8="
+              }
+            ],
+            "like_count": "0",
+            "user_info": {
+              "user_id": "642c16710000000012012bed",
+              "nickname": "丰富骨灰",
+              "image": "https://sns-avatar-qc.xhscdn.com/avatar/1040g2jo31so3l9jv68005p1c2pokiavdlmauuv0?imageView2/2/w/120/format/jpg",
+              "ai_agent": false,
+              "xsec_token": "ABOVJ9O2j0g3DB4HAiKpvFR3rT-fOVn52rBDMeXsNjgpQ="
+            },
+            "ip_location": "河北",
+            "target_comment": {
+              "id": "69f93fd7000000002a025be3",
+              "user_info": {
+                "user_id": "642c16710000000012012bed",
+                "nickname": "丰富骨灰",
+                "image": "https://sns-avatar-qc.xhscdn.com/avatar/1040g2jo31so3l9jv68005p1c2pokiavdlmauuv0?imageView2/2/w/120/format/jpg",
+                "ai_agent": false,
+                "xsec_token": "ABOVJ9O2j0g3DB4HAiKpvFR3rT-fOVn52rBDMeXsNjgpQ="
+              }
+            },
+            "note_id": "69e730f6000000001a02a2df",
+            "status": 0,
+            "liked": false,
+            "show_tags": [],
+            "create_time": 1777942499000,
+            "id": "69f93fe2000000002a00653d"
+          }
+        ],
+        "show_tags": [],
+        "sub_comment_cursor": "69f93fe2000000002a00653d",
+        "create_time": 1777942488000,
+        "liked": false,
+        "like_count": "0",
+        "at_users": []
+      },
+      {
+        "note_id": "69e730f6000000001a02a2df",
+        "show_tags": [],
+        "status": 0,
+        "at_users": [],
+        "sub_comment_count": "4",
+        "sub_comments": [
+          {
+            "id": "69f8928f000000002a026020",
+            "note_id": "69e730f6000000001a02a2df",
+            "status": 0,
+            "content": "@问一问",
+            "at_users": [
+              {
+                "user_id": "68944c1e0000000028001164",
+                "nickname": "问一问",
+                "ai_agent": true,
+                "xsec_token": "ABWqDGZMMbBq-TCqMAqS1t4U_lpBDMR9QtbmgHLDaeDK8="
+              }
+            ],
+            "like_count": "0",
+            "show_tags": [],
+            "ip_location": "山东",
+            "target_comment": {
+              "id": "69f89263000000002a02eb87",
+              "user_info": {
+                "user_id": "601e885e0000000001002de0",
+                "nickname": "槐序",
+                "image": "https://sns-avatar-qc.xhscdn.com/avatar/1040g2jo31t77s0sb5k6g5o0uh1f08bf09dqarj0?imageView2/2/w/120/format/jpg",
+                "ai_agent": false,
+                "xsec_token": "ABzxYzX3xf7skZ-IEeSc98b3nONfSJv1GcM_qWxCEcfJQ="
+              }
+            },
+            "liked": false,
+            "user_info": {
+              "user_id": "601e885e0000000001002de0",
+              "nickname": "槐序",
+              "image": "https://sns-avatar-qc.xhscdn.com/avatar/1040g2jo31t77s0sb5k6g5o0uh1f08bf09dqarj0?imageView2/2/w/120/format/jpg",
+              "ai_agent": false,
+              "xsec_token": "ABzxYzX3xf7skZ-IEeSc98b3nONfSJv1GcM_qWxCEcfJQ="
+            },
+            "create_time": 1777898127000
+          }
+        ],
+        "content": "去熊猫留豹子",
+        "liked": false,
+        "user_info": {
+          "xsec_token": "ABzxYzX3xf7skZ-IEeSc98b3nONfSJv1GcM_qWxCEcfJQ=",
+          "user_id": "601e885e0000000001002de0",
+          "nickname": "槐序",
+          "image": "https://sns-avatar-qc.xhscdn.com/avatar/1040g2jo31t77s0sb5k6g5o0uh1f08bf09dqarj0?imageView2/2/w/120/format/jpg",
+          "ai_agent": false
+        },
+        "ip_location": "山东",
+        "sub_comment_has_more": true,
+        "id": "69f89263000000002a02eb87",
+        "like_count": "0",
+        "create_time": 1777898084000,
+        "sub_comment_cursor": "69f8928f000000002a026020"
+      },
+      {
+        "user_info": {
+          "ai_agent": false,
+          "xsec_token": "ABS0FKoSBawCispOssiHwjfO5MqDcpiE6g-haoAogV3PU=",
+          "user_id": "66f61667000000001d0329f8",
+          "nickname": "小红薯66F620A4",
+          "image": "https://sns-avatar-qc.xhscdn.com/avatar/645b7e78731e07eb8ca3d81b.jpg?imageView2/2/w/120/format/jpg"
+        },
+        "show_tags": [],
+        "sub_comment_count": "2",
+        "at_users": [],
+        "like_count": "0",
+        "sub_comments": [
+          {
+            "at_users": [
+              {
+                "user_id": "68944c1e0000000028001164",
+                "nickname": "问一问",
+                "ai_agent": true,
+                "xsec_token": "ABWqDGZMMbBq-TCqMAqS1t4U_lpBDMR9QtbmgHLDaeDK8="
+              }
+            ],
+            "show_tags": [],
+            "create_time": 1777889316000,
+            "ip_location": "陕西",
+            "like_count": "0",
+            "user_info": {
+              "user_id": "66f61667000000001d0329f8",
+              "nickname": "小红薯66F620A4",
+              "image": "https://sns-avatar-qc.xhscdn.com/avatar/645b7e78731e07eb8ca3d81b.jpg?imageView2/2/w/120/format/jpg",
+              "ai_agent": false,
+              "xsec_token": "ABS0FKoSBawCispOssiHwjfO5MqDcpiE6g-haoAogV3PU="
+            },
+            "target_comment": {
+              "id": "69f870200000000028033263",
+              "user_info": {
+                "xsec_token": "ABS0FKoSBawCispOssiHwjfO5MqDcpiE6g-haoAogV3PU=",
+                "user_id": "66f61667000000001d0329f8",
+                "nickname": "小红薯66F620A4",
+                "image": "https://sns-avatar-qc.xhscdn.com/avatar/645b7e78731e07eb8ca3d81b.jpg?imageView2/2/w/120/format/jpg",
+                "ai_agent": false
+              }
+            },
+            "id": "69f870240000000028036e0a",
+            "note_id": "69e730f6000000001a02a2df",
+            "status": 0,
+            "content": "@问一问",
+            "liked": false
+          }
+        ],
+        "sub_comment_cursor": "69f870240000000028036e0a",
+        "content": "最想删掉狐狸，留一个舍不得的小狗",
+        "liked": false,
+        "create_time": 1777889312000,
+        "sub_comment_has_more": true,
+        "status": 0,
+        "note_id": "69e730f6000000001a02a2df",
+        "ip_location": "陕西",
+        "id": "69f870200000000028033263"
+      },
+      {
+        "show_tags": [],
+        "sub_comment_count": "4",
+        "sub_comments": [
+          {
+            "liked": false,
+            "user_info": {
+              "user_id": "6691ea03000000000f034bbd",
+              "nickname": "晓眠年",
+              "image": "https://sns-avatar-qc.xhscdn.com/avatar/1040g2jo31r4a66ac0mcg5pkht81juitt1mnsfl0?imageView2/2/w/120/format/jpg",
+              "ai_agent": false,
+              "xsec_token": "ABtfFMC0xmVjFDIYtYdWtVzkWGersmmmOtUJ_lRAwkwLU="
+            },
+            "show_tags": [],
+            "create_time": 1777881504000,
+            "ip_location": "新加坡",
+            "target_comment": {
+              "id": "69f8519a000000002701736d",
+              "user_info": {
+                "user_id": "6691ea03000000000f034bbd",
+                "nickname": "晓眠年",
+                "image": "https://sns-avatar-qc.xhscdn.com/avatar/1040g2jo31r4a66ac0mcg5pkht81juitt1mnsfl0?imageView2/2/w/120/format/jpg",
+                "ai_agent": false,
+                "xsec_token": "ABtfFMC0xmVjFDIYtYdWtVzkWGersmmmOtUJ_lRAwkwLU="
+              }
+            },
+            "id": "69f851a0000000002800855c",
+            "note_id": "69e730f6000000001a02a2df",
+            "status": 0,
+            "content": "@问一问",
+            "at_users": [
+              {
+                "user_id": "68944c1e0000000028001164",
+                "nickname": "问一问",
+                "ai_agent": true,
+                "xsec_token": "ABWqDGZMMbBq-TCqMAqS1t4U_lpBDMR9QtbmgHLDaeDK8="
+              }
+            ],
+            "like_count": "0"
+          }
+        ],
+        "sub_comment_cursor": "69f851a0000000002800855c",
+        "note_id": "69e730f6000000001a02a2df",
+        "content": "删长颈鹿，留豹子",
+        "like_count": "0",
+        "at_users": [],
+        "liked": false,
+        "ip_location": "新加坡",
+        "sub_comment_has_more": true,
+        "user_info": {
+          "user_id": "6691ea03000000000f034bbd",
+          "nickname": "晓眠年",
+          "image": "https://sns-avatar-qc.xhscdn.com/avatar/1040g2jo31r4a66ac0mcg5pkht81juitt1mnsfl0?imageView2/2/w/120/format/jpg",
+          "ai_agent": false,
+          "xsec_token": "ABtfFMC0xmVjFDIYtYdWtVzkWGersmmmOtUJ_lRAwkwLU="
+        },
+        "create_time": 1777881499000,
+        "id": "69f8519a000000002701736d",
+        "status": 3
+      }
+    ],
+    "cursor": "69f8519a000000002701736d",
+    "has_more": true,
+    "time": 1778239857430,
+    "xsec_token": "ABeh-h2_6sfdBas9sPyh9EtHVtDzO8k0kS0ChAG6ANYgc="
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "ok": true,
+  "schema_version": "1",
+  "data": {
+    "cursor_score": "",
+    "items": [
+      {
+        "id": "67d4382e000000001e00b1a7",
+        "model_type": "note",
+        "note_card": {
+          "note_id": "67d4382e000000001e00b1a7",
+          "user": {
+            "user_id": "5d839233000000000100a8de",
+            "nickname": "氪氟",
+            "avatar": "https://sns-avatar-qc.xhscdn.com/avatar/1040g2jo31a7tb5g66q6g5nc3i8pg9a6um0fonog",
+            "xsec_token": "ABYNnFNnOMY_w4Rds559_KMSbu-0Ff2WL54tabxeB4UAk="
+          },
+          "tag_list": [
+            {
+              "type": "topic",
+              "id": "5ef0c787000000000101f13a",
+              "name": "大学生社会"
+            },
+            {
+              "id": "5e95e8d4000000000100bc79",
+              "name": "现代大学生",
+              "type": "topic"
+            },
+            {
+              "name": "大学生活",
+              "type": "topic",
+              "id": "60a7976600000000010073f5"
+            },
+            {
+              "type": "topic",
+              "id": "6358a685000000000101fbbc",
+              "name": "大学生精神状态很稳定呀"
+            },
+            {
+              "type": "topic",
+              "id": "606b0a7d000000000100440c",
+              "name": "发疯"
+            }
+          ],
+          "at_user_list": [],
+          "time": 1741961262000,
+          "last_update_time": 1741961262000,
+          "type": "normal",
+          "title": "大学能不能还给大学生成年人类的自由",
+          "desc": "一想到大学里面实习，怀孕，晚自习，查寝，家长同意书会同时出现就想笑哈[再见R] #大学生社会[话题]# #现代大学生[话题]# #大学生活[话题]# #大学生精神状态很稳定呀[话题]# #发疯[话题]#",
+          "interact_info": {
+            "comment_count": "2445",
+            "share_count": "3884",
+            "followed": false,
+            "relation": "none",
+            "liked": false,
+            "liked_count": "2.4万",
+            "collected": false,
+            "collected_count": "1293"
+          },
+          "image_list": [
+            {
+              "info_list": [
+                {
+                  "image_scene": "WB_PRV",
+                  "url": "http://sns-webpic-qc.xhscdn.com/202605081904/6e847af4ca7a522b817febec31180f2b/1040g00831f0tuv4flu605nc3i8pg9a6usjp5c70!nd_prv_wlteh_webp_3"
+                },
+                {
+                  "image_scene": "WB_DFT",
+                  "url": "http://sns-webpic-qc.xhscdn.com/202605081904/a24d9df5000c24e1b46d25953d2921c8/1040g00831f0tuv4flu605nc3i8pg9a6usjp5c70!nd_dft_wlteh_webp_3"
+                }
+              ],
+              "url_default": "http://sns-webpic-qc.xhscdn.com/202605081904/a24d9df5000c24e1b46d25953d2921c8/1040g00831f0tuv4flu605nc3i8pg9a6usjp5c70!nd_dft_wlteh_webp_3",
+              "file_id": "",
+              "width": 1200,
+              "trace_id": "",
+              "url_pre": "http://sns-webpic-qc.xhscdn.com/202605081904/6e847af4ca7a522b817febec31180f2b/1040g00831f0tuv4flu605nc3i8pg9a6usjp5c70!nd_prv_wlteh_webp_3",
+              "stream": {},
+              "live_photo": false,
+              "height": 1600,
+              "url": ""
+            }
+          ],
+          "share_info": {
+            "un_share": false
+          }
+        }
+      }
+    ],
+    "current_time": 1778238297492
+  }
+}

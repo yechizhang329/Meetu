@@ -133,7 +133,7 @@
 ### D 整活吗喽
 - 我不是没主见，我是讨好型人格 — usage: role_card
 - 情况就是这么个情况，具体什么情况，还要看情况 — usage: role_card
-- 形而上学，不行退学 — usage: role_card
+- 虽然我不会做饭，但我点得一手好外卖 — usage: role_card（2026-05-12 22:54 从 backup promote）
 
 ### E 高情商刺猬
 - 啊对对对 — usage: preview / result_support
@@ -166,7 +166,7 @@
 - 但凡我有点本事，也不至于没本事 — usage: role_card
 - 要是这事能解决，那应该就能解决了 — usage: role_card
 - 狗都不吃 — usage: result_support / preview
-- 虽然我不会做饭，但我点得一手好外卖 — usage: role_card
+- 形而上学，不行退学 — usage: role_card（2026-05-12 22:54 从 master 降级；同时为 S4 D 默认 result_text）
 
 ### E 高情商刺猬
 - 你别生气，听我狡辩 — usage: role_card / preview

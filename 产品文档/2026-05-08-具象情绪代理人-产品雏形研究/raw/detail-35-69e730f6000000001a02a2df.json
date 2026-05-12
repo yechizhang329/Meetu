@@ -1,0 +1,144 @@
+{
+  "ok": true,
+  "schema_version": "1",
+  "data": {
+    "cursor_score": "",
+    "items": [
+      {
+        "id": "69e730f6000000001a02a2df",
+        "model_type": "note",
+        "note_card": {
+          "type": "normal",
+          "user": {
+            "user_id": "6596c8cd000000002200404e",
+            "nickname": "曾小财😎",
+            "avatar": "https://sns-avatar-qc.xhscdn.com/avatar/1040g2jo31lh7vrgc5m005pcmp36ogg2ee9r3v3o",
+            "xsec_token": "ABMpFaAEEgZnhNyreNjRnYRW3frm0GIfoHPRKQSXxOy8U="
+          },
+          "time": 1776759030000,
+          "last_update_time": 1776763350000,
+          "ip_location": "上海",
+          "illegal_info": {
+            "desc": "内容可能使用AI技术生成",
+            "left_icon": "https://picasso-static.xiaohongshu.com/fe-platfrom/bc740cc162107169b504c4c1e5ee35f92eaa8456.png",
+            "link": "xhsdiscover://rn/kuri/noteStickers?background_transparent_v2=true&needNewRootNavigation=true&noteId=69e730f6000000001a02a2df"
+          },
+          "note_id": "69e730f6000000001a02a2df",
+          "interact_info": {
+            "share_count": "19",
+            "followed": false,
+            "relation": "none",
+            "liked": false,
+            "liked_count": "95",
+            "collected": false,
+            "collected_count": "37",
+            "comment_count": "1880"
+          },
+          "image_list": [
+            {
+              "file_id": "",
+              "height": 2341,
+              "width": 1789,
+              "url": "",
+              "live_photo": false,
+              "trace_id": "",
+              "info_list": [
+                {
+                  "image_scene": "WB_PRV",
+                  "url": "http://sns-webpic-qc.xhscdn.com/202605081930/98dbc4c12d4e81075fb258a9c2b6a7d5/notes_pre_post/1040g3k831v7eks602g705pcmp36ogg2eo74udjo!nd_prv_wlteh_webp_3"
+                },
+                {
+                  "image_scene": "WB_DFT",
+                  "url": "http://sns-webpic-qc.xhscdn.com/202605081930/e06259cd5cc7792edcbcd0255aa37cbc/notes_pre_post/1040g3k831v7eks602g705pcmp36ogg2eo74udjo!nd_dft_wlteh_webp_3"
+                }
+              ],
+              "url_pre": "http://sns-webpic-qc.xhscdn.com/202605081930/98dbc4c12d4e81075fb258a9c2b6a7d5/notes_pre_post/1040g3k831v7eks602g705pcmp36ogg2eo74udjo!nd_prv_wlteh_webp_3",
+              "url_default": "http://sns-webpic-qc.xhscdn.com/202605081930/e06259cd5cc7792edcbcd0255aa37cbc/notes_pre_post/1040g3k831v7eks602g705pcmp36ogg2eo74udjo!nd_dft_wlteh_webp_3",
+              "stream": {}
+            },
+            {
+              "file_id": "",
+              "width": 1793,
+              "url": "",
+              "live_photo": false,
+              "height": 2337,
+              "trace_id": "",
+              "info_list": [
+                {
+                  "image_scene": "WB_PRV",
+                  "url": "http://sns-webpic-qc.xhscdn.com/202605081930/5a6e3143969cd95f2083c8f3ca248d46/notes_pre_post/1040g3k831v7eks602g7g5pcmp36ogg2egkmscvg!nd_prv_wlteh_webp_3"
+                },
+                {
+                  "image_scene": "WB_DFT",
+                  "url": "http://sns-webpic-qc.xhscdn.com/202605081930/ef06b541254986d11323b41dad95d452/notes_pre_post/1040g3k831v7eks602g7g5pcmp36ogg2egkmscvg!nd_dft_wlteh_webp_3"
+                }
+              ],
+              "url_pre": "http://sns-webpic-qc.xhscdn.com/202605081930/5a6e3143969cd95f2083c8f3ca248d46/notes_pre_post/1040g3k831v7eks602g7g5pcmp36ogg2egkmscvg!nd_prv_wlteh_webp_3",
+              "url_default": "http://sns-webpic-qc.xhscdn.com/202605081930/ef06b541254986d11323b41dad95d452/notes_pre_post/1040g3k831v7eks602g7g5pcmp36ogg2egkmscvg!nd_dft_wlteh_webp_3",
+              "stream": {}
+            }
+          ],
+          "tag_list": [
+            {
+              "name": "SBTI",
+              "type": "topic",
+              "id": "6548b5780000000003011242"
+            },
+            {
+              "type": "topic",
+              "id": "5beccc97ad39ce000170f8f1",
+              "name": "心理测试"
+            },
+            {
+              "id": "5cdb76e2000000000f03959b",
+              "name": "人格测试",
+              "type": "topic"
+            },
+            {
+              "name": "MBTI",
+              "type": "topic",
+              "id": "64a38b51000000003801cacb"
+            },
+            {
+              "id": "61f9952e000000000101f7f9",
+              "name": "16人格",
+              "type": "topic"
+            },
+            {
+              "id": "5c7d278f000000000d009e08",
+              "name": "趣味测试",
+              "type": "topic"
+            },
+            {
+              "id": "635b4fbe00000000010095a3",
+              "name": "人格解读",
+              "type": "topic"
+            },
+            {
+              "id": "5c3f8f2e000000000e00dc84",
+              "name": "自我认知",
+              "type": "topic"
+            },
+            {
+              "id": "62d554ea000000000101c7f9",
+              "name": "心理洞察",
+              "type": "topic"
+            },
+            {
+              "id": "62d67b77000000000100a495",
+              "name": "精准识人",
+              "type": "topic"
+            }
+          ],
+          "title": "又快又准：选动物秒测出你的SBTI",
+          "desc": "不要犹豫 第一直觉想到什么就是什么\n\t\n选1个你最想删掉的动物\n再留一个你最舍不得的\n你的选择，藏着你最真实的内心状态。\n\t\n人格类型：\n1. 领导者（BOSS）：天生主导，自带气场，习惯掌控全局\n2. 拿捏者（CTRL）：情绪与局势双控，清醒又克制\n3. 傻乐者（HHHH）：心大易满足，快乐至上没烦恼\n4. 多情者（LOVE-R）：共情力强，感性细腻重感情\n5. 尤物（SEXY）：自信耀眼，自带吸引力与辨识度\n6. 思考者（THIN-K）：理性内敛，凡事习惯深度琢磨\n7. 无所谓人（OJBK)：佛系通透，不强求也不内耗\n8. 感恩者（THAN-K)：心怀善意，懂得回馈与珍惜\n9. 送钱者（ATM-er)：心软大方，习惯付出与迁就\n10. 伪人（FAKE）：擅长伪装，很少展露真实一面\n11. 吗喽(MALO）：平凡接地气，随遇而安过生活\n12. 小丑(JOKE-R)：用搞笑掩饰情绪，习惯自我消化\n13. 哦不人(OH-NO）：遇事易慌，敏感多虑易焦虑\n14. 握草人（WTF）：直来直去，情绪都写在脸上\n15. 愤世者(SHIT)：看不惯虚与委蛇，自带批判视角\n16. 装死者（ZZZZ）：能躲就躲，不爱社交怕麻烦\n17. 贫困者(POOR)：常感匮乏，容易焦虑物质与未来\n18. 僧人（MONK）：清心寡欲，追求内心平静安稳\n19. 傻者(IMSB)：单纯直率，偶尔反应慢半拍\n20. 孤儿(SOLO）：习惯独处，独立且不爱依赖他人\n21. 草者(FUCK)：脾气直接，不喜拐弯抹角\n22. 死者(DEAD)：对多数事提不起劲，状态偏佛系躺平\n23. 废物(IMFW)：偶尔自我否定，行动力偏弱\n24. 酒鬼(DRUNK)：爱放松享乐，擅长排解压力\n25. 行人(GOGO)：行动力强，永远在向前赶路\n26. 雕丝(Dior-s)：随性自在，不被世俗标准绑架\n#SBTI[话题]##心理测试[话题]##人格测试[话题]# #MBTI[话题]##16人格[话题]#  #趣味测试[话题]# #人格解读[话题]# #自我认知[话题]# #心理洞察[话题]##精准识人[话题]#",
+          "at_user_list": [],
+          "share_info": {
+            "un_share": false
+          }
+        }
+      }
+    ],
+    "current_time": 1778239821900
+  }
+}

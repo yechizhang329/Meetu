@@ -1,0 +1,15 @@
+{
+  "queries": 23,
+  "raw_rows": 230,
+  "dedup": 208,
+  "detail": 45,
+  "comments": 8,
+  "group_detail_counts": {
+    "paiban_animal": 8,
+    "status_sticker": 9,
+    "proxy_copy": 12,
+    "pet_companion": 8,
+    "identity_mascot": 8
+  },
+  "errors": []
+}

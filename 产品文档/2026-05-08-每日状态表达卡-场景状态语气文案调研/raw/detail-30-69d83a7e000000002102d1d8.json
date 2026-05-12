@@ -1,0 +1,113 @@
+{
+  "ok": true,
+  "schema_version": "1",
+  "data": {
+    "cursor_score": "",
+    "items": [
+      {
+        "id": "69d83a7e000000002102d1d8",
+        "model_type": "note",
+        "note_card": {
+          "share_info": {
+            "un_share": false
+          },
+          "type": "normal",
+          "image_list": [
+            {
+              "stream": {},
+              "live_photo": false,
+              "file_id": "",
+              "width": 1208,
+              "url": "",
+              "url_pre": "http://sns-webpic-qc.xhscdn.com/202605081906/a78cb3d726f545dca4d530f0c62623a6/notes_pre_post/1040g3k031uor91u6ig0041554quqerq1vj621ho!nd_prv_wlteh_webp_3",
+              "url_default": "http://sns-webpic-qc.xhscdn.com/202605081906/308bdcdd36b95ea24ee5cec31f78c440/notes_pre_post/1040g3k031uor91u6ig0041554quqerq1vj621ho!nd_dft_wlteh_webp_3",
+              "height": 2560,
+              "trace_id": "",
+              "info_list": [
+                {
+                  "image_scene": "WB_PRV",
+                  "url": "http://sns-webpic-qc.xhscdn.com/202605081906/a78cb3d726f545dca4d530f0c62623a6/notes_pre_post/1040g3k031uor91u6ig0041554quqerq1vj621ho!nd_prv_wlteh_webp_3"
+                },
+                {
+                  "url": "http://sns-webpic-qc.xhscdn.com/202605081906/308bdcdd36b95ea24ee5cec31f78c440/notes_pre_post/1040g3k031uor91u6ig0041554quqerq1vj621ho!nd_dft_wlteh_webp_3",
+                  "image_scene": "WB_DFT"
+                }
+              ]
+            }
+          ],
+          "tag_list": [
+            {
+              "id": "5c22462c00000000080126b6",
+              "name": "性格分析",
+              "type": "topic"
+            },
+            {
+              "id": "6650079e000000001b03d232",
+              "name": "sbti",
+              "type": "topic"
+            },
+            {
+              "id": "61fa273d000000000101c172",
+              "name": "猜MBTI人格",
+              "type": "topic"
+            },
+            {
+              "id": "65904dbc000000003f02cbe6",
+              "name": "抽象人格",
+              "type": "topic"
+            },
+            {
+              "id": "5c2192cf000000000a0357ab",
+              "name": "性格测试",
+              "type": "topic"
+            },
+            {
+              "type": "topic",
+              "id": "661e665e000000001b03e071",
+              "name": "趣味人格"
+            },
+            {
+              "id": "5be764531cc2b50001167e33",
+              "name": "校招",
+              "type": "topic"
+            },
+            {
+              "id": "5d4befe4000000001800c3e2",
+              "name": "网申",
+              "type": "topic"
+            },
+            {
+              "id": "5e96ce5500000000010082c0",
+              "name": "内推",
+              "type": "topic"
+            }
+          ],
+          "at_user_list": [],
+          "interact_info": {
+            "collected_count": "131",
+            "comment_count": "714",
+            "share_count": "475",
+            "followed": false,
+            "relation": "none",
+            "liked": false,
+            "liked_count": "519",
+            "collected": false
+          },
+          "time": 1775778430000,
+          "last_update_time": 1775778430000,
+          "ip_location": "北京",
+          "note_id": "69d83a7e000000002102d1d8",
+          "title": "SBTI全新来袭",
+          "desc": "笑不活了！SBTI 26种趣味人格全图鉴\n1. 自我攻击者 IMSB\n内心细腻敏感，习惯自我反思，总在自我精进\n2. 领导者 BOSS\n天生自带气场，有担当有主见，靠谱主心骨\n3. 妈妈 MUM\n温柔细心付出型，贴心又温暖，把身边人照顾得妥妥帖帖\n4. 伪人 FAKE\n社交情商在线，懂得灵活处世，适配各种场合\n5. 死者 DEAD\n情绪稳定内核强，看淡纷扰，只想安静过好自己的小日子\n6. 装死者 ZZZZ\n懂得及时止损，不内耗不纠结，用松弛感避开麻烦\n7. 行者 GOGO\n行动力超强，敢想敢做不拖延，永远奔赴在热爱里\n8. 草者 FUCK\n心态豁达抗压强，自带韧性，再难的事都能从容面对\n9. 拿捏者 CTRL\n通透懂人心，处事有分寸，社交里的温柔掌控者\n10. 傻乐者 HHHH\n乐观开朗小太阳，心态超好，自带快乐感染力\n11. 尤物 SEXY\n自信大方有魅力，气质出众，走到哪都自带光芒\n12. 无所谓人 OJBK\n随性通透不较真，心态平和，凡事都能从容接纳\n13. 贫穷者 POOR\n知足常乐心态棒，精神富足\n14. 哦不人 OH-NO!\n心思谨慎考虑周全，遇事会提前预判\n15. 僧人 MONK\n内心宁静淡泊，不追名逐利，清醒又自在\n16. 狗屎人 SHIT\n直率真实不虚伪，心里藏不住事，嘴硬心软\n17. 感恩者 THAN-K\n心地柔软懂珍惜，待人真诚\n18. 吗喽 MALO\n佛系松弛不内卷，享受简单快乐，自在又舒心\n19. 送钱者 ATM-er\n大方仗义重情义，待人真诚慷慨，人缘超棒\n20. 思考者 THIN-K\n心思缜密有深度，擅长复盘总结，沉稳有想法\n21. 孤儿 SOLO\n享受独处时光，独立又清醒，专注自我成长\n22. 多情者 LOVE-R\n感性温柔重感情，擅长发现美好，对生活满怀心动\n23. 握草人 WOC!\n率真直爽不做作，情绪直白不藏着，真实又洒脱\n24. 酒鬼 DRUNK\n懂得释放情绪，热爱生活烟火气，尽兴又自在\n25. 废物 IMFW\n自嘲式松弛感，不跟自己较劲，快乐随心\n26. 小丑 joker\n幽默风趣氛围担当，乐观开朗，温暖身边人\n快来认领你的专属人格！\n#性格分析[话题]# #sbti[话题]# #猜MBTI人格[话题]# #抽象人格[话题]# #性格测试[话题]# #趣味人格[话题]# #校招[话题]# #网申[话题]# #内推[话题]#",
+          "user": {
+            "user_id": "55ea3da7e4b1cf6c2ece6f41",
+            "nickname": "黎落（好运版）",
+            "avatar": "https://sns-avatar-qc.xhscdn.com/avatar/1040g2jo31jgriqpnj26g41554quqerq1lf7rtp0",
+            "xsec_token": "ABIF1fHLM0C3cVxrHpyOJmMCQm04LzlKdPZT2fjjZXFk0="
+          }
+        }
+      }
+    ],
+    "current_time": 1778238362682
+  }
+}

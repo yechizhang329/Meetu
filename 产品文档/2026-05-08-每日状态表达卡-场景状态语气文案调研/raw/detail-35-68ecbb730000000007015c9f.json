@@ -1,0 +1,72 @@
+{
+  "ok": true,
+  "schema_version": "1",
+  "data": {
+    "cursor_score": "",
+    "items": [
+      {
+        "id": "68ecbb730000000007015c9f",
+        "model_type": "note",
+        "note_card": {
+          "desc": "我人生从来都没有像大学这样过的这么操蛋。#大学生心理状态[话题]#",
+          "image_list": [
+            {
+              "file_id": "",
+              "height": 1600,
+              "width": 1200,
+              "trace_id": "",
+              "info_list": [
+                {
+                  "image_scene": "WB_PRV",
+                  "url": "http://sns-webpic-qc.xhscdn.com/202605081906/848435e5631185723298be292284cf6f/1040g2sg31nis1e284seg5p917aeghtlab2179vo!nd_prv_wlteh_webp_3"
+                },
+                {
+                  "image_scene": "WB_DFT",
+                  "url": "http://sns-webpic-qc.xhscdn.com/202605081906/57bebe0ef52988ce36c4fcd5c5e5dbc1/1040g2sg31nis1e284seg5p917aeghtlab2179vo!nd_dft_wlteh_webp_3"
+                }
+              ],
+              "url_pre": "http://sns-webpic-qc.xhscdn.com/202605081906/848435e5631185723298be292284cf6f/1040g2sg31nis1e284seg5p917aeghtlab2179vo!nd_prv_wlteh_webp_3",
+              "url_default": "http://sns-webpic-qc.xhscdn.com/202605081906/57bebe0ef52988ce36c4fcd5c5e5dbc1/1040g2sg31nis1e284seg5p917aeghtlab2179vo!nd_dft_wlteh_webp_3",
+              "live_photo": false,
+              "url": "",
+              "stream": {}
+            }
+          ],
+          "tag_list": [
+            {
+              "id": "631bfae3000000000100b38c",
+              "name": "大学生心理状态",
+              "type": "topic"
+            }
+          ],
+          "time": 1760344947000,
+          "last_update_time": 1760344947000,
+          "share_info": {
+            "un_share": false
+          },
+          "note_id": "68ecbb730000000007015c9f",
+          "type": "normal",
+          "title": "",
+          "user": {
+            "user_id": "65213a9d000000000200f6aa",
+            "nickname": "戒断",
+            "avatar": "https://sns-avatar-qc.xhscdn.com/avatar/1040g2jo31qeg2eop0m6g5p917aeghtlapr9rb58",
+            "xsec_token": "ABqN_z7tsHQo5KIF-jHEmARBKzU98zIPj-5BQy7aoog3c="
+          },
+          "interact_info": {
+            "liked": false,
+            "liked_count": "1.3万",
+            "collected": false,
+            "collected_count": "757",
+            "comment_count": "1358",
+            "share_count": "2057",
+            "followed": false,
+            "relation": "none"
+          },
+          "at_user_list": []
+        }
+      }
+    ],
+    "current_time": 1778238377373
+  }
+}

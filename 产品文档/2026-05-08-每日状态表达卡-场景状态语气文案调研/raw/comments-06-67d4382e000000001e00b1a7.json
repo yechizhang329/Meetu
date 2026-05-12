@@ -1,0 +1,552 @@
+{
+  "ok": true,
+  "schema_version": "1",
+  "data": {
+    "comments": [
+      {
+        "status": 0,
+        "content": "一想到小情侣出去开个房，要拿着家长同意的短信去找辅导员签假条，就想笑",
+        "liked": false,
+        "sub_comment_cursor": "67dbae0a000000000f033061",
+        "sub_comment_has_more": true,
+        "at_users": [],
+        "like_count": "2.5万",
+        "user_info": {
+          "user_id": "5c7dabe000000000110248ed",
+          "nickname": "用哭声战斗的两尾猫",
+          "image": "https://sns-avatar-qc.xhscdn.com/avatar/1040g2jo31pe9h1g7jc005n3tlfg4ci7d3ns57o0?imageView2/2/w/120/format/jpg",
+          "ai_agent": false,
+          "xsec_token": "ABxia8P58wRY8lhdxz5SgEDuxBY8GlmatlalJI7jewM0A="
+        },
+        "show_tags": [],
+        "sub_comments": [
+          {
+            "note_id": "67d4382e000000001e00b1a7",
+            "status": 0,
+            "liked": false,
+            "ip_location": "江西",
+            "id": "67dbae0a000000000f033061",
+            "content": "太招笑了老铁[doge]",
+            "at_users": [],
+            "like_count": "4285",
+            "user_info": {
+              "nickname": "氪氟",
+              "image": "https://sns-avatar-qc.xhscdn.com/avatar/1040g2jo31a7tb5g66q6g5nc3i8pg9a6um0fonog?imageView2/2/w/120/format/jpg",
+              "ai_agent": false,
+              "xsec_token": "ABa6HjQ1pFt2EAUKGUotMiXeceJW7YqrGinGoGPNuRcLw=",
+              "user_id": "5d839233000000000100a8de"
+            },
+            "show_tags": [
+              "is_author"
+            ],
+            "create_time": 1742450186000,
+            "target_comment": {
+              "user_info": {
+                "user_id": "5c7dabe000000000110248ed",
+                "nickname": "用哭声战斗的两尾猫",
+                "image": "https://sns-avatar-qc.xhscdn.com/avatar/1040g2jo31pe9h1g7jc005n3tlfg4ci7d3ns57o0?imageView2/2/w/120/format/jpg",
+                "ai_agent": false,
+                "xsec_token": "ABxia8P58wRY8lhdxz5SgEDuxBY8GlmatlalJI7jewM0A="
+              },
+              "id": "67db9a32000000001801a3d2"
+            }
+          }
+        ],
+        "note_id": "67d4382e000000001e00b1a7",
+        "id": "67db9a32000000001801a3d2",
+        "create_time": 1742445106000,
+        "ip_location": "湖北",
+        "sub_comment_count": "265"
+      },
+      {
+        "at_users": [],
+        "liked": false,
+        "like_count": "2万",
+        "ip_location": "江苏",
+        "note_id": "67d4382e000000001e00b1a7",
+        "show_tags": [],
+        "sub_comment_cursor": "67dc416b000000001200bbd2",
+        "sub_comment_has_more": true,
+        "id": "67dc3e51000000001e022885",
+        "user_info": {
+          "user_id": "65350a01000000000d006adb",
+          "nickname": "不可回收废物",
+          "image": "https://sns-avatar-qc.xhscdn.com/avatar/1040g2jo31tj500506u5g5q6dce28k02m317s1ro?imageView2/2/w/120/format/jpg",
+          "ai_agent": false,
+          "xsec_token": "ABgreQzR9DDM0Vdkl8NXZVG7lXR_JiCz9zDDrZFMQYHfY="
+        },
+        "create_time": 1742487122000,
+        "sub_comments": [
+          {
+            "user_info": {
+              "ai_agent": false,
+              "xsec_token": "ABqDO_CF3RvPAeyVoyQwBmLVwRKELDL5ZoYO7O95EYtXI=",
+              "user_id": "5eb650e50000000001003fa7",
+              "nickname": "小熊维尼✨",
+              "image": "https://sns-avatar-qc.xhscdn.com/avatar/1040g2jo30q8a0sr3n4505nlma3ig8ft7vql623o?imageView2/2/w/120/format/jpg"
+            },
+            "ip_location": "湖北",
+            "id": "67dc416b000000001200bbd2",
+            "status": 0,
+            "content": "@冰点草莓",
+            "at_users": [
+              {
+                "ai_agent": false,
+                "xsec_token": "ABB-AroreerbZaV4gPKBlbg6GDIQw5T-sKDzJJVxVVIn4=",
+                "user_id": "64829ab9000000000f0064b6",
+                "nickname": "冰点草莓"
+              }
+            ],
+            "like_count": "820",
+            "note_id": "67d4382e000000001e00b1a7",
+            "liked": false,
+            "show_tags": [],
+            "create_time": 1742487915000,
+            "target_comment": {
+              "id": "67dc3e51000000001e022885",
+              "user_info": {
+                "user_id": "65350a01000000000d006adb",
+                "nickname": "不可回收废物",
+                "image": "https://sns-avatar-qc.xhscdn.com/avatar/1040g2jo31tj500506u5g5q6dce28k02m317s1ro?imageView2/2/w/120/format/jpg",
+                "ai_agent": false,
+                "xsec_token": "ABgreQzR9DDM0Vdkl8NXZVG7lXR_JiCz9zDDrZFMQYHfY="
+              }
+            }
+          }
+        ],
+        "status": 0,
+        "content": "真的很难想象大学里其实绝大部分都是成年人[捂脸R][捂脸R]真的很想笑",
+        "sub_comment_count": "132"
+      },
+      {
+        "show_tags": [],
+        "at_users": [],
+        "status": 0,
+        "liked": false,
+        "user_info": {
+          "user_id": "5de3ad660000000001009f61",
+          "nickname": "岁岁知意",
+          "image": "https://sns-avatar-qc.xhscdn.com/avatar/1040g2jo3140r0i332e5g5nf3llj097r15t4pnv8?imageView2/2/w/120/format/jpg",
+          "ai_agent": false,
+          "xsec_token": "ABJyUdSrMS7NGXUUGQjTBOsFQ570i6-H3JuHxTMyVGuEs="
+        },
+        "create_time": 1742349056000,
+        "ip_location": "山东",
+        "sub_comment_cursor": "67da49dd0000000012017a89",
+        "sub_comment_has_more": true,
+        "id": "67da230000000000180150d0",
+        "like_count": "2551",
+        "sub_comment_count": "21",
+        "sub_comments": [
+          {
+            "liked": false,
+            "like_count": "1657",
+            "status": 0,
+            "content": "其实是经济不独立要花父母的钱，父母就一直管你所以就上大学了还是像小孩",
+            "at_users": [],
+            "show_tags": [],
+            "create_time": 1742359005000,
+            "ip_location": "湖南",
+            "target_comment": {
+              "id": "67da230000000000180150d0",
+              "user_info": {
+                "ai_agent": false,
+                "xsec_token": "ABJyUdSrMS7NGXUUGQjTBOsFQ570i6-H3JuHxTMyVGuEs=",
+                "user_id": "5de3ad660000000001009f61",
+                "nickname": "岁岁知意",
+                "image": "https://sns-avatar-qc.xhscdn.com/avatar/1040g2jo3140r0i332e5g5nf3llj097r15t4pnv8?imageView2/2/w/120/format/jpg"
+              }
+            },
+            "id": "67da49dd0000000012017a89",
+            "note_id": "67d4382e000000001e00b1a7",
+            "user_info": {
+              "user_id": "5d4e6911000000001101973e",
+              "nickname": "元气满满的长劲鹿",
+              "image": "https://sns-avatar-qc.xhscdn.com/avatar/63c231b3bd14e747df25a16d.jpg?imageView2/2/w/120/format/jpg",
+              "ai_agent": false,
+              "xsec_token": "ABdsOLvI1GvoNSo0c0YlNUsN7bvuaBrx2iNRJmBJNLlPk="
+            }
+          }
+        ],
+        "note_id": "67d4382e000000001e00b1a7",
+        "content": "我说我怎么感觉我自己还是小孩[哭惹R]原来是因为上大学干什么都得家长同意"
+      },
+      {
+        "like_count": "24",
+        "ip_location": "四川",
+        "sub_comment_has_more": true,
+        "content": "，，真的有的学校管的太宽了，究竟是谁的控制欲那么强👍",
+        "liked": false,
+        "show_tags": [],
+        "at_users": [],
+        "sub_comments": [
+          {
+            "note_id": "67d4382e000000001e00b1a7",
+            "create_time": 1742544615000,
+            "ip_location": "河北",
+            "target_comment": {
+              "id": "67dd0b7c000000002001219e",
+              "user_info": {
+                "ai_agent": false,
+                "xsec_token": "ABZmxcbCyZXnDOfi7xNfDvB3CYjWzMq414PPvr1O1BlSQ=",
+                "user_id": "648c5a1c000000002a0351a4",
+                "nickname": "平心静气",
+                "image": "https://sns-avatar-qc.xhscdn.com/avatar/1040g2jo31gs5tkug386g5p4cb8eamkd4ujjasqo?imageView2/2/w/120/format/jpg"
+              }
+            },
+            "user_info": {
+              "user_id": "5c7a17c1000000001101b23b",
+              "nickname": "怀抱鲜花的女人",
+              "image": "https://sns-avatar-qc.xhscdn.com/avatar/1040g2jo31mdkhipi4s005n3q2v0kbchrgb5o58o?imageView2/2/w/120/format/jpg",
+              "ai_agent": false,
+              "xsec_token": "ABz9UAeAsqILvjff5m5cH7DHugm6Bs51FCXn2lVpraeUY="
+            },
+            "show_tags": [],
+            "id": "67dd1ee7000000001f02a47b",
+            "status": 0,
+            "content": "学校也抱怨，不想管那么多，管就要出钱出人力，都是普通打工人上班挣个死工资。完全是怕担责任，领导怕被处分，于是越管越严",
+            "at_users": [],
+            "liked": false,
+            "like_count": "2"
+          }
+        ],
+        "sub_comment_cursor": "67dd1ee7000000001f02a47b",
+        "user_info": {
+          "user_id": "648c5a1c000000002a0351a4",
+          "nickname": "平心静气",
+          "image": "https://sns-avatar-qc.xhscdn.com/avatar/1040g2jo31gs5tkug386g5p4cb8eamkd4ujjasqo?imageView2/2/w/120/format/jpg",
+          "ai_agent": false,
+          "xsec_token": "ABZmxcbCyZXnDOfi7xNfDvB3CYjWzMq414PPvr1O1BlSQ="
+        },
+        "note_id": "67d4382e000000001e00b1a7",
+        "status": 0,
+        "create_time": 1742539645000,
+        "sub_comment_count": "2",
+        "id": "67dd0b7c000000002001219e"
+      },
+      {
+        "at_users": [],
+        "sub_comments": [
+          {
+            "status": 0,
+            "liked": false,
+            "user_info": {
+              "xsec_token": "ABb82y0gmYzs8EAeEH0YR6qHZ7fDsv8fRe0gLzNTwaNgM=",
+              "user_id": "61def5650000000010008af2",
+              "nickname": "范特嘻 Adagio",
+              "image": "https://sns-avatar-qc.xhscdn.com/avatar/1040g2jo31ec7jhs0gm6g5oeuulik12nii96ilko?imageView2/2/w/120/format/jpg",
+              "ai_agent": false
+            },
+            "show_tags": [],
+            "create_time": 1742728687000,
+            "ip_location": "广西",
+            "target_comment": {
+              "id": "67de2e2b000000001e012dfb",
+              "user_info": {
+                "nickname": "cooooooolddd",
+                "image": "https://sns-avatar-qc.xhscdn.com/avatar/1040g2jo31ojdq6bjlm6g5o61j3709a3428jevt0?imageView2/2/w/120/format/jpg",
+                "ai_agent": false,
+                "xsec_token": "ABJZrBgxohcqYreDdyEjjy9qJ3TVFNHvk1cpSvlrpEJIA=",
+                "user_id": "60c198ce000000000100a864"
+              }
+            },
+            "id": "67dfedee000000001e00dcca",
+            "note_id": "67d4382e000000001e00b1a7",
+            "content": "说白了就是先关在象牙塔里面习惯了，具体要有什么权利也不知道，社会权力估计都在中年人手里。从小就没有话语权的意识，所以都乖乖地还习惯被管，家长则表现得更加激烈，学校就拼命免责吧。",
+            "at_users": [],
+            "like_count": "311"
+          }
+        ],
+        "sub_comment_cursor": "67dfedee000000001e00dcca",
+        "sub_comment_has_more": true,
+        "id": "67de2e2b000000001e012dfb",
+        "status": 0,
+        "show_tags": [],
+        "note_id": "67d4382e000000001e00b1a7",
+        "content": "然后反过来又怪现在的学生都待在象牙塔里…",
+        "liked": false,
+        "like_count": "478",
+        "user_info": {
+          "xsec_token": "ABJZrBgxohcqYreDdyEjjy9qJ3TVFNHvk1cpSvlrpEJIA=",
+          "user_id": "60c198ce000000000100a864",
+          "nickname": "cooooooolddd",
+          "image": "https://sns-avatar-qc.xhscdn.com/avatar/1040g2jo31ojdq6bjlm6g5o61j3709a3428jevt0?imageView2/2/w/120/format/jpg",
+          "ai_agent": false
+        },
+        "create_time": 1742614060000,
+        "ip_location": "广东",
+        "sub_comment_count": "6"
+      },
+      {
+        "id": "67dd2ae80000000012033828",
+        "at_users": [],
+        "sub_comment_count": "20",
+        "note_id": "67d4382e000000001e00b1a7",
+        "like_count": "98",
+        "user_info": {
+          "user_id": "5cd8fc54000000001600861e",
+          "nickname": "钵海觅食者",
+          "image": "https://sns-avatar-qc.xhscdn.com/avatar/1040g2jo31vdpmg012q605n6ovha5h1guelvub4o?imageView2/2/w/120/format/jpg",
+          "ai_agent": false,
+          "xsec_token": "ABpATOyu5YVgnI1UOyy7TJ8MndvqEe9EP0M3XchwkqNIw="
+        },
+        "show_tags": [],
+        "status": 0,
+        "content": "我大一那年有个高中同学发QQ空间说他们学校甚至开家长会",
+        "create_time": 1742547688000,
+        "sub_comment_has_more": true,
+        "liked": false,
+        "ip_location": "吉林",
+        "sub_comments": [
+          {
+            "show_tags": [],
+            "ip_location": "四川",
+            "target_comment": {
+              "id": "67dd2ae80000000012033828",
+              "user_info": {
+                "image": "https://sns-avatar-qc.xhscdn.com/avatar/1040g2jo31vdpmg012q605n6ovha5h1guelvub4o?imageView2/2/w/120/format/jpg",
+                "ai_agent": false,
+                "xsec_token": "ABpATOyu5YVgnI1UOyy7TJ8MndvqEe9EP0M3XchwkqNIw=",
+                "user_id": "5cd8fc54000000001600861e",
+                "nickname": "钵海觅食者"
+              }
+            },
+            "id": "67dd2cc4000000001f00a8a9",
+            "note_id": "67d4382e000000001e00b1a7",
+            "status": 0,
+            "content": "啊 你们不开吗[石化R][石化R]",
+            "liked": false,
+            "at_users": [],
+            "like_count": "6",
+            "user_info": {
+              "user_id": "5d0223d30000000017021071",
+              "nickname": "momo（每天都想离职版）",
+              "image": "https://sns-avatar-qc.xhscdn.com/avatar/1040g2jo31g2a645sgi0g5n824f9ls43hlb38d8o?imageView2/2/w/120/format/jpg",
+              "ai_agent": false,
+              "xsec_token": "ABlIDdm8YkCkxK8MFuoGUPCva9eT2CnzFwNY-dOtixVR8="
+            },
+            "create_time": 1742548164000
+          }
+        ],
+        "sub_comment_cursor": "67dd2cc4000000001f00a8a9"
+      },
+      {
+        "at_users": [],
+        "sub_comment_count": "12",
+        "note_id": "67d4382e000000001e00b1a7",
+        "liked": false,
+        "ip_location": "上海",
+        "id": "67dce243000000001e015f9e",
+        "status": 0,
+        "content": "本质是现在很多双非普本把学校的重心放在了考研升学率上面 而不是正常大学的学术研究 学生就业和科研成果上面 以此来吸引更多考生报考来提高分数线 打包成一个考研工厂。评判一个好高中的标准是看这个学校有多少个清北985 211 本科 平均分多少 一本率 本科率有多少，但是大学的评判可不是看什么考研率的  QS 以及软科的大学排名难道看这个学校考研成绩吗？顶尖学校根本不屑于此 所以为什么好大学规矩少 管得松 很自由 而烂大学事多 烦人 大学高中化就是把学校的重心放在了高中那般的升学率上 培养学生的方式变得高中化 但是现在学历贬值加快 就业形势严峻 为了名校研究生不得不这样",
+        "user_info": {
+          "user_id": "5c20c6820000000005022389",
+          "nickname": "momo",
+          "image": "https://sns-avatar-qc.xhscdn.com/avatar/1040g2jo316u9ken3k46g5n10oq11c8s96h99hn8?imageView2/2/w/120/format/jpg",
+          "ai_agent": false,
+          "xsec_token": "ABKbn20Hl0BVGcU3bWLemqlv5-Wtl_e_Lg-HEjbduMfeg="
+        },
+        "like_count": "61",
+        "show_tags": [],
+        "create_time": 1742529092000,
+        "sub_comments": [
+          {
+            "at_users": [],
+            "ip_location": "黑龙江",
+            "target_comment": {
+              "id": "67dce243000000001e015f9e",
+              "user_info": {
+                "user_id": "5c20c6820000000005022389",
+                "nickname": "momo",
+                "image": "https://sns-avatar-qc.xhscdn.com/avatar/1040g2jo316u9ken3k46g5n10oq11c8s96h99hn8?imageView2/2/w/120/format/jpg",
+                "ai_agent": false,
+                "xsec_token": "ABKbn20Hl0BVGcU3bWLemqlv5-Wtl_e_Lg-HEjbduMfeg="
+              }
+            },
+            "id": "67dce35e0000000012033ced",
+            "note_id": "67d4382e000000001e00b1a7",
+            "status": 0,
+            "user_info": {
+              "user_id": "5d7b202c00000000010097dc",
+              "nickname": "颓废的尔玉",
+              "image": "https://sns-avatar-qc.xhscdn.com/avatar/5f2772ba21eaea000115a539.jpg?imageView2/2/w/120/format/jpg",
+              "ai_agent": false,
+              "xsec_token": "ABcRBhs5F-uUnxJzSzQvFGG81kIu1xFdI7vead7Bbo_us="
+            },
+            "show_tags": [],
+            "create_time": 1742529375000,
+            "content": "211……但是非常高中化",
+            "liked": false,
+            "like_count": "11"
+          }
+        ],
+        "sub_comment_cursor": "67dce35e0000000012033ced",
+        "sub_comment_has_more": true
+      },
+      {
+        "id": "67dc0e32000000001f02bc46",
+        "content": "我研究生夜不归宿还得家长签字呢，博士也一样哈。。。。",
+        "liked": false,
+        "like_count": "87",
+        "sub_comments": [
+          {
+            "show_tags": [],
+            "create_time": 1742579314000,
+            "id": "67dda672000000001f0097e1",
+            "status": 0,
+            "at_users": [],
+            "like_count": "13",
+            "user_info": {
+              "user_id": "5f70255c000000000101e1f6",
+              "nickname": "哒哒哒",
+              "image": "https://sns-avatar-qc.xhscdn.com/avatar/1000g2jo2mdub9ucju0605nrg4le0bofm55nb4og?imageView2/2/w/120/format/jpg",
+              "ai_agent": false,
+              "xsec_token": "ABRBJ2CWdzeXgWkDrv0U0OZW0FnGo7p9j4oS6e4DUwzyM="
+            },
+            "note_id": "67d4382e000000001e00b1a7",
+            "content": "那要是有孩子怎么整[石化R]你们是进监狱了吧，我的老天，真是离谱到家了，以后让你们导员回家帮你们看孩子[doge]不能让孩子没爸妈啊",
+            "liked": false,
+            "ip_location": "北京",
+            "target_comment": {
+              "id": "67dc0e32000000001f02bc46",
+              "user_info": {
+                "xsec_token": "ABxHdJRhWuPBijAflsnTdjGCcbUZBawwyCruyYQFQREIU=",
+                "user_id": "5e3903b1000000000100a6a8",
+                "nickname": "momo",
+                "image": "https://sns-avatar-qc.xhscdn.com/avatar/62247765f31487f4a635e79f.jpg?imageView2/2/w/120/format/jpg",
+                "ai_agent": false
+              }
+            }
+          }
+        ],
+        "sub_comment_has_more": true,
+        "sub_comment_count": "8",
+        "sub_comment_cursor": "67dda672000000001f0097e1",
+        "user_info": {
+          "user_id": "5e3903b1000000000100a6a8",
+          "nickname": "momo",
+          "image": "https://sns-avatar-qc.xhscdn.com/avatar/62247765f31487f4a635e79f.jpg?imageView2/2/w/120/format/jpg",
+          "ai_agent": false,
+          "xsec_token": "ABxHdJRhWuPBijAflsnTdjGCcbUZBawwyCruyYQFQREIU="
+        },
+        "create_time": 1742474803000,
+        "note_id": "67d4382e000000001e00b1a7",
+        "status": 0,
+        "at_users": [],
+        "show_tags": [],
+        "ip_location": "辽宁"
+      },
+      {
+        "id": "67dd1485000000001f01a1a1",
+        "status": 0,
+        "like_count": "249",
+        "show_tags": [],
+        "create_time": 1742541958000,
+        "sub_comment_has_more": true,
+        "content": "其实根本不需要请假[失望R]我之前就是太老实了搞这么复杂，周末出去旅游还要家长签保证书，其实你不说老师不问，走就是了",
+        "at_users": [],
+        "liked": false,
+        "user_info": {
+          "user_id": "5bb748264c26220001f8188c",
+          "nickname": "神奇望崽🦈",
+          "image": "https://sns-avatar-qc.xhscdn.com/avatar/1040g2jo31qgvuf5ln06g4bajni42c64cjccdsoo?imageView2/2/w/120/format/jpg",
+          "ai_agent": false,
+          "xsec_token": "ABnDnVtZzJJHvsTPHlJb4I7VJoETdH_7Pzpoi8CrWcoE0="
+        },
+        "ip_location": "广东",
+        "sub_comments": [
+          {
+            "note_id": "67d4382e000000001e00b1a7",
+            "status": 0,
+            "at_users": [],
+            "liked": false,
+            "user_info": {
+              "user_id": "5f70255c000000000101e1f6",
+              "nickname": "哒哒哒",
+              "image": "https://sns-avatar-qc.xhscdn.com/avatar/1000g2jo2mdub9ucju0605nrg4le0bofm55nb4og?imageView2/2/w/120/format/jpg",
+              "ai_agent": false,
+              "xsec_token": "ABRBJ2CWdzeXgWkDrv0U0OZW0FnGo7p9j4oS6e4DUwzyM="
+            },
+            "target_comment": {
+              "id": "67dd1485000000001f01a1a1",
+              "user_info": {
+                "ai_agent": false,
+                "xsec_token": "ABnDnVtZzJJHvsTPHlJb4I7VJoETdH_7Pzpoi8CrWcoE0=",
+                "user_id": "5bb748264c26220001f8188c",
+                "nickname": "神奇望崽🦈",
+                "image": "https://sns-avatar-qc.xhscdn.com/avatar/1040g2jo31qgvuf5ln06g4bajni42c64cjccdsoo?imageView2/2/w/120/format/jpg"
+              }
+            },
+            "id": "67dda541000000001f00bbb9",
+            "content": "支持，因为大一大二太乖了，大三直接走，给我爸妈打电话打呗，不仅给我转钱让我好好玩，这还能一直发照片给家族群看美景呢[doge]我爸妈就是觉得学不进去玩呗，那等着以后上班没假期，人流量多挤的看人头玩吗。我义务教育都没这么憋屈，那时候全身湿疹，好了以后，我妈就不让我上课带我去云南放松心情旅游一个礼拜回来。而且别人自杀跟我有什么关系[石化R]又不是我导致的，然后个例就折磨其他人，那是她的家庭原因和自己心情不好",
+            "like_count": "13",
+            "show_tags": [],
+            "create_time": 1742579009000,
+            "ip_location": "北京"
+          }
+        ],
+        "note_id": "67d4382e000000001e00b1a7",
+        "sub_comment_count": "21",
+        "sub_comment_cursor": "67dda541000000001f00bbb9"
+      },
+      {
+        "id": "67dcef81000000001f003f72",
+        "status": 0,
+        "sub_comment_has_more": true,
+        "content": "我觉得学校要是担心学生出事儿了家长来找，不能让学生自己签个免责声明吗？都成年人了，自己签的合同也是生效的。我都21了，晚上十点半没回宿舍导员还发微信问去哪儿了，想和男朋友出去还得找家长给导员发微信，真的很尴尬🙏🏻🙏🏻🙏🏻",
+        "at_users": [],
+        "liked": false,
+        "ip_location": "陕西",
+        "note_id": "67d4382e000000001e00b1a7",
+        "like_count": "50",
+        "create_time": 1742532482000,
+        "sub_comment_count": "2",
+        "sub_comments": [
+          {
+            "at_users": [],
+            "liked": false,
+            "like_count": "22",
+            "show_tags": [],
+            "id": "67dcefdd0000000012002784",
+            "note_id": "67d4382e000000001e00b1a7",
+            "status": 0,
+            "content": "我也希望[生气R]明明学生都是成年人了，为什么出事了，家长还要找到学校[哭惹R]",
+            "user_info": {
+              "ai_agent": false,
+              "xsec_token": "ABHIyqRGrnkRQ74q54-8uBHmTkEuWVrwU7H4hNY-RDjBQ=",
+              "user_id": "5f8c67030000000001005d06",
+              "nickname": "耶贵人实在貌美",
+              "image": "https://sns-avatar-qc.xhscdn.com/avatar/1040g2jo31u8hb1bb2g005nsccs1g8n865c3d1bo?imageView2/2/w/120/format/jpg"
+            },
+            "create_time": 1742532573000,
+            "ip_location": "江西",
+            "target_comment": {
+              "id": "67dcef81000000001f003f72",
+              "user_info": {
+                "xsec_token": "ABTt_Bb8frrOWdLiGUw8qiWqBad9Asu-kxz3q94lvleSE=",
+                "user_id": "5b6441274eacab662f8cc987",
+                "nickname": "学习省钱，省钱学习",
+                "image": "https://sns-avatar-qc.xhscdn.com/avatar/1040g2jo31l5pvgeh525g4a8t160ific76tmsdk8?imageView2/2/w/120/format/jpg",
+                "ai_agent": false
+              }
+            }
+          }
+        ],
+        "user_info": {
+          "user_id": "5b6441274eacab662f8cc987",
+          "nickname": "学习省钱，省钱学习",
+          "image": "https://sns-avatar-qc.xhscdn.com/avatar/1040g2jo31l5pvgeh525g4a8t160ific76tmsdk8?imageView2/2/w/120/format/jpg",
+          "ai_agent": false,
+          "xsec_token": "ABTt_Bb8frrOWdLiGUw8qiWqBad9Asu-kxz3q94lvleSE="
+        },
+        "show_tags": [],
+        "sub_comment_cursor": "67dcefdd0000000012002784"
+      }
+    ],
+    "cursor": "67dcef81000000001f003f72",
+    "has_more": true,
+    "time": 1778238496183,
+    "xsec_token": "ABeh-h2_6sfdBas9sPyh9EtHVtDzO8k0kS0ChAG6ANYgc=",
+    "user_id": "68d947870000000022021618"
+  }
+}

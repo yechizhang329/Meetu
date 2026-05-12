@@ -1,0 +1,225 @@
+{
+  "ok": true,
+  "schema_version": "1",
+  "data": {
+    "current_time": 1778238315556,
+    "cursor_score": "",
+    "items": [
+      {
+        "id": "6790a532000000001902db4b",
+        "model_type": "note",
+        "note_card": {
+          "type": "normal",
+          "title": "私密性的缺失是大学生活里最大的bug",
+          "tag_list": [
+            {
+              "id": "62215ef800000000010025c4",
+              "name": "大大方方做自己",
+              "type": "topic"
+            },
+            {
+              "name": "自我成长",
+              "type": "topic",
+              "id": "5c7119c4000000000d01b242"
+            },
+            {
+              "id": "62b1d5660000000001000290",
+              "name": "大学生精神状态",
+              "type": "topic"
+            },
+            {
+              "type": "topic",
+              "id": "6646ec41000000001b03e815",
+              "name": "unichi南非醉茄小熊"
+            },
+            {
+              "type": "topic",
+              "id": "5bf76a432f2c08000100c90d",
+              "name": "unichi"
+            },
+            {
+              "id": "60d02cea000000000101e96a",
+              "name": "拒绝内耗",
+              "type": "topic"
+            },
+            {
+              "type": "topic",
+              "id": "5c2565830000000008015f99",
+              "name": "文字的力量"
+            },
+            {
+              "id": "5d6e8c34000000000103e882",
+              "name": "社交能力",
+              "type": "topic"
+            },
+            {
+              "id": "5c2ade6c0000000008017d99",
+              "name": "宿舍关系",
+              "type": "topic"
+            },
+            {
+              "type": "topic",
+              "id": "64d62c4b000000001403b2b1",
+              "name": "大学生一定要打破信息差"
+            }
+          ],
+          "last_update_time": 1738414957000,
+          "time": 1737540074000,
+          "share_info": {
+            "un_share": false
+          },
+          "note_id": "6790a532000000001902db4b",
+          "desc": "#大大方方做自己[话题]#\n理解了自己为什么在学校这么不稳定\n情绪、食欲、睡眠都好像过山车\n也理解了为什么我们总是被各种“独居生活”吸引\n一度认为那是消费主义的房间装横让人向往\n假期回家才突然发现那个小小的房间的独特魅力\n——那是个人生活和社会生活的边界\n\t\n人是需要私密空间的\n你爱一个人哭就哭爱打电话就打电话\n睡在地上打滚也随意\n一边自言自语一边哭也不担心之后有人打趣你的狼狈\n兴高采烈地打打电话没人在旁边突然和你同频共笑\n规划未来的时候没人旁敲侧击暗搓搓的把你划为竞争对象\n\t\n但是在现在的宿舍制度下没有这样的地方\n每次回家返校就是由奢入俭难\n有时候真佩服自己能够过的这么没有私密性\n\t\n在学校压力一大就经常暴食各种甜品\n晚上睡眠质量评分低到我都心疼我自己\n每天和皮质醇斗智斗勇\n岌岌可危的状态靠着健身的多巴胺和小熊软糖平衡\n雷打不动的每周五练和每日两粒是在学校的救命稻草\n\t\n可是一天到晚都在或强或弱的社交互动中\n社交行为已然成为一种压力\n其实有时候也不是舍友关系不好\n而是处于嘈杂的环境真的会产生惰性或者是烦躁\n\t\n[星R]指路某乎“如何看待中国大学的宿舍制度”\n火了之后发了七八次灵感来源全被毕了\n\t\n#自我成长[话题]# #大学生精神状态[话题]# #unichi南非醉茄小熊[话题]# #unichi[话题]# #拒绝内耗[话题]# #文字的力量[话题]# #社交能力[话题]# #宿舍关系[话题]# #大学生一定要打破信息差[话题]#",
+          "user": {
+            "xsec_token": "ABsdRf6kWtb1REa6p2qOO_SEuqEtbI99vCX2Cbno2OUEI=",
+            "user_id": "659bb2c8000000002001d886",
+            "nickname": "碎嘴贝塔",
+            "avatar": "https://sns-avatar-qc.xhscdn.com/avatar/65b65831b078c8a23955e0f6.jpg"
+          },
+          "interact_info": {
+            "relation": "none",
+            "liked": false,
+            "liked_count": "1.7万",
+            "collected": false,
+            "collected_count": "2534",
+            "comment_count": "1712",
+            "share_count": "1478",
+            "followed": false
+          },
+          "image_list": [
+            {
+              "trace_id": "",
+              "stream": {},
+              "url": "",
+              "info_list": [
+                {
+                  "image_scene": "WB_PRV",
+                  "url": "http://sns-webpic-qc.xhscdn.com/202605081905/d7c11bb684db8a50b40293199bc726bf/1040g2sg31cuud3de0u7g5pcrmb483m46te6k0q0!nd_prv_wlteh_webp_3"
+                },
+                {
+                  "image_scene": "WB_DFT",
+                  "url": "http://sns-webpic-qc.xhscdn.com/202605081905/e4cf2a38a51f5d5062f2a5d9c27e39ec/1040g2sg31cuud3de0u7g5pcrmb483m46te6k0q0!nd_dft_wlteh_webp_3"
+                }
+              ],
+              "url_pre": "http://sns-webpic-qc.xhscdn.com/202605081905/d7c11bb684db8a50b40293199bc726bf/1040g2sg31cuud3de0u7g5pcrmb483m46te6k0q0!nd_prv_wlteh_webp_3",
+              "url_default": "http://sns-webpic-qc.xhscdn.com/202605081905/e4cf2a38a51f5d5062f2a5d9c27e39ec/1040g2sg31cuud3de0u7g5pcrmb483m46te6k0q0!nd_dft_wlteh_webp_3",
+              "live_photo": false,
+              "file_id": "",
+              "height": 2560,
+              "width": 1920
+            },
+            {
+              "stream": {},
+              "live_photo": false,
+              "file_id": "",
+              "height": 2560,
+              "url_pre": "http://sns-webpic-qc.xhscdn.com/202605081905/6d4fd4828bf6afad6ea6e2d767a029f9/1040g2sg31cuud3de0u705pcrmb483m46u6qj8to!nd_prv_wlteh_webp_3",
+              "info_list": [
+                {
+                  "image_scene": "WB_PRV",
+                  "url": "http://sns-webpic-qc.xhscdn.com/202605081905/6d4fd4828bf6afad6ea6e2d767a029f9/1040g2sg31cuud3de0u705pcrmb483m46u6qj8to!nd_prv_wlteh_webp_3"
+                },
+                {
+                  "image_scene": "WB_DFT",
+                  "url": "http://sns-webpic-qc.xhscdn.com/202605081905/7940d790fcecce0c4014c6f11adae19a/1040g2sg31cuud3de0u705pcrmb483m46u6qj8to!nd_dft_wlteh_webp_3"
+                }
+              ],
+              "url_default": "http://sns-webpic-qc.xhscdn.com/202605081905/7940d790fcecce0c4014c6f11adae19a/1040g2sg31cuud3de0u705pcrmb483m46u6qj8to!nd_dft_wlteh_webp_3",
+              "width": 1920,
+              "url": "",
+              "trace_id": ""
+            },
+            {
+              "url": "",
+              "url_pre": "http://sns-webpic-qc.xhscdn.com/202605081905/fadbfefb631958cc3c1e4291d1bbfa04/1040g2sg31cuud3de0u805pcrmb483m46ejsoua8!nd_prv_wlteh_webp_3",
+              "stream": {
+                "h265": [],
+                "h266": [],
+                "av1": [],
+                "h264": [
+                  {
+                    "master_url": "http://sns-video-hs.xhscdn.com/stream/1/10/19/01e790a52f4b6b890100500394c19b4573_19.mp4?sign=dd2e7dc0c78be3e0977370ffc2826270&t=6a0260ab",
+                    "backup_urls": [
+                      "http://sns-bak-v1.xhscdn.com/stream/1/10/19/01e790a52f4b6b890100500394c19b4573_19.mp4"
+                    ]
+                  }
+                ]
+              },
+              "live_photo": true,
+              "file_id": "",
+              "height": 3501,
+              "width": 2626,
+              "trace_id": "",
+              "info_list": [
+                {
+                  "image_scene": "WB_PRV",
+                  "url": "http://sns-webpic-qc.xhscdn.com/202605081905/fadbfefb631958cc3c1e4291d1bbfa04/1040g2sg31cuud3de0u805pcrmb483m46ejsoua8!nd_prv_wlteh_webp_3"
+                },
+                {
+                  "image_scene": "WB_DFT",
+                  "url": "http://sns-webpic-qc.xhscdn.com/202605081905/a2c0b74fe82afe5b23ecb1a9e7e23954/1040g2sg31cuud3de0u805pcrmb483m46ejsoua8!nd_dft_wlteh_webp_3"
+                }
+              ],
+              "url_default": "http://sns-webpic-qc.xhscdn.com/202605081905/a2c0b74fe82afe5b23ecb1a9e7e23954/1040g2sg31cuud3de0u805pcrmb483m46ejsoua8!nd_dft_wlteh_webp_3"
+            },
+            {
+              "info_list": [
+                {
+                  "image_scene": "WB_PRV",
+                  "url": "http://sns-webpic-qc.xhscdn.com/202605081905/ab270219f5ee6a7da8008ab52d8059bc/1040g2sg31cuud3de0u8g5pcrmb483m465v32a3o!nd_prv_wlteh_webp_3"
+                },
+                {
+                  "url": "http://sns-webpic-qc.xhscdn.com/202605081905/a4e2eca4d9f38286cb684c2b27be2fa2/1040g2sg31cuud3de0u8g5pcrmb483m465v32a3o!nd_dft_wlteh_webp_3",
+                  "image_scene": "WB_DFT"
+                }
+              ],
+              "url_pre": "http://sns-webpic-qc.xhscdn.com/202605081905/ab270219f5ee6a7da8008ab52d8059bc/1040g2sg31cuud3de0u8g5pcrmb483m465v32a3o!nd_prv_wlteh_webp_3",
+              "height": 4032,
+              "width": 3024,
+              "url": "",
+              "trace_id": "",
+              "url_default": "http://sns-webpic-qc.xhscdn.com/202605081905/a4e2eca4d9f38286cb684c2b27be2fa2/1040g2sg31cuud3de0u8g5pcrmb483m465v32a3o!nd_dft_wlteh_webp_3",
+              "stream": {
+                "av1": [],
+                "h264": [
+                  {
+                    "backup_urls": [
+                      "http://sns-bak-v1.xhscdn.com/stream/1/10/19/01e790a52f7bbc8e0100500394c19b583b_19.mp4"
+                    ],
+                    "master_url": "http://sns-video-hs.xhscdn.com/stream/1/10/19/01e790a52f7bbc8e0100500394c19b583b_19.mp4?sign=0edbdf0d3ed08e465eea2a37a0668367&t=6a0260ab"
+                  }
+                ],
+                "h265": [],
+                "h266": []
+              },
+              "live_photo": true,
+              "file_id": ""
+            },
+            {
+              "url": "",
+              "info_list": [
+                {
+                  "image_scene": "WB_PRV",
+                  "url": "http://sns-webpic-qc.xhscdn.com/202605081905/f22a91d7cbae7acdbddc0b14b3edd75a/1040g2sg31d92uqvt0k705pcrmb483m46t4ok4j0!nd_prv_wgth_webp_3"
+                },
+                {
+                  "image_scene": "WB_DFT",
+                  "url": "http://sns-webpic-qc.xhscdn.com/202605081905/126d9ed26b0040bd628954cd31b06491/1040g2sg31d92uqvt0k705pcrmb483m46t4ok4j0!nd_dft_wgth_webp_3"
+                }
+              ],
+              "url_pre": "http://sns-webpic-qc.xhscdn.com/202605081905/f22a91d7cbae7acdbddc0b14b3edd75a/1040g2sg31d92uqvt0k705pcrmb483m46t4ok4j0!nd_prv_wgth_webp_3",
+              "stream": {},
+              "live_photo": false,
+              "file_id": "",
+              "width": 1640,
+              "url_default": "http://sns-webpic-qc.xhscdn.com/202605081905/126d9ed26b0040bd628954cd31b06491/1040g2sg31d92uqvt0k705pcrmb483m46t4ok4j0!nd_dft_wgth_webp_3",
+              "height": 320,
+              "trace_id": ""
+            }
+          ],
+          "at_user_list": []
+        }
+      }
+    ]
+  }
+}

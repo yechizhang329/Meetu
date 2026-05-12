@@ -1,0 +1,172 @@
+{
+  "ok": true,
+  "schema_version": "1",
+  "data": {
+    "items": [
+      {
+        "model_type": "note",
+        "note_card": {
+          "type": "normal",
+          "user": {
+            "user_id": "67959e76000000000e011c18",
+            "nickname": "无印工坊",
+            "avatar": "https://sns-avatar-qc.xhscdn.com/avatar/1040g2jo31elvibjc526g5psljpr3i70olo2339o",
+            "xsec_token": "ABTxRD2-Pg46qZmPPwVqwStszBvJ1Lgg_pJSLfSBO2hsw="
+          },
+          "tag_list": [
+            {
+              "name": "性格测试",
+              "type": "topic",
+              "id": "5c2192cf000000000a0357ab"
+            },
+            {
+              "id": "5cdb76e2000000000f03959b",
+              "name": "人格测试",
+              "type": "topic"
+            },
+            {
+              "id": "54545b13d6e4a95bd3bc2cd9",
+              "name": "睡眠",
+              "type": "topic"
+            },
+            {
+              "id": "61a3a029000000000101d7ca",
+              "name": "生活习惯差异",
+              "type": "topic"
+            }
+          ],
+          "at_user_list": [],
+          "last_update_time": 1776311635000,
+          "share_info": {
+            "un_share": false
+          },
+          "note_id": "69dda45b0000000022027c02",
+          "title": "SBTI人格 | 睡前行为大赏（上）",
+          "desc": "“无所谓人”、“吗喽”、“送钱者”......，不走寻常路的测试结果，让大家看到了新鲜的“自己”，以及和自己一样的ta们。幽默的自嘲，达观的态度，给平静的生活又增添了一丝乐趣。\n\t\n今天大开脑洞，看看这些和你一样的人格睡前行为都是什么样的呢？（仅供娱乐，如有雷同，纯属巧合[暗中观察R]）\n\t\n无所谓人（OJBK）\n随缘型。“随便、都行”是座右铭，几点睡、睡多久都无所谓，是真正的睡眠佛系玩家\n\t\n吗喽（MALO）\n“原始”型。本真快乐，今天可能头朝东，明天可能就头朝北，总是自由\n\t\n拿捏者（CTRL）\n掌控欲爆棚型。不仅拿捏人心，还拿捏睡眠。会严格规定自己几点睡、几点起\n\t\n送钱者（ATM-er）\n为爱发电型。习惯性为他人付出，即使牺牲自己的睡眠时间，也要回复别人的消息或帮忙处理事情\n\t\n屌丝（Dior-s）\n清醒摆烂型。想得少轻松自在，到饭点就干饭，到睡觉点就休息，很少内耗，轻松睡着\n\t\n领导者（BOSS）\n掌控全局型。天生掌权者，即使到了睡觉时间，也会再次规划自己的睡眠时间，并要求自己必须睡个好觉\n\t\n感恩者（THAN-K）\n乐观主义型。海纳百川，正能量的发射塔，会在睡前把糟心事变成“糖”，感谢睡了个好觉，万事皆感恩\n\t\n哦不人（OH-ON!）\n尊重边界型。神经绷得笔直，会在事情发生前就想到N种坏结果，失眠的反应是自己可能整晚都睡不着了，越想越焦虑\n\t\n行者（GOGO）\n永动机型。超强行动派，想到就做，绝不内耗。决定早睡就立刻关灯闭眼，决定通宵就绝不犹豫，执行力MAX。\n\t\n尤物（SEXY）\n精致睡眠型。睡觉也是美美的，会准备真丝眼罩、香薰等助眠好物，把睡眠变成一场自己喜欢的仪式感SPA\n\t\n多情者（LOVE-R）\n情感丰富型。真诚待世界，内心柔软，睡前可能会想今天的叶子落了，那它是不是要化作春泥更护花了\n\t\n妈妈（MUM）\n温柔共情型。这类人为他人着想，睡前可能还要叮嘱家人/室友几句，或者发一条“晚安，记得关窗”，才能安心睡去\n\t\n伪人（FAKE）\n八面玲珑型。白天戴着社交面具应对所有人，只有在深夜独处时，才能卸下防备，面对真实的自己\n\t\n段子手（Joker）\n笑着悲伤型。搞笑担当，用幽默掩盖内心伤痛。晚上可能会在朋友圈发一个段子，但其实内心并不快乐\n\t\n握草人（WOC!）\n真实不装型。情绪写在脸上，容易原地炸毛。睡前如果想起什么烦心事，可能会突然发出一声“握草！”\n\t\n思考者（THIN-K）\n高速思考型。睡前大脑高度活跃，从宇宙起源想到晚饭吃了什么\n\t\nSBTI#性格测试[话题]# #人格测试[话题]# #睡眠[话题]# #生活习惯差异[话题]#",
+          "interact_info": {
+            "share_count": "321",
+            "followed": false,
+            "relation": "none",
+            "liked": false,
+            "liked_count": "564",
+            "collected": false,
+            "collected_count": "169",
+            "comment_count": "494"
+          },
+          "image_list": [
+            {
+              "height": 1600,
+              "trace_id": "",
+              "info_list": [
+                {
+                  "url": "http://sns-webpic-qc.xhscdn.com/202605081930/a9643bc8b6cf4a80f98beffe43bd2209/spectrum/1040g34o31v0pk7b4hu0g5psljpr3i70ooegmumo!nd_prv_wlteh_webp_3",
+                  "image_scene": "WB_PRV"
+                },
+                {
+                  "image_scene": "WB_DFT",
+                  "url": "http://sns-webpic-qc.xhscdn.com/202605081930/0de7bd00682c46bcb4552a24f4fb5dbe/spectrum/1040g34o31v0pk7b4hu0g5psljpr3i70ooegmumo!nd_dft_wlteh_webp_3"
+                }
+              ],
+              "url_pre": "http://sns-webpic-qc.xhscdn.com/202605081930/a9643bc8b6cf4a80f98beffe43bd2209/spectrum/1040g34o31v0pk7b4hu0g5psljpr3i70ooegmumo!nd_prv_wlteh_webp_3",
+              "url_default": "http://sns-webpic-qc.xhscdn.com/202605081930/0de7bd00682c46bcb4552a24f4fb5dbe/spectrum/1040g34o31v0pk7b4hu0g5psljpr3i70ooegmumo!nd_dft_wlteh_webp_3",
+              "live_photo": false,
+              "file_id": "",
+              "width": 1200,
+              "url": "",
+              "stream": {}
+            },
+            {
+              "info_list": [
+                {
+                  "image_scene": "WB_PRV",
+                  "url": "http://sns-webpic-qc.xhscdn.com/202605081930/6a0ebbf1e83b3da061d54b54c2b7ccce/spectrum/1040g34o31uu40u8qjm505psljpr3i70odr14t70!nd_prv_wlteh_webp_3"
+                },
+                {
+                  "image_scene": "WB_DFT",
+                  "url": "http://sns-webpic-qc.xhscdn.com/202605081930/63e6c5a58d65ac1e9113ce9a09a257ea/spectrum/1040g34o31uu40u8qjm505psljpr3i70odr14t70!nd_dft_wlteh_webp_3"
+                }
+              ],
+              "url_pre": "http://sns-webpic-qc.xhscdn.com/202605081930/6a0ebbf1e83b3da061d54b54c2b7ccce/spectrum/1040g34o31uu40u8qjm505psljpr3i70odr14t70!nd_prv_wlteh_webp_3",
+              "live_photo": false,
+              "file_id": "",
+              "height": 1600,
+              "width": 1200,
+              "url": "",
+              "trace_id": "",
+              "url_default": "http://sns-webpic-qc.xhscdn.com/202605081930/63e6c5a58d65ac1e9113ce9a09a257ea/spectrum/1040g34o31uu40u8qjm505psljpr3i70odr14t70!nd_dft_wlteh_webp_3",
+              "stream": {}
+            },
+            {
+              "width": 1200,
+              "url": "",
+              "trace_id": "",
+              "info_list": [
+                {
+                  "image_scene": "WB_PRV",
+                  "url": "http://sns-webpic-qc.xhscdn.com/202605081930/88fdf9330b504857a831053421fd78ce/spectrum/1040g34o31uu40u8qjm5g5psljpr3i70o3s2dd8g!nd_prv_wlteh_webp_3"
+                },
+                {
+                  "image_scene": "WB_DFT",
+                  "url": "http://sns-webpic-qc.xhscdn.com/202605081930/871bb7696c0987ac94a0eec1c1d95c9d/spectrum/1040g34o31uu40u8qjm5g5psljpr3i70o3s2dd8g!nd_dft_wlteh_webp_3"
+                }
+              ],
+              "url_pre": "http://sns-webpic-qc.xhscdn.com/202605081930/88fdf9330b504857a831053421fd78ce/spectrum/1040g34o31uu40u8qjm5g5psljpr3i70o3s2dd8g!nd_prv_wlteh_webp_3",
+              "stream": {},
+              "live_photo": false,
+              "file_id": "",
+              "height": 1600,
+              "url_default": "http://sns-webpic-qc.xhscdn.com/202605081930/871bb7696c0987ac94a0eec1c1d95c9d/spectrum/1040g34o31uu40u8qjm5g5psljpr3i70o3s2dd8g!nd_dft_wlteh_webp_3"
+            },
+            {
+              "live_photo": false,
+              "file_id": "",
+              "height": 1600,
+              "url": "",
+              "url_pre": "http://sns-webpic-qc.xhscdn.com/202605081930/908b40d618cdd19d0b7428475e7154dc/spectrum/1040g34o31uu40u8qjm605psljpr3i70o86k82ho!nd_prv_wlteh_webp_3",
+              "stream": {},
+              "width": 1200,
+              "trace_id": "",
+              "info_list": [
+                {
+                  "image_scene": "WB_PRV",
+                  "url": "http://sns-webpic-qc.xhscdn.com/202605081930/908b40d618cdd19d0b7428475e7154dc/spectrum/1040g34o31uu40u8qjm605psljpr3i70o86k82ho!nd_prv_wlteh_webp_3"
+                },
+                {
+                  "image_scene": "WB_DFT",
+                  "url": "http://sns-webpic-qc.xhscdn.com/202605081930/b525f66563b5587a5704165909bd5c93/spectrum/1040g34o31uu40u8qjm605psljpr3i70o86k82ho!nd_dft_wlteh_webp_3"
+                }
+              ],
+              "url_default": "http://sns-webpic-qc.xhscdn.com/202605081930/b525f66563b5587a5704165909bd5c93/spectrum/1040g34o31uu40u8qjm605psljpr3i70o86k82ho!nd_dft_wlteh_webp_3"
+            },
+            {
+              "file_id": "",
+              "trace_id": "",
+              "stream": {},
+              "live_photo": false,
+              "url_default": "http://sns-webpic-qc.xhscdn.com/202605081930/5a2383b221e69b22c3b33acf89af689f/spectrum/1040g34o31uu40u8qjm6g5psljpr3i70on7aevd0!nd_dft_wlteh_webp_3",
+              "height": 1600,
+              "width": 1200,
+              "url": "",
+              "info_list": [
+                {
+                  "image_scene": "WB_PRV",
+                  "url": "http://sns-webpic-qc.xhscdn.com/202605081930/11c4274ae9e5e091b287f2571faa3050/spectrum/1040g34o31uu40u8qjm6g5psljpr3i70on7aevd0!nd_prv_wlteh_webp_3"
+                },
+                {
+                  "image_scene": "WB_DFT",
+                  "url": "http://sns-webpic-qc.xhscdn.com/202605081930/5a2383b221e69b22c3b33acf89af689f/spectrum/1040g34o31uu40u8qjm6g5psljpr3i70on7aevd0!nd_dft_wlteh_webp_3"
+                }
+              ],
+              "url_pre": "http://sns-webpic-qc.xhscdn.com/202605081930/11c4274ae9e5e091b287f2571faa3050/spectrum/1040g34o31uu40u8qjm6g5psljpr3i70on7aevd0!nd_prv_wlteh_webp_3"
+            }
+          ],
+          "time": 1776138606000,
+          "ip_location": "北京"
+        },
+        "id": "69dda45b0000000022027c02"
+      }
+    ],
+    "current_time": 1778239825660,
+    "cursor_score": ""
+  }
+}
