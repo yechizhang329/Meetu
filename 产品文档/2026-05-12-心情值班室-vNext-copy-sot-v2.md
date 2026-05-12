@@ -278,32 +278,40 @@
 
 ---
 
-## §8 Block 5 分享图文案槽（v2 新增）
+## §8 Block 5 分享图文案槽（v2 新增 / 21:35+21:57 final）
 
 > 结果页 Block 5 是**静态分享图**（3:4 竖版），用户保存/分享用。
-> 元素清单 DavidC 16:30 拍板。本段定义文案槽来源。
+> 元素清单 DavidC 21:35 + 21:57 final 拍板。本段定义文案槽来源。
 
 ### §8.1 元素清单
 
 | 槽位 | 文案来源 | 说明 |
 |---|---|---|
-| 角色图 | — | 单角色 PNG（非文案槽） |
-| **角色名称** | §2 Roles SoT > role_name | 例如"嘴硬章鱼" |
-| **result_text** | §6 Result Variant Matrix > resultText | 当前 {scene, role} 的 variant，大字视觉重点 |
-| **角色标签** | §9 角色标签池 > master / backup | 1-2 个，2-4 字 |
+| **顶部标题** | 固定模板 | "心情值班室 · {role.roleName}"（产品名 + 角色专属，DavidC 21:57 拍 a+c） |
+| 角色图 | — | 单角色 PNG（非文案槽，1080x1080 浅米底） |
+| **一句 master quote** | §3 Master Quotes（每角色 3 条） | DavidC 21:57：默认展示 1 条 master quote，用户点 Block 3 "换个说法" CTA 后切换为另一条；每角色对应 3 个分享图变体 |
 | **Meetu branding** | 固定 | "觅遇社 + Nice to Meetu"，底部居中 |
 
-### §8.2 不包含
+### §8.2 不包含（21:35 后明确）
 
-- ❌ **场景名称**（不写"被问怎么了"等场景信息，DavidC 16:30 拍板）
-- ❌ **scene_examples**（不外显）
-- ❌ 装饰元素说明（由 result_text 和标签承担信息密度）
+- ❌ **result_text**：DavidC 21:35 拍板，result_text 只在 Block 1 H5 动态展示，**不进 Block 5**
+- ❌ **角色标签**：DavidC 21:35 拍板，只在 Block 2 嘴替 profile 介绍出现
+- ❌ **style phrase**：DavidC 21:35 拍板，只在 Block 2 出现
+- ❌ **场景名称**：DavidC 16:30 拍板
+- ❌ **scene_examples**
 
 ### §8.3 文案校对规则
 
-- 角色名称、标签必须与 §2 / §9 一致，不另造
-- result_text 必须与 §6 矩阵完全一致（不在 Block 5 自由改写）
-- 如 Block 5 视觉显示不下长 result_text，走"前端截断/换行策略"（由 Block 5 spec 处理），不改文案
+- 顶部标题模板"心情值班室 · {角色名}" 严格遵守，{角色名} 取 §2 role_name 完全一致
+- master quote 必须从 §3 取，不另造（每角色 3 条）
+- branding 固定"Meetu · Nice to Meetu"（与 §10 Block 6 branding 同一份）
+
+### §8.4 历史变更
+
+- DavidC 16:30 旧版：角色图+角色名+result_text+标签+branding
+- DavidC 21:35 新版：顶部标题+角色形象+一句quote+branding（result_text/标签/style phrase 移出）
+- DavidC 21:57 明确 quote = master quote，"换个说法"切 quote
+- 21:35-21:57 final 即本表
 
 ---
 
