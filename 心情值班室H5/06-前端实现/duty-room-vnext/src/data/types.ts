@@ -42,7 +42,7 @@ export interface Role {
   tags: readonly [string, string];
   /** profile 图自身视觉属性 (图片自带 5 色背景). 不驱动 section 背景色 (DavidC 23:20: profile 只作头像小范围使用, 不影响页面整体背景). */
   profileBgColor: string;
-  /** SoT §2 个人资料: 第三人称半口语档案, 内部用, 不外显, 不在前端渲染. */
+  /** SoT §2 个人资料: 第三人称半口语档案. DavidC 00:49 调整: 改为外显, 在 Block 2 "角色资料"区展示 (个人资料 + 3 master quotes). */
   roleProfile: string;
   /** SoT §2 voice principle: 内部声线核心 (一句). 不外显. */
   voicePrinciple: string;

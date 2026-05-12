@@ -56,13 +56,30 @@ export function Block2RoleProfile({ role, masterQuotes }: Props) {
               opacity: 0.8,
             }}
           >
-            {t}
+            #{t}
           </span>
         ))}
       </div>
 
       <div style={{ marginTop: 18, borderTop: '1px dashed #2221', paddingTop: 16 }}>
         <div style={{ fontSize: 11, opacity: 0.5, letterSpacing: 1, marginBottom: 10 }}>角色资料</div>
+
+        {/* 个人资料 (DavidC 00:49 调整: 改为外显) */}
+        <div
+          style={{
+            fontSize: 13,
+            lineHeight: 1.6,
+            padding: '10px 12px',
+            background: '#F9F7F3',
+            borderRadius: 10,
+            marginBottom: 12,
+            opacity: 0.85,
+          }}
+        >
+          {role.roleProfile}
+        </div>
+
+        {/* 3 条 master quotes 并列 */}
         <ul
           style={{
             listStyle: 'none',

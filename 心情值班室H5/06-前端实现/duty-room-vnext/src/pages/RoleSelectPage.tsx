@@ -83,7 +83,7 @@ export function RoleSelectPage({ scene, onPick, onBack }: Props) {
                       opacity: 0.7,
                     }}
                   >
-                    {t}
+                    #{t}
                   </span>
                 ))}
               </div>
