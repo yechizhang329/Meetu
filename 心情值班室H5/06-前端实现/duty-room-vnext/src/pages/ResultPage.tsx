@@ -72,7 +72,12 @@ export function ResultPage({ scene, initialRoleId, onBackToSceneSelect }: Props)
         />
       </div>
 
-      <Block2RoleProfile role={currentRole} masterQuotes={masterQuotes} />
+      <Block2RoleProfile
+        role={currentRole}
+        masterQuotes={masterQuotes}
+        friendsView={currentRole.friendsView}
+        funFact={currentRole.funFact}
+      />
 
       <Block4AlternateRoles
         alternateRoles={alternateRoles}

@@ -1,5 +1,5 @@
 // Block 2: 嘴替 profile 介绍 (PRD v2.3 §7 Block 2).
-// Profile 头像 + 角色名 + stylePhrase + 3 条 master quotes 并列 (DavidC 23:32) + 2 tags.
+// Profile 头像 + 角色名 + stylePhrase + 4 板块角色资料 (Lucy v2 扩充) + 2 tags.
 // 注意: profile 只作头像小范围使用 (DavidC 23:20), section 背景统一 #F9F7F3.
 
 import type { Role, RoleQuote } from '../data/types';
@@ -7,9 +7,11 @@ import type { Role, RoleQuote } from '../data/types';
 interface Props {
   role: Role;
   masterQuotes: RoleQuote[];
+  friendsView: string[]; // 板块 3: 朋友眼中的 TA (3-4 条短句)
+  funFact: string; // 板块 4: Fun Fact (1 段)
 }
 
-export function Block2RoleProfile({ role, masterQuotes }: Props) {
+export function Block2RoleProfile({ role, masterQuotes, friendsView, funFact }: Props) {
   return (
     <section
       className="vnext-block2"
@@ -62,49 +64,99 @@ export function Block2RoleProfile({ role, masterQuotes }: Props) {
       </div>
 
       <div style={{ marginTop: 18, borderTop: '1px dashed #2221', paddingTop: 16 }}>
-        <div style={{ fontSize: 11, opacity: 0.5, letterSpacing: 1, marginBottom: 10 }}>角色资料</div>
-
-        {/* 个人资料 (DavidC 00:49 调整: 改为外显) */}
-        <div
-          style={{
-            fontSize: 13,
-            lineHeight: 1.6,
-            padding: '10px 12px',
-            background: '#F9F7F3',
-            borderRadius: 10,
-            marginBottom: 12,
-            opacity: 0.85,
-          }}
-        >
-          {role.roleProfile}
+        {/* 板块 1: 个人资料 */}
+        <div style={{ marginBottom: 16 }}>
+          <div style={{ fontSize: 11, opacity: 0.5, letterSpacing: 1, marginBottom: 8 }}>个人资料</div>
+          <div
+            style={{
+              fontSize: 13,
+              lineHeight: 1.6,
+              padding: '10px 12px',
+              background: '#F9F7F3',
+              borderRadius: 10,
+              opacity: 0.85,
+            }}
+          >
+            {role.roleProfile}
+          </div>
         </div>
 
-        {/* 3 条 master quotes 并列 */}
-        <ul
-          style={{
-            listStyle: 'none',
-            padding: 0,
-            margin: 0,
-            display: 'flex',
-            flexDirection: 'column',
-            gap: 10,
-          }}
-        >
-          {masterQuotes.map((q) => (
-            <li
-              key={q.quoteId}
-              style={{
-                fontSize: 14,
-                lineHeight: 1.55,
-                padding: '8px 12px',
-                background: '#F9F7F3',
-                borderRadius: 10,
-              }}
-            >
-              “{q.text}”
-            </li>
-          ))}
-        </ul>
+        {/* 板块 2: 经典语录 */}
+        <div style={{ marginBottom: 16 }}>
+          <div style={{ fontSize: 11, opacity: 0.5, letterSpacing: 1, marginBottom: 8 }}>经典语录</div>
+          <ul
+            style={{
+              listStyle: 'none',
+              padding: 0,
+              margin: 0,
+              display: 'flex',
+              flexDirection: 'column',
+              gap: 8,
+            }}
+          >
+            {masterQuotes.map((q) => (
+              <li
+                key={q.quoteId}
+                style={{
+                  fontSize: 13,
+                  lineHeight: 1.55,
+                  padding: '8px 12px',
+                  background: '#F9F7F3',
+                  borderRadius: 10,
+                }}
+              >
+                "{q.text}"
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* 板块 3: 朋友眼中的 TA */}
+        <div style={{ marginBottom: 16 }}>
+          <div style={{ fontSize: 11, opacity: 0.5, letterSpacing: 1, marginBottom: 8 }}>朋友眼中的 TA</div>
+          <ul
+            style={{
+              listStyle: 'none',
+              padding: 0,
+              margin: 0,
+              display: 'flex',
+              flexDirection: 'column',
+              gap: 8,
+            }}
+          >
+            {friendsView.map((item, idx) => (
+              <li
+                key={idx}
+                style={{
+                  fontSize: 13,
+                  lineHeight: 1.55,
+                  padding: '8px 12px',
+                  background: '#F9F7F3',
+                  borderRadius: 10,
+                }}
+              >
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* 板块 4: Fun Fact */}
+        <div>
+          <div style={{ fontSize: 11, opacity: 0.5, letterSpacing: 1, marginBottom: 8 }}>Fun Fact</div>
+          <div
+            style={{
+              fontSize: 13,
+              lineHeight: 1.6,
+              padding: '10px 12px',
+              background: '#F9F7F3',
+              borderRadius: 10,
+              opacity: 0.85,
+            }}
+          >
+            {funFact}
+          </div>
+        </div>
       </div>
     </section>
   );
