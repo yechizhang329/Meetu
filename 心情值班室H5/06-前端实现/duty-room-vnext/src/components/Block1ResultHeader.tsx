@@ -25,7 +25,7 @@ export function Block1ResultHeader({ role, variant }: Props) {
           position: 'relative',
           width: '100%',
           aspectRatio: '1 / 1',
-          maxWidth: 480, // 360 → 480px (DavidC 01:58: 角色形象放大)
+          maxWidth: 560, // 360 → 480px (DavidC 01:58) → 560px (DavidC 07:21: 激进放大 +17%)
           margin: '0 auto',
           background: '#F9F7F3', // 与 PNG 底色一致, 避免色差 (DavidC 23:20)
         }}
@@ -52,7 +52,7 @@ export function Block1ResultHeader({ role, variant }: Props) {
           border: '1px solid #2221',
           borderRadius: 14,
           fontFamily: "'ZCOOL KuaiLe', cursive",
-          fontSize: 28, // 72pt ≈ 96px CSS, 缩放到移动端 28px (spec §7.1 + §11.3)
+          fontSize: 24, // 28px (spec §7.1) → 24px (DavidC 07:21: 激进放大 +20%, 实际从 20px base)
           lineHeight: 1.45,
           fontWeight: 400,
           color: '#1A1715',

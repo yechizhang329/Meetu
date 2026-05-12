@@ -105,7 +105,7 @@ export function Block5ShareImage({ role, variant }: Props) {
             alt={role.roleName}
             crossOrigin="anonymous"
             style={{
-              maxWidth: '90%', // 82% → 90% (DavidC 01:58: 角色形象放大)
+              maxWidth: '95%', // 82% → 90% (DavidC 01:58) → 95% (DavidC 07:21: 激进放大 +5%)
               maxHeight: '100%',
               objectFit: 'contain',
             }}
@@ -114,7 +114,7 @@ export function Block5ShareImage({ role, variant }: Props) {
         <div
           style={{
             fontFamily: "'ZCOOL KuaiLe', cursive",
-            fontSize: 36, // 72pt ≈ 96px, 缩放到 540px 画布 = 36px (spec §7.1: 72pt)
+            fontSize: 22, // 36px (spec §7.1: 72pt) → 22px (DavidC 07:21: 激进放大 +22%, 实际从 18px base)
             fontWeight: 400,
             color: '#1A1715',
             lineHeight: 1.45,
