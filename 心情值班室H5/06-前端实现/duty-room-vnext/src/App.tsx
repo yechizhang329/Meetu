@@ -49,7 +49,6 @@ export default function App() {
         <ResultPage
           scene={route.scene}
           initialRoleId={route.roleId}
-          onBackToRoleSelect={() => go({ name: 'role', scene: route.scene })}
           onBackToSceneSelect={() => go({ name: 'scenes' })}
         />
       )}

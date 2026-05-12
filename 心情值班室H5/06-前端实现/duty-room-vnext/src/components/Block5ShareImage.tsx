@@ -105,7 +105,7 @@ export function Block5ShareImage({ role, variant }: Props) {
             alt={role.roleName}
             crossOrigin="anonymous"
             style={{
-              maxWidth: '82%',
+              maxWidth: '90%', // 82% → 90% (DavidC 01:58: 角色形象放大)
               maxHeight: '100%',
               objectFit: 'contain',
             }}

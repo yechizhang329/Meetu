@@ -15,11 +15,10 @@ import { Block6MeetuCTA } from '../components/Block6MeetuCTA';
 interface Props {
   scene: Scene;
   initialRoleId: RoleId;
-  onBackToRoleSelect: () => void;
   onBackToSceneSelect: () => void;
 }
 
-export function ResultPage({ scene, initialRoleId, onBackToRoleSelect, onBackToSceneSelect }: Props) {
+export function ResultPage({ scene, initialRoleId, onBackToSceneSelect }: Props) {
   const { state, changeWording, switchRole, alternateRoleIds } = useResultPageState(scene, initialRoleId);
   const currentRole = ROLE_BY_ID[state.currentRoleId];
   const variant = VARIANTS.find((v) => v.variantId === state.variantId);
@@ -53,17 +52,10 @@ export function ResultPage({ scene, initialRoleId, onBackToRoleSelect, onBackToS
         }}
       >
         <button
-          onClick={onBackToRoleSelect}
-          style={{ background: 'transparent', border: 'none', fontSize: 12, cursor: 'pointer', padding: 0 }}
-        >
-          ← 换角色
-        </button>
-        <span style={{ opacity: 0.4 }}>·</span>
-        <button
           onClick={onBackToSceneSelect}
           style={{ background: 'transparent', border: 'none', fontSize: 12, cursor: 'pointer', padding: 0 }}
         >
-          重选场景
+          ← 重选场景
         </button>
         <span style={{ flex: 1 }} />
         <span style={{ fontSize: 11, opacity: 0.55 }}>

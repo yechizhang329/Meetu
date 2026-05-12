@@ -25,7 +25,7 @@ export function Block1ResultHeader({ role, variant }: Props) {
           position: 'relative',
           width: '100%',
           aspectRatio: '1 / 1',
-          maxWidth: 360,
+          maxWidth: 480, // 360 → 480px (DavidC 01:58: 角色形象放大)
           margin: '0 auto',
           background: '#F9F7F3', // 与 PNG 底色一致, 避免色差 (DavidC 23:20)
         }}
