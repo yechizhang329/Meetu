@@ -150,7 +150,7 @@ rough_rect(draw, border_margin + 1, border_margin + 1,
 
 **步骤**：
 1. 裁出角色 bbox（去除大片浅米底留白，保留 40px padding）
-2. 等比缩放到目标宽度 = 画布宽度 × 60% = 648px
+2. 等比缩放到目标宽度 = 画布宽度 × 90% = 972px（DavidC 02:05 调整：从 60% 放大到 90%）
 3. 居中粘贴
 
 **位置**：
@@ -363,6 +363,7 @@ const dataURL = canvas.toDataURL('image/png');
 
 | 版本 | 日期 | 变更 |
 |---|---|---|
+| v1.1 | 2026-05-13 02:14 | 角色图放大：60% → 90%（DavidC 02:05 调整，commit fec0549） |
 | v1 | 2026-05-13 01:20 | Initial spec（DavidC 01:16 拍 composition + result_text 72pt） |
 
 ---
