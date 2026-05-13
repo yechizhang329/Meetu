@@ -75,9 +75,50 @@ export function Block2RoleProfile({ role, masterQuotes, friendsView, funFact }: 
               background: '#F9F7F3',
               borderRadius: 10,
               opacity: 0.85,
+              marginBottom: 8,
             }}
           >
             {role.roleProfile}
+          </div>
+          {/* 专业/辅修 分行展示, 颜色区分 (DavidC 08:16: 拆分独立字段, 5 角色统一格式+颜色) */}
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              gap: 6,
+              marginTop: 2,
+            }}
+          >
+            <div
+              style={{
+                fontSize: 12,
+                padding: '6px 12px',
+                background: '#EFE8DA', // 专业 — 主色 (warm beige + black text)
+                color: '#1A1715',
+                borderRadius: 10,
+                display: 'flex',
+                gap: 8,
+                alignItems: 'center',
+              }}
+            >
+              <span style={{ fontWeight: 700, fontSize: 11, opacity: 0.7, letterSpacing: 1 }}>专业</span>
+              <span style={{ fontWeight: 600 }}>{role.major}</span>
+            </div>
+            <div
+              style={{
+                fontSize: 12,
+                padding: '6px 12px',
+                background: '#F4F0E6', // 辅修 — 副色 (稍浅 warm beige)
+                color: '#6B6660',
+                borderRadius: 10,
+                display: 'flex',
+                gap: 8,
+                alignItems: 'center',
+              }}
+            >
+              <span style={{ fontWeight: 700, fontSize: 11, opacity: 0.7, letterSpacing: 1 }}>辅修</span>
+              <span style={{ fontWeight: 600 }}>{role.minor}</span>
+            </div>
           </div>
         </div>
 

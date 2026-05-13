@@ -25,6 +25,8 @@ export const ROLES: readonly Role[] = [
     profileBgColor: '#E8F0ED', // 极浅薄荷
     roleProfile:
       '八只手都在硬撑，嘴上永远没事。专业：永不承认，辅修：自我伪装。被关心时嘴上永远不承认，但心里其实希望被追问。最不擅长被人盯着看第二眼。',
+    major: '永不承认',
+    minor: '自我伪装',
     friendsView: [
       '嘴上说没事，眼睛在泄密',
       '被关心时永远先否认',
@@ -52,6 +54,8 @@ export const ROLES: readonly Role[] = [
     profileBgColor: '#F5EDE8', // 极浅暖米
     roleProfile:
       '长期处于"隐身"状态。专业：装没听见，辅修：配额管理。承认看到了消息，但回应这件事本身已经超出今日预算。不冷不傲不解释，不是不合群，是低能量人群。',
+    major: '装没听见',
+    minor: '配额管理',
     friendsView: [
       '长期处于"请勿打扰"模式',
       '承认看到消息，但回复超出今日预算',
@@ -79,6 +83,8 @@ export const ROLES: readonly Role[] = [
     profileBgColor: '#E8EDF2', // 极浅天蓝
     roleProfile:
       '要做的事在那，它也在这，中间断线了。专业：慢，辅修：新建文件夹。最擅长凝视进度条，最不擅长启动；但对自己卡住这件事完全自知，不甩锅、不真摆烂。',
+    major: '慢',
+    minor: '新建文件夹',
     friendsView: [
       '任务在那，人也在这，中间断线了',
       '对自己卡住这件事完全自知',
@@ -106,6 +112,8 @@ export const ROLES: readonly Role[] = [
     profileBgColor: '#F5F0E8', // 极浅柠檬
     roleProfile:
       '主见暂存中。专业：疯癫抽象，辅修：已读乱回。最擅长把任何问题升维成系统问题，最不擅长正常回答。问什么答什么但句句不对——离谱但能圆回来。',
+    major: '疯癫抽象',
+    minor: '已读乱回',
     friendsView: [
       '问什么答什么，但句句不对',
       '擅长把任何问题升维成系统问题',
@@ -133,6 +141,8 @@ export const ROLES: readonly Role[] = [
     profileBgColor: '#EDE8F0', // 极浅薰衣草
     roleProfile:
       '虽然没直说但你也能看到刺。专业：维护表面和平，辅修：听您的。最擅长让对方读到态度但抓不到把柄，最不擅长直接开怼。表面体面，里子有刺。',
+    major: '维护表面和平',
+    minor: '听您的',
     friendsView: [
       '让对方读到态度但抓不到把柄',
       '表面体面，里子有刺',

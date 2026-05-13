@@ -44,6 +44,10 @@ export interface Role {
   profileBgColor: string;
   /** SoT §2 个人资料: 第三人称半口语档案. DavidC 00:49 调整: 改为外显, 在 Block 2 "角色资料"区展示 (个人资料 + 3 master quotes). */
   roleProfile: string;
+  /** SoT §2 专业 (DavidC 08:07 拆分独立字段). 外显. */
+  major: string;
+  /** SoT §2 辅修 (DavidC 08:07 拆分独立字段). 外显. */
+  minor: string;
   /** Lucy v2 扩充 板块 3: 朋友眼中的 TA (3-4 条短句, 第三人称视角). 外显. */
   friendsView: string[];
   /** Lucy v2 扩充 板块 4: Fun Fact (1 段, 40-100 字, 动物特性 + 角色反差). 外显. */
