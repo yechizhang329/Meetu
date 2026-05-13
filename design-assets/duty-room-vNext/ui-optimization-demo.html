@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Block 2/3/4 UI Optimization Demo</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: #F9F7F3;
+    padding: 20px;
+    margin: 0;
+  }
+  .container { max-width: 420px; margin: 0 auto; }
+  .section {
+    background: #FFF;
+    border: 1px solid rgba(0,0,0,0.08);
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  .section-title {
+    font-size: 11px;
+    opacity: 0.5;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+  }
+  h2 {
+    font-size: 16px;
+    margin: 0 0 16px 0;
+    color: #1A1715;
+  }
+
+  /* 方案 A: 对话气泡（适合语录） */
+  .bubble-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .bubble {
+    background: #F9F7F3;
+    padding: 10px 14px;
+    border-radius: 16px;
+    font-size: 13px;
+    line-height: 1.5;
+    position: relative;
+    border-left: 3px solid #1FE07B;
+  }
+  .bubble::before {
+    content: '"';
+    position: absolute;
+    left: 8px;
+    top: 6px;
+    font-size: 20px;
+    opacity: 0.2;
+    font-family: Georgia, serif;
+  }
+
+  /* 方案 B: 图标 bullet（适合朋友眼中的TA） */
+  .icon-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .icon-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+  .icon-item::before {
+    content: '👤';
+    font-size: 16px;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  /* 方案 C: 卡片式（适合 Fun Fact） */
+  .card {
+    background: linear-gradient(135deg, #F9F7F3 0%, #F5F1E8 100%);
+    padding: 14px 16px;
+    border-radius: 12px;
+    border: 1px solid rgba(0,0,0,0.06);
+    font-size: 13px;
+    line-height: 1.6;
+    position: relative;
+    overflow: hidden;
+  }
+  .card::before {
+    content: '✨';
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    font-size: 20px;
+    opacity: 0.3;
+  }
+
+  /* 方案 D: 带数字序号（适合多条短句） */
+  .numbered-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    counter-reset: item;
+  }
+  .numbered-item {
+    display: flex;
+    gap: 10px;
+    font-size: 13px;
+    line-height: 1.5;
+    counter-increment: item;
+  }
+  .numbered-item::before {
+    content: counter(item);
+    background: #1FE07B;
+    color: #FFF;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  /* 刺色示例 */
+  .accent-demo {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+  }
+  .accent-chip {
+    padding: 6px 12px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .accent-green { background: #1FE07B; color: #FFF; }
+  .accent-blue { background: #1854E0; color: #FFF; }
+  .accent-purple { background: #C7A4FF; color: #FFF; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <h1 style="font-size: 20px; margin-bottom: 24px;">Block 2/3/4 UI 优化方案</h1>
+
+  <!-- 方案 A: 对话气泡（板块 2 经典语录） -->
+  <div class="section">
+    <div class="section-title">方案 A: 对话气泡</div>
+    <h2>板块 2: 经典语录</h2>
+    <ul class="bubble-list">
+      <li class="bubble">没事，刚才沙子里进眼睛了</li>
+      <li class="bubble">我不是不想回，我是在想怎么回</li>
+      <li class="bubble">我知道你很急，但你先别急</li>
+    </ul>
+    <p style="font-size: 11px; opacity: 0.5; margin-top: 12px;">
+      ✅ 左侧绿色边框 + 引号装饰<br>
+      ✅ 浅米色背景区分<br>
+      ✅ 每条独立气泡
+    </p>
+  </div>
+
+  <!-- 方案 B: 图标 bullet（板块 3 朋友眼中的TA） -->
+  <div class="section">
+    <div class="section-title">方案 B: 图标 bullet</div>
+    <h2>板块 3: 朋友眼中的 TA</h2>
+    <ul class="icon-list">
+      <li class="icon-item">问一句"还好吗"，能换来三句"没事"</li>
+      <li class="icon-item">微信回复永远三个字以内</li>
+      <li class="icon-item">桌上摆了 5 本书，一页没翻</li>
+      <li class="icon-item">每次约 TA，TA 都说"下次"</li>
+    </ul>
+    <p style="font-size: 11px; opacity: 0.5; margin-top: 12px;">
+      ✅ 👤 emoji 图标（朋友视角）<br>
+      ✅ 左对齐 bullet 列表<br>
+      ✅ 简洁清晰
+    </p>
+  </div>
+
+  <!-- 方案 C: 卡片式（板块 4 Fun Fact） -->
+  <div class="section">
+    <div class="section-title">方案 C: 卡片式</div>
+    <h2>板块 4: Fun Fact</h2>
+    <div class="card">
+      树懒是世界上移动最慢的哺乳动物，每分钟只能移动 2 米。它们的代谢极低，消化一顿饭需要 30 天。大部分时间静止不动，凝视远方，像在思考"该动还是等"。
+    </div>
+    <p style="font-size: 11px; opacity: 0.5; margin-top: 12px;">
+      ✅ 渐变背景增加层次<br>
+      ✅ ✨ emoji 装饰<br>
+      ✅ 适合长段落
+    </p>
+  </div>
+
+  <!-- 方案 D: 带数字序号（备选） -->
+  <div class="section">
+    <div class="section-title">方案 D: 数字序号</div>
+    <h2>板块 3: 朋友眼中的 TA（备选）</h2>
+    <ul class="numbered-list">
+      <li class="numbered-item">问一句"还好吗"，能换来三句"没事"</li>
+      <li class="numbered-item">微信回复永远三个字以内</li>
+      <li class="numbered-item">桌上摆了 5 本书，一页没翻</li>
+      <li class="numbered-item">每次约 TA，TA 都说"下次"</li>
+    </ul>
+    <p style="font-size: 11px; opacity: 0.5; margin-top: 12px;">
+      ✅ 绿色圆形数字标<br>
+      ✅ 清晰序号<br>
+      ✅ 适合多条短句
+    </p>
+  </div>
+
+  <!-- 刺色应用示例 -->
+  <div class="section">
+    <div class="section-title">刺色应用示例</div>
+    <h2>Accent Colors</h2>
+    <div class="accent-demo">
+      <span class="accent-chip accent-green">#1FE07B 荧光绿</span>
+      <span class="accent-chip accent-blue">#1854E0 电光蓝</span>
+      <span class="accent-chip accent-purple">#C7A4FF 淡紫</span>
+    </div>
+    <p style="font-size: 11px; opacity: 0.5; margin-top: 12px;">
+      可用于：CTA 按钮 / 标签边框 / 数字标记 / 强调文字 / 边框装饰
+    </p>
+  </div>
+
+</div>
+</body>
+</html>
