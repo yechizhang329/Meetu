@@ -122,7 +122,7 @@ export function Block2RoleProfile({ role, masterQuotes, friendsView, funFact }: 
           </div>
         </div>
 
-        {/* 板块 2: 经典语录 */}
+        {/* 板块 2: 经典语录 (3 master quotes) — 对话气泡 + 荧光绿边框 (Phoebe2 commit 1c616ef 方案 A) */}
         <div style={{ marginBottom: 16 }}>
           <div style={{ fontSize: 11, opacity: 0.5, letterSpacing: 1, marginBottom: 8 }}>经典语录</div>
           <ul
@@ -132,27 +132,41 @@ export function Block2RoleProfile({ role, masterQuotes, friendsView, funFact }: 
               margin: 0,
               display: 'flex',
               flexDirection: 'column',
-              gap: 8,
+              gap: 10,
             }}
           >
             {masterQuotes.map((q) => (
               <li
                 key={q.quoteId}
                 style={{
-                  fontSize: 13,
-                  lineHeight: 1.55,
-                  padding: '8px 12px',
                   background: '#F9F7F3',
-                  borderRadius: 10,
+                  padding: '10px 14px',
+                  borderRadius: 16,
+                  fontSize: 13,
+                  lineHeight: 1.5,
+                  position: 'relative',
+                  borderLeft: '3px solid #1FE07B',
                 }}
               >
-                "{q.text}"
+                <span
+                  style={{
+                    position: 'absolute',
+                    left: 8,
+                    top: 6,
+                    fontSize: 20,
+                    opacity: 0.2,
+                    fontFamily: 'Georgia, serif',
+                  }}
+                >
+                  "
+                </span>
+                {q.text}
               </li>
             ))}
           </ul>
         </div>
 
-        {/* 板块 3: 朋友眼中的 TA */}
+        {/* 板块 3: 朋友眼中的 TA — 图标 bullet (👤 emoji) (Phoebe2 commit 1c616ef 方案 B) */}
         <div style={{ marginBottom: 16 }}>
           <div style={{ fontSize: 11, opacity: 0.5, letterSpacing: 1, marginBottom: 8 }}>朋友眼中的 TA</div>
           <ul
@@ -162,39 +176,53 @@ export function Block2RoleProfile({ role, masterQuotes, friendsView, funFact }: 
               margin: 0,
               display: 'flex',
               flexDirection: 'column',
-              gap: 8,
+              gap: 10,
             }}
           >
             {friendsView.map((item, idx) => (
               <li
                 key={idx}
                 style={{
+                  display: 'flex',
+                  alignItems: 'flex-start',
+                  gap: 10,
                   fontSize: 13,
-                  lineHeight: 1.55,
-                  padding: '8px 12px',
-                  background: '#F9F7F3',
-                  borderRadius: 10,
+                  lineHeight: 1.5,
                 }}
               >
-                {item}
+                <span style={{ fontSize: 16, flexShrink: 0, marginTop: 1 }}>👤</span>
+                <span>{item}</span>
               </li>
             ))}
           </ul>
         </div>
 
-        {/* 板块 4: Fun Fact */}
+        {/* 板块 4: Fun Fact — 卡片式 + ✨ emoji 装饰 (Phoebe2 commit 1c616ef 方案 C) */}
         <div>
           <div style={{ fontSize: 11, opacity: 0.5, letterSpacing: 1, marginBottom: 8 }}>Fun Fact</div>
           <div
             style={{
+              background: 'linear-gradient(135deg, #F9F7F3 0%, #F5F1E8 100%)',
+              padding: '14px 16px',
+              borderRadius: 12,
+              border: '1px solid rgba(0,0,0,0.06)',
               fontSize: 13,
               lineHeight: 1.6,
-              padding: '10px 12px',
-              background: '#F9F7F3',
-              borderRadius: 10,
-              opacity: 0.85,
+              position: 'relative',
+              overflow: 'hidden',
             }}
           >
+            <span
+              style={{
+                position: 'absolute',
+                right: 12,
+                top: 12,
+                fontSize: 20,
+                opacity: 0.3,
+              }}
+            >
+              ✨
+            </span>
             {funFact}
           </div>
         </div>
