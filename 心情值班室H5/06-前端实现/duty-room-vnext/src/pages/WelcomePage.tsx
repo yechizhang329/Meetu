@@ -53,9 +53,6 @@ export function WelcomePage({ onStart }: Props) {
         >
           值班室进
         </button>
-        <p style={{ fontSize: 11, opacity: 0.4, textAlign: 'center', marginTop: 12 }}>
-          P0 占位文案 · 等 Lucy final
-        </p>
       </div>
     </div>
   );
