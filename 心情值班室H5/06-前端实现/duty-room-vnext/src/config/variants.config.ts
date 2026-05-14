@@ -101,5 +101,11 @@ export function variantCountOf(sceneId: SceneId, roleId: RoleId): number {
   return VARIANTS.filter((v) => v.sceneId === sceneId && v.roleId === roleId).length;
 }
 
+/** 当前 variant 在 (sceneId, roleId) pool 中的 0-based 索引. -1 表示未找到. */
+export function variantIndexOf(sceneId: SceneId, roleId: RoleId, variantId: string): number {
+  const pool = VARIANTS.filter((v) => v.sceneId === sceneId && v.roleId === roleId);
+  return pool.findIndex((v) => v.variantId === variantId);
+}
+
 // Sanity check exposed for tests / qa: 18 组合都覆盖.
 export const EXPECTED_COMBOS = SCENES.flatMap((s) => s.rolePool.map((r) => `${s.id}-${r}`));

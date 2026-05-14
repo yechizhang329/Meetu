@@ -4,7 +4,7 @@ import type { Scene, RoleId, RoleQuote } from '../data/types';
 import { useResultPageState } from '../state/useResultPageState';
 import { ROLE_BY_ID } from '../config/roles.config';
 import { masterQuotesOf, pickPreviewQuote } from '../config/quotes.config';
-import { VARIANTS, variantCountOf } from '../config/variants.config';
+import { VARIANTS } from '../config/variants.config';
 import { Block1ResultHeader } from '../components/Block1ResultHeader';
 import { Block2RoleProfile } from '../components/Block2RoleProfile';
 import { Block3ChangeWording } from '../components/Block3ChangeWording';
@@ -19,7 +19,8 @@ interface Props {
 }
 
 export function ResultPage({ scene, initialRoleId, onBackToSceneSelect }: Props) {
-  const { state, changeWording, switchRole, alternateRoleIds } = useResultPageState(scene, initialRoleId);
+  const { state, changeWording, switchRole, alternateRoleIds, variantIndex, variantCount } =
+    useResultPageState(scene, initialRoleId);
   const currentRole = ROLE_BY_ID[state.currentRoleId];
   const variant = VARIANTS.find((v) => v.variantId === state.variantId);
   const masterQuotes = masterQuotesOf(state.currentRoleId);
@@ -67,7 +68,8 @@ export function ResultPage({ scene, initialRoleId, onBackToSceneSelect }: Props)
 
       <div style={{ marginTop: 16 }}>
         <Block3ChangeWording
-          variantCount={variantCountOf(state.sceneId, state.currentRoleId)}
+          variantCount={variantCount}
+          variantIndex={variantIndex}
           onClick={changeWording}
         />
       </div>

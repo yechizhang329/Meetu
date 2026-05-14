@@ -8,7 +8,7 @@
 import { useCallback, useEffect, useState } from 'react';
 import type { ResultPageState, RoleId, Scene } from '../data/types';
 import { SCENE_BY_ID } from '../config/scenes.config';
-import { defaultVariantOf, nextVariantOf } from '../config/variants.config';
+import { defaultVariantOf, nextVariantOf, variantCountOf, variantIndexOf } from '../config/variants.config';
 
 function initState(scene: Scene, roleId: RoleId): ResultPageState {
   // P2 已限制只能选 rolePool 内的 role; 若调用方意外传入 pool 外, fallback 到 defaultRoleId.
@@ -62,5 +62,10 @@ export function useResultPageState(initialScene: Scene, initialRoleId: RoleId) {
   /** Block4 显示规则: 当前 pool 中除 currentRoleId 外的 2 个. */
   const alternateRoleIds = state.rolePool.filter((r) => r !== state.currentRoleId);
 
-  return { state, changeWording, switchRole, resetScene, alternateRoleIds };
+  /** 当前 variant 在 pool 内的 0-based 位置 (UI 用于显示 "换个说法 (n/3)" 计数). */
+  const variantIndex = variantIndexOf(state.sceneId, state.currentRoleId, state.variantId);
+  /** 当前 (sceneId, roleId) 的 variant 池大小. */
+  const variantCount = variantCountOf(state.sceneId, state.currentRoleId);
+
+  return { state, changeWording, switchRole, resetScene, alternateRoleIds, variantIndex, variantCount };
 }
