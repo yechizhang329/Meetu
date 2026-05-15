@@ -145,7 +145,7 @@ export function Block2RoleProfile({ role, masterQuotes, friendsView, funFact }: 
                   fontSize: 13,
                   lineHeight: 1.5,
                   position: 'relative',
-                  borderLeft: '3px solid #1FE07B',
+                  borderLeft: `3px solid ${role.quoteBorderColor}`,
                 }}
               >
                 <span

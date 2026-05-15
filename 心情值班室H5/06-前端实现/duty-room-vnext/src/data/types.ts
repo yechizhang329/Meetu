@@ -42,6 +42,8 @@ export interface Role {
   tags: readonly [string, string];
   /** profile 图自身视觉属性 (图片自带 5 色背景). 不驱动 section 背景色 (DavidC 23:20: profile 只作头像小范围使用, 不影响页面整体背景). */
   profileBgColor: string;
+  /** Block 2 经典语录 borderLeft 色 (Phoebe2 P1: 从 profileBgColor HSL 派生, contrast ≥ 3.9:1, 角色身份化). */
+  quoteBorderColor: string;
   /** SoT §2 个人资料: 第三人称半口语档案. DavidC 00:49 调整: 改为外显, 在 Block 2 "角色资料"区展示 (个人资料 + 3 master quotes). */
   roleProfile: string;
   /** SoT §2 专业 (DavidC 08:07 拆分独立字段). 外显. */
