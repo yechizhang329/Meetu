@@ -35,8 +35,9 @@ const SOT_VARIANTS: VariantSpec[] = [
   { sceneId: 'S2', roleId: 'E', tier: 'variant_2', text: '收到，我心里有数。' },
   { sceneId: 'S2', roleId: 'E', tier: 'variant_3', text: '这事有点微妙，容我细品。' },
   // S3 任务在那，但人还没启动
-  { sceneId: 'S3', roleId: 'C', tier: 'default', text: '文件夹已建好' },
-  { sceneId: 'S3', roleId: 'C', tier: 'variant_2', text: '在写了，标题想好了。' },
+  // 2026-05-15 PM 调整: S3·C default 与 master quote "文件夹已建好" 同屏重复, 把 default 与 variant_2 互换 (Lucy ack).
+  { sceneId: 'S3', roleId: 'C', tier: 'default', text: '在写了，标题想好了。' },
+  { sceneId: 'S3', roleId: 'C', tier: 'variant_2', text: '文件夹已建好' },
   { sceneId: 'S3', roleId: 'C', tier: 'variant_3', text: '明天一定，今天先研究一下。' },
   { sceneId: 'S3', roleId: 'D', tier: 'default', text: '后续这件事还得看这件事的后续。' },
   { sceneId: 'S3', roleId: 'D', tier: 'variant_2', text: '要是这事能解决，那应该就能解决了。' },
